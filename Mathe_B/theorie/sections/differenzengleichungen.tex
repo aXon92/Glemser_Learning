@@ -1,0 +1,483 @@
+\section{Differenzengleichungen}
+\subsection{Allgemeine Definitionen}
+\begin{mybox}{Definition}
+\index{Differenzengleichung}
+Ein \textit{lineare Differenzengleichung} erster Ordnung
+ist durch
+\begin{align*}
+a_1 y_{n+1} + a_0 y_n = b 
+\end{align*}
+mit $a_0,a_1,b \in \mathbb{R}$ gegeben.\\
+\\
+Wir bezeichnen eine Folge $y_n$ als \textit{Lösung} der Differenzengleichung,
+falls diese die Gleichung für alle $n \in \mathbb{N}$ erfüllt.\\
+Mit $y_0 = c$ bezeichnen wir die \textit{Anfangsbedingung} für die Differenzengleichung,
+d.h. den ersten Wert den die Lösungsfolge annimmt.
+\end{mybox}
+\ \\
+Mithilfe der Differenzengleichung können wir zu einer gegebenen Anfangsbedingung $y_0 = c$ beliebig viele Folgenglieder berechnen. Wir haben durch
+\begin{align*}
+a_1 y_{n+1} + a_0 y_n = b \
+\Leftrightarrow \
+a_1 y_{n+1} = -a_0 y_n +b
+ \ \Leftrightarrow \
+y_{n+1} = \frac{1}{a_{1}} \cdot ( -a_0 y_n +b ) 
+\end{align*}
+eine rekursive Vorschrift, d.h. wir können das $n+1$-te Folgenglied durch das vorherige berechnen.
+Für $y_{100}$ müssen aber schon hundert Rechenoperationen durchgeführt werden. Dies ist sehr zeitaufwendig.
+Aus diesem Grund benötigen wir eine explizite Darstellung für jedes Folgenglied.\\
+Der erste Schritt hierzu ist die Normalform einer Differenzengleichung.\\
+\begin{mybox}{Normalform}
+\index{Differenzengleichung!Normalform}
+Zu einer Differenzengleichung von der Gestalt
+\begin{align*}
+y_{n+1} = A y_n +B, \quad A,B \in \mathbb{R} 
+\end{align*}
+sagen wir, dass sie in \textit{Normalform} vorliegt.
+\end{mybox}
+\ \\
+Jede lineare Differenzengleichung erster Ordnung lässt sich in die Normalform bringen.
+Wir betrachten
+\begin{align*}
+a_1 y_{n+1} + a_0 y_n = b
+\ \Leftrightarrow \
+a_1 y_{n+1} = -a_0 y_n + b
+ \ \Leftrightarrow \
+y_{n+1} = -\frac{a_0}{a_1} y_n + \frac{b}{a_1} 
+\end{align*}
+und erhalten mit $A = -\frac{a_0}{a_1}$ und $B =\frac{b}{a_1}$ die gesuchte Normalform.
+Beachte, wir dürfen die Umformungen nur durchführen, wenn $a_1 \neq 0$ ist.
+Dies ist aber kein unlösbares Problem.
+Angenommen es gilt $a_1 = 0$, dann folgt
+\begin{align*}
+a_0 y_n = b
+\end{align*}
+für die Differenzengleichung.\\
+Wenn eine Lösung existiert, muss diese zwingend eine konstante Folge sein.
+Es existiert keine Folge, welche die Differenzengleichung für $a_0 = 0 $ und $b \neq 0$ erfüllt.\\
+Um zurück auf das Wesentliche zu kommen:
+Wir interessieren uns für Differenzengleichungen, bei denen $a_1 \neq 0$ erfüllt ist.
+Nun betrachten wir, warum die Normalform so nützlich ist.
+\begin{mybox}{Allgemeine Lösung}
+\index{Differenzengleichung!allgemeine Lösung}
+Gegeben sei
+\begin{align*}
+y_{n+1} = A y_n + B
+\end{align*}
+in Normalform mit Anfangsbedingung $y_0$.\\
+Dann ist die allgemeine Lösung der Differenzengleichung durch
+\begin{align*}
+y_k = 
+\begin{cases}
+A^k(y_0 - y^\star) 	+y^\star&, \ \text{falls} \ A \neq 1\\
+y_0 + k \cdot B      &, \ \text{falls} \ A = 1 
+\end{cases}
+\quad
+\ \text{mit} \
+y^\star = \frac{B}{1-A}
+\end{align*}
+gegeben.
+\end{mybox}
+\subsection{Lösungsverhalten}
+Wir wissen bereits, dass wir jede Differenzengleichung in eine Normalform überführen können.\\
+Sei also zunächst $A \neq 1$.
+Die allgemeine Lösung lautet
+\begin{align*}
+y_k = A^k(y_0 - y^\star) 	+y^\star.
+\end{align*}
+Hierbei sind $y_0$ und $y^\star$ konstant, weswegen nur $A^k$ für das Lösungsverhalten interessant ist.\\
+\index{Differenzengleichung!Lösungsverhalten}
+\begin{mybox}{Lösungsverhalten für $A \neq 1$}
+\begin{align*}
+A > 0 &\rightarrow \ \text{Lösung monoton}\\
+A < 0 &\rightarrow \ \text{Lösung oszillierend}\\
+|A| < 1  &\rightarrow \ \text{Lösung konvergent}\\
+|A| > 1  &\rightarrow \ \text{Lösung divergent}
+\end{align*}
+\end{mybox}
+
+
+Wir betrachten zunächst die zwei Fälle $ A > 0$ und $A < 0$.\\
+Wenn $A > 0 $ ist, gilt
+\begin{itemize}
+\item
+$A^n$ ist monoton fallend, wenn $A< 1$.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} 
+\begin{axis}[
+axis x line=center,
+axis y line=center,
+ticks = none,
+xtick={0,1,2},
+xmin = 0,
+xmax = 11,
+ymin = 0] 
+\addplot[only marks,mark=*,mark options={scale=1, fill=black},text mark as node=true] coordinates { 
+(1,1)   
+(2,0.5)
+(3,0.33333)
+(4,0.25)
+(5,1/5)
+(6,1/6)
+(7,1/7)
+(8,1/8)
+(9,1/9)
+(10,0.1 )};
+\end{axis} 
+\end{tikzpicture}
+\caption*{monoton fallend}
+\end{figure}
+
+\newpage
+\item
+$A^n$ ist monoton wachsend, wenn $A> 1$.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture} 
+\begin{axis}[
+axis x line=center,
+axis y line=center,
+xtick={0,1,2},
+ticks = none,
+xmin = 0,
+xmax = 11,
+ymin = 0] 
+\addplot[only marks,mark=*,mark options={scale=1, fill=black},text mark as node=true] coordinates { 
+(1,1)   
+(2,2)
+(3,3)
+(4,4)
+(5,5)
+(6,6)
+(7,7)
+(8,8)};
+\end{axis} 
+\end{tikzpicture}
+\caption*{monoton wachsend}
+\end{figure}
+
+\end{itemize}
+Insgesamt können wir sagen, dass $A^n$ \textit{monoton} ist für $A > 0$.
+Anders sieht es bei $A < 0$ aus. 
+Wir nutzen
+\begin{align*}
+A = -|A| 
+\Rightarrow
+A^k = (-1)^k |A|^k
+\end{align*}
+und sehen, dass ein Vorzeichenwechsel bei jedem Folgenglied vorliegt.
+Deswegen sagen wir in diesem Fall: Die Lösung ist \textit{oszillierend}.
+
+\begin{figure}[H]
+\minipage{0.5\textwidth}
+\centering
+\begin{tikzpicture} 
+\begin{axis}[
+axis x line=center,
+axis y line=center,
+xtick={0,1,2},
+ytick={-1,1},
+xmin = 0,
+xmax = 11] 
+\addplot[only marks,mark=*,mark options={scale=1, fill=black},text mark as node=true] coordinates { 
+(1,-1)   
+(2,0.5)
+(3,-0.3)
+(4,0.25)
+(5,-1/5)
+(6,1/6)
+(7,-1/7)
+(8,1/8)
+(9,-1/9)
+(10,0.1 )};
+\end{axis} 
+\end{tikzpicture}
+\caption*{oszillierend $|A| < 1$}
+\endminipage\hfill
+\minipage{0.5\textwidth}
+\centering
+\begin{tikzpicture} 
+\begin{axis}[
+axis x line=center,
+axis y line=center,
+xmin = 0,
+xmax = 11] 
+\addplot[only marks,mark=*,mark options={scale=1, fill=black},text mark as node=true] coordinates { 
+(1,-1)   
+(2,2)
+(3,-3)
+(4,4)
+(5,-5)
+(6,6)
+(7,-7)
+(8,8)
+(9,-9)
+(10,10 )};
+\end{axis} 
+\end{tikzpicture}
+\caption*{oszillierend $|A| > 1$}
+\endminipage
+\end{figure}
+Nun unterscheiden wir $|A| < 1$ und $|A| > 1$.
+Hierfür können wir direkt
+\begin{align*}
+\lim \limits_{n\to \infty} |A|^n
+= 
+\begin{cases}
+&0 , \quad \text{ falls} \ |A|< 1\\
+&\infty, \quad \text{falls} \ | A | > 1
+\end{cases}
+\end{align*}
+ausnutzen.
+Wir sagen eine Lösung ist \textit{dämpfend/konvergent} wenn $|A|<1 $ gilt.  Analog sagen wir \textit{explosiv/divergent} falls $|A| > 1$ gilt.
+Es fehlt also noch die Betrachtung von $|A| = 1$.
+Hier haben wir die allgemeine Lösung
+\begin{align*}
+y_n = y_0 + k \cdot B.
+\end{align*}
+Diese ist monoton und divergent für $B \neq 0$.
+Für $B= 0$ ist die Lösung konstant.
+\\
+\\
+Wir interessieren uns aber hauptsächlich für den Fall, dass $A \neq 1$ ist.
+
+
+
+\newpage
+\subsubsection*{Anwendungsbeispiel A}
+Die Folge $\lbrace y_k \rbrace_{k \in \mathbb{N}_0}$ definiert durch
+\begin{align*}
+y_k =  4 - \left( \frac{1}{a}\right)^k
+\end{align*}
+mit $a \neq 0$ löst das Anfangswertproblem
+\begin{align*}
+4 y_{k+1} -y_k = 12 \ \text{und} \ y_0 = 3
+\end{align*}
+für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$a= 1$.
+\item
+$a= 2$.
+\item
+$a= 4$.
+\item
+Keine der vorangehenden Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform der Differenzengleichung an.
+\item Finde die allgemeine Lösung der Differenzengleichung und löse die Aufgabe.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform der Differenzengleichung an}\\
+In unserem Fall erhalten wir diese durch
+\begin{align*}
+4 y_{k+1} -y_k = 12 \ 
+\Leftrightarrow \
+4 y_{k+1} = y_k + 12
+\ \Leftrightarrow \
+y_{k+1} = \frac{1}{4} y_k + 3
+\end{align*}
+mit $A = \frac{1}{4} $ und $B = 3$.\\
+\\
+\underline{2. Finde die allgemeine Lösung der Differenzengleichung und löse die Aufgabe}\\
+Die allgemeine Lösung einer Differenzengleichung erster Ordnung ist durch
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+\end{align*}
+mit
+\begin{align*}
+y^\star 
+= \frac{B}{1 -A }, \quad A \neq 1 
+\end{align*}
+gegeben.
+Es gilt:
+\begin{align*}
+y^\star 
+= \frac{B}{1 -A }
+= \frac{3}{1 - \frac{1}{4} }
+= \frac{3}{\frac{3}{4}}
+= \frac{3}{1} \cdot \frac{4}{3} = 4.
+\end{align*}
+Die allgemeine Lösung ist dann
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+=
+\left( \frac{1}{4} \right)^k(y_0 -4) +4.
+\end{align*}
+Mit $y_0 = 3$ erhalten wir durch
+\begin{align*}
+y_k = \left( \frac{1}{4} \right)^k ( 3 - 4 ) +4
+=  4 - \left( \frac{1}{4} \right)^k
+\end{align*}
+das passende $a = 4$.
+Dies können wir durch Vergleichen mit der Aufgabenstellung erkennen.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+\subsubsection*{Anwendungsbeispiel B}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+5 y_{k+1} + 6 y_k = 1 , \quad k = 0,1,2,...
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+monoton und konvergent.
+\item
+monoton und divergent.
+\item
+oszillierend und konvergent.
+\item
+oszillierend und divergent.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform und allgemeine Lösung der Differenzengleichung an.
+\item 
+Bestimme die relevanten Eigenschaften.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform und allgemeine Lösung der Differenzengleichung an}\\
+Wie in der vorigen Aufgabe erhalten wir durch
+\begin{align*}
+5 y_{k+1} + 6 y_k = 1
+\ \Leftrightarrow \
+5 y_{k+1} = - 6 y_k + 1
+\ \Leftrightarrow \
+y_{k+1} = - \frac{6}{5} y_k  + \frac{1}{5}
+\end{align*}
+die Normalform mit $A =  - \frac{6}{5} $ und $B = \frac{1}{5}$.
+Mit 
+\begin{align*}
+y^\star = 
+\frac{B}{1-A} 
+= 
+\frac{\frac{1}{5}}{1 - \left( -\frac{6}{5} \right)} 
+=
+\frac{\frac{1}{5}}{\frac{11}{5}}
+= \frac{1}{5} \cdot \frac{5}{11} = \frac{1}{11}
+\end{align*}
+erhalten wir die allgemeine Lösung
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+= \left( - \frac{6}{5} \right)^k \left ( y_0 - \frac{1}{11}\right) + \frac{1}{11}.
+\end{align*}
+\newpage
+\underline{2. Bestimme die relevanten Eigenschaften}\\
+Wir wissen, dass $A\neq 1$ ist.
+Damit können die Fälle
+\begin{align*}
+A > 0 &\rightarrow \ \text{Lösung monoton}\\
+A < 0 &\rightarrow \ \text{Lösung oszillierend}\\
+|A| < 1  &\rightarrow \ \text{Lösung konvergent}\\
+|A| > 1  &\rightarrow \ \text{Lösung divergent}
+\end{align*}
+eintreten.
+Wegen $A = -\frac{6}{5} < 0$ wissen wir, dass die allgemeine Lösung oszillierend ist.
+Zudem gilt
+$
+|A| = \frac{6}{5} > 1,
+$
+womit die allgemeine Lösung divergent ist.
+Durch
+\begin{align*}
+\lim \limits_{k \to \infty} |A^k | 
+=\lim \limits_{k \to \infty} \left| \left( - \frac{6}{5} \right)^k \right| = \infty
+\end{align*}
+können wir die Divergenz veranschaulichen und an
+\begin{align*}
+A^k = \left( - \frac{6}{5} \right)^k
+= (-1)^k \cdot\left(  \frac{6}{5} \right)^k
+\end{align*}
+sehen wir, dass die Lösung oszilliert.
+\\
+\\
+Somit ist Antwort (d) korrekt.
+
+\newpage
+\subsubsection*{Anwendungsbeispiel C}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+m \ y_{k+1} + y_k  \ = \ m^2, \quad k=0,1,2,...,
+\end{align*}
+wobei $m \in \mathbb{R} \setminus \lbrace 0 \rbrace$, ist monoton und konvergent genau dann, wenn
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$m \in [-1,0)$.
+\item
+$m \in (0,1]$.
+\item
+$m < -1$.
+\item
+$m> 1$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform und allgemeine Lösung der Differenzengleichung an.
+\item 
+Argumentiere mithilfe den bekannten Eigenschaften.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform an }\\
+Wie in den vorigen Aufgaben erhalten wir mit
+\begin{align*}
+m  y_{k+1} + y_k   =  m^2
+ \ \Leftrightarrow \
+m y_{k+1} = - y_k + m^2
+\ \Leftrightarrow \
+y_{k+1} = - \frac{1}{m} y_k + m 
+\end{align*}
+die Normalform mit $A = - \frac{1}{m}$ und $B = m$.
+\\
+\\
+\underline{2. Argumentiere mithilfe den bekannten Eigenschaften}\\
+Wir wissen, dass die allgemeine Lösung genau dann monoton und konvergent ist, wenn
+\begin{align*}
+A > 0  \ \text{und} \ |A| < 1
+\end{align*}
+erfüllt ist.
+Wegen $m \in \mathbb{R} \setminus \lbrace 0 \rbrace$ ist $B=0$ unmöglich.
+Daraus folgt
+\begin{align*}
+0 < - \frac{1}{m} \ \textrm{und} \ \left| -\frac{1}{m} \right| < 1. 
+\end{align*}
+Wegen 
+\begin{align*}
+-\frac{1}{m} > 0 
+\end{align*}
+wissen wir direkt, dass $m < 0 $ ist.
+Weiter gilt:
+\begin{align*}
+- \frac{1}{m} < 1 
+\ \Leftrightarrow \
+\frac{1}{m} >-1
+ \ \overset{ m  < 0}{\Leftrightarrow }\
+ 1 < -m 
+  \ \Leftrightarrow \
+-1 > m
+\end{align*}
+\\
+
+Somit ist Antwort (c) korrekt.

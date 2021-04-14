@@ -1,0 +1,420 @@
+\vspace{1cm}
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
+\renewcommand{\labelenumi}{\theenumi.}
+\section*{Aufgabe 1 (26 Punkte)}
+\vspace{0.4cm}
+\subsection*{(a) ( 5 Punkte )}
+Sei $q(x) = \frac{5x+2}{3x-10}$ für $x \in \mathbb{R} \setminus \left\lbrace \frac{10}{3} \right\rbrace$.
+\\
+\\
+Für welche Werte von $x$ konvergiert die Reihe $\lbrace s_n \rbrace_{n \in \mathbb{N}}$
+mit $s_n = \sum_{k=0}^{n-1} 3 \cdot q(x)^k$?
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Bestimme die Art der Reihe (geometrische Reihe).
+\item Ermittle die Konvergenzbedingung der geometrischen Reihe.
+\item Bestimme die reellen $x$, für welche die Reihe konvergiert.
+\begin{enumerate}
+\item Quadrieren
+\item Fallunterscheidung
+\end{enumerate} 
+\end{enumerate}
+\end{mdframed}
+
+
+\underline{1. Bestimme die Art der Reihe (geometrische Reihe)}\\
+Da Konstanten für die Konvergenz unwichtig sind, erhalten wir mit
+\begin{align*}
+s_n = \sum_{k=0}^{n-1} 3 \cdot q(x)^k = 3 \cdot\sum_{k=0}^{n-1}  q(x)^k
+\end{align*}
+eine von $x$ abhängige geometrische Reihe.
+\\
+\\
+\underline{2. Ermittle die Konvergenzbedingung der geometrischen Reihe}\\
+Unsere geometrische Reihe konvergiert also, wenn
+\begin{align}
+|q(x)| =\left| \frac{5x+2}{3x-10} \right|   < 1  
+\end{align}
+erfüllt ist. Die dazu passenden $x$ lassen sich durch verschiedene Varianten bestimmen. Davon werden wir zwei betrachten.\\
+\\
+\underline{3.(a) Quadrieren}\\
+Die Konvergenzbedingung ist äquivalent zu
+\begin{align*}
+|q(x)|^2 
+= \left| \frac{5x+2}{3x-10} \right|^2
+= \left( \frac{5x+2}{3x-10} \right)^2
+=\frac{(5x+2)^2}{(3x-10)^2} 
+< 1^2 =1,
+\end{align*}
+wodurch wir keine lästige Fallunterscheidung machen müssen.
+Der Preis dafür ist jedoch, dass wir mit quadratischen Termen rechnen müssen.
+Durch Anwenden der binomischen Formeln erhalten wir
+\begin{align*}
+\frac{(5x+2)^2}{(3x-10)^2} <1
+&\Leftrightarrow
+(5x+2)^2 < (3x-10)^2\\
+&\Leftrightarrow
+25x^2 + 20x +4 < 9x^2 -60x +100\\
+&\Leftrightarrow
+16x^2 + 80x -96 < 0\\
+&\Leftrightarrow
+x^2 +5x -6 <0
+\end{align*}
+und wir müssen nur noch die Nullstellen eines quadratischen Polynoms bestimmen. Wir haben eine nach oben geöffnete Parabel. Also gilt mit der Mitternachtsformel 
+\begin{align*}
+x^2 +5x -6 = 0 
+&\Leftrightarrow
+x_{\nicefrac{1}{2}}=\frac{-5 \pm \sqrt{25 -4\cdot 1\cdot(-6)}}{2}
+= \frac{-5 \pm \sqrt{49}}{2}
+= \frac{-5 \pm 7}{2}
+\\
+&\Leftrightarrow
+x_1 = \frac{-5 + 7}{2} = 1, \quad x_2 = \frac{-5-7}{2} = -6,
+\end{align*}
+wodurch $x^2+5x-6 < 0$ für $x \in (-6,1)$ folgt.
+Damit wissen wir durch
+\begin{align*}
+|q(x) | < 1 
+\Leftrightarrow
+\dots
+\Leftrightarrow
+x^2+5x-6 < 0,
+\end{align*}
+dass unsere geometrische Reihe $s_n$ für $x \in (-6,1)$ konvergiert.
+\\
+\\
+\underline{3.(b) Fallunterscheidung}\\
+Wir können in der Konvergenzbedingung auch die Beträge in den Bruch ziehen.
+Das bedeutet
+\begin{align*}
+|q(x)| =\left| \frac{5x+2}{3x-10} \right| =\frac{|5x+2|}{|3x-10|} < 1,  
+\end{align*}
+wodurch wir für den Betrag im Zähler und Nenner jeweils zwei Fälle unterscheiden müssen.
+Die Definition des Betrags gibt uns durch
+\begin{align*}
+|5x +2| 
+&= 
+\begin{cases}
+ 5x + 2, &\ \text{für} \ 5x +2 \geq 0\\
+ -5x-2,  &\ \text{für} \ 5x +2 < 0
+\end{cases}
+=
+\begin{cases}
+ 5x + 2, &\ \text{für} \ x \geq -\frac{2}{5}\\
+ -5x-2,  &\ \text{für} \ x < -\frac{2}{5}
+\end{cases}\\
+|3x -10|
+&=
+\begin{cases}
+ 3x - 10, &\ \text{für} \ 3x - 10 \geq 0\\
+ -3x+10,  &\ \text{für} \ 3x - 10 < 0
+\end{cases}
+=
+\begin{cases}
+ 3x - 10, &\ \text{für} \ x \geq \frac{10}{3}\\
+ -3x+10,  &\ \text{für} \ x< \frac{10}{3}
+\end{cases}
+\end{align*}
+drei Fälle. Durch logische Kombination der Fälle der einzelnen Beträge erhalten wir mit 
+\begin{align*}
+\frac{|5x+2|}{|3x-10|} 
+= 
+\begin{cases}
+\frac{5x+2}{3x-10}, &\ \text{für} \ x \geq \frac{10}{3}\\
+\frac{5x+2}{-3x+10} &\ \text{für} \ -\frac{2}{5} \leq x < \frac{10}{3}\\
+\frac{-5x-2}{-3x+10} &\ \text{für} \ x < -\frac{2}{5}
+\end{cases}
+\end{align*}
+die drei zu überprüfenden Fälle.
+Wenn $x \geq \nicefrac{10}{3}$ ist, gilt sicher $x \geq -\nicefrac{2}{5}$.
+Damit haben wir den ersten Fall.
+Falls $x \geq \nicefrac{10}{3}$ ist, müssen wir unterscheiden, ob 
+$x \geq -\nicefrac{2}{5}$ oder $x < -\nicefrac{2}{5}$ ist.
+Daraus erhalten wir den zweiten und dritten Fall.
+\begin{enumerate}
+\item Im ersten Fall ist $x \geq \nicefrac{10}{3}$ und durch
+\begin{align*}
+&\ \ \ \ \frac{5x+2}{3x-10} < 1\\ 
+&\Leftrightarrow
+5x+2 < 3x-10\\
+&\Leftrightarrow
+2x < -12\\
+&\Leftrightarrow
+x< -6
+\end{align*}
+erhalten wir einen Widerspruch. Also besitzt dieser Fall keine Lösung.
+\item
+Im zweiten Fall ist $-\nicefrac{2}{5} \leq x < \nicefrac{10}{3}$ und durch
+\begin{align*}
+&\ \ \ \  \frac{5x+2}{-3x+10} < 1\\
+&\Leftrightarrow
+5x + 2 < -3x +10\\
+&\Leftrightarrow
+8x < 8\\
+&\Leftrightarrow
+x < 1
+\end{align*}
+erhalten wir die Lösungsmenge $\mathbb{L}_2=[-\nicefrac{2}{3},1) $ für diesen Fall.
+\item
+Im letzten Fall ist $x < -\nicefrac{2}{3}$ und durch
+\begin{align*}
+&\ \ \ \ \ \frac{-5x-2}{-3x+10} < 1\\
+&\Leftrightarrow
+-5x -2 < -3x +10\\
+&\Leftrightarrow
+-12 < 2x \\
+&\Leftrightarrow
+-6 < x
+\end{align*}
+erhalten wir die Lösungsmenge $\mathbb{L}_3=(-6,-\nicefrac{2}{3})$ für diesen Fall.
+\end{enumerate}
+Die Gesamtlösungsmenge für $|q(x)|< 1$ erhalten wir durch $\mathbb{L} = \mathbb{L}_2 \cup \mathbb{L}_3 = (-6,1)$.
+
+\newpage
+\subsection*{(b) (7 Punkte)} 
+Eine Kreditnehmerin leiht sich $P=2'500'000$ CHF, um ihr Haus zu finanzieren.
+Sie kann jährliche Zahlungen in Höhe von $C=50'000$ CHF aufbringen.
+Der jährliche Zinssatz liegt bei $i = 1 \%$. Wie lange benötigt die Kundin, um das Darlehen zurückzuzahlen, wenn die Zahlungen zum Ende des Jahres stattfinden? 
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Überlege, ob es sich um eine vor- oder nachschüssige Rente handelt, d.h.
+\begin{align*}
+PV = C \frac{1-(1+i)^{-T+1}}{i} 
+\ \text{oder} \
+PV = C \frac{1-(1+i)^{-T}}{i}
+\end{align*}
+\item Setze die Werte ein und forme nach $T$ um.   
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege, ob es sich um eine vor- oder nachschüssige Rente handelt}\\
+Da die konstanten Zahlungen gegen Ende des Jahres geleistet werden, handelt es sich um eine nachschüssige Rente. Demnach ist der Barwert nach $T$ Jahren durch
+\begin{align*}
+PV =  C \frac{1-(1+i)^{-T}}{i}
+\end{align*}
+gegeben.\\
+\\
+\underline{2. Setze die Werte ein und forme nach $T$ um}\\
+Um die Anzahl $T$ der Jahre zu ermitteln, lösen wir die Gleichung $P = PV$ nach $T$ auf. Zunächst gilt
+\begin{align*}
+PV = C \frac{1-(1+i)^{-T}}{i} 
+= 50'000 \frac{1-1,01^{-T}}{0,01}
+= 5'000'000 (1-1,01^{-T}) 
+\end{align*}
+und mit 
+\begin{align*}
+P = PV 
+&\Leftrightarrow
+5'000'000(1-1,01^{-T}) =2'500'000\\
+&\Leftrightarrow
+2(1-1.01^{-T})=1\\
+&\Leftrightarrow
+1-1,01^{-T} = \frac{1}{2}\\
+&\Leftrightarrow
+1,01^{-T} = \frac{1}{2}\\
+&\Leftrightarrow
+1,01^T = 2\\
+&\Leftrightarrow
+\ln(1,01^T) = T\ln(1,01) = ln(2)\\
+&\Leftrightarrow
+T = \frac{\ln(2)}{\ln(1,01)} \approx 69,66
+\end{align*}
+erhalten wir eine Rückzahlung von circa 70 Jahren.
+
+\newpage
+
+\subsection*{(c) (5 Punkte)}
+Berechnen Sie 
+\begin{align*}
+\lim \limits_{x \rightarrow \infty} \left(\frac{x+3}{x+2}\right)^{3x+6}.
+\end{align*}
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Überlege dir, zu welchen bekannten Grenzprozessen eine Ähnlichkeit besteht.
+\item Berechne den Grenzwert   
+\end{enumerate}
+\end{mdframed}
+
+\underline{1.Überlege dir, zu welchen bekannten Grenzprozessen eine Ähnlichkeit besteht}\\
+Durch die Umformungen 
+\begin{align*}
+\frac{x+3}{x+2} = \frac{x+2+1}{x+2} = \frac{x+2}{x+2} + \frac{1}{x+2} = 1 + \frac{1}{x+2}
+\end{align*}
+und
+\begin{align*}
+3x+6 = 3(x+2)
+\end{align*}
+ergibt sich zusammengesetzt
+\begin{align*}
+\left(1 + \frac{1}{x+2}\right)^{3(x+2)}
+=
+\left( \left(1 + \frac{1}{x+2}\right)^{x+2} \right)^3. 
+\end{align*} 
+Daran erkennen wir, dass eine Ähnlichkeit zu dem Grenzprozess
+\begin{align*}
+e = \lim \limits_{x \rightarrow \infty} \left(1+\frac{1}{x}\right)^x
+= \lim \limits_{x \rightarrow \infty} \left(1+\frac{1}{x+2}\right)^{x+2}
+\end{align*}
+besteht.\\
+\\
+\underline{2. Berechne den Grenzwert}\\
+Unter Ausnutzung der Stetigkeit von $x^3$ erhalten wir mit
+\begin{align*}
+\lim \limits_{x \rightarrow \infty} \left( \left(1 + \frac{1}{x+2}\right)^{x+2} \right)^3
+= \left( \lim \limits_{x \rightarrow \infty} \left(1 + \frac{1}{x+2}\right)^{x+2} \right)^3
+= e^3 
+\end{align*}
+den gesuchten Grenzwert.
+
+\newpage
+\subsection*{(d1) (5 Punkte)}
+Gegeben sei die Funktion
+\begin{align*}
+f \ : \ D_f \to \mathbb{R}, \ \ x \mapsto y = \sqrt{\ln(x^2+4x+4)}.
+\end{align*}
+Bestimmen Sie den Definitionsbereich $D_f$.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Rufe dir die Defintionsbereiche des Logarithmus und der Wurzelfunktion in Erinnerung.
+\item Bestimme den Definitionsbereich.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1.Rufe dir die Definitionsbereiche des Logaritmus und der Wurzelfunktion in Erinnerung}\\
+Der natürliche Logarithmus ist die Umkehrfunktion der Exponentialfunktion.
+Diese hat den Wertebereich $(0, \infty)$, womit der Logarithmus auf $(0,\infty)$ definiert ist.
+Die Wurzelfunktion besitzt den Definitionsbereich $[0,\infty)$.\\
+\\
+Der Logarithmus ist auf dem Intervall $[1,\infty)$ größer gleich $0$. Wir erkennen das an
+\begin{align*}
+e^0 = 1, \ \lim \limits_{x \rightarrow \infty} e^x = \infty,
+\ \lim \limits_{x \rightarrow -\infty} e^x = 0
+\end{align*}
+und der strengen Monotonie der Exponentialfunktion.\\
+Wegen der Wurzelfunktion suchen wir die passenden $x \in \mathbb{R}$, sodass
+\begin{align*}
+\ln(x^2+4x+4) &\geq 0\\
+\Leftrightarrow
+e^{\ln(x^2+4x+4)} &\geq 1\\
+\Leftrightarrow
+x^2 +4x +4 &\geq 1\\
+\Leftrightarrow
+x^2 +4x +3 &\geq 0
+\end{align*}
+gilt. Da $x^2+4x+4$ eine nach oben oben geöffnete Normalparabel ist, könnten wir die Bedingung 
+\begin{align*}
+x^2 +4x +4 \geq 1
+\end{align*}
+auch direkt ablesen.
+\\
+\\
+\underline{2. Bestimme den Definitionsbereich}\\
+Mit
+\begin{align*}
+x^2 +4x+3 =0
+\Leftrightarrow
+x_{\nicefrac{1}{2}}
+= \frac{-4 \pm \sqrt{4^2 - 4 \cdot 1 \cdot 3}}{2} 
+= \frac{-4 \pm \sqrt{16 -12 }}{2}
+= \frac{-4 \pm \sqrt{4}}{2}
+= \frac{-4 \pm 2}{2}
+= -2 \pm 1
+\end{align*}
+erhalten wir $x_1 = -1$ und $x_2 = -3$ als Nullstellen der Parabel. Da diese nach oben geöffnet ist, ergibt sich 
+\begin{align*}
+D_f = (-\infty,-3]\cup [-1,\infty)
+= \mathbb{R} \setminus (-3,-1)
+\end{align*}
+als Definitionsbereich von $f$.
+
+\newpage
+
+\subsection*{(d2) (4 Punkte)}
+Gegeben sei die Funktion
+\begin{align*}
+f \ : \ D_f \to \mathbb{R}, \ x \mapsto y = \sqrt{\ln(x^2 +4x +4)}. 
+\end{align*}
+Ist $f$ monoton (Beweis)?
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Bestimme die Monotoniebedingung.
+\item Leite die Funktion ab.
+\item Bestimme das Monotonieverhalten.
+\item Alternativer Lösungsweg. 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Monotoniebedingung}\\
+Eine Funktion $g$ heißt monoton wachsend bzw. fallend, falls
+\begin{align*}
+g^\prime(x) \geq 0 \ \text{bzw.} \ g^\prime(x) \leq 0  
+\end{align*}
+für alle $x$ aus dem Definitionsbereich gilt. Ändert sich das Vorzeichen der Ableitung ist eine Funtktion nicht monoton.
+\\
+
+\underline{2. Leite die Funktion ab}\\
+Durch zweifaches Anwenden der Kettenregel erhalten wir mit
+\begin{align*}
+f^\prime(x) &= \frac{1}{2\sqrt{(\ln(x^2+4x+4)}} \cdot \frac{1}{x^2+4x+4}\cdot (2x+4)\\
+&= \frac{2x+4}{2\sqrt{(\ln(x^2+4x+4)}\cdot(x^2+4x+4)}
+\end{align*}
+die Ableitung von $f$. Nun ist der Definitionsbereich so gewählt, dass $x^2 +4x+4 \geq 1$ für alle $x \in D_f$ (siehe Aufgabe 1 d1). Also ist nur $2x +4 $ für das Vorzeichen verantwortlich.
+\\
+\\
+\underline{3. Bestimme das Monotonieverhalten}\\ 
+Wir erkennen recht schnell, dass mit
+\begin{align*}
+f^\prime(-3) < 0 \ \text{und} \ f^\prime(-1)>0
+\end{align*}
+ein Widerspruch zu Monotonie vorliegt.
+\\
+\\
+\underline{4. Alternativer Lösungsweg}\\
+Wir erinnern uns, dass eine Funktion monoton wachsend ist, falls
+\begin{align*}
+x < y \Rightarrow f(x) \leq f(y)
+\end{align*}
+gilt. Für fallende Monotonie folgt stattdessen $f(x) \geq f(y)$.
+Wir nennen eine Funktion monoton, falls diese monoton wachsen oder fallend ist.
+Wichtig ist, dass obige Definition auf dem ganzen Definitionsbereich gelten muss.
+\\
+Wenn wir zwei monotone Funktionen $g$ und $h$ betrachten, so ist auch $g \circ h$ monoton. Dabei ist $g\circ h(x) = g(h(x))$. Wir zeigen dies exemplarisch für zwei monoton wachsende Funktionen. Seien $g$, $h$ monoton wachsende Funktionen. Dann ist mit
+\begin{align*}
+x < y \Rightarrow h(x) \leq h(y) \Rightarrow g(h(x)) \leq g(h(y))
+\end{align*} 
+auch $g\circ h$ monoton wachsend.
+Alle anderen Kombinationen funktionieren sehr ähnlich.
+Doch warum das Ganze?
+Die Wurzel -und Logarithmusfunktion sind beide monoton wachsend. Deswegen genügt es zu untersuchen, ob $x^2+4x+4$ monoton ist.
+\\
+Wir haben gesehen, dass es ausreicht
+\begin{align*}
+h(x) := x^2 + 4x + 4
+\end{align*}
+zu untersuchen. Wenn man das Bild einer Parabel im Kopf hat, ist $h$ wahrscheinlich nicht monoton. Wir suchen nun einen Widerspruch zur Definition der Monotonie.
+Es gilt $-3 < -2 $ und es gilt $h(-3) =1 > 0 = h(-2)$. Also kann $h$ schonmal nicht monoton wachsend sein. Mit $-2 < -1$ erhalten wir $h(-2) =0 < h(-1) = 1$. 
+Damit sehen wir, dass die Bedingung für Monotonie verletzt ist.
+Also ist $h$ nicht monoton und somit auch $f$ nicht.
+
+
+\newpage

@@ -1,0 +1,921 @@
+\section*{Aufgabe 4 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Das unbestimmte Integral
+\begin{align*}
+\int \left[ 6 \ x \  +  \ (2 \ x^2 \ + \ 1 ) e^{x^2} \right] \ dx
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$x^2 + x e^{x^2} + C, \quad C \in \mathbb{R}$.
+\item
+$3x + 2x e^{x^2} + C , \quad C \in \mathbb{R}$.
+\item
+$3x^2 + 2x e^{x^2} + C , \quad C \in \mathbb{R}$.
+\item
+$3x^2 + x e^{x^2} + C , \quad C \in \mathbb{R}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, was für die Stammfunktionen gelten muss und finde die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, was für die Stammfunktionen gelten muss und finde die korrekte Antwort}\\
+Wir suchen eine Funktion $f$, welche eine der Funktionen von (a) - (d) ist.
+Wir wissen, dass
+\begin{align*}
+f^\prime(x) = 6x +   (2  x^2 + 1 ) e^{x^2}
+\end{align*}
+erfüllt sein muss.
+Wir sehen an den ersten Summanden von (a) und (b), dass wir diese ausschließen können.
+Dies können wir aufgrund von
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d} x} x^2  &= 2x\\
+\frac{\mathrm{d}}{\mathrm{d} x} 3x &= 3
+\end{align*}
+machen.
+Weiter gilt
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d} x} x e^{x^2}
+= 1 \cdot e^{x^2} + x (2x e^{x^2})
+= e^{x^2} + 2x^2 e^{x^2}
+= ( 1+ 2x^2) e^{x^2}
+\end{align*}
+mit der Produkt und Kettenregel,womit wir die korrekte Antwort (d) erhalten.
+
+\newpage
+
+\subsection*{\frage{2}{3}}
+Der Vektor
+\begin{align*}
+\textbf{x}
+=
+\begin{pmatrix}
+1\\
+2\\
+t\\
+4\\
+3
+\end{pmatrix}
+\end{align*}
+ist eine Eigenvektor der $5 \times 5$ Matrix $A$ zum Eigenwert $\lambda \neq 0$, wobei $t \in \mathbb{R}$.
+Der Vektor
+\begin{align*}
+\textbf{y}
+= 
+\begin{pmatrix}
+3\\
+4\\
+3\\
+t\\ 
+1
+\end{pmatrix}
+\end{align*}
+ist orthogonal zum Vektor $A \textbf{x}$ für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$t = 1$.
+\item
+$t \in \lbrace 1, -2 \rbrace$.
+\item
+$t = -2$.
+\item
+Es gibt kein $t \in \mathbb{R}$, sodass $\textbf{y}$ orthogonal zu $A \textbf{x} $ ist.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, worauf du aufgrund der Eigenvektoreigenschaft schließen kannst.
+\item 
+Rufe dir die Definition von Orthogonalität in Erinnerung und finde die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, worauf du aufgrund der Eigenvektoreigenschaft schließen kannst}\\
+Der Vektor $\textbf{x}$ ist Eigenvektor zu dem Eigenwert $\lambda \neq 0$.
+Damit gilt
+\begin{align*}
+A \textbf{x} = \lambda x,
+\end{align*}
+womit $A \textbf{x}$ nur ein skalares Vielfaches von $\textbf{x}$ ist.\\
+\\
+\underline{2. Rufe dir die Definition von Orthogonalität in Erinnerung und finde die korrekte Antwort}\\
+Zwei Vektoren $\textbf{u}, \textbf{v} \neq \textbf{0}$
+sind Orthogonal, falls das Skalarprodukt
+\begin{align*}
+\textbf{u} \cdot \textbf{v} = 0 
+\end{align*}
+erfüllt.
+Für skalare Vielfache gilt 
+\begin{align*}
+(\alpha \textbf{u}) \cdot \textbf{ v} 
+= 
+\alpha \ (\textbf{u} \cdot \textbf{ v} )
+\end{align*}
+für $\alpha \in \mathbb{R}$.
+Dementsprechend müssen wir für die Orthogonalität das Skalarprodukt von $\textbf{x}$ und $\textbf{y}$  betrachten.
+Es gilt:
+\begin{align*}
+\textbf{x} \cdot \textbf{y} 
+= 
+\begin{pmatrix}
+1\\
+2\\
+t\\
+4\\
+3
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+3\\
+4\\
+3\\
+t\\ 
+1
+\end{pmatrix}
+= 3 + 8 + 3t + 4t + 3 
+=14 + 7t 
+\end{align*}
+Man erkennt durch schnelles Nachrechnen, dass
+\begin{align*}
+\textbf{x} \cdot \textbf{y} 
+=14 + 7t 
+= 0
+\Leftrightarrow
+14 = -7t
+\Leftrightarrow
+t = -2
+\end{align*}
+gelten muss.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+\subsection*{\frage{3}{5}}
+Die $5 \times 4$ Matrix
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 0  & 1 & 2\\
+1 & 1 & 5 & 7\\
+0 & 1 & 2 & 1 \\
+2 & 1 & 1 & 4 \\
+0 & 1 & 1 & 0 
+\end{pmatrix}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+hat Rang $2$.
+\item
+hat Rang $3$.
+\item
+hat Rang $4$.
+\item
+hat Rang $5$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende das Gaußverfahren, um den Rang zu bestimmen.
+\item 
+Alternativer Lösungweg.
+\end{enumerate}
+\end{mdframed}
+\allowdisplaybreaks
+\underline{1. Verwende das Gauß-Verfahren, um den Rang zu bestimmen}\\
+Wir wenden das Gauß-Verfahren an:
+\begin{align*}
+&\begin{gmatrix}[p]
+1 & 0  & 1 & 2\\
+1 & 1 & 5 & 7\\
+0 & 1 & 2 & 1 \\
+2 & 1 & 1 & 4 \\
+0 & 1 & 1 & 0 
+\rowops
+\add[-1]{0}{1}
+\add[-2]{0}{3}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 1 & 2\\
+0 & 1 & 4 & 5\\
+0 & 1 & 2 & 1 \\
+0 & 1 & -1 & 0\\
+0 & 1 & 1 & 0 
+\rowops
+\add[-1]{1}{2}
+\add[-1]{1}{3}
+\add[-1]{1}{4}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 1 & 2\\
+0 & 1 & 5 & 5\\
+0 & 0 & -2 & -4 \\
+0 & 0 & -5 & -5\\
+0 & 0 & -3 & -5
+\rowops
+\add[\frac{1}{2}]{2}{0}
+\add[1]{3}{1}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & -2 & -4 \\
+0 & 0 & -5 & -5\\
+0 & 0 & -3 & -5 
+\rowops
+\mult{3}{\cdot ( -\frac{1}{5} )}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & -2 & -4 \\
+0 & 0 & 1 & 1\\
+0 & 0 & -3 & -5 
+\rowops
+\add[2]{3}{2}
+\add[3]{3}{4}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & -2 \\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & -2 
+\rowops
+\mult{2}{\cdot ( -\frac{1}{2} )}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 1\\
+0 & 0 & 0 & -2 
+\rowops
+\add[\cdot(-1)]{2}{3}
+\add[\cdot 2]{2}{4}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1 \\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 
+\rowops
+\swap{2}{3}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0  & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1\\
+0 & 0 & 0 & 0 
+\rowops
+\end{gmatrix}
+\end{align*}
+Damit ist der Rang der Matrix gleich $4$.\\
+\\
+\underline{2. Alternativer Lösungweg}\\
+Der Rang einer Matrix ist gleich der Anzahl linear unabhängiger Spalten bzw. Zeilen.
+Die Anzahl linear unabhängiger Spalten nennen wir Spaltenrang und die Anzahl linear unabhängiger Zeilenrang.
+Spalten -und Zeilenrang sind bei jeder Matrix gleich.
+Dies sieht man auch an
+\begin{align*}
+\mathrm{rg}(A) = \mathrm{rg}(A^\top)
+\end{align*}
+für jede Matrix $A$.
+Sollten wir also eine reguläre $4 \times 4$ Untermatrix von $A$ finden, so ist der Rang von $A$ gleich $4$.
+Wegen
+\begin{align*}
+\begin{gmatrix}[v]
+1 & 0  & 1 & 2\\
+1 & 1 & 5 & 7\\
+0 & 1 & 2 & 1 \\
+2 & 1 & 1 & 4
+\rowops
+\add[\cdot (-1)]{0}{1} 
+\add[\cdot (-2)]{0}{3}
+\end{gmatrix}
+&= 
+\begin{gmatrix}[v]
+1 & 0  & 1 & 2\\
+0 & 1 & 4 & 5\\
+0 & 1 & 2 & 1 \\
+0 & 1 & -1 & 0 
+\end{gmatrix}
+\\
+&=
+\begin{gmatrix}[v]
+ 1 & 4 & 5\\
+ 1 & 2 & 1 \\
+ 1 & -1 & 0 
+\end{gmatrix}
+\\
+&=
+\begin{gmatrix}[v]
+ 1 & 4 & 5\\
+ 0 & -2 & -4 \\
+ 0 & -5 & -5 
+\end{gmatrix}\\
+&=
+\begin{gmatrix}[v]
+  -2 & -4 \\
+ -5 & -5 
+\end{gmatrix}
+= 10 - 20 = -10 \neq 0
+\end{align*}
+haben wir eine reguläre $4 \times 4 $ Untermatrix von $A$ gefunden.
+Damit ist der Rang von $A$ mindestens $4$.
+Wir haben $5$ Zeilen mit jeweils $4$ Einträgen.
+Demnach sind diese linear abhängig, womit der Rang nicht $5$ sein kann.\\
+\\
+Die Antwort (c) ist korrekt.
+
+\newpage
+\subsection*{\frage{4}{4}}
+Gegeben sei die $3 \times 3 $ Matrix
+\begin{align*}
+A
+= 
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 0 & 1 \\
+1 & 1 & 1
+\end{pmatrix}.
+\end{align*}
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+0 & -1 & 1\\
+-1 & 0 & 1
+\end{pmatrix}$.
+\item
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+1 & -1 & 1\\
+-1 & 0 & 1
+\end{pmatrix}$.
+\item
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+0 & -1 & 1\\
+-1 & 1 & 1
+\end{pmatrix}$.
+\item
+$A$ ist singulär.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, welche Antworten falsch sind und gebe die richtige Antwort an.
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, welche Antworten falsch sind und gebe die richtige Antwort an}\\
+Zunächst gilt 
+\begin{align*}
+\det(A) 
+&= 
+\begin{gmatrix}[v]
+1 & 1 & 0\\
+1 & 0 & 1 \\
+1 & 1 & 1
+\rowops
+\add[\cdot (-1)]{0}{1}
+\add[\cdot (-1)]{0}{2}
+\end{gmatrix}
+=
+\begin{gmatrix}[v]
+1 & 1 & 0\\
+0 & -1 & 1 \\
+0 & 0 & 1
+\end{gmatrix}\\
+&=
+1 \cdot
+\begin{gmatrix}[v]
+ -1 & 1 \\
+ 0 & 1
+\end{gmatrix} 
+- 0\cdot
+\begin{gmatrix}[v]
+ 1 & 0 \\
+ 0 & 1
+\end{gmatrix}
++
+0 \cdot
+\begin{gmatrix}[v]
+ 1 & 0 \\
+ -1 & 1
+\end{gmatrix}
+= 1 \cdot (-1) \cdot 1
+= -1,
+\end{align*}
+womit $A$ regulär ist.
+Damit ist Antwort (d) falsch.
+Wir untersuchen nun nacheinander die Antworten (b) und (c). Uns ist bekannt, dass der Zusammenhang
+\begin{align*}
+A \cdot A^{-1} = 
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\end{align*}
+gelten muss. Wir überprüfen bei den Matrizen von (b) und (c), ob unpassende Einträge vorliegen.
+Für Antwort (b) betrachten wir die erste Zeile von $A$ mal die erste Spalte von $A^{-1}$.
+Wir erhalten
+\begin{align*}
+( 1 , 1 , 0 ) \cdot 
+\begin{pmatrix}
+1\\
+1\\
+-1
+\end{pmatrix}
+= 
+1 \cdot 1 + 1 \cdot 1 + 0 \cdot -1 
+= 2
+\end{align*}
+für den ersten Diagonaleintrag.
+Somit ist Antwort (b) falsch.\\ \\
+Für Antwort (c) wählen wir  die dritte Zeile von $A$ mal die zweite Spalte $A^{-1}$.
+Dies ergibt den zweiten Eintrag der dritten Zeile von $A \cdot A^{-1}$. Dieser sollte gleich $0$ sein.
+Wegen
+\begin{align*}
+(1,1,1) \cdot
+\begin{pmatrix}
+1\\
+-1 \\
+1
+\end{pmatrix}
+= 1 \cdot 1 + 1 \cdot (-1) + 1 \cdot 1
+= 1 \neq 0
+\end{align*}
+ist auch Antwort (c) falsch.\\
+\\
+Es gibt noch zwei weitere Lösungsmöglichkeiten.
+Die Erste wäre (a)-(c) nachzurechnen. 
+Dies ist aber zeitaufwendig und fehleranfällig.
+Die Zweite wäre das Gauß-Verfahren durchzurechnen.
+Die angegebene Methode lässt sich jedoch bis auf die Determinante ohne schriftliche Rechnungen lösen, was zeitsparend ist.
+
+\newpage
+
+\subsection*{\frage{5}{5}}
+Die Matrix
+\begin{align*}
+A 
+= 
+\begin{pmatrix}
+1 & 3 \\
+3 & 1
+\end{pmatrix}
+\end{align*}
+hat reellwertige Eigenwerte $\lambda_1$ und $\lambda_2$
+mit zugehörigen Eigenvektoren $\textbf{v}_1$ und $\textbf{v}_2$.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$\lambda_1 \lambda_2 = 0$.
+\item
+$\lambda_1 +  \lambda_2 = 0$.
+\item
+$\textbf{v}_1^\top \textbf{v}_2  = 0 $.
+\item
+$\textbf{v}_1 +  \textbf{v}_2  = \textbf{0} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Eigenwerte von $A$.
+\item Bestimme Eigenvektoren zu den zugehörigen Eigenwerten.
+\item Bestimme die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Eigenwerte von $A$}\\
+Durch Lösen von
+\begin{align*}
+\det(A - \lambda I ) = 0
+\end{align*}
+erhalten wir die Eigenwerte zu $A$.
+Es gilt:
+\begin{align*}
+\det(A - \lambda I ) =
+\left|
+\begin{pmatrix}
+1 - \lambda & 3 \\
+3 & 1 - \lambda
+\end{pmatrix}
+\right|
+=
+(1- \lambda)^2 - 9
+\end{align*}
+Durch
+\begin{align*}
+&(1- \lambda)^2 - 9 = 0 \\
+\Leftrightarrow
+&(1- \lambda)^2 = 9 \\
+\Leftrightarrow
+&\ 1 - \lambda = \pm 3\\
+\Leftrightarrow
+&\ \lambda_1 = -2 , \ \ \lambda_2 = 4
+\end{align*}
+erhalten wir die Eigenwerte $\lambda_1$ und $\lambda_2$.\\
+Wir sehen, dass die Antworten (a) und (b) falsch sind.\\
+\\
+\underline{2. Bestimme Eigenvektoren zu den zugehörigen Eigenwerten}\\
+Zuerst bestimmen wir einen Eigenvektor $\textbf{v}_1$ zu $\lambda_1$.
+Hierfür lösen wir das lineare Gleichungssystem
+\begin{align*}
+(A- \lambda_1 I ) \textbf{v} = \textbf{0}.
+\end{align*}
+Mit 
+\begin{align*}
+A- \lambda_1 I
+=
+\begin{pmatrix}
+3 & 3 \\
+3 & 3
+\end{pmatrix} 
+\leadsto
+\begin{pmatrix}
+3 & 3 \\
+0 & 0
+\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+1 & 1 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+erhalten wir die frei wählbare Variable $x_2$ und die 
+Gleichung
+\begin{align*}
+x_1 + x_2 = 0
+\Leftrightarrow
+x_1 = -x_2.
+\end{align*}
+Damit können wir die Eigenvektoren zu $\lambda_1$ durch
+\begin{align*}
+\alpha 
+\begin{pmatrix}
+-1 \\
+1
+\end{pmatrix}
+, \ \alpha \in \mathbb{R}
+\end{align*}
+angeben.
+Der Nullvektor der erweiterten Koeffizientenmatrix kann hierbei ignoriert werden.
+Da ein Eigenvektor ausreicht, können wir 
+\begin{align*}
+\textbf{v}_1 = 
+\begin{pmatrix}
+-1 \\
+1
+\end{pmatrix}
+\end{align*}
+setzen.
+Wir erhalten analog durch
+\begin{align*}
+(A - \lambda_2 I) 
+= 
+\begin{pmatrix}
+-3 & 3 \\
+3 & -3
+\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+-1 & 1 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+die Gleichung
+\begin{align*}
+-x_1 + x_2 = 0
+\Leftrightarrow
+x_1 = x_2.
+\end{align*}
+Damit können wir den zweiten Eigenvektor durch
+\begin{align*}
+\textbf{v}_2 = 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+\end{align*}
+angeben.\\
+\\
+\underline{3. Bestimme die korrekte Antwort}\\
+Wir sehen wegen
+\begin{align*}
+\textbf{v}_1 + \textbf{v}_2
+=
+\begin{pmatrix}
+0 \\
+2
+\end{pmatrix}
+\end{align*}
+Antwort (d) nicht erfüllt ist.
+Des Weiteren ist wegen
+\begin{align*}
+\textbf{v}_1^\top \cdot \textbf{v}_2
+=
+( -1 , 1) \cdot 
+\begin{pmatrix}
+1\\
+1
+\end{pmatrix}
+=
+-1 + 1 = 0
+\end{align*}
+Antwort (c) korrekt.
+Die Vektoren $\textbf{v}_1$ und $\textbf{v}_2$ sind also orthogonal zueinander.\\
+Man könnte die Aufgabe auch schneller lösen: 
+Die Matrix $A$ ist symmetrisch, d.h. es gilt
+\begin{align*}
+A = A^\top.
+\end{align*}
+Eigenvektoren zu verschiedenen Eigenwerten sind bei symmetrischen Matrizen immer orthogonal.\\
+\\
+Die Antwort (c) ist korrekt.
+
+\newpage
+
+\subsection*{\frage{6}{2}}
+Die Folge $\lbrace y_k \rbrace_{k \in \mathbb{N}_0}$ definiert durch
+\begin{align*}
+y_k =  4 - \left( \frac{1}{a}\right)^k
+\end{align*}
+mit $a \neq 0$ löst das Anfangswertproblem
+\begin{align*}
+4 y_{k+1} -y_k = 12 \ \text{und} \ y_0 = 3
+\end{align*}
+für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$a= 1$.
+\item
+$a= 2$.
+\item
+$a= 4$.
+\item
+Keine der vorangehenden Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform der Differenzengleichung an.
+\item Finde die allgemeine Lösung der Differenzengleichung und löse die Aufgabe.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform der Differenzengleichung an}\\
+In unserem Fall erhalten wir diese durch
+\begin{align*}
+4 y_{k+1} -y_k = 12 \ 
+\Leftrightarrow \
+4 y_{k+1} = y_k + 12
+\ \Leftrightarrow \
+y_{k+1} = \frac{1}{4} y_k + 3
+\end{align*}
+mit $A = \frac{1}{4} $ und $B = 3$.\\
+\\
+\underline{2. Finde die allgemeine Lösung der Differenzengleichung und löse die Aufgabe}\\
+Die allgemeine Lösung einer Differenzengleichung erster Ordnung ist durch
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+\end{align*}
+mit
+\begin{align*}
+y^\star 
+= \frac{B}{1 -A }, \quad A \neq 1 
+\end{align*}
+gegeben.
+Es gilt:
+\begin{align*}
+y^\star 
+= \frac{B}{1 -A }
+= \frac{3}{1 - \frac{1}{4} }
+= \frac{3}{\frac{3}{4}}
+= \frac{3}{1} \cdot \frac{4}{3} = 4.
+\end{align*}
+Die allgemeine Lösung ist dann
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+= \frac{1}{4^k} ( y_0 - 4 ) +4
+=
+\left( \frac{1}{4} \right)^k(y_0 -4) +4.
+\end{align*}
+Mit $y_0 = 3$ erhalten wir durch
+\begin{align*}
+y_k = \left( \frac{1}{4} \right)^k ( 3 - 4 ) +4
+=  4 - \left( \frac{1}{4} \right)^k
+\end{align*}
+das passende $a = 4$.
+Dies können wir durch Vergleichen mit der Aufgabenstellung erkennen.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+
+
+
+\subsection*{\frage{7}{2}}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+5 y_{k+1} + 6 y_k = 1 , \quad k = 0,1,2,...
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+monoton und konvergent.
+\item
+monoton und divergent.
+\item
+oszillierend und konvergent.
+\item
+oszillierend und divergent.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform und allgemeine Lösung der Differenzengleichung an.
+\item 
+Bestimme die relevanten Eigenschaften.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform und allgemeine Lösung der Differenzengleichung an}\\
+Wie in der vorigen Aufgabe erhalten wir durch
+\begin{align*}
+5 y_{k+1} + 6 y_k = 1
+\ \Leftrightarrow \
+5 y_{k+1} = - 6 y_k + 1
+\ \Leftrightarrow \
+y_{k+1} = - \frac{6}{5} y_k  + \frac{1}{5}
+\end{align*}
+die Normalform mit $A =  - \frac{6}{5} $ und $B = \frac{1}{5}$.
+Mit 
+\begin{align*}
+y^\star = 
+\frac{B}{1-A} 
+= 
+\frac{\frac{1}{5}}{1 - \left( -\frac{6}{5} \right)} 
+=
+\frac{\frac{1}{5}}{\frac{11}{5}}
+= \frac{1}{5} \cdot \frac{5}{11} = \frac{1}{11}
+\end{align*}
+erhalten wir die allgemeine Lösung
+\begin{align*}
+y_k = A^k (y_0 - y^\star)  + y^\star
+= \left( - \frac{6}{5} \right)^k \left ( y_0 - \frac{1}{11}\right) + \frac{1}{11}.
+\end{align*}
+\newpage
+\underline{2. Bestimme die relevanten Eigenschaften}\\
+Wir wissen, dass $A\neq 1$ ist.
+Damit können die Fälle
+\begin{align*}
+A > 0 &\rightarrow \ \text{Lösung monoton}\\
+A < 0 &\rightarrow \ \text{Lösung oszillierend}\\
+|A| < 1  &\rightarrow \ \text{Lösung konvergent}\\
+|A| > 1  &\rightarrow \ \text{Lösung divergent}
+\end{align*}
+eintreten.
+Wegen $A = -\frac{6}{5} < 0$ wissen wir, dass die allgemeine Lösung oszillierend ist.
+Zudem gilt
+$
+|A| = \frac{6}{5} > 1,
+$
+womit die allgemeine Lösung divergent ist.
+Durch
+\begin{align*}
+\lim \limits_{k \to \infty} |A^k | 
+=\lim \limits_{k \to \infty} \left| \left( - \frac{6}{5} \right)^k \right| = \infty
+\end{align*}
+können wir die Divergenz veranschaulichen und an
+\begin{align*}
+A^k = \left( - \frac{6}{5} \right)^k
+= (-1)^k \cdot\left(  \frac{6}{5} \right)^k
+\end{align*}
+sehen wir, dass die Lösung oszilliert.
+\\
+\\
+Somit ist Antwort (d) korrekt.
+\newpage
+
+\subsection*{\frage{8}{4}}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+m \ y_{k+1} + y_k  \ = \ m^2, \quad k=0,1,2,...,
+\end{align*}
+wobei $m \in \mathbb{R} \setminus \lbrace 0 \rbrace$, ist monoton und konvergent genau dann, wenn
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$m \in [-1,0)$.
+\item
+$m \in (0,1]$.
+\item
+$m < -1$.
+\item
+$m> 1$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Normalform und allgemeine Lösung der Differenzengleichung an.
+\item 
+Argumentiere mithilfe den bekannten Eigenschaften.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Normalform an }\\
+Wie in den vorigen Aufgaben erhalten wir mit
+\begin{align*}
+m  y_{k+1} + y_k   =  m^2
+ \ \Leftrightarrow \
+m y_{k+1} = - y_k + m^2
+\ \Leftrightarrow \
+y_{k+1} = - \frac{1}{m} y_k + m 
+\end{align*}
+die Normalform mit $A = - \frac{1}{m}$ und $B = m$.
+\\
+\\
+\underline{2. Argumentiere mithilfe den bekannten Eigenschaften}\\
+Wir wissen, dass die allgemeine Lösung genau dann monoton und konvergent ist, wenn
+\begin{align*}
+A > 0  \ \text{und} \ |A| \leq 1
+\end{align*}
+erfüllt ist.
+Wegen $m \in \mathbb{R} \setminus \lbrace 0 \rbrace$ ist $B=0$ unmöglich.
+Daraus folgt
+\begin{align*}
+0 < - \frac{1}{m} \leq 1. 
+\end{align*}
+Wegen 
+\begin{align*}
+-\frac{1}{m} > 0 
+\end{align*}
+wissen wir direkt, dass $m < 0 $ ist.
+Weiter gilt:
+\begin{align*}
+- \frac{1}{m} < 1 
+\ \Leftrightarrow \
+\frac{1}{m} >-1
+ \ \Leftrightarrow \
+m < -1
+\end{align*}
+\\
+
+Somit ist Antwort (c) korrekt.

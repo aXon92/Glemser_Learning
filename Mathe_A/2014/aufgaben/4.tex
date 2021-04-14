@@ -1,0 +1,434 @@
+\newpage
+\section*{Aufgabe 4 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Gegeben ist die Funktion 
+\begin{align*}
+f \ : \ \mathbb{R}_+ \to \mathbb{R},
+t \mapsto f(t) = t^4.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Die Wachstumrate $\rho_f(t)$ von $f$ ist streng monoton fallend in $t$.
+\item Die Wachstumrate $\rho_f(t)$ von $f$ ist konstant in $t$.
+\item Die Wachstumrate $\rho_f(t)$ von $f$ ist streng monoton wachsend in $t$.
+\item Die Wachstumrate $\rho_f(t)$ von $f$ ist nicht monoton in $t$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Wachstumsrate $\rho_f$.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Wachstumsrate $\rho_f$}\\
+Die Wachstumsrate $\rho_f$ von $f$ ist durch
+\begin{align*}
+\rho_f(t) = \frac{f^\prime(t)}{f(t)}
+\end{align*} 
+gegeben.
+Damit erhalten wir mit
+\begin{align*}
+\rho_f(t) = \frac{f^\prime(t)}{f(t)}
+= \frac{4  t^3}{t^4}
+= \frac{4}{t^3}
+\end{align*} 
+die Wachstumsrate.
+Diese ist auf $\mathbb{R}_+$ streng monoton fallenend.
+Also ist Antwort (a) korrekt.
+
+\newpage
+
+\subsection*{\frage{2}{5}}
+Gegeben ist die Funktion 
+\begin{align*}
+f \ : \ \mathbb{R}_+ \to \mathbb{R}_+, \
+x \mapsto f(x) = \frac{1}{x} \ x^x.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f$ hat ein lokales Minimum in $x_0 = 1$.
+\item $f$ hat ein lokales Minimum in $x_0 = \ln(2)$.
+\item $f$ hat ein lokales Minimum in $x_0 = e$.
+\item $f$ hat ein lokales Minimum in $x_0 = e^{-1}$.
+
+
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Ableitung von $f$.
+\item Bestimme die Extrempunkte.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Ableitung von $f$}\\
+Zunächst bemerken wir, dass
+\begin{align*}
+x^x = e^{\ln(x^x)} = e^{x  \ln(x)}
+\end{align*}
+gilt. Damit gilt auch
+\begin{align*}
+\frac{\td{ \ }}{\td{x}} x^x
+&= \frac{\td{ \ }}{\td{x}} e^{x \ln(x)}\\
+&=\left(\ln(x) + x \cdot \frac{1}{x}\right)\cdot e^{x\ln(x)}\\
+&= ( \ln(x) + 1) \cdot e^{x  \ln(x)}\\
+&= ( \ln(x) + 1) \cdot x^x
+\end{align*}
+durch die Produkt-und Kettenregel.
+Mit der Produktregel erhalten wir durch
+\begin{align*}
+f^\prime(x) &= \frac{1}{x} \ ( \ln(x) + 1) \cdot x^x
+- \frac{1}{x^2} \ x^x\\
+&= \left(  ( \ln(x) + 1) - \frac{1}{x} \right) \cdot  \frac{1}{x}\cdot x^x\\
+\end{align*}
+die Ableitung von $f$.\\
+\\
+\underline{2. Bestimme die Extrempunkte}\\
+Wir überprüfen nun die Nullstellen der Ableitung.
+Hierfür ist nur
+\begin{align*}
+\ln(x) + 1 - \frac{1}{x} = 0
+\end{align*}
+interessant.
+Diese Gleichung ist nicht explizit lösbar.
+Jedoch können streng monotone Funktionen nur einen Schnittpunkt haben.
+Wir wollen also wissen, für welches $x$
+\begin{align*}
+\ln(x) + 1 = \frac{1}{x}
+\end{align*}
+gilt.
+Durch Überlegen (oder Testen von (a) bis (d)) erhalten wir $x_0 =1$.
+Links von $1$ ist die Steigung von $f$ negativ und rechts positiv.
+Also haben wir ein Minimum an $x_0 = 1$.\\
+\\
+Somit ist Antwort (a) korrekt.
+
+\newpage
+
+\subsection*{\frage{3}{3}}
+Gegeben ist das Taylorpolynom $4.$ Ordnung der Funktion $f$ im Punkt $x_0 = 0$:
+\begin{align*}
+P_4(x) = \frac{1}{8}x^4 + \frac{1}{2} x^3 + \frac{3}{2} x^2 + 3x +1
+\end{align*}
+Welches ist die zugehörige Funktion?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f(x) = e^x$.
+\item $f(x) = 2  e^x - 1$.
+\item $f(x) = 3  e^x - 2$.
+\item $f(x) = 5  e^x - 4$.
+\end{enumerate}
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe einen allgemeinen Zusammenhang für das $4.$ Taylorpolynom an.
+\item Überprüfe deine Lösung.
+\item Alternativer Lösungsweg.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe einen allgemeinen Zusammenhang für das $4.$ Taylorpolynom an }\\
+Im Allgemeinen gilt:
+\begin{align*}
+f(0) &= P_4(0)\\
+f^\prime(0) &= P_4^\prime(0) 
+\end{align*}
+Durch
+\begin{align*}
+f(0) &= P_4(0) = 0\\
+f^\prime(0) &= P_4^\prime(0) =3 
+\end{align*}
+erhalten wir (c) als korrekte Antwort.
+Für keine andere Möglichkeit gilt $f^\prime(0) = 3$.
+\\
+\\
+\underline{2. Überprüfe deine Lösung}\\
+Für $f(x) = 3e^x -2$ gilt
+\begin{align*}
+f^{(i)}(0) = 3
+\end{align*}
+für alle $i \in \mathbb{N}$.
+Also ist das vierte Taylorpolynom durch
+\begin{align*}
+P_4(x) = 1  + 3x + \frac{3}{2!} x^2 + \frac{3}{3!} x^3 + \frac{3}{4!} x^4
+= 1 + 3x + \frac{3}{2} x^2 + \frac{1}{2} x^3 + \frac{1}{8} x^4
+\end{align*}
+gegeben.
+\\
+\\
+\newpage
+
+\underline{3. Alternativer Lösungsweg}\\
+Das Taylorpolynom der Ordnung $4.$ von $e^x$ ist durch
+\begin{align*}
+\frac{1}{4!} x^4 + \frac{1}{3!} x^3 + \frac{1}{2!} x^2  + \frac{1}{1} x +1
+= 
+\frac{1}{24} x^4 + \frac{1}{6} x^3 + \frac{1}{2} x^2 +x +1
+\end{align*}
+gegeben. Somit können wir Antwort (a) auschließen.\\
+Wir erhalten 
+\begin{align*}
+\frac{1}{8} x^4  + \frac{1}{2} x^3 + \frac{3}{2} x^2 + 3 x + 3
+\end{align*}
+durch Multiplizieren von $3$ das Taylorpolynom von $3 \ e^x$.
+Wir sehen, dass nur der konstante Term noch nicht passt.
+Durch Subtraktion von $2$ erhalten wir mit
+\begin{align*}
+\frac{1}{8} x^4  + \frac{1}{2} x^3 + \frac{3}{2} x^2 + 3 x + 1
+\end{align*}
+das Taylorpolynom von $3  e^x - 2$.
+Damit ist Antwort (c) korrekt.
+
+
+
+\newpage
+
+\subsection*{\frage{4}{3}}
+Die Niveaulinien $f(x,y) = c$ der Funktion
+\begin{align*}
+f(x,y) = \sqrt{x^2 - y^2 -1}
+\end{align*}
+für $c > 1$
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item sind Parabeln
+\item sind Hyperbeln.
+\item sind Ellipsen.
+\item sind keine Kurven der unter (a) - (c) genannten Art.
+\end{enumerate}
+
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle eine Gleichung auf und Forme sie zu einer bekannten Gleichung um.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Stelle eine Gleichung auf und Forme sie zu einer bekannten Gleichung um}\\
+Wir wollen die Gleichung 
+\begin{align*}
+\sqrt{x^2 - y^2 -1} = c
+\end{align*}
+für $c > 1 $ auf ihre geometrische Eigenschaft untersuchen.
+Wir erhalten durch
+\begin{align*}
+\sqrt{x^2 - y^2 -1} = c
+\Leftrightarrow
+x^2 - y^2 - 1 = c^2
+\Leftrightarrow
+x^2 - y^2 = c^2 +1
+\Leftrightarrow
+\frac{x^2}{c^2 + 1} - \frac{y^2}{c^2 + 1} = 1
+\end{align*}
+eine Hyperbelgleichung.
+
+\newpage
+
+\subsection*{\frage{5}{3}}
+Gegeben ist die Funktion 
+\begin{align*}
+f(x,y) = \left( x^a y^{1-a} + x^{-3} y^4 \right)^{0.5}, \ \ \
+(x > 0, y>0,a>0)
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f$ ist homogen vom Grad $0.5$.
+\item $f$ ist linear homogen.
+\item $f$ ist homogen vom Grad $a$.
+\item $f$ ist nicht homogen.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, wann eine Funktion homogen ist.
+\item Zeige allgemein, ob die Funktion homogen oder nicht homogen ist.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, wann eine Funktion homogen ist} \\
+Eine Funktion $f \ : \ D_f  \to \mathbb{R}$ heißt homogen vom Grad $n$, falls
+\begin{align*}
+f(\lambda x, \lambda y) = \lambda^n \cdot f(x,y)
+\end{align*}
+für alle $x \in D_f$ und $\lambda > 0$ gilt.
+\\
+\\
+
+\underline{2. Zeige allgemein, ob die Funktion homogen oder nicht homogen ist}\\
+Wir wählen ein beliebiges $\lambda >0 $. 
+Für $\lambda = 0 $ erhalten wir die Gleichung $0 = 0$, wodurch wir diesen Fall direkt auschließen können.
+Wir erhalten nun durch
+\begin{align*}
+f( \lambda x , \lambda y )
+&=
+\left((\lambda x)^a (\lambda y)^{1-a}
++ (\lambda x)^{-3} (\lambda y)^4\right)^{0.5}
+= 
+\left(\lambda^a x^a \lambda^{1-a} y^{1-a}
++ \lambda^{-3} x^{-3} \lambda^4 y^4)\right)^{0.5}\\
+&=
+\left(\lambda^1 x^a  y^{1-a}
++ \lambda^1 x^{-3}  y^4)\right)^{0.5}
+=
+\lambda^{0.5} \left(x^a  y^{1-a}
++  x^{-3}  y^4)\right)^{0.5}
+= \lambda^{0.5} f(x,y)
+\end{align*}
+die Homogenität vom Grad $0.5$.
+
+\newpage
+
+\subsection*{\frage{6}{3}}
+Gegeben ist die Funktion 
+\begin{align*}
+f(x,y) = \frac{1}{3} \ln(x) + \frac{2}{3} \ln(y), \ \ \
+(x>0 , y>0 )
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f$ ist homogen vom Grad $0$.
+\item $f$ ist linear homogen.
+\item $f$ ist homogen vom Grad $\frac{1}{3}$.
+\item $f$ ist nicht homogen.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, ob diese Funktion homogen sein kann.
+\item Untermauere deine Überlegung.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, ob diese Funktion homogen sein kann}\\
+Wir rufen uns die Logarithmusregel
+\begin{align*}
+\ln( \lambda  x ) =\ln(\lambda) + \ln(x)
+\end{align*}
+für $\lambda, x > 0$.
+Unsere Funktion $f$ setzt sich aus zwei Logarithmustermen zusammen.
+Aus der Rechenregel sehen wir, dass die Multiplikation zur Summe wird. Damit kann $f$ nicht homogen sein.\\
+\\
+\underline{2. Untermauere deine Überlegung}\\
+Wir rechnen
+\begin{align*}
+f(\lambda x, \lambda y) 
+&= 
+\frac{1}{3} \ln(\lambda x) + \frac{2}{3} \ln(\lambda y)
+=
+\frac{1}{3}( \ln(\lambda) + \ln(x)) + \frac{2}{3} ( \ln(\lambda) + \ln(y))\\
+&=
+\ln(\lambda) + \frac{1}{3} \ln(x) + \frac{2}{3} \ln(y)
+= 
+\ln(\lambda) + f(x,y)
+\end{align*}
+für $\lambda >0 $ nach.
+Damit ist $f$ ist nicht homogen\\
+\\
+Somit ist Antwort (d) korrekt.
+
+\newpage
+
+\subsection*{\frage{7}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x,y) = 
+\sqrt{4  x^{0.2} y^{0.4}} + \sqrt[4]{x^{1.6} y^{0.8}}
+\ \ \
+(x>0, y>0)
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f$ ist homogen vom Grad $0.6$.
+\item $f$ ist linear homogen.
+\item $f$ ist homogen vom Grad $2.4$.
+\item $f$ ist nicht homogen.
+\end{enumerate}
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Weise nach, ob die Funktion homogen ist oder nicht.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Weise nach, ob die Funktion homogen ist oder nicht}\\
+Wir betrachten die einzelnen Summanden der Funktion für $\lambda > 0$. Wir erhalten
+\begin{align*}
+\sqrt{4 (\lambda x)^{0.2} (\lambda y)^{0.4}}
+= \sqrt{4 \ \lambda^{0.2} x^{0.2} \lambda^{0.4} y^{0.4}}
+= \sqrt{4 \ \lambda^{0.6} x^{0.2}  y^{0.4}}
+= \lambda^{0.3} \ \sqrt{4 \  x^{0.2}  y^{0.4}}
+\end{align*}
+für den ersten Summand.
+Jedoch gilt
+\begin{align*}
+\sqrt[4]{(\lambda x)^{1.6} (\lambda y)^{0.8}}
+=
+\sqrt[4]{\lambda^{1.6} x^{1.6} \lambda^{0.8} y^{0.8}}
+=
+\sqrt[4]{\lambda^{2.4} x^{1.6} y^{0.8}}
+=
+\lambda^{0.6} \ \sqrt[4]{ x^{1.6} y^{0.8}}
+\end{align*}	
+für den zweiten Summanden.
+Die Potenzen sind unterschiedlich, womit $f$ nicht homogen ist.
+Also ist Antwort (d) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{2}}
+Eine differenzierbare Funktion $f(x,y)$ sei homogen vom Grad $k = 0.7$ und es gelte $f(x,y) > 0$ für alle $x,y$.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0) = 0$ in jedem Punkt $(x_0,y_0)$ des Definitionsbereichs.
+\item $\varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0) = 0.7$ in jedem Punkt $(x_0,y_0)$ des Definitionsbereichs.
+\item $\varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0) = 1.4$ in jedem Punkt $(x_0,y_0)$ des Definitionsbereichs.
+\item Es lässt sich keine allgemeine Aussage über $\varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0)$ machen,
+d.h. $\varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0)$ ist abhängig von $(x_0,y_0)$.
+\end{enumerate}
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, was laut Euler für homogene Funktionen vom Grad $k$ gilt.
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, was laut Euler für homogene Funktionen vom Grad $k$ gilt }\\
+Wir wissen, dass der Zusammenhang
+\begin{align*}
+k \ f(x_0,y_0) = x_0 f_x(x_0,y_0) + y_0 f_y(x_0,y_0)
+\end{align*}
+für eine homogene Funktion $f$ vom Grad $k$ gilt.
+Da $f(x_0,x_0) >0 $ ist, erhalten wir durch
+\begin{align*}
+k \ f(x_0,y_0) = x_0 f_x(x_0,y_0) + y_0 f_y(x_0,y_0)
+\Leftrightarrow
+k  &= x_0 \frac{f_x(x_0,y_0)}{f(x_0,y_0)} + y_0 \frac{f_x(x_0,y_0)}{f(x_0,y_0)}\\
+&= \varepsilon_{f,x}(x_0,y_0) + \varepsilon_{f,y}(x_0,y_0)
+\end{align*}
+(b) als korrekte Antwort.

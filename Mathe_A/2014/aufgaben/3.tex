@@ -1,0 +1,466 @@
+\section*{Aufgabe 3 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{2}}
+Die Aussage
+\begin{align*}
+(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)
+\end{align*}
+hat die Wahrheitstabelle
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+\ 
+\ 
+\
+\
+\
+\begin{tabular}{cllll}
+\hline
+\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+\multicolumn{1}{c|}{$(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$}  \\ \hline
+\end{tabular}
+
+
+\item
+\ 
+\ 
+\
+\
+\
+\begin{tabular}{cllll}
+\hline
+\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+\multicolumn{1}{c|}{$(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ \hline
+\end{tabular} 
+\item
+\ 
+\ 
+\
+\
+\
+\begin{tabular}{cllll}
+\hline
+\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+\multicolumn{1}{c|}{$(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)$} & \multicolumn{4}{l}{$F$ $F$ $F$ $W$}  \\ \hline
+\end{tabular} 
+\item 
+\ 
+\ 
+\
+\
+\
+\begin{tabular}{cllll}
+\hline
+\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+\multicolumn{1}{c|}{$(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$}  \\ \hline
+\end{tabular}
+\end{enumerate}
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle die Wahrheitstafel auf oder überlege dir eine äquivalente Aussage.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Stelle die Wahrheitstafel auf oder überlege dir eine äquivalente Aussage}\\
+Durch
+\begin{center}
+\begin{tabular}{cllll}
+\hline
+\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+\multicolumn{1}{c|}{$A \ \wedge \ B $} & \multicolumn{4}{l}{$W$ $F \ $  $F$ $F$}  \\ \hline
+\multicolumn{1}{c|}{$ B \ \vee \ A$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ \hline
+\multicolumn{1}{c|}{$(A \ \wedge \ B) \ \vee \ (B \ \vee \ A)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ \hline
+\end{tabular} 
+\end{center}
+erhalten wir (b) als korrekte Antwort.
+Hierbei ist $\wedge$ die UND-Verknüpfung.
+Diese wird nur wahr ($W$), wenn $A$ und $B$ wahr sind.
+Für die ODER-Verknüpfung verwenden wir das Symbol $\vee$.
+Diese wird wahr, wenn entweder $A$ oder $B$ oder beide wahr sind.
+\\
+Wir erhalten 
+\begin{align*}
+&(A  \wedge  B)  \vee  (B  \vee  A)\\
+\Leftrightarrow
+&(A \vee (B \vee A) ) \wedge (B \vee ( B \vee A))\\
+\Leftrightarrow
+&(A \vee B)  \wedge (A \vee B)\\
+\Leftrightarrow
+&A \vee B
+\end{align*}
+durch das Distributivgesetz für Aussagenlogik eine äquivalente Aussage.
+Wir können aber auch direkt sehen, dass $A \wedge B$ keinen Einfluss auf unsere Aussage hat.\\
+Somit ist Antwort (b) korrekt.
+
+\newpage
+
+
+
+\subsection*{\frage{2}{3}}
+Gegeben ist die Folge $ \lbrace a_n \rbrace_{n \in \mathbb{N}}$
+definiert durch
+\begin{align*}
+a_n = \frac{e  2^n + n}{n^e + 2n}.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ \lbrace a_n \rbrace_{n \in \mathbb{N}}$ hat den Grenzwert $0$.
+\item $ \lbrace a_n \rbrace_{n \in \mathbb{N}}$ hat den Grenzwert $1$.
+\item $ \lbrace a_n \rbrace_{n \in \mathbb{N}}$ hat den Grenzwert $e$.
+\item $ \lbrace a_n \rbrace_{n \in \mathbb{N}}$ ist divergent.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, ob diese Folge konvergent sein kann.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, ob diese Folge konvergent sein kann}\\
+Wir könnten direkt sagen, dass jede Expontialfolge der Form
+$a^n$ mit $a > 1$ schneller wächst als jede Potenzfolge.
+Demzufolge kann diese Folge nur divergent sein.
+Divergent bedeutet, dass diese Folge keinen Grenzwert besitzt.
+Durch
+\begin{align*}
+\lim \limits_{n \rightarrow \infty}
+\frac{e  2^n + n}{n^e + 2n}
+=
+\lim \limits_{n \rightarrow \infty}
+\frac{n^e(\frac{e  2^n}{n^e}  + \frac{n}{n^e})}{n^e (1 + 2\frac{n}{n^e})}
+=
+\lim \limits_{n \rightarrow \infty}
+\frac{\frac{e  2^n}{n^e}  + \frac{n}{n^e}}{1 + 2\frac{n}{n^e}}
+=
+\infty
+\end{align*}
+können wir dies noch untermauern.\\
+Somit Antwort (d) korrekt.
+\newpage
+
+\subsection*{\frage{3}{2}}
+Der Grenzwert 
+\begin{align*}
+\lim \limits_{x \rightarrow \frac{\pi}{3}}
+\frac{\sin(3x)}{1 - 2 \ cos(x)}
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $0$.
+\item $- \sqrt{3}$
+\item $\frac{1}{3}$
+\item $3 \pi$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme den Grenzwert durch die Regel von de l'H\^{o}pital .
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme den Grenzwert durch die Regel von de l'H\^{o}pital }\\
+Wegen
+\begin{align*}
+\sin \left(3 \cdot \frac{\pi}{3} \right) &= \sin(\pi) = 0\\
+1 - 2 \ \cos \left( \frac{\pi}{3} \right)
+&= 1 - 2 \cdot \frac{1}{2}
+= 1- 1 = 0 
+\end{align*}
+können wir die Regel von l'H\^{o}pital anwenden.
+Wir erhalten durch
+\begin{align*}
+\lim \limits_{x \rightarrow \frac{\pi}{3}}
+\frac{\sin(3x)}{1 - 2 \ \cos(x)}
+= \lim \limits_{x \rightarrow \frac{\pi}{3}}
+\frac{3 \ \cos(3x)}{ 2 \ \sin(x)}
+= 
+\frac{-3 }{ 2 \ \frac{1}{2} \sqrt{3}}
+= \frac{-3}{\sqrt{3}}
+= - \sqrt{3}
+\end{align*}
+den Grenzwert.
+\\
+Somit ist Antwort (b) korrekt.
+\newpage
+
+\subsection*{\frage{4}{3}}
+Ein Projekt benötigt ein anfängliches Investment in Höhe von $2'000'000$ CHF und zahlt in $5$ Jahren CHF $2'500'000$ aus.
+Das Projekt hat den höchsten Nettobarwert für einen jährlichen
+Zinssatz $i$ von
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $i = 2.25 \%$.
+\item $i = 4.56 \%$
+\item $i = 6.65 \%$
+\item Der Nettobarwert ist unabhängig vom jährlichen Zinssatz $i$.
+\end{enumerate}
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rufe dir die Formel des Nettobarwerts in Erinnerung.
+\item Untersuche die Auswirkung des Zinssatzes. 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rufe dir die Formel des Nettobarwerts in Erinnerung}\\
+Allgemein lässt sich der Nettobarwert nach $T$ Jahren durch
+\begin{align*}
+NPV =
+-C_0 + \sum \limits_{t=0}^T \frac{C_t}{(1+i)^t}
+\end{align*}
+berechnen.
+\\
+\\
+
+\underline{2. Untersuche die Auswirkung des Zinsatzes}\\
+Eingesetzt erhalten wir
+\begin{align*}
+NPV
+= -2'000'000 + 
+ \frac{2'500'000}{(1+i)^5}
+\end{align*}
+und erkennen, dass der Wert größer wird, wenn der Nenner kleiner wird.\\
+\\
+Somit ist Antwort (a) korrekt.
+\newpage
+
+\subsection*{\frage{5}{4}}
+Der Term
+\begin{align*}
+\ln \left( \frac{4a}{b} \right)
+-
+\ln \left( \frac{b}{2a} \right)
+\quad
+(a > 0 , b > 0)
+\end{align*}
+ist äquivalent zu
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $0$.
+\item $- \ln(2)$
+\item $2  \ln \left( \frac{2 \sqrt{2}  a}{b} \right)$
+\item $\ln \left( \frac{4  a}{b} - \frac{b}{2  a } \right)$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Forme den Term mit Hilfe der Logarithmusregeln um.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Forme den Term mit Hilfe der Logarithmusregeln um}\\
+Durch Anwenden der Logarithmusregeln erhalten wir:
+\begin{align*}
+\ln \left( \frac{4a}{b} \right)
+-
+\ln \left( \frac{b}{2a} \right)
+&= 
+\ln \left(\frac{\frac{4a}{b}}{\frac{b}{2a}} \right)\\
+&= \ln \left( \frac{4a}{b} \cdot \frac{2a}{b} \right)\\
+&= \ln \left( \frac{8  a^2}{b^2} \right)\\
+&= \ln \left( \frac{( 2 \sqrt{2}  a)^2}{b^2} \right)\\
+&= \ln \left( \frac{ 2 \sqrt{2}  a}{b} \right)^2\\
+&= 2 \ \ln \left( \frac{ 2 \sqrt{2}  a}{b} \right)
+\end{align*}
+Somit ist Antwort (c) korrekt.
+
+\newpage
+
+\subsection*{\frage{6}{5}}
+Gegeben ist die Funktion 
+\begin{align*}
+f \ : \ D_f \to \mathbb{R}, \ \
+x \mapsto y=
+\begin{cases}
+\frac{x^2-1}{x^2 - 2x -3} , &\quad \text{für} \ x\neq -1, \ x \neq 3 \\
+\quad \ \ \frac{1}{2}, &\quad \text{für} \ x = -1 \\
+\quad -2, &\quad \text{für} \ x = 3
+\end{cases}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f$ ist überall stetig.
+\item $f$ ist nur in $x = -1 $ unstetig.
+\item $f$ ist nur in $x = 3 $ unstetig.
+\item $f$ ist nur in $x = -1 $ und $x = 3 $ unstetig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rufe dir in Erinnerung, was Stetigkeit bedeutet.
+\item Untersuche die Stetigkeit in $-1$.
+\item Untersuche die Stetigkeit in $3$.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Rufe dir in Erinnerung, was Stetigkeit bedeutet}\\
+Eine Funktion $f \ : \ \mathbb{R} \to \mathbb{R}$ heißt stetig in $x_0$,
+falls 
+\begin{align*}
+x \rightarrow x_0 \ \Rightarrow \ f(x) \rightarrow f(x_0)
+\end{align*}
+gilt.
+Das heißt: Wenn $x$ gegen $x_0$ geht, muss $f(x)$ gegen $f(x_0)$ gehen.
+Wir müsssen also
+\begin{align*}
+\lim \limits_{x \rightarrow x_0} f(x)
+\end{align*}
+bestimmen um die Stetigkeit in $x_0 = -1$ oder $x_0=3$ zu überprüfen.
+In allen anderen Punkten ist $f$ bereits stetig.\\
+\\
+
+\underline{2. Untersuche die Stetigkeit in $-1$}\\
+Wir beobachten zunächst, dass
+\begin{align*}
+x^2 -2x -3 = 0
+\Leftrightarrow
+x_{\nicefrac{1}{2}} &= \frac{-(-2) \pm \sqrt{(-2)^2 - 4\cdot 1 \cdot (-3)}}{2 \cdot 1}\\
+&=
+\frac{2 \pm \sqrt{4 + 12}}{2}\\
+&=
+\frac{2 \pm \sqrt{16}}{2}\\
+&=
+\frac{2 \pm 4}{2} \\
+&=
+1 \pm 2\\
+\Leftrightarrow
+x_1 &= -1, \ \ x_2 = 3
+\end{align*}
+mit der $abc$-Formel folgt.
+Damit erhalten wir
+\begin{align*}
+f(x) = \frac{x^2 -1}{x^2 -2x -3}
+= \frac{(x-1) (x+1)}{(x+1)(x-3)}
+= \frac{x-1}{x-3}
+\end{align*}
+für $x \neq -1$ und $x \neq 3$.
+Also folgt durch
+\begin{align*}
+\lim \limits_{x \rightarrow -1} f(x)
+=
+\lim \limits_{x \rightarrow -1} \frac{x-1}{x-3}
+= 
+\frac{-2}{-4}
+= 
+\frac{1}{2}
+\end{align*}
+die Stetigkeit in $-1$.
+\\
+\\
+\underline{3. Untersuche die Stetigkeit in $3$}\\
+Wegen 
+\begin{align*}
+\lim \limits_{x \rightarrow 3} f(x)
+= 
+\lim \limits_{x \rightarrow 3} \frac{x-1}{x-3}
+=
+\infty
+\end{align*}
+ist $f$ in $3$ unstetig.\\
+\\
+Somit ist Antwort (c) korrekt.
+
+\newpage
+
+\subsection*{\frage{7}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+g(t) = x^t  \cos(2x).
+\end{align*}
+Welche der folgenden Ableitungen beschreibt die erste Ableitung von $g(t)$?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $g^\prime(t) = -2  t  x^{t-1}  \sin(2x)$.
+\item $g^\prime(t) = \ln(x)   x^t  \cos(2x) $.
+\item $g^\prime(t) = t  x^{t-1}  \cos(2x) - 2 x^t  \sin(2x)$.
+\item $g^\prime(t) = \ln(t)  x^t  \cos(2x)$.
+\end{enumerate}
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Berechne die Ableitung von $g$.
+\end{enumerate}
+\end{mdframed}
+\ \\
+\underline{1. Berechne die Ableitung von $g$}\\
+Wir müssen beachten, dass die Funktion von $t$ und nicht von $x$ abhängt.
+Wir erhalten
+\begin{align*}
+\frac{\td{ \ }}{\td{t}} x^t = \frac{\td{ \ }}{\td{t}} e^{\ln(x^t)}
+= \frac{\td{ \ }}{\td{t}} e^{t \ \ln(x)}
+= \ln(x) \ e^{t \ \ln(x)}
+= \ln(x) \ x^t
+\end{align*}
+mit Hilfe der Kettenregel.
+Da $\cos(2x)$ ein konstanter Faktor ist, erhalten wir durch
+\begin{align*}
+g^\prime(t)
+= \ln(x) \ x^t \cos(2x)
+\end{align*}
+die Ableitung nach $t$.
+\\
+Somit ist Antwort (b) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{2}}
+Welche der folgenden Bedingungen ist hinreichend dafür, dass eine auf $I=(a,b)$ differenzierbare Funktion in
+$(x_0,f(x_0))$ (mit $x_0 \in I)$) ein lokales Maximum hat?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f^\prime(x_0) = f^{\prime \prime}(x_0) = 0$ und $f^{\prime \prime \prime}(x_0) < 0$.
+\item $f^\prime(x_0) = f^{\prime \prime}(x_0) = 0 = f^{\prime \prime \prime}(x_0) $ und $f^{(4)}(x_0)<0$.
+\item $f^\prime(x_0)=0$ und $f^{\prime \prime}(x_0) >0$.
+\item $f^{\prime \prime}(x_0) \neq 0$ und $f^{\prime \prime \prime}(x_0)=0$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Wende den passenden Satz der Vorlesung an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Wende den passenden Satz aus der Vorlesung an}\\
+Sei eine Funktion $f \ : \ I \to \mathbb{R}$ mit der Bedingung
+\begin{align*}
+f^\prime(x_0)= \dots = f^{(n-1)}(x_0) =0, \quad f^{(n)}(x_0) \neq 0
+\end{align*}
+gegeben.
+Dann gilt:
+\begin{itemize}
+\item Falls $n$ gerade ist, besitzt $f$ in $x_0$ eine Extremstelle.
+Für $f^{(n)}(x_0) < 0$ ist diese ein lokales Maximum.
+Andernfalls ein lokales Minimum.
+
+\item Falls $n$ ungerade ist, besitzt $f$ in $x_0$ einen Sattelpunkt.
+\end{itemize}
+Durch diesen Satz können wir Antwort (a) direkt ausschließen.
+Aber wir erkennen auch sofort, dass Antwort (b) korrekt ist.

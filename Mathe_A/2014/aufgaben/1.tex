@@ -1,0 +1,455 @@
+\vspace{1cm}
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
+\renewcommand{\labelenumi}{\theenumi.}
+
+\section*{Aufgabe 1 (25 Punkte)}
+\subsection*{\nummer{a}{6}}
+Für welche Werte von $a$ ist die Reihe 
+\begin{align*}
+\sum \limits_{k=0}^\infty \left( \frac{2 a -1}{a+1} \right)^k
+\end{align*}
+konvergent?\\
+Ermitteln sie den zugehörigen Grenzwert.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Erkenne die Art der Reihe.
+\item Erinnere dich, wann diese Art von Reihe konvergent ist.
+\item Bestimme $a$.
+\item Bestimme den Grenzwert.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Erkenne die Art der Reihe}\\
+Wir erkennen, dass Summanden der Form
+\begin{align*}
+q_a^k = \left( \frac{2 a -1}{a+1} \right)^k
+\end{align*}
+vorliegen. Damit haben wir eine geometrische Reihe gegeben.\\
+\\
+
+\underline{2. Erinnere dich, wann diese Art von Reihe konvergent ist}\\
+Die geometrische Reihe
+\begin{align*}
+\sum \limits_{k=0}^\infty q^k
+\end{align*}
+ist genau dann konvergent, wenn $|q| < 1$ ist.
+Wir müssen die Ungleichung 
+\begin{align*}
+|q_a| = \left| \frac{2 a -1}{a+1} \right| < 1
+\end{align*}
+lösen, um $a$ zu bestimmen.\\
+\\
+\underline{3. Bestimme $a$}\\
+Die oben genannte Bedingung können wir nun durch
+\begin{align*}
+\left| \frac{2 a -1}{a+1} \right| < 1
+\Leftrightarrow
+\left( \frac{2 a -1}{a+1} \right)^2 < 1^2 = 1
+&\Leftrightarrow
+\frac{(2a-1)^2}{(a+1)^2} < 1
+\Leftrightarrow
+\frac{4a^2 -4a +1}{a^2 +2a +1} < 1\\
+\Leftrightarrow
+4a^2 -4a +1 < a^2 +2a +1
+&\Leftrightarrow
+3a^2-6a < 0
+\Leftrightarrow
+3a (a -2)< 0\\
+&\Leftrightarrow
+a (a -2) < 0
+\end{align*}
+umformen.
+Nun ist $a(a-2)$ eine nach oben geöffnete Parabel, die negativ zwischen den Nullstellen ist.
+Damit gilt $a(a-2) < 0$ für $a \in (0,2)$.
+Insgesamt haben wir 
+\begin{align*}
+|q_a| < 1 \Leftrightarrow a \in (0,2)
+\end{align*}
+gezeigt.
+Unsere Reihe konvergiert also für $a \in (0,2)$.\\
+\\
+
+\underline{4. Bestimme den Grenzwert}\\
+Der allgemeine Grenzwert der geometrischen Reihe ist durch
+\begin{align*}
+\sum \limits_{k=0}^\infty q^k = \frac{1}{1-q}
+\end{align*}
+für $|q| < 1 $ gegeben. Damit erhalten wir den Grenzwert
+\begin{align*}
+\sum \limits_{k=0}^\infty q_a^k 
+= \frac{1}{1-q_a}
+= \frac{1}{1- \frac{2a-1}{a+1}}
+= \frac{1}{\frac{a+1}{a+1} - \frac{2a-1}{a+1}}
+= \frac{1}{\frac{-a + 2}{a+1}}
+=\frac{a+1}{-a+2}
+\end{align*}
+für $a \in (0,2)$.
+
+\newpage
+\subsection*{\nummer{b}{6}}
+Ein Unternehmer wird auf das Ende des Jahres $2021$ in den Ruhestand treten.
+Um sich nach seinem Rücktritt eine Rente zu sichern, sieht er vor,
+ab einschliesslich $2001$ (bis $2021$) zu jedem Jahresende einen
+konstanten Betrag $C$ auf ein Sparkonto (Zinssatz $i = 2\%)$ einzuzahlen.
+Als Rentner will er ab $2022$ $15$ Jahre lang zu jedem Jahresende
+CHF $40'000$ abheben.\\
+Berechnen Sie $C$.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Überlege dir, ob eine vor- oder nachschüssige Rente gegeben ist.
+\item Gebe den Endwert nach $21$-jähriger Einzahlung an.
+\item Gebe den Barwert nach $15$-jähriger Auszahlung an.
+\item Stelle eine passende Gleichung auf und finde die Lösung.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, ob eine vor- oder nachschüssige Rente gegeben ist}\\
+Da die Einzahlungen am Ende des Jahres stattfinden, haben wir eine nachschüssige Rente.
+Damit ist der Endwert nach $T$ Jahren durch
+\begin{align*}
+A_T = \sum \limits_{k=0}^{T-1} C \cdot( 1+ i)^k = C \frac{(1+i)^{ T}- 1}{i}
+\end{align*} 
+gegeben.\\
+Der Barwert nach $T$ Jahren ist durch
+\begin{align*}
+PV = \sum \limits_{k=1}^T \frac{C}{(1+i)^k}
+= C \cdot \frac{1-(1+i)^{-T}}{i}
+\end{align*}
+gegeben.
+\\
+\\
+\underline{2. Gebe den Endwert nach $21$-jähriger Einzahlung an}\\
+Der Endwert nach $21$ Jahren ist durch
+\begin{align*}
+A_{21} = C \cdot \frac{(1.02)^{21}-1}{0.02}
+\end{align*}
+gegeben.
+Das $C$ ist die Unbekannte nach welcher wir später umformen.
+\\
+\\
+\underline{3. Gebe den Barwert nach $15$-jähriger Auszahlung an}\\
+Für den Barwert gilt nun 
+\begin{align*}
+PV
+&=
+\sum \limits_{k=1}^{15} \frac{40000}{(1 +0.02)^k}\\ 
+PV &= 40'000 \cdot \frac{1-(1.02)^{-15}}{0.02}
+\approx 513'970,55,
+\end{align*}
+wodruch wir nun im nächsten Schritt eine Gleichung aufstellen kann.\\
+\\
+\underline{4. Stelle eine passende Gleichung auf und finde die Lösung}\\
+Wir erhalten also
+\begin{align*}
+A_{21} &=
+C \frac{1.02^{21}-1}{0.02} = 40'000 \cdot \frac{1 - 1.02^{-15}}{0.02}
+= PV \approx 513'970,55\\
+\Leftrightarrow
+C &= \frac{40'000}{1.02^{15}}\frac{1.02^{15}-1}{1.02^{21}}
+\approx 19'934,25
+%\Leftrightarrow
+%PV = C \cdot \frac{(1.02)^21-1}{0.02}
+%\Leftrightarrow
+%C = \frac{0.02}{(1.02)^21-1} \cdot PV \approx 19'934,25.
+\end{align*}
+als Lösung.
+
+\newpage
+\subsection*{\nummer{c}{3}}
+Berechnen Sie
+\begin{align*}
+\lim \limits_{x \rightarrow 0}
+\frac{x^3}{2e^x-x^2-2x-2}.
+\end{align*}
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Überlege dir, welcher Satz hier angewendet werden kann.
+\item Berechne den Grenzwert.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, welcher Satz hier angewendet werden kann}\\
+Wir erhalten 
+\begin{align*}
+\frac{0}{0},
+\end{align*}
+wenn wir $0$ in den Zähler und Nenner einsetzen.
+Dies ist nicht definiert. 
+Aus diesem Grund können wir den Grenzwert nicht direkt ziehen und müssen den Satz von de l'H\^{o}pital anwenden.
+Die Frage ist nun, wie oft wir de l'H\^{o}pital nutzen müssen.
+Wir setzten nun $f(x) := x^3$ und 
+$g(x):= 2e^x -x^2 -2x -2$.
+Dann erhalten wir
+\begin{align*}
+f^\prime (x) =3 x^2 , \ f^{\prime \prime}(x) = 6x ,\
+f^{\prime \prime \prime}(x) = 6
+\end{align*}
+und
+\begin{align*}
+g^\prime (x) = 2e^x -2x -2, \ g^{\prime \prime}(x) = 2e^x -2 , \
+g^{\prime \prime \prime}(x) = 2 e^x.
+\end{align*}  
+Wir sehen, dass $f$ und $g$ erst ab der dritten Ableitung ungleich null für $x = 0 $ sind.
+Also wenden wir de l'H\^{o}pital dreimal an.
+\\
+\\
+\underline{2. Berechne den Grenzwert}\\
+Den Grenzwert erhalten wir nun durch dreimaliges Anwenden von de l'H\^{o}pital.
+Mit
+\begin{align*}
+\lim \limits_{x \rightarrow 0} \frac{x^3}{2e^x-x^2-2x-2}
+= \lim \limits_{x \rightarrow 0} \frac{3x^2}{2e^x-2x -2}
+=\lim \limits_{x \rightarrow 0} \frac{6x}{2e^x-2}
+= \lim \limits_{x \rightarrow 0} \frac{6}{2e^x}
+=\frac{6}{2	} = 3
+\end{align*}
+ist $3$ der gesuchte Grenzwert.
+
+\newpage
+
+\subsection*{\nummer{d1}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f \ : \ D_f \to \mathbb{R}, \ \ \
+x \mapsto y = 2^{-2 + \sqrt{\ln(x+2)}}. 
+\end{align*}
+Ermitteln Sie den Definitionsbereich $D_f$ und den Wertebereich $W_f$ von $f$.\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Rufe dir den Definitionsbereiche der Wurzelfunktion und des Logarithmus in Erinnerung.
+\item Leite den Definitionsbereich $D_f$ her.
+\item Nutze eine Eigenschaft von $2^x$ um den Wertebereich $W_f$ anzugeben.
+\item Gebe einen anderen Lösungsweg für den Wertebereich $W_f$ an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rufe dir den Definitionsbereiche der Wurzelfunktion und des Logarithmus in Erinnerung }\\
+Die Wurzelfunktion besitzt den Definitionsbereich $[0, \infty)$.
+Der Logarithmus hat den Definitionsbereich $(0, \infty)$ und Wertebereich $(-\infty, \infty) $.
+Darüber hinaus gilt
+\begin{align*}
+\ln(x) \geq 0
+\end{align*}
+für alle $x \in [1,\infty)$.  
+\\
+\\
+\underline{2. Leite den Definitionsbereich $D_f$ her}\\
+Aus unserer Vorüberlegung wissen wir, dass 
+\begin{align*}
+x+2 \geq 1
+\Leftrightarrow
+x \geq -1
+\end{align*}
+erfüllt sein muss.
+Damit ist der vollständige Definitionsbereich durch
+\begin{align*}
+D_f = [-1, \infty)
+\end{align*}
+gegeben.
+\\
+\\
+\underline{3. Nutze eine Eigenschaft von $2^x$ um den Wertebereich $W_f$ anzugeben}\\
+Wir wissen, dass 
+\begin{align*}
+x < y \ \Rightarrow \ 2^x < 2^y
+\end{align*}
+für alle $x,y \in \mathbb{R}$ gilt.
+Die Exponentialfunktion zur Basis $2$ ist also streng monoton wachsend.
+Nun ist die Wurzel-und Logaritmusfunktion streng monoton wachsend.
+Durch
+\begin{align*}
+f(-1) = 2^{-2+\sqrt{\ln(1)}} &= 2^{-2} = \frac{1}{4}\\
+\lim \limits_{x \rightarrow \infty} f(x) &= \infty
+\end{align*}
+erhalten wir 
+\begin{align*}
+W_f = \left[\frac{1}{4}, \infty \right)
+\end{align*}
+als Wertebereich.
+Dieser Lösungsweg nutzt leider in gewisser Weise das Wissen aus Aufgaben 1 d2.
+Aus diesem Grund werden wir noch einen anderen Weg angeben.\\
+\\
+\underline{4. Gebe einen anderen Lösungsweg für den Wertebereich $W_f$ an}\\
+Wir können den Wertebereich auch durch Äquivalenzumformungen bestimmen.
+Durch 
+\begin{align*}
+1 \leq x+2 < \infty
+&\Leftrightarrow
+0 \leq \ln(x+2) < \infty\\
+&\Leftrightarrow
+0 \leq \sqrt{\ln(x+2)} < \infty\\
+&\Leftrightarrow
+-2 \leq -2 + \sqrt{\ln(x+2)} < \infty\\
+&\Leftrightarrow
+\frac{1}{4} =2^{-2} \leq 2^{-2 + \sqrt{\ln(x+2)}} < \infty
+\end{align*}
+erhalten wir wieder
+\begin{align*}
+W_f = \left[ \frac{1}{4}, \infty \right)
+\end{align*}
+als Wertebereich.
+
+\newpage
+
+\subsection*{\nummer{d2}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f \ : \ D_f \to \mathbb{R}, \ \ \
+x \mapsto y = 2^{-2 + \sqrt{\ln(x+2)}}. 
+\end{align*}
+Ist $f$ monoton (Beweis)?
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Mache dir klar, was Monotonie bedeutet.
+\item Leite die Funktion ab.
+\item Schaue, ob $f^\prime(x)$ immer $\geq 0$ oder $\leq 0$ ist.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Mache dir klar was Monotonie bedeutet}\\
+Wir erinnern uns, dass eine Funktion monoton wachsend ist, falls
+\begin{align*}
+x < y \Rightarrow f(x) \leq f(y)
+\end{align*}
+gilt. Für fallende Monotonie folgt stattdessen $f(x) \geq f(y)$.
+Wir nennen eine Funktion monoton, falls diese monoton wachsen oder fallend ist.
+Wichtig ist, dass obige Definition auf dem ganzen Definitionsbereich gelten muss.\\
+\\
+
+%\underline{2. Überlege dir, wie sich Verkettung von monotonen Funktionen auf die Monotonie auswirkt}\\
+%Wenn wir zwei monotone Funktionen $g$ und $h$ betrachten, so ist auch $g \circ h$ monoton. Dabei ist $g\circ h(x) = g(h(x))$. Wir zeigen dies exemplarisch für zwei monoton wachsende Funktionen. Seien $g$, $h$ monoton wachsende Funktionen. Dann ist mit
+%\begin{align*}
+%x < y \Rightarrow h(x) \leq h(y) \Rightarrow g(h(x)) \leq g(h(y))
+%\end{align*} 
+%auch $g\circ h$ monoton wachsend.
+%Alle anderen Kombinationen funktionieren sehr ähnlich.
+%Wir wissen nun, dass
+%\begin{align*}
+%-2 + \sqrt{\ln(x+2)}
+%\end{align*}
+%streng monoton wachsend ist.
+%Dieser Ausdruck ist eine Verkettung von monotonen Funktionen plus eine Konstante.
+%\\
+%\\
+
+
+\underline{2. Leite die Funktion ab}\\
+Zunächst gilt
+\begin{align*}
+\frac{\td{ \ }}{\td{x}} 2^x
+&= 
+\frac{\td{ \ }}{\td{x}}e^{x \ln(2)}
+=
+\ln(2) e^{x\ln(2)} = \ln(2) 2^x\\
+\frac{\td{ \ }}{\td{x}} \sqrt{\ln(x+2)}
+&= \frac{1}{2 \ln(x+2)} \cdot \frac{1}{x+2}
+\end{align*}
+mit Hilfe der Kettenregel.
+Mit der mehrfachen Anwendung der Kettenregel erhalten wir durch
+\begin{align*}
+f^{\prime}(x) =
+\ln(2) \cdot 2^{-2 + \sqrt{\ln(x+2)}} 
+\cdot \frac{1}{2 \sqrt{\ln(x+2)}} \cdot \frac{1}{x+2}
+=
+\frac{\ln(2) \cdot 2^{-2 + \sqrt{\ln(x+2)}}}{2 \sqrt{\ln(x+2)}} \cdot \frac{1}{x+2}
+\end{align*}
+die Ableitung.
+\\
+\\
+
+\underline{3. Schaue, ob $f^\prime(x)$ immer $\geq 0$ oder $\leq 0$ ist}\\
+Der Ausdruck
+\begin{align*}
+\frac{1}{x+2}
+\end{align*}
+ist positiv für $x \in D_f$.
+Die anderen in der Ableitung vorkommenden Terme sind alle positiv.
+Damit gilt
+\begin{align*}
+f^\prime(x) > 0
+\end{align*}
+für alle $x \in D_f$.
+Also ist $f$ streng monoton wachsend.
+
+\newpage
+
+\subsection*{\nummer{d3}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+f \ : \ D_f \to W_f \subset \mathbb{R}, \ \ \
+x \mapsto y = 2^{-2 + \sqrt{\ln(x+2)}}. 
+\end{align*}
+Ermitteln Sie die Umkehrfunktion $f^{-1}$ von $f$.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Überlege dir, wie der Definitions-und Wertebereich von $f^{-1}$ aussieht.
+\item Forme $y = f(x)$ nach $x$ um.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, wie der Definitions-und Wertebereich von $f^{-1}$ aussieht}\\
+Unser Ziel ist es, die Funktion $f$ umzukehren.
+Dafür müssen wir zunächst den Bildbereich von $f$ auf den Wertebereich einschränken.
+Der Bildbereich ist die Menge der von der Funktion erreichten Werte.
+Wir betrachten also nur noch die \glqq getroffenen\grqq~Elemente.
+Dies ist notwendig. Die Exponentialfunktion hat beispielsweise nur positve Funktionswerte. Damit kann man auch nur positive Werte umkehren.  
+Damit ist unsere Funktion durch
+\begin{align*}
+f \ : \ D_f \to W_f,\ \ \
+x \mapsto y = 2^{-2 + \sqrt{\ln(x+2)}}
+\end{align*}
+gegeben.
+Wir können nun jedem Element in $W_f$ eindeutig ein Element aus $D_f$ zuordnen.
+%Das rechtfertigt auch den Begriff Umkehrfunktion.
+Der Definitionsbereich von $f^{-1}$ ist $W_f$ und der Wertebereich ist $D_f$.\\
+\\
+\underline{2. Forme $y = f(x)$ nach $x$ um}\\
+Durch 
+\begin{align*}
+y = f(x) 
+&\Leftrightarrow
+y = 2^{-2 + \sqrt{\ln(x+2)}}\\
+&\Leftrightarrow
+\ln(y) = \ln \left(2^{-2 + \sqrt{\ln(x+2)}} \right)
+= \ln(2) \cdot (-2 + \sqrt{\ln(x+2)})\\
+&\Leftrightarrow
+\frac{\ln(y)}{\ln(2)} = -2 + \sqrt{\ln(x+2)}\\
+&\Leftrightarrow
+\frac{\ln(y)}{\ln(2)} +2 =  \sqrt{\ln(x+2)}\\
+&\Leftrightarrow
+\left(\frac{\ln(y)}{\ln(2)} +2 \right)^2 = \ln(x+2)\\
+&\Leftrightarrow
+e^{\left(\frac{\ln(y)}{\ln(2)} +2 \right)^2} = x+2 \\
+&\Leftrightarrow
+x = e^{\left(\frac{\ln(y)}{\ln(2)} +2 \right)^2} -2
+\end{align*}
+erhalten wir die Umkehrfunktion.
+Mit
+\begin{align*}
+f^{-1} \ : \ W_f \to D_f, \ \ \
+x \mapsto y = e^{\left(\frac{\ln(x)}{\ln(2)} +2 \right)^2} -2
+\end{align*}
+sind wir fertig.
+

@@ -1,0 +1,552 @@
+\section*{Aufgabe 3 (28 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{4}}
+Der rechtsseitige Grenzwert
+\begin{align*}
+	\lim\limits_{x \to 1 +}
+	\left(
+	\frac{1}{x-1} - \frac{1}{\ln(x)}
+	\right)
+\end{align*}
+ist gleich:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ -\frac{1}{2}$.
+	\item
+	$ 0$.
+	\item
+	$ \frac{1}{2}$.
+	\item
+	$ \infty$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Wende die Regel von l'H\^{o}pital an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Wende die Regel von l'H\^{o}pital an}\\
+Wegen 
+\begin{align*}
+	\frac{1}{x-1}
+	- \frac{1}{\ln(x)}
+	=
+	\frac{\ln(x) - (x-1)}{(x-1) \ln (x)}
+\end{align*}
+erhalten wir den l'H\^{o}pital-Fall \glqq$ \frac{0}{0} $\grqq.
+Mit zweifacher Anwendung der Regel von l'H\^{o}pital gilt somit (Der Fall \glqq$ \frac{0}{0} $\grqq~tritt ein weiteres Mal auf):
+\begin{align*}
+	\lim\limits_{x \to 1 +}
+	\frac{\ln(x) - (x-1)}{(x-1) \ln (x)}
+	=
+	\lim\limits_{x \to 1 +}
+	\frac{\frac{1}{x} - 1 }{(x-1) \frac{1}{x} + \ln(x)}
+	=
+	\lim\limits_{x \to 1 +}
+	\frac{\frac{-1}{x^2} }{ \frac{1}{x^2} + \frac{1}{x}}
+	=
+	-
+	\frac{1}{2}
+\end{align*}
+
+\newpage
+
+\subsection*{\frage{2}{4}}
+Der rechtsseitige Grenzwert
+\begin{align*}
+	\lim\limits_{x \to 0 +}
+	x^x
+\end{align*}
+ist gleich:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$0$.
+	\item
+	$1$.
+	\item
+	$e$.
+	\item
+	$e^e$.	
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Nutze die Stetigkeit der Exponentialfunktion aus.
+\item Wende die Regel von l'H\^{o}pital an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Nutze die Stetigkeit der Exponentialfunktion aus}\\
+Zunächst formen wir um:
+\begin{align*}
+	x^x = e^{\ln\left(x^x\right)} = e^{x \ln(x)}.
+\end{align*}
+Nun gilt wegen der Stetigkeit der Exponentialfunktion:
+\begin{align*}
+	\lim \limits_{x \to 0 +}
+	x^x 
+	=
+	\lim \limits_{x \to 0 +}
+	e^{x \ln(x)}
+	=
+	e^{\lim_{x \to 0 +} x \ln(x)}.
+\end{align*}
+Damit genügt es $ \lim_{x \to 0 +} x \ln(x) $ zu bestimmen.\\
+\\
+\underline{2. Wende die Regel von l'H\^{o}pital an}\\
+Mit 
+\begin{align*}
+	x \ln(x)
+	=
+	\frac{\ln(x)}{\frac{1}{x}}
+\end{align*}
+erhalten wir den l'H\^{o}pital-Fall \glqq$ \frac{0}{0} $\grqq.
+Durch die Regel von l'H\^{o}pital erhalten wir 
+\begin{align*}
+	\lim \limits_{x \to 0 +} x \ln(x)
+	=
+	\lim \limits_{x \to 0 +} \frac{\ln(x)}{\frac{1}{x}}
+	=
+	\lim \limits_{x \to 0 +} \frac{\frac{1}{x}}{-\frac{1}{x^2}}
+	=
+	\lim \limits_{x \to 0 +} -x = 0.
+\end{align*}
+Insgesamt erhalten wir:
+\begin{align*}
+	\lim \limits_{x \to 0 +} x^x
+	=
+	e^{\lim_{x \to 0 +} x \ln(x)}
+	=
+	e^0
+	= 
+	1.
+\end{align*}
+Damit ist die Antwort (b) korrekt.
+
+
+
+
+\newpage
+\subsection*{\frage{3}{4}}
+Ein Blatt Papier sei $ 0.5 $ Millimeter dick. Man faltet das Blatt nun in der Hälfte, so dass es eine neue Dicke von $ 1 $ Millimeter hat.
+Anschliessend faltet man es solange erneut, bis die Dicke des gefalteten Papiers $ 400'000 $ Kilometer erreicht (ungefähr die Distanz zwischen Erde und Mond).\\
+Wie oft muss das Blatt Papier gefaltet werden ? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Ungefähr $ 20 $ Mal.
+	\item
+	Ungefähr $ 30 $ Mal.
+	\item
+	Ungefähr $ 40 $ Mal.
+	\item
+	Ungefähr $ 50 $ Mal.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Übersetze die Aufgabenstellung in eine geeignete geometrische Folge.
+\item Bestimme die Anzahl der Faltungen.
+\end{enumerate}
+\end{mdframed}
+%\allowdisplaybreaks
+\underline{1. Übersetze die Aufgabenstellung in eine geeignete geometrische Folge}\\
+Mit $ a_n $ bezeichnen wir die Dicke nach $ n $ Faltungen. Da die Dicke in jeder Faltung verdoppelt wird, erhalten wir die rekursive Darstellung
+\begin{align*}
+	a_n = 2 a_{n-1}
+\end{align*}
+mit dem Anfangswert $ a_0 = 0.5 \textrm{ (mm)} = 0.5 \cdot 10^{-6} \textrm{ (km)} $.
+Also liegt eine geometrische Folge $ \{a_n\}_{n \in \N} $ mit expliziter Vorschrift
+\begin{align*}
+	a_n = q^n a_0 = 2^n \cdot  0.5 \cdot  10^{-6}
+\end{align*}
+mit $ q = 2 $ und $ a_0 = 0.5 \cdot  10^{-6} \textrm{ (km)} $ vor.\\
+\\
+\underline{2. Bestimme die Anzahl der Faltungen}\\
+Die Anzahl der Faltungen für $ 400'000 $ Kilometer ergibt durch lösen der Ungleichung $ a_n \geq 400'000 $.
+Durch Umformungen erhalten wir:
+\begin{align*}
+	a_n \geq 400'000 = 4 \cdot 10^5
+	\ &\Leftrightarrow \
+	2^n \cdot 0.5 \cdot 10^{-6}  \geq 4 \cdot 10^5
+	\ \Leftrightarrow \
+	2^n \cdot 0.5 \geq 4 \cdot 10^{11}
+	\ \Leftrightarrow \
+	2^n \geq 8 \cdot 10^{11}\\
+	\ &\Leftrightarrow \
+	\ln(2^n) \geq \ln\left(8 \cdot 10^{11}\right)
+	\ \Leftrightarrow \
+	n  \geq \frac{\ln\left(8 \cdot 10^{11}\right)}{\ln(2)} \approx 39.54.
+\end{align*}
+Also muss das Papier ungefähr $ 40 $ Mal gefaltet sein.\\
+\\
+Damit ist die Antwort (c) korrekt.
+
+
+\newpage
+\subsection*{\frage{4}{4}}
+Ein Projekt benötigt eine Anfangsinvestition von $ 10'000 $ CHF.
+Nach einem Jahr generiert das Projekt eine Auszahlung in Höhe von $ 5'000  $ CHF und nach zwei Jahren eine Auszahlung in Höhe von $ 10'000 $ CHF.\\
+Der interne Zinssatz des Projekts ist ungefähr
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ 5 \% $.
+	\item 
+	$ 10 \% $.
+	\item
+	$ 20 \% $.
+	\item
+	$ 30 \% $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende den Zusammenhang von Nettobarwert und internem Zinssatz.
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende den Zusammenhang von Nettobarwert und internem Zinssatz}\\
+Der Nettobarwert des Projekts muss für den internen Zinssatz $ r $ gleich null sein.
+Es muss also
+\begin{align*}
+	-10'000 + \frac{5'000}{1+ r} + \frac{10'000}{(1+r)^2} = 0
+\end{align*}
+gelten. Durch Umformen erhalten wir hieraus eine quadratische Gleichung:
+\begin{align*}
+	-10'000 + \frac{5'000}{1+ r} + \frac{10'000}{(1+r)^2} = 0
+	\ &\Leftrightarrow \
+	\left(
+	-10'000 + \frac{5'000}{1+ r} + \frac{10'000}{(1+r)^2}
+	\right)
+	\cdot 
+	\frac{(1+r)^2}{5'000}
+	= 
+	0\\
+	\ &\Leftrightarrow \
+	-2 (1+ r)^2 + (1+r) + 2
+	= 
+	0.
+\end{align*}
+Die Lösungen hiervon sind durch
+\begin{align*}
+	1+ r =
+	\frac{-1 \pm \sqrt{1^2 + 16}}{-4}
+	=
+	\frac{-1 \pm \sqrt{17}}{-4}
+\end{align*}
+gegeben. Für uns ist nur die positive Lösung relevant:
+\begin{align*}
+	1+ r 
+	= \frac{-1 -  \sqrt{17}}{-4} =
+	\frac{1 +  \sqrt{17}}{4} 
+	\approx 1.3
+	\ \Rightarrow \
+	r \approx 30 \%.
+\end{align*}
+Damit ist die Antwort (d) korrekt.
+\newpage
+
+\subsection*{\frage{5}{3}}
+Gegeben sei die Funktion $ f :D_f \to \R, (x,y) \mapsto z = f(x,y) = \frac{\ln(x^2 +y^2 -1)}{\sqrt{4 - x^2 - y^2}} $.
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Der Definitionsbereich von $ f  $ ist das Innere (ohne Rand) des Kreises mit Mittelpunkt $ (0,0) $ und Radius $ 1 $.
+	\item
+	Der Definitionsbereich von $ f  $ ist das Innere (ohne Rand) des Kreises mit Mittelpunkt $ (0,0) $ und Radius $ 2 $.
+	\item
+	Der Definitionsbereich von $ f  $ ist das Innere (ohne Rand) des Kreises mit Mittelpunkt $ (0,0) $ und Radius $ 2 $, ohne das Innere (mit Rand) des Kreises mit Mittelpunkt $ (0,0) $ und Radius $ 1 $.
+	\item
+	Der Definitionsbereich von $ f  $ ist die leere Menge.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Definitionsbereiche der Logarithmus-und Wurzelfunktion.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definitionsbereiche der Logarithmus-und Wurzelfunktion}\\
+Der Definitionsbereich der Logarithmusfunktion liefert die Bedingung
+\begin{align*}
+	x^2 +y^2 -1 > 0
+	\ \Leftrightarrow \
+	x^2 + y^2 > 1^2 
+\end{align*}
+und mit dem der Wurzelfunktion erhalten wir
+\begin{align*}
+	4 - x^2 - y^2 > 0 
+	\ \Leftrightarrow \
+	x^2 + y^2 < 4 = 2^2.
+\end{align*} 
+Zusammengefasst gilt:
+\begin{align*}
+	(x,y) \in D_f
+	\ \Leftrightarrow \
+	\underbrace{x^2 + y^2 > 1^2}_{\textrm{(i)}} \  \wedge  \ \underbrace{x^2 + y^2 <  2^2}_{\textrm{(ii)}}.
+\end{align*}
+Durch (i) schneiden wir die Kreisscheibe mit Radius 1 und Rand aus der durch (ii) gegebenen Kreisscheibe mit Radius 2 und ohne Rand heraus.\\
+\\
+Damit ist die Antwort (c) korrekt.
+\newpage
+
+\subsection*{\frage{6}{3}}
+Sei $ f $ eine Funktion zweier reellen Variablen gegeben durch:
+\begin{align*}
+	f: \R_{++}^2 \to \R, \ (x,y) \mapsto z = f(x,y) = 10 x^\alpha y^{1- \alpha},
+\end{align*}
+wobei $ \alpha \in (0,1) $.\\
+Die Steigung der Tangente an die Niveaulinie von $ f $ am Punkt $ (x_0,y_0) = (1,1) $ ist gleich $ -0.5 $.\\
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \alpha = \frac{1}{6}$.
+	\item
+	$ \alpha = \frac{1}{3}$.
+	\item
+	$ \alpha = \frac{1}{2}$.
+	\item
+	$ \alpha = \frac{2}{3}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende den Satz über implizite Funktionen.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende den Satz über implizite Funktionen}\\
+Mit dem Satz über implizite Funktionen können wir die Steigung der Tangente an der Niveaulinie von $ f $ bei $ (x_0,y_0) = (1,1) $ direkt berechnen.
+Zuerst benötigen wir die partiellen Ableitung:
+\begin{align*}
+	f_x(x,y) &= 10 \alpha x^{\alpha - 1} y^{1- \alpha}\\
+	f_y(x,y) &= 10 (1- \alpha ) x^\alpha y^{- \alpha}.
+\end{align*}
+Mit diesen liefert der Satz über implizite Funktionen
+\begin{align*}
+	-0.5 = - 
+	\frac{f_x(x_0 ,y_0)}{f_y(x_0,y_0)}
+	=
+	-
+	\frac{ 10 \alpha x^{\alpha - 1} y^{1- \alpha}}{10 (1- \alpha ) x^\alpha y^{- \alpha}}
+	- \frac{\alpha}{1- \alpha}
+\end{align*}
+mit $ (x_0,y_0) = (1,1) $. Mit 
+\begin{align*}
+	- \frac{\alpha}{1- \alpha} = -0.5
+	\ \Leftrightarrow \
+	\alpha = 0.5 (1- \alpha ) = \frac{1}{2} - \frac{\alpha}{2}
+	\ \Leftrightarrow \
+	\frac{3 \alpha } {2} = \frac{1}{2}
+	\ \Leftrightarrow \
+	3 \alpha = 1 
+	\ \Leftrightarrow \
+	\alpha = \frac{1}{3}
+\end{align*}
+erhalten wir die passenden Antwort.\\
+\\
+Damit ist die Antwort (b) korrekt.
+
+
+
+\newpage
+
+
+
+\subsection*{\frage{7}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x,y) 
+	=
+	\ln\left(
+	x^3 \sqrt[3]{y^4} + \sqrt[6]{x^{11} y^{15}}
+	\right)
+	- \frac{13}{3} \ln(x) \quad \textrm{für } x>0,y>0.
+\end{align*}
+Welche der folgenden Aussagen ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	$ f  $ ist homogen von Grad $ 5 $.
+	\item
+	$ f $ ist linear homogen.	
+	\item 
+	$ f  $ ist homogen von Grad $ 0 $.
+	\item
+	$ f $ ist nicht homogen.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rechne die Homogenitätsbedingung nach.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rechne die Homogenitätsbedingung nach}\\
+Für $ \lambda >0  $ erhalten wir:
+\begin{align*}
+	f(\lambda x, \lambda y)
+	&=
+	\ln\left(
+	(\lambda x)^3 \sqrt[3]{(\lambda y)^4}
+	+
+	\sqrt[6]{(\lambda x)^{11} (\lambda y)^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda x)\\
+	&=
+	\ln\left(
+	\lambda^3 x^3 \sqrt[3]{\lambda^4 y^4}
+	+
+	\sqrt[6]{\lambda^{11} x^{11} \lambda^{15} y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\ln\left(
+	\lambda^3 x^3 \lambda^{\frac{4}{3}} \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{\lambda^{26} x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\ln\left(
+	\lambda^{\frac{9}{3} + \frac{4}{3}} x^3  \sqrt[3]{ y^4}
+	+
+	\lambda^{\frac{13}{3}}
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\ln\left(
+	\lambda^{\frac{13}{3} } \left(
+	 x^3  \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\ln\left(
+	\lambda^{\frac{13}{3} }\right) + \ln  \left(
+	x^3  \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\frac{13}{3} \ln\left(
+	\lambda\right) + \ln  \left(
+	x^3  \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\frac{13}{3} \ln\left(
+	\lambda\right) + \ln  \left(
+	x^3  \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3} \ln(\lambda) - \frac{13}{3 }\ln(x)\\
+	&=
+	\ln  \left(
+	x^3  \sqrt[3]{ y^4}
+	+
+	\sqrt[6]{x^{11}  y^{15}}
+	\right)
+	-
+	\frac{13}{3 }\ln(x)
+	= \lambda^0 f(x,y).
+\end{align*}
+Also ist $ f $ homogen von Grad $ 0 $.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{3}}
+Sei $ f $ eine Funktion einer reellen Variablen, definiert als $ f(x) = x^\alpha $ für $ \alpha > 0 $, und sei $ g $ eine Funktion zweier reellen Variablen, die strikt positiv und homogen von Grad $ \kappa $ ist.\\
+Wir definieren die Funktion $ h $ als $ h(x,y)  = f(g(x,y))$.\\
+Welche der folgenden Aussagen ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ h $ ist homogen von Grad $ 1 $, falls $ \alpha =0.5 $ und $ \kappa = 1 $.
+	\item
+	$ h $ ist homogen von Grad $ 2 $, falls $ \alpha =0.5 $ und $ \kappa = 4 $.
+	\item
+	$ h $ ist homogen von Grad $ 3 $, falls $ \alpha =0.5 $ und $ \kappa = 7 $.
+	\item
+	$ h $ ist homogen von Grad $ 5 $, falls $ \alpha =0.5 $ und $ \kappa = 11 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Definition einer homogenen Funktion.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definition einer homogenen Funktion}\\
+Sei $ \lambda > 0 $.
+Dann erhalten wir mit der Homogenität von $ g $:
+\begin{align*}
+	h(\lambda x, \lambda y)
+	&=
+	f ( g(\lambda x, \lambda y))
+	=
+	f ( \lambda^\kappa g(x,y))
+	=
+	( \lambda^\kappa g(x,y))^\alpha\\
+	&=
+	\lambda^{\alpha \kappa} (g(x,y))^\alpha
+	=
+	\lambda^{\alpha \kappa} f((g(x,y))\\
+	&=
+	\lambda^{\alpha \kappa} h(x,y).
+\end{align*}
+Also ist $ h $ homogen vom Grad $ \alpha \kappa $.
+Wir müssen noch überprüfen, welche Antwort passt.\\
+Die Multiplikation von $ \alpha $ und $  \kappa $ ergibt in (a), (c) und (d) keine ganze Zahl. Damit können wir diese Möglichkeiten ausschließen.
+Für $ \alpha = 0.5 $ und $ \kappa = 4 $ ergibt sich $ \alpha \cdot \kappa = 2 $.\\
+\\
+Damit ist Antwort (b) korrekt.
+
+

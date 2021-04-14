@@ -1,0 +1,554 @@
+%\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+
+
+\begin{Large}
+\textbf{Teil I: Offene Aufgaben (50 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für offene Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Ihre Antworten müssen alle Rechenschritte enthalten,
+diese müssen klar ersichtlich sein.
+Verwendung korrekter mathematischer Notation wird erwartet
+und fliesst in die Bewertung ein.
+
+\item
+Ihre Antworten zu den jeweiligen Teilaufgaben müssen in den dafür vorgesehenen Platz geschrie-
+ben werden. Sollte dieser Platz nicht ausreichen, setzen Sie Ihre Antwort auf der Rückseite oder
+dem separat zur Verfügung gestellten Papier fort. Verweisen Sie in solchen Fällen ausdrücklich
+auf Ihre Fortsetzung. Bitte schreiben Sie zudem Ihren Vor- und Nachnamen auf jeden separaten
+Lösungsbogen.
+
+\item
+Es werden nur Antworten im dafür vorgesehenen Platz bewertet. Antworten auf der Rückseite
+oder separatem Papier werden nur bei einem vorhandenen und klaren Verweis darauf bewertet.
+
+\item
+Die Teilaufgaben werden mit den jeweils oben auf der Seite angegebenen Punkten bewertet.
+
+\item
+Ihre endgültige Lösung jeder Teilaufgabe darf nur eine einzige Version enthalten.
+
+\item
+Zwischenrechnungen und Notizen müssen auf einem getrennten Blatt gemacht werden. Diese
+Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werden.
+\end{enumerate}
+
+\newpage
+\section*{\hfil Aufgaben \hfil}
+\vspace{1cm}
+\section*{Aufgabe 1 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{7}}
+Sei $ f \ : \ \mathbb{R} \times \mathbb{R} \to \mathbb{R} $ eine Funktion zweier Variablen definiert durch
+\begin{align*}
+f(x,y) = (x+y+a) e^x - e^y, \quad \textrm{wobei} \ a \in \mathbb{R}.
+\end{align*}
+Untersuchen Sie die Funktion $ f $ auf stationäre Punkte und bestimmen Sie gegebenenfalls, ob ein Maximum, ein Minimum oder ein ein Sattelpunkt vorliegt.
+\\
+\\
+\subsection*{\aufgabe{b}{7}}
+Die Funktion
+\begin{align*}
+f(x,y) = x^2 + y^2
+\end{align*}
+ist unter der Nebenbedingung
+\begin{align*}
+\varphi(x,y)
+=
+a x^2 +bxy+5y^2-16 = 0
+\end{align*}
+zu optimieren.\\
+Bestimmen Sie die Parameter $ a \in \mathbb{R} $ und $ b \in \mathbb{R} $ so, dass in $ (1,1) $ eine mögliche Extremstelle sein könnte.\\
+\\
+\textbf{Bemerkung:} \\
+Eine Abklärung, ob es sich um eine Extremstelle handelt und von welcher Art die Extremstelle ist (Maximum oder Minimum) wird nicht verlangt.
+\\
+\\
+\subsection*{\aufgabe{c}{5}}
+Berechnen Sie 
+\begin{align*}
+\int
+\limits_0^{\sqrt{0.5 \ \pi}} x \ \sin(x^2) \ \left(\cos(x^2)\right)^3 dx.
+\end{align*}
+\ \\
+\subsection*{\aufgabe{d}{6}}
+Berechnen Sie 
+\begin{align*}
+\int_0^e |\ln(x)| dx.
+\end{align*}
+\ \\
+\textbf{Bemerkung:} Sie dürfen das in Mathematik A bewiesene Resultat, dass gilt:
+\begin{align*}
+\lim \limits_{x \searrow 0} x \ \ln(x) = 0,
+\end{align*}
+voraussetzen.
+
+\newpage
+\section*{Aufgabe 2 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{4}}
+Die quadratischen $ n \times n $ Matrizen $ A $ und $ B $ seien regulär, $ A $ sei ausserdem symmetrisch.\\
+\\
+Beweisen Sie:
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (A B)^{-1}
+=
+(A^{-1} B )^\top.
+\end{align*}
+\\
+\\
+\subsection*{\aufgabe{b}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x,y) = a \ln(x-2) + x \ y^2 + 8 \ y, \quad \textrm{wobei} \ a \in \mathbb{R}.
+\end{align*}
+Berechnen Sie den Gradienten von $ f $ an der Stelle $ (x_0,y_0) = (8,2) $.\\
+\\
+Wie muss der Parameter $ a \in \mathbb{R} $ gewählt werden, damit die Funktion $ f $ im Punkt $ (x_0,y_0) = (8,2) $ in der Richtung
+$ \textbf{b} = \begin{pmatrix}
+3 \\
+4
+\end{pmatrix} $ am stärksten zunimmt?\\
+\\
+\subsection*{\aufgabe{c}{3}}
+Gegeben sind die Vektoren
+\begin{align*}
+\textbf{b}_1 =
+\begin{pmatrix}
+1 \\
+t\\ 
+0
+\end{pmatrix},
+\
+\textbf{b}_2 =
+\begin{pmatrix}
+2t \\
+4\\ 
+t
+\end{pmatrix},
+\
+\textbf{b}_3 =
+\begin{pmatrix}
+8 \\
+t\\ 
+t^2
+\end{pmatrix}.
+\end{align*}
+Für welche Werte von $ t \in \mathbb{R} $ ist das Vektorsystem $ \{ \textbf{b}_1, \textbf{b}_2, \textbf{b}_3 \} $ \textit{keine} Basis des dreidimensionalen Raumes $ \mathbb{R}^3 $?
+\\
+\\
+\subsection*{\aufgabe{d}{6}}
+Gegeben ist die Matrix
+\begin{align*}
+M = 
+\begin{pmatrix}
+0  & 2a\\
+-3a & 5a
+\end{pmatrix}
+,
+\quad
+\textrm{wobei } a \neq 0.
+\end{align*}
+Berechnen Sie die Eigenwerte und Eigenvektoren der Matrix $ M $.\\
+\\
+Berechnen Sie den Vektor $ M^n \textbf{x} $, wobei $ \textbf{x} = \begin{pmatrix}
+2 \\ 2
+\end{pmatrix}. $
+\\
+\\
+\subsection*{\aufgabe{e}{8}}
+Gegeben ist das Gleichungssystem
+\begin{equation*}
+\begin{split}
+x_1 \ + \  x_2 \ + \  x_3 \ + \  x_4 \ + \ x_5 \ &= \ \ 0 \\
+2x_1 \ + \ 3 x_2 \ + \ 4 x_3 \ + \ 5 x_4 \ - \ x_5 \ &= \ \ 0 \\
+ x_1 \ + \ 2 x_2 \ + \ 4 x_3 \ - \  x_4 \ + \ 2x_5 \ &= \ 0
+\end{split}
+.
+\end{equation*}
+Berechnen Sie die allgemeine Lösung dieses Gleichungssystems mit dem Gauß-Verfahren.\\
+\\
+Für den Unterraum
+\begin{align*}
+W 
+=
+\{
+\textbf{x} \in \mathbb{R}^5 | x_1 + x_2 + x_3 + x_4 + x_5 = 0 \wedge
+2 x_1 + 3 x_2 +4 x_3 + 5 x_4 - x_5 = 0
+\wedge 
+x_1 + 2x_2 +4 x_3 - x_4 + 2x_5 = 0
+\}
+\end{align*}
+ist eine Basis anzugeben.
+\newpage
+
+
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\begin{Large}
+\textbf{Teil II: Multiple-Choice-Fragen (50 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für Multiple-Choice-Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Die Antworten auf die Multiple-Choice-Fragen müssen im dafür vorgesehenen Antwortbogen ein-
+getragen werden. Es werden ausschliesslich Antworten auf diesem Antwortbogen bewertet. Der
+Platz unter den Fragen ist nur für Notizen vorgesehen und wird nicht korrigiert.
+
+\item
+Jede Frage hat nur eine richtige Antwort. Es muss also auch jeweils nur eine Antwort angekreuzt
+werden.
+
+\item
+Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet, auch wenn
+die korrekte Antwort unter den angekreuzten ist.
+
+\item
+Bitte lesen Sie die Fragen sorgfältig.
+
+\end{enumerate}
+\newpage
+\section*{Aufgabe 3 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Die Funktion $ f(x,y) = y  $ hat unter der Nebenbedingung $ \varphi(x,y) = \frac{x^2}{25} + \frac{y^2}{9} = 1 $
+ihr Minimum in
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ P = (-5,0) $.
+\item $ P = (0,3) $.
+\item $ P = (0,0) $.
+\item $ P = (0,-3) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x) 
+=
+\begin{cases}
+ax + \frac{1}{8}, &\quad \textrm{für } 0 \leq x \leq 4\\
+\quad 0					&\quad  \textrm{sonst}			
+\end{cases}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f $ ist für alle $ a \in \mathbb{R} $ eine Dichtefunktion.
+\item $f $ ist nur für $ a = \frac{1}{16} $ eine Dichtefunktion.
+\item
+$f $ ist nur für $ a = -\frac{1}{16} $ eine Dichtefunktion.
+\item
+$f $ ist für kein $ a \in \mathbb{R} $ eine Dichtefunktion.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{2}}
+Sei $ f : [a,b] \to \mathbb{R} $ eine beliebige, auf dem Intervall $ [a,b] $ definierte Funktion.\\
+\\
+Welche der folgenden Aussagen ist \textit{richtig}?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Wenn das bestimmte Integral von $ f $ über $ [a,b] $ existiert, dann ist $ f $ stetig auf $ [a,b] $.
+\item 
+Wenn $ f $ nicht stetig ist auf $ [a,b] $, dann existiert das bestimmte Integral von $ f $ über $ [a,b] $ nicht.
+\item 
+Wenn $ f $ differenzierbar ist auf $ [a,b] $, dann existiert das bestimmte Integral von $ f $ über $ [a,b] $.
+\item
+Das bestimmte Integral von $ f $ über $ [a,b]$ existiert immer.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{2}}
+$A$ und $B$ seien quadratische Matrizen mit
+$\det(A) = 5$ und $\det(B) = 2$; die Matrix $ C $ ist definiert durch 
+$C \ = \ A^{-1}B A $. 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 1$.
+	\item
+	Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 2^n$.
+	\item
+	Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 2^n \cdot 5^n$.
+	\item
+	Keine der obigen Aussagen ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{4}}
+Gegeben sind die Vektoren
+\begin{align*}
+\textbf{a}
+= 
+\begin{pmatrix}
+1 \\ 2 \\ 3
+\end{pmatrix},
+\textbf{b}
+=
+\begin{pmatrix}
+1 \\ -1 \\ 1
+\end{pmatrix},
+\textbf{c}
+=
+\begin{pmatrix}
+0 \\ 0 \\ 2
+\end{pmatrix},
+\textbf{d}
+=
+\begin{pmatrix}
+2 \\ 1 \\ t
+\end{pmatrix}.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Es ist nur für $ t = 6 $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+\item
+Es ist nur für $ t = 6 $ und $ t = 0 $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+\item
+Es ist für alle $ t\in \mathbb{R} $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+\item
+Es ist für kein $ t\in \mathbb{R} $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{2}}
+$ A $ ist eine $ 6 \times 5 $ Matrix, das lineare Gleichungssystem $ A \textbf{x} = \textbf{b} $ hat unendlich viele Lösungen und der Lösungsraum hat die Dimension $ 2 $.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ \text{rg}(A) = \text{rg}(A; \textbf{b}) = 3 $.
+\item
+$ \text{rg}(A) = \text{rg}(A; \textbf{b}) = 4 $.
+\item
+$ \text{rg}(A) < \text{rg}(A; \textbf{b}) = 3 $..
+\item
+Keine der obigen Aussagen ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{4}}
+Das unbestimmte Integral von
+\begin{align*}
+\int \ln(x \ e^x ) \ dx, \ (x > 0)
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ x \ \ln(x) + x^2 - x + C $.
+\item
+$ x \ \ln(x) + \frac{x^2}{2} - x + C $.
+\item
+$ x \ \ln(x) + x^2  + C $.
+\item
+Keine der obigen Antworten ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{4}}
+Gegeben ist die Matrix
+\begin{align*}
+A = 
+\begin{pmatrix}
+2 & a\\
+a & 2
+\end{pmatrix},
+\ \textrm{wobei } a\neq 0.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ zwei verschiedene reelle Eigenwerte.
+	\item
+	Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ genau einen reellen Eigenwert.
+	
+	\item
+	Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ keinen reellen Eigenwert..
+	\item
+	Die Matrix $ A $ hat abhängig von $ a \neq 0 $ keinen, einen oder zwei reelle Eigenwerte.
+\end{enumerate}
+
+
+\newpage
+\section*{Aufgabe 4 (25 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{3}}
+Das bestimmte Integral
+\begin{align*}
+\int_0^\pi 2 \ \sin(x) \ \cos(x) \ dx
+\end{align*}
+hat den Wert
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$0$.
+\item
+$1$.
+\item
+$2$.
+\item
+Keines der obigen Resultate ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{3}}
+Für welchen Wert von $ t \in \mathbb{R} $ sind die Vektoren $ \textbf{u} = \begin{pmatrix}
+t-2 \\ t \\ 3
+\end{pmatrix} $ und $ \textbf{v} = \begin{pmatrix}
+1 \\ t-1 \\ 9
+\end{pmatrix} $ orthogonal?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$t = 5$.
+	\item
+	$t = 5$ oder $ t = -5 $.
+	\item
+	$ \textbf{u} $ und $ \textbf{v}  $ sind für kein $ t \in \mathbb{R} $ orthogonal.
+	\item
+	$ \textbf{u} $ und $ \textbf{v}  $ sind für alle $ t \in \mathbb{R} $ orthogonal.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{4}}
+Die $4 \times 5$ Matrix
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 1  & 3 & -1 & -2 \\
+3 & -5  & -7 & 13 & -10 \\
+-1 & 3  & 5 & -7 & 4 \\
+-2 & 10  & 18 & -22 & 10  
+\end{pmatrix}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+hat Rang $2$.
+\item
+hat Rang $3$.
+\item
+hat Rang $4$.
+\item
+hat Rang $5$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{4}}
+Gesucht ist eine Matrix $ X $, sodass
+\begin{align*}
+X
+\begin{pmatrix}
+1 & 2 \\
+0 & 1 
+\end{pmatrix}
+=
+\begin{pmatrix}
+4 & 3 \\
+2 & 1
+\end{pmatrix}
+.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$X
+= 
+\begin{pmatrix}
+1 & 3  \\
+-2 & -1 
+\end{pmatrix}$.
+\item
+$X
+= 
+\begin{pmatrix}
+4 &-5  \\
+2 & -3 
+\end{pmatrix}$.
+\item
+$X
+= 
+\begin{pmatrix}
+4 &-3  \\
+-2 & 4 
+\end{pmatrix}$.
+\item
+Es gibt keine Matrix $ X $, die die Gleichung erfüllt.
+\end{enumerate}
+
+\newpage
+\subsection*{\frage{5}{2}}
+Die $ n \times n $ Matrix habe die Eigenwerte $ \lambda_1, \lambda_2, \dots, \lambda_n $.
+Dann hat die Matrix $ A^2 $
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+die gleichen Eigenwerte.
+\item
+die Eigenwerte $2 \lambda_1,2 \lambda_2, \dots,2 \lambda_n $.
+\item
+die Eigenwerte $ \lambda_1^2, \lambda_2^2, \dots, \lambda_n^2 $.
+\item
+Keine der vorangehenden Antworten ist richtig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{3}}
+Das Anfangswertproblem
+\begin{align*}
+&y_{k+1} -(1+a) y_k = a, \ \textrm{wobei } a \neq -1, a \neq 0,\\
+&y_0 = 2
+\end{align*}
+hat die Lösung
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ y_k = 2 ( 1+a)^k $.
+\item
+$ y_k = 3 ( 1+a)^k  -1$.
+\item
+$ y_k = 4 ( 1+a)^k -1 $.
+\item
+$ y_k = 5 ( 1+a)^k -2$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{2}}
+Die allgemeine Lösung der linearen Differenzengleichung
+\begin{align*}
+3 (y_k - y_{k+1})+ 3 = 2 y_k - 12 
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item
+oszillierend und konvergent.
+\item
+oszillierend und divergent.	
+\item 
+monoton und konvergent.
+\item
+monoton und divergent.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{4}}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+(2 + c) y_{k+1} + (1-c) y_k = 5
+\end{align*}
+wobei $c \in \mathbb{R} \setminus \lbrace -2 \rbrace$ ist, ist genau dann monoton und divergent, wenn
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ c < -2 $.
+	\item
+	$c \in (-2,0)$.
+	\item
+	$ c < -\frac{1}{2} $.
+	\item
+	Die allgemeine Lösung der obigen Differenzengleichung ist für kein $c \in \mathbb{R} \setminus \lbrace -2 \rbrace$ monoton und divergent.
+\end{enumerate}

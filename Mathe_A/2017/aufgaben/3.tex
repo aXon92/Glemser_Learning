@@ -1,0 +1,546 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 3 (24 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{4}}
+Seien $ A $ und $ B $ zwei Aussagen. Die zusammengesetzte Aussage $ A \vee (\neg A \Rightarrow B) $ ist äquivalent zu
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ A $.
+	\item $ B $.
+	\item $ A \vee B $.
+	\item $ A \wedge B $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Löse die Aufgabe mithilfe einer Wahrheitstafel.
+\item Alternative Lösung I.
+\item Alternative Lösung II.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Löse die Aufgabe mithilfe einer Wahrheitstafel}\\
+Eine Aussage kann nur die Wahrheitswerte wahr ($ W $) oder falsch ($ F $) annehmen.
+Dementsprechend gibt es bei zwei Aussagen $ A $, $ B $ genau vier Kombinationsmöglichkeiten der Wahrheitswerte.
+Aus diesen Kombinationen ergeben sich dann die Wahrheitswerte der verknüpften Aussagen.
+Zwei Verknüpfungen heißen äquivalent, falls deren Wahrheitswerte bei jeder möglichen Kombination übereinstimmen.
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+		\multicolumn{1}{c|}{$\neg A$} & \multicolumn{4}{l}{$F$ $F$ $W$ $W$} \\ 
+		\multicolumn{1}{c|}{$A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ 
+		\multicolumn{1}{c|}{$A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$}  \\ 
+		\multicolumn{1}{c|}{$A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$}  \\
+		\hline
+		
+		\multicolumn{1}{c|}{$\neg A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ 
+	
+		\hline
+	\end{tabular}
+\end{center}
+In dem ersten Abschnitt der Tabelle sind alle möglichen Kombinationen der Aussagen $ A $ und $ B $ aufgelistet.
+In dem zweiten Abschnitt die grundlegenden Verknüpfungen und 
+im letzten Abschnitt die gewünschte Aussage.\\
+Die Aussagen $ \neg A \Rightarrow B  $ und $ A \vee B  $ sind äquivalent, da diese bei jeder Kombination von $ A $ und $ B $ denselben Wahrheitswert besitzen.
+\\
+\\
+Damit ist Antwort (c) korrekt.
+\\
+\\
+\newpage
+\underline{2. Alternative Lösung I}\\
+Die Implikation ist durch
+\begin{align*}
+A \Rightarrow B \ : \Leftrightarrow \ \neg A \vee B
+\end{align*}
+definiert.
+Mit 
+\begin{align*}
+A \vee (\neg A \Rightarrow B) 
+\ \Leftrightarrow \
+A \vee ( \neg (\neg A)) \vee B )
+\ \Leftrightarrow \
+A \vee (A \vee B)
+\ \Leftrightarrow \
+A \vee B
+\end{align*}
+ist Antwort (c) korrekt.
+\\
+\\
+\underline{3. Alternative Lösung II}\\
+Mit 
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+		\multicolumn{1}{c|}{$\neg A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ 
+		
+		\multicolumn{1}{c|}{$A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$}  \\ \hline
+	\end{tabular}
+\end{center}
+erhalten wir die Äquivalenz von $ \neg A \Rightarrow B $ und $ A \vee B $.
+Demnach gilt:
+\begin{align*}
+A \vee (\neg A \Rightarrow B) 
+\ \Leftrightarrow \
+A \vee (A \vee B)
+\ \Leftrightarrow \
+A \vee B 
+\end{align*}
+\\
+\\
+Somit ist Antwort (c) korrekt.
+
+\newpage
+
+\subsection*{\frage{2}{3}}
+Sei $ f $ eine stetige Funktion. 
+Sei $ \lbrace a_n \rbrace_{n \in \mathbb{N}} $ eine monotone und konvergente Folge mit $ a_n \in D_f $ für alle $ n \in \mathbb{N} $.
+Die Folge $ \lbrace b_n \rbrace_{n \in \mathbb{N}} $ definiert durch $ b_n = f(a_n) $ für alle $ n \in \mathbb{N} $ ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item konvergent.
+	\item divergent.
+	\item
+	monoton.
+	\item
+	Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+		Überlege dir zu den Aussagen (a) - (c) passende Gegenbeispiele.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir zu den Aussagen (a) - (c) passende Gegenbeispiele}\\
+Wir betrachten die Funktion 
+\begin{align*}
+f \ : \ ] 0 , \infty [ \to \mathbb{R}, \ x \to \frac{1}{x}.
+\end{align*}
+und eine Folge $ a_n \in D_f $ für alle $ n \in \mathbb{N} $ mit $ a_n \to 0  $. Wegen 
+\begin{align*}
+f(a_n ) = \frac{1}{a_n } \to \infty
+\end{align*}
+ist Aussage (a) falsch. Ein konkretes Beispiel ist hier durch
+\begin{align*}
+a_n = \frac{1}{n} \ 
+\Rightarrow 
+\ 
+f(a_n ) = \frac{1}{\frac{1}{n}} = n \to \infty
+\end{align*}
+gegeben.\\
+\\
+Für die zweite Aussage betrachten wir eine beliebige stetige Funktion mit $ D_f = \mathbb{R} $. Dann gilt 
+\begin{align*}
+a_n \to a_0 \ \Rightarrow \ f(a_n) \to f(a_0)
+\end{align*}
+für alle $ a_0 \in \mathbb{R} $. Konkret könnte man dies am einfachsten mit einer konstanten Funktion begründen.
+Wir betrachten
+\begin{align*}
+f \ : \ \mathbb{R} \to \mathbb{R}, \ x \mapsto 0,
+\end{align*}
+womit sogar für jede Folge $ f(a_n) = 0  $ für alle $ n \in \mathbb{N} $ gilt.\\
+\\
+Für die nächste Aussage werden wir ein konkretes Gegenbeispiel angeben.
+Wir definieren die Funktion
+\begin{align*}
+f(x) = \sin \left(\pi \frac{1}{x} \right)
+\end{align*}
+und die monotone Folge $ a_n = \frac{1}{n} $.
+Dann erhalten wir durch
+\begin{align*}
+f(a_n) = \sin \left( \pi \frac{1}{\frac{1}{n}}\right)
+= \sin (\pi n ) = (-1)^n
+\end{align*}
+eine nicht monotone Folge.
+\\
+\\ 
+Somit ist Antwort (d) korrekt.
+
+\newpage
+
+\subsection*{\frage{3}{2}}
+Welche der folgenden Aussagen über eine Funktion $ f $ und einen Punkt $ x_0 \in D_f $ ist wahr ? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Wenn $ f $ in $ x_0 $ stetig ist, dann ist $ f $ in $ x_0 $ differenzierbar.
+	\item 
+	Wenn $ f $ in $ x_0 $ differenzierbar ist, dann ist $ f $ in $ x_0 $ stetig.
+	\item 
+	$ f $ ist in $ x_0 $ stetig genau dann, wenn $ f $ in $ x_0 $ differenzierbar ist.
+	\item
+	Wenn $ f $ in $ x_0 $ differenzierbar ist, dann ist $ f $ in $ x_0 $ unstetig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Kenne die die Definition von Stetigkeit \& Differenzierbarkeit.
+\item Zusatz: Weise die korrekte Antwort nach.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Kenne die die Definition von Stetigkeit \& Differenzierbarkeit}\\
+Ist die Funktion $ f $ differenzierbar in $ x_0 \in D_f $, dann ist sie auch stetig in $ x_0 \in D_f $.
+Somit ist Antwort (b) richtig und (d) falsch.
+Durch die Betragsfunktion
+\begin{align*}
+f \ : \ \mathbb{R} \to \mathbb{R}, \ x \mapsto |x|
+\end{align*}
+erhalten wir ein direktes Gegenbeispiel zur Antwort (a).
+Die Ableitung repräsentiert die Steigung in einem Punkt. Links von $ x_0 = 0 $ ist die Steigung $ -1 $ und rechts davon $ 1 $.
+Um dies genauer zu untersuchen, betrachten wir die Definition der Differenzierbarkeit. Eine Funktion $ f $ heißt differenzierbar in $ x_0 $, falls
+\begin{align*}
+\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x- x_0} = f^\prime(x_0)
+\end{align*}
+existiert. Für die Betragsfunktion gelten nun
+\begin{align*}
+\lim \limits_{x \to 0, x <0 } \frac{f(x) - f(0)}{x- 0}
+&= \lim \limits_{x \to 0, x <0 } \frac{-x }{x} = -1\\
+\lim \limits_{x \to 0, x >0 } \frac{f(x) - f(0)}{x- 0}
+&= \lim \limits_{x \to 0, x >0 } \frac{x }{x} = 1,
+\end{align*}
+wodurch der Grenzwert nicht existiert. Damit ist Antwort (a) falsch.
+Da (c) eine Kombination von (a) und (b) ist, ist (c) auch falsch.\\
+\\
+Somit ist Antwort (b) korrekt.
+\\
+\\
+\underline{2. Zusatz: Weise die korrekte Antwort nach}\\
+Sei $ f $ in $ x_0 $ differenzierbar. 
+Wir wollen zeigen, dass $ f(x) \to f(x_0) $ für $ x \to x_0 $ folgt.
+Dann ist $ f $ stetig.
+Wir erhalten
+\begin{align*}
+\lim \limits_{x \to x_0} f(x) - f(x_0)
+= 
+\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x- x_0}(x-x_0)
+=
+f^\prime(x_0) \cdot 0 = 0
+\
+\Rightarrow 
+\
+f(x) \to f(x_0)
+\end{align*}
+für $ x \to x_0 $. Damit ist $ f $ stetig und Antwort (d) falsch.\\
+\\
+Somit ist Antwort (b) korrekt.
+ \newpage
+
+\subsection*{\frage{4}{3}}
+Ein Investor hat die Wahl zwischen zwei Projekten:\\
+Projekt I erfordert eine Anfangsinvestition von CHF $ 100'000  $ und zahlt CHF $ 50'000 $ in $ 6 $ Monaten sowie CHF $ 60'000 $ in $ 1 $ Jahr aus. \\
+Projekt II erfordert eine Anfangsinvestition von CHF $ 100'000 $ und zahlt in $ 1 $ Jahr CHF $ 110'000 $ aus.
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Projekt I ist Projekt II vorzuziehen, gegeben, dass der Zinssatz strikt positiv ist.
+	\item
+	Projekt II ist Projekt I vorzuziehen, gegeben, dass der Zinssatz strikt positiv ist.
+	\item
+	Projekt I und Projekt II haben denselben Nettobarwert.
+	\item
+	Ob Projekt I dem Projekt II vorzuziehen ist, oder Projekt II dem Projekt I, hängt von der Höhe des strikt positiven Zinssatzes ab.
+\end{enumerate}
+\ \\
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe den Barwerte beider Projekte an und finde eine Bedingung für die richtige Wahl.
+\item Finde die korrekte Antwort.
+\item Alternativer Lösungsweg.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe den Barwerte beider Projekte an und finde eine Bedingung für die richtige Wahl}\\
+Der Barwert von Projekt I ist durch
+\begin{align*}
+-100'000 + \frac{50'000}{(1+i)} + \frac{60'000}{(1+i)^2}
+\end{align*}
+gegeben. Den Barwert von Projekt II erhalten wir durch
+\begin{align*}
+-100'000 + \frac{110'000}{(1+i)^2}.
+\end{align*}
+Falls
+\begin{align*}
+-100'000 + \frac{50'000}{(1+i)} + \frac{60'000}{(1+i)^2}
+>
+-100'000 + \frac{110'000}{(1+i)^2}
+\end{align*}
+gilt, ist Projekt I dem Projekt II vorzuziehen.
+\\
+\\
+\underline{2. Finde die korrekte Antwort}\\
+Wir formen die gefundene Bedingung um:
+\begin{align*}
+-100'000 + \frac{50'000}{(1+i)} + \frac{60'000}{(1+i)^2}
+&>
+-100'000 + \frac{110'000}{(1+i)^2}
+\\
+\Leftrightarrow
+-100'000 + \frac{50'000}{(1+i)}
+&> -100'000 + \frac{50'000}{(1+i)^2}\\
+ \Leftrightarrow 
+\frac{50'000}{(1+i)} &> 
+\frac{50'000}{(1+i)^2}
+\ \Leftrightarrow \ 
+\frac{1}{(1+i)} > \frac{1}{(1+i)^2}
+ \ \Leftrightarrow \
+(1+i)^2 > (1+i)
+\end{align*}
+Dies ist für jeden positives Zinssatz $ i > 0  $ erfüllt.\\
+\\
+Somit ist Antwort (a) korrekt.
+\\
+\\
+\underline{3. Alternativer Lösungsweg}\\
+Wir können die Aufgabe auch lösen, ohne zu rechnen.
+Die beiden Auszahlungen sind in Summe identisch, d.h.
+$ 50'000 + 60'000 $ oder $ 110'000 $.
+Bei Projekt I werden die $ 50'000 $ nach $ 6 $ Monaten zu einem Zinssatz von $ (1 + i) $ angelegt.
+Folglich ist wegen
+\begin{align*}
+(50'000) \cdot \underbrace{(1+i)^{\frac{1}{2}}}_{> 1} + 60'000 
+> 110'000,
+\end{align*}
+das Projekt I vorzuziehen.\\
+\\
+Somit ist Antwort (a) korrekt.
+\newpage
+
+\subsection*{\frage{5}{3}}
+Ein Finanzberater schlägt seinem Kunden zwei Optionen für die Rückzahlung eines Hypothekenkredits vor:
+Option 1 sieht die Rückzahlung des Kredits mit konstanten Zahlungen $ C^D  $ vor, welche über $ n^D $ Jahre am Jahresanfang erfolgen. Bei Option 2 dagegen wird derselbe Kredit mit konstanten Zahlungen $ C^l $ am Jahresende über $ n^I $ Jahre zurückgezahlt.\\
+\\
+Unter der Voraussetzung, dass der Zinssatz strikt positiv ist, folgt
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ C^I = C^D$, wenn $ n^I = n^D $.
+	\item
+	$ C^I > C^D$, wenn $ n^I = n^D $.
+	\item
+	$ C^I < C^D$, wenn $ n^I = n^D $.
+	\item
+	$ C^I > C^D $ genau dann, wenn $ n^I > n^D $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, welche Antworten du ausschließen kannst.
+\item Finde die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, welche Antworten du ausschließen kannst}\\
+Wenn die Anzahl der Jahre $ n^I $ und $ n^D $ verschieden sind, können wir im Allgemeinen nicht entscheiden ob 
+$ C^I > C^D $, $ C^I = C^D $ oder $ C^I < C^D $ erfüllt sind.
+Also können wir Antwort (d) ausschließen.\\
+\\
+\underline{2. Finde die korrekte Antwort}\\
+%Damit wissen wir, dass $ n^I = n^D $ gelten muss.
+%Die Zinserträge bei Zahlungen am Anfang des Jahres sind echt größer als die Zinserträge bei Zahlungen am Ende des Jahres.
+%Für den Kunden ist also Rückzahlung am Anfang des Jahres besser, da er weniger Zinsen zahlen muss. Dementsprechend gilt $ C^I > C^D $ bei gleicher Jahreszahl.
+Wenn wir davon ausgehen, dass die Anzahl der Jahre identisch sind, dann muss $ C^I > C^D $ gelten ,da die Bank die  jeweilige Zahlung ein Jahr später erhält und so nicht mehr anlegen kann.
+\\
+\\
+Damit ist Antwort (b) korrekt.
+
+\newpage
+
+\subsection*{\frage{6}{3}}
+Wir betrachten die Funktion
+\begin{align*}
+f \ : \
+\mathbb{R} \to \mathbb{R}, \quad 
+x \mapsto
+y = 
+\begin{cases}
+\frac{\sin(x)}{a(x- \pi)} &\qquad \text{für} \ x \neq \pi\\
+a &\qquad \text{für} \ x = \pi
+\end{cases}
+\end{align*}
+
+Für welches $ a \in \mathbb{R} $ ist $ f $ überall stetig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ a = 1 $.
+	\item
+	$ a = -1 $.
+	\item
+	$ a \in \{ -1, 1\} $.
+	\item
+	$ f $ ist für kein $ a \in \mathbb{R} $ überall stetig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, was für die Stetigkeit von $ f $ gelten muss.
+\item Bestimme die richtige Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, was für die Stetigkeit von $ f $ gelten muss}\\
+Eine Funktion $ f $ ist stetig in $ x_0 $, falls
+\begin{align*}
+x \to x_0 \ 
+\Rightarrow 
+\ 
+f(x) \to f(x_0)
+\end{align*}
+erfüllt ist. Wir müssen also
+\begin{align*}
+\lim \limits_{x \to \pi } \frac{\sin(x)}{a (x- \pi)}
+\end{align*}
+berechnen, um die Aufgabe zu lösen. 
+\\
+\\
+\underline{2. Bestimme die richtige Antwort}\\
+Unsere Funktion ist für $ x_0 \neq \pi  $ stetig.
+Deswegen müssen wir nur $ x_0 = \pi $ untersuchen.
+Wegen 
+\begin{align*}
+&\lim \limits_{x \to \pi} \sin(x) = 0\\
+&\lim \limits_{x \to \pi} a(x - \pi) =0
+\end{align*}
+können wir die Regel von de l'H\^{o}pital anwenden. Es gilt
+\begin{align*}
+\lim \limits_{x \to \pi } \frac{\sin(x)}{a (x- \pi)}
+=
+\lim \limits_{x \to \pi } \frac{\sin(x)}{a x- a\pi)}
+=
+\lim \limits_{x \to \pi } \frac{\cos(x)}{a }
+=
+-\frac{1}{a},
+\end{align*}
+wodurch
+\begin{align*}
+- \frac{1}{a} = a
+\
+\Leftrightarrow
+\
+a^2 = -1
+\end{align*}
+erfüllt sein muss. Diese Gleichung besitzt jedoch keine reelle Lösung, wodurch $ f $ für kein $ a \in \mathbb{R} $ überall stetig ist.\\
+\\
+Damit ist Antwort (d) korrekt.
+\newpage
+\subsection*{\frage{7}{3}}
+Sei $ f(x) = 1 + 3  x- 4  x^4 $ und $ P_4 $ das Taylorpolynom vierter Ordnung von $ f  $ in $ x_0 = 1 $.
+Welche der folgenden Aussagen über das Restglied vierter Ordnung $ R_4 $ in $ x_0 = 1 $ ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ R_4(x) > 0  $ für alle $ x $.
+	\item
+	$ R_4(x) <0  $ für alle $ x $.
+	\item
+	$ R_4(x) =0  $ für alle $ x $.
+	\item
+	Jeder der Fälle $ R_4(x ) > 0 $, $ R_4(x) < 0 $ und $ R_4(x) = 0 $ ist für entsprechende $ x \in \mathbb{R} $ möglich.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, was du über das Restglied von $ f $ sagen kannst und bestimme die Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, was du über das Restglied von $ f $ sagen kannst und bestimme die Antwort}\\
+Das Restglied $ n $-ter Ordnung für $ f $ im Punkt $ x_0 $ ist durch
+\begin{align*}
+R_n(x) = \frac{f^{n+1}(\xi)}{(n+1)!}(x - x_0)^{(n+1)} 
+\end{align*}
+für $ \xi \in [x_0,x] $ gegeben. $ R_4(x) $ enthält also die fünfte Ableitung $ f^{(5)} $. Nun gilt
+\begin{align*}
+f^\prime(x) 
+= 16 x^3 + 3
+\ \Rightarrow \
+f^{\prime \prime}(x) = 48 x^2 
+\ \Rightarrow \ 
+f^{3}(x) = 96 x
+\ \Rightarrow \
+f^{4}(x) = 96
+\ \Rightarrow \ 
+f^{(5)}(x) = 0,
+\end{align*}  
+wodurch $ R_4(x) = 0  $ für alle $ x $ gilt.
+
+
+
+\newpage
+
+\subsection*{\frage{8}{3}}
+Für eine Funktion $ f $ ist die Elastizität $ \varepsilon_f(x) $ gegeben durch:
+\begin{align*}
+\varepsilon_f(x) =x \ \ln (x) + e^{3 \ x}.
+\end{align*}
+Sei $ g $ die Funktion definiert durch $ g(x) = f( a \ x) $ für $ a > 0 $.\\
+\\
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \varepsilon_g(x) = x \ \ln(x)  + e^{3 \ x}$.
+	\item
+	$ \varepsilon_g(x) =a \  x \ \ln(x)  +a \   e^{3 \ x} $.
+	\item
+	$ \varepsilon_g(x) =\frac{x}{a} \ \ln(x)  +\frac{x}{a}   e^{3 \ x} $.
+	\item
+	Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Berechne mithilfe der Definition der Elastizität die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Finde mithilfe der Definition der Elastizität die korrekte Antwort}\\
+Mit der Kettenregel erhalten wir:
+\begin{align*}
+\varepsilon_g (x)
+&= 
+ \frac{g^\prime(x)}{g(x)} x\\
+&=
+ \frac{ f^\prime (ax)}{f(ax)} ax \\
+&=
+ax \frac{ f^\prime (ax)}{f(ax)}  \\
+&=
+(a \cdot x) \frac{ f^\prime (ax)}{f(ax)}\\
+&=  \varepsilon_f(ax)
+=ax \ln(ax)) + e^{3ax}
+\end{align*}
+Damit ist die Antwort (d) korrekt.
+
+\newpage

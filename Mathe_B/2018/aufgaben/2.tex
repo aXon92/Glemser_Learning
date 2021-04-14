@@ -1,0 +1,781 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 2 (32 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Die Funktion $ f(x,y)  = x$ hat unter der Nebenbedingung $\varphi(x,y) = \frac{x^2}{36} + \frac{(y-3)^2}{16} = 1 $ ihr Maximum im Punkt
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ P = (-6,3) $.
+	\item $ P = (5,-3) $.
+	\item $ P = (0,7) $.
+	\item $ P = (6,3) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme das in der Nebenbedingung beschriebene Objekt.
+\item Bestimme die richtige Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme das in der Nebenbedingung beschriebene Objekt}\\
+Wegen 
+\begin{align*}
+\varphi(x,y) = \frac{x^2}{36} + \frac{(y-3)^2}{16} = 
+\frac{x^2}{6^2} + \frac{(y-3)^2}{4^2} = 1
+\end{align*}
+beschreibt die Nebenbedingung eine Ellipse mit dem Mittelpunkt $ (0,3) $ und den Halbachsen $ a = 6 $ bezüglich der $ x $-Achse und $ b = 4 $ bezüglich der $ y $-Achse.\\
+\\
+\underline{2. Bestimme die richtige Antwort}\\
+Da $ f(x,y) = x $ erhalten wir das Maximum unter der Nebenbedingung am Endpunkt der Halbachse bezüglich $ x $. Dieser liegt bei $ (6,3) $. Das heißt, dass $ (6,3) $ das Maximum ist.\\
+
+%wenn wir die Halbachse bezüglich $ x $ von dem Mittelpunkt $ (0,3) $ ausgehen. 
+
+Damit ist die Antwort (d) korrekt.
+\newpage
+
+\subsection*{\frage{2}{3}}
+Eine zweimal differenzierbare Funktion $ f  $ hat ein lokales Maximum im Punkt $ (x_0,y_0) $.
+Sei $ g  $ die Funktion definiert durch $ g(x,y) = - f(-x,-y)  $ und $ D_g = D_f $. Dann gilt:
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ g $ hat ein lokales Maximum in $ (x_0,y_0) $.
+	\item $ g $ hat ein lokales Minimum in $ (x_0,y_0) $.
+	\item
+	$ g $ hat ein lokales Maximum in $ (-x_0,-y_0) $.
+	\item
+	$ g $ hat ein lokales Minimum in $ (-x_0,-y_0) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Bestimme einen stationären Punkt von $ g $.
+		\item Bestimme die Art des stationären Punkts.
+	\end{enumerate}
+\end{mdframed}
+\underline{1. Bestimme einen stationären Punkt von $ g $}\\
+Die partiellen Ableitungen von $ g $ sind mit der Kettenregel gegeben durch:
+\begin{align*}
+g_x(x,y) &=  f_x(-x,-y)\\
+g_y(x,y) &=  f_y(-x,-y)
+\end{align*}
+Wegen 
+\begin{align*}
+g_x(-x_0,-y_0) = f_x(x_0,y_0) = 0\\
+g_y(-x_0,-y_0) = f_y(x_0,y_0) = 0
+\end{align*}
+ist $ (-x_0,-y_0) $ ein stationärer Punkt.\\
+\\
+\underline{2. Bestimme die Art des stationären Punkts}\\
+Da $ (x_0,y_0)  $ ein lokales Maximum von $ f $ ist, ist $ (-x_0,-y_0) $ ein lokales Minimum  von $ g $.
+Dies folgt wegen
+\begin{align*}
+g_{xx}(-x_0,-y_0) =  - \underbrace{f_{xx}(x_0,y_0)}_{< 0 } > 0\\
+g_{yy}(-x_0,-y_0) =  - \underbrace{f_{yy}(x_0,y_0)}_{< 0 } > 0
+\end{align*}
+und
+\begin{align*}
+g_{xx}(-x_0,-y_0) g_{yy}(-x_0,-y_0) - (g_{xy}(-x_0,-y_0))^2
+=
+(-1)^2f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - (f_{yy}(x_0,y_0))^2 > 0. 
+\end{align*}
+\ \\
+Damit ist die Antwort (d) korrekt.
+\newpage
+\subsection*{\frage{3}{4}}
+Die Funktion $ f $ in zwei Variablen hat unter der Nebenbedingung $ \varphi(x,y) = x^2 + 3 y - 7 = 0 $ ein lokales Maximum im Punkt $ (x_0,y_0) = (1,2) $.\\
+\\
+Die Steigung der Tangente  an die Niveaulinie von $ f $ in $ (x_0,y_0) = (1,2) $ hat den Wert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$-\frac{3}{2}$.
+	\item 
+	$-\frac{2}{3}$.
+	\item 
+	$\frac{3}{2}$.
+	\item
+	$\frac{2}{3}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende den Satz über implizite Funktionen.
+\item Verwende das lokale Maximum von $ f $.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende den Satz über implizite Funktionen}\\
+Wir betrachten die Nebenbedingung $ \varphi $. Für diese gilt:
+\begin{align*}
+\varphi_x(x,y) = 2x \ &\Rightarrow \ \varphi_y(x_0,y_0) = 2\\
+\varphi_y(x,y) = 3 \ &\Rightarrow \ \varphi_y(x_0,y_0) = 3.
+\end{align*}
+Damit können wir den Satz über implizite Funktionen anwenden. Dieser liefert uns eine stetig differenzierbare Funktion $ y : (x_0- \delta, x_0 + \delta) \to \mathbb{R} $ mit $ y(x_0) = y_0 $, sodass
+\begin{align*}
+\varphi(\underbrace{x, y(x)}_{c(x):=}) = \varphi(c(x)) =  0 
+\end{align*}
+für alle $ x \in (x_0- \delta, x_0 + \delta)   $ gilt.
+Damit finden wir ein kleines Intervall um $ x_0 $, worauf die $ y $-Variable nach $ x $ aufgelöst werden kann.
+Dies soll durch die Notation $ y(x) $ deutlich gemacht werden. 
+Wegen 
+\begin{align*}
+c^\prime(x) = 
+\begin{pmatrix}
+1 \\ y^\prime(x)
+\end{pmatrix}
+\end{align*}
+ist die Steigung der Tangente an die Niveaulinie $ \varphi(x,y) = 0 $ in $ (x_0,y_0) = (1,2) $ durch $ y^\prime(1)  $ gegeben.
+Außerdem gilt
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{dx}}
+(\varphi(x, y(x)) )
+=
+\varphi_x(x,y(x)) + y^{\prime}(x) \varphi_y(x,y(x)) = 0
+\ \Leftrightarrow \
+y^\prime(x)
+=
+-\frac{\varphi_x(x,y(x))}{\varphi_y(x,y(x))}
+\end{align*}
+für alle $ x \in (x_0 - \delta,x_0 + \delta) $. Damit erhalten wir:
+\begin{align*}
+y^\prime(1) = - \frac{\varphi_x(1,2)}{\varphi_y(1,2)} = - \frac{2}{3}.
+\end{align*}
+
+\newpage
+\underline{2. Verwende das lokale Maximum von $ f $}\\
+Da $ f $ ein lokales Maximum in $ (x_0,y_0) $ unter der Nebenbedingung $ \varphi(x,y) = 0 $ hat und $ c(x) $ die Nebenbedingung für $ x \in (x_0- \delta, x_0 + \delta) $ erfüllt erhalten wir:
+\begin{align*}
+ \frac{\mathrm{d}}{\mathrm{dx}} (f(c(x))) =
+&  \textbf{grad} f(c(x)) \cdot c^\prime(x)\\
+\ \Rightarrow \
+&0 =\textbf{grad} f(c(1)) \cdot c^\prime(1)
+=
+\textbf{grad} f(1,2) \cdot c^\prime(1) 
+=
+f_x(1,2) + y^\prime(1) f_y(1,2)\\
+\ \Leftrightarrow \
+&y^\prime(1) = - \frac{f_x(1,2)}{f_y(1,2)}.
+\end{align*}
+Wegen 
+\begin{align*}
+y^\prime(1)= - \frac{f_x(1,2)}{f_y(1,2)} = - \frac{\varphi_x(1,2)}{\varphi_y(1,2)} 
+\end{align*}
+sind $ \textbf{grad} f(1,2)  $ und $ \textbf{grad} \varphi(1,2)  $ linear abhängig.
+Da diese jeweils orthogonal zu den Tangenten der Niveaulinien sind, ist die Steigung der Niveaulinie von $ f $ im Punkt $ (x_0,y_0) = (1,2) $ gegeben durch $ -\frac{2}{3} $.\\
+\\
+Damit ist die Antwort (b) korrekt.
+%ist die Steigung der Niveaulinie von $ f $ im Punkt $ (x_0,y_0) = (1,2) $ gegeben durch
+%\begin{align*}
+%y^\prime(1)= - \frac{f_x(1,2)}{f_y(1,2)} = - \frac{\varphi_x(1,2)}{\varphi_y(1,2)} = - \frac{2}{3}.
+%\end{align*}
+
+\newpage
+
+\subsection*{\frage{4}{2}}
+Für eine stetige Funktion $ f $ und $ a,x \in D_f $ mit $ a \leq x  $ ist die Integralfunktion $ I $ definiert als $ I(x) = \int_a^x f(t) \ dt $. Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ I $ ist eine Stammfunktion von $ f $.
+	\item
+	$ f^\prime(x) = I(x) $.
+	\item
+	$ I^\prime(x) = f(x) - f(a) $.
+	\item
+	$ I $ ist nicht differenzierbar
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Nehme eine bekannte Stammfunktion $ F $ von $ f $ an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Nehme eine bekannte Stammfunktion $ F $ von $ f $ an}\\
+Angenommen $ F $ sei eine Stammfunktion von $ f $.
+Dann gilt:
+\begin{align*}
+I(x)
+=
+\int \limits_{a}^x f(t) \ dt
+=
+F(t) \bigg|_a^x
+=
+F(x) \underbrace{- F(a)}_{ = + C}
+= F(x) + C.
+\end{align*}
+Die Integralfunktion $ I(x) $ unterscheidet sich nur um eine Konstante von $ F $.
+Damit erhalten wir $ I^\prime = F^\prime =f $.\\
+\\
+Also ist die Antwort (a) korrekt. 
+\newpage
+\subsection*{\frage{5}{2}}
+Sei $ F $ eine Stammfunktion von $ f $ und $ g $ eine differenzierbare Funktion.
+Es folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \int f(g(x)) dx = F(x) +C, \quad C \in \mathbb{R} $.
+	\item 
+	$ \int f(g(x)) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+	\item 
+	$ \int f(g(x)) f^\prime(x) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+	\item 
+	$ \int f(g(x)) g^\prime(x) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Finde die korrekte Antwort durch Differenzieren .
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Finde die korrekte Antwort durch Differenzieren}\\
+Da $ F $ eine Stammfunktion von $ f $ ist, gilt $ F^\prime = f $.
+Das Differenzieren des Integrals liefert uns den Integranden.
+Wir werden beide Seiten der Antwortmöglichkeiten differenzieren.
+Damit erhalten wir
+\begin{align*}
+f(g(x)) = F^\prime(x) = f(x).
+\end{align*}
+Mit $ g(x) \neq x $ haben wir ein Gegenbeispiel gefunden, da dann $ f(g(x)) $ nicht $ f(x) $ entspricht. Damit ist (a) falsch.\\
+\\
+Differenzieren der Möglichkeit (b) liefert mit der Kettenregel:
+\begin{align*}
+f(g(x)) = F^\prime(g(x)) g^\prime(x) = f(g(x)) g^\prime(x).
+\end{align*}
+Ein Gegenbeispiel erhält man durch $ f(x) = g(x) = c \neq 0 $.
+Dies erkennen wir an dem Widerspruch:
+\begin{align*}
+c = \underbrace{c}_{F^\prime} \cdot \underbrace{0}_{g^\prime}.
+\end{align*}
+Damit ist (b) falsch.
+Dies ist ebenso ein Gegenbeispiel zur (c).
+\\
+Wegen
+\begin{align*}
+\left(F(g(x))\right)^\prime = 
+F^\prime (g(x)) \cdot g^\prime(x)
+= 
+f(g(x)) \cdot g^\prime(x)
+\end{align*}
+entspricht die Ableitung von $ F(g(x)) $ dem Integranden in Möglichkeit (d).
+Dies ist gerade die Substitutionsregel für Integrale.\\
+\\
+Also ist die Antwort (d) korrekt.
+
+
+\newpage
+
+\subsection*{\frage{6}{3}}
+Das unbestimmte Integral
+\begin{align*}
+\int \left[ 6x+ (2 x^2 + 1) e^{x^2} \right] dx
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ x^2 + x \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+	\item 
+	$ 3x  + 2x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+	\item
+	$ 3x^2  + 2x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+	\item
+	$ 3x^2  + x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die korrekte Antwort durch Differenzieren.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die korrekte Antwort durch Differenzieren}\\
+Die Antwortmöglichkeiten bestehen alle aus zwei Summanden. Die Konstante $ C $ können wir ignorieren, da diese bei der Ableitung wegfällt.\\
+\\
+Wir definieren die Funktion $ h(x) = f(x) + g(x) $, wobei $ f $ und $ g $ differenzierbar sind.
+Dann gilt für die Ableitung:
+\begin{align*}
+h^\prime (x) = (f(x)+g(x))^\prime
+= 
+f^\prime(x)+ g^\prime(x).
+\end{align*}
+Das bedeutet, dass wir die Summanden in den Antwortmöglichkeiten separat untersuchen können.\\
+\\
+Wir betrachten zuerst den Term $ x e^{x^2} $, welcher in allen Antworten vorkommt.
+Für diesen gilt mit der Produkt-und Kettenregel:
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{dx}}(x e^{x^2})
+=
+1 \cdot e^{x^2} + x \ 2x \ e^{x^2}
+= 
+(2x^2 + 1) e^{x^2}.
+\end{align*}
+Nach diesem Resultat sind die Antworten (b) und (c) falsch.
+Wegen
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{dx}} (3x^2) = 6x
+\end{align*}
+ist die Antwort (a) falsch.\\
+\\
+Also ist die Antwort (d) korrekt.\\
+\\
+Dies erkennen wir auch mit der Ketten-und Produktregel:
+\begin{align*}
+\left(3x^2  + x  \ e^{x^2} + C\right)^\prime
+=
+6x + e^{x^2} + 2x^2 x e^{x^2}
+=
+6x (2x^2 +1 ) e^{x^2}.
+\end{align*}
+\newpage
+\subsection*{\frage{7}{3}}
+Gegeben sei die Funktion $ f $ definiert durch
+\begin{align*}
+f(x) = 
+\begin{cases}
+a x^2 + \frac{1}{2} &\ \textrm{für } 0 \leq x \leq 1\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}.
+\end{align*}
+$ f $ ist eine Dichtefunktion für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ a = \frac{1}{2} $.
+	\item
+	$ a = \frac{3}{2} $.
+	\item
+	$ a = \frac{5}{2} $.
+	\item
+	Für kein $ a \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe das Kriterium für eine Dichtefunktion an.
+\item Wende das Kriterium an, um das passende $ a $ zu finden.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe das Kriterium für eine Dichtefunktion an}\\
+Die Funktion $ f $ ist eine Dichtefunktion, falls
+\begin{align*}
+\int \limits_{- \infty}^\infty f(x) \ dx = 1
+\end{align*}
+gilt.\\
+\\
+\underline{2. Wende das Kriterium an, um das passende $ a $ zu finden}\\
+Demnach erhalten wir
+\begin{align*}
+\int \limits_{- \infty}^\infty f(x) \ dx
+=
+\int \limits_{0}^1 ax^2 + \frac{1}{2} \ dx 
+=
+\frac{a}{3}x^3 + \frac{1}{2}x \bigg|_0^1
+&=
+\frac{a}{3} + \frac{1}{2} - \left( \frac{a}{3}0^3 + \frac{1}{2}0 \right) =
+\frac{a}{3} + \frac{1}{2}\\
+ = 1
+\ \Leftrightarrow \
+\frac{a}{3} &= \frac{1}{2}
+\ \Leftrightarrow \
+a = \frac{3}{2}
+\end{align*}
+\ \\
+Also ist Antwort (b) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{4}}
+Gegeben sei die Funktion
+\begin{align*}
+f(x) = 
+\begin{cases}
+a x + \frac{1}{16} &\ \textrm{für } 0 \leq x \leq 8\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}.
+\end{align*}
+Der Parameter $ a $ wird so gewählt, dass $ f $ die Dichtefunktion einer stetigen Zufallsvariablen $ X $ ist. Der Erwartungswert $ \mathbb{E}[X] $ von $ X $ ist:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ \mathbb{E}[X] = \frac{25}{16} $.
+\item
+$ \mathbb{E}[X] = \frac{14}{3} $.
+
+\item
+$ \mathbb{E}[X] = \frac{-5}{3} $.
+\item
+$ \mathbb{E}[X] = \frac{7}{3} a $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe das Kriterium einer Dichtefunktion an.
+\item Bestimme den Parameter $ a $ um den Erwartungswert zu berechnen.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe das Kriterium einer Dichtefunktion an}\\
+Damit $ f $ eine Dichtefunktion ist, muss
+\begin{align*}
+\int \limits_{- \infty}^\infty f(x) \ dx
+= 
+1
+\end{align*}
+erfüllt sein.\\
+\\
+
+\underline{2. Bestimme den Parameter $ a $ um den Erwartungswert zu berechnen}\\
+Da $ f(x)  \neq 0$ für $ 0 \leq x \leq 8 $ ist, erhalten wir:
+\begin{align*}
+\int \limits_{- \infty}^\infty f(x) \ dx
+= 
+\int \limits_0^8 ax + \frac{1}{16} \ dx
+&=
+\frac{a}{2}x^2 + \frac{1}{16}x \bigg|_0^8
+=
+\frac{a}{2} \cdot 64 + \frac{1}{2}
+- \left( \frac{a}{2}0^2 + \frac{1}{16}0 \right)\\
+ = 1 
+\ \Leftrightarrow \
+32 a &= \frac{1}{2}
+\ \Leftrightarrow \ 
+a = \frac{1}{64}
+\end{align*}
+Da $ f $ die Dichtefunktion der Zufallsvariablen $ X $ ist gilt:
+\begin{align*}
+\mathbb{E}[X]
+&=
+\int \limits_{- \infty}^\infty x f(x) \ dx
+=
+\int \limits_{0}^8
+x \left(\frac{1}{64}x  + \frac{1}{16}\right) \ dx
+= 
+\int \limits_{0}^8 
+\frac{1}{64}x^2 + \frac{1}{16} x \ dx
+= 
+\frac{1}{64 \cdot 3}x^3 + \frac{1}{32} x^2 \bigg|_0^8\\
+&= 
+\frac{8^3}{64 \cdot 3}  + \frac{1}{32} \cdot 64 - \left( \frac{0^3}{64 \cdot 3}  + \frac{1}{32} \cdot 0^2 \right)
+=
+\frac{8}{ 3}  + 2
+=
+\frac{ 8 }{3}  + \frac{6}{3}
+=
+\frac{ 14}{3}. 
+\end{align*}
+\ \\
+Also ist die Antwort (b) korrekt.
+
+\newpage
+\subsection*{\frage{9}{2}}
+Die Vektoren $ \textbf{a} $ und $ \textbf{b} $ seien orthogonal und $ \textbf{a}  $ habe die Länge $ \| \textbf{a} \| = 3 $.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 0 $.
+	\item
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 3 $.
+	
+	\item
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 9 $.
+	\item
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) $ kann ohne Wissen über die Komponenten von $ \textbf{a} $ und $ \textbf{b} $ nicht bestimmt werden.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Gebe den Zusammenhang zwischen Skalarprodukt und Länge eines Vektors an.
+		\item Verwende die Orthogonalität.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe den Zusammenhang zwischen Skalarprodukt und Länge eines Vektors an}\\
+Für die Länge des Vektors $ \textbf{a} = \begin{pmatrix} a_1, & a_2, & ... & a_n  
+\end{pmatrix}$ gilt:
+\begin{align*}
+\| a \| = \sqrt{a_1^2 + a_2^2+...+a_n^2}
+= \sqrt{\textbf{a} \cdot \textbf{a}} = 3
+\ \Rightarrow \
+\textbf{a} \cdot \textbf{a} = 3^2 = 9.
+\end{align*}
+Hierbei sind $ a_1 $ bis $ a_n $ die einzelnen Komponenten des Vektors $ \textbf{a} $.\\
+\\
+\underline{2. Verwende die Orthogonalität}\\
+Da $ \textbf{a} $ und $ \textbf{b} $ orthogonal sind gilt $ \textbf{a}\cdot \textbf{b} = 0 $ und wir erhalten:
+\begin{align*}
+\textbf{a} \cdot ( \textbf{a} + \textbf{b})
+= \textbf{a} \cdot \textbf{a} +\textbf{a} \cdot \textbf{b}
+= 9 + 0 = 9.
+\end{align*}
+\ \\
+Damit ist Antwort (c) korrekt.
+\newpage
+\subsection*{\frage{10}{2}}
+Gegeben seien die Vektoren:
+\begin{align*}
+\textbf{a}
+=
+\begin{pmatrix}
+1 \\ 1 \\ -1
+\end{pmatrix},
+\textbf{b}
+=
+\begin{pmatrix}
+0 \\ 1 \\ 3
+\end{pmatrix},
+\textbf{c}
+=
+\begin{pmatrix}
+-1 \\ 0 \\ 2
+\end{pmatrix},
+\textbf{d}
+=
+\begin{pmatrix}
+1 \\ 4 \\ 8
+\end{pmatrix},
+\textbf{e}
+=
+\begin{pmatrix}
+1 \\ 1 \\ 1
+\end{pmatrix}
+\end{align*}
+Welches der folgenden Systeme ist eine Basis des $ \mathbb{R}^3 $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \lbrace \textbf{a}, \textbf{b} , \textbf{c} \rbrace  $.
+	\item
+	$ \lbrace \textbf{a}, \textbf{b} , \textbf{d} \rbrace  $.
+	
+	\item
+	$ \lbrace \textbf{b}, \textbf{c} , \textbf{e} \rbrace  $.
+	\item
+	$ \lbrace \textbf{a}, \textbf{b} , \textbf{c},\textbf{d}, \textbf{e} \rbrace  $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Schließe falsche Antworten durch Linearkombinationen bzw. die Determinante aus.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Schließe falsche Antworten durch Linearkombinationen bzw. die Determinante aus}\\
+Unter einer Basis verstehen wir ein System von linear unabhängigen Vektoren.
+Wir können die Antwort (d) direkt verwerfen, da es keine fünf linear unabhängige Vektoren in einem dreidimensionalen Raum geben kann.\\
+\\
+Wir werden verwenden, dass drei Vektoren in $ \mathbb{R}^3 $ genau dann eine Basis bilden, wenn diese linear unabhängig sind.
+Das heißt die Matrix bestehend aus den Vektoren ist regulär. Dies ist äquivalent dazu, dass die Determinate ungleich null ist.
+Für die falschen Antworten werden wir jedoch die Linearkombinationen genauer betrachten.\\
+\\
+Wegen
+\begin{align*}
+1 \cdot  \textbf{a} + 3 \cdot \textbf{b}
+=
+1 \cdot \begin{pmatrix}
+1 \\ 1 \\ -1
+\end{pmatrix}
++ 3 \cdot
+\begin{pmatrix}
+0 \\ 1 \\ 3
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \\ 4 \\ 8
+\end{pmatrix} =\textbf{d}
+\end{align*}
+ist das System $ \lbrace \textbf{a}, \textbf{b} , \textbf{d} \rbrace  $ linear abhängig und Antwort (b) ist falsch.
+Dies lässt sich auch durch
+\begin{align*}
+\det(\textbf{a}, \textbf{b}, \textbf{d} ) = 0
+\end{align*}
+feststellen.\\
+\\
+Durch identisches Vorgehen gilt:
+\begin{align*}
+1 \cdot \textbf{b} + (-1) \cdot \textbf{c} = 
+1 \cdot \begin{pmatrix}
+0 \\ 1 \\3
+\end{pmatrix}
++ (-1) \cdot 
+\begin{pmatrix}
+-1 \\ 0 \\ 2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \\ 1 \\ 1
+\end{pmatrix}
+= \textbf{e}.
+\end{align*}
+Also ist die Antwort (c) falsch.
+Dies lässt sich auch durch
+\begin{align*}
+\det(\textbf{b}, \textbf{c}, \textbf{e} ) = 0
+\end{align*}
+feststellen.\\
+\\
+Übrig bleibt die korrekte Antwort (a).
+Dies wollen wir noch verifizieren. Hierfür berechnen wir die Determinante, indem wir nach der ersten Zeile entwickeln.
+Dies ist eine geschickte Wahl, da sich eine Null in der ersten Zeile befindet. Es gilt:
+\begin{align*}
+\det (\textbf{a},\textbf{b}, \textbf{c})
+=
+\det \begin{pmatrix}
+1 & 0 & -1\\
+1 & 1 & 0 \\
+-1 & 3 & 2 
+\end{pmatrix}
+=
+1 \cdot
+\begin{pmatrix}
+1 & 0 \\
+3 & 2
+\end{pmatrix}
++ (-1) \cdot 
+\begin{pmatrix}
+1 & 1 \\
+-1 & 3
+\end{pmatrix}
+=
+2 - 4 = -2 \neq 0.
+\end{align*}
+Damit ist das System $ \lbrace \textbf{a}, \textbf{b} , \textbf{c} \rbrace  $ linear unabhängig und somit eine Basis des $ \mathbb{R}^3 $.\\
+\\
+Also ist die Antwort (a) korrekt.
+\newpage
+
+\subsection*{\frage{11}{2}}
+$ A $ sei eine $ 7 \times 5 $ Matrix. Das System von linearen Gleichungen $ A \textbf{x} = \textbf{b} $ habe unendliche viele Lösungen und der Lösungsraum habe die Dimension $ 3 $. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}(A)< \mathrm{rg}(A;\textbf{b} ) =3 $.
+	\item
+	$ \mathrm{rg}(A)= \mathrm{rg}(A;\textbf{b} ) =2 $.
+	
+	\item
+	$ \mathrm{rg}(A)< \mathrm{rg}(A;\textbf{b} ) =2 $.
+	\item
+	$ \mathrm{rg}(A)= \mathrm{rg}(A;\textbf{b} ) =3 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Wende die Dimensionsformel für den Lösungsraum an.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Wende die Dimensionsformel für den Lösungsraum an}\\
+Die Dimensionsformel für den Lösungsraum $ L $ ist durch 
+\begin{align*}
+\dim \ L = n - \mathrm{rg}(A )
+\end{align*}
+gegeben. 
+Hierbei ist $ n $ die Anzahl der Variablen.
+Da $ A $ eine $ 7 \times 5 $ Matrix ist, besitzt das lineare Gleichungssystem
+$ A \textbf{x} = \textbf{b} $ fünf Variablen.
+Das heißt $ n = 5 $.
+Insgesamt erhalten wir
+\begin{align*}
+3 = \dim \ L = 5 - \mathrm{rg}(A)
+\ \Leftrightarrow \
+\mathrm{rg}(A) = 5 - \dim \ L = 5 -3 = 2.
+\end{align*}
+Da das lineare Gleichungssystem $ A \textbf{x} = \textbf{b} $ lösbar ist, erhalten wir
+\begin{align*}
+2=\mathrm{rg}(A)= \mathrm{rg}(A;\textbf{b} ).
+\end{align*}
+\ \\
+Damit ist Antwort (b) korrekt.
+\newpage
+\subsection*{\frage{12}{2}}
+$ A $ und $ B $ seien reguläre Matrizen. Ausserdem sei $ A $ symmetrisch.
+Der Ausdruck
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (AB)^{-1}
+\end{align*}
+entspricht:
+\begin{enumerate}
+	\item 
+	$ (A^\top B^\top)^{-1} $.
+	\item
+	$ (B^{-1} A)^\top $.
+	
+	\item
+	$ (A^{-1} B )^\top $
+	\item
+	Keinem der obigen Terme.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Wende die Rechenregeln für Matrizen an.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Wende die Rechenregeln für Matrizen an}\\
+Wir werden die folgenden Rechenregeln verwenden:
+\begin{align*}
+(A B)^\top &= B^\top A^\top\\
+(A B)^{-1} &= B^{-1} A^{-1}.
+\end{align*}
+Mit diesen Regeln erhalten wir:
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (AB)^{-1}
+&=
+B^\top B^\top A^\top (A^{-1})^\top (B^{-1})^\top B B^{-1} A^{-1}
+=
+B^\top B^\top I (B^{-1})^\top I A^{-1}\\
+&=
+B^\top B^\top  (B^\top)^{-1}  A^{-1}
+=
+B^\top  A^{-1}
+\overset{A \ \textrm{symmetrisch}}{=}
+B^\top (A^{-1})^\top\\
+&=
+(A^{-1} B)^\top.
+\end{align*}
+\ \\
+Damit ist die Antwort (c) korrekt.

@@ -1,0 +1,559 @@
+%\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+
+
+\begin{Large}
+\textbf{Teil I: Offene Aufgaben (36 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für offene Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Ihre Antworten müssen alle Rechenschritte enthalten,
+diese müssen klar ersichtlich sein.
+Verwendung korrekter mathematischer Notation wird erwartet
+und fliesst in die Bewertung ein.
+
+\item
+Ihre Antworten zu den jeweiligen Teilaufgaben müssen in den dafür vorgesehenen Platz geschrie-
+ben werden. Sollte dieser Platz nicht ausreichen, setzen Sie Ihre Antwort auf der Rückseite oder
+dem separat zur Verfügung gestellten Papier fort. Verweisen Sie in solchen Fällen ausdrücklich
+auf Ihre Fortsetzung. Bitte schreiben Sie zudem Ihren Vor- und Nachnamen auf jeden separaten
+Lösungsbogen.
+
+\item
+Es werden nur Antworten im dafür vorgesehenen Platz bewertet. Antworten auf der Rückseite
+oder separatem Papier werden nur bei einem vorhandenen und klaren Verweis darauf bewertet.
+
+\item
+Die Teilaufgaben werden mit den jeweils oben auf der Seite angegebenen Punkten bewertet.
+
+\item
+Ihre endgültige Lösung jeder Teilaufgabe darf nur eine einzige Version enthalten.
+
+\item
+Zwischenrechnungen und Notizen müssen auf einem getrennten Blatt gemacht werden. Diese
+Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werden.
+\end{enumerate}
+
+\newpage
+\section*{\hfil Aufgaben \hfil}
+\vspace{1cm}
+\section*{Aufgabe 1 (36 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{8}}
+Ein Investment generiert zum Zeitpunkt $ t $, für $ t \in [0,10], $ den stetigen Cashflow $ B(t) = a \ t + 10 $,
+wobei $ a > 0  $.
+Die Verzinsung erfolgt kontinuierlich zum Zinssatz $ i = 5 \% $.
+Bestimmen Sie den Parameter $ a $ so, dass der Barwert des Investments $ 1'000 $ CHF beträgt.
+\\
+\\
+\subsection*{\aufgabe{b}{8}}
+Die folgende Tabelle beschreibt die jährlichen Payoffs dreier Wertpapiere zu identischem Ausgangspreis, abhängig von der jeweiligen konjunkturellen Lage:
+\begin{table}[H]
+	\centering
+	%
+		\begin{tabular}{l c c c}
+			\hline
+			Konjunktur & Aktie 1  &  Aktie 2 &  Aktie 3 \\ \hline
+			Expansion & $ 1.5 $ & $ 3 $ & $ m $  \\ 
+			wirtschaftliche Stabilität & $ 1.5 $ & $ 2 $ & $ 0.5 $ \\ 
+			Rezession & $ 1.5 $ & $ 0.5 $ & $ 1.5 $  \\ \hline
+		\end{tabular}%
+	
+\end{table}
+Ein Investor möchte die drei Wertpapiere linear zu folgendem Auszahlungsschema kombinieren:
+\begin{table}[H]
+	\centering
+	%
+	\begin{tabular}{l c }
+		\hline
+		Konjunktur & Payoff des Investors \\ \hline
+		Expansion & $ 2m $  \\ 
+		wirtschaftliche Stabilität & $ 1.0 $  \\ 
+		Rezession & $ 0.5 $   \\ \hline
+	\end{tabular}%
+	
+\end{table}
+Bestimmen Sie mit Hilfe des \textit{Gauss Verfahrens} alle möglichen Parameterwerte $ m $, für die das gewünschte Auszahlungsschema durch eine Kombination der drei Aktien möglich ist.
+ \\
+\\
+\subsection*{\aufgabe{c}{10}}
+Die (fixen) Entwicklungskosten für ein neues Produkt betragen $ 20'000 $ (CHF).
+Jede Einheit des Produkts kann zu einem Preis von $ p $ (CHF) verkauft werden, 
+die Produktionskosten pro Einheit betragen $ 2 $ (CHF).
+Sie entscheiden sich dazu, Ihr Produkt mit einer Marketingkampagne zu bewerben.
+Der Erfolg der Kampagne hängt von dem Betrag $ a $ (CHF),
+der für die Werbung ausgegeben wird, sowie dem Preis $ p $ (CHF) Ihres Produkts ab.
+In der Tat bestimmen Sie , dass Sie, bei einem Werbeaufwand von $ a $ (CHF) und einem Verkaufspreis von $ p $ (CHF),
+\begin{align*}
+3'000 + 4 \sqrt{a} - 20 p
+\end{align*}
+Einheiten Ihres Produktes verkaufen.\\
+Bestimmen Sie $ a $ und $ p $ so, dass Ihr Gewinn (d.h. Verkaufserlöse abzüglich Kosten, inklusive der Kosten für Werbung) maximal wird.
+\ \\
+\subsection*{\aufgabe{d}{10}}
+Ein Rechteck $ R $ habe seine Ecken in den Punkten $ (0,0),(x,0),(0,y), $ und $ (x,y) $, mit $ x,y > 0 $.
+Außerdem sei die Distanz zwischen dem Punkt $ (x,y)  $ und dem Punkt $ (a,0) $ gleich 4, wobei $ a \in (4,8) $.\\
+Bestimmen Sie mögliche Punkte $ (x,y) $, sodass die Fläche von $ R $ ein Extremum annimmt (also maximal oder minimal wird).\\
+\textbf{Bemerkung:} 
+\begin{enumerate}[label=(\arabic*)]
+	\item Es ist nicht nötig zu überprüfen, ob die gefundenen potentiellen Kandidaten für ein Extremum tatsächlich einen maximalen oder minimalen Flächeninhalt von $ R $ erzeugen.
+	\item Die Distanz zwischen zwei Punkten $ P_1 = (x_1,y_1) $ und $ P_2 = ( x_2,y_2) $ entspricht\\
+	$ d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2} $.
+	Demnach gilt: $ d^2 = (x_1 -x_2)^2 + (y_1 - y_2)^2 $.
+	\item  Für diese Aufgabe müssen Sie die Terme der Lösung(en) nicht vereinfachen.
+\end{enumerate}
+
+\newpage
+
+
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\begin{Large}
+\textbf{Teil II: Multiple-Choice-Fragen (64 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für Multiple-Choice-Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Die Antworten auf die Multiple-Choice-Fragen müssen im dafür vorgesehenen Antwortbogen ein-
+getragen werden. Es werden ausschliesslich Antworten auf diesem Antwortbogen bewertet. Der
+Platz unter den Fragen ist nur für Notizen vorgesehen und wird nicht korrigiert.
+
+\item
+Jede Frage hat nur eine richtige Antwort. Es muss also auch jeweils nur eine Antwort angekreuzt
+werden.
+
+\item
+Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet, auch wenn
+die korrekte Antwort unter den angekreuzten ist.
+
+\item
+Bitte lesen Sie die Fragen sorgfältig.
+
+\end{enumerate}
+\newpage
+\section*{Aufgabe 2 (32 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Die Funktion $ f(x,y)  = x$ hat unter der Nebenbedingung $\varphi(x,y) = \frac{x^2}{36} + \frac{(y-3)^2}{16} = 1 $ ihr Maximum im Punkt
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ P = (-6,3) $.
+\item $ P = (5,-3) $.
+\item $ P = (0,7) $.
+\item $ P = (6,3) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{3}}
+Eine zweimal differenzierbare Funktion $ f  $ hat ein lokales Maximum im Punkt $ (x_0,y_0) $.
+Sei $ g  $ die Funktion definiert durch $ g(x,y) = - f(-x,-y)  $ und $ D_g = D_f $. Dann gilt:
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ g $ hat ein lokales Maximum in $ (x_0,y_0) $.
+\item $ g $ hat ein lokales Minimum in $ (x_0,y_0) $.
+\item
+$ g $ hat ein lokales Maximum in $ (-x_0,-y_0) $.
+\item
+$ g $ hat ein lokales Minimum in $ (-x_0,-y_0) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{4}}
+Die Funktion $ f $ in zwei Variablen hat unter der Nebenbedingung $ \varphi(x,y) = x^2 + 3 y - 7 = 0 $ ein lokales Maximum im Punkt $ (x_0,y_0) = (1,2) $.\\
+\\
+Die Steigung der Tangente  an die Niveaulinie von $ f $ in $ (x_0,y_0) = (1,2) $ hat den Wert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$-\frac{3}{2}$.
+\item 
+$-\frac{2}{3}$.
+\item 
+$\frac{3}{2}$.
+\item
+$\frac{2}{3}$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{2}}
+Für eine stetige Funktion $ f $ und $ a,x \in D_f $ mit $ a \leq x  $ ist die Integralfunktion $ I $ definiert als $ I(x) = \int_a^x f(t) \ dt $. Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ I $ ist eine Stammfunktion von $ f $.
+	\item
+	$ f^\prime(x) = I(x) $.
+	\item
+	$ I^\prime(x) = f(x) - f(a) $.
+	\item
+	$ I $ ist nicht differenzierbar
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{2}}
+Sei $ F $ eine Stammfunktion von $ f $ und $ g $ eine differenzierbare Funktion.
+Es folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ \int f(g(x)) dx = F(x) +C, \quad C \in \mathbb{R} $.
+\item 
+$ \int f(g(x)) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+\item 
+$ \int f(g(x)) f^\prime(x) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+\item 
+$ \int f(g(x)) g^\prime(x) dx = F(g(x)) +C, \quad C \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{3}}
+Das unbestimmte Integral
+\begin{align*}
+\int \left[ 6x+ (2 x^2 + 1) e^{x^2} \right] dx
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ x^2 + x \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+\item 
+$ 3x  + 2x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+\item
+$ 3x^2  + 2x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+\item
+$ 3x^2  + x  \ e^{x^2} + C, \quad C \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{3}}
+Gegeben sei die Funktion $ f $ definiert durch
+\begin{align*}
+f(x) = 
+\begin{cases}
+a x^2 + \frac{1}{2} &\ \textrm{für } 0 \leq x \leq 1\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}.
+\end{align*}
+$ f $ ist eine Dichtefunktion für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ a = \frac{1}{2} $.
+\item
+$ a = \frac{3}{2} $.
+\item
+$ a = \frac{5}{2} $.
+\item
+Für kein $ a \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{4}}
+Gegeben sei die Funktion
+\begin{align*}
+f(x) = 
+\begin{cases}
+a x + \frac{1}{16} &\ \textrm{für } 0 \leq x \leq 8\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}.
+\end{align*}
+Der Parameter $ a $ wird so gewählt, dass $ f $ die Dichtefunktion einer stetigen Zufallsvariablen $ X $ ist. Der Erwartungswert $ \mathbb{E}[X] $ von $ X $ ist:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathbb{E}[X] = \frac{25}{16} $.
+	\item
+	$ \mathbb{E}[X] = \frac{14}{3} $.
+	
+	\item
+	$ \mathbb{E}[X] = \frac{-5}{3} $.
+	\item
+	$ \mathbb{E}[X] = \frac{7}{3} a $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{9}{2}}
+Die Vektoren $ \textbf{a} $ und $ \textbf{b} $ seien orthogonal und $ \textbf{a}  $ habe die Länge $ \| \textbf{a} \| = 3 $.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 0 $.
+	\item
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 3 $.
+	
+	\item
+$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) = 9 $.
+	\item
+	$ \textbf{a} \cdot ( \textbf{a} + \textbf{b}) $ kann ohne Wissen über die Komponenten von $ \textbf{a} $ und $ \textbf{b} $ nicht bestimmt werden.
+\end{enumerate}
+\ \\
+\subsection*{\frage{10}{2}}
+Gegeben seien die Vektoren:
+\begin{align*}
+\textbf{a}
+=
+\begin{pmatrix}
+1 \\ 1 \\ -1
+\end{pmatrix},
+\textbf{b}
+=
+\begin{pmatrix}
+0 \\ 1 \\ 3
+\end{pmatrix},
+\textbf{c}
+=
+\begin{pmatrix}
+-1 \\ 0 \\ 2
+\end{pmatrix},
+\textbf{d}
+=
+\begin{pmatrix}
+1 \\ 4 \\ 8
+\end{pmatrix},
+\textbf{e}
+=
+\begin{pmatrix}
+1 \\ 1 \\ 1
+\end{pmatrix}
+\end{align*}
+Welches der folgenden Systeme ist eine Basis des $ \mathbb{R}^3 $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \lbrace \textbf{a}, \textbf{b} , \textbf{c} \rbrace  $.
+	\item
+	$ \lbrace \textbf{a}, \textbf{b} , \textbf{d} \rbrace  $.
+	
+	\item
+	$ \lbrace \textbf{b}, \textbf{c} , \textbf{e} \rbrace  $.
+	\item
+$ \lbrace \textbf{a}, \textbf{b} , \textbf{c},\textbf{d}, \textbf{e} \rbrace  $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{11}{2}}
+$ A $ sei eine $ 7 \times 5 $ Matrix. Das System von linearen Gleichungen $ A \textbf{x} = \textbf{b} $ habe unendliche viele Lösungen und der Lösungsraum habe die Dimension $ 3 $. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}(A)< \mathrm{rg}(A;\textbf{b} ) =3 $.
+	\item
+	$ \mathrm{rg}(A)= \mathrm{rg}(A;\textbf{b} ) =2 $.
+	
+	\item
+	$ \mathrm{rg}(A)< \mathrm{rg}(A;\textbf{b} ) =2 $.
+	\item
+	$ \mathrm{rg}(A)= \mathrm{rg}(A;\textbf{b} ) =3 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{12}{2}}
+$ A $ und $ B $ seien reguläre Matrizen. Ausserdem sei $ A $ symmetrisch.
+Der Ausdruck
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (AB)^{-1}
+\end{align*}
+entspricht:
+\begin{enumerate}
+	\item 
+	$ (A^\top B^\top)^{-1} $.
+	\item
+	$ (B^{-1} A)^\top $.
+	
+	\item
+	$ (A^{-1} B )^\top $
+	\item
+	Keinem der obigen Terme.
+\end{enumerate}
+\newpage
+\section*{Aufgabe 3 (32 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{4}}
+$ X $ sei eine stetige Zufallsvariable mit Dichtefunktion
+\begin{align*}
+f(x) = 
+\begin{cases}
+\frac{2}{3} x + \sqrt{x} &\ \textrm{für } 0 \leq x \leq 1\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}
+\end{align*}
+und Erwartungswert
+\begin{align*}
+\mathbb{E}[X] = \frac{28}{45}.
+\end{align*}
+Dann hat das Integral $ \int_0^1 (x+1) f(x) \ dx $ den Wert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$\frac{28}{45}$.
+\item
+$\frac{73}{45}$.
+\item
+$\frac{12}{45}$.
+\item
+$\frac{52}{45}$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Für welchen Wert von $ t \in \mathbb{R} $ sind die Vektoren $ \textbf{u} = \begin{pmatrix}
+t \\ t-1 \\ -6
+\end{pmatrix} $ und $ \textbf{v} = \begin{pmatrix}
+t+5 \\ -1 \\ 1
+\end{pmatrix} $ orthogonal und die Länge von $ \textbf{u} $ gleich $ \sqrt{37} $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$t = -5$.
+	\item
+	$t = 0$.
+	\item
+	$ t= 1 $.
+	\item
+	Für kein $ t \in \mathbb{R} $.	
+\end{enumerate}
+
+\newpage
+\subsection*{\frage{3}{3}}
+Die $3 \times 4$ Matrix
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 2  & 1 & -1  \\
+9 & 5  & 2 & 2 \\
+7 & 1  & 0 &  4  
+\end{pmatrix}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+hat Rang $1$.
+\item
+hat Rang $2$.
+\item
+hat Rang $3$.
+\item
+hat Rang $4$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{5}}
+Gegeben sei die $ 3 \times 3 $ Matrix
+\begin{align*}
+A =
+\begin{pmatrix}
+1 & 0 & 1 \\
+0 & -1 & 0 \\
+1 & 0 &0
+\end{pmatrix}.
+\end{align*}
+Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1  \\
+0 & -1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}$.
+\item 
+$A^{-1}
+= 
+\begin{pmatrix}
+0 & 0 & 1  \\
+0 & -1 & 0 \\
+1 & 0 & -1
+\end{pmatrix}$.
+\item
+$A^{-1}
+= 
+\begin{pmatrix}
+0 & 0 & -1  \\
+1 & 1 & 1 \\
+0 & 1 & 0
+\end{pmatrix}$.
+\item
+$ A $ ist singulär.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{4}}
+Sei
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 2 & 1\\
+0 & 1 & 0\\
+1 & -1 & 1
+\end{pmatrix}.
+\end{align*}
+Die Matrix $ A^2 $ hat den Eigenwert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ 2 $.
+\item
+$ 4 $.
+\item
+$ 6 $.
+\item
+$ 8 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{4}}
+Das Anfangswertproblem
+\begin{align*}
+&y_{k+1} -(1+a) y_k = 2 a, \ \textrm{wobei } a \neq -1, a \neq 0,\\
+&y_0 = 2
+\end{align*}
+hat die Lösung
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ y_k = -4 ( 1+a)^k $.
+	\item
+	$ y_k = 2 ( 1+a)^k  -1$.
+	\item
+	$ y_k = 4 ( 1+a)^k -2 $.
+	\item
+	$ y_k = 8 ( 1+a)^k -3$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{3}}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+3 (y_{k+1}   -y_k  )+ 5 = 2 y_{k+1} -y_k + 12 
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item
+oszillierend und konvergent.
+\item
+oszillierend und divergent.	
+\item 
+monoton und konvergent.
+\item
+monoton und divergent.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{5}}
+Die allgemeine Lösung der linearen Differenzengleichung
+\begin{align*}
+2 (a + 2) y_{k+1} - 2 y_k + 2 (a^2 - 4) = 0, \quad k = 0,1,2,...,
+\end{align*}
+mit $ a \in \mathbb{R} \setminus \{-2,-1  \} $, konvergiert monoton gegen $ 0 $ genau dann, wenn
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ a > -2 $.
+	\item
+	$a > -1$.
+	\item
+	$ a = 2 $.
+	\item
+	$ a = 1 $.
+\end{enumerate}

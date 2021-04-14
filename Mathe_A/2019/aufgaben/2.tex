@@ -1,0 +1,573 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 2 (32 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{4}}
+Welche der folgenden Aussagen ist wahr, genau dann wenn $ A $ und $ B $ in ihrem Wahrheitsgehalt verschieden sind (eine Aussage ist wahr, die andere falsch)?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ A \vee B $.
+	\item $ A \wedge B $.
+	\item $ \neg (A \Rightarrow B) $.
+	\item $ (A \vee B) \wedge (\neg(A \wedge B)) $.
+\end{enumerate}\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Löse die Aufgabe mithilfe einer Wahrheitstabelle.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Löse die Aufgabe mithilfe einer Wahrheitstabelle}\\
+Eine Aussage kann nur die Wahrheitswerte wahr ($ W $) oder falsch ($ F $) annehmen.
+Dementsprechend gibt es bei zwei Aussagen $ A $, $ B $ genau vier Kombinationsmöglichkeiten der Wahrheitswerte.
+Aus diesen Kombinationen ergeben sich dann die Wahrheitswerte der verknüpften Aussagen.
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+		\multicolumn{1}{c|}{(a) \ \ $ A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\ 
+		\multicolumn{1}{c|}{(b) \ \ $ A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\ 
+		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\ 
+		\hline
+		\multicolumn{1}{c|}{$\neg ( A \wedge B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\ 
+		\multicolumn{1}{c|}{(c) \ \ $\neg (A \Rightarrow B)$} & \multicolumn{4}{l}{$F$ $W$ $F$ $F$} \\ 
+		\hline
+		\multicolumn{1}{c|}{(d) \ \ $ (A \vee B) \wedge (\neg ( A \wedge B))$} & \multicolumn{4}{l}{$F$ $W$ $W$ $F$} \\
+		\hline
+	\end{tabular}
+\end{center}
+Damit sind die Antworten (a)--(c) falsch und die richtige Antwort bleibt übrig.\\
+\\
+Also ist die Antwort (d) korrekt.\\
+\\
+Alternativ lässt sich die Antwort auch anders herleiten. Durch Umformungen erhalten wir:
+\begin{align*}
+	(A\vee B) \wedge (\neg (A\wedge B))
+	&=
+	(A\vee B) \wedge (\neg A \vee  \neg B)
+	=
+	((A\vee B) \wedge (\neg A)) \vee ( (A\vee B) \wedge  (\neg B))\\
+	&=(A \wedge \neg A) \vee (\neg A \wedge B) \vee (A \wedge \neg B) \vee (B \wedge \neg B)\\
+	&=
+	(\neg A \wedge B) \vee (A \wedge \neg B).
+\end{align*}
+Hierbei geht ein, dass $ (A \wedge \neg A)  $ unabhängig von dem Wahrheitsgehalt der Aussage falsch ist und für logische Operationen das Distributivgesetz gilt.\\
+\\
+Man nennt diese logische Verknüpfung auch exklusives Oder und entspricht der sprachlichen Verwendung von \grqq oder \grqq.
+
+\newpage
+
+\subsection*{\frage{2}{3}}
+Sei $ A = \textrm{\grqq Jeanette und Hans kommen an die Party \grqq} $
+und $ B = \textrm{\grqq Mark kommt an die Party \grqq}  $.
+Wir wissen, dass Hans die Party nicht besuchte.
+Über Jeanette und Mark ist jedoch nichts bekannt.\\
+Welche Aussage ist demnach richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ A \wedge B $.
+	\item $ A \vee B $.
+	\item $ A \Rightarrow B $.
+	\item $ A \Leftrightarrow B $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Übersetze die Aufgabenstellung in Wahrheitswerte und leite die korrekte Antwort her.
+	\end{enumerate}
+\end{mdframed}
+\underline{1. Übersetze die Aufgabenstellung in Wahrheitswerte und leite die korrekte Antwort her}\\
+Uns ist bekannt, dass Hans die Party nicht besuchte. 
+Demnach gilt $ A = F $.
+Wir wissen nichts über Mark. Also kann entweder  $ B= W $ oder $ B = F $ gelten.
+Unser Ziel ist die Aussage zu finden, welche unabhängig von $ B  $ wahr ist.
+Die Antwort (a) können wir direkt ausschließen, da diese wegen $ A $ falsch ist.
+Die Aussage in (b) kann nur wahr sein, falls $ B = W $ und für (d) gilt dies umgekehrt.
+Also bleibt die Antwort (c) übrig.\\
+Die Wahrheitstafel in der letzten Aufgabe zeigt, dass die Aussage von (c) wirklich unabhängig von dem Wahrheitswert von $ B $ ist.
+Man sagt auch: \grqq Aus etwas Falschem kann alles folgen\grqq.\\
+\\
+Damit ist die Antwort (d) korrekt.\\
+\\
+Alternativ lässt sich diese Aufgabe auch über eine Wahrheitstabelle lösen.
+Hierbei ist zu bedenken, dass
+\begin{align*}
+	(A \Leftrightarrow B)
+	=
+	(A\Rightarrow B) \wedge (B \Rightarrow A)
+\end{align*}
+gilt. Damit lässt sich aus der Wahrheitstabelle der letzten Aufgabe die passende Wahrheitstabelle aufstellen.
+ 
+
+\newpage
+\subsection*{\frage{3}{3}}
+Die Folge $ \{ a_n \}_{n \in \N} $ ist beschränkt, monoton und konvergent.
+Zudem gilt $ a_n \neq 0  $ für alle $ n $.
+Sei $ \{b_n\}_{n \in \N} $ die Folge definiert durch $ b_n = \frac{1}{a_n} $.
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \{b_n \}_{n \in \N} $ ist beschränkt.
+	\item 
+	$ \{b_n\}_{n \in \N} $ ist monoton.
+	\item 
+	$ \{b_n\}_{n \in \N} $ ist konvergent.
+	\item
+	Keine der obigen Eigenschaften folgt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Finde passende Gegenbeispiele.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Finde passende Gegenbeispiele}\\
+Für die Beschränktheit und Konvergenz finden wir mit $ a_n = \frac{1}{n} $ ein  Gegenbeispiel. Dies erkannt man an:
+\begin{align*}
+	b_n = \frac{1}{a_n}
+	=
+	\frac{1}{\frac{1}{n}} = n.
+\end{align*}
+Die Folge $ \{ b_n\}_{n \in \N } $ ist unbeschränkt und somit auch divergent.
+Also sind die Antworten (a) und (c) falsch.\\
+Ein Gegenbeispiel für die Monotonie ist schwieriger zu finden.
+Sollte sich das Vorzeichen der $ a_n $ nicht ändern bleibt die Monotonie für $ \{ b_n\}_{n \in \N } $ erhalten.
+Wir benötigen also eine monotone, konvergente Folge $ \{a_n\}_n \in \N $, welche das das Vorzeichen ändert.
+Hierfür setzen wir
+\begin{align*}
+	a_n = \frac{1}{n} - 0.9.
+\end{align*} 
+Wichtig ist hier, dass $ a_n \neq 0 $ eingehalten wird.
+Dann gilt $ a_1 > 0 $ und $ a_n < 0 $ für alle $ n \geq 2 $.
+Die Monotonie liefert
+\begin{align*}
+	a_n \geq a_{n+1}
+	\ \Leftrightarrow \
+	\frac{a_n}{a_{n+1}}  \leq 1
+	\ \Leftrightarrow \ 
+	\frac{1}{a_{n+1}} \geq  \frac{1}{a_n}
+	\ \Leftrightarrow \ 
+	b_{n+1} \geq  b_n
+	\ \Leftrightarrow \ 
+	b_{n} \leq  b_{n+1}
+\end{align*} 
+für $ n \geq 2 $. Hierbei ist wichtig, das die Multiplikation mit einer negativen Zahl die Richtung der Ungleichung verändert. Mit 
+\begin{align*}
+	a_1 \geq a_2
+	\ \Leftrightarrow \
+	1 \geq \frac{a_2}{a_1}
+	\ \Leftrightarrow \
+	\frac{1}{a_2} \leq \frac{1}{a_1}
+	\ \Leftrightarrow \
+	b_2 \leq b_1
+	\ \Leftrightarrow \
+	b_1 \geq b_2
+\end{align*}
+erhalten wir das Argument für das Gegenbeispiel. Da 
+\begin{align*}
+	b_n \leq b_{n+1}
+\end{align*}
+nicht für alle $ n \geq 1 $ erfüllt (für $ n = 1 $), ist $ \{b_n\}_{n \in \N} $ nicht monoton.\\
+\\
+Damit ist die Antwort (d) korrekt. 
+
+
+
+
+\newpage
+
+\subsection*{\frage{4}{4}}
+Sei $ \{ a_n \}_{n \in \N} $ eine geometrische Folge mit 
+$ \frac{a_{n+1}}{a_n} = q \in (0,1) $.
+Sei $ \{ b_n \}_{n \in \N} $ eine andere geometrische Folge mit
+$ \frac{b_{n+1}}{b_n} = \frac{q}{2} $.\\
+Zudem gilt: $ \sum_{k = 1}^\infty a_k = \sum_{k = 1}^\infty b_k $.
+Dann folgt
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ b_1 = 2 a_1 $, falls $ q = \frac{1}{3} $.
+	\item
+	$ b_1 = 2 a_1 $, falls $ q = \frac{1}{2} $.
+	\item
+	$ b_1 = 2 a_1 $, falls $ q = \frac{2}{3} $.
+	\item
+	Die Bedingung $ b_1 = 2 a_1 $ ist nie erfüllt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Gebe die Reihen über die geometrischen Folgen an.
+\item Verwende die Voraussetzung aus der Aufgabe um die korrekte Antwort zu finden.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Gebe die Reihen über die geometrischen Folgen an}\\
+Wir betrachten die geometrische Folge $ \{ a_n \}_{n \in \N} $ mit $ \frac{a_{n+1}}{a_n} = q \in (0,1) $.
+Wegen 
+\begin{align*}
+	a_{n+1} = a_n q
+\end{align*}
+für alle $ n \in \N $ erhalten wir
+\begin{align*}
+	a_{n} = a_1 q^{n-1}.
+\end{align*}
+Mit der geometrischen Reihe erhalten wir wegen $ q \in (0,1) $
+\begin{align*}
+	\sum \limits_{k = 1}^\infty a_k 
+	=
+	\sum \limits_{k = 1}^\infty a_1 q^{k-1}
+	=
+	a_1 \cdot  \sum \limits_{k = 0}^\infty q^k
+	= 
+	\frac{a_1}{1-q}.
+\end{align*}
+Mit $ q \in (0,1)  $ folgt auch $ \frac{q}{2} \in (0,1)  $.
+Damit gilt durch analoge Argumentation:
+\begin{align*}
+	\sum \limits_{k = 1}^\infty b_k = ...=
+	\frac{b_1}{1- \frac{q}{2}}
+	=
+	\frac{2b_1}{2  -q}.
+\end{align*}
+\ \\
+\underline{2. Verwende die Voraussetzung aus der Aufgabe um die korrekte Antwort zu finden}\\
+Wegen $ \sum_{k = 1}^\infty a_k = \sum_{k = 1}^\infty b_k $ muss 
+\begin{align*}
+\textrm{(I)}	\frac{a_1}{1-q} = \frac{2b_1}{2  -q}
+\end{align*}
+erfüllt sein.
+Nach den Regeln der Bruchrechnung gilt dies, falls $ a_1 = 2 b_1 $ und $ 1- q = 2 - q $ erfüllt ist.
+Wir setzen die geforderte Bedingung $ b_1 = 2 a_1 $ in (I) ein und erhalten
+\begin{align*}
+	\frac{a_1}{1- q} =\frac{4 a_1}{2- q}.
+\end{align*}
+Diese Gleichung ist sicher für $ a_1 = 0 $ und alle $ q \in (0,1) $ erfüllt.
+Nun betrachten wir noch was für $ a_1 \neq 0 $ geschieht.
+Dann gilt
+\begin{align*}
+	\frac{a_1}{1- q} =\frac{4 a_1}{2- q}
+	\ \Leftrightarrow \
+	\frac{1}{1- q} =\frac{4}{2- q}
+	\ \Leftrightarrow \
+	2 - q = 4 (1-q)
+	\ \Leftrightarrow \
+	2 - q = 4 - 4 q)
+	\ \Leftrightarrow \
+	q  =\frac{2}{3}.
+\end{align*}
+Damit ist $ b_1 = 2 a_1 $, falls $ q = \frac{2}{3} $ gilt.\\
+\\
+Also ist die Antwort (c) korrekt.
+
+\newpage
+\subsection*{\frage{5}{3}}
+Am Tag, an dem Mark einen Kredit über $ P_1= 1'000'000 $ CHF mit Zinssatz $ i_1 = 1 \% $ aufnimmt, nimmt Lucie einen Kredit über $ P_2= 800'000 $ CHF mit Zinssatz $ i_2 = 1.2 \% $ auf.
+Mark zahlt den Kredit in konstanten Raten von $ 10'500 $ CHF jeweils am Ende des Jahres zurück, während Lucie $ 9'500 $ CHF auch jeweils am Ende des Jahres zurückbezahlt.\\
+Welche der folgenden Antworten ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Mark bezahlt den Kredit vor Lucie zurück.
+	\item 
+	Lucie bezahlt den Kredit vor Mark zurück.
+	\item
+	Lucie und Mark bezahlen den Kredit zum gleichen Zeitpunkt zurück.
+	\item
+	Keine der obigen Antworten ist richtig..
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Berechne die jährlichen Zinszahlungen von Mark und Lucie.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Vergleiche die jährlichen Zinszahlungen von Mark und Lucie}\\
+Wir stellen uns die Frage ob Mark und Lucie ihre Zinsen überhaupt zurückzahlen können. Für Mark erhalten wir mit 
+\begin{align*}
+	1'000'000 \cdot 1 \% = 10'000,
+\end{align*}
+die Zinsen des ersten Jahres.
+Damit kann Mark seine Schulden mit der Rate $ 10'500 $ in endlicher Zeit zurückzahlen.
+Für Lucie erhalten wir
+\begin{align*}
+	800'000 \cdot 1.2\% = 9'600
+\end{align*}
+für die Zinszahlung des ersten Jahres. Die Zinszahlung übersteigt die Rate von Lucie. Also kann Lucie ihre Schulden mit dieser Rate nie zurückzahlen.\\
+\\
+Damit ist die Antwort (a) korrekt.
+
+ \newpage
+
+\subsection*{\frage{6}{3}}
+Seien $ f $ und $ g $ Funktionen einer reellen Variable mit Definitionsbereich $ D_f $ beziehungsweise $ D_g $.\\
+Sei $ h = f \circ g $.
+Welche der folgenden Aussagen über den Definitionsbereich $ D_h $ ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ D_h = D_f \cup D_g$.
+	\item 
+	$ D_h \subseteq D_g $.
+	\item
+	$ D_h \subseteq D_f $.
+	\item
+	$ D_h = D_f \cap  D_g $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Finde die korrekte Antwort mit Hilfe der Definition. 
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Finde die korrekte Antwort mit Hilfe der Definition}\\
+Gegeben seien die Funktionen $ f $ und $ g $ einer reellen Variable mit den Definitionsbereichen $ D_f $ und $ D_g $.
+Dann ist die Verknüpfung definiert durch
+\begin{align*}
+	h(x) = (f \circ g)(x):= f(g(x))
+\end{align*}
+für $ x \in D_h $. Da zuerst $ g(x) $ ausgewertet wird, muss zwingend $ x \in D_g $ folgen. Wir haben also $ x \in D_h \Rightarrow x \in D_g $ gezeigt.
+Wegen
+\begin{align*}
+	D_h \subseteq D_g
+	\ :\Leftrightarrow \
+	x \in D_h \Rightarrow x \in D_g
+\end{align*}
+ist die Antwort (b) korrekt.\\
+\\
+Für die anderen Antwortmöglichkeiten lassen sich Gegenbeispiele konstruieren.\\
+Sei $ f(x)  =  x $ und $ g(x) = \ln(x) $. Dann gilt $ D_f = \R $ und $ D_g = (0, \infty)$.
+Dies ist ein Gegenbeispiel für Antwort (a).\\
+Sei $ f(x) = \ln(x) $ und $ g(x ) = e^x $. Dann gilt $ D_f = (0, \infty) $ und $ D_g = \R $. Dies ist ein Gegenbeispiel für die Antworten (c) und (d). 
+\newpage
+\subsection*{\frage{7}{3}}
+Eine Funktion $ f $ mit Definitionsbereich $ D_f \subseteq \R_{++} $ habe eine Elastizität $ \varepsilon_f $, die konstant gleich $ 2 $ ist.\\
+\\
+Welche der folgenden Aussagen über die die Wachstumsrate $ \rho_f $ von $ f $ ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \rho_f $ ist streng monoton fallend.
+	\item
+	$ \rho_f $ ist streng monoton wachsend.
+	\item
+	$ \rho_f $ ist konstant.
+	\item
+	$ \rho_f $ ist nicht monoton.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Leite mit der Definition der Elastizität die korrekte Antwort her.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Leite mit der Definition der Elastizität die korrekte Antwort her}\\
+Die Wachstumsrate $ \rho_f(x) $ von $ f $ ist gegeben durch $ \rho_f(x) = \frac{f^\prime(x)}{f(x)} $
+Die Elastizität von $ f $ ist definiert durch
+\begin{align*}
+	\varepsilon_f(x) := x \frac{f^\prime(x)}{f(x)} = x \rho_f(x).
+\end{align*}
+Da $ \varepsilon_f $ konstant ist, erhalten wir
+\begin{align*}
+	2 = x \rho_f(x)
+	\ \Leftrightarrow \ 
+	\rho_f(x) = \frac{2}{x}
+\end{align*}
+für $ x \in D_f \subseteq \R_{++} $.
+Also ist $ \rho_f $ streng monoton fallend.\\
+\\
+Damit ist Antwort (a) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{4}}
+Eine differenzierbare Funktion $ f : D_f \to \R  $ ist streng konkav und erfüllt $ f(x)  > 0 $ für alle $ x \in D_f $.
+Zudem gibt es ein $ x_0 \in D_f, x_0 \neq 0 $, so dass für die Elastizität von $ f $ an der Stelle $ \varepsilon_f(x_0 ) = 0 $ gilt.\\
+Welche der folgenden Aussagen ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Bei $ x_0 $ ist $ f $ elastisch.
+	\item
+	Bei $ x_0 $ besitzt $ f $ ein lokales Minimum.
+	
+	
+	\item
+	Bei $ x_0 $ besitzt $ f $ ein lokales Maximum.
+	\item
+	Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Leite mit der Definition der Elastizität die korrekte Antwort her.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Leite mit der Definition der Elastizität die korrekte Antwort her}\\
+Wir machen uns auch in dieser Aufgabe die Definition der Elastizität $ \varepsilon_f $ zunutze.
+Es gilt 
+\begin{align*}
+	\varepsilon_f(x) := x \frac{f^\prime(x)}{f(x)}
+\end{align*}
+für $ x \in D_f $. 
+Sei $ x_0 $ die in der Aufgabe beschriebene Stelle.
+Wegen $ x_0 \neq 0 $ und $ f(x_0 ) > 0 $ gilt
+\begin{align*}
+	0 = \varepsilon_f(x_0) = x_0 \frac{f^\prime(x_0)}{f(x_0)}
+	=
+	\underbrace{\frac{x_0}{f(x_0)}}_{\neq 0} f^\prime(x_0)
+	\ \Leftrightarrow \
+	f^{\prime}(x_0) = 0
+\end{align*} 
+wegen des Satzes des Nullprodukts.
+Da $ f $ auf $ D_f $ konkav ist, liegt ein globales Maximum vor.
+Außerdem sind globale Maxima stets lokal.\\
+\\
+Damit ist Antwort (c) korrekt.
+\newpage
+\subsection*{\frage{9}{3}}
+Sei $ f $ eine Funktion einer reellen Variable, die mindestens $ n $-mal differenzierbar ist.
+Sei $ P_k $ das Taylor-Polynom $ k $-ter Ordnung von $ f $ an der Stelle $ x_0 $, für $ k = 1,...,n-1 $, und $ R_k $ das zugehörige Restglied $ k $-ter Ordnung.\\
+Welche der folgenden Aussagen ist richtig? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Für alle $ x \in D_f $ und $  k = 2,...,n-1 $ gilt,
+	dass $ R_k(x) < R_{k-1}(x) $.
+	\item
+	Für alle $ x \in D_f $ und $  k = 2,...,n-1 $ gilt,
+	dass $ R_k(x) > R_{k-1}(x) $.
+	
+	\item
+	Für alle $ x \in D_f $ und $  k = 2,...,n-1 $ gilt,
+	dass $ R_k(x) = R_{k-1}(x) $.
+	\item
+	Keine der obigen Aussagen ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Verwende das Restglied nach Lagrange.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende das Restglied nach Lagrange}\\
+Das Restglied nach Lagrange ist gegeben durch
+\begin{align*}
+	R_k(x) 
+	= 
+	\frac{f^{k+1}(\xi)}{(k+1)!} x^{k+1}
+\end{align*}
+für $ \xi \in (0,x)$ oder $ \xi  \in (x, 0) $ (abhängig vom Vorzeichen von $ x $).
+Wir werden nun ein Gegenbeispiel für die Antworten (a)--(c) angeben.
+Wir setzen $ f(x)  = \sin(x)$. Dann gilt
+\begin{align*}
+	R_1\left(\frac{\pi}{2} \right)
+	&=
+	\frac{f^{(2)}(\xi_1)}{2!} \left( \frac{\pi}{2}  \right)^{2}
+	=
+	\frac{-\sin(\xi_1)}{(2)!} \left( \frac{\pi}{2}  \right)^{2} < 0\\
+	R_2\left(\frac{\pi}{2} \right)
+	&=
+	\frac{f^{(3)}(\xi_2)}{3!} \left( \frac{\pi}{2}  \right)^{3}
+	=
+	\frac{-\cos(\xi_2)}{3!} \left( \frac{\pi}{2}  \right)^{3} < 0\\
+	R_3\left(\frac{\pi}{2} \right)
+	&=
+	\frac{f^{(4)}(\xi_3)}{4!} \left( \frac{\pi}{2}  \right)^{4}
+	=
+	\frac{\sin (\xi_3)}{4!} \left( \frac{\pi}{2}  \right)^{4} > 0\\
+	R_4\left(\frac{\pi}{2} \right)
+	&=
+	\frac{f^{(5)}(\xi_4)}{5!} \left( \frac{\pi}{2}  \right)^{5}
+	=
+	\frac{\cos (\xi_4)}{5!} \left( \frac{\pi}{2}  \right)^{5} > 0\\
+	R_5\left(\frac{\pi}{2} \right)
+	&=
+	\frac{f^{(6)}(\xi_5)}{6!} \left( \frac{\pi}{2}  \right)^{6}
+	=
+	\frac{-\sin (\xi_5)}{6!} \left( \frac{\pi}{2}  \right)^{6} < 0
+\end{align*}
+für $ \xi_1,..,\xi_5 \in \left(0 , \frac{\pi}{2}\right) $.
+Damit haben wir einen Widerspruch zur strengen Monotonie und Gleichheit bezüglich der Ordnung des Restglieds.\\
+\\
+Also ist die Antwort (d) korrekt.
+
+\newpage
+\subsection*{\frage{10}{2}}
+Eine Funktion zweier reellen Variablen $ f $ sei homogen von Grad $ 2 $ und ihre partielle Elastizität erfülle 
+\begin{align*}
+	\varepsilon_{f,y}(x,y) = e^{x+y} +1. 
+\end{align*}
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ 	\varepsilon_{f,x}(x,y)  = 1 + e^{x+y}$.
+	\item
+	$ 	\varepsilon_{f,x}(x,y)  = 1 - e^{x+y}$.
+	
+	\item
+	$ 	\varepsilon_{f,x}(x,y)  =  e^{x+y}$.
+	\item
+$ 	\varepsilon_{f,x}(x,y)  = - e^{x+y}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Verwende die eulersche Relation. 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die eulersche Relation}\\
+Da $ f $ homogen vom Grad $ 2 $ ist, liefert die eulersche Relation
+\begin{align*}
+	\varepsilon_{f,x}(x,y) + \varepsilon_{f,y}(x,y) = 2
+	\ \Leftrightarrow \
+	\varepsilon_{f,x}(x,y) = 2 -  \varepsilon_{f,y}(x,y).
+\end{align*}
+Mit der Tatsache $ \varepsilon_{f,y}(x,y) = e^{x+y} +1 $ erhalten wir 
+\begin{align*}
+	\varepsilon_{f,x}(x,y) = 2 -  \varepsilon_{f,y}(x,y)=
+	2- (e^{x+y} +1) 
+	=
+	1 - e^{x+y}. 
+\end{align*}
+Damit ist die Antwort (b) korrekt.

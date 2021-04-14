@@ -1,0 +1,2227 @@
+\section{Matrizen und Vektoren}
+
+\subsection{Matrizen}
+\begin{mybox}{Definition}\index{Matrix}
+\index{Matrix}
+Eine $m \times n$ \textit{Matrix} $A$ ist eine Anordnung von $m$ Zeilen mit jeweils $n$ Spalten.
+Dies wird durch folgendes Schema dargestellt:
+\begin{align*}
+A = (a_{ij})_{1 \leq i \leq m,1 \leq j \leq n} 
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \hdots & a_{mn}
+\end{pmatrix}
+\end{align*}
+Mit
+\begin{align*}
+a_{ij}, \ 1 \leq i \leq m, \ 1 \leq j \leq n
+\end{align*}
+bezeichen wir den $ij$-ten Eintrag der Matrix.\\
+Wir nennen eine Matrix \textit{quadratisch}, wenn $m = n$ gilt.
+\end{mybox}
+Mit Matrizen können wir rechnen und diese auf Gleichheit überprüfen. 
+Bis auf die Matrixmultiplikation sind alle Operationen relativ intuitiv.
+Deswegen werden wir diese zuerst anschauen.\\
+\\
+\textbf{Elementare Matrixoperationen}
+\index{Matrix!Elementare Operationen}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+
+\item \textbf{Gleichheit von Matrizen}
+\vspace{0.2cm}\\
+Seien die Matrizen $A $ und $B$ jeweils $m \times n $-Matrizen.
+$A$ und $B$ sind gleich, wenn alle Einträge übereinstimmen.
+Formal lässt sich das durch
+\begin{align*}
+a_{ij} = b_{ij}
+\end{align*}
+für $1 \leq i \leq m$ und $1 \leq j \leq n$ formulieren.\\ \\
+Wir können dies durch
+\begin{align*}
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 2 \\
+3 & 4
+\end{pmatrix}
+\
+\Leftrightarrow
+\ 
+a = 1, \ b = 2, \ c = 3, \ d = 4
+\end{align*}
+veranschaulichen.
+\item \textbf{Addition von Matrizen}\vspace{0.2cm}\\
+\index{Matrix!Addition}
+Seien die Matrizen $A $ und $B$ jeweils $m \times n $-Matrizen.
+Dann addieren wir die einzelnen Einträge:
+\begin{align*}
+A+B &:=(a_{ij} + b_{ij})_{1 \leq i \leq m,1 \leq j \leq n}\\
+&=
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \hdots & a_{mn}
+\end{pmatrix}
++
+\begin{pmatrix}
+b_{11} & b_{12} & \dots & b_{1n}\\
+b_{21} & b_{22} & \dots & b_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+b_{m1} & b_{m2} & \hdots & b_{mn}
+\end{pmatrix}\\
+&=
+\begin{pmatrix}
+a_{11} +b_{11} & a_{12} + b_{12} & \dots & a_{1n}+b_{1n}\\
+a_{21} + b_{21} & a_{22} + b_{22} & \dots & a_{2n}+b_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} + b_{m1} & a_{m2} + b_{m2} & \hdots & a_{mn} + b_{mn}
+\end{pmatrix}
+\end{align*}
+\textbf{Wichtig:} Die Matrizen müssen die gleiche Anzahl an Zeilen und Spalten haben.
+
+Dies sieht zunächst ziemlich abstrakt aus, weswegen wir ein Beispiel zur Verdeutlichung betrachten.
+\begin{align*}
+A = 
+\begin{pmatrix}
+1 & 2\\
+1 & 1
+\end{pmatrix}, \
+B =
+\begin{pmatrix}
+3 & 1 \\
+2 & -1
+\end{pmatrix}
+\end{align*} 
+Die Addition beider Matrizen ergibt
+\begin{align*}
+A+B 
+=
+\begin{pmatrix}
+1+3 & 2 +1\\
+1 +2 & 1+(-1)
+\end{pmatrix}
+=
+\begin{pmatrix}
+4 & 3\\
+3 & 0
+\end{pmatrix}.
+\end{align*}
+
+\item \textbf{Skalare Multiplikation}\vspace{0.2cm}\\
+Sei $A$ eine $m \times n$ Matrix.
+Dann gilt
+\begin{align*}
+\lambda \cdot A
+&=
+\lambda
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \hdots & a_{mn}
+\end{pmatrix}
+=
+\begin{pmatrix}
+\lambda a_{11} & \lambda a_{12} & \dots &\lambda a_{1n}\\
+\lambda a_{21} &\lambda a_{22} & \dots &\lambda a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+\lambda a_{m1} &\lambda a_{m2} & \hdots &\lambda a_{mn}
+\end{pmatrix}\\
+&=(\lambda a_{ij})_{1 \leq i \leq m,1 \leq j \leq n}
+\end{align*}
+für $\lambda \in \mathbb{R}$.
+Wir multiplizieren also die einzelnen Einträge mit dem skalaren Faktor.
+
+\item \textbf{Transponierte Matrix}\vspace{0.2cm}\\
+Sei $A$ eine $m \times n$ Matrix von der Form
+\begin{align*}
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n}\\
+a_{21} & a_{22} & \dots & a_{2n}\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{m1} & a_{m2} & \hdots & a_{mn}
+\end{pmatrix}.
+\end{align*}
+\index{Matrix!transponiert}
+Dann ist die \textit{transponierte} $m \times n$ Matrix durch
+\begin{align*}
+A^\top
+:=
+\begin{pmatrix}
+a_{11} & a_{21} & \dots & a_{m1}\\
+a_{12} & a_{22} & \dots & a_{m2} \\
+\vdots & \vdots & \vdots & \vdots\\
+a_{1n} & a_{2n} & \dots & a_{nm}
+\end{pmatrix}
+\end{align*}
+definiert.
+Wir tauschen einfach Zeilen mit Spalten.
+Am besten verdeutlichen wir dies anhand von Beispielen.\\
+\\
+\textbf{Beispiele:}
+\begin{align*}
+A = 
+\begin{pmatrix}
+1 & 2 & 3
+\end{pmatrix}
+&\Rightarrow
+A^\top
+= \begin{pmatrix}
+1 \\ 2 \\ 3
+\end{pmatrix}\\
+A = 
+\begin{pmatrix}
+2 & 4 & 3\\
+1 & 6 & 5\\
+\end{pmatrix}
+&\Rightarrow
+A^\top
+= 
+\begin{pmatrix}
+2 & 1 \\
+4 & 6  \\
+3 & 5
+\end{pmatrix}\\
+I := 
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+&\Rightarrow
+I^\top = I
+\end{align*}
+\newpage
+Für das Transponieren gelten folgende Rechenregeln:
+\begin{itemize}
+\item
+$(A^\top)^\top =A$
+\item
+$(A + B)^\top = A^\top + B^\top$
+\item
+$(A^{-1})^\top = (A^\top)^{-1}$
+\item
+$(A \cdot B)^\top = B^\top \cdot A^\top$
+\end{itemize}
+Hierbei bezeichnet $A^{-1}$ die inverse Matrix.
+Zu dieser kommen wir später.\\ \\
+Wir nennen eine quadratische Matrix $A$ \textit{symmetrisch}, falls gilt:
+\index{Matrix!symmetrisch}
+\begin{align*}
+A = A^\top
+\end{align*}
+\end{enumerate} 
+\newpage
+\subsection{Matrixmultiplikation}
+\index{Matrixmultiplikation}
+\begin{mybox}{Matrixmultiplikation}
+Sei $A$ eine $ m \times n$ Matrix und $B$ eine $n \times k$ Matrix.
+Dann ist $C := A \cdot B$ eine $m \times k$ Matrix und für deren Einträge gilt
+\begin{align*}
+c_{ij} := \sum \limits_{l = 1}^n a_{il} \cdot b_{lj}
+= a_{i1} \cdot b_{1j} + a_{i2} \cdot b_{2j} + \cdots + a_{in} \cdot b_{nj}.
+\end{align*}
+Schematisch können wir dies durch
+\begin{align*}
+C = 
+A \cdot B
+&=
+\underbrace{\begin{pmatrix}
+\dots & \dots & \dots & \dots\\
+\vdots & \vdots & \vdots & \vdots\\
+a_{i1}& a_{i2} & \dots & a_{in}\\
+\vdots & \vdots & \vdots & \vdots\\
+\dots & \dots & \dots & \dots
+\end{pmatrix}}_{n \ \text{Spalten}}
+\cdot
+\left. 
+\begin{pmatrix}
+\dots & \dots & b_{1j} & \dots \\
+\vdots & \vdots & b_{2j} & \vdots\\
+\vdots & \vdots & \vdots & \vdots\\
+\dots & \dots & b_{nj} &  \dots
+\end{pmatrix}
+\right\rbrace \ n \ \text{\small Zeilen}
+&=
+\begin{pmatrix}
+\dots &\dots &\dots &\dots\\
+\vdots & \vdots & \vdots & \vdots\\
+\ast & \ast & c_{ij} & \ast\\ 
+\vdots & \vdots & \vdots & \vdots\\
+\dots &\dots &\dots &\dots
+\end{pmatrix}
+\end{align*}
+darstellen.
+
+\end{mybox}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[scale = 1,>=latex]
+% les matrices
+\matrix (A) [matrix of math nodes,%
+             nodes = {node style ge},%
+             left delimiter  = (,%
+             right delimiter = )] at (0,0)
+{%
+  a_{11} & a_{12} & \ldots & a_{1n}  \\
+  \node[node style sp](A-2-1) {a_{21}};%
+         & \node[node style sp] (A-2-2) {a_{22}};%
+                  & \ldots%
+                           & \node[node style sp] (A-2-4){a_{2n}}; \\
+  \vdots & \vdots & \ddots & \vdots  \\
+  a_{m1} & a_{m2} & \ldots & a_{mn}  \\
+};
+\node [draw,below=10pt] at (A.south) 
+    { $A$ : \textcolor{red}{$m$ Zeilen} $n$ Spalten};
+
+\matrix (B) [matrix of math nodes,%
+             nodes = {node style ge},%
+             left delimiter  = (,%
+             right delimiter =)] at (6*\myunit,6*\myunit)
+{%
+  b_{11} & \node[node style sp](B-1-2) {b_{12}};%
+                  & \ldots & b_{1k}  \\
+  b_{21} & \node[node style sp](B-2-2) {b_{22}};%
+                  & \ldots & b_{2k}  \\
+  \vdots & \vdots & \ddots & \vdots  \\
+  b_{n1} & \node[node style sp](B-4-2) {b_{n2}};%
+                  & \ldots & b_{nk}  \\
+};
+\node [draw,above=10pt] at (B.north) 
+    { $B$ : $n$ Zeilen \textcolor{red}{$k$ Spalten}};
+% matrice résultat
+\matrix (C) [matrix of math nodes,%
+             nodes = {node style ge},%
+             left delimiter  = (,%
+             right delimiter = )] at (6*\myunit,0)
+{%
+  c_{11} & c_{12} & \ldots & c_{1k} \\
+  c_{21} & \node[node style sp,red](C-2-2) {c_{22}};%
+                  & \ldots & c_{2k} \\
+  \vdots & \vdots & \ddots & \vdots \\
+  c_{m1} & c_{m2} & \ldots & c_{mk} \\
+};
+% les fleches
+\draw[blue] (A-2-1.north) -- (C-2-2.north);
+\draw[blue] (A-2-1.south) -- (C-2-2.south);
+\draw[blue] (B-1-2.west)  -- (C-2-2.west);
+\draw[blue] (B-1-2.east)  -- (C-2-2.east);
+\draw[<->,red](A-2-1) to[in=180,out=90]
+	node[arrow style mul] (x) {$a_{21}\cdot b_{12}$} (B-1-2);
+\draw[<->,red](A-2-2) to[in=180,out=90]
+	node[arrow style mul] (y) {$a_{22}\cdot b_{22}$} (B-2-2);
+\draw[<->,red](A-2-4) to[in=180,out=90]
+	node[arrow style mul] (z) {$a_{2n}\cdot b_{n2}$} (B-4-2);
+\draw[red,->] (x) to node[arrow style plus] {$+$} (y)%
+                  to node[arrow style plus] {$+\raisebox{.5ex}{\ldots}+$} (z)%
+                  to (C-2-2.north west);
+
+
+\node [draw,below=10pt] at (C.south) 
+    {$ C=A\cdot B$ : \textcolor{red}{$m$ Zeilen}  \textcolor{red}{$k$ Spalten}};
+
+\end{tikzpicture}
+\end{figure}
+\newpage
+Zur Verdeutlichung werden wir uns gemeinsam ein paar Beispiele anschauen.
+\subsubsection*{Anwendungsbeispiel A}
+
+Wir betrachten die $1 \times 3$ Matrix
+\begin{align*}
+A=
+\begin{pmatrix}
+1 &  2  & 1
+\end{pmatrix}
+\end{align*}
+und die $3 \times 1$ Matrix
+\begin{align*}
+B=
+\begin{pmatrix}
+-1\\ 1\\  1
+\end{pmatrix}.
+\end{align*}
+Berechnen Sie die Matrix $A \cdot B$.
+Dann erhalten wir durch 
+\begin{align*}
+A \cdot B =
+\begin{pmatrix}
+1 & 2 &  1
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+-1\\ 1\\  1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+2
+\end{pmatrix}
+= 2
+\end{align*}
+eine $1 \times 1$ Matrix.
+Eine $1 \times 1$ Matrix ist ein Skalar, weswegen wir diese Form von Matrixmultiplikation auch 
+\textit{Skalarprodukt} nennen.\index{Skalarprodukt}\\
+\\
+Was fällt auf?
+$A$ besitzt eine Zeile mit drei Einträgen und $B$ besitzt eine Spalte mit drei Einträgen.
+Wir verrechnen also Zeilen mit Spalten.
+Umgangssprachlich sagt man auch \glqq Zeile mal Spalte\grqq.
+
+\subsubsection*{Anwendungsbeispiel B}
+Berechnen Sie die Matrix $A \cdot B$ mit
+\begin{align*}
+A 
+=
+\begin{pmatrix}
+1 &  2  & 1\\
+4 & 1 & 3
+\end{pmatrix},
+\quad
+B=
+\begin{pmatrix}
+-1\\ 1\\  1
+\end{pmatrix}.
+\end{align*}
+Wir erhalten:
+\begin{align*}
+A \cdot B
+=
+\begin{pmatrix}
+1 &  2  & 1\\
+4 & 1 & 3
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+-1\\ 1\\  1
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 \cdot (-1) + 2 \cdot 1 + 1 \cdot 1\\
+4 \cdot (-1) + 1 \cdot 1 + 3 \cdot 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+2\\
+0
+\end{pmatrix}
+\end{align*}
+
+\subsubsection*{Anwendungsbeispiel C}
+Berechnen Sie die Matrix $A \cdot B$ mit 
+\begin{align*}
+A 
+=
+\begin{pmatrix}
+1 &  2  & 1\\
+4 & 1 & 3
+\end{pmatrix},
+\quad
+B = 
+\begin{pmatrix}
+-1 & 2\\ 
+ 1 & -1\\
+   1 & 2
+\end{pmatrix}.
+\end{align*}
+Wir erhalten: 
+\begin{align*}
+A \cdot B
+= 
+\begin{pmatrix}
+1 &  2  & 1\\
+4 & 1 & 3
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+-1 & 2\\ 
+ 1 & -1\\
+   1 & 2
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 \cdot (-1) + 2 \cdot 1  + 1 \cdot 1 & 1 \cdot 2 + 2 \cdot (-1) +1 \cdot 2\\
+4 \cdot (-1) + 1 \cdot 1 + 3 \cdot 1 & 4 \cdot 2 + 1 \cdot (-1) + 3 \cdot 2
+\end{pmatrix}
+= 
+\begin{pmatrix}
+2 & 2\\
+0 & 13
+\end{pmatrix}
+\end{align*}
+
+\newpage
+Wichtig ist noch, dass im Allgemeinen \textbf{nicht}
+\begin{align*}
+A \cdot B = B \cdot A
+\end{align*}
+gilt. 
+Oft ist diese Operation nicht definiert.\\
+%Für
+%\begin{align*}
+%A 
+%=
+%\begin{pmatrix}
+%1 &  2  & 1\\
+%4 & 1 & 3
+%\end{pmatrix},
+%\quad
+%B=
+%\begin{pmatrix}
+%-1\\ 1\\  1
+%\end{pmatrix}
+%\end{align*}
+%ist $B \cdot A$ nicht definiert.
+%Wir rechnen \glqq Zeile mal Spalte\grqq.
+%Nun haben die Zeilen von $B$ nur einen Eintrag und die Spalten von $A$ von zwei. 
+%Wir betrachten
+Wir schauen uns hierzu folgendes Beispiel an:
+\begin{align*}
+A =
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix},
+\quad
+B = 
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+Wir rechnen \glqq Zeile mal Spalte\grqq und erhalten folgendes Resultat:
+\begin{align*}
+A \cdot B 
+&= 
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+1\cdot 0 + 0 \cdot 0 & 1 \cdot 1 + 0 \cdot 0 \\
+0\cdot 0+ 0 \cdot 0 & 0\cdot 1+ 0 \cdot 0 
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\\
+B \cdot A
+&=
+\begin{pmatrix}
+0 & 1 \\
+0 & 0
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+1 & 0 \\
+0 & 0
+\end{pmatrix}
+=
+\begin{pmatrix}
+0\cdot 1 + 1 \cdot 0 & 0 \cdot 0 + 1 \cdot 0 \\
+0\cdot 1+ 0 \cdot 0 & 0\cdot 0+ 0 \cdot 0 
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 0 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+Somit sehen wir, dass $A \cdot B \neq B \cdot A $ gilt.\\
+\\
+Eine Matrix, welche null in allen Einträgen ist, bezeichnen wir als \textit{Nullmatrix}.\index{Nullmatrix}
+Diese kürzen wir mit $0$ ab, um uns Schreibarbeit zu ersparen.
+An
+\begin{align*}
+B \cdot A
+&= 
+\begin{pmatrix}
+0 & 0 \\
+0 & 0
+\end{pmatrix}
+=0
+\end{align*}
+sehen wir, dass $B \cdot A = 0$ gelten kann, obwohl $A, B \neq 0$ sind.\\
+
+\begin{mybox}{Einheitsmatrix}\index{Einheitsmatrix}
+Wir bezeichnen mit
+\begin{align*}
+I := 
+\begin{pmatrix}
+1 & 0 & 0 & \dots & 0 \\
+0 & 1 & 0 & \dots & 0 \\
+0 & 0 & 1 & \dots & 0\\
+\vdots &  &  & \ddots & \\
+0 & 0 & 0 & \dots & 1 
+\end{pmatrix}
+\end{align*}
+die $n \times n$ \textit{Einheitsmatrix}.
+Sei $A$ eine $n \times n$ Matrix.
+Dann gilt
+\begin{align*}
+I \cdot A = A \cdot I = A
+\end{align*}
+\end{mybox}\ \\
+Die Einheitsmatrix hat also dieselbe Funktion wie die $1$ in den rellen Zahlen.
+Hier gilt auch
+\begin{align*}
+a \cdot 1 = 1 \cdot a = a
+\end{align*}
+für alle $a \in \mathbb{R}$.
+
+\newpage
+\subsection{Vektoren}
+In den letzten beiden Abschnitten wurden Matrizen und die dafür notwendigen Rechenoperationen eingeführt.
+Diese lassen sich nun analog auf Vektoren anwenden.\\
+\begin{mybox}{Definition}\index{Vektor}
+Wir nennen eine $n \times 1$ Matrix
+\begin{align*}
+\textbf{v}
+=
+\begin{pmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{pmatrix}
+\end{align*}
+einen $n$-dimensionalen \textit{Spaltenvektor}.\\ \\
+Analog nennen wir einen $1 \times n$ Matrix
+\begin{align*}
+\textbf{w}
+=
+\begin{pmatrix}
+x_1 & \dots & x_n 
+\end{pmatrix}
+\end{align*}
+einen $n$-dimensionalen \textit{Zeilenvektor}.
+\end{mybox}\ \\
+Uns fällt auf, dass
+\begin{align*}
+\textbf{v} = \textbf{w}^\top
+\end{align*}
+gilt.
+Der transponierte Vektor von $\textbf{w}$ entspricht dem Vektor $\textbf{v}$.
+Die Unterscheidung zwischen Zeilen -und Spaltenvektoren ist meist nicht notwendig.
+Diese spielt eine Rolle bei der Multiplikation von einer Matrix mit einem Vektor.\\
+Wenn $A$ eine $n \times m$ Matrix ist, muss $\textbf{v}$ für 
+\begin{align*}
+A \cdot \textbf{v}
+\end{align*}
+ein Spaltenvektor mit $m$ Einträgen sein.
+Dies wird die häufigste Operation sein, bei welcher wir mit Matrizen und Vektoren arbeiten.
+Für
+\begin{align*}
+\textbf{v} \cdot A
+\end{align*}
+ist ein Zeilenvektor $\textbf{v}$ mit $n$ Einträgen notwendig. 
+Ansonsten sprechen wir meist einfach von \textit{Vektoren} mit der entsprechenden Dimension.\\
+
+\begin{mybox}{Skalarprodukt}
+Seien $\textbf{v}$ und $\textbf{w}$ zwei $n$-dimensionale Vektoren.
+Dann ist durch
+\begin{align*}
+\textbf{v} \cdot \textbf{w}
+:=
+\textbf{v}^\top \cdot \textbf{w} = \textbf{v} \cdot \textbf{w}^\top
+=
+\begin{pmatrix}
+v_1 & \dots & v_n
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+w_1\\
+\vdots\\
+w_n
+\end{pmatrix}
+= 
+v_1 \cdot w_1 + \dots + v_n \cdot w_n
+\end{align*}\index{Skalarprodukt}
+das \textit{Skalarprodukt} zwischen $\textbf{v}$ und $\textbf{w}$ definiert.
+Wir nennen $\textbf{v}$ und $\textbf{w}$ zueinander \textit{orthogonal}, falls
+\begin{align*}
+\textbf{v} \cdot \textbf{w} = 0 
+\end{align*}
+gilt. \index{Vektor!orthogonal}
+\end{mybox}
+Wir sehen, dass sich hier jegliche Rechnung mit Vektoren auf die Multiplikation von Matrizen zurückführen lässt.
+\subsubsection*{Anwendungsbeispiel A}
+Wir betrachten:
+\begin{align*}
+\textbf{v}
+= 
+\begin{pmatrix}
+1\\ 2 \\ 3
+\end{pmatrix},
+\
+\textbf{w} 
+=
+\begin{pmatrix}
+1\\ 1 \\ 1
+\end{pmatrix}
+\ 
+&\Rightarrow
+\textbf{v} \cdot \textbf{w} = 1 \cdot 1 + 2 \cdot 1 + 3 \cdot 1 = 6\\
+\textbf{v}
+= 
+\begin{pmatrix}
+1\\ 2 \\ 3
+\end{pmatrix},
+\
+\textbf{w} 
+=
+\begin{pmatrix}
+-2\\ -2 \\ 2
+\end{pmatrix}
+\ 
+&\Rightarrow
+\textbf{v} \cdot \textbf{w} = 1 \cdot (-2) + 2 \cdot (-2) + 3 \cdot 2 = -2 -4 + 6 = 0
+\end{align*}
+
+\newpage
+
+\subsection{Gaußverfahren für Matrizen}
+In diesem Abschnitt werden wir uns von technischer Seite dem Gaußverfahren nähern.
+Dies machen wir, um Aussagen über Matrixeigenschaften zu treffen.
+Unser Ziel ist es eine $n \times m$ Matrix $A$ durch elementare Matrixumformungen 
+\begin{align*}
+A \leadsto
+\left(\mkern3mu
+    % \hskip-\arraycolsep
+    \begin{array}{*{13}c}
+      \multicolumn{1}{|c}{a_{11}} & (*) & (*) & (*) & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+      \cline{1-1}
+      0 & \multicolumn{1}{|c}{a_{22}} & (*) & (*) & (*) & (*) & (*)  & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+      \cline{2-3}
+      0 & 0 & 0 & \multicolumn{1}{|c}{a_{34}} & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*)\\
+      \cline{4-6}
+      0 & 0 & 0 & 0 & 0 & 0 & \multicolumn{1}{|c}{a_{47}} & (*) & \ldots & \ldots & \ldots & \ldots & (*) \\
+      \cline{7-7}\cdashline{8-9}
+      \vdots & & & & \vdots & & & & \vdots & \multicolumn{1}{:c}{} & & & \vdots \\
+      0 & 0 & 0 & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & \multicolumn{1}{|c}{a_{rl}} & (*) & \ldots & (*) \\
+      \cline{10-13}
+      0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
+      0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
+      \vdots & & & & \vdots & & & & \vdots & & & & \vdots \\
+      0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0
+    \end{array}
+   \hskip-\arraycolsep\right)
+\end{align*}
+auf \textit{Zeilenstufenform} zu bringen.\index{Zeilenstufenform}\\ \\
+\textbf{Anschauliche Bedeutung}: In jeder neuen Zeile stehen am Anfang der Zeile mehr Nullen als in der vorherigen Zeile.
+Außer die Anzahl der Nullen entsprechen bereits der Spaltenanzahl.\\
+Wir werden diese elementaren Matrixumformungen später zum Lösen von linearen Gleichungssystemen benötigen. Hierbei steht $\ast$ für eine beliebige Zahl.
+\\
+\index{Zeilenstufenform}
+
+\begin{mybox}{Elementare Matrixumformungen}
+Durch
+\renewcommand\labelenumi{\arabic{enumi}.} 
+\begin{enumerate}
+\item Addition des $c$-fachen Werts einer Zeile zu einer anderen Zeile. 
+\item Multiplikation einer Zeile mit Wert ungleich Null.
+\item Vertauschen zweier Zeilen.
+\end{enumerate}
+lässt sich eine Matrix $A$ auf Zeilenstufenform bringen.
+\end{mybox}
+Wir schauen uns hierzu folgende Anwendungsbeispiele an:
+\renewcommand\labelenumi{\arabic{enumi}.}
+\begin{enumerate}
+\item
+\begin{align*}
+A 
+=
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+-1 & 3 & 1 & 2\\
+2 & 3 & 2 & 4
+\rowops
+\add[ \cdot 1]{0}{1}
+\add[\cdot(-2)]{0}{2}	
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+0 & 5 & 0 & 5\\
+0 & -1 & 4 & -2
+\rowops	
+\end{gmatrix}
+\end{align*}
+Hierbei ist durch die Pfeile visualisiert:\\
+Die Addition des $1$-fachen der ersten Zeile auf die zweite Zeile.\\
+Die Addition des $(-2)$-fachen der ersten Zeile auf die dritte Zeile.
+\item
+\begin{align*}
+A =
+\begin{gmatrix}[p]
+2 & 4 & 6\\
+1 & 2 & 3
+\rowops
+\mult{0}{ \cdot \frac{1}{2}}
+\end{gmatrix}
+\leadsto
+\begin{pmatrix}
+1 & 2 & 3\\
+1 & 2 & 3
+\end{pmatrix}
+\end{align*}
+Hier multiplizieren wir die erste Zeile mit dem Faktor $\frac{1}{2}$.
+
+\item
+\begin{align*}
+A
+=
+\begin{gmatrix}[p]
+1 & 2\\
+3 & 4
+\rowops
+\swap{0}{1}
+\end{gmatrix}
+\leadsto
+\begin{pmatrix}
+3 & 4 \\
+1 & 2
+\end{pmatrix}
+\end{align*}
+Hier vertauschen wir die erste mit der zweiten Zeile.
+\end{enumerate}
+Diese Operationen werden wir nun verwenden, um Matrizen auf Zeilenstufenform zu bringen.
+Die folgenden Matrizen befinden sich bereits in Zeilenstufenform:
+\begin{align*}
+A &= \begin{pmatrix}
+1 & \ast & \ast\\
+0 & 0 & 0
+\end{pmatrix}\\
+B &= 
+\begin{pmatrix}
+1 & 2 & 3 & 2\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 2\\
+0 & 0 & 0 & 0
+\end{pmatrix}\\
+C &=
+\begin{pmatrix}
+1 & \ast & \ast & \ast\\
+0 & 1 & \ast & \ast\\
+0 & 0 & 1 & \ast\\
+0 & 0 & 0 & 1
+\end{pmatrix}\\
+D&=
+\begin{pmatrix}
+1 & \ast & \ast\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{pmatrix}\\
+I &= 
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\end{align*}
+Zur Übung rechnen wir weitere Beispiele.
+\subsubsection*{Anwendungsbeispiel A}
+\begin{align*}
+A 
+=
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+-1 & 3 & 1 & 2\\
+2 & 3 & 2 & 4
+\rowops
+\add[ \cdot 1]{0}{1}
+\add[\cdot(-2)]{0}{2}	
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+0 & 5 & 0 & 5\\
+0 & -1 & 4 & -2
+\rowops
+\mult{1}{\cdot \frac{1}{5}}	
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+0 & 1 & 0 & 1\\
+0 & -1 & 4 & -2
+\rowops
+\add[ \cdot (-2)]{1}{0}
+\add[\cdot 1] {1}{2}	
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 0 & -1 &1\\
+0 & 1 & 0 & 1\\
+0 & 0 & 4 & -1
+\rowops
+\end{gmatrix}
+\end{align*}
+\subsubsection*{Anwendungsbeispiel B}
+\begin{align*}
+A =
+\begin{gmatrix}[p]
+2 & 4 & 6\\
+1 & 2 & 3
+\rowops
+\mult{0}{ \cdot \frac{1}{2}}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & 3\\
+1 & 2 & 3
+\rowops
+\add[\cdot (-1)]{0}{1}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & 3\\
+0 & 0 & 0
+\rowops
+\add[\cdot (-1)]{0}{1}
+\end{gmatrix}
+\end{align*}
+\subsubsection*{Anwendungsbeispiel C}
+\begin{align*}
+A = 
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+1 & 3 & 4 & 8 &\BAR & 7 \\
+2 & 1 & 3 & 4 &\BAR & -1
+\rowops
+\add[-1]{0}{1}
+\add[-2]{0}{2}
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+0 & 1 & 1 & 2 &\BAR & 2 \\
+0 & -3 & -3 & -8 &\BAR & -11
+\rowops
+\add[3]{1}{2}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+0 & 1 & 1 & 2 &\BAR & 2 \\
+0 & 0 & 0 & -2 &\BAR & -5
+\rowops
+\add[1]{2}{1}
+\add[3]{2}{0}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 0 & \BAR & -10\\
+0 & 1 & 1 & 0 &\BAR & -3 \\
+0 & 0 & 0 & -2 &\BAR & -5
+\rowops
+\mult{2}{\cdot ( -1 )}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 0 & \BAR & -10\\
+0 & 1 & 1 & 0 &\BAR & -3 \\
+0 & 0 & 0 & 2 &\BAR & 5
+\end{gmatrix}
+\end{align*}
+Hier hat man bereits nach dem zweiten Schritt eine Zeilenstufenform.
+Hieran sehen wir auch, dass es keine eindeutige Zeilenstufenform geben muss.
+Warum es sich oft trotzdem lohnt, weiter umzuformen, sehen wir bei linearen Gleichungssystemen.
+\subsubsection*{Anwendungsbeispiel D}
+\begin{align*}
+A=
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+1 & 5 & 1  & -1\\
+1 & 3 & -3 & 0 \\
+0 & 1 & -1 & 0
+\rowops
+\add[-\frac{1}{2}]{0}{1}
+\add[-\frac{1}{2}]{0}{2}
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 5 & 1  & -1\\
+0 & 3 & -3 & 0 \\
+0 & 1 & -1 & 0
+\rowops
+\swap{1}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 3 & -3 & 0 \\
+0 & 5 & 1  & -1
+\rowops
+\add[-3]{1}{2}
+\add[-5]{1}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 6  & -1
+\rowops
+\swap{2}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 5 & 6  & -1 \\
+0 & 0 & 0 & 0 
+\rowops
+\add[-5]{1}{2}
+\end{gmatrix}
+\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  &  0\\
+0 & 0 & 11  & -1 \\
+0 & 0 & 0 & 0 
+\end{gmatrix}
+\end{align*}
+
+Wir haben in diesem Abschnitt nur elementare Matrixumformungen auf Zeilen betrachtet.
+Theoretisch lassen sich diese analog auf Spalten anwenden.
+\newpage
+\subsection{Lineare Unabhängigkeit von Vektoren}
+
+\begin{mybox}{Definition}
+Das System $\textbf{v}_1, \dots, \textbf{v}_n$ von Vektoren heißt \textit{linear unabhängig}, falls
+\begin{align*}
+\lambda_1 \cdot  \textbf{v}_1 + \lambda_2 \cdot \textbf{v}_2 + \dots + \lambda_n \cdot \textbf{v}_n = \textbf{0}
+\ \Rightarrow \
+\lambda_1 = \dots = \lambda_n = 0
+\end{align*}
+gilt.
+Ansonsten heißt das System \textit{linear abhängig}.
+\index{Lineare!Abhängigkeit}\index{Lineare!Unabhängigkeit}
+\end{mybox}
+Diese Definition wirkt zunächst sehr abstrakt.
+Deswegen betrachten wir das System
+\begin{align*}
+\textbf{e}_1 =
+\begin{pmatrix}
+1\\ 0 \\0
+\end{pmatrix},
+\textbf{e}_2 =
+\begin{pmatrix}
+0  \\ 1 \\ 0
+\end{pmatrix},
+\textbf{e}_3 = 
+\begin{pmatrix}
+0 \\ 0 \\ 1
+\end{pmatrix}
+\end{align*}
+und überlegen, welche Möglichkeit wir haben, den Nullvektor $\textbf{0}$ darzustellen.
+Für
+\begin{align*}
+\lambda_1 \textbf{e}_1 + \lambda_2 \textbf{e}_2 + \lambda_3 \textbf{e}_3 = \textbf{0}
+\end{align*}
+folgt direkt $\lambda_1 = \lambda_2 = \lambda_3 = 0$.
+Mit diesen drei Vektoren lässt sich der dreidimensionale Raum darstellen, weswegen man das System
+\begin{align*}
+\textbf{e}_1, \textbf{e}_2, \textbf{e}_3
+\end{align*}
+auch \textit{Basis} von $\mathbb{R}^3$ nennt.\index{Basis}
+Nun betrachten wir die zwei Vektoren
+\begin{align*}
+\begin{pmatrix}
+1 \\2
+\end{pmatrix},
+\begin{pmatrix}
+2 \\ 4
+\end{pmatrix}.
+\end{align*}
+Für diese gilt
+\begin{align*}
+2 \cdot 
+\begin{pmatrix}
+1 \\2
+\end{pmatrix}
+= \begin{pmatrix}
+2 \\4
+\end{pmatrix}
+\Leftrightarrow
+2 \cdot 
+\begin{pmatrix}
+1 \\2
+\end{pmatrix} 
++ (-1) \cdot
+\begin{pmatrix}
+2 \\4
+\end{pmatrix}
+= \textbf{0},
+\end{align*}
+wodurch \textbf{nicht} folgt, dass alle Vorfaktoren gleich Null sind.
+Damit sind diese Vektoren linear abhängig.
+\newpage
+\begin{mybox}{Entscheidungsverfahren}
+\index{Lineare!Entscheidungsverfahren}
+Sei $\textbf{v}_1, \dots, \textbf{v}_n$ ein System von Vektoren und $A = \begin{pmatrix} \textbf{v}_1 & \dots & \textbf{v}_n \end{pmatrix} $ die Matrix mit den Vektoren $\textbf{v}_1, \dots, \textbf{v}_n$ als Spalten.
+Nun wenden wir auf $A$ mit
+\begin{align*}
+A \leadsto \tilde{A}
+\end{align*}
+elementare Matrixumforungen an und erhalten eine Zeilenstufenform $\tilde{A}$.\\ \\
+Nun gilt:
+\begin{itemize}
+\item
+$\tilde{A}$ enthält keine Nullzeile:\\ 
+Das System $\textbf{v}_1, \dots, \textbf{v}_n$ ist linear unabhängig.
+
+\item
+$\tilde{A}$ enthält mindestens eine Nullzeile:\\
+Das System $\textbf{v}_1, \dots, \textbf{v}_n$ ist linear abhängig.
+\end{itemize}
+Wir können sogar etwas über die Anzahl der linear unabhängigen Vektoren aussagen.
+Es gilt:
+\begin{align*}
+\text{Anzahl l. u. Vektoren} \ = \ \text{Anzahl Zeilen von } \tilde{A} - \text{Anzahl Nullzeilen von } \tilde{A}
+\end{align*}
+\end{mybox}
+Wir testen dies für unser linear abhängiges System
+\begin{align*}
+\begin{pmatrix}
+1 \\2
+\end{pmatrix},
+\begin{pmatrix}
+2 \\ 4
+\end{pmatrix}
+\Rightarrow
+A = \begin{pmatrix}
+1 & 2 \\
+2 & 4
+\end{pmatrix}.
+\end{align*}
+Wir sehen an
+\begin{align*}
+\begin{gmatrix}[p]
+1 & 2 \\
+2 & 4
+\rowops
+\add[\cdot (-2)]{0}{1}
+\end{gmatrix}
+\leadsto
+\begin{pmatrix}
+1 & 2 \\
+0 & 0
+\end{pmatrix},
+\end{align*}
+dass das System linear abhängig ist, da wir eine Nullzeile haben und die Anzahl linear unabhängiger Vektoren ist eins.
+
+\newpage
+\subsection{Rang einer Matrix}
+\begin{mybox}{Definition}
+Sei $A = \begin{pmatrix}
+\textbf{v}_1 & \dots & \textbf{v}_n
+\end{pmatrix}$ eine Matrix, wobei $\textbf{v}_1, \dots, \textbf{v}_n$ die einzelnen Spalten(-vektoren) von $A$ sind.
+Durch
+\begin{align*}
+\mathrm{rg}(A) := \ \text{Anzahl der linear unabhängigen Spalten von } A
+\end{align*}
+definieren wir den \textit{Rang} der Matrix $A$.\index{Matrix!Rang}
+\end{mybox}
+Wir greifen auf vorherige Beispiele zurück, um uns das Vorgehen zu veranschaulichen.\\
+
+\textbf{Beispiele:}
+\begin{align*}
+A &= \begin{pmatrix}
+1 & \ast & \ast\\
+0 & 0 & 0
+\end{pmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 1\\
+A &= 
+\begin{pmatrix}
+1 & 2 & 3 & 2\\
+0 & 1 & 0 & 1\\
+0 & 0 & 1 & 2\\
+0 & 0 & 0 & 0
+\end{pmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 3\\
+A&=
+\begin{pmatrix}
+1 & \ast & \ast & \ast\\
+0 & 1 & \ast & \ast\\
+0 & 0 & 1 & \ast\\
+0 & 0 & 0 & 1
+\end{pmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 4\\
+A &= \begin{pmatrix}
+1 & \ast & \ast\\
+0 & 0 & 0\\
+0 & 0 & 0
+\end{pmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 1\\
+I &= 
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 3\\
+A 
+&=
+\begin{gmatrix}[p]
+1 & 2 & -1 &3\\
+-1 & 3 & 1 & 2\\
+2 & 3 & 2 & 4
+\end{gmatrix}
+\leadsto
+\dots
+\leadsto
+\begin{gmatrix}[p]
+1 & 0 & -1 &1\\
+0 & 1 & 0 & 1\\
+0 & 0 & 4 & -1
+\rowops
+\end{gmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 3\\
+A &=
+\begin{gmatrix}[p]
+2 & 4 & 6\\
+1 & 2 & 3
+\end{gmatrix}
+\leadsto
+\dots
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & 3\\
+0 & 0 & 0
+\rowops
+\end{gmatrix}
+\Rightarrow 
+\mathrm{rg}(A) = 1\\
+A &= \begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+1 & 3 & 4 & 8 &\BAR & 7 \\
+2 & 1 & 3 & 4 &\BAR & -1
+\end{gmatrix}
+\leadsto
+\dots
+\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 0 & \BAR & -10\\
+0 & 1 & 1 & 0 &\BAR & -3 \\
+0 & 0 & 0 & 2 &\BAR & 5
+\end{gmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 3\\
+A &= 
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+1 & 5 & 1  & -1\\
+1 & 3 & -3 & 0 \\
+0 & 1 & -1 & 0
+\rowops
+\end{gmatrix}
+\leadsto
+\dots
+\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  &  0\\
+0 & 0 & 6  & -1 \\
+0 & 0 & 0 & 0 
+\rowops
+\end{gmatrix}
+\Rightarrow
+\mathrm{rg}(A) = 3
+\end{align*}
+
+\newpage
+\subsection{Inverse Matrix}\index{Matrix!invers}\index{Matrix!regulär}
+\index{Matrix!invers}
+\begin{mybox}{Definition:}
+Sei $A$ eine quadratische $n \times n$ Matrix.
+Falls eine quadratische $n \times n $ Matrix $B$ mit
+\begin{align*}
+A \cdot B = B \cdot A = I
+\end{align*}
+existiert, nennen wir diese die \textit{inverse} Matrix zu $A$.
+Für gewöhnlich verwendet man $A^{-1} := B$ um dies zu kennzeichnen.\\
+Wenn die inverse Matrix existiert, sagen wir auch $A$ ist \textit{regulär}.
+Ansonsten sagen wir, $A$ ist \textit{singulär}.
+\end{mybox}
+Wir kennen dies schon von den reellen Zahlen.
+Diese sind $1 \times 1$ Matrizen.
+Für eine Zahl $a \in \mathbb{R} \setminus \lbrace 0 \rbrace$ gilt immer
+\begin{align*}
+a \cdot a^{-1} = a \cdot \frac{1}{a} = \frac{1}{a} \cdot a = 1.
+\end{align*}
+Falls $A$ invertierbar ist, gilt 
+\begin{align*}
+A \textbf{x} = \textbf{b}
+\Leftrightarrow
+\textbf{x} = A^{-1} \textbf{b}.
+\end{align*}
+Wir finden also ein eindeutiges $\textbf{x}$, welches diese Gleichung löst.
+Dies wird uns später beim Lösen von linearen Gleichungssystemen helfen.\\
+
+\textbf{Rechenregeln:}
+\begin{itemize}
+\item $(A^{-1})^{-1} = A$
+\item $I^{-1} = I$
+\item $(A\cdot B )^{-1} = B^{-1} \cdot A^{-1}$
+\end{itemize}
+
+Eine berechtigte Frage ist nun, wie wir inverse Matrizen berechnen können.
+Hierfür benötigen wir die elementaren Matrixumformungen.
+Wir werden dieses Verfahren nun für die Matrix
+\begin{align*}
+A = 
+\begin{gmatrix}[p]
+1 & 1\\
+0 & 1
+\end{gmatrix} 
+\end{align*}
+betrachten und es danach allgemein beschreiben.
+Wir erhalten durch 
+\begin{align*}
+\begin{gmatrix}[p]
+A & \BAR & I
+\end{gmatrix}
+=
+\begin{gmatrix}[p]
+1 & 1 & \BAR & 1 & 0 \\
+0 & 1 & \BAR & 0 & 1 
+\rowops
+\add[\cdot (-1)]{1}{0}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 0 & \BAR & 1 & -1 \\
+0 & 1 & \BAR & 0 & 1 
+\rowops
+\end{gmatrix}
+\end{align*}
+die inverse Matrix
+\begin{align*}
+A^{-1} = 
+\begin{pmatrix}
+1 & -1\\
+0 & 1
+\end{pmatrix}
+\end{align*}
+zu $A$.
+Durch Nachrechnen sieht man schnell, dass dies die korrekte inverse Matrix ist.
+Wir sehen also, dass uns elementare Matrixumformungen helfen, die inverse Matrix zu bestimmen, falls diese existiert.\vspace{0.1cm}
+\begin{mybox}{Verfahren zum Bestimmen der inversen Matrix}\index{Verfahren inv. Matrix}
+Sei $A$ eine $n \times n$ Matrix. Falls die inverse Matrix $A^{-1}$ existiert, bestimmen wir diese durch elementare Matrixumformungen nach dem Schema
+\begin{align*}
+\begin{gmatrix}[p]
+A & \BAR & I 
+\end{gmatrix}
+\leadsto
+\dots 
+\leadsto
+\begin{gmatrix}[p]
+I & \BAR & A^{-1}
+\end{gmatrix}.
+\end{align*}
+Das bedeutet, dass wir auf der linken Seite die Matrix $A$ und auf der rechten Seite die Einheitsmatrix $I$ eintragen.
+Dann bringen wir die linke Seite mit elementaren Matrixumformungen auf die Einheitsmatrix $I$.
+\end{mybox}
+
+Eine berechtigte Frage ist nun, wann die inverse Matrix existiert. 
+Dies können wir bereits durch den Rang der Matrix beantworten, denn es gilt
+\begin{align*}
+A \ \text{invertierbar/regulär} \Leftrightarrow \mathrm{rg}(A) = n = \text{ Anzahl linear unabhängiger Zeilen/Spalten}.
+\end{align*}
+Aus dem Verfahren können wir herauslesen, dass invertierbare Matrizen durch elementare Zeilenumformungen auf die Einheitsmatrix gebracht werden können.
+D.h. $A \leadsto \dots \leadsto I$.\\
+Insbesondere gibt es dann den Zwischenschritt:
+\begin{align*}
+A \leadsto \dots \leadsto
+\begin{pmatrix}	[cccc]
+1 &  \ast  & \ldots & \ast \\
+0  &  1 & \ldots & \ast \\
+\vdots & \vdots & \ddots & \vdots \\
+0  &   0       &\ldots & 1
+\end{pmatrix}.
+\end{align*}
+Es gibt also keine Nullzeile. 
+Damit sind die Spaltenvektoren linear unabhängig und es gilt $\mathrm{rg}(A) = n$.\\
+Im Abschnitt über Determinanten werden wir noch das effektivere Kriterium
+\begin{align*}
+A \ \text{invertierbar/regulär} \Leftrightarrow \det(A) \neq 0
+\end{align*}
+kennenlernen.\\
+
+\begin{mybox}{Kriterium für Invertierbatkeit/Regularität}\index{Krit. für Invert.}
+Es gilt
+\begin{align*}
+A \ \text{invertierbar/regulär} 
+\Leftrightarrow
+\mathrm{rg}(A) = n
+\Leftrightarrow
+\det(A) \neq 0
+\end{align*}
+\end{mybox}
+
+Bevor man die inverse Matrix berechnet, sollte man immer erst überprüfen, ob diese überhaupt existiert.
+
+\newpage
+\subsection{Formales Rechnen mit Matrizen}
+\index{Matrix!formales Rechnen}
+Wir haben in den letzten Abschnitten folgende Rechnengesetze für Matrizen kennengelernt:
+\begin{itemize}
+\item
+$(A^\top)^\top =A$
+\item
+$(A + B)^\top = A^\top + B^\top$
+\item
+$(A^{-1})^\top = (A^\top)^{-1}$
+\item
+$(A \cdot B)^\top = B^\top \cdot A^\top$
+\item $(A^{-1})^{-1} = A$
+\item $I^{-1} = I$
+\item $(A\cdot B )^{-1} = B^{-1} \cdot A^{-1}$
+\end{itemize}
+Dabei nennen wir eine Matrix $A$ symmetrisch, falls $A = A^\top$ gilt.
+\ \\
+\ \\
+\subsubsection*{Anwendungsbeispiel A}
+Die quadratischen Matrizen $A$, $B$ seien regulär. $B$ ist auch symmetrisch.
+Zeigen Sie , dass gilt
+\begin{align*}
+B^{-1} ( A^\top B)^\top (BA)^\top B^{-1} = A A^\top
+\end{align*}
+Da $ B $ symmetrisch ist, gilt $ B = B^\top $.\\
+Diese Aufgabe lösen wir durch Umformen der linken Seite:
+\begin{align*}
+B^{-1} ( A^\top B)^\top (BA)^\top B^{-1}
+=
+B^{-1}  B^\top A A^\top B^\top B^{-1}
+=
+B^{-1}  B A A^\top B B^{-1}
+=
+I \cdot A A^\top \cdot I
+=
+A A^\top
+\end{align*}
+\ \\
+\subsubsection*{Anwendungsbeispiel B}
+Die quadratischen Matrizen $A$, $B$ seien regulär. $A$ ist auch symmetrisch.
+Zeigen Sie , dass gilt
+\begin{align*}
+(BB^\top)(AB^{-1})^\top(BA)^{-1}(BA^\top )= BA
+\end{align*}
+Diese Aufgabe lösen wir durch Umformen der linken Seite:
+\begin{align*}
+(BB^\top)(AB^{-1})^\top(BA)^{-1}(BA^\top )
+=
+(BB^\top)(B^{-1})^\top A^\top A^{-1} B^{-1} (BA^\top )
+=
+BB^\top(B^ \top)^{-1} A A^{-1} B^{-1} BA^\top 
+=
+B I I I A^\top =
+B A^\top = B A
+\end{align*}
+\newpage
+\subsection{Determinanten}
+Mit Determinanten ist es möglich, quadratischen Matrizen eine Zahl zuzuordnen.
+Damit erhalten wir die Möglichkeit, Aussagen über bestimmte Matrixeigenschaften zu treffen.
+\begin{mybox}{Untermatrix}
+\index{Untermatrix}
+Sei $A$ eine $n \times n$ Matrix.\\
+Dann bezeichnen wir mit $A_{ij}$ die $(n-1) \times (n-1)$ Untermatrix von $A$, bei 
+der die $i$-te Zeile und $j$-te Spalte gestrichen werden.
+\end{mybox}
+Dies lässt sich am besten an einem Beispiel veranschaulichen.\\ \\
+\textbf{Beispiel:}
+\begin{align*}
+A=
+\begin{pmatrix}
+1 & 2& 4 &7 \\
+3 & 5 & 1 & 3\\
+4 & 6 & 7 & 2\\
+7 & 1 & 2 & 6
+\end{pmatrix}
+\Rightarrow
+A_{11}
+&=
+\begin{pmatrix}
+5 & 1 & 3\\
+6 & 7 & 2 \\
+1 & 2 & 6
+\end{pmatrix}, \quad
+A_{21}
+=
+\begin{pmatrix}
+2 & 4 & 7 \\
+6 & 7 & 2 \\
+1 & 2 & 6
+\end{pmatrix}\\
+A_{34}
+&=
+\begin{pmatrix}
+1 & 2 & 4 \\
+3 & 5 & 1 \\
+7 & 1 & 2
+\end{pmatrix}, \quad
+A_{44}
+=
+\begin{pmatrix}
+1 & 2 & 4 \\
+3 & 5 & 1 \\
+4 & 6 & 7
+\end{pmatrix}
+\end{align*}
+$A_{11}$ bedeutet, dass die erste Zeile und erste Spalte gestrichen wird.\\
+$A_{21}$ bedeutet, dass die zweite Zeile und erste Spalte gestrichen wird.\\
+$A_{34}$ bedeutet, dass die dritte Zeile und vierte Spalte gestrichen wird.\\
+$A_{44}$ bedeutet, dass die vierte Zeile und vierte Spalte gestrichen wird.\\
+\begin{mybox}{Elementare Formeln}
+\index{Determinante!elementar}
+\begin{itemize}
+\item
+Sei $A$ eine $2 \times 2$ Matrix.
+Dann ist die Determinante von $A$ durch
+\begin{align*}
+\det(A)= \det 
+\begin{pmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{pmatrix} 
+= 
+\begin{vmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{vmatrix}
+=
+a_{11} \cdot a_{22} - a_{21} \cdot a_{12}
+\end{align*}
+definiert.
+\item
+Sei $A$ eine $3 \times 3$ Matrix.\index{Regel von Sarrus}
+Dann ist die \textit{Regel von Sarrus} durch
+\begin{align*}
+\det A
+&=
+\det
+\begin{pmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}
+= 
+\begin{vmatrix}
+a_{11} & a_{12} & a_{13}\\
+a_{21} & a_{22} & a_{23}\\
+a_{31} & a_{32} & a_{33}
+\end{vmatrix}\\
+&=
+a_{11}a_{22}a_{33}
++
+a_{12}a_{23}a_{31}
++
+a_{13}a_{21}a_{32}
+-
+a_{31}a_{22}a_{13}
+-
+a_{32}a_{23}a_{11}
+-
+a_{33}a_{21}a_{12}
+\end{align*}
+gegeben.
+Mit dem Schema
+\begin{center}
+\begin{tikzpicture}
+     \matrix [%
+       matrix of math nodes,
+       column sep=1em,
+       row sep=1em
+     ] (sarrus) {%
+       a_{11} & a_{12} & a_{13} & a_{11} & a_{12} \\
+       a_{21} & a_{22} & a_{23} & a_{21} & a_{22} \\
+       a_{31} & a_{32} & a_{33} & a_{31} & a_{32} \\
+     }; 
+ 
+     \path ($(sarrus-1-3.north east)+(0.5em,0)$) edge[dotted] ($(sarrus-3-3.south east)+(0.5em,0)$)
+           (sarrus-1-1)                          edge         (sarrus-2-2)
+           (sarrus-2-2)                          edge         (sarrus-3-3)
+           (sarrus-1-2)                          edge         (sarrus-2-3)
+           (sarrus-2-3)                          edge         (sarrus-3-4)
+           (sarrus-1-3)                          edge         (sarrus-2-4)
+           (sarrus-2-4)                          edge         (sarrus-3-5)
+           (sarrus-3-1)                          edge[dashed] (sarrus-2-2)
+           (sarrus-2-2)                          edge[dashed] (sarrus-1-3)
+           (sarrus-3-2)                          edge[dashed] (sarrus-2-3)
+           (sarrus-2-3)                          edge[dashed] (sarrus-1-4)
+           (sarrus-3-3)                          edge[dashed] (sarrus-2-4)
+           (sarrus-2-4)                          edge[dashed] (sarrus-1-5);
+ 
+     \foreach \c in {1,2,3} {\node[anchor=south] at (sarrus-1-\c.north) {$+$};};
+     \foreach \c in {1,2,3} {\node[anchor=north] at (sarrus-3-\c.south) {$-$};};
+\end{tikzpicture}
+\end{center}
+müssen wir diese Regel nicht auswendig wissen.   
+\end{itemize}
+\end{mybox}
+
+Da wir auch Determinaten für $4 \times 4$ Matrizen berechnen wollen, benötigen wir noch einen allgemeineren Zugang.
+Wir führen diesen zurück auf die elementaren Formeln.\\
+
+\begin{mybox}{Allgemeine Definition}\index{Determinante}
+Sei $A$ eine quadratische $n \times n$ Matrix.
+Dann ist die \textit{Determinante} durch
+\begin{align*}
+\det(A) = |A| 
+&:= 
+\sum \limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot \det(A_{ij}) \ \text{(Entwicklung nach $j$-ter Spalte)}\\
+&=
+\sum \limits_{j=1}^n (-1)^{i+j} \cdot a_{ij} \cdot \det(A_{ij}) \ \text{(Entwicklung nach $i$-ter Spalte)}
+\end{align*}
+definiert. 
+\end{mybox}
+Wir wollen dies nun auf $4 \times 4$ Matrizen anwenden.
+Das Schema 
+\begin{align*}
+\begin{pmatrix}
++ & - & + & -\\
+- & + & - & +\\
++ & - & + & -\\
+- & + & - & +
+\end{pmatrix}
+\end{align*}
+hilft uns bei der Entwicklung nach Spalten oder Zeilen.
+Gegeben sei
+\begin{align*}
+A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} & a_{14}\\
+a_{21} & a_{22} & a_{23} & a_{24}\\
+a_{31} & a_{32} & a_{33} & a_{34}\\
+a_{41} & a_{42} & a_{43} & a_{44}
+\end{pmatrix}.
+\end{align*}
+Wir berechnen die Determinante von $A$, indem wir nach der ersten Spalte entwickeln.
+Durch 
+\begin{align*}
+\det(A) = a_{11} \cdot \det (A_{11}) - a_{21} \cdot \det(A_{21}) + a_{31} \cdot \det(A_{31}) - a_{41} \cdot \det(A_{41})
+\end{align*}
+erhalten wir eine Formel für $4 \times 4$ Matrizen. Die Vorzeichenverteilung in unserer Formel stimmt mit dem obigen Vorzeichenschema überein.
+Wir wiederholen den Vorgang, indem wir nach der zweiten Spalte entwickeln:
+\begin{align*}
+\det(A) =
+-a_{12} \cdot \det(A_{12}) + a_{22} \cdot \det(A_{22}) - a_{32} \cdot \det(A_{32}) + a_{42} \cdot \det(A_{42})
+\end{align*}
+Die Untermatrizen sind alles $3 \times 3$ Matrizen.
+Darauf können wir die Regel von Sarrus anwenden. Dies ist jedoch sehr aufwendig.
+Deswegen werden wir nach einer Möglichkeit suchen, die Regel von Sarrus nur einmal anzuwenden.\\
+
+\textbf{Rechenregeln für Determinanten:}\index{Determinante!Rechenregeln}
+\begin{itemize}
+\item $\det(A \cdot B) = \det(A) \cdot \det(B)$.
+\item $\det(A) = \det(A^\top)$.\\
+Aus diesem Grund ist irrelevant, ob wir nach Zeilen oder Spalten entwickeln.
+\item $\det(A^{-1}) = \frac{1}{\det(A)}$.
+\item Die Addition eines Vielfaches($\neq 0$) einer Zeile auf eine andere Zeile ändert den Wert der Determinante nicht.
+Wir betrachten
+\begin{align*}
+A =
+\begin{pmatrix}
+1 & 1 & 3\\
+1 & 2 & 4\\
+1 & 3 & 2
+\end{pmatrix}.
+\end{align*}
+Auf diese Matrix können wir die Regel von Sarrus anwenden 
+oder das $(-1)$-fache der ersten Zeile auf die zweite und dritte Zeile addieren.
+Dann gilt:
+\begin{align*}
+\det A
+=
+\begin{vmatrix}
+1 & 1 & 3 \\
+1 & 2 & 4\\
+1 & 3 & 2
+\end{vmatrix}
+=
+\begin{vmatrix}
+1 & 1 & 3 \\
+0 & 1 & 1\\
+0 & 2 & -1
+\end{vmatrix}
+=
+1 \cdot \det(A_{11}) - 0 \cdot \det(A_{21}) + 0 \cdot \det(A_{31})
+=
+\begin{vmatrix}
+1 & 1 \\
+2 & -1
+\end{vmatrix}
+= 1 \cdot (-1) - 2 = 3
+\end{align*}
+Wir haben das Problem auf das Berechnen einer Determinante einer $2 \times 2$ Matrix reduziert.
+Nun betrachten wir
+\begin{align*}
+B =
+\begin{pmatrix}
+1 & \ast  & \ast & \ast\\
+\ast &\ast &  \ast  & \ast\\
+\ast &\ast &  \ast  & \ast\\
+\ast &\ast &  \ast  & \ast
+\end{pmatrix}.
+\end{align*} 
+Hierfür gilt
+\begin{align*}
+\det(B) 
+=
+\begin{vmatrix}
+1 & \ast  & \ast & \ast\\
+\ast &\ast &  \ast  & \ast\\
+\ast &\ast &  \ast  & \ast\\
+\ast &\ast &  \ast  & \ast
+\end{vmatrix}
+= \begin{vmatrix}
+1 & \ast  & \ast & \ast\\
+0&\ast &  \ast  & \ast\\
+0 &\ast &  \ast  & \ast\\
+0 &\ast &  \ast  & \ast
+\end{vmatrix},
+\end{align*}
+wodurch wir die Regel von Sarrus nur einmal anwenden müssen.
+Es kann auch sein, dass wir Glück haben und wir $\det(B_{11})$ ähnlich wie $\det(A)$ berechnen können.
+\end{itemize}
+
+\begin{mybox}{Zusammenhang Determinante-Invertierbarkeit-Rang}
+Sei $A$ eine $n\times n$ Matrix.
+Dann gilt:
+\begin{align*}
+\det(A) \neq 0 
+&\Leftrightarrow
+\mathrm{rg}(A) = n
+\Leftrightarrow
+\ \text{$A$ ist invertierbar bzw. regulär}\\
+\det(A) = 0 
+&\Leftrightarrow
+\mathrm{rg}(A) < n
+\Leftrightarrow
+\ \text{$A$ ist nicht invertierbar bzw. singulär}
+\end{align*}
+\end{mybox}
+\newpage
+\subsubsection*{Anwendungsbeispiel A}
+
+Das System von $3$-dimensionalen Vektoren
+$\lbrace \textbf{u}_1, \textbf{u}_2, \textbf{u}_3 \rbrace$
+ist linear abhängig.
+Sei $A = [\textbf{u}_1, \textbf{u}_2, \textbf{u}_3]$ die Matrix mit Spaltenvektoren $\textbf{u}_1$, $\textbf{u}_2$ und $\textbf{u}_3$. 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$A^n$ ist regulär für alle $n \in \mathbb{N}$.
+\item
+$A^n$ ist singulär für alle $n \in \mathbb{N}$.
+\item
+$A^n$ ist regulär für $n$ ungerade und singulär für $n$ gerade.
+\item
+$A^n$ ist singulär für $n$ ungerade und regulär für $n$ gerade.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, ob $A$ regulär oder singulär ist und löse damit die Aufgabe.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, ob $A$ regulär oder singulär ist und löse damit die Aufgabe}\\
+Eine quadratische Matrix ist genau dann regulär, wenn die Spalten linear unabhängig sind.
+Da die Spalten von $A$ linear abhängig sind, ist $A$ singulär.
+Damit gilt auch $\det(A) = 0$.
+Aus dem Zusammenhang
+\begin{align*}
+\det\left(A^n\right) = \det(A)^n = 0^n = 0
+\end{align*}
+erhalten wir die Singularität von $A^n$ für alle $n \in \mathbb{N}$.
+\\
+\ \\
+Damit ist Antwort (b) richtig.
+\newpage
+\subsubsection*{Anwendungsbeispiel B}
+Gegeben sei die $3 \times 3 $ Matrix
+\begin{align*}
+A
+= 
+\begin{pmatrix}
+1 & 1 & 0\\
+1 & 0 & 1 \\
+1 & 1 & 1
+\end{pmatrix}.
+\end{align*}
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+0 & -1 & 1\\
+-1 & 0 & 1
+\end{pmatrix}$.
+\item
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+1 & -1 & 1\\
+-1 & 0 & 1
+\end{pmatrix}$.
+\item
+$A^{-1}
+= 
+\begin{pmatrix}
+1 & 1 & -1 \\
+0 & -1 & 1\\
+-1 & 1 & 1
+\end{pmatrix}$.
+\item
+$A$ ist singulär.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, welche Antworten falsch sind und gebe die richtige Antwort an.
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, welche Antworten falsch sind und gebe die richtige Antwort an}\\
+Zunächst gilt 
+\begin{align*}
+\det(A) 
+&= 
+\begin{gmatrix}[v]
+1 & 1 & 0\\
+1 & 0 & 1 \\
+1 & 1 & 1
+\rowops
+\add[\cdot (-1)]{0}{1}
+\add[\cdot (-1)]{0}{2}
+\end{gmatrix}
+=
+\begin{gmatrix}[v]
+1 & 1 & 0\\
+0 & -1 & 1 \\
+0 & 0 & 1
+\end{gmatrix}\\
+&=
+1 \cdot
+\begin{gmatrix}[v]
+ -1 & 1 \\
+ 0 & 1
+\end{gmatrix} 
+- 0\cdot
+\begin{gmatrix}[v]
+ 1 & 0 \\
+ 0 & 1
+\end{gmatrix}
++
+0 \cdot
+\begin{gmatrix}[v]
+ 1 & 0 \\
+ -1 & 1
+\end{gmatrix}
+= 1 \cdot (-1) \cdot 1
+= -1 \neq 0,
+\end{align*}
+womit $A$ regulär ist.
+Damit ist Antwort (d) falsch.
+Wir untersuchen nun nacheinander die Antworten (b) und (c). Uns ist bekannt, dass der Zusammenhang
+\begin{align*}
+A \cdot A^{-1} = 
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\end{align*}
+gelten muss. Wir überprüfen bei den Matrizen von (b) und (c), ob unpassende Einträge vorliegen.
+Für Antwort (b) betrachten wir die erste Zeile von $A$ mal die erste Spalte von $A^{-1}$.
+Wir erhalten
+\begin{align*}
+( 1 , 1 , 0 ) \cdot 
+\begin{pmatrix}
+1\\
+1\\
+-1
+\end{pmatrix}
+= 
+1 \cdot 1 + 1 \cdot 1 + 0 \cdot -1 
+= 2
+\end{align*}
+für den ersten Diagonaleintrag.
+Somit ist Antwort (b) falsch.\\ \\
+Für Antwort (c) wählen wir  die dritte Zeile von $A$ mal die zweite Spalte $A^{-1}$.
+Dies ergibt den zweiten Eintrag der dritten Zeile von $A \cdot A^{-1}$. Dieser sollte gleich $0$ sein.
+Wegen
+\begin{align*}
+(1,1,1) \cdot
+\begin{pmatrix}
+1\\
+-1 \\
+1
+\end{pmatrix}
+= 1 \cdot 1 + 1 \cdot (-1) + 1 \cdot 1
+= 1 \neq 0
+\end{align*}
+ist auch Antwort (c) falsch.\\
+\\
+Es gibt noch zwei weitere Lösungsmöglichkeiten.
+Die Erste wäre (a)-(c) nachzurechnen. 
+Dies ist aber zeitaufwendig und fehleranfällig.
+Die Zweite wäre das Gauß-Verfahren durchzurechnen.
+Die angegebene Methode lässt sich jedoch bis auf die Determinante ohne schriftliche Rechnungen lösen, was zeitsparend ist.
+\\
+\ \\
+Damit ist Antwort (a) richtig.
+\newpage
+\subsubsection*{Anwendungsbeispiel C}
+Gegeben sei die Matrix
+\begin{equation*}
+A = 
+\begin{pmatrix}
+1 & t & 1 \\
+2 & t & 0 \\
+-1 & t & 2t
+\end{pmatrix},
+\end{equation*}
+wobei $t \in \mathbb{R}$.
+\\
+\\
+Für welche Werte von $t$ ist der Rang von $A$ gleich $3$?
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\renewcommand{\labelenumi}{\theenumi.}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Gebe eine Bedingung an, sodass eine quadratische Matrix den Rang $3$ besitzt.
+\item Bestimme die Werte von $t$.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Gebe eine Bedingung an, sodass eine quadratische Matrix den Rang $3$ besitzt}\\
+Für eine quadratische Matrix kennen wir den Zusammenhang:
+\begin{align*}
+\text{rg}(A) = 3 
+\Leftrightarrow
+A \ \text{ist regulär}
+\Leftrightarrow
+\det(A) \neq 0
+\end{align*}
+Wir müssen also nur die Determinate auf Nullstellen überprüfen.\\
+\\
+\underline{2. Bestimme die Werte von $t$}\\
+Zunächst berechnen wir die Determinate von $A$.
+Wir erhalten 
+\begin{equation*}
+\begin{split}
+\det(A)
+&= 
+\left| 
+\begin{pmatrix}
+1 & t & 1 \\
+2 & t & 0 \\
+-1 & t & 2t
+\end{pmatrix}
+\right|\\
+&=
+1 \cdot t \cdot 2t +t \cdot 0 \cdot (-1) + 1 \cdot 2 \cdot t 
+- (-1) \cdot t \cdot 1 - t \cdot 0  \cdot 1 - 2t \cdot 2 \cdot t\\
+&=
+2 t^2 + 2t + t - 4 t^2 
+= -2 t^2 +3 t = -t ( 2 t - 3)
+\end{split}
+\end{equation*}
+durch die Regel von Sarrus (Sauron).
+Weiter gilt
+\begin{equation*}
+\det(A) = 0 
+\Leftrightarrow
+-t ( 2 t - 3) = 0 
+\Leftrightarrow
+t_1 = 0, \quad t_2 = \frac{3}{2}
+\end{equation*}
+für die Nullstellen der Determinante.
+Wir wissen nun, dass 
+\begin{align*}
+\det(A) \neq 0 
+\Leftrightarrow
+\text{rg}(A) = 3 
+\Leftrightarrow
+t \in \mathbb{R} \setminus \left\lbrace 0, \frac{3}{2} \right\rbrace
+\end{align*}
+gilt.\\
+\\
+Die Matrix $A$ besitzt den Rang $3$ für alle $t \in \mathbb{R} \setminus \left\lbrace 0, \frac{3}{2} \right\rbrace$.
+\newpage
+\subsubsection*{Anwendungsbeispiel D}
+Die folgende Tabelle beschreibt die jährlichen Payoffs zweier Wertpapiere zu identischem Ausgangspreis,
+abhängig von der jeweiligen konjunkturellen Lage:
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\hline 
+Konjunktur & Aktie 1 & Aktie 2 \\ 
+\hline 
+Expansion & 1.5 & 3 \\ 
+wirtschaftliche Stabilität & 1.5 & 2 \\ 
+Rezession & 1.5 & 0.5 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+Ermitteln Sie, ob das folgende Auszahlungsschema für den Investor möglich ist,
+wenn er nur in die Aktien 1 und 2 investiert:
+\begin{table}[H]
+\centering
+\begin{tabular}{lc}
+\hline 
+Konjunktur & Payoff des Investors \\ 
+\hline 
+Expansion & 1'500 \\ 
+wirtschaftliche Stabilität & 2'000 \\ 
+Rezession & 1'000 \\ 
+\hline 
+\end{tabular} 
+\end{table}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi.}
+\item Gebe eine Bedingung an, sodass der Payoff des Investors realisiert werden kann.
+\item Überprüfe diese Bedingung.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Gebe eine Bedingung an, sodass der Payoff des Investors realisiert werden kann}\\
+Wir können den Payoff des Investors realisieren, falls wir $\lambda_1, \lambda_2$ finden, so dass
+\begin{align*}
+\begin{pmatrix}
+1500\\
+2000\\
+1000\\
+\end{pmatrix}
+= \lambda_1 
+\begin{pmatrix}
+1.5\\
+1.5\\
+1.5
+\end{pmatrix}
++ \lambda_2
+\begin{pmatrix}
+3\\
+2\\ 
+0.5
+\end{pmatrix}
+\end{align*}
+gilt.
+Die Payoff-Vektoren der Wertpapiere sind linear unabhängig.
+Damit finden wir unsere $\lambda_1, \lambda_2$ nur, falls
+\begin{align*}
+\left\lbrace 
+\begin{pmatrix}
+1500\\
+2000\\
+1000\\
+\end{pmatrix},
+\begin{pmatrix}
+1.5\\
+1.5\\
+1.5
+\end{pmatrix},
+\begin{pmatrix}
+3\\
+2\\ 
+0.5
+\end{pmatrix}
+\right\rbrace
+\end{align*}
+linear abhängig ist.
+Um uns die Rechnung zu vereinfachen, können wir die Vektoren mit geschickten Vielfachen austauschen.
+Durch
+\begin{align*}
+\left\lbrace 
+\begin{pmatrix}
+3\\
+4\\
+2\\
+\end{pmatrix},
+\begin{pmatrix}
+1\\
+1\\
+1
+\end{pmatrix},
+\begin{pmatrix}
+6\\
+4\\ 
+1
+\end{pmatrix}
+\right\rbrace
+\end{align*}
+erhalten wir ein einfacheres System.
+Wir wollen noch exemplarisch die Rechnung für den ersten Vektor durchführen:
+\begin{align*}
+\frac{1}{500}
+\begin{pmatrix}
+1500\\
+2000\\
+1000\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+3\\
+4\\
+2\\
+\end{pmatrix}
+\end{align*}
+Wenn die lineare Abhängigkeit nachgewiesen werden kann, wissen wir, dass
+\begin{align*}
+A
+= 
+\begin{pmatrix}
+3 & 1 & 6 \\
+4 & 1 & 4 \\
+2 & 1 & 1
+\end{pmatrix}
+\end{align*}
+singulär ist.\\
+\\
+\underline{2. Überprüfe diese Bedingung}\\
+Die Matrix $A$ ist singulär genau dann, wenn
+\begin{align*}
+\det(A) = 0
+\end{align*}
+gilt.
+Hier berechnen wir die Determinante
+\begin{equation*}
+\begin{split}
+\det(A)
+=
+\left|
+\begin{pmatrix}
+3 & 1 & 6 \\
+4 & 1 & 4 \\
+2 & 1 & 1
+\end{pmatrix}
+\right|
+=
+3 + 8 + 24 - 12 - 12 -4
+= 
+7
+\end{split}
+\end{equation*}
+mit der Regel von Sarrus.
+Damit ist die Matrix $A$ regulär und das System
+\begin{align*}
+\left\lbrace 
+\begin{pmatrix}
+1500\\
+2000\\
+1000\\
+\end{pmatrix},
+\begin{pmatrix}
+1.5\\
+1.5\\
+1.5
+\end{pmatrix},
+\begin{pmatrix}
+3\\
+2\\ 
+0.5
+\end{pmatrix}
+\right\rbrace
+\end{align*}
+linear unabhängig.
+Eine weitere Möglichkeit ist es, elementare Zeilenumformungen auf die Matrix $A$ anzuwenden.
+Die Matrix $A$ ist regulär, wenn wir eine Zeilenstufenform erreichen.
+Wir betrachten nun:
+\begin{align*}
+\begin{gmatrix}[p]
+3 & 1 & 6 \\
+4 & 1 & 4 \\
+2 & 1 & 1
+\rowops
+\add[-1]{0}{1}
+\add[-1]{0}{2}
+\end{gmatrix}
+\leadsto
+&\begin{gmatrix}[p]
+3 & 1 & 6 \\
+1 & 0 & -2 \\
+-1 & 0 & -5
+\rowops
+\add[-3]{1}{0}
+\add[\cdot 1]{1}{2}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+0 & 1 & 12 \\
+1 & 0 & -2 \\
+0 & 0 & -7
+\rowops
+\mult{2}{\cdot ( -\frac{1}{7} )}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+0 & 1 & 12 \\
+1 & 0 & -2 \\
+0 & 0 & 1
+\rowops
+\add[\cdot 2]{2}{1}
+\add[\cdot (12)]{2}{0}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\rowops
+\swap{0}{1}
+\end{gmatrix}\\
+\leadsto
+&\begin{gmatrix}[p]
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{gmatrix}\\
+\end{align*}
+Somit sehen wir auch hieran, dass die Matrix nicht singulär ist.
+\\
+\\
+Das Auszahlungsschema des Investors lässt sich also nicht verwirklichen.

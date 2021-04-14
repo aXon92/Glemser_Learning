@@ -1,0 +1,609 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 2 (33 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Unter der Nebenbedingung $ \varphi(x,y) = \frac{(x-4)^2}{16} + \frac{(y-3)^2}{49} -1 = 0 $ hat die Funktion $ f(x,y) = 2 x + 1  $ ein Minimum in welchem Punkt?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ P= (0,3) $.
+	\item $ P= (4,10) $.
+	\item $ P= (-5,3) $.
+	\item $ P= (4,-4) $.
+	\item Keiner der oben gegebenen Punkte ist ein Minimum der Funktion $ f $ unter der Nebenbedingung $ \varphi(x,y)= 0 $.
+\end{enumerate}\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, welche Punkte die Nebenbedingung erfüllen.
+\item Nutze die Funktion (Darstellung einer Ellipse).
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, welche Punkte die Nebenbedingung erfüllen}\\
+Wir kennzeichnen die Punkte durch $ P_a, P_b , P_c$ und $ P_d $.
+Durch Einsetzen in die Nebenbedingung erhalten wir:
+\begin{align*}
+	\varphi(P_a) 
+	&= 
+	\frac{(0-4)^2}{16} + \frac{(3-3)^2}{49} -1
+	=
+	\frac{16}{16} + 0 - 1 = 0\\
+	\varphi(P_b)
+	&=
+	\frac{(4-4)^2}{16} + \frac{(10-3)^2}{49} -1
+	=
+	0 + \frac{49}{49} -1 = 0\\
+	\varphi(P_c)
+	&=
+	\frac{(-5-4)^2}{16} + \frac{(3-3)^2}{49} -1
+	=
+	\frac{81}{16} - 1 \neq 0\\
+	\varphi(P_d)
+	&=
+	\frac{(4-4)^2}{16} + \frac{(-4-3)^2}{49} -1
+	=
+	\frac{49}{49 } -1 = 0.
+\end{align*}
+Damit erfüllen alle Punkte außer $ P_c $ die Nebenbedingung.\\
+\\
+\underline{2. Nutze die Funktion (Darstellung einer Ellipse)}\\
+Die Funktion $ f(x,y) = 2x + 1 $ ist unabhängig von der $ y $- Koordinate und linear in der $ x $-Koordinate.
+Außerdem ist $ 2x + 1$ streng monoton wachsend.
+Die Nebenbedingung
+\begin{align*}
+	\frac{(x-4)^2}{16} + \frac{(y-3)^2}{49} -1 = 0 
+	\ \Leftrightarrow \
+	\frac{(x-4)^2}{16} + \frac{(y-3)^2}{49} = 1
+\end{align*}
+beschreibt eine Ellipse mit dem Mittelpunkt $ (4,3) $. 
+Den kleinsten Wert in der $ x $-Koordinate hat diese gerade in dem Punkt $ P_a = (0,3) $.\\
+\\
+Damit ist die Antwort (a) korrekt. 
+
+
+\newpage
+
+\subsection*{\frage{2}{3}}
+Die Funktion $ f $ hat ein lokales Minimum im Punkt $ (x_0,y_0) $.
+Sei $ g $ die Funktion definiert als $ g(x,y) = e^{-f(-x,-y)} $ mit Definitionsgebiet $ D_g = D_f $.\\
+Welche der folgenden Aussagen ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ g $ hat ein lokales Maximum im Punkt $ (-x_0,-y_0) $.
+	\item $ g $ hat ein lokales Minimum im Punkt $ (-x_0,-y_0) $.
+	\item $ g $ hat ein lokales Maximum im Punkt $ (x_0,y_0) $.
+	\item $ g $ hat ein lokales Minimum im Punkt $ (x_0,y_0) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Löse die Aufgabe anschaulich.
+	\end{enumerate}
+\end{mdframed}
+\underline{1. Löse die Aufgabe anschaulich}\\
+Uns ist bekannt, dass $ f $ ein Minimum an der Stelle $ (x_0,y_0) $ besitzt.
+Damit liegt für $ h_1(x,y) := f(-x,-y)$ ein Minimum an der Stelle $ (-x_0,-y_0) $ vor.
+Wenn wir noch ein negatives Vorzeichen vorschalten ist $ (-x_0,-y_0) $ ein lokales Maximum der Funktion $ h_2(x,y) := -f(-x,-y) $.
+Da die Exponentialfunktion streng monoton wachsend ist, bleibt die lokale Maximumseigenschaft in $ (-x_0,-y_0) $ für $ g $ erhalten.\\
+\\
+Damit ist die Antwort (a) korrekt.\\
+\\
+\textit{Alternativer Lösungsweg:}\\
+Da $ f $ ein lokales Minimum an der Stelle $ (x_0,y_0) $ besitzt, ist die notwendige Bedingung 
+\begin{align*}
+	f_x(x_0,y_0) =0\\
+	f_y(x_0,y_0) =0
+\end{align*}
+erfüllt. Für $ g $ erhalten wir mit der Kettenregel die partiellen Ableitungen:
+\begin{align*}
+	g_x(x,y) &= (-1) (-1) f_x(-x,-y) e^{-f(-x,-y)}
+	=
+	f_x(-x,-y) e^{-f(-x,-y)}\\
+	g_y(x,y) &=
+	f_y(-x,-y) e^{-f(-x,-y)}.
+\end{align*}
+Also können wir die Antworten (c) und (d) auschließen.
+Für diese müssten auch $ f_x(-x_0,-y_0) = f_x(-x_0,-y_0) = 0 $ gelten. 
+Wegen des lokalen Minimums ist die hinreichende Bedingung 
+\begin{align*}
+	&f_{xx}(x_0,y_0) >0\\
+	&f_{yy}(x_0,y_0) > 0\\
+	&f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - (f_{xy}(x_0,y_0))^2 >0
+\end{align*}
+erfüllt. Die zweifachen partiellen Ableitungen von $ g $ sind gegeben durch:
+\begin{align*}
+	g_{xx}(x,y) 
+	&=
+	-f_{xx}(-x,-y) e^{-f(-x,-y)}
+	+ (f_x(-x,-y) )^2 e^{-f(-x,-y)}\\
+	g_{xx}(x,y) 
+	&=
+	-f_{yy}(-x,-y) e^{-f(-x,-y)}
+	+ (f_y(-x,-y) )^2 e^{-f(-x,-y)}\\
+	g_{xy}(x,y)
+	&=
+	-f_{xy}(-x,-y) e^{-f(-x,-y)} + f_x(-x,-y) f_y(-x,-y) e^{-f(-x,-y)}
+\end{align*}
+Durch Einsetzen von $ (-x_0,-y_0) $ folgt:
+\begin{align*}
+	g_{xx}(-x_0,-y_0) 
+	&=
+	-f_{xx}(x_0,x_0) e^{-f(x_0,x_0)}
+	+ (f_x(x_0,y_0) )^2 e^{-f(x_0,x_0)}
+	= -f_{xx}(x_0,x_0) e^{-f(x_0,x_0)} < 0\\
+	g_{yy}(-x_0,-y_0) 
+	&=
+	-f_{yy}(x_0,x_0) e^{-f(x_0,x_0)}
+	+ (f_y(x_0,y_0) )^2 e^{-f(x_0,x_0)}
+	= -f_{yy}(x_0,x_0) e^{-f(x_0,x_0)} < 0\\
+	g_{xy}(-x_0,-y_0)
+	&=
+	-f_{xy}(x_0,x_0) e^{-f(x_0,x_0)} + f_x(x_0,x_0) f_y(x_0,x_0) e^{-f(x_0,x_0)}
+	=
+	-f_{xy}(x_0,x_0) e^{-f(x_0,x_0)}\\
+	&\Rightarrow
+	g_{xx}(-x_0,-y_0) g_{yy}(-x_0,-y_0) - (g_{xy}(-x_0,-y_0))^2\\
+	&=
+	(-f_{xx}(x_0,x_0)) (-f_{yy}(x_0,x_0)) e^{-2f(x_0,x_0)}
+	-
+	(-f_{xy}(x_0,x_0))^2 e^{-2f(x_0,x_0)}\\
+	&=
+	(f_{xx}(x_0,x_0)f_{yy}(x_0,x_0) - (f_{xy}(x_0,x_0))^2) e^{-2f(x_0,x_0)}
+	> 0
+\end{align*}
+Damit besitzt $ g $ ein lokales Maximum an der Stelle $ (-x_0,-y_0) $.
+\newpage
+\subsection*{\frage{3}{4}}
+Die Reihe $ \sum_{k=1}^\infty \frac{m}{k^4} $, wobei $ m > 0 $, konvergiert gegen $ a(m) \in \mathbb{R} $, wobei $ a(m) $ von dem Parameter $ m $ abhängt.\\
+\\
+Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ a(m) > \frac{4m}{3} $ für alle $ m \geq 1 $.
+	\item 
+	$ a(m) < \frac{4m}{3} $ für alle $ m  $.
+	\item 
+	$ a(m) < m $ für alle $ m  $.
+	\item
+	$ a(m) < \frac{m}{2} $ für alle $ m  $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende das Integralvergleichskriterium.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende das Integralvergleichskriterium}\\
+Das Integralvergleichskriterium besagt:
+\begin{align*}
+	\sum \limits_{k=1}^\infty f(k) \ \textrm{konvergent}
+	\ \Leftrightarrow \
+	\int \limits_1^\infty f(x) \td{x} < \infty.
+\end{align*}
+In unserem Fall gilt $ f (x) = \frac{1}{x^4} $. Wenn $ \sum_{k=1}^\infty f(k) $ konvergiert, gilt die Abschätzung:
+\begin{align*}
+	\sum \limits_{k=2}^\infty f(k) 
+	<
+	\int \limits_1^\infty f(x) \td{x}
+	<
+	\sum \limits_{k=1}^\infty f(k). 
+\end{align*}
+Wir erhalten:
+\begin{align*}
+	a(m)
+	&=
+	\sum \limits_{k=1}^\infty \frac{m}{k^4}
+	=
+	m \sum \limits_{k=1}^\infty \frac{1}{k^4}
+	=
+	m\left(1 + \sum \limits_{k=2}^\infty \frac{1}{k^4} \right)
+	<
+	m \left(1 + \int \limits_1^\infty \frac{1}{x^4} \td{x} \right)
+	=
+	m \left(
+	1 -  \frac{1}{3x^3} \bigg|_1^\infty
+	\right)\\
+	&=
+	m 
+	\left(1  + \frac{1}{3} \right)
+	=
+ 	\frac{4}{3}	m.
+\end{align*}
+Damit ist die Antwort (b) korrekt.
+
+\newpage
+
+\subsection*{\frage{4}{2}}
+Sei $ f $ eine stetige Funktion $ a, x \in D_f $ mit $ a < x $.
+Sei $ g $ definiert als $ g(x) = \int_a^x f(t) dt $.
+Welche der folgenden Aussagen ist wahr?  
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f^\prime(x) = g(x) $.
+	\item
+	$ g^\prime(x) = f(x) - f(a) $.
+	\item
+	$ g \circ f  $ ist eine Stammfunktion von $ f $.
+	\item
+	$ \lim_{\Delta \to 0} \frac{g(x+ \Delta x) - g(x)}{\Delta x} = f(x) $.
+	\item
+	Keine der oben gegebenen Antwortmöglichkeiten ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende den Hauptsatz der Differential -und Integralrechnung(HDI).
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende den Hauptsatz der Differential -und Integralrechnung(HDI)}\\
+%Wir kürzen den Hauptsatz durch HDI ab.
+Nach dem HDI ist $ g(x) = \int_a^x f(t) dt $ eine Stammfunktion von $ f $.
+Damit gilt $ g^\prime(x) = f(x) $ und die Antwortmöglichkeiten (a) , (b) und (c) sind im Allgemeinen falsch.
+Mit der Definition der Ableitung folgt:
+\begin{align*}
+	g^\prime(x) 
+	=
+	\lim\limits_{\Delta \to 0} \frac{g(x+ \Delta x) - g(x)}{\Delta x} 
+	= f(x). 
+\end{align*}
+Damit ist die Antwort (d) korrekt.
+ 
+
+\newpage
+\subsection*{\frage{5}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x) =
+	\begin{cases}
+		\frac{1}{2 x^3} + 2 x c e^{-c x^2}, \ &x \geq 1\\
+		\qquad	\ 0 , \ &x < 1
+	\end{cases}
+\end{align*}
+Dann ist $ f $ eine Dichtefunktion
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	für alle $ c \in \mathbb{R} $.
+	\item 
+	für kein $ c \in \mathbb{R} $.
+	\item 
+	für alle $ c > 0 $.
+	\item 
+	für $ c = \ln(0.75) $.
+	\item
+	für $ c = \ln\left(\frac{4}{3}\right) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Defintion einer Dichtefunktion.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Defintion einer Dichtefunktion}\\
+Eine Funktion $ f : \mathbb{R} \to \mathbb{R} $ heißt Dichtefunktion, falls $ g $ nichtnegativ ($ f(x) \geq 0 $ für alle $ x \in \mathbb{R} $) und 
+\begin{align*}
+	\int \limits_\mathbb{R} f(x) \td{x} = 1
+\end{align*}
+gilt.
+Die erste Eigenschaft ist für das $ f $  aus der Aufgabenstellung erfüllt.
+Wir suchen nun das $ c $, sodass auch die zweite Eigenschaft gilt.
+Für das Integral über $ f $ gilt:
+\begin{align*}
+	\int \limits_\mathbb{R} f(x) \td{x}
+	&=
+	\int \limits_1^\infty f(x) \td{x}
+	=
+	\int \limits_1^\infty \frac{1}{2x^3} + 2x c e^{-cx^2} \td{x}
+	=
+	\int \limits_1^\infty \frac{1}{2x^3} \td{x} 
+	+ 
+	\int \limits_1^\infty 2 c x e^{-cx^2} \td{x}\\
+	&=
+	-\frac{1}{4x^2} \bigg|_1^\infty
+	-
+	e^{-cx^2} \bigg|_1^\infty 
+	=
+	\frac{1}{4} + e^{-c}.
+\end{align*}
+Damit $ f $ eine Dichtefunktion ist, muss gelten:
+\begin{align*}
+	\frac{1}{4} + e^{-c} = 1
+	\ \Leftrightarrow \
+	e^{-c} = \frac{3}{4}
+	\ \Leftrightarrow \
+	-c = \ln \left(\frac{3}{4}\right)
+	\ \Leftrightarrow \
+	c = - \ln \left(\frac{3}{4}\right) = \ln \left(\frac{4}{3}\right).
+\end{align*}
+Für $ c  = \ln \left(\frac{4}{3}\right)$ ist $ f $ also eine Dichtefunktion.\\
+\\
+Damit ist Antwort (e) korrekt.
+ 
+
+\newpage
+
+\subsection*{\frage{6}{3}}
+$ A $ sei eine $ (n \times m )- $dimensionale Matrix, und sei $ B $ eine $ (p \times q)- $dimensionale Matrix.\\
+Wenn die Matrizen $ C = BA $ und $ D = AB $ existieren und es gilt $ C = D $, dann folgt daraus:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ n= m = p = q $.
+	\item 
+	$ n = q $ und $ m= p $ und $ m \neq q $.
+	\item
+	$ m= p $ und $ q = n$ und $ n \neq p $.
+	\item
+	$ n = p $ und $ m= q $ und $ n \neq m $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende den Zusammenhang zwischen Zeilen und Spalten bei einem Matrixprodukt.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende den Zusammenhang zwischen Zeilen und Spalten bei einem Matrixprodukt}\\
+Wir wissen, dass die Matrizen $ C = BA $ und $ D = AB $ existieren.
+Da $ A $ eine $ (n \times m) $-Matrix und $ B $ eine $ (p \times q) $-Matrix ist, erhalten wir:
+\begin{align*}
+	C = BA \ \textrm{existiert} \ 
+	&\Rightarrow 
+	\
+	q = n\\
+	D = AB \ \textrm{existiert} \ 
+	&\Rightarrow 
+	\
+	p = q.
+\end{align*}
+Hierbei ist $ C $ eine $ (p \times m) $-Matrix und $ B  $ eine $(n \times q)$-Matrix.
+Wegen $ C = D $ gilt auch $ n = p $ und $ q = m $.
+Insgesamt folgt dann $ n = m = p = q $.\\
+\\
+Damit ist die Antwort (a) korrekt. 
+
+
+\newpage
+\subsection*{\frage{7}{2}}
+Eine $ (4 \times 5)- $dimensionale Matrix $ A $ hat den Rang $ 3 $.
+$ B $ ist eine $ (8 \times 5)- $dimensionale Matrix, in welcher jede Zeile von $ A $ genau zweimal vorkommt. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}(B) = 1 $.
+	\item
+	$ \mathrm{rg}(B) = 3 $.
+	\item
+	$ \mathrm{rg}(B) = 4 $.
+	\item
+	$ \mathrm{rg}(B) = 5 $.
+	\item
+	$ \mathrm{rg}(B) = 6 $.
+	\item
+	$ \mathrm{rg}(B) = 8 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Definition des Ranges einer Matrix.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definition des Ranges einer Matrix}\\
+Die Matrix $ A $ hat den Rang $ 3 $.
+Damit sind $ 3  $ Zeilen der Matrix $ A $ zueinander unabhängig.
+Also erreichen wir mithilfe elementarer Zeilenumformungen:
+\begin{align*}
+	A
+	\leadsto
+	\begin{pmatrix}
+		1 & \ast & \ast & \ast &\ast \\
+		0 & 1 &  \ast & \ast &\ast\\
+		0 & 0 & 1 & \ast &\ast\\
+		0 & 0 & 0 & 0 &0
+	\end{pmatrix}.
+\end{align*}
+Hierbei sind mit $ \ast $ beliebige Werte gekennzeichnet.
+Nun kommen in $ B $ die Zeilen von $ A $ genau zweimal vor.
+Somit folgt durch elementare Zeilenumformungen:
+\begin{align*}
+	B 
+	\leadsto
+	\begin{pmatrix}
+		A\\
+		A
+	\end{pmatrix}
+	\leadsto
+	\begin{pmatrix}
+		A\\
+		0
+	\end{pmatrix}
+	\leadsto
+	\begin{pmatrix}
+		1 & \ast & \ast & \ast &\ast \\
+		0 & 1 &  \ast & \ast &\ast\\
+		0 & 0 & 1 & \ast &\ast\\
+		0 & 0 & 0 & 0 &0\\
+		0 & 0 & 0 & 0 &0\\
+		0 & 0 & 0 & 0 &0\\
+		0 & 0 & 0 & 0 &0\\
+		0 & 0 & 0 & 0 &0.
+	\end{pmatrix}
+	\ \Rightarrow \
+	\mathrm{rg}(B) = 3.
+\end{align*}
+Wir sortieren $ B $ zuerst so um, dass die Matrix $  A $ untereinander steht.
+Darauffolgend eliminieren wir die Kopie von $ A $ und sehen, dass $ A $ den Rang $ 3 $ hat.\\
+\\
+Also ist die Antwort (b) korrekt.   
+
+
+\newpage
+
+\subsection*{\frage{8}{3}}
+Seien $ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 $, und $ \textbf{b} $ $ m $-dimensionale Vektoren und $ m \geq 2 $.
+Der Vektor $ \textbf{b} $ ist eine Linearkombination der Vektoren $  \textbf{a}_1, \textbf{a}_2  $ und $ \textbf{a}_3 $ genau dann, wenn gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = 3 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) =m $.
+	
+	\item
+	$ \det\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3] \right) = 0 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3]  \right) = 3 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3] \right) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Lösbarkeit eines linearen Gleichungssystems.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Lösbarkeit eines linearen Gleichungssystems}\\
+Wir fassen die Vektoren $ \textbf{a}_1 $, $ \textbf{a}_2 $ und $ \textbf{a}_3 $ in der Matrix $ A $ zusammen. 
+Das heißt : $ A = [\textbf{a}_1,\textbf{a}_2,\textbf{a}_3] $.
+Der Vektor $ \textbf{b} $ ist eine Linearkombination der drei Vektoren, falls das LGS
+\begin{align*}
+	A \textbf{x} = 
+	A \begin{pmatrix}
+		x_1\\ x_2 \\ x_3
+	\end{pmatrix}
+	= \textbf{b}
+\end{align*}
+lösbar ist.
+Diese Lösbarkeit ist genau dann erfüllt, wenn 
+\begin{align*}
+	\mathrm{rg}
+	[A, \textbf{b}]
+	=
+	\mathrm{rg}(A)
+\end{align*}
+gilt. Dies entspricht der Antwort (e).\\
+\\
+Damit ist die Antwort (e) korrekt.\\
+\\
+\textit{Alternative Lösung:}\\
+Es lassen sich auch Gegenbeispiele für die Antwortmöglichkeiten (a) - (d) geben.
+$ m \geq 2 $ ist beliebig. Da (c) nur für $ m = 3 $ definiert ist, können wir diese Antwort direkt ausschließen.
+Für $ m = 3 $ lässt sich hier aber auch ein konkretes Gegenbeispiel angeben(Warum?).
+Für $ m = 4 $ würde durch (b)  die lineare Unabhängigkeit der vier Vektoren folgen.
+In (a) könnte $ \textbf{b} $ linear unabhängig von $ \textbf{a}_1 $, $ \textbf{a}_2  $ und $ \textbf{a}_3 $, falls $ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3]  \right) = 2 $ gilt.
+Die Antwort (d) ist für $ m=2 $ nicht möglich.
+Damit bleibt die Antwort (e) übrig.
+
+\newpage
+\subsection*{\frage{9}{3}}
+Welche der folgenden Aussagen ist \textbf{nicht wahr}?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn sie nicht regulär ist.
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn das System ihrer Zeilenvektoren linear abhängig ist.
+	
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn $ \lambda = 0 $ kein Eigenwert von ihr ist.
+	
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn $\det(A) = 0 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Bestimme die korrekte Antwort durch das Ausschlussverfahren. 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die korrekte Antwort durch das Ausschlussverfahren}\\
+Eine Matrix $ A $ ist regulär genau dann, wenn $ \det(A) \neq  0 $ ist.
+Eine Matrix heißt singulär, wenn $ A $ nicht regulär ist. Also ist die Antwort (a) wahr.
+%Die Antwort (a) ist die Definition einer singulären Matrix und damit wahr.
+Insbesondere ist dann auch die Antwort (d) wahr.
+Nun ist $ \det(A) $ das Produkt der Eigenwerte von $ A $.
+
+Damit ist die Antwort (c) nicht wahr. Wenn $ \lambda = 0 $ kein Eigenwert von $ A $ ist, gilt $ \det(A) \neq 0 $.
+Also wäre $ A $ gleichzeitig regulär und singulär, was nicht möglich ist.\\
+\\
+Damit ist die Antwort (c) korrekt.
+\\
+\\
+Eine Matrix $ A $ heißt regulär, genau dann wenn das System ihrer Zeilenvektoren linear unabhängig ist.
+Die Antwort (b) ist das Gegenteil hiervon und somit auch wahr.
+\newpage
+\subsection*{\frage{10}{4}}
+Sei $ \{y_k\}_{k=0,1,2,...} $ eine Folge, welche die Differenzengleichung
+\begin{align*}
+	y_{k+1} = A y_k + B,
+\end{align*}
+mit $ A \in (0,1), B\in \mathbb{R} $ erfüllt. Sei $ y^\star = \frac{B}{1-A} $.\\
+\\
+Welche der folgenden Aussagen ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \{y_k\}_{k=0,1,2,...}$ divergiert.
+	\item
+	$ \{y_k\}_{k=0,1,2,...}$ konvergiert und $ y_k > y^\star  $ für alle $ k = 0,1,2,... $.
+	
+	\item
+	$ \{y_k\}_{k=0,1,2,...}$ konvergiert und $ y_k <y^\star  $ für alle $ k = 0,1,2,... $.
+	\item
+	Keine der oben gegebenen Antwortmöglichkeiten ist im Allgemeinen korrekt.
+	
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Bestimme die richtige Lösung mit dem Eliminationsverfahren. 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die richtige Lösung mit dem Eliminationsverfahren}\\
+Die Differenzengleichung ist in Normalform.
+Wegen $ |A| < 1 $ konvergiert die Folge gegen $ y^\star $.
+Damit ist Antwort (a) falsch.
+Wir setzen $ B = 0 $. Dann konvergiert $ y_k $ gegen $ 0 $ und es gilt $ y_k = A^k y_0 $.
+Damit hängt das Vorzeichen von der Anfangsbedingung $ y_0 $ ab.
+Für $ y_0 < 0  $ ist (b) falsch und für $ y_0 > 0 $ ist (c) falsch.
+Also bleibt Antwort (d) übrig.\\
+\\
+Somit ist die Antwort (d) korrekt.

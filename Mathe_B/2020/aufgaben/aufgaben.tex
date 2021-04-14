@@ -1,0 +1,511 @@
+%\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+
+
+\begin{Large}
+\textbf{Teil I: Offene Aufgaben (40 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für offene Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Ihre Antworten müssen alle Rechenschritte enthalten,
+diese müssen klar ersichtlich sein.
+Verwendung korrekter mathematischer Notation wird erwartet
+und fliesst in die Bewertung ein.
+
+\item
+Ihre Antworten zu den jeweiligen Teilaufgaben müssen in den dafür vorgesehenen Platz geschrie-
+ben werden. Sollte dieser Platz nicht ausreichen, setzen Sie Ihre Antwort auf der Rückseite oder
+dem separat zur Verfügung gestellten Papier fort. Verweisen Sie in solchen Fällen ausdrücklich
+auf Ihre Fortsetzung. Bitte schreiben Sie zudem Ihren Vor- und Nachnamen auf jeden separaten
+Lösungsbogen.
+
+\item
+Es werden nur Antworten im dafür vorgesehenen Platz bewertet. Antworten auf der Rückseite
+oder separatem Papier werden nur bei einem vorhandenen und klaren Verweis darauf bewertet.
+
+\item
+Die Teilaufgaben werden mit den jeweils oben auf der Seite angegebenen Punkten bewertet.
+
+\item
+Ihre endgültige Lösung jeder Teilaufgabe darf nur eine einzige Version enthalten.
+
+\item
+Zwischenrechnungen und Notizen müssen auf einem getrennten Blatt gemacht werden. Diese
+Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werden.
+\end{enumerate}
+
+\newpage
+\section*{\hfil Aufgaben \hfil}
+\vspace{1cm}
+\section*{Aufgabe 1 (40 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{14}}
+Das Newton'sche Abkühlungsgesetz beschreibt, wie sich die Temperatur eines Körpers, der sich in einem Raum mit konstanter Temperatur $ T $ befindet, mit der Zeit verändert (das Gesetz beschreibt Abkühlung und Erwärmung gleichermassen).
+Im Detail besagt das Abkühlungsgesetz, dass die Änderung der Temperatur eines Körpers zwischen Zeitpunkt $ k $ und $ k+1 $ proportional zur Differenz zwischen der Temperatur des abkühlenden Körpers zum Zeitpunkt $ k $ und der Umgebungstemperatur $ T $ ist. Die Proportionalitätskonstante hängt von der Beschaffenheit des Körpers ab und sei durch den Parameter $ \lambda \in \mathbb{R} \setminus \{0\} $ bestimmt.
+\begin{enumerate}
+	\item[\textbf{(a1)}]
+	Die Temperatur des Körpers zum Zeitpunkt $ k $ sei $ y_k $.
+	Leiten Sie eine Differenzengleichung her, die die Entwicklung der Temperatur $ y_k $ für $ k = 1,2,... $ abhängig von der anfänglichen Temperatur $ y_0 $ und der Raumtemperatur $ T  $ beschreibt.
+	\item[\textbf{(a2)}] 
+	Finden Sie die allgemeine Lösung der Differenzengleichung aus \textbf{(a1)}.
+	\item[\textbf{(a3)}] 
+	Für welche Werte $ \lambda $ sinkt die Temperatur des Objekts auf lange Sicht (d.h., für $ k \to \infty $) unter 30 ($ ^\circ $C), dass $ y_0 = 100 $ ($ ^\circ $C) und $ T= 20 $ ($ ^\circ $C)?
+	Welche dieser Werte wiederum sind auch physikalisch plausibel?
+	\item[\textbf{(a4)}]
+	Sei $ y_0 = 30  $ ($ ^\circ  $C) und $ T = 15 $ ($ ^\circ  $C).
+	Bestimmen Sie den Parameter $ \lambda $ so, dass die Temperatur
+	des Körpers zum Zeitpunkt $ k= 10 $ noch $ 16.6 $ ($ ^\circ  $C) beträgt.
+	Runden Sie auf eine Dezimalstelle. Wie viel Zeit vergeht, bis $ y_k $ wieder über $ 20 $ ($ ^\circ  $C) steigt, wenn zum Zeitpunkt $ k = 10 $ die Raumtemperatur auf $ T = 25 $ ($ ^\circ  $C) erhöht wird?
+\end{enumerate}
+\ \\
+\subsection*{\aufgabe{b}{10}}
+Das folgende Modell soll die Entwicklung des Arbeitsmarktes eines bestimmten Landes abbilden.
+Die Variablen $ x_t $ und $ y_t $ beschreiben die Anzahl Erwerbstätiger zum Zeitpunkt $ t $ für zwei verschiedene Segemente des Arbeitsmarktes, die Variable $ z_t $ die Anzahl Erwerbsloser zum Zeitpunkt $ t $.
+Es wird unterstellt, dass
+\begin{align*}
+	x_{t+1} &= 0.9 x_t + 0.1 y_t\\
+	y_{t+1} &= 0.1 x_t + 0.8 y_t + \ \ \  m z_t\\
+	z_{t+1} &= \qquad \quad  \  0.1 y_t +(1-m) z_t 
+\end{align*}
+für $ t = 0,1,2,... $, wobei $ m \in [0,1] $.\\
+Für 
+\begin{align*}
+	\textbf{u}_t = \begin{pmatrix}
+		x_t \\ y_t \\ z_t
+	\end{pmatrix} \ , \quad
+	t = 0,1,2,...
+\end{align*}
+sagen wir, dass der Arbeitsmarkt im Gleichgewicht ist, wenn 
+\begin{align*}
+	\textbf{u}_{t+1} = \lambda \textbf{u}_t
+\end{align*}
+für alle $ t = 0,1,2,... $ gilt, d.h., wenn das Verhältnis der Gruppengrössen über die Zeit konstant bleibt. 
+Für welche Werte $ m $ ist der Arbeitsmarkt im Gleichgewicht mit $ \lambda = 1 $?\\
+\\
+Verwenden Sie das Gauß-Verfahren, um alle (möglichen) Gleichgewichtsvektoren $ \textbf{u}_t $ zu bestimmen. Berechnen Sie abschliessend die Arbeitslosenquote im implizierten Gleichgewicht.
+ \\
+\\
+\subsection*{\aufgabe{c}{10}}
+Ein Fischer befindet sich am Flussufer und möchte zu seinem Boot, welches unter den Koordinaten $ H = (0,h) $ auf dem Fluß vor Anker liegt. Der Verlauf des Flussufers lässt sich gut durch eine nach links und rechts offene Hyperbel mit der Gleichung
+$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $ beschreiben, wobei $ a,b \in \mathbb{R}_{++} $.
+Bestimmen Sie diejenigen Punkte am Flussufer, von denen aus der Fischer
+die geringste Distanz zu seinem Boot schwimmen muss.\\
+\\
+\textit{Tipp:} Veranschaulichen Sie sich das Problem zunächst graphisch, um eine Intuition für die Situation und den Lösungsansatz zu bekommen.
+\\ \\
+\subsection*{\aufgabe{d}{6}}
+Die private Altersvorsorge gewinnt durch das Altern der Bevölkerung mehr und mehr an Bedeutung. Eine neue Gesetzesinitiative soll Anreize für eine Änderung des Sparverhaltens schaffen. Der (stochastische) Einfluss der Initiative auf den jährlichen Sparbetrag eines durchschnittlichen Haushalts soll nun modelliert werden. Es wird unterstellt, dass diese Änderung des Sparbetrags durch eine stetige Zufallsvariable $ D $ mit $ U $-quadratischer Verteilung modelliert werden kann.
+Die Dichte von $ D $ sei gegeben durch:
+\begin{align*}
+	f(x)
+	=
+	\begin{cases}
+		\frac{12}{(b-a)^3} \left(x - \frac{b+a}{2}\right)^2 \ &\textrm{für } x \in [a,b]\\ 
+		\qquad \quad 0  \ &\quad \  \textrm{sonst}
+	\end{cases},
+\end{align*}
+wobei $ a,b \in \mathbb{R} $, $ a < b $.
+
+\begin{enumerate}
+	\item[\textbf{(d1)}]
+	Berechnen Sie für $ a = - 500 $ und $ b = 1000 $ die Wahrscheinlichkeit, dass der Sparbetrag eines durchschnittlichen Haushalts um mindestens CHF $ 200 $ erhöht wird.
+	\item[\textbf{(d2)}]
+	Berechnen Sie für $ a = - 500 $ und $ b = 1000 $ den erwarteten Anstieg des (durchschnittlichen) Sparbetrags $ \mathbb{E}[D] $.
+\end{enumerate}
+\newpage
+
+
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\begin{Large}
+\textbf{Teil II: Multiple-Choice-Fragen (60 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für Multiple-Choice-Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Die Antworten auf die Multiple-Choice-Fragen müssen im dafür vorgesehenen Antwortbogen ein-
+getragen werden. Es werden ausschliesslich Antworten auf diesem Antwortbogen bewertet. Der
+Platz unter den Fragen ist nur für Notizen vorgesehen und wird nicht korrigiert.
+
+\item
+Jede Frage hat nur eine richtige Antwort. Es muss also auch jeweils nur eine Antwort angekreuzt
+werden.
+
+\item
+Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet, auch wenn
+die korrekte Antwort unter den angekreuzten ist.
+
+\item
+Bitte lesen Sie die Fragen sorgfältig.
+
+\end{enumerate}
+\newpage
+\section*{Aufgabe 2 (30 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Unter der Nebenbedingung $ \varphi(x,y) = \frac{(x-4)^2}{16} + \frac{(y-3)^2}{49} -1 = 0 $ hat die Funktion $ f(x,y) = 2 x + 1  $ ein Minimum in welchem Punkt?
+ \renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ P= (0,3) $.
+\item $ P= (4,10) $.
+\item $ P= (-5,3) $.
+\item $ P= (4,-4) $.
+\item Keiner der oben gegebenen Punkte ist ein Minimum der Funktion $ f $ unter der Nebenbedingung $ \varphi(x,y)= 0 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{3}}
+Die Funktion $ f $ hat ein lokales Minimum im Punkt $ (x_0,y_0) $.
+Sei $ g $ die Funktion definiert als $ g(x,y) = e^{-f(-x,-y)} $ mit Definitionsgebiet $ D_g = D_f $.\\
+Welche der folgenden Aussagen ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ g $ hat ein lokales Maximum im Punkt $ (-x_0,-y_0) $.
+\item $ g $ hat ein lokales Minimum im Punkt $ (-x_0,-y_0) $.
+\item $ g $ hat ein lokales Maximum im Punkt $ (x_0,y_0) $.
+\item $ g $ hat ein lokales Minimum im Punkt $ (x_0,y_0) $.
+\end{enumerate}
+\newpage
+\subsection*{\frage{3}{4}}
+Die Reihe $ \sum_{k=1}^\infty \frac{m}{k^4} $, wobei $ m > 0 $, konvergiert gegen $ a(m) \in \mathbb{R} $, wobei $ a(m) $ von dem Parameter $ m $ abhängt.\\
+\\
+Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ a(m) > \frac{4m}{3} $ für alle $ m \geq 1 $.
+\item 
+$ a(m) < \frac{4m}{3} $ für alle $ m  $.
+\item 
+$ a(m) < m $ für alle $ m  $.
+\item
+$ a(m) < \frac{m}{2} $ für alle $ m  $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{2}}
+Sei $ f $ eine stetige Funktion $ a, x \in D_f $ mit $ a < x $.
+Sei $ g $ definiert als $ g(x) = \int_a^x f(t) dt $.
+Welche der folgenden Aussagen ist wahr?  
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f^\prime(x) = g(x) $.
+	\item
+	$ g^\prime(x) = f(x) - f(a) $.
+	\item
+	$ g \circ f  $ ist eine Stammfunktion von $ f $.
+	\item
+	$ \lim_{\Delta \to 0} \frac{g(x+ \Delta x) - g(x)}{\Delta x} = f(x) $.
+	\item
+	Keine der oben gegebenen Antwortmöglichkeiten ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x) =
+\begin{cases}
+	\frac{1}{2 x^3} + 2 x c e^{-c x^2}, \ &x \geq 1\\
+ \qquad	\ 0 , \ &x < 1
+\end{cases}
+\end{align*}
+Dann ist $ f $ eine Dichtefunktion
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+für alle $ c \in \mathbb{R} $.
+\item 
+für kein $ c \in \mathbb{R} $.
+\item 
+für alle $ c > 0 $.
+\item 
+für $ c = \ln(0.75) $.
+\item
+für $ c = \ln\left(\frac{4}{3}\right) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{3}}
+$ A $ sei eine $ (n \times m )- $dimensionale Matrix, und sei $ B $ eine $ (p \times q)- $dimensionale Matrix.\\
+Wenn die Matrizen $ C = BA $ und $ D = AB $ existieren und es gilt $ C = D $, dann folgt daraus:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ n= m = p = q $.
+	\item 
+	$ n = q $ und $ m= p $ und $ m \neq q $.
+	\item
+	$ m= p $ und $ q = n$ und $ n \neq p $.
+	\item
+	$ n = p $ und $ m= q $ und $ n \neq m $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{2}}
+Eine $ (4 \times 5)- $dimensionale Matrix $ A $ hat den Rang $ 3 $.
+$ B $ ist eine $ (8 \times 5)- $dimensionale Matrix, in welcher jede Zeile von $ A $ genau zweimal vorkommt. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ \mathrm{rg}(B) = 1 $.
+\item
+$ \mathrm{rg}(B) = 3 $.
+\item
+$ \mathrm{rg}(B) = 4 $.
+\item
+$ \mathrm{rg}(B) = 5 $.
+\item
+$ \mathrm{rg}(B) = 6 $.
+\item
+$ \mathrm{rg}(B) = 8 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{3}}
+Seien $ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 $, und $ \textbf{b} $ $ m $-dimensionale Vektoren und $ m \geq 2 $.
+Der Vektor $ \textbf{b} $ ist eine Linearkombination der Vektoren $  \textbf{a}_1, \textbf{a}_2  $ und $ \textbf{a}_3 $ genau dann, wenn gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = 3 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) =m $.
+	
+	\item
+	$ \det\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3] \right) = 0 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3]  \right) = 3 $.
+	\item
+	$ \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3 ,\textbf{b}] \right) = \mathrm{rg}\left([ \textbf{a}_1, \textbf{a}_2 , \textbf{a}_3] \right) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{9}{3}}
+Welche der folgenden Aussagen ist \textbf{nicht wahr}?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn sie nicht regulär ist.
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn das System ihrer Zeilenvektoren linear abhängig ist.
+	
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn $ \lambda = 0 $ kein Eigenwert von ihr ist.
+	
+	\item
+	Eine quadratische Matrix $ A $ ist singulär genau dann, wenn $\det(A) = 0 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{10}{4}}
+Sei $ \{y_k\}_{k=0,1,2,...} $ eine Folge, welche die Differenzengleichung
+\begin{align*}
+	y_{k+1} = A y_k + B,
+\end{align*}
+mit $ A \in (0,1), B\in \mathbb{R} $ erfüllt. Sei $ y^\star = \frac{B}{1-A} $.\\
+\\
+Welche der folgenden Aussagen ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \{y_k\}_{k=0,1,2,...}$ divergiert.
+	\item
+	$ \{y_k\}_{k=0,1,2,...}$ konvergiert und $ y_k > y^\star  $ für alle $ k = 0,1,2,... $.
+	
+	\item
+	$ \{y_k\}_{k=0,1,2,...}$ konvergiert und $ y_k <y^\star  $ für alle $ k = 0,1,2,... $.
+	\item
+	Keine der oben gegebenen Antwortmöglichkeiten ist im Allgemeinen korrekt.
+	
+\end{enumerate}
+\newpage
+\section*{Aufgabe 3 (30 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{4}}
+Gegeben ist die Funktion $ f(x,y) = e^{-\frac{1}{3} x^3 + x +y^2 } $.
+Welche der folgenden Aussagen ist wahr?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ P = (1,0) $ ist ein lokales Minimum von $ f $.
+\item
+$ P = (1,0) $ ist ein lokales Maximum von $ f $.
+\item
+$ P = (0,0) $ ist ein Sattelpunkt von $ f $.
+\item 
+$ P = (-1,0) $ ist ein lokales Minimum von $ f $.
+\item
+$ P = (-1,0) $ ist ein lokales Maximum von $ f $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{3}}
+Gegeben ist die Funktion $ f $ mit 
+\begin{align*}
+	f^\prime(x) = \frac{2 e^{2x}}{e^{2x} + 1} \quad \textrm{mit } \quad f(0) = \ln(2)
+\end{align*}
+Es folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$f(x) = \ln(e^{2x} +1) $.
+	\item
+	$f(x) = \ln(e^{2x} +1) + \ln(2) $.
+	\item
+	$f(x) = \ln(e^{x} +e^{-x}) $.
+	\item
+	$f(x) = \ln(e^{x} +e^{-x}) + \ln(2) $.	
+	\item
+	$f(x) = 2 \ln(e^{2x} +1) - \ln(2) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{4}}
+Die stetige Zufallsvariable $ X $ habe die Dichtefunktion
+\begin{align*}
+	f(x) =
+	\begin{cases}
+		ax^2 + bx^3 \quad &\textrm{falls } 0 \leq x \leq 1\\
+		\quad  \  0 \ \ &\textrm{sonst}
+	\end{cases}
+\end{align*}
+und den Erwartungswert $ \mathbb{E}[X] = 0.75 $.
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$a= 3,b=0$.
+	\item
+	$a= \frac{3}{2},b=2$.
+	\item
+	$a= -1,b=4$.
+	\item
+	$a= 0,b=2$.
+	\item
+	$a= \frac{12}{5},b=\frac{3}{4}$.	
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{4}}
+Gegeben ist die Funktion 
+\begin{align*}
+	f(x,y) = 2 \ln(x^2 +y^2 ) + (3-a) \ln(y^2), \qquad x,y > 0.
+\end{align*}
+Für welche Werte $ a \in \mathbb{R} $ ist der Gradient der Funktion $ f $ an der Stelle $ (1,1)  $ orthogonal zum Vektor $ \textbf{n} = \begin{pmatrix}2 \\ 1 \end{pmatrix} $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ a= 3 $.
+\item 
+$ a= 6 $.
+\item
+$ a= 9 $.
+\item
+$ a= 12 $.
+\item
+Für kein $ a \in \mathbb{R} $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{4}}
+Gegeben ist die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		2 & 0 & 1 & 8 \\
+		-1 & 2 & 1 & 1 \\
+		1 & 2 & 1 &  0 \\
+		0 & 0 & 1 & 9
+	\end{pmatrix}.
+\end{align*}
+$ A $ hat
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Rang $ 1 $.
+	\item 
+	Rang $ 2 $.
+	\item
+	Rang $ 3 $.
+	\item
+	Rang $ 4 $.
+	\item
+	Rang $ 5 $.
+\end{enumerate}
+\ \\
+\newpage
+\subsection*{\frage{6}{4}}
+Gegeben ist die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		0 & -1 & 0 \\
+		1 & 0 & 0 \\
+		1 & 1 & m
+	\end{pmatrix}
+\end{align*}
+und ihre Inverse
+\begin{align*}
+		A^{-1} =
+	\begin{pmatrix}
+		0 & 1 & 0 \\
+		-1 & 0 & 0 \\
+		0.5 & -0.5 &0.5
+	\end{pmatrix}
+\end{align*}
+Es folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ A $ ist singulär für alle $ m \in \mathbb{R} $.
+	\item 
+	$ m = -1 $.
+	\item
+	$ m = 0 $.
+	\item
+	$ m = 1 $.
+	\item
+	$ m = 2 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{4}}
+Gegeben ist die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		4 & 1 & 1 \\
+		1 & 4 & 1 \\
+		1 & 1 & 4
+	\end{pmatrix}.
+\end{align*}
+Die Matrix $ B = A^3 $ hat den Eigenwert
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item
+$ 64 $.
+\item
+$ 27 $.	
+\item 
+$ 8 $.
+\item
+$ 5 $.
+\item
+$ 1 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{3}}
+Die allgemeine Lösung der  Differenzengleichung
+\begin{align*}
+\frac{1}{3} y_k - \frac{3}{4} y_{k+1} + \frac{1}{27} y_k  = \frac{1}{9} y_k + 2 \quad (k = 0,1,2,...)
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	monoton und konvergent.
+	\item
+	monoton und divergent.	
+	\item 
+	oszillierend und konvergent.
+	\item
+	oszillierend und divergent.
+\end{enumerate}

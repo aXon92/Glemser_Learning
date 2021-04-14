@@ -1,0 +1,139 @@
+\documentclass[a4paper,11pt,german]{article}
+
+  \usepackage[ngerman]{babel}   % deutsche Sprachanpassung
+  \usepackage[utf8]{inputenc} % erlaubt Umlaute in der tex-Datei
+  \usepackage[T1]{fontenc}      % Trennung bei Wörtern mit Umlauten
+  \usepackage[DIV15]{typearea}  % Vergrößerung des Textbereichs
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{units}	
+\usepackage{esvect}
+\usepackage{ wasysym }
+\usepackage{wrapfig}
+	\usepackage{graphicx} %graphiken einfügen
+	\usepackage{floatflt} % graphik als fließtext
+\usepackage[framemethod=tikz]{mdframed} %Rahmen für Boxen
+\usepackage{ulem} %Unterschtreichen 
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{gauss}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage[upright]{fourier}
+\usetikzlibrary{calc,matrix,arrows,decorations.pathmorphing}
+\usepackage{verbatim}
+\usetikzlibrary{intersections}
+%\usepgfplotslibrary{fillbetween}
+\usepackage{makeidx}
+\usepackage{arydshln}
+\usepackage{caption}
+\usepackage{enumitem}
+
+
+%\pgfplotsset{compat=1.10}
+%\usepackage{tabular}
+%%%%%%%%%%%%%%%%%%%% KOPF-ZEILE %%%%%%%%%%%%%%%%%%%%		
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+\newcommand{\myunit}{1 cm}
+\tikzset{
+    node style sp/.style={draw,circle,minimum size=\myunit},
+    node style ge/.style={circle,minimum size=\myunit},
+    arrow style mul/.style={draw,sloped,midway,fill=white},
+    arrow style plus/.style={midway,sloped,fill=white},
+}
+
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\g@matrix
+ {\vbox\bgroup}
+ {\vbox\bgroup\normalbaselines}% restore the standard baselineskip
+ {}{}
+\makeatother
+
+\usepackage[listings]{tcolorbox}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings,theorems}
+
+
+
+\newcommand{\BAR}{%
+  \hspace{-\arraycolsep}%
+  \strut\vrule % the `\vrule` is as high and deep as a strut
+  \hspace{-\arraycolsep}%
+}
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\normalsize\textbf{Mathematik B -Theorie}}
+%Kopfzeile mittig
+%\fancyhead[C]{\normalsize\textbf{Teil I: Offene Aufgaben}}
+%Kopfzeile rechts bzw. außen
+\fancyhead[R]{\normalsize\textbf{Glemser Learning}}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+\cfoot{Theorie Skriptum - \thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% KEIN EINRÜCKEN %%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+
+\setlength\dashlinedash{0.4pt}
+\setlength\dashlinegap{1.4pt}
+\setlength\arrayrulewidth{0.4pt}
+
+
+%\cfoot{Testklausur 2016 - Seite \thepage}
+\setcounter{page}{1}
+
+\newtcbtheorem[number within=section]{df}{Definition}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+
+\newtcolorbox
+{mybox}[1]{colback=green!5,colframe=green!35!black,fonttitle=\bfseries,
+title=#1}
+\newcommand{\td}[1]{\ \text{\rmfamily d} #1}
+\newcommand{\aufgabe}[2]{(#1) (#2 Punkte)}
+\newcommand{\frage}[2]{Frage #1 (#2 Punkte)}				
+%% \begin{document}	- Textanfang!	
+\makeindex
+\setcounter{MaxMatrixCols}{20}
+\begin{document}
+
+\tableofcontents
+\newpage
+
+%\newpage
+\input{sections/01_integralrechnung.tex}
+
+\newpage
+\input{sections/differenzialrechnung.tex}
+
+\newpage
+\input{sections/differenzengleichungen.tex}
+\newpage
+\input{sections/matrizen_vektoren.tex}
+\newpage
+\input{sections/lgs.tex}
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\addcontentsline{toc}{section}{Stichwortverzeichnis}
+\printindex
+\end{document} 

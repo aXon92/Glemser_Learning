@@ -1,0 +1,650 @@
+\section*{Aufgabe 3 (32 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{4}}
+$ X $ sei eine stetige Zufallsvariable mit Dichtefunktion
+\begin{align*}
+f(x) = 
+\begin{cases}
+\frac{2}{3} x + \sqrt{x} &\ \textrm{für } 0 \leq x \leq 1\\
+\quad 0 &\qquad \textrm{sonst}
+\end{cases}
+\end{align*}
+und Erwartungswert
+\begin{align*}
+\mathbb{E}[X] = \frac{28}{45}.
+\end{align*}
+Dann hat das Integral $ \int_0^1 (x+1) f(x) \ dx $ den Wert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$\frac{28}{45}$.
+	\item
+	$\frac{73}{45}$.
+	\item
+	$\frac{12}{45}$.
+	\item
+	$\frac{52}{45}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme mit der Definition der Dichtefunktion und dem Erwartungswert die korrekte Antwort 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme mit der Definition der Dichtefunktion und dem Erwartungswert die korrekte Antwort}\\
+Da $ f $ eine Dichtefunktion ist, erfüllt diese 
+\begin{align*}
+\int \limits_{- \infty}^\infty f(x) \ dx
+=
+\int \limits_{0}^1 f(x) \ dx = 1.
+\end{align*}
+Das erste Gleichzeichen erhalten wir , da $ f(x) $ für $ x < 0  $ und $ x > 1 $ gleich null ist.
+Da die Zufallsvariable $ X $ eine Dichtefunktion $ f $ besitzt, ist der Erwartungswert gerade das Integral über $ x f(x) $. Das heißt für den gegebenen Erwartungswert:
+\begin{align*}
+\mathbb{E}[X] = 
+\int \limits_{- \infty}^\infty x f(x) \ dx = 
+\int \limits_{0}^1 x f(x) \ dx
+= \frac{28}{45}.
+\end{align*}
+Nun betrachten wir das gewünschte Integral:
+\begin{align*}
+\int \limits_0^1 (x+1) f(x) \ dx
+=
+\underbrace{\int \limits_0^1 x  f(x) \ dx}_{\mathbb{E}[X] =}
+ + 
+\underbrace{\int \limits_0^1  f(x) \ dx}_{= 1} 
+=
+\frac{28}{45} + 1 = 
+\frac{28+ 45}{45} = \frac{73}{45}.
+ \end{align*}
+\ \\
+Damit ist Antwort (b) korrekt.
+\newpage
+
+\subsection*{\frage{2}{4}}
+Für welchen Wert von $ t \in \mathbb{R} $ sind die Vektoren $ \textbf{u} = \begin{pmatrix}
+t \\ t-1 \\ -6
+\end{pmatrix} $ und $ \textbf{v} = \begin{pmatrix}
+t+5 \\ -1 \\ 1
+\end{pmatrix} $ orthogonal und die Länge von $ \textbf{u} $ gleich $ \sqrt{37} $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$t = -5$.
+	\item
+	$t = 0$.
+	\item
+	$ t= 1 $.
+	\item
+	Für kein $ t \in \mathbb{R} $.	
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme $ t $ so, dass die Vektoren $ \textbf{u} $ und $ \textbf{v} $ orthogonal sind.
+\item Bestimme die Länge von  $ \textbf{u} $ und finde die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme $ t $ so, dass die Vektoren $ \textbf{u} $ und $ \textbf{v} $ orthogonal sind}\\
+Die Vektoren $ \textbf{u} $ und $ \textbf{v} $ sind orthogonal, wenn das Skalarprodukt gleich Null ist. Es gilt:
+\begin{align*}
+\textbf{u} \cdot \textbf{v}
+=
+\begin{pmatrix}
+t \\ t-1 \\ -6
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+t+5 \\ -1 \\ 1
+\end{pmatrix} 
+&=
+t\cdot(t+5) + (t-1)\cdot(-1)- 6 \cdot 1
+=
+t^2 + 5 t + -t +1 +(-6)\\
+&=
+t^2 +4t -5
+=
+0.
+\end{align*}
+Mit der Mitternachts-Formel erhalten wir:
+\begin{align*}
+t_{\nicefrac{1}{2}} = 
+\frac{-4 \pm \sqrt{4^2 + 4 \cdot 1 \cdot  5}}{2}
+=
+\frac{-4 \pm \sqrt{36}}{2}
+=
+\frac{-4 \pm 6}{2}
+\ \Rightarrow \
+t_1 = 1, \ t_2 = -5.
+\end{align*}
+Damit können wir die Antworten (a) und (c) in Betracht ziehen.\\
+\\
+\underline{2. Bestimme die Länge von  $ \textbf{u} $ und finde die korrekte Antwort}\\
+Die Länge des Vektors $ \textbf{u} $ ist gegeben durch
+\begin{align*}
+\| \textbf{u} \|
+= \sqrt{t^2 + (t-1)^2 + (-6)^2}
+= \sqrt{t^2 + (t-1)^2 + 36}.
+\end{align*}
+Wir setzen jetzt $ t_1 = 1$ bzw. $t_2 = -5 $.
+Durch 
+\begin{align*}
+\| \textbf{u} \| = 
+\sqrt{1^2 + (1-1)^2 + (-6)^2}
+=
+\sqrt{1 + 0 + 36 } 
+=
+\sqrt{37}
+\end{align*}
+erkennen wir, dass die Antwort (c) korrekt ist.\\
+\\
+Damit müssen wir $ t_2  $ nicht mehr überprüfen, da dies auch eine Antwortmöglichkeit ist.\\
+\\
+Damit ist die Antwort (c) korrekt.
+
+\newpage
+\subsection*{\frage{3}{3}}
+Die $3 \times 4$ Matrix
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 2  & 1 & -1  \\
+9 & 5  & 2 & 2 \\
+7 & 1  & 0 &  4  
+\end{pmatrix}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	hat Rang $1$.
+	\item
+	hat Rang $2$.
+	\item
+	hat Rang $3$.
+	\item
+	hat Rang $4$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Wende das Gauß-Verfahren an.
+\end{enumerate}
+\end{mdframed}
+%\allowdisplaybreaks
+\underline{1. Wende das Gauß-Verfahren an}\\
+Durch das Gauß-Verfahren erhalten wir:
+\begin{align*}
+\begin{gmatrix}[p]
+1 & 2  & 1 & -1  \\
+9 & 5  & 2 & 2 \\
+7 & 1  & 0 &  4  
+\rowops
+\add[(-9)]{0}{1}
+\add[(-7)]{0}{2}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 1 & -1  \\
+0 & -13  & -7 & 11 \\
+0 & -13  & -7 &  11  
+\rowops
+\add[(-1)]{1}{2}
+\end{gmatrix}
+\begin{gmatrix}[p]
+1 & 2  & 1 & -1  \\
+0 & -13  & -7 & 11 \\
+0 & 0  & 0 &  0  
+\end{gmatrix}.
+\end{align*}
+Wir können keine weitere Nullzeile durch elementare Zeilenoperationen erhalten.
+Demzufolge ist der Rang der Matrix $ A $ gleich $ 2 $.\\
+\\
+Damit ist Antwort (b) korrekt.\\
+\\
+\textit{Bemerkung:}\\
+Der Rang entspricht der Anzahl der Zeilen, welche keine Nullzeilen sind.
+\newpage
+\subsection*{\frage{4}{5}}
+Gegeben sei die $ 3 \times 3 $ Matrix
+\begin{align*}
+A =
+\begin{pmatrix}
+1 & 0 & 1 \\
+0 & -1 & 0 \\
+1 & 0 &0
+\end{pmatrix}.
+\end{align*}
+Es gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$A^{-1}
+	= 
+	\begin{pmatrix}
+	1 & 1 & -1  \\
+	0 & -1 & 0 \\
+	0 & 0 & 1
+	\end{pmatrix}$.
+	\item 
+	$A^{-1}
+	= 
+	\begin{pmatrix}
+	0 & 0 & 1  \\
+	0 & -1 & 0 \\
+	1 & 0 & -1
+	\end{pmatrix}$.
+	\item
+	$A^{-1}
+	= 
+	\begin{pmatrix}
+	0 & 0 & -1  \\
+	1 & 1 & 1 \\
+	0 & 1 & 0
+	\end{pmatrix}$.
+	\item
+	$ A $ ist singulär.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+Bestimme die Determinante der Matrix.
+\item
+Finde durch Ausschließen die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Determinante der Matrix}\\
+Durch Entwicklung nach der dritten Spalte erhalten wir:
+\begin{align*}
+\det(A) = 
+\det
+\begin{pmatrix}
+1 & 0 & 1 \\
+0 & -1 & 0 \\
+1 & 0 &0
+\end{pmatrix} 
+= 1 \cdot \det \begin{pmatrix}
+0 & -1\\
+1 & 0
+\end{pmatrix}
+=
+0 \cdot 0 - 1 \cdot (-1)
+ = 1 .
+\end{align*}
+Damit ist die Matrix $ A $ regulär.\\
+\\
+\underline{2. Finde durch Ausschließen die korrekte Antwort}\\
+Wir machen uns zunutze, dass
+\begin{align*}
+A \cdot A^{-1} = A^{-1} \cdot A = I
+\end{align*}
+gelten muss. Hierbei ist $ I $ die Einheitsmatrix.
+Zuerst betrachten wir $ A^{-1} $ aus (a) und überprüfen, ob $ A^{-1} \cdot A = I $ gilt.
+Durch Multiplikation der ersten Zeile von $ A^{-1} $ mit der erste Spalte von $ A $ erhalten wir:
+\begin{align*}
+\begin{pmatrix}
+1 & 1 & -1
+\end{pmatrix} \cdot 
+\begin{pmatrix}
+1 \\ 0 \\ 1
+\end{pmatrix}
+=
+1 \cdot 1 + 1 \cdot 0 + 1 \cdot (-1)
+=
+0
+\neq 1. 
+\end{align*}
+Damit ist Antwort (a) falsch. Nun untersuchen wir $ A^{-1} $ aus der Möglichkeit (c) und überprüfen auch, ob $ A^{-1} \cdot A = I $ gilt.
+Hier multiplizieren wir die zweite Zeile von $ A^{-1} $ mit der zweiten Spalten von $ A $ und erhalten:
+\begin{align*}
+\begin{pmatrix}
+1& 1 & 1
+\end{pmatrix} \cdot 
+\begin{pmatrix}
+0 \\ -1 \\ 0
+\end{pmatrix}
+=
+1 \cdot 0 + 1 \cdot (-1) + 1 \cdot 0
+=
+-1
+\neq 1. 
+\end{align*}
+Damit ist Antwort (c) falsch.\\
+\\
+Also ist Antwort (b) korrekt.\\
+\\
+\textit{Bemerkung:}\\
+Der einfachste und aufwendigste Weg wäre die inverse Matrix von $ A $ durch 
+\begin{align*}
+(A | I ) \leadsto ... \leadsto (I | A^{-1})
+\end{align*} 
+mit elementaren Zeilenumformungen zu bestimmen.
+\newpage
+
+
+\subsection*{\frage{5}{4}}
+Sei
+\begin{align*}
+A
+=
+\begin{pmatrix}
+1 & 2 & 1\\
+0 & 1 & 0\\
+1 & -1 & 1
+\end{pmatrix}.
+\end{align*}
+Die Matrix $ A^2 $ hat den Eigenwert:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ 2 $.
+	\item
+	$ 4 $.
+	\item
+	$ 6 $.
+	\item
+	$ 8 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, was du über die Eigenwerte von $ A^2 $ aussagen kannst.
+\item Bestimme einen/die Eigenwert/e der Matrix $ A $.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, was du über die Eigenwerte von $ A^2 $ aussagen kannst}\\
+Ein Vektor $ \textbf{v} \neq 0 $ heißt Eigenvektor zum Eigenwert $ \lambda $ der Matrix $ A $, falls
+\begin{align*}
+A\textbf{v} = \lambda \textbf{v} 
+\end{align*}
+gilt.
+%Also $ A \textbf{v} $ ergibt ein Vielfaches von $ \textbf{v} $.
+Hieraus folgt:
+\begin{align*}
+A^2 A \textbf{v} = A (A \textbf{v}) = A (\lambda  \textbf{v})
+= \lambda A  \textbf{v} = 
+\lambda^2 \textbf{v}.
+\end{align*}
+Demnach gilt: Falls $ \lambda $ ein Eigenwert von $ A $ ist, so ist $ \lambda^2 $ ein Eigenwert von $ A^2 $.\\
+\\
+\underline{2. Bestimme einen/die Eigenwert/e der Matrix $ A $}\\
+Wir analysieren die erste und dritte Zeile der Matrix $ A $.
+Beide enthalten eine $ 1 $ als ersten und dritten Eintrag.
+Die zweite Zeile hingegen hat an diesen Einträgen eine $ 0 $. Damit könnte
+\begin{align*}
+\begin{pmatrix}
+1 \\ 0 \\ 1
+\end{pmatrix}
+\end{align*}
+ein Eigenvektor sein. Dies werden wir nun überprüfen:
+\begin{align*}
+A \cdot \begin{pmatrix}
+1 \\ 0 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 2 & 1\\
+0 & 1 & 0\\
+1 & -1 & 1
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+1 \\ 0 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 \cdot 1 + 2 \cdot 0 + 1 \cdot 1\\
+1 \cdot 0  +  1 \cdot 0 +  1 \cdot 0\\
+1 \cdot 1 + (-1) \cdot 0 + 1 \cdot 1
+\end{pmatrix}
+= 
+\begin{pmatrix}
+2 \\ 0 \\ 2
+\end{pmatrix}
+= 2 \cdot \begin{pmatrix}
+1 \\ 0 \\ 1
+\end{pmatrix}.
+\end{align*}
+Damit ist $ 2 $ ein Eigenwert der Matrix $ A $ und somit $ 2^2 = 4 $ einer von $ A^2 $.\\
+\\
+Damit ist die Antwort (b) korrekt.\\
+\\
+\textit{Bemerkung:}\\
+Alternativ lassen sich auch die Nullstellen des charakteristischen Polynoms bestimmen. Hierfür erhalten wir mit Entwicklung nach der zweiten Zeile:
+\begin{align*}
+\det (A - \lambda I )
+&= 
+\det \begin{pmatrix}
+1- \lambda & 2 & 1\\
+0 & 1- \lambda & 0\\
+1 & -1 & 1- \lambda
+\end{pmatrix}
+= (1- \lambda) \det \begin{pmatrix}
+1- \lambda & 1\\
+1 & 1 - \lambda
+\end{pmatrix}\\
+&= 
+(1- \lambda) \cdot \left((1- \lambda)^2 - 1 \cdot 1\right)
+=
+(1- \lambda) \cdot ( 1 -2\lambda + \lambda^2 - 1)
+=
+\lambda \cdot (1 - \lambda) \cdot (\lambda - 2)
+=0\\
+\ \Leftrightarrow \
+&\lambda_1 = 0, \lambda_2 = 1, \lambda_3 = 2.
+\end{align*}
+Wir haben nach der zweiten Zeile entwickelt, da dort zwei Nullen auftreten.
+$ A $ besitzt die Eigenwerte $ 0 $, $ 1 $, $ 2 $ und $ A^2 $ somit $ 0 $, $ 1 $, $ 4 $.
+
+
+
+\newpage
+
+\subsection*{\frage{6}{4}}
+Das Anfangswertproblem
+\begin{align*}
+&y_{k+1} -(1+a) y_k = 2 a, \ \textrm{wobei } a \neq -1, a \neq 0,\\
+&y_0 = 2
+\end{align*}
+hat die Lösung
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ y_k = -4 ( 1+a)^k $.
+	\item
+	$ y_k = 2 ( 1+a)^k  -1$.
+	\item
+	$ y_k = 4 ( 1+a)^k -2 $.
+	\item
+	$ y_k = 8 ( 1+a)^k -3$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item  Bringe die Differenzengleichung in Normalform.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bringe die Differenzengleichung in Normalform}\\
+Die Normalform der Differenzengleichung erhalten wir durch
+\begin{align*}
+y_{k+1} -(1+a) y_k = 2a
+\ \Leftrightarrow \
+y_{k+1}
+= (1+a ) y_k + 2a.
+\end{align*}
+Also ist $ A = (1+a) $ und $ B = 2a $.
+Die allgemeine Lösung ist dann durch
+\begin{align*}
+y_k = A^k(y_0 - y^\ast) + y^\ast = (1+a)^k(y_0 - y^\ast) + y^\ast
+\end{align*}
+mit $ y^\ast = \frac{B}{1 - A} =  \frac{2a}{1-(1+a)} = -2 $ gegeben.
+Eingesetzt liefert dies mit der Anfangsbedingung $ y_0 = 2 $:
+\begin{align*}
+y_k = 4 (1+a)^k -2.
+\end{align*}
+\ \\
+Damit ist Antwort (c) korrekt.\\
+\\
+\textit{Bemerkung:}\\
+Die Antworten (a), (b) und (d) erfüllen $ y_0 =2 $ nicht.\\
+%Die Antwort (a) erfüllt wegen
+%\begin{align*}
+%y_{k+1} -(1+a) y_k = 2 (1+a)^{k+1} - (1+a) 2 (1+a)^k
+%= 0 \neq a
+%\end{align*}
+%die Differenzengleichung nicht.
+
+
+
+
+\newpage
+
+
+
+\subsection*{\frage{7}{3}}
+Die allgemeine Lösung der Differenzengleichung
+\begin{align*}
+3 (y_{k+1}   -y_k  )+ 5 = 2 y_{k+1} -y_k + 12 
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	oszillierend und konvergent.
+	\item
+	oszillierend und divergent.	
+	\item 
+	monoton und konvergent.
+	\item
+	monoton und divergent.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Normalform.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Normalform}\\
+Die Normalform einer Differenzengleichung ist durch
+\begin{align*}
+y_{k+1} = A y_{k} + B
+\end{align*}
+mit $ A, B \in \mathbb{R} $ gegeben.
+Diese erhalten wir durch
+\begin{align*}
+3 (y_{k+1}   -y_k  )+ 5 = 2 y_{k+1} -y_k + 12 
+\ \Leftrightarrow \
+3 y_{k+1} - 3 y_k + 5  = 2 y_{k+1} - y_k +12 
+\ \Leftrightarrow \
+y_{k+1} = 2 y_k + 7.
+\end{align*}
+Also ist $ A = 2$ und $ B= 7 $. \\
+\\
+Eine Differenzengleichung in Normalenform
+\begin{align*}
+y_{k+1} = A y_{k} + B
+\end{align*}
+konvergiert für $ |A| < 1 $ und divergiert für $ |A| > 1 $.
+Für $ A> 0 $ ist das Verhalten monoton und für $  A < 0 $ oszillierend.\\
+\\ 
+Wegen $ |A |> 1  $ und $ A > 0  $ ist die allgemeine Lösung monoton und divergent.\\
+\\
+Damit ist Antwort (d) korrekt.
+
+\newpage
+
+\subsection*{\frage{8}{5}}
+Die allgemeine Lösung der linearen Differenzengleichung
+\begin{align*}
+2 (a + 2) y_{k+1} - 2 y_k + 2 (a^2 - 4) = 0, \quad k = 0,1,2,...,
+\end{align*}
+mit $ a \in \mathbb{R} \setminus \{-2,-1  \} $, konvergiert monoton gegen $ 0 $ genau dann, wenn
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ a > -2 $.
+	\item
+	$a > -1$.
+	\item
+	$ a = 2 $.
+	\item
+	$ a = 1 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Konvergenz gegen $ 0 $, um die Antwort zu finden.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Konvergenz gegen $ 0 $, um die Antwort zu finden}\\
+Sei $ y_k $ eine Lösung von
+\begin{align*}
+2 (a + 2) y_{k+1} - 2 y_k + 2 (a^2 - 4) = 0,
+\end{align*}
+wobei $ y_k $ monoton gegen $ 0 $ konvergiert.
+Das heißt insbesondere $ y_k \to 0  $ und $ y_{k+1} \to 0 $ für $ k \to \infty $.
+Hiermit folgt:
+\begin{align*}
+2 (a + 2) y_{k+1} &- 2 y_k + 2 (a^2 - 4) = 0\\
+&\quad\\
+&\downarrow \quad k \to \infty\\
+&\quad\\
+0 &- 0  + 2(a^2 -4) = 0.
+\end{align*}
+Wenn $ y_k  $ gegen $ 0 $ konvergiert muss $ a^2 - 4 = 0 $ erfüllt sein.
+Dies gilt für $ a = \pm 2 $. In der Aufgabenstellung ist $ a = -2 $ ausgeschlossen. Deshalb ist $ a = 2 $ korrekt.\\
+\\
+Also ist die Antwort (c) korrekt.\\
+\\
+\textit{Bemerkung:}\\
+Die Lösung lässt sich auch über die Normalform bestimmen.
+Diese erhalten wir durch
+\begin{align*}
+2 (a + 2) y_{k+1} - 2 y_k + 2 (a^2 - 4) = 0
+\ \Leftrightarrow \
+y_{k+1} &= \frac{2 y_k}{2(a+2)} - \frac{2 (a^2 + 4)}{2(a+2)}\\
+&=
+\frac{1}{(a+2)} y_k - \frac{(a +2)(a-2)}{(a+2)}\\
+&=
+\frac{1}{a+2} y_k - (a-2)
+\end{align*}
+mit $ A = \frac{1}{a+2} $ und $ B = -(a-2) $.
+Die Lösung kann nur gegen $ 0 $ konvergieren, wenn $ B = 0 $ ist.
+Dies ist für $ a= 2 $ der Fall und wird auch an der Lösungsformel sichtbar:
+\begin{align*}
+y_k = A^k (y_0 - y^\ast) + y^\ast
+= \left(\frac{1}{a+2}\right)^k \left(y_0 - \frac{-(a-2)}{\frac{1}{a+2}}\right) + \frac{-(a-2)}{\frac{1}{a+2}}
+\ \overset{k \to \infty, \ | A | < 1 }{\rightarrow} \ \frac{-(a-2)}{\frac{1}{a+2}}.
+\end{align*}

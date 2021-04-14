@@ -1,0 +1,1459 @@
+\section{Lineare Gleichungssysteme}
+Im letzten Kapitel haben wir die Grundlagen gelernt, um lineare Gleichungssysteme zu lösen.
+
+\subsection{Einführung}
+\begin{mybox}{Definition}\index{LGS}
+Ein \textit{lineares Gleichungssystem} mit $m$ Gleichungen und $n$ Variablen ist durch
+\begin{align*}
+\begin{gmatrix}
+a_{11}  \cdot x_1 & + & a_{12} \cdot x_2& + & \dots & + & a_{1n} \cdot x_n & =  & b_1\\
+a_{21}   \cdot x_1 &  +  &a_{22} \cdot x_2 & + & \dots & + &  a_{2n} \cdot x_n & =  & b_2\\
+\ & \ & \ & \ & \ & \ & \ & \vdots &\\
+a_{m1} \cdot x_1 &  +  & a_{m2} \cdot x_2 &  + &  \dots &  + &  a_{mn} \cdot x_n & = & b_m
+\end{gmatrix}
+\end{align*}
+gegeben.
+Wir sprechen von einer \textit{Lösung}, wenn wir die entsprechenden $x_1,\dots ,x_n$ finden, sodass
+alle Gleichungen erfüllt sind.\index{LGS!Lösung} 
+\end{mybox}
+\ \\
+
+Für die einzelnen Gleichungen gilt 
+\begin{align*}
+\begin{pmatrix}
+a_{11} & \dots & a_{1n}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{pmatrix}
+&=
+b_1\\
+\begin{pmatrix}
+a_{21} & \dots & a_{2n}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{pmatrix}
+&=
+b_2\\
+&\vdots\\
+\begin{pmatrix}
+a_{m1} & \dots & a_{mn}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x_1 \\
+\vdots\\
+x_n
+\end{pmatrix}
+&=
+b_m.
+\end{align*}
+Wir können die Koeffizenten der einzelnen Gleichungen zeilenweise in eine Matrix schreiben und erhalten durch
+\begin{align*}
+\begin{pmatrix}
+a_{11} & \dots & a_{1n} \\
+a_{21} & \dots & a_{2n}\\
+\vdots & \vdots & \vdots\\
+a_{m1} & \dots & a_{mn}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_n
+\end{pmatrix}
+= 
+\begin{pmatrix}
+b_1\\
+b_2\\
+\vdots\\
+b_m
+\end{pmatrix}
+\end{align*}
+eine besser handhabbare Darstellung des LGS von der Form $A \cdot \textbf{x} = \textbf{b}$.
+Hierauf können wir unsere Theorie der Matrizen anwenden. Wenn wir von nun an von linearen Gleichungssystemen sprechen, ist immer die Form
+\begin{align*}
+A \cdot \textbf{x} = \textbf{b}
+\end{align*}
+gemeint.
+
+\begin{mybox}{Matrixdarstellung LGS}\index{LGS!Matrixdarst.}
+Sei $A$ eine $m \times n$ Matrix und $\textbf{x}$ ein Vektor mit $n$ Einträgen.
+Dann nennen wir die Matrixgleichung
+\begin{align*}
+A \cdot \textbf{x} = \textbf{b}
+\end{align*}
+ein \textit{lineares Gleichungssystem}.
+Die Matrix $A$ heißt \textit{Koeffizentenmatrix}.
+Wir nennen den Vektor $x$ mit $n$ Einträgen \textit{Lösung}, falls dieser die Matrixgleichung erfüllt.
+Die \textit{erweiterte Koeffizentenmatrix} geben wir durch 
+\begin{align*}
+\begin{gmatrix}[p]
+A & \BAR & b
+\end{gmatrix}
+=
+\begin{gmatrix}[p]
+a_{11} & \dots & a_{1n} & \BAR & b_1 \\
+a_{21} & \dots & a_{2n} & \BAR & b_2\\
+\vdots & \vdots & \vdots & \BAR & \vdots \\
+a_{m1} & \dots & a_{mn} & \BAR & b_m
+\end{gmatrix}
+\end{align*}
+an.
+Mit 
+\begin{align*}
+L 
+= 
+\lbrace 
+\textbf{x} \ | \ A \cdot \textbf{x} = \textbf{b} \rbrace
+\end{align*}
+bezeichnen wir die \textit{Lösungsmenge} des LGS.
+\end{mybox}
+Die erweiterte Koeffizentenmatrix ist alles, was wir zum Lösen linearer Gleichungssysteme benötigen.
+
+\newpage
+\subsection{Bestimmen von Lösungen}
+In diesem Abschnitt werden wir uns mit dem Lösen von linearen Gleichungssystemen beschäftigen.
+Wir wissen bereits, dass wir LGS in eine Matrixdarstellung bzw. erweiterte Koeffizentenmatrix überführen können.
+Aber zunächst beschäftigen wir uns noch einmal mit Matrizen.
+Gegeben sei eine $m \times n $ Matrix $A$. Dann definiert
+\begin{align*}
+f : \mathbb{R}^n \to \mathbb{R}^m, \ \textbf{v} \mapsto A \cdot \textbf{v}
+\end{align*}
+eine \textit{lineare Abbildung / Funktion}.
+Eine Abbildung heißt \textit{linear}, falls
+\begin{align*}
+f( \textbf{v} + \textbf{w}) &= f(\textbf{v}) + f(\textbf{w})\\
+f( \lambda \cdot \textbf{v} ) &= \lambda \cdot f(\textbf{v})
+\end{align*}
+erfüllt sind.
+Warum machen wir das?
+Wenn wir das System
+\begin{align*}
+A \cdot \textbf{x} = \textbf{b}
+\end{align*}
+lösen, stellen wir fest, ob $\textbf{b}$ im Wertebereich von $A$ ist.
+Falls dies der Fall ist, überpüfen wir noch die Eindeutigkeit der Lösung (eine oder unendlich viele Lösungen).\\ \\
+Nun betrachten wir exemplarisch folgendes LGS:
+\begin{align*}
+\begin{gmatrix}
+a \cdot x	&+ & b \cdot y& =& e\\
+c \cdot x & +  &d \cdot y & =& f
+\end{gmatrix}
+\end{align*}
+Wir nehmen an, dass $(x,y)$ eine Lösung des Systems ist.
+Dann ist $(x,y)$ auch eine Lösung des Systems
+\begin{align*}
+\begin{gmatrix}
+a \cdot x	&+ & b \cdot y& =& e\\
+(c + \alpha a) \cdot x & +  & (d + \alpha b) \cdot y & =& f + \alpha e
+\end{gmatrix},
+\end{align*}
+weil
+\begin{align*}
+c\cdot x + d \cdot y + \alpha( a \cdot x + b \cdot y) = f + \alpha e
+\end{align*}
+gilt.\\
+Wir können also das Vielfache einer Gleichung auf eine andere Gleichung addieren, ohne die Lösungsmenge zu verändern.
+Man kann eine ähnliche Argumentation für die Multiplikation einer Gleichung mit einem Vielfachen ungleich Null führen.
+Damit können wir das Gaußverfahren auf 
+\begin{align*}
+\begin{gmatrix}[p]
+A & \BAR & \textbf{b}
+\end{gmatrix}
+\end{align*}
+anwenden, um die erweiterte Koeffizientenmatrix in eine Form zu bringen, die uns die Art der Lösung ablesen lässt.
+
+\begin{mybox}{Gaußverfahren für LGS}\index{Gauß für LGS}
+Gegeben sei das lineare Gleichungssystem $A \textbf{x} = \textbf{b}$.
+Mit elementaren Zeilenumformungen bringen wir $\begin{gmatrix}[p] A & \BAR & \textbf{b} \end{gmatrix}$
+\begin{align*}
+\begin{gmatrix}[p]
+A & \BAR & \textbf{b}
+\end{gmatrix}
+\leadsto
+\dots
+\leadsto
+\begin{gmatrix}[p]
+\tilde{A} & \BAR & \tilde{\textbf{b}}
+\end{gmatrix}
+\end{align*}
+auf Zeilenstufenform $\begin{pmatrix}[c|c] \tilde{A} &  \tilde{\textbf{b}}\end{pmatrix}.$
+Mit $\ast$ bezeichnen wir eine beliebige Zahl.\\
+Je nach Form besitzt das LGS
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item eine Lösung:\\
+Die erweiterte Koeffizentenmatrix ist von der Form
+\begin{align*}
+\begin{gmatrix}[p]
+\tilde{A} & \BAR & \tilde{\textbf{b}}
+\end{gmatrix}
+=
+\begin{pmatrix}	[cccc|c]
+1 &  \ast  & \ldots & \ast & \ast\\
+0  &  1 & \ldots & \ast & \ast\\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0  &   0       &\ldots & 1& \ast
+\end{pmatrix}
+\end{align*}
+
+\item
+unendlich viele Lösungen:\\
+Die erweiterte Koeffizentenmatrix ist von der Form
+\begin{align*}
+\begin{gmatrix}[p]
+\tilde{A} & \BAR & \tilde{\textbf{b}}
+\end{gmatrix}
+=
+\begin{pmatrix}	[cccccc|c]
+1 &  \ast  & \ldots & \ast & \ast& \ast & \ast\\
+0  &  1 & \ldots & \ast & \ast& \ast & \ast\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots\\
+0  &   0       &\ldots & 1& \ast& \ast & \ast\\
+0 & 0 & \ldots & 0 & 0 & 0 & 0\\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots & \vdots\\
+0 & 0 & \ldots & 0 & 0 & 0 &0
+\end{pmatrix}
+\end{align*}
+Die Anzahl der Spalten neben dem untersten Diagonalelement gibt die Anzahl der frei wählbaren Variablen an.
+Dies bedeutet, dass alle Variablen in Abhängigkeit dieser Variablen dargestellt werden können.
+\item
+keine Lösung:\\
+Die erweiterte Koeffizentenmatrix ist von der Form
+\begin{align*}
+\begin{gmatrix}[p]
+\tilde{A} & \BAR & \tilde{\textbf{b}}
+\end{gmatrix}
+=
+\begin{pmatrix}	[ccccc|c]
+1 &  \ast  & \ldots & \ast & \ast & \ast\\
+0  &  1 & \ldots & \ast & \ast& \ast \\
+\vdots & \vdots & \ddots & \vdots & \vdots\\
+0  &   0       &\vdots & 1 & \ast& \ast\\
+0 & 0 & \vdots &0 & 0 &c
+\end{pmatrix}
+\end{align*}
+mit $c \neq 0$.
+\end{enumerate}
+\end{mybox}
+Der erste Fall tritt ein, wenn die Matrix $A$ regulär ist.
+Dann ist die direkte Umformung
+\begin{align*}
+A \cdot \textbf{x} = \textbf{b}
+\Leftrightarrow
+\textbf{x} = A^{-1} \cdot \textbf{b}
+\end{align*} 
+auch möglich.
+\newpage
+Für den zweiten Fall wechseln wir nochmal zu der Darstellung über Gleichungen.
+Wenn wir durch das Gaußverfahren eine Nullzeile erhalten,
+\begin{align*}
+\begin{gmatrix}
+a_{11}  \cdot x_1 & + & a_{12} \cdot x_2& + & \dots & + & a_{1n} \cdot x_n & =  & b_1\\
+a_{21}   \cdot x_1 &  +  &a_{22} \cdot x_2 & + & \dots & + &  a_{2n} \cdot x_n & =  & b_2\\
+\ & \ & \ & \ & \ & \ & \ & \vdots &\\
+a_{m1} \cdot x_1 &  +  & a_{m2} \cdot x_2 &  + &  \dots &  + &  a_{mn} \cdot x_n & = & b_n
+\end{gmatrix}
+\leadsto 
+\dots
+\leadsto
+\begin{gmatrix}
+a_{11}  \cdot x_1 & + & a_{12} \cdot x_2& + & \dots & + & a_{1n} \cdot x_n & =  & b_1\\
+a_{21}   \cdot x_1 &  +  &a_{22} \cdot x_2 & + & \dots & + &  a_{2n} \cdot x_n & =  & b_2\\
+\ & \ & \ & \ & \ & \ & \ & \vdots &\\
+0 \cdot x_1 &  +  & 0 \cdot x_2 &  + &  \dots &  + &  0 \cdot x_m & = & 0
+\end{gmatrix}
+\end{align*}
+haben wir eine Gleichung, welche für alle $x_1, \dots , x_n$ erfüllt ist.
+Diese Gleichung liefert also keine weiteren Information.
+Wenn das Gleichungssystem genauso viele Gleichungen wie Variablen besitzt,
+erhalten wir eine freie Variable pro Nullzeile.
+Anhand des folgenden Beispiels sehen wir, dass zwei Variablen frei gewählt werden können.
+\begin{align*}
+A
+\leadsto 
+\dots
+\leadsto
+\begin{pmatrix}[ccccc|c]
+1 & \ast & \ast & \ast & \ast& \ast\\
+0 & 1 & \ast & \ast & \ast& \ast\\
+0 & 0 & 1 & \ast & \ast & \ast\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}\leadsto
+\begin{pmatrix}[ccccc|c]
+1 & \ast & \ast & \ast & \ast& \ast\\
+0 & 1 & \ast & \ast & \ast& \ast\\
+0 & 0 & 1 & \ast & \ast & \ast
+\end{pmatrix}
+\end{align*}
+Im Prinzip müssen wir uns keine Gedanken über die Anzahl der frei wählbaren Variablen machen.
+Wir betrachten:
+\begin{align*}
+\begin{pmatrix}[ccc|c]
+1& -1 & 1 & 0\\
+0 & 0 & 0 &0
+\end{pmatrix}
+\end{align*}
+Dann ist die erste Gleichung durch
+\begin{align*}
+x_1 -x_2 + x_3 = 0
+\
+\Leftrightarrow \
+x_1 = x_2 -x_3
+\end{align*}
+gegeben. Damit können wir $x_1$ durch $x_2$ und $x_3$ darstellen.\\
+\\
+Der dritte Fall ist verständlich, wenn man sich eine Gleichung der Form
+\begin{align*}
+0 \cdot x_1 + \dots + 0 \cdot x_m = c 
+\end{align*}
+mit $c \neq 0$ anschaut.
+Diese Gleichung kann niemals erfüllt sein.\\
+
+
+\subsubsection*{Anwendungsbeispiel A}
+Durch die Zeilenstufenform können wir die Lösung durch Rückwärtseinsetzen bestimmen.
+Die erweiterte Koeffizentenmatrix
+\begin{align*}
+\begin{pmatrix}[ccc|c]
+1 & 2 & 1 & 1\\
+0 & 1 & -1 & -1\\
+0 & 0 & 1  & 2
+\end{pmatrix}
+\end{align*}
+ist bereits in Zeilenstufenform und repräsentiert die Gleichungen
+\begin{align*}
+\begin{gmatrix}
+x_1 & + & 2 \cdot x_2 & + & x_3 & = & 1\\
+\ & \ &  x_2  & - & x_3 & = & -1\\
+\ & \ & \ & \ & x_3 & =& 2
+\end{gmatrix}
+\end{align*}
+Rückwärtseinsetzen liefert die Lösung $\begin{pmatrix}
+-3 & 1 & 2
+\end{pmatrix}$.
+Da unsere Koeffizentenmatrix regulär ist, können wir mit
+\begin{align*}
+\begin{gmatrix}[p]
+1 & 2 & 1 & \BAR& 1\\
+0 & 1 & -1 & \BAR & -1\\
+0 & 0 & 1  & \BAR& 2
+\rowops
+\add[\cdot 1]{2}{1}
+\add[\cdot (-1)]{2}{0}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 2 & 0 & \BAR& -1\\
+0 & 1 & 0 & \BAR & 1\\
+0 & 0 & 1  & \BAR& 2
+\rowops
+\add[\cdot (-2)]{1}{0}
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+1 & 0 & 0 & \BAR& -3\\
+0 & 1 & 0 & \BAR & 1\\
+0 & 0 & 1  & \BAR& 2 
+\rowops
+\end{gmatrix}
+\end{align*}
+die Lösung auch direkt ablesen.
+
+\subsubsection*{Anwendungsbeispiel B}
+Wir betrachten die erweiterte Koeffizentenmatrix
+\begin{align*}
+\begin{pmatrix}[ccccc|c]
+1 & 0 & 0 & 0 & 0 & 1\\
+0 & 1 & 0 & 0 & 0 & 2\\
+0 & 0 & 1 & 0 & 0 & 4\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\end{align*}
+in Zeilenstufenform, welche
+\begin{align*}
+\begin{matrix}
+1 \cdot x_1 & +& 0 \cdot x_2 & + & 0 \cdot x_3 & + & 0 \cdot x_4 & + & 0 \cdot x_5 & = & 1\\
+0 \cdot x_1 & +&  1 \cdot x_2 & + & 0 \cdot x_3 & + & 0 \cdot x_4 & + & 0 \cdot x_5 & = & 2\\
+0 \cdot x_1 & +& 0 \cdot x_2 & + & 1 \cdot x_3 & + & 0 \cdot x_4 & + & 0 \cdot x_5 & = & 4
+\end{matrix}
+\end{align*}
+repräsentiert.
+Da wir zwei Spalten neben dem letzten Diagonalelement haben, werden zwei Variablen frei gewählt.
+Dies sieht man jedoch auch an der Struktur der Gleichungen.
+Die Werte von $x_4$ und $x_5$ sind irrelevant und es gilt $x_1 = 1, x_2 = 2, x_3 = 4$.
+Damit können wir alle Lösungen durch
+\begin{align*}
+\textbf{x}
+= \begin{pmatrix}
+1\\ 
+2\\
+4\\
+0\\
+0
+\end{pmatrix}
++
+x_4 \cdot
+\begin{pmatrix}
+0\\
+0\\
+0\\
+1\\
+0
+\end{pmatrix}
++
+x_5 \cdot
+\begin{pmatrix}
+0\\
+0\\
+0\\
+0\\
+1
+\end{pmatrix}
+= \begin{pmatrix}
+1\\ 
+2\\
+4\\
+0\\
+0
+\end{pmatrix}
++
+s \cdot
+\begin{pmatrix}
+0\\
+0\\
+0\\
+1\\
+0
+\end{pmatrix}
++
+t \cdot
+\begin{pmatrix}
+0\\
+0\\
+0\\
+0\\
+1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1\\ 
+2\\
+4\\
+s\\
+t
+\end{pmatrix}
+\end{align*}
+für $s,t \in \mathbb{R}$ angeben.
+
+\subsubsection*{Anwendungsbeispiel C}
+Wir betrachten die erweiterte Koeffizentenmatrix
+\begin{align*}
+\begin{pmatrix}[ccccc|c]
+1 & 0 & 0 & 1 & 0 & 1\\
+0 & 1 & 0 & 1 & 0 & 2\\
+0 & 0 & 1 & 1 & 1 & 4\\
+0 & 0 & 0 & 0 & 0 & 0
+\end{pmatrix}
+\end{align*}
+in Zeilenstufenform, welche
+\begin{align*}
+\begin{matrix}
+1 \cdot x_1 & +& 0 \cdot x_2 & + & 0 \cdot x_3 & + & 1 \cdot x_4 & + & 0 \cdot x_5 & = & 1\\
+0 \cdot x_1 & +& 1 \cdot  x_2 & + & 0 \cdot x_3 & + & 1 \cdot x_4 & + & 0 \cdot x_5 & = & 2\\
+0 \cdot x_1 & +& 0 \cdot x_2 & + & 1 \cdot x_3 & + & 1 \cdot x_4 & + & 1 \cdot x_5 & = & 4
+\end{matrix}
+\end{align*}
+repräsentiert.
+Wir sehen wieder, dass wir zwei freie Variablen haben.
+Diesmal gilt jedoch
+\begin{align*}
+x_1 &= 1 - x_4\\
+x_2 &= 2 - x_4\\
+x_3 &= 4 -x_4 -x_5,
+\end{align*}
+wodurch wir
+\begin{align*}
+\textbf{x}
+=
+\begin{pmatrix}
+1-x_4\\
+2 -x_4\\
+4 - x_4 -x_5\\
+x_4\\
+x_5
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1\\
+2\\
+4\\
+0\\
+0
+\end{pmatrix}
++
+x_4 \cdot
+\begin{pmatrix}
+-1\\
+-1\\
+-1\\
+1\\
+0
+\end{pmatrix}
++
+x_5
+\cdot 
+\begin{pmatrix}
+0\\
+0\\
+-1\\
+0\\
+1\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1\\
+2\\
+4\\
+0\\
+0
+\end{pmatrix}
++
+s \cdot
+\begin{pmatrix}
+-1\\
+-1\\
+-1\\
+1\\
+0
+\end{pmatrix}
++
+t
+\cdot  
+\begin{pmatrix}
+0\\
+0\\
+-1\\
+0\\
+1\\
+\end{pmatrix}
+\end{align*}
+für $s,t \in \mathbb{R}$ als Lösung erhalten.
+\newpage
+\subsubsection*{Anwendungsbeispiel D}
+Verwenden Sie das \textit{Gauss Verfahren}, um die Lösungsmenge des folgenden linearen Gleichungssystems zu bestimmen:
+\begin{equation*}
+\begin{split}
+x_1 \ + \ 2 x_2 \ + \ 3 x_3 \ + \ 6 x_4 \ &= \ \ 5 \\
+x_1 \ + \ 3 x_2 \ + \ 4 x_3 \ + \ 8 x_4 \ &= \ \ 7 \\
+2 x_1 \ + \ \ x_2 \ + \ 3 x_3 \ + \ 4 x_4 \ &= \ -1
+\end{split}
+\end{equation*}
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle die erweiterte Koeffizientenmatrix auf und löse das System.
+\end{enumerate}
+\end{mdframed}
+
+
+\underline{1. Stelle die erweiterte Koeffizientenmatrix auf und löse das System}\\
+Die erweiterte Koeffizientenmatrix ist durch
+\begin{align*}
+(A \ |  \ b)
+=
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+1 & 3 & 4 & 8 &\BAR & 7 \\
+2 & 1 & 3 & 4 &\BAR & -1
+\end{gmatrix}
+\end{align*}
+gegeben.
+Durch die Anwendung des Gauss Verfahren erhalten wir 
+\begin{equation*}
+\begin{split}
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+1 & 3 & 4 & 8 &\BAR & 7 \\
+2 & 1 & 3 & 4 &\BAR & -1
+\rowops
+\add[-1]{0}{1}
+\add[-2]{0}{2}
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+0 & 1 & 1 & 2 &\BAR & 2 \\
+0 & -3 & -3 & -8 &\BAR & -11
+\rowops
+\add[3]{1}{2}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 6 & \BAR & 5\\
+0 & 1 & 1 & 2 &\BAR & 2 \\
+0 & 0 & 0 & -2 &\BAR & -5
+\rowops
+\add[1]{2}{1}
+\add[3]{2}{0}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 0 & \BAR & -10\\
+0 & 1 & 1 & 0 &\BAR & -3 \\
+0 & 0 & 0 & -2 &\BAR & -5
+\rowops
+\mult{2}{\cdot ( -1 )}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 2  & 3 & 0 & \BAR & -10\\
+0 & 1 & 1 & 0 &\BAR & -3 \\
+0 & 0 & 0 & 2 &\BAR & 5
+\end{gmatrix}
+\end{split}
+\end{equation*}
+das System
+\begin{align*}
+1x_1 \ + \ 2 x_2 \ + \ 3 x_3 \ = \ -10\\
+x_2 \ + \ x_3 \ =  \ -3\\
+2 x_4 \ = \ 5
+\end{align*}
+mit frei wählbarem $x_3 \in \mathbb{R}$.
+Durch Einsetzen folgt:
+\begin{align*}
+x_4 &= \frac{5}{2}\\
+x_2 &= -3 -x_3 \\
+x_1 &= -2 x_2 - 3 x_3 - 10  = -2 (-3 - x_3)  - 3 x_3 -10 
+= 6 + 2 x_3 - 3 x_3 - 10
+= - x_3 - 4
+\end{align*}
+Damit können wir durch
+\begin{align*}
+\left\lbrace
+\textbf{x} =
+\begin{pmatrix}
+x_1 \\
+x_2 \\
+x_3 \\ 
+x_4
+\end{pmatrix}
+\ : \ 
+\textbf{x} 
+=
+\begin{pmatrix}
+-4\\
+-3\\
+0\\
+\frac{5}{2}
+\end{pmatrix}
++ t \cdot 
+\begin{pmatrix}
+-1\\
+-1\\
+1\\
+0\\
+\end{pmatrix},
+\ t \in \mathbb{R}
+\right\rbrace
+\end{align*}
+die Lösungsmenge beschreiben.\\
+\begin{mybox}{Lösbarkeitskriterien für LGS}\index{LGS!Lösbarkeitskrit.}
+Sei $A \cdot \textbf{x} = \textbf{b}$ ein LGS.
+Das LGS ist genau dann lösbar, 
+wenn
+\begin{align*}
+\mathrm{rg}(A) = \mathrm{rg}(A|\textbf{b})
+\end{align*}
+gilt.
+Ist dies erfüllt, gilt auch
+\begin{align*}
+\mathrm{rg}(A) &= n \Leftrightarrow \ \text{eine Lösung}\\
+\mathrm{rg}(A) &< n \Leftrightarrow \ \text{unendlich viele Lösungen},
+\end{align*}
+wobei $n$ die Anzahl der Variablen ist.\\
+Wenn $A$ quadratisch ist, gilt noch
+\begin{align*}
+\det(A) \neq 0 
+\Leftrightarrow
+A \text{ ist regulär}
+\Leftrightarrow
+\mathrm{rg}(A)=n
+\Leftrightarrow
+A \textbf{x} = \textbf{b} \text{ besitzt eine Lösung}.
+\end{align*}
+Falls Lösungen existieren, gilt
+\begin{align*}
+\dim L = n - \mathrm{rg}(A)
+\end{align*}
+für die Dimension des Lösungsraums $L$.
+Die Dimension $\dim L$ des Lösungsraums entspricht der Anzahl der frei wählbaren Variablen.
+\end{mybox}
+
+\subsubsection*{Anwendungsbeispiel E}
+Für das System von linearen Gleichungen $A \textbf{x} = \textbf{b}$ gilt:
+$\text{rg}(A) = 4$ und $\text{rg}(A,\textbf{b}) = 4$, wobei $A$ eine $5 \times 6$ Matrix ist.
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Das System hat keine Lösung.
+\item
+Das System hat genau eine Lösung.
+\item
+Das System hat unendlich viele Lösungen und der Lösungsraum hat Dimension $1$.
+\item
+Das System hat unendlich viele Lösungen und der Lösungsraum hat Dimension $2$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, wann ein lineares Gleichungssystem lösbar ist.
+\item Bestimme die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, wann ein lineares Gleichungssystem lösbar ist}\\
+Ein lineares Gleichungssystem $ A x  = b$ ist genau dann lösbar, wenn
+\begin{align*}
+\mathrm{rg}(A) = \mathrm{(A| b) }
+\end{align*}
+gilt.
+Dies ist in der Aufgabenstellung gegeben.
+Dementsprechend können wir Antwort (a) ausschließen.\\
+\\
+
+\underline{2. Bestimme die korrekte Antwort}\\
+Falls $Ax = b$ lösbar ist, gilt
+\begin{align*}
+\dim L = n - \mathrm{rg}(A)
+\end{align*}
+für eine $m \times n $ Matrix.
+Hierbei bezeichnen wir mit $L$ die Lösungsmenge des linearen Gleichungssystems.
+In unserem Fall ist $n = 6$ und $\mathrm{rg}(A)  =4$:
+Wegen
+\begin{align*}
+\dim L = 6 - 4 = 2
+\end{align*}
+ist Antwort (d) korrekt.
+
+\newpage
+
+\subsection{Eigenwerte und Eigenvektoren}
+
+\begin{mybox}{Definition}
+\index{Eigenvektor}
+\index{Eigenwerte}
+Sei $A$ eine $n \times n$ Matrix.
+Dann heißt $\lambda$ \textit{Eigenwert} zum Eigenvektor $v \neq 0$, falls
+\begin{align*}
+A \cdot \textbf{v} = \lambda \cdot \textbf{v}
+\end{align*}
+gilt.
+\end{mybox}
+\vspace{0.4cm}
+Durch unsere Theorie können wir ein Verfahren zur Eigenwert und Eigenvektor Berechnung konstruieren.
+Es gilt
+\begin{align*}
+A \cdot \textbf{v} = \lambda \cdot \textbf{v}
+\Leftrightarrow
+A \cdot \textbf{v} - \lambda \cdot \textbf{v}= (A - \lambda \cdot I) \cdot \textbf{v} = \textbf{0}.
+\end{align*}
+Diese Gleichung kann nur erfüllt sein, falls $A- \lambda \cdot I$ singulär ist.
+Dies können wir sagen, weil $\textbf{v} \neq 0$ ist.
+Wir müssen also die $\lambda$ finden, wofür
+\begin{align*}
+\det(A- \lambda \cdot I) = 0
+\end{align*}
+gilt. Sei $\lambda_1$ ein solcher Eigenwert.
+Für die Eigenvektoren zu $\lambda_1$ müssen wir noch
+\begin{align*}
+(A - \lambda_1 \cdot I) \cdot \textbf{v} = \textbf{0}
+\end{align*}
+lösen.\\
+\begin{mybox}{Verfahren für Eigenwerte und Eigenvektoren}
+Sei $A$ eine quadratische Matrix.
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item
+\index{Eigenwerte!Bestimmung}
+Bestimme $\lambda$ so, dass
+\begin{align*}
+\det(A-\lambda\cdot I) = 0 
+\end{align*}
+gilt.
+
+\item
+Löse für alle Lösungen aus Schritt 1 das LGS
+\begin{align*}
+(A - \lambda \cdot I) \cdot \textbf{v} =0
+\end{align*}
+\item
+\index{Eigenvektor!Menge}
+Durch
+\begin{align*}
+\left\lbrace \textbf{v}  \ | \ (A - \lambda \cdot I) \cdot \textbf{v} =0 \right\rbrace
+\end{align*}
+wird die Menge der Eigenvektoren zu dem Eigenwert $\lambda$ beschrieben.\\
+Meistens reicht es aus, einen Vektor aus dieser Menge anzugeben.
+\end{enumerate}
+\end{mybox}
+\newpage
+\subsubsection*{Anwendungsbeispiel A}
+Gegeben sei die $4 \times 4$ Matrix
+\begin{equation*}
+A= 
+\begin{pmatrix}
+2 & 0 &0 & 0 \\
+1 & 5 & 1  & -1\\
+1 & 3 & 4s & 0 \\
+0 & 1 & -1 & 0
+\end{pmatrix},
+\end{equation*}
+wobei $s \in \mathbb{R}$.\\ \\
+Ermitteln Sie $s$ so, dass $\lambda = 0$ ein Eigenwert von $A$ ist.
+Berechnen Sie weiterhin für diesen Fall die Eigenvektoren von $A$.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rufe dir die Definition von Eigenwerten und Eigenvektoren in Erinnerung.
+\item Bestimme $s$.
+\item Bestimme die Eigenvektoren
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rufe dir die Definition von Eigenwerten und Eigenvektoren in Erinnerung}\\
+Ein Vektor $v \neq 0$ heißt Eigenvektor zum Eigenwert $\lambda$,
+falls
+\begin{align*}
+A v = \lambda v
+\end{align*}
+gilt.
+Dies können wir zu 
+\begin{align*}
+A v - \lambda v = (A-\lambda I)v = 0
+\end{align*}
+umformen. 
+Hierbei bezeichnet $I$ die Einheitsmatrix.
+Da $v \neq 0$ ist, kann diese Gleichung nur erfüllt sein, wenn $A$ singulär ist.
+Deswegen untersuchen wir
+\begin{align*}
+\det(A - \lambda I) 
+\end{align*}
+auf Nullstellen, um die Eigenwerte zu finden.
+In der Aufgabe ist der Eigenwert vorgegeben. 
+Damit $ \lambda = 0 $ ein Eigenwert ist, muss also
+\begin{align*}
+\det(A(s) - 0 I) = \det(A(s)) = 0
+\end{align*}
+gelten.\\
+\\
+\underline{2. Bestimme $s$}\\
+Wir entwickeln zuerst nach der ersten Zeile und im zweiten Schritt nach der dritten Spalte.
+Damit erhalten wir
+\begin{equation*}
+\begin{split}
+\det(A(s))&=
+\left| 
+\begin{pmatrix}
+2 & 0 &0 & 0 \\
+1 & 5 & 1  & -1\\
+1 & 3 & 4s & 0 \\
+0 & 1 & -1 & 0
+\end{pmatrix}
+\right|\\
+&=
+2 
+\left| 
+\begin{pmatrix}
+ 5 & 1  & -1\\
+ 3 & 4s & 0 \\
+ 1 & -1 & 0
+\end{pmatrix}
+\right|\\
+&= 
+2 \cdot (-1) 
+\left| 
+\begin{pmatrix}
+  3 & 4s  \\
+ 1 & -1 
+\end{pmatrix}
+\right|\\
+&= 2 \cdot(-1) ( -3 - 4 s)
+= 2( 3 + 4s) 
+= 6 + 8s 
+\end{split}
+\end{equation*}
+die Determinante von $A$ in Abhängigkeit von $s$.
+Damit erhalten wir durch
+\begin{equation*}
+\det(A(s)) = 8s +6 = 0
+\Leftrightarrow
+s = -\frac{6}{8} = -\frac{3}{4}
+\end{equation*}
+das gesuchte $s$.
+Für $s = -\frac{3}{4}$ ist $\lambda = 0$ ein Eigenwert von $A$.
+\\
+\\
+\underline{3. Bestimme die Eigenvektoren}\\
+Um die Eigenvektoren zu bestimmen, müssen wir das lineare Gleichungssystem
+\begin{align*}
+(A - 0 I) v = A v = 0
+\end{align*}
+lösen.
+Wir wenden also auf die erweiterte Koeffizientenmatrix
+\begin{align*}
+(A \  | \ 0 ) =
+\begin{pmatrix}[cccc|c]
+2 & 0 &0 & 0 & 0 \\
+1 & 5 & 1  & -1 & 0\\
+1 & 3 & -3 & 0 & 0  \\
+0 & 1 & -1 & 0 & 0
+\end{pmatrix}
+\end{align*}
+elementare Zeilenumformungen an.
+Da die rechte Seite nur der Nullvektor ist, können wir diese Spalte in der Matrix ignorieren.
+Durch
+\begin{equation*}
+\begin{split}
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+1 & 5 & 1  & -1\\
+1 & 3 & -3 & 0 \\
+0 & 1 & -1 & 0
+\rowops
+\add[-\frac{1}{2}]{0}{1}
+\add[-\frac{1}{2}]{0}{2}
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 5 & 1  & -1\\
+0 & 3 & -3 & 0 \\
+0 & 1 & -1 & 0
+\rowops
+\swap{1}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 3 & -3 & 0 \\
+0 & 5 & 1  & -1
+\rowops
+\add[-3]{1}{2}
+\add[-5]{1}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 5 & 1  & -1
+\rowops
+\swap{2}{3}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  & 0 \\
+0 & 5 & 1  & -1 \\
+0 & 0 & 0 & 0 
+\rowops
+\add[-5]{1}{2}
+\end{gmatrix}
+\\
+&\leadsto
+\begin{gmatrix}[p]
+2 & 0 &0 & 0 \\
+0 & 1& -1  &  0\\
+0 & 0 & 6  & -1 \\
+0 & 0 & 0 & 0 
+\end{gmatrix}
+\end{split}
+\end{equation*}
+erhalten wir das System
+\begin{align*}
+2 x_1 \ &= 0\\
+x_2 \ - \ x_3 \ &= 0 \\
+6x_3 \ -  \ x_4 \ &= 0
+\end{align*}
+mit frei wählbarem $x_4 \in \mathbb{R}$.
+Durch Rückwärtseinsetzen erhalten wir
+\begin{align*}
+x_3 &= \frac{x_4}{6}\\
+x_2 &=  x_3 =  \frac{x_4}{6}\\
+x_1 &= 0,
+\end{align*}
+womit die Eigenvektoren durch
+\begin{align*}
+\textbf{x }  = t \cdot 
+\begin{pmatrix}
+0 \\
+1 \\ 
+1 \\
+6
+\end{pmatrix}
+\end{align*}
+für $t \in \mathbb{R} \setminus \lbrace 0 \rbrace$ gegeben sind.\\
+\\
+Beim Gaußverfahren von Hand ist es empfehlenswert, Brüche zu vermeiden.
+Man reduziert dabei die Wahrscheinlichkeit für Rechnenfehler sehr.
+\newpage
+\subsubsection*{Anwendungsbeispiel B}
+$A$ ist eine quadratische Matrix und $\lambda = 0 $ einer ihrer Eigenwerte.
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Da aus $A \textbf{x} = \textbf{0}$ folgt, dass $\textbf{x } = 0$, hat $A$ keinen zum Eigenwert $ \lambda = 0$ gehörenden Eigenvektor.
+\item
+$A$ hat einen eindeutigen zum Eigenwert $\lambda = 0$ gehörenden Eigenvektor.
+\item
+$A$ hat unendlich viele zum Eigenwert $\lambda = 0$ gehörende Eigenvektoren.
+\item
+Wie viele Eigenvektoren zum Eigenwert $\lambda = 0$ existieren, hängt von der Matrix $A$ ab.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rufe dir die Definition des Eigenwerts in Erinnerung.
+\item
+Bestimme die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rufe dir die Definition des Eigenwerts in Erinnerung}\\
+Ein Vektor $v \neq 0$ heißt Eigenvektor zum Eigenwert $\lambda$, falls
+\begin{align*}
+Av = \lambda v
+\end{align*}
+erfüllt ist.
+Dies können wir durch
+\begin{align*}
+Av = \lambda v 
+\Leftrightarrow
+Av - \lambda v = (A - \lambda I) v = 0
+\end{align*}
+umformen.
+Hierbei ist $I$ die Einheitsmatrix.
+Wegen $v \neq 0 $ sind auch beliebige Vielfache von $v$ wieder Eigenvektoren zum Eigenwert $\lambda$.
+Dies können wir durch
+\begin{align*}
+A (\alpha v ) 
+= 
+\alpha Av 
+= \alpha \lambda v
+= \lambda (\alpha v) 
+\end{align*}
+für $\alpha \in \mathbb{R} \setminus \lbrace 0 \rbrace$ veranschaulichen.
+Damit können wir allgemein sagen, dass es zu einem Eigenwert $\lambda$ immer unendlich viele Eigenvektoren gibt.\\
+\\
+
+\underline{2. Bestimme die korrekte Antwort}\\
+Im Prinzip haben wir die korrekte Antwort (c) im ersten Abschnitt gefunden.
+Ein anderer Weg ist es, die Determinante zu betrachten.
+Da $\lambda = 0 $ ein Eigenwert ist, gilt
+\begin{align*}
+\det(A) = 0.
+\end{align*}
+Damit ist $A$ singulär und das System
+\begin{align*}
+A x = 0
+\end{align*}
+besitzt unendliche viele Lösungen.
+Diese Lösungen sind gerade die Eigenvektoren.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+\subsubsection*{Anwendungsbeispiel C}
+Ein dynamisches Model für die Variablen $\textbf{u}_t = (x_t , y_t)^\top \neq \textbf{0}$ erfüllt die Gleichung
+$\textbf{u}_{t+1} = A \textbf{u}_t$ für
+\begin{align*}
+A = 
+\begin{pmatrix}
+1 & -1\\
+2 & 1
+\end{pmatrix}
+\end{align*}
+für $t = 0,1,\dots$ \\
+\\
+Die Gleichgewichtsbedingung $\textbf{u}_{t+1} = \lambda \textbf{u}_t$ für alle $t = 0,1,\dots$ mit $\lambda \in \mathbb{R}$
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+kann nur erfüllt sein für $\lambda = 0$.
+\item
+kann nur erfüllt sein für $\lambda = 1$.
+\item
+kann nur erfüllt sein für $\lambda = 2$.
+\item
+kann nie erfüllt sein.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, wie man die Gleichgewichtsbedingung auf Eigenwerte zurückführen kann.
+\item
+Bestimme die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, wie man die Gleichgewichtsbedingung auf Eigenwerte zurückführen kann}\\
+Es ist
+\begin{align*}
+\textbf{u}_{t+1}= A \textbf{u}_t
+\end{align*}
+gegeben.
+Damit entspricht die Gleichgewichtsbedingung
+\begin{align*}
+\textbf{u}_{t+1} = \lambda \textbf{u}_t 
+\Rightarrow
+A \textbf{u}_t = \lambda \textbf{u}_t 
+\end{align*}
+dem Eigenwertproblem.
+\\
+\\
+\underline{2. Bestimme die korrekte Antwort}\\
+Um die korrekte Antwort zu finden, untersuchen wir die Eigenwerte der Matrix $A$.
+Es gilt:
+\begin{align*}
+\det(A - \lambda I) 
+= 
+\left| 
+\begin{pmatrix}
+1 - \lambda & -1 \\
+2 	& 1 - \lambda
+\end{pmatrix}
+\right|
+=
+(1- \lambda)^2  + 2 
+\end{align*}
+Wir sehen nun, dass
+\begin{align*}
+\det(A - \lambda I) > 0
+\end{align*}
+für alle $\lambda \in \mathbb{R}$.
+Damit besitzt $A$ keine reellen Eigenwerte.
+\\
+\\
+Also ist Antwort (d) korrekt.
+
+\newpage
+\subsubsection*{Anwendungsbeispiel D}
+Der Vektor
+\begin{align*}
+\textbf{x}
+=
+\begin{pmatrix}
+1\\
+2\\
+t\\
+4\\
+3
+\end{pmatrix}
+\end{align*}
+ist ein Eigenvektor der $5 \times 5$ Matrix $A$ zum Eigenwert $\lambda \neq 0$, wobei $t \in \mathbb{R}$.
+Der Vektor
+\begin{align*}
+\textbf{y}
+= 
+\begin{pmatrix}
+3\\
+4\\
+3\\
+t\\ 
+1
+\end{pmatrix}
+\end{align*}
+ist orthogonal zum Vektor $A \textbf{x}$ für
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$t = 1$.
+\item
+$t \in \lbrace 1, -2 \rbrace$.
+\item
+$t = -2$.
+\item
+Es gibt kein $t \in \mathbb{R}$, sodass $\textbf{y}$ orthogonal zu $A \textbf{x} $ ist.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, worauf du aufgrund der Eigenvektoreigenschaft schließen kannst.
+\item 
+Rufe dir die Definition von Orthogonalität in Erinnerung und finde die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, worauf du aufgrund der Eigenvektoreigenschaft schließen kannst}\\
+Der Vektor $\textbf{x}$ ist Eigenvektor zu dem Eigenwert $\lambda \neq 0$.
+Damit gilt
+\begin{align*}
+A \textbf{x} = \lambda x,
+\end{align*}
+womit $A \textbf{x}$ nur ein skalares Vielfaches von $\textbf{x}$ ist.\\
+\\
+\underline{2. Rufe dir die Definition von Orthogonalität in Erinnerung und finde die korrekte Antwort}\\
+Zwei Vektoren $\textbf{u}, \textbf{v} \neq \textbf{0}$
+sind Orthogonal, falls das Skalarprodukt
+\begin{align*}
+\textbf{u} \cdot \textbf{v} = 0 
+\end{align*}
+erfüllt.
+Für skalare Vielfache gilt 
+\begin{align*}
+(\alpha \textbf{u}) \cdot \textbf{ v} 
+= 
+\alpha \ (\textbf{u} \cdot \textbf{ v} )
+\end{align*}
+für $\alpha \in \mathbb{R}$.
+Dementsprechend müssen wir für die Orthogonalität das Skalarprodukt von $\textbf{x}$ und $\textbf{y}$  betrachten.
+Es gilt:
+\begin{align*}
+\textbf{x} \cdot \textbf{y} 
+= 
+\begin{pmatrix}
+1\\
+2\\
+t\\
+4\\
+3
+\end{pmatrix}
+\cdot 
+\begin{pmatrix}
+3\\
+4\\
+3\\
+t\\ 
+1
+\end{pmatrix}
+= 3 + 8 + 3t + 4t + 3 
+=14 + 7t 
+\end{align*}
+Man erkennt durch schnelles Nachrechnen, dass
+\begin{align*}
+\textbf{x} \cdot \textbf{y} 
+=14 + 7t 
+= 0
+\Leftrightarrow
+14 = -7t
+\Leftrightarrow
+t = -2
+\end{align*}
+gelten muss.\\
+\\
+Damit ist Antwort (c) korrekt.
+
+\newpage
+\subsubsection*{Anwendungsbeispiel E}
+Die Matrix
+\begin{align*}
+A 
+= 
+\begin{pmatrix}
+1 & 3 \\
+3 & 1
+\end{pmatrix}
+\end{align*}
+hat reellwertige Eigenwerte $\lambda_1$ und $\lambda_2$
+mit zugehörigen Eigenvektoren $\textbf{v}_1$ und $\textbf{v}_2$.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$\lambda_1 \lambda_2 = 0$.
+\item
+$\lambda_1 +  \lambda_2 = 0$.
+\item
+$\textbf{v}_1^\top \textbf{v}_2  = 0 $.
+\item
+$\textbf{v}_1 +  \textbf{v}_2  = \textbf{0} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Eigenwerte von $A$.
+\item Bestimme Eigenvektoren zu den zugehörigen Eigenwerten.
+\item Bestimme die korrekte Antwort.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Eigenwerte von $A$}\\
+Durch Lösen von
+\begin{align*}
+\det(A - \lambda I ) = 0
+\end{align*}
+erhalten wir die Eigenwerte zu $A$.
+Es gilt:
+\begin{align*}
+\det(A - \lambda I ) =
+\left|
+\begin{pmatrix}
+1 - \lambda & 3 \\
+3 & 1 - \lambda
+\end{pmatrix}
+\right|
+=
+(1- \lambda)^2 - 9
+\end{align*}
+Durch
+\begin{align*}
+&(1- \lambda)^2 - 9 = 0 \\
+\Leftrightarrow
+&(1- \lambda)^2 = 9 \\
+\Leftrightarrow
+&\ 1 - \lambda = \pm 3\\
+\Leftrightarrow
+&\ \lambda_1 = -2 , \ \ \lambda_2 = 4
+\end{align*}
+erhalten wir die Eigenwerte $\lambda_1$ und $\lambda_2$.\\
+Wir sehen, dass die Antworten (a) und (b) falsch sind.\\
+\\
+\underline{2. Bestimme Eigenvektoren zu den zugehörigen Eigenwerten}\\
+Zuerst bestimmen wir einen Eigenvektor $\textbf{v}_1$ zu $\lambda_1$.
+Hierfür lösen wir das lineare Gleichungssystem
+\begin{align*}
+(A- \lambda_1 I ) \textbf{v} = \textbf{0}.
+\end{align*}
+Mit $ \lambda_1 = -2 $ und 
+\begin{align*}
+A- \lambda_1 I
+=
+\begin{pmatrix}
+3 & 3 \\
+3 & 3
+\end{pmatrix} 
+\leadsto
+\begin{pmatrix}
+3 & 3 \\
+0 & 0
+\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+1 & 1 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+erhalten wir die frei wählbare Variable $x_2$ und die 
+Gleichung
+\begin{align*}
+x_1 + x_2 = 0
+\Leftrightarrow
+x_1 = -x_2.
+\end{align*}
+Damit können wir die Eigenvektoren zu $\lambda_1$ durch
+\begin{align*}
+\alpha 
+\begin{pmatrix}
+-1 \\
+1
+\end{pmatrix}
+, \ \alpha \in \mathbb{R}
+\end{align*}
+angeben.
+Der Nullvektor der erweiterten Koeffizientenmatrix kann hierbei ignoriert werden.
+Da ein Eigenvektor ausreicht, können wir 
+\begin{align*}
+\textbf{v}_1 = 
+\begin{pmatrix}
+-1 \\
+1
+\end{pmatrix}
+\end{align*}
+setzen.
+Wir erhalten analog durch
+\begin{align*}
+(A - \lambda_2 I) 
+= 
+\begin{pmatrix}
+-3 & 3 \\
+3 & -3
+\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+-1 & 1 \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+die Gleichung
+\begin{align*}
+-x_1 + x_2 = 0
+\Leftrightarrow
+x_1 = x_2.
+\end{align*}
+Damit können wir den zweiten Eigenvektor durch
+\begin{align*}
+\textbf{v}_2 = 
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+\end{align*}
+angeben.\\
+\\
+\underline{3. Bestimme die korrekte Antwort}\\
+Wir sehen wegen
+\begin{align*}
+\textbf{v}_1 + \textbf{v}_2
+=
+\begin{pmatrix}
+0 \\
+2
+\end{pmatrix}
+\end{align*}
+Antwort (d) nicht erfüllt ist.
+Des Weiteren ist wegen
+\begin{align*}
+\textbf{v}_1^\top \cdot \textbf{v}_2
+=
+( -1 , 1) \cdot 
+\begin{pmatrix}
+1\\
+1
+\end{pmatrix}
+=
+-1 + 1 = 0
+\end{align*}
+Antwort (c) korrekt.
+Die Vektoren $\textbf{v}_1$ und $\textbf{v}_2$ sind also orthogonal zueinander.\\
+Man könnte die Aufgabe auch schneller lösen: 
+Die Matrix $A$ ist symmetrisch, d.h. es gilt
+\begin{align*}
+A = A^\top.
+\end{align*}
+Eigenvektoren zu verschiedenen Eigenwerten sind bei symmetrischen Matrizen immer orthogonal.\\
+\\
+Die Antwort (c) ist korrekt.

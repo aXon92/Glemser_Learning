@@ -1,0 +1,400 @@
+\vspace{1cm}
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
+\renewcommand{\labelenumi}{\theenumi.}
+\section*{Aufgabe 1 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{7}}
+Sei $ f \ : \ \mathbb{R} \times \mathbb{R} \to \mathbb{R} $ eine Funktion zweier Variablen definiert durch
+\begin{align*}
+f(x,y) = (x+y+a) e^x - e^y, \quad \textrm{wobei} \ a \in \mathbb{R}.
+\end{align*}
+Untersuchen Sie die Funktion $ f $ auf stationäre Punkte und bestimmen Sie gegebenenfalls, ob ein Maximum, ein Minimum oder ein ein Sattelpunkt vorliegt.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+Bestimme die partiellen Ableitungen von $ f $.
+\item  
+Gebe die Bedingung für einen stationären Punkt an und finde Kandidaten hierfür.
+\item Entscheide, welche Art von Extremum vorliegt.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Bestimme die partiellen Ableitungen von $ f $}\\
+Die partiellen Ableitungen erhalten wir durch
+\begin{align*}
+f_x(x,y)
+&=
+ 1 \cdot  e^x + (x+y+a)e^x  = (x+y+a+1)e^x\\
+f_y(x,y) 
+&= 
+e^x -e^y.
+\end{align*}
+\ \\
+\underline{2. Gebe die notwendigen Bedingung für einen stationären Punkt an und finde Kandidaten hierfür}\\
+Ein stationärer Punkt ist gegeben, falls
+\begin{align*}
+f_x(x,y) &= (x+y+a+1) e^x  =0\\
+f_y(x,y) &= e^x - e^y =  0
+\end{align*}
+erfüllt ist.
+Wegen $ e^x = e^y  $ muss $ x = y  $ gelten. Für die partielle Ableitung nach $ x $ erhalten wir somit
+\begin{align*}
+(x+y+ a +1 ) e^x = 0
+\ \Leftrightarrow \
+x +y +a + 1 = 0
+\ \overset{x = y}{\Leftrightarrow} \
+2x  + a +1 = 0
+\ \Leftrightarrow \
+x = -\frac{a+1}{2} = y.
+\end{align*}
+Dementsprechend liegt ein stationärer Punkt für
+\begin{align*}
+P := (x_0,y_0):= \left( - \frac{a+1}{2}, - \frac{a+1}{2}\right)
+\end{align*}
+vor.\\
+\\
+\underline{3. Entscheide, welche Art von Extremum vorliegt}\\
+Für die Entscheidung benötigen wir die zweiten Ableitung:
+\begin{align*}
+f_{xx}(x,y)
+&= 1 \cdot e^x + (x+y+a+1)e^x  
+=
+(x+y+a+2) e^x\\
+f_{yy}(x,y)&=
+-e^y\\
+f_{xy}(x,y) &=
+f_{yx}(x,y)
+=
+e^x.
+\end{align*}
+Damit erhalten wir 
+\begin{align*}
+f_{xx}(x_0,y_0)
+&=
+\left(
+-\frac{a+1}{2} - \frac{a+1}{2} + a + 2 
+\right) e^{x_0}\\
+&=
+\left(
+-\frac{a}{2} - \frac{1}{2}  - \frac{a}{2} - \frac{1}{2} + a + 2 
+\right) e^{x_0}\\
+&=
+(-a -1 + a + 2)e^{x_0}
+= 1 \cdot e^{x_0} > 0\\
+f_{yy}(x_0,y_0)
+&=
+-e^{y_0} < 0\\
+f_{xy}(x_0,y_0) &= e^{x_0} > 0.
+\end{align*}
+Falls 
+\begin{align*}
+f_{xx}(x_0,y_0) f_{yy}(x_0,y_0)-
+(f_{xy}(x_0,y_0))^2 > 0
+\end{align*}
+gilt, liegt eine Minimum oder Maximum in $ (x_0,y_0) $ vor. Wenn 
+\begin{align*}
+f_{xx}(x_0,y_0) f_{yy}(x_0,y_0)-
+(f_{xy}(x_0,y_0))^2 < 0
+\end{align*}
+erfüllt ist, liegt ein Sattelpunkt in $ (x_0,y_0) $ vor.
+Wegen
+\begin{align*}
+f_{xx}(x_0,y_0) f_{yy}(x_0,y_0)-
+(f_{xy}(x_0,y_0))^2
+=e^{x_0} (-e^{y_0} )- ( e^{x_0})^2
+=-e^{2x_0} - e^{2x_0} 
+= -2 e^{2x_0} < 0. 
+\end{align*}
+befindet sich an $ (x_0,y_0) $ ein Sattelpunkt.
+\newpage
+
+\subsection*{\aufgabe{b}{7}}
+Die Funktion
+\begin{align*}
+f(x,y) = x^2 + y^2
+\end{align*}
+ist unter der Nebenbedingung
+\begin{align*}
+\varphi(x,y)
+=
+a x^2 +bxy+5y^2-16 = 0
+\end{align*}
+zu optimieren.\\
+Bestimmen Sie die Parameter $ a \in \mathbb{R} $ und $ b \in \mathbb{R} $ so, dass in $ (1,1) $ eine mögliche Extremstelle sein könnte.\\
+\\
+\textbf{Bemerkung:} \\
+Eine Abklärung, ob es sich um eine Extremstelle handelt und von welcher Art die Extremstelle ist (Maximum oder Minimum) wird nicht verlangt.\\
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle die Lagrangefunktion und die Bedingung für eine mögliche Extremstelle auf.
+
+\item  Bestimme $ a $ und $ b $, sodass an $ (1,1) $ eine Extremstelle vorliegen kann.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Stelle die Lagrangefunktion und die Bedingung für eine mögliche Extremstelle auf }\\
+Die Lagrangefunktion ist durch 
+\begin{align*}
+F(x,y,\lambda)
+= f(x,y) + \lambda \varphi(x,y) 
+=
+x^2 +y^2 + \lambda (ax^2 +bxy+5y^2-16)
+\end{align*}
+gegeben.
+Hieraus ergeben sich die Lagrangebedingungen
+\begin{align*}
+F_x(x,y,\lambda)
+&=
+2x +\lambda (2x a + by) = 0\\
+F_y(x,y,\lambda)
+&=
+2y+\lambda(10 y +b x) = 0\\
+F_\lambda(x,y,\lambda)
+&=
+\varphi(x,y) = ax^2 +bxy+5y^2 -16 = 0.
+\end{align*}
+Damit wir an $ (1,1) $ eine Extremstelle von $ f $ unter der Nebenbedingung $ \varphi(x,y) = 0 $ erhalten können, muss
+\begin{align*}
+F_x(1,1,\lambda)
+&=
+2 +\lambda (2 a + b) = 0\\
+F_y(1,1,\lambda)
+&=
+2+\lambda(10  +b ) = 0\\
+F_\lambda(1,1,\lambda)
+&=
+\varphi(1,1) = a +b+5 -16 = 0.
+\end{align*}
+erfüllt sein. Das heißt wir suchen nun $ a $ und $ b $, damit die Lagrangebedingungen an der Stelle $ (1,1) $ gleich Null sind.\\
+\\
+\underline{2. Bestimme $ a $ und $ b $, sodass an $ (1,1) $ eine Extremstelle vorliegen kann}\\
+Für $ F_x(1,1,\lambda) = 0 $ gilt
+\begin{align*}
+2 +\lambda (2 a + b) = 0
+\ \Leftrightarrow \
+\lambda (2 a +b) -2
+\ \Leftrightarrow \
+\lambda = - \frac{2}{2a+b}.
+\end{align*}
+Ebenso gilt für $ F_y(1,1,\lambda) = 0 $:
+\begin{align*}
+2+\lambda(10  +b ) = 0
+\ \Leftrightarrow \
+\lambda(10  +b ) = -2
+\ \Leftrightarrow \
+\lambda = - \frac{2}{10  +b }.
+\end{align*}
+Für $ \lambda $ liefert uns dies die Darstellungen
+\begin{align*}
+\lambda &= - \frac{2}{2a +b}\\
+\lambda &= - \frac{2}{10 + b }
+\end{align*}
+und durch Gleichsetzen erhalten wir
+\begin{align*}
+- \frac{2}{2a +b}
+=
+- \frac{2}{10 + b }
+&\ \Leftrightarrow \
+\frac{1}{2a +b} = \frac{1}{10 +b}\\
+&\ \Leftrightarrow \
+2a + b = 10 + b \\
+&\ \Leftrightarrow \
+2 a = 10\\
+&\ \Leftrightarrow  \
+a = 5.
+\end{align*}
+Mit der Nebenbedingung ergibt sich:
+\begin{align*}
+\varphi(1,1) = 
+5  + b  +5 - 16 = 0
+\ \Leftrightarrow \
+b - 6 = 0
+\ \Leftrightarrow \ 
+b = 6.
+\end{align*}
+Also könnte für $ a = 5  $ und $ b = 6 $ eine Extremstelle an $ (1,1)  $ vorliegen.	
+\newpage
+\subsection*{\aufgabe{c}{5}}
+Berechnen Sie 
+\begin{align*}
+\int_0^{\sqrt{0.5 \ \pi}} x \ \sin(x^2) \ \left(\cos(x^2)\right)^3 dx.
+\end{align*}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Bestimme eine geeignete Substitution, um das Integral zu berechnen.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme eine geeignete Substitution, um das Integral zu berechnen}\\
+Die allgemeine Formel für Integration durch Substitution ist anhand von
+\begin{align*}
+\int \limits_a^b f( g(x)) \cdot g^\prime(x) \  dx = 
+\int \limits_{g(a)}^{g(b)} f(t) \ dt
+\end{align*}
+für $f$ stetig und $g$ stetig differenzierbar gegeben.
+Eine passende Substitution kürzt störende Terme in einem Integral weg.
+Dies Erreichen wir mit der Wahl
+\begin{align*}
+t = \cos(x^2),
+\end{align*} 
+denn es gilt
+\begin{align*}
+\frac{
+dt}{dx} = -2x \sin(x^2)
+\ \Leftrightarrow \
+dx
+= \frac{dt}{-2x \sin(x^2)}.
+\end{align*}
+Wichtig ist, auch an die Substitution der Grenzen zu denken.
+Hierfür erhalten wir 
+\begin{align*}
+t_1 &= \cos\left( (\sqrt{0.5 \pi}^2\right)
+= \cos \left(\frac{\pi }{2}\right) = 0\\
+t_0 &= \cos(0) = 1.
+\end{align*}
+Für das Integral gilt somit
+\begin{align*}
+\int_0^{\sqrt{0.5 \ \pi}} x \ \sin(x^2) \ \left(\cos(x^2)\right)^3 dx.
+&=
+\int_1^{0}
+x \ \sin(x^2) t^3 \ \frac{dt}{-2x \sin(x^2)}\\
+&=
+-\frac{1}{2}\int_1^{0}
+t^3 \ dt
+=
+\frac{1}{2}\int_0^{1}
+t^3 \ dt
+=\frac{1}{2} 
+\left[
+\frac{1}{4} t^4
+\right]_0^1\\
+&=
+\frac{1}{2} \cdot \left(\frac{1}{4} 1^4 - \frac{1}{4} 0^4\right) 
+=
+\frac{1}{2} \cdot \frac{1}{4} 
+= \frac{1}{8}.
+\end{align*}
+\newpage
+\subsection*{\aufgabe{d}{6}}
+Berechnen Sie 
+\begin{align*}
+\int_0^e |\ln(x)| dx.
+\end{align*}
+\ \\
+\textbf{Bemerkung:} Sie dürfen das in Mathematik A bewiesene Resultat, dass gilt:
+\begin{align*}
+\lim \limits_{x \searrow 0} x \ \ln(x) = 0,
+\end{align*}
+voraussetzen.\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Teile das Integral auf, um den Betrag aufzulösen.
+\item Bestimme die Stammfunktion mit partieller Integration.
+\item Verwende die Stammfunktion, um das Integral zu berechnen.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Teile das Integral auf, um den Betrag aufzulösen}\\
+Für den Logarithmus gilt
+\begin{align*}
+&\ln(x) < 0 \ \textrm{falls} \ x \in (0,1)\\
+&\ln(x) \geq 0 \ \textrm{falls} \ x \in [1,\infty),
+\end{align*}
+womit für das Integral mithilfe der Definition des Betrags
+\begin{align*}
+\int_0^e |\ln(x) | \ dx
+=
+\int_0^1 |\ln(x) | \ dx
++
+\int_1^e | \ln(x) | \ dx
+=
+\int_0^1 -\ln(x)  \ dx
++
+\int_1^e  \ln(x)  \ dx
+\end{align*}
+folgt.\\
+\\
+\underline{2. Bestimme die Stammfunktion mit partieller Integration}\\
+Die Formel für partielle Integration ist durch
+\begin{align*}
+\int u^\prime(x) \cdot v(x) \ dx = u(x) \cdot v(x) - \int u(x) v^\prime(x)\ dx
+\end{align*}
+für stetig differenzierbare $ u,v $ gegeben.
+Durch partielle Integration erhalten wir mit
+\begin{align*}
+\int \ln(x) \ dx
+=
+\int 1 \cdot \ln(x) \ dx
+= 
+x \ln(x) - \int x \frac{1}{x} \ dx
+=
+x \ln(x) - \int 1 \ dx
+= x \ln (x) - x + C
+\end{align*}
+die gesuchte Stammfunktion.\\
+\\
+\underline{3. Verwende die Stammfunktion, um das Integral zu berechnen}\\
+Zuerst bestimmen wir das einfachere Integral:
+\begin{align*}
+\int_1^e  \ln(x)  \ dx
+= \left[
+x \ln(x) - x
+\right]_1^e
+= 
+e \ln(e) - e - \ln(1)  +1 
+= 
+1.
+\end{align*}
+Für den zweiten Teil benötigen wir die Aussage
+\begin{align*}
+\lim \limits_{x \searrow 0} x \ \ln(x) = 0,
+\end{align*}
+da $ \lim_{x \searrow 0 } \ln(x) = - \infty$ gilt.
+Also ist der Logarithmus für $ x = 0 $ nicht definiert und es liegt ein unbestimmtes Integral vor. 
+Das Integral berechnen wir nun wie folgt:
+\begin{align*}
+\int_0^1 -\ln(x)  \ dx
+&=
+- \int_0^1 \ln(x)  \ dx
+=
+- \lim \limits_{a \searrow 0} \int_a^1 \ln(x) \ dx
+=
+- \lim \limits_{a \searrow 0} \left[
+x \ln (x) - x
+\right]_a^1\\
+&=
+- \lim \limits_{a \searrow 0} (1 \cdot \ln(1) - 1 - a \ln (a) +a )
+=
+1 - \lim \limits_{a \searrow 0} (-a \ln(a) +a)
+=
+1. 
+\end{align*}
+Insgesamt erhalten wir:
+\begin{align*}
+\int_0^e |\ln(x) | \ dx
+=
+\int_0^1 -\ln(x)  \ dx
++
+\int_1^e  \ln(x)  \ dx
+= 1 + 1 = 2.
+\end{align*}
+\ \\
+\textit{
+Alternativ lässt sich auch die partielle Integration für bestimmte Integrale verwenden, falls man die Bestimmung der Stammfunktion und die Berechnung des Integrals kombinieren möchte.
+}
+
+\newpage

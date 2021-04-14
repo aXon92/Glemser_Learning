@@ -1,0 +1,586 @@
+\vspace{1cm}
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
+\renewcommand{\labelenumi}{\theenumi.}
+\section*{Aufgabe 1 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{6}}
+Ein Konsument \textit{maximiert} seine Nutzenfunktion $u(c_1,c_2)$ in den Einheiten $c_1$ und $c_2$
+der Güter 1 und 2 definiert durch:
+\begin{equation*}
+u \ : \ \mathbb{R}_+ \times \mathbb{R}_+ \to \mathbb{R},
+\quad (c_1,c_2) \mapsto u(c_1,c_2) = c_1^{0.6} c_2^{0.4}
+\end{equation*}
+über die Wahl des Konsumbündels $(c_1^\star,c_2^\star)$.
+Die Preise der Güter 1 und 2 sind $p_1 \ = \ 3$ beziehungsweise $p_2 \ = \ 4$,
+und das Budget, welches \textit{vollständig} genutzt wird, beträgt $e = 15$.
+\\
+Bestimmen Sie die stationären Punkte des Maximierungsproblems des Konsumenten, 
+d.h., Kandidaten für das optimale Konsumbündel $(c_1^\star,c_2^\star)$.
+\\
+\\
+\textbf{Hinweis:}\\ 
+Eine Abklärung, ob es sich bei den stationären Punkten tatsächlich um Maxima handelt, wird nicht verlangt.
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Formuliere das Optimierungsproblem mathematisch.
+\item Löse die Aufgabe mithilfe der Lagrange Methode.
+\item Alternative Rechenmethode.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Formuliere das Optimierungsproblem mathematisch}\\
+Unser Ziel ist es, die Funktion
+\begin{equation*}
+u(c_1,c_2) = c_1^{0.6}c_2^{0.4}
+\end{equation*}
+unter der Nebenbedingung
+\begin{equation*}
+p_1 c_1 + p_2 c_2 = e \Rightarrow
+\varphi(c_1,c_2) = p_1 c_1 + p_2 c_2 - e = 3 c_1 + 4 c_2 - 15 = 0
+\end{equation*}
+zu maximieren.
+\\
+\\
+\underline{2. Löse die Aufgabe mithilfe der Lagrange Methode}\\
+Zunächst bietet es sich bei Extremwertaufgaben unter Nebenbedingungen an, die Lagrange Methode zu verwenden
+Die Nebenbedingung
+\begin{equation*}
+\varphi(c_1,c_2) = 3 c_1 + 4 c_2 - 15 = 0
+\end{equation*}
+besitzt nur lineare Terme.
+Das heißt, wir können diese explizit nach $c_1$ bzw. $c_2$ auflösen.
+Durch diese Umformung erhalten wir aus $u$ eine Funktion, welche von einer Variablen abhängt.
+Beide Methoden sind in etwa gleich schwer, jedoch funktioniert die zweite Methode nicht immer.
+\\
+\\ 
+Wir definieren durch
+\begin{equation*}
+F(c_1,c_2,\lambda) = u(c_1,c_2) + \lambda \varphi(c_1,c_2)
+\end{equation*}
+die Lagrange-Funktion.
+Die notwendige Bedingung für Extremstellen unter unserer Nebenbedingung ist,
+dass die partiellen Ableitungen der Lagrange-Funktion gleichzeitig Null sind.
+Durch
+\begin{align*}
+F_{c_1}(c_1,c_2,\lambda) &= 0.6 c_1^{-0.4} c_2^{0.4} + 3 \lambda\\
+F_{c_2}(c_1,c_2, \lambda) &= 0.4 c_1^{0.6} c_2^{-0.6} + 4 \lambda \\
+F_{\lambda}(c_1,c_2,\lambda) &=\varphi(c_1,c_2) = 3 c_1 + 4 c_2 -15 
+\end{align*}
+erhalten wir die partiellen Ableitungen.
+Wir müssen nun das Gleichungssystem
+\newcounter{eq}
+\setcounter{eq}{0}
+\begin{align}
+0.6 c_1^{-0.4} c_2^{0.4} + 3 \lambda = 0  \tag{\text{\Roman{eq}}}\stepcounter{eq}\\
+0.4 c_1^{0.6} c_2^{-0.6} + 4 \lambda = 0  \tag{\text{\Roman{eq}}}\stepcounter{eq}\\
+3 c_1 + 4 c_2 -15 = 0 \tag{\text{\Roman{eq}}}\stepcounter{eq}
+\end{align}
+lösen. 
+Die Gleichungen (I) und (II) liefern uns durch
+\begin{align}
+0.6 c_1^{-0.4} c_2^{0.4} + 3 \lambda &= 0 
+\Leftrightarrow 
+3 \lambda = -0.6 c_1^{-0.4} c_2^{0.4} 
+\Leftrightarrow
+3 \lambda= -0.6 \frac{c_2^ {0.4}}{c_1^{0.4}}
+\Leftrightarrow
+3 \lambda= -0.6 \left( \frac{c_2}{c_1} \right)^{0.4}
+\tag{\text{\Roman{eq}}}\stepcounter{eq}\\
+0.4 c_1^{0.6} c_2^{-0.6} + 4 \lambda &= 0 
+\Leftrightarrow 
+4 \lambda = - 0.4 c_1^{0.6} c_2^{-0.6} 
+\Leftrightarrow
+4 \lambda = -0.4 = \frac{c_1^{0.6}}{c_2^{0.6}}
+\Leftrightarrow
+4 \lambda=- 0.4 \left( \frac{c_1}{c_2} \right)^{0.6}
+\tag{\text{\Roman{eq}}}\stepcounter{eq}    
+\end{align}
+zwei neue Gleichungen.
+Wegen $c_1, c_2 > 0 $ sehen wir, dass $\lambda \neq 0 $ gilt.
+Also können wir (IV) durch (V) teilen.
+Damit gilt
+\begin{equation*}
+\begin{split}
+\frac{3 \lambda }{4 \lambda} 
+&= \frac{-0.6 \left( \frac{c_2}{c_1} \right)^{0.4}}{- 0.4 \left( \frac{c_1}{c_2} \right)^{0.6}}
+= \frac{3}{2} \cdot \frac{c_2^{0.4} c_2^{0.6}}{c_1^{0.6} c_1^{0.4}}
+= \frac{3}{2} \frac{c_2}{c_1}\\
+\Rightarrow
+\frac{3 \lambda }{4 \lambda} &= \frac{3}{2} \frac{c_2}{c_1}
+\Leftrightarrow
+\frac{3  }{4 } = \frac{3}{2} \frac{c_2}{c_1}
+\Leftrightarrow
+6 c_1 = 12 c_2
+\Leftrightarrow
+c_1 = 2 c_2,
+\end{split}
+\end{equation*}
+womit durch Gleichung (III)
+\begin{equation*}
+\begin{split}
+3 c_1 + 4 c_2 - 15 &= 3 (2c_2) + 4 c_2 -15 = 10 c_2  -15 = 0 \\
+\Leftrightarrow
+10 c_2 &= 15 
+\Leftrightarrow
+c_2 = \frac{15}{10} = \frac{3}{2} = 1.5  
+\end{split}
+\end{equation*}
+folgt.
+Durch $c_1 = 2 c_2 $ wissen wir auch $c_1 = 3$.
+Damit ist 
+\begin{align*}
+(c_1^\star, c_2^\star) = ( 3, 1.5)
+\end{align*}
+der einzige Kandidat für eine Extremstelle unter der Nebenbedingung $\varphi$.\\
+\\
+\underline{3. Alternative Rechenmethode}\\
+Für die alternative Methode formen wir die Nebenbedingung $\varphi$ nach einer Variablen um
+und substituieren diese in $u$.
+Durch die Umformung 
+\begin{equation*}
+\begin{split}
+\varphi(c_1,c_2) &= p_1 c_1 + p_2 c_2 -e = 3 c_1 + 4 c_2 - 15 = 0\\
+\Leftrightarrow
+3 c_1 &= 15 - 4 c_2 \\
+\Leftrightarrow
+c_1 &= 5 - \frac{4}{3} c_2
+\end{split}
+\end{equation*}
+können wir $c_1 $ durch $c_2$ darstellen.
+Damit erhalten wir mit 
+\begin{equation}
+U(c_2) = u( c_1 , c_2) 
+= u\left( 5 - \frac{4}{3}c_2,c_2 \right) 
+=\left( 5 - \frac{4}{3}c_2 \right)^{0.6} c_2^{0.4}
+\end{equation}
+eine Funktion, welche nur von der Variablen $c_2$ abhängt.
+Wir müssen nun die Extrempunkte von $U$ finden. 
+Hierfür lösen wir $U^\prime(c_2) = 0 $.
+Zunächst gilt
+\begin{equation*}
+\begin{split}
+U^\prime(c_2)
+&= 0.6 \left( 5 - \frac{4}{3} c_2 \right)^{-0.4} \left( -\frac{4}{3} \right) c_2^{0.4}
++ 0.4 \left( 5 - \frac{4}{3} c_2 \right)^{0.6} c_2^{-0.6}\\
+&= -\frac{4}{5} \left( 5 - \frac{4}{3} c_2 \right)^{-0.4}  c_2^{0.4}
++ \frac{2}{5} \left( 5 - \frac{4}{3} c_2 \right)^{0.6} c_2^{-0.6}\\
+&= - \frac{4}{5} \left( \frac{c_2}{5 - \frac{4}{3} c_2} \right)^{0.4}
++ \frac{2}{5} \left( \frac{5 - \frac{4}{3} c_2}{c_2}  \right)^{0.6}\\
+&= - \frac{4}{5} \left( \frac{c_2}{5 - \frac{4}{3} c_2} \right)^{0.4}
++ \frac{2}{5} \left( \frac{c_2}{5 - \frac{4}{3} c_2} \right)^{0.4} \frac{5 - \frac{4}{3} c_2}{c_2}\\
+&=
+\left( \frac{c_2}{5 - \frac{4}{3} c_2} \right)^{0.4} \left( -\frac{4}{5} + \frac{2}{5} \frac{5 - \frac{4}{3} c_2}{c_2} \right)
+\end{split}
+\end{equation*}
+mithilfe der Produkt und Kettenregel.
+Die weiteren Umformungen helfen uns $U^\prime(c_2) = 0$ zu lösen.
+Wegen $c_2 \neq 0 $ erhalten wir durch
+\begin{equation*}
+\begin{split}
+U^\prime(c_2) = 0 
+&\Leftrightarrow
+\left( \frac{c_2}{5 - \frac{4}{3} c_2} \right)^{0.4} \left( -\frac{4}{5} + \frac{2}{5} \frac{5 - \frac{4}{3} c_2}{c_2} \right) = 0\\
+&\Leftrightarrow
+\left( -\frac{4}{5} + \frac{2}{5} \frac{5 - \frac{4}{3} c_2}{c_2} \right) = 0\\
+&\Leftrightarrow
+-\frac{4}{5} c_2 \frac{2}{5}\left(5 -\frac{4}{3} c_2 \right) = 0 \\
+&\Leftrightarrow
+\left(- \frac{4}{5} - \frac{8}{15} \right) c_2 = -2\\
+&\Leftrightarrow
+\frac{20}{15} c_2 =  2 
+\Leftrightarrow
+c_2 = 1.5
+\end{split}
+\end{equation*}
+das passende $c_2$.
+Mit $c_1 = 5 - \frac{4}{3} c_2$ folgt auch $c_1 = 3$.
+Damit ist auch bei dieser Methode
+\begin{align*}
+(c_1^\star , c_2^\star) = (3, 1.5)
+\end{align*}
+der einzige Kandidat für eine Extremstelle unter der Nebenbedingung $\varphi$.
+\\
+\\
+Der Kandidat für das optimale Konsumbündel ist $(c_1^\star , c_2^\star) = (3, 1.5)$.
+
+\newpage
+
+\subsection*{\aufgabe{b}{9}}
+Sei $f \ : \ \mathbb{R} \times (-5, \infty) \to \mathbb{R}$ eine Funktion zweier reeller Variablen definiert durch:
+\begin{equation*}
+f(x,y)\ = \ x^2 + 3 x y + 16 \ln(y+5).
+\end{equation*}
+Sei $g \ : \ R_f \to \mathbb{R}$ eine stetig differenzierbare Funktion einer reellen Variablen mit $g^\prime(x) > 0$
+für alle $x \in R_f$, wobei $R_f$ der Wertebereich von $f$ ist.
+Schließlich sei die Komposition $h$ gegeben als
+\begin{equation*}
+h \ : \ D_f \to \mathbb{R}, \quad (x,y) \mapsto h(x,y) = g(f(x,y)),
+\end{equation*}
+$D_f$ ist dabei das Definitionsgebiet von $f$.
+\\
+\\
+Untersuchen Sie die Funktion $h$ auf stationäre Punkte, d.h., Maxima, Minima und Sattelpunkte.
+\\
+\\
+\textbf{Hinweis:} \\
+Dank der Eigenschaft von $g$ ist es möglich, das Problem in handhabbare Form zu bringen.\\
+
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die gegebenen Eigenschaften, um das Problem zu strukturieren.
+\item Finde die stationären Punkte von $h$.
+\item Bestimme die Art des stationären Punkts.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die gegebenen Eigenschaften, um das Problem zu strukturieren}\\
+Nach Voraussetzung ist $g^\prime(x) > 0$ für alle $x \in R_f$.
+Die \textit{notwendige} Bedingung für stationäre Punkte ist, dass die partiellen Ableitungen von $h$ gleichzeitig Null sind.
+Mathematisch können wir dies durch
+\begin{align*}
+h_x(x, y) = 0 \qquad 
+h_y(x, y) = 0
+\end{align*}
+ausdrücken.
+Die Punkte $(x, y)$, welche diese Bedingung erfüllen, nennen wir stationäre Punkte.
+Wegen $g^\prime(x) > 0 $ gilt
+\begin{align*}
+h_x(x, y) &=  g^\prime(f(x,y)) \cdot f_x(x,y) = 0
+\Leftrightarrow
+f_x(x,y) = 0\\
+h_y(x,y) &= g^\prime(f(x,y)) \cdot f_y(x,y) = 0 
+\Leftrightarrow
+f_y(x,y) = 0.
+\end{align*}
+Dies kann man sich mithilfe der Kettenregel überlegen.
+Die Kettenregel findet Anwendung bei verketteten Funktionen sprich, wenn eine Funktion eine äußere und eine innere Funktion hat.
+Dies ist bei 
+\begin{align*}
+h(x,y) = g(f(x,y)) 
+\end{align*}
+gegeben. Hierbei ist $g$ die äußere und $f$ die innere Funktion.
+Die Kettenregel funktioniert hier wie im eindimensionalen Fall.
+Wenn wir partiell nach $x$ ableiten, behandeln wir $y$ als eine Konstante.
+Damit genügt es die stationären Punkte von $f$ zu bestimmen, da diese mit denen von $h$ übereinstimmen.
+Wegen $g^\prime(x) > 0 $ können $h_x$ und $h_y$ nur Null ergeben, wenn $f_x$ bzw. $f_y$ Null ergeben.\\
+\newpage
+\underline{2. Finde die stationären Punkte von $h$}\\
+Zunächst bestimmen wir durch
+\begin{equation*}
+\begin{split}
+f_x(x,y) &= 2x + 3y \\
+f_y(x,y) &= 3x + 16 (y+5)^{-1} = 3x + \frac{16}{y+5}
+\end{split}
+\end{equation*}
+die ersten partiellen Ableitungen von $f$.
+Diese müssen nun die \textit{notwendigen} Bedingungen
+\begin{equation*}
+f_x(x,y) = 0 \ \text{und} \ f_y(x,y) = 0
+\end{equation*}
+erfüllen. Dies führt zu dem Gleichungssystem
+\begin{equation*}
+\begin{split}
+f_x(x,y) &= 2x + 3y = 0\\
+f_y(x,y) &=  3x + \frac{16}{y+5} = 0.
+\end{split}
+\end{equation*}
+Durch Umformen der ersten Gleichung erhalten wir mit
+\begin{equation*}
+2x + 3y = 0 
+\Leftrightarrow
+3y = -2x
+\Leftrightarrow
+y = -\frac{2}{3} x 
+\end{equation*}
+eine Darstellung für $y$.
+Wir lösen die Gleichung durch Einsetzen in die Mitternachtsformel Mitternachtsformel:
+\begin{equation*}
+\begin{split}
+&3x + \frac{16}{y+5} = 3x + \frac{16}{-\frac{2}{3}x+5} = 0\\
+\Leftrightarrow
+&3x \left( -\frac{2}{3}x+5 \right) + 16 = -2 x^2 + 15 x + 16 = 0\\
+\Leftrightarrow
+&x_{\nicefrac{1}{2}}= \frac{- 15 \pm \sqrt{15^2 + 4 \cdot 2 \cdot 16}}{- 2 \cdot 2} 
+= \frac{15 \pm \sqrt{353}}{4}\\
+\Rightarrow
+&x_1 = \frac{15 + \sqrt{353}}{4}, \quad
+x_2 = \frac{15 - \sqrt{353}}{4}
+\end{split}
+\end{equation*}
+Wir setzen nun $x_1$ und $x_2$ in die Gleichung $y = -\frac{2}{3} x$ ein und bestimmen so die möglichen stationären Punkte:
+\begin{equation*}
+\begin{split}
+x_1  = \frac{15 - \sqrt{353}}{4}
+&\Rightarrow
+y_1 = -\frac{2}{3} x_1 = \frac{-15 + \sqrt{353}}{6}
+\Rightarrow
+P_1 = \left( \frac{15 - \sqrt{353}}{4}, \frac{-15 + \sqrt{353}}{6} \right)
+\\
+x_2  = \frac{15 + \sqrt{353}}{4}
+&\Rightarrow
+y_2 = -\frac{2}{3} x_2 = \frac{-15 - \sqrt{353}}{6}
+\Rightarrow
+P_2 = \left( \frac{15 + \sqrt{353}}{4}, \frac{-15 - \sqrt{353}}{6} \right).
+\end{split}
+\end{equation*}
+Wir können den Punkt $P_2$ direkt ausschließen, da dieser sich nicht in dem Definitionsgebiet von $f$ befindet.
+Dies können wir an
+\begin{align*}
+\frac{-15 - \sqrt{353}}{6} < -5
+\end{align*}
+erkennen.
+Unser stationärer Punkt ist also durch
+\begin{align*}
+P_1 = \left( \frac{15 - \sqrt{353}}{4}, \frac{-15 + \sqrt{353}}{6} \right)
+\end{align*}
+gegeben.\\
+
+\newpage
+
+\underline{3. Bestimme die Art des stationären Punkts}\\
+Auch hier reicht es wieder aus $f$ zu untersuchen.
+Zunächst betrachten wir die \textit{hinreichenden} Bedingungen für Maxima, Minima und Sattelpunkte.\\
+
+\textbf{Hinreichende Bedingungen}\\
+Sei $f : \mathbb{R}^2 \to \mathbb{R}$ gegeben und $(x_0,y_0) $ ein kritischer Punkt.
+Dann ist
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item
+\index{Minimum}
+$f(x_0,y_0)$ ein \textit{Minimum}, falls
+\begin{align*}
+f_{xx}(x_0,y_0) > 0, \ f_{yy}(x_0,y_0) > 0, \ \text{und} \ f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - (f_{xy}(x_0,y_0))^2  > 0.
+\end{align*}
+
+\item
+\index{Maximum}
+$f(x_0,y_0)$ ein \textit{Maximum}, falls
+\begin{align*}
+f_{xx}(x_0,y_0) < 0, \ f_{yy}(x_0,y_0) < 0, \ \text{und} \ f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - (f_{xy}(x_0,y_0))^2  > 0.
+\end{align*}
+
+\item
+\index{Sattelpunkt}
+$f(x_0,y_0)$ ein \textit{Sattelpunkt}, falls
+\begin{align*}
+f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - (f_{xy}(x_0,y_0))^2  < 0.
+\end{align*}
+\end{enumerate}
+
+Wir bestimmen nun die zweiten partiellen Ableitungen von $f$.
+Es gilt
+\begin{equation*}
+\begin{split}
+f_{xx}(x,y)  &= 
+\frac{\partial}{\partial \mathrm{x}} (2x + 3y) = 2
+ \\
+f_{xy}(x,y)  &=
+= \frac{\partial}{\partial \mathrm{y}} (2x + 3y) 
+= 3 \\
+f_{yy}(x,y) &= 
+\frac{\partial}{\partial \mathrm{y}} \left(3x + \frac{16}{y+5} \right)
+=
+\frac{\partial}{\partial \mathrm{y}} \left(3x + 16 \cdot (y+5)^{-1} \right)
+= 16 \cdot (-1)\cdot(y+5)^{-2}
+- \frac{16}{(y+5)^2}.
+\end{split}
+\end{equation*}
+Wir sehen, dass $f_{xx}(x,y) > 0$ für alle $(x,y) \in D_f$ gilt. 
+Es gilt auch $f_{yy}(x,y) < 0 $ für alle $(x,y) \in D_f$.
+Damit ist 
+\begin{equation*}
+f_{xx}(x,y) f_{yy} (x,y) - (f_{xy}(x,y))^2 < 0
+\end{equation*}
+für alle $(x,y) \in D_f$ gegeben.
+Somit ist $P_1 $ ein Sattelpunkt.
+
+\newpage
+\subsection*{\aufgabe{c}{6}}
+Ein Investment Fonds generiert innerhalb der Zeitspanne von $t=0$ zu $T=12$ einen
+stetigen Cashflow von $B(t) = 10 t + 5$.
+Die Verzinsung erfolgt kontinuierlich zum Zinssatz $i = 5 \%$.
+\\
+\\
+Bestimmen Sie den Nettobarwert $PV(0)$ zum Zeitpunkt $t = 0$ \textit{aller} Zahlungsströme,
+die der Investment Fonds zwischen den Zeitpunkten $t = 0$ und $T = 12$ generiert.\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Formuliere das Problem mathematisch.
+\item Bestimme die nötige Stammfunktion mithilfe partieller Integration.
+\item Berechne den Wert des Integrals.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Formuliere das Problem mathematisch}\\
+Um den Nettobarwert $PV(0)$ zu bestimmen, müssen wir das Integral
+\begin{equation*}
+PV(0)
+=
+\int \limits_0^T B(t) e^{-i t} \ dt
+=
+\int \limits_0^{12} (10 t + 5) e^{-0.05 t} \ dt
+\end{equation*}
+berechnen.\\
+\\
+\underline{2. Bestimme die nötige Stammfunktion mithilfe partieller Integration}\\
+%Zunächst betrachten wir die Produktregel und formen diese durch
+%\begin{equation*}
+%(u(t) v(t))^\prime = u^\prime(t) \cdot v(t) + u(t) \cdot v^\prime(t)
+%\Leftrightarrow
+%u(t) v^\prime(t) = (u(t)  v(t))^\prime - u^\prime(t) v(t)
+%\end{equation*}
+%um. Nun erhalten wir mit
+%\begin{equation*}
+%\int u(t) v^\prime(t) \ dt 
+%= 
+%\int (u(t)  v(t))^\prime \ dt - \int u^\prime(t) v(t) \ dt
+%=
+%u(t) v(t) - \int u^\prime(t) v(t) \ dt
+%\end{equation*}
+%die Regel für partielle Integration für unbestimmte Integrale.
+%Für bestimmte Integrale geht die Umformung genauso.
+%Dies war eine kurze Herleitung der partiellen Integration.
+%Nun wenden wir diese Regel an.
+Wir wählen
+\begin{equation*}
+\begin{split}
+u^\prime(t)  =  e^{-0.05 t},  \quad
+v(t)  = 10 t +5
+\end{split}
+\end{equation*}
+für die partielle Integration.
+Dies macht Sinn, denn $v$ wird nach einmal Ableiten konstant.
+Es gilt 
+\begin{equation*}
+\begin{split}
+u(t) = \frac{1}{-0.05} e^{-0.05t} 
+=- \frac{100}{5} e^{-0.05t} = -20 e^{-0.05t}, \quad
+v^\prime(t) = 10.
+\end{split}
+\end{equation*}
+Mithilfe der Regel für partielle Integration erhalten wir
+\begin{equation*}
+\begin{split}
+\int (10 t + 5) e^{-0.05 t} \ dt
+&= 
+(10t +5) (-20) e^{-0.05 t} ) - \int  10 (-20) e^{-0.05t} \ dt\\
+&= -( 200 t + 100) e^{-0.05 t} + 200 \int e^{-0.05 t} \ dt\\
+&=-(200 t + 100)  e^{-0.05t } + 200 (-20) e^{-0.05 t}  + C\\
+&= -(200 t + 100) e^{-0.05 t } -4000 e^{-0.05t} + C \\
+&= -(200 t +4100) e^{-0.05 t} + C
+\end{split}
+\end{equation*}
+als Stammfunktion.\\
+
+\newpage
+\underline{3. Berechne den Wert des Integrals}\\
+Da wir nun die Stammfunktion kennen, können wir das Integral direkt durch
+\begin{equation*}
+\int \limits_0^{12} (10t + 5) e^{-0.05 t} \ dt
+=  \left[ -(200 t +4100) e^{-0.05 t} \right]_0^{12}
+= -6500 e^{-0.6 }+4100 
+\approx 532.70
+\end{equation*}
+berechnen.\\
+\\
+Der Nettobarwert beträgt ungefähr $532.70$.
+
+\newpage
+\subsection*{\aufgabe{d}{4}}
+Berechnen Sie das unbestimmte Integral
+\begin{equation*}
+\int \frac{\sin(\ln(x)) \ \cos(\ln(x))}{x} dx.
+\end{equation*}
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Finde eine geeignete Substitution und bestimme die Stammfunktion.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Finde eine geeignete Substitution und bestimme die Stammfunktion}\\
+Es gilt
+\begin{equation*}
+\frac{\text{d}}{\text{d} x}
+\sin(\ln(x))
+= \frac{\cos(\ln(x))}{x}
+\end{equation*}
+mit der Kettenregel.
+Demnach haben wir durch
+\begin{equation*}
+\int \frac{\sin(\ln(x)) \ \cos(\ln(x))}{x} dx
+=
+\int \sin(\ln(x)) \cdot \frac{ \ \cos(\ln(x))}{x} dx
+=
+\int \sin(\ln(x)) \ \frac{\text{d}}{\text{d} x} \sin(\ln(x)) dx
+\end{equation*}
+die geeignete Substitution 
+\begin{equation*}
+u = \sin(\ln(x))
+\end{equation*}
+gefunden.
+Durch 
+\begin{equation*}
+\frac{\text{d} u }{\text{d} x} = \frac{\cos(\ln(x))}{x}
+\Rightarrow
+\text{d}  u =  \frac{\cos(\ln(x))}{x} \ \text{d} x  
+\end{equation*}
+erhalten wir mit
+\begin{equation*}
+\int \frac{\sin(\ln(x)) \ \cos(\ln(x))}{x} dx 
+=
+\int u \ du
+= \frac{1}{2} u^2 + C
+= \frac{1}{2} (\sin(\ln(x)))^2 + C
+\end{equation*}
+die gesuchte Stammfunktion.\\ \\
+Eine andere Möglichkeit ist, zweimal zu substituieren.
+Zuerst substituieren wir $v = \ln(x)$.
+Mit 
+\begin{equation*}
+\frac{\text{d} v}{\text{d} x}
+= \frac{1}{x}
+\Rightarrow
+\text{d} v = \frac{1}{x} \ \text{d} x
+\end{equation*}
+erhalten wir
+\begin{equation*}
+\int \frac{\sin(\ln(x)) \ \cos(\ln(x))}{x} \ dx
+= \int \sin(v) \cos(v) \ dv.
+\end{equation*}
+Die zweite Substitution ist $w = \sin(v)$.
+Für diese gilt
+\begin{equation*}
+\frac{\text{d} w}{\text{d} v} = \cos(v)
+\Rightarrow
+\text{d} w = \cos(v) \ \text{d} v
+\end{equation*}
+und es folgt
+\begin{equation*}
+\begin{split}
+\int \frac{\sin(\ln(x)) \ \cos(\ln(x))}{x} \ dx
+&= \int \sin(v) \cos(v) \ dv
+= \int w \ dw\\
+&= \frac{1}{2} w^2 + C
+= \frac{1}{2} (\sin(v))^2
+= \frac{1}{2} (\sin(\ln(x)))^2 +C
+\end{split}
+\end{equation*}
+durch zweimaliges Zurücksubstituieren.\\
+\\
+Die gesuchte Stammfunktion ist
+\begin{align*}
+\frac{1}{2} (\sin(\ln(x)))^2 +C.
+\end{align*}

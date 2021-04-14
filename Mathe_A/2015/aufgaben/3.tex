@@ -1,0 +1,579 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 3 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{2}}
+Gegeben seien die Aussagen
+\begin{align*}
+A(x) &= \text{\glqq $\frac{x}{4}$ ist eine positive ganze Zahl\grqq}\\
+B(x) &= \text{\glqq $x$ ist eine gerade Zahl\grqq}.
+\end{align*}
+Welche der Aussagen ist wahr:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $A(x) \Rightarrow B(x)$.
+\item $A(x) \Leftrightarrow B(x)$.
+\item $\neg A(x) \Rightarrow B(x)$.
+\item $A(x) \Rightarrow \neg B(x)$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Setze Zahlen ein um die Aussagen zu überprüfen.
+Es reicht ein Gegenbeispiel für eine Aussage zu finden, um sie zu widerlegen.
+\item Zur Übung beweisen wir die richtige Aussage.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Setze Zahlen ein um die Aussagen zu überprüfen}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $A(x) \Rightarrow B(x)$ bedeutet:
+Wenn $A(x)$ gilt, dann gilt $B(x)$ bzw. aus $A(x)$ folgt $B(x)$.\\
+Wir setzen $x=4$ ein, sodass
+\begin{equation}
+\frac{x}{4}= \frac{4}{4} = 1
+\end{equation}
+eine positive ganze Zahl ist.
+Nun ist $x=4$ gerade, womit die Aussage für dieses $x$ stimmt.
+Es gilt
+\begin{align*}
+1 = \frac{4}{4},
+\end{align*}
+womit $x = 4 $ und gerade ist.
+Vermutlich ist dies die korrekte Aussage.
+\item $A(x) \Leftrightarrow B(x)$ bedeutet:
+$A(x)$ gilt genau dann, wenn $B(x)$ gilt.\\
+Wir erinnern uns, dass
+\begin{align*}
+A(x) \Leftrightarrow B(x)
+\end{align*}
+dasselbe wie 
+\begin{align*}
+A(x) \Rightarrow B(x) \ \text{und} \ A(x) \Leftarrow B(x)
+\end{align*}
+bedeutet. Also aus $A(x)$ folgt $B(x)$ und aus $B(x)$ folgt $A(x)$.
+Wir nehmen die einfachste gerade Zahl $x = 2 $.
+Dann gilt 
+\begin{align*}
+\frac{x}{4} = \frac{2}{4} = \frac{1}{2} = 0,5 \,
+\end{align*}
+wodurch wir ein Gegenbeispiel für $A(x) \Leftarrow B(x)$ gefunden haben.
+\item $\neg A(x) \Rightarrow B(x)$ bedeutet:
+Wenn $A(x)$ nicht gilt, dann gilt $B(x)$\\
+Das Symbol $\neg$ ist die Negation oder Umkehrung einer Aussage.
+Wir haben also 
+\begin{align*}
+\neg A(x) = \text{\glqq $\frac{x}{4}$ ist keine positve ganze Zahl\grqq}
+\end{align*}
+als Aussage.
+Wir setzen $x= 3$.
+Damit ist die Zahl $\nicefrac{x}{4} = \nicefrac{3}{4} = 0.75$ ist keine positive ganze Zahl, aber die $3$ ist nicht gerade.
+Dementsprechend kann $B(x)$ nicht erfüllt sein.
+Also ist diese Aussage falsch.
+\item $A(x) \Rightarrow \neg B(x)$ bedeutet:
+Wenn $A(x)$ gilt, so gilt $B(x)$ nicht.\\
+Wenn $\nicefrac{x}{4}$ eine positive ganze Zahl ist, ist $x$ durch $4$ teilbar.
+Somit ist $x$ auch durch $2$ teilbar.
+Womit nicht ungerade sein kann.
+Wir wählen wieder $x= 4$ und sehen direkt das $x$ gerade ist.
+\end{enumerate}
+Wir haben gesehen, dass (b),(c) und (d) falsch sind. 
+Also muss (a) korrekt sein.\\
+\\
+\underline{2. Zur Übung beweisen wir die richtige Aussage}\\
+Eine Aussage der Form 
+\begin{align*}
+A(x) \Rightarrow B(x)
+\end{align*}
+beweist man, indem man $A(x)$ als gegeben ansieht und $B(x)$.
+Sei also $\nicefrac{x}{4}$ eine positive ganze Zahl.
+Damit ist $x$ durch $4$ teilbar.
+Wir wissen also 
+\begin{align*}
+x = 4 \cdot y = 2 \cdot 2 \cdot y
+\end{align*}
+mit $y \in \mathbb{N}$. Damit ist $x$ gerade, da durch $2$ teilbar.
+\newpage
+\subsection*{\frage{2}{3}}
+Gegeben seien die Folgen $\lbrace a_n \rbrace_{ n\in \mathbb{N}}$ und $\lbrace b_n\rbrace_{ n\in \mathbb{N}}$.
+Beide Folgen sind konvergent.
+Sei $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ die Folge definiert durch $c_n = a_n - (-1)^n \ b_n$.\\
+\\
+Dann gilt: 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ ist konvergent.
+\item $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ ist divergent.
+\item $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ kann abhängig von $\lbrace a_n\rbrace_{ n\in \mathbb{N}}$ und $\lbrace b_n\rbrace_{ n\in \mathbb{N}}$ konvergent oder divergent sein.
+\item $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ ist konvergent genau dann, wenn
+$ \lim \limits_{n  \rightarrow \infty} a_n = \lim \limits_{n  \rightarrow \infty} b_n = 0  $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege  welche Eigenschaften $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ besitzt.
+\item Überprüfe die Eigenschaften und finde gegebenenfalls Gegenbeispiele.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege  welche Eigenschaften $\lbrace c_n\rbrace_{ n\in \mathbb{N}}$ besitzt}\\
+Wir wissen, dass $a_n$ und $b_n$ konvergent sind. Demnach sind beide Folgen beschränkt.
+Eine Folge heißt beschränkt, falls sie eine obere und untere Schranke besitzt.
+Insbesondere bleibt eine beschränkte Folge beschränkt, wenn man sie mit dem Faktor $(-1)^n$ ergänzt. Die Summe zweier beschränkten Folgen ist wiederum beschränkt.
+Damit wissen wir, dass $c_n$ beschränkt ist.
+Wir betrachten $(-1)^n$ als Beispielfolge.
+Diese Folge ist durch $-1$ nach unten und durch $1$ nach oben beschränkt.
+Aber leider ist diese Folge divergent, da sie zwischen $-1$ und $1$ hin und herspringt.
+\\
+\\
+\underline{2. Überprüfe die Eigenschaften und finde gegebenenfalls Gegenbeispiele}\\
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Wähle $a_n = 0$, $b_n = 1$.
+Dann ist durch
+\begin{align*}
+c_n = a_n - (-1)^n \ b_n = -(-1)^n = (-1)^{n+1}
+\end{align*}
+ein Gegenbespiel gefunden, da $c_n$ zwischen $-1$ und $1$ hin und her springt.
+\item Wähle $a_n = 1$, $b_n = 0$.
+Dann ist durch
+\begin{align*}
+c_n = a_n - (-1)^n \ b_n 
+= 1 - (-1)^n \cdot 0 = 1
+\end{align*}
+ein Gegenbeispiel gefunden, da konstante Folgen konvergent sind.
+
+\item
+Diese Antwort ist richtig. Wir betrachten
+\begin{align*}
+c_n = a_n - (-1)^n \ b_n 
+\end{align*}
+genauer.
+Der einzige Term an dem die Konvergenz scheitern kann ist $b_n$.
+Da $b_n$ konvergent ist, können wir 
+\begin{align*}
+(-1)^n  \ b_n \ \text{konvergent} 
+\Leftrightarrow
+\lim \limits_{n \rightarrow \infty} b_n = 0
+\end{align*}
+als Hilfsmittel verwenden.
+Wenn $b_n \rightarrow a \neq 0 $ gilt, dann springt $(-1)^n \ b_n $ zwischen $-a$ und $a$ hin und her.
+Also sehen wir, dass die Konvergenz von der Wahl von $b_n$ abhängt.
+
+\item
+Vergleiche mit (b).
+\end{enumerate}
+Also muss Antwort (c) korrekt sein.
+\newpage
+
+\subsection*{\frage{3}{3}}
+Die Folge $\lbrace a_n \rbrace_{n \in \mathbb{N}}$ ist konvergent und $a_n > 0$
+für alle $n$.
+Sei $\lbrace b_n \rbrace_{n \in \mathbb{N}}$ die Folge definiert durch
+$b_n = \ln(a_n)$ für $n \in \mathbb{N}$.
+Dann gilt:\\
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\lbrace b_n \rbrace_{n \in \mathbb{N}}$ ist beschränkt und monoton.
+\item $\lbrace b_n \rbrace_{n \in \mathbb{N}}$ ist beschränkt oder monoton.
+\item $\lbrace b_n \rbrace_{n \in \mathbb{N}}$ ist beschränkt und konvergent.
+\item Keine der vorangegangenen Antworten ist richtig.
+\end{enumerate}
+
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, wie eine Folge konstruiert werden kann, welche allen Eigenschaften widerspricht. 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, wie eine Folge konstruiert werden kann, welche allen Eigenschaften widerspricht}\\
+Wir wählen 
+\begin{align*}
+a_n =
+\begin{cases}
+\frac{1}{3}, &\ \text{falls} \ n = 1 \\
+\frac{1}{n}, &\ \text{falls} \ n \geq 2
+\end{cases}
+\end{align*}
+als Folge. Diese Folge ist nicht monoton, weil
+\begin{align*}
+a_1 < a_2 \ \text{und} \ a_1 > a_4
+\end{align*}
+ist. Damit kann 
+\begin{align*}
+b_n = \ln(a_n)
+\end{align*}
+aufgrund der strengen Monotonie des Logarithmus auch nicht monoton sein.
+Nun zeigen wir noch das $b_n$ unbeschränkt ist.
+Mit 
+\begin{align*}
+b_n = \ln\left( \frac{1}{n} \right) = \ln(1) - \ln(n) = - \ln(n)
+\stackrel{n \rightarrow \infty}{\rightarrow } -\infty
+\end{align*}
+erhalten wir die Unbeschränktheit.
+Damit haben wir eine Folge gefunden, sodass keine der Eigenschaften erfüllt ist.\\
+Also ist (d) die richtige Antwort.
+
+\newpage
+
+\subsection*{\frage{4}{2}}
+Ein Projekt benötigt ein anfängliches Investment in Höhe von $2'000'000$ CHF
+und zahlt $1'000'000$ CHF in $10$ Jahren, $1'500'000$ CHF in $20$ Jahren sowie $1'000'000$ CHF in $40$ Jahren aus.
+Das Projekt besitzt den höchsten Nettobarwert für einen jährlichen Zinssatz $i$ von
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $i = 2.35 \%$.
+\item $i = 3.45 \%$.
+\item $i = 4.65 \%$.
+\item $i = 5.05 \%$.
+\end{enumerate}
+
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Formel des Nettobarwerts in allgemeiner Form.
+\item Untersuche die Auswirkung des Zinssatzes auf den Nettobarwert. 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Formel des Nettobarwerts in allgemeiner Form}\\
+Allgemein lässt sich der Nettobarwert durch
+\begin{align*}
+NPV =
+-C_0 + \sum \limits_{t=0}^T \frac{C_t}{(1+i)^t}
+\end{align*}
+berechnen, wobei bei uns nur $C_{10}$, $C_{20}$ und $C_{40}$ ungleich null sind.
+\\
+\\
+
+\underline{2. Untersuche die Auswirkung des Zinsatzes}\\
+Eingesetzt erhalten wir
+\begin{align*}
+NPV(i) 
+= 
+-2'000'000 + \frac{1'000'000}{(1+i)^{10}} + \frac{1'500'000}{(1+i)^{20}}
++ \frac{1'000'000}{(1+i)^{40}}
+\end{align*}
+und erkennen, dass der Wert größer wird, wenn die Nenner kleiner werden.
+Aus diesem Grund wird der kleinste Abdiskuntierungszinssatz
+den höchsten Nettobarwert ergeben.\\
+Also ist Antwort (a) richtig.
+
+\newpage
+
+\subsection*{\frage{5}{4}}
+Die Gleichung
+\begin{align*}
+\ln(x^3) - \ln \left( 1 - \frac{4}{5}x \right) + \ln(x) = \ln(5)
+\end{align*}
+besitzt die Lösungsmenge
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\lbrace -5,1 \rbrace$.
+\item $\lbrace 1 \rbrace$.
+\item $\mathbb{R} \setminus \lbrace -5, 1 \rbrace$.
+\item $\lbrace -5 \rbrace$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Forme die Gleichung um.
+\item Löse die Gleichung. 
+\end{enumerate}
+\end{mdframed}
+
+
+\underline{1. Forme die Gleichung um}\\
+Durch Umformen erhalten wir
+\begin{align*}
+\ln(x^3) - \ln \left( 1 - \frac{4}{5}x \right) + \ln(x) &= \ln(5)\\
+\Leftrightarrow
+\ln(x^3 \cdot x) - \ln \left( \frac{5 - 4 x}{5} \right) &= \ln(5)\\
+\Leftrightarrow
+\ln \left(x^4 \cdot \frac{5}{5-4x}\right) &= \ln(5). 
+\end{align*}
+\\
+\underline{2. Löse die Gleichung}\\
+Durch 
+\begin{align*}
+&\ \ \  \ x^4 \frac{5}{5-4x} = 5\\
+&\Leftrightarrow 
+ \frac{x^4}{5-4x} = 1\\
+&\Leftrightarrow  
+x^4 = 5 - 4x\\
+&\Leftrightarrow 
+x^4 + 4x - 5 = 0\\
+&\Leftrightarrow 
+x =1
+\end{align*}
+kommen wir auf die korrekte Lösungsmenge.\\
+Damit ist (b) die korrekte Antwort.
+
+\newpage
+
+\subsection*{\frage{6}{5}}
+Gegeben sei die Funktion $f \ : \ \mathbb{R} \to \mathbb{R}$ definiert durch
+\begin{align*}
+f(x) 
+= 
+\begin{cases}
+\frac{\sin(x)}{x}& , \ x \neq 0\\
+a& ,		\  x = 0
+\end{cases}.
+\end{align*}
+Für welche Werte von $a$ ist die Funktion stetig?
+\begin{enumerate}
+\item $a=0$.
+\item $a=1$.
+\item $a = \frac{\pi}{2}$.
+\item $a = \pi$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Rufe dir in Erinnerung, was Stetigkeit bedeutet.
+\item Bestimme den Grenzwert
+\begin{align*}
+\lim \limits_{x \rightarrow 0} \frac{\sin(x)}{x}
+\end{align*}
+und leite  davon die richtige Antwort ab.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Rufe dir in Erinnerung, was Stetigkeit bedeutet}\\
+Eine Funktion $f \ : \ \mathbb{R} \to \mathbb{R}$ heißt stetig in $x_0$,
+falls 
+\begin{align*}
+x \rightarrow x_0 \ \Rightarrow \ f(x) \rightarrow f(x_0)
+\end{align*}
+gilt.
+Das heißt: Wenn $x$ gegen $x_0$ geht, muss $f(x)$ gegen $f(x_0)$ gehen.
+Wir müsssen also 
+\begin{align*}
+\lim \limits_{x \rightarrow x_0} f(x)
+\end{align*}
+bestimmen um das passende $a$ für die Stetigkeit in $x_0 = 0$ zu erhalten.
+In allen anderen Punkten ist $f$ bereits stetig.\\
+\\
+\underline{2. Bestimme den Grenzwert}\\
+Um den Grenzwert 
+\begin{align*}
+\lim \limits_{x \rightarrow 0} \frac{\sin(x)}{x}
+\end{align*}
+zu bestimmen, wenden wir die Regel von de l'H\^{o}pital an.
+Die Regel von de l'H\^{o}pital wenden wir an, wenn wir einen Ausdruck der Form 
+\begin{align*}
+\lim \limits_{x \to x_0} \frac{f(x)}{g(x)}
+\end{align*}
+vorgegeben haben und mit
+\begin{align*}
+\frac{f(x_0)}{g(x_0)} &= \frac{0}{0} \\
+\frac{f(x_0)}{g(x_0)} &= \frac{\infty}{\infty}\\
+\frac{f(x_0)}{g(x_0)} &= \frac{-\infty}{\infty}
+\end{align*}
+einen undefinierten Term erhalten.
+Dann wendet man durch
+\begin{align*}
+\lim \limits_{x \to x_0} \frac{f(x)}{g(x)}
+=
+\lim \limits_{x \to x_0} \frac{f^\prime(x)}{g^\prime(x)}
+\end{align*}
+die Regel von de l'H\^{o}pital an.\\
+Da wir \glqq $\nicefrac{0}{0}$\grqq~gegeben haben, können wir mit
+\begin{align*}
+\lim \limits_{x \rightarrow 0} \frac{\sin(x)}{x}
+= \lim \limits_{x \rightarrow 0} \frac{\cos(x)}{1} = 1
+\end{align*}
+direkt de l'H\^{o}pital anwenden. Es gilt also 
+\begin{align*}
+x \rightarrow 0 \ \Rightarrow \ f(x) \rightarrow  1 = f(0), 
+\end{align*}
+wenn $a = 1 $ ist.\\
+Somit ist Antwort (b) richtig.
+
+\newpage
+
+\subsection*{\frage{7}{4}}
+Welche der folgenden Funktionen ist in ihrem kompletten Definitionsbereich \textit{konvex}?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $f_1$ definiert durch $f_1(x) = \ln \left(\frac{1}{2x +1} \right)$.
+\item $f_2$ definiert durch $f_2(x) = \ln(x^2 + 2x +1 )$.
+\item $f_3$ definiert durch $x^3 + 3 \ x + 4 $.
+\item Keine der obigen Funktionen ist in ihrem ganzen Definitionsbereich konvex.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle die allgemeine Bedingung der Konvexität auf.
+\item Bestimme die Ableitungen.
+\item Ermittle die konvexe Funktion.
+%\item Wie könntest du geometrisch direkt auf die richtige Antwort kommen?
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Stelle die allgemeine Bedingung der Konvexität auf}\\
+Eine Funktion $f\ : \ D_f \to \mathbb{R}$ heißt auf ihrem ganzen Definitionsbereich konvex, falls
+\begin{align*}
+f^{\prime \prime}(x) \geq 0
+\end{align*}
+für alle $x \in D_f $ gilt.\\
+\\
+\underline{2. Bestimme die Ableitungen}\\
+Wir bestimmen die Ableitungen: 
+\begin{align*}
+f_1^\prime(x) &= \frac{1}{\frac{1}{2x+1}} \cdot 2
+= 2 \cdot(2x+1)
+= 4x + 2\\
+f_1^{\prime \prime}(x) &= 4\\
+f_2^\prime(x) &=\frac{1}{x^2+ 2x +1} \cdot( 2x+2)
+= \frac{2(x+1)}{(x+1)^2} = \frac{2}{x+1}
+= 2 \cdot (x+1)^{-1}\\
+f_2^{\prime \prime}(x)
+&=\frac{-2}{(x+1)^2}\\
+f_3^\prime(x) &= 3x^2 +3\\
+f_3^{\prime \prime}(x) &= 6x 
+\end{align*}
+\\
+\\
+\underline{3. Ermittle die konvexe Funktion}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\noindent
+\begin{enumerate}[leftmargin=0.6cm]
+\item Wir sehen, dass
+\begin{align*}
+f^{\prime \prime}(x) = 4 > 0 
+\end{align*}
+für alle $x \in D_f= (-\frac{1}{2}, \infty)$ gilt.
+Die Funktion $f_1$ ist auf $D_f$ sogar strikt konvex.
+\item
+Wir sehen, dass
+\begin{align*}
+f_2^{\prime \prime}(x)=\frac{-2}{(x+1)^2},
+\end{align*}
+immer negativ ist für alle $x \in D_f = (-\frac{1}{2},\infty)$
+Damit ist $f_2$ nicht konvex.
+
+\item
+Wir sehen wie, dass bei
+\begin{align*}
+f^{\prime \prime}(x) = 6x
+\end{align*}
+ein Vorzeichenwechsel im Definitionsbereich vorliegt.
+\end{enumerate}
+Somit ist Antwort (a) korrekt.
+
+
+
+%\underline{4. Wie könntest du geometrisch direkt auf die richtige Antwort kommen }\\
+%
+%\begin{center}
+%
+%\begin{tikzpicture}[scale=1]
+%\begin{axis}[samples=1000,domain=-0.5:15,mark=none, scale = 1.4,
+%axis lines = middle,
+%xlabel={$x$},
+%ylabel={$f(x)$}]
+%\addplot[mark = none,color= blue]
+%expression{ ln(1/(2*x+1)};
+%\addplot[mark=none,]
+%\end{axis}
+%\end{tikzpicture}
+%\end{center}
+
+
+\newpage
+
+\subsection*{\frage{8}{2}}
+Die Funktion $f$ definiert durch $f(x) = e^{x^2+3x+2}$
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item hat ein lokales Maximum bei $x_0 = -\frac{3}{2}$.
+\item hat ein lokales Minimum bei $x_0 = -\frac{3}{2}$.
+\item hat einen Sattelpunkt bei $x_0 = -\frac{3}{2}$.
+\item Keine der vorangehenden Antworten ist richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege, welche Eigenschaften die Exponentialfunktion
+besitzt.
+\item Bestimme die $x$-Koordinate des Scheitelpunkts von $x^2 + 3x+ 2$.
+\item Alternative: Löse diese Aufgabe noch mithilfe der Ableitung.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege, welche Eigenschaften die Exponentialfunktion besitzt}\\
+Die Exponentialfunktion 
+\begin{align*}
+\text{exp} \ : \ \mathbb{R} \to (0,\infty), \ x \mapsto e^x
+\end{align*}
+ist streng monoton wachsend und immer positiv.
+Wir haben mit
+\begin{align*}
+x^2+3x+2
+\end{align*}
+eine nach oben geöffnete Parabel gegeben.
+Deswegen erreicht $f$ an deren Scheitelpunkt ein Minimum.\\
+
+
+\underline{2. Bestimme die $x$-Koordinate des Scheitelpunkts von $x^2 + 3x+ 2$}\\
+Den Scheitelpunkt können wir mithilfe quadratischer Ergänzung bestimmen.
+Durch
+\begin{align*}
+x^2 +3x + 2 = x^2  + 2 \cdot \frac{3}{2} \cdot x + 2 
+= x^2 +2 \cdot \frac{3}{2} \cdot x + \left(\frac{3}{2} \right)^2 -
+\left(\frac{3}{2} \right)^2 + 2
+= \left( x + \frac{3}{2} \right)^2 - \left(\frac{3}{2} \right)^2 + 2
+\end{align*}
+erhalten wir die Scheitelpunktform.
+Der Scheitelpunkt besitzt die $x$-Koordinate $x_0 = -\frac{3}{2}$.
+Damit besitzt $f$ in $x_0$ ein Minimum. 
+\\
+\\
+
+\underline{3. Alternative: Löse diese Aufgabe noch mithilfe der Ableitung}\\
+Die Ableitung von $f$ ist durch
+\begin{align*}
+f^\prime(x)=(2x +3) \cdot e^{x^2+3x+2}
+\end{align*}
+gegeben. Für die Ableitung gilt
+\begin{align*}
+f^\prime(x) &= 0\\ 
+\Leftrightarrow
+2x  +3 &= 0\\
+\Leftrightarrow
+x &= -\frac{3}{2},
+\end{align*}
+womit $x_0= -\frac{3}{2}$ ein kritischer Punkt ist.
+Die Ableitung $f^\prime$ hat in diesem Punkt ein Vorzeichenwechsel von negativ zu positiv.
+Damit besitzt $f$ in $x_0$ ein Minimum.
+\\
+\\
+Somit ist Antwort (b) korrekt.

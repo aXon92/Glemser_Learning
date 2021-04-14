@@ -1,0 +1,506 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 3 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Die Funktion $ f(x,y) = y  $ hat unter der Nebenbedingung $ \varphi(x,y) = \frac{x^2}{25} + \frac{y^2}{9} = 1 $
+ihr Minimum in
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ P = (-5,0) $.
+	\item $ P = (0,3) $.
+	\item $ P = (0,0) $.
+	\item $ P = (0,-3) $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überprüfe, welche Antwortbedingungen die Nebenbedingung erfüllen.
+\item Bestimme die korrekte Antwort im Ausschlussverfahren.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überprüfe, welche Antwortbedingungen die Nebenbedingung erfüllen}\\
+%Der Punkt $ P = (0,0) $ erfüllt die Nebenbedingung nicht.
+%Damit fällt (c) weg.
+Wir setzen $ P_1 = (-5,0) $, $ P_2 = (0,3)  $, $ P_3=(0,0) $ und $ P_4 = (0,-3) $.
+Dann gilt:
+\begin{align*}
+\varphi(P_1)
+&=
+\frac{(-5)^2}{25} + \frac{0^2}{9} = \frac{25}{25} + 0 = 1\\
+\varphi(P_2)
+&=
+\frac{0^2}{25} + \frac{3^2}{9} = 0 + \frac{9}{9} = 1\\
+\varphi(P_3)
+&=
+\frac{0^2}{25} + \frac{0^2}{9} = 0 \neq 1\\
+\varphi(P_4)
+&=
+\frac{0^2}{25} + \frac{(-3)^2}{9} = 0 + \frac{9}{9} = 1.
+\end{align*}
+Damit erfüllt $ P_3 $ die Nebenbedingung nicht.\\
+\\
+\underline{2. Bestimme die korrekte Antwort im Ausschlussverfahren}\\
+Da die anderen Punkte die Nebenbedingung erfüllen, vergleichen wir nun deren Funktionswerte:
+\begin{align*}
+f(P_1) &= 0\\
+f(P_2) &= 3\\
+f(P_4) &= -3.
+\end{align*}
+\ \\
+Da der Funktionswert an dem Punkt $ P_4 $ am kleinsten ist, befindet sich dort das Minimum.\\
+\\
+Damit ist die Antwort (d) korrekt.
+
+\newpage
+
+\subsection*{\frage{2}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x) 
+=
+\begin{cases}
+ax + \frac{1}{8}, &\quad \textrm{für } 0 \leq x \leq 4\\
+\quad 0					&\quad  \textrm{sonst}			
+\end{cases}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $f $ ist für alle $ a \in \mathbb{R} $ eine Dichtefunktion.
+	\item $f $ ist nur für $ a = \frac{1}{16} $ eine Dichtefunktion.
+	\item
+	$f $ ist nur für $ a = -\frac{1}{16} $ eine Dichtefunktion.
+	\item
+	$f $ ist für kein $ a \in \mathbb{R} $ eine Dichtefunktion.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Berechne das Integral über $ f $ in Abhängigkeit von $ a $.
+		\item Verwende die Definition einer Dichtefunktion.
+	\end{enumerate}
+\end{mdframed}
+\underline{1. Berechne das Integral über $ f $ in Abhängigkeit von $ a $}\\
+Für das Integral über $ f $ gilt:
+\begin{align*}
+\int_{-\infty}^\infty f(x) \ dx
+=
+\int_0^4 ax + \frac{1}{8} \ dx
+= 
+\left[
+a \frac{x^2}{2} + \frac{1}{8} x
+\right]_0^4
+=
+a \frac{4^2}{2} + \frac{4}{8}- \left( a \frac{0^2}{2} + \frac{0}{8}\right)
+=
+8 a + \frac{1}{2}.
+\end{align*}
+\ \\
+\underline{2. Verwende die Definition einer Dichtefunktion}\\
+Eine Funktion $ f \geq 0 $ heißt Dichtefunktion auf $ (-\infty, \infty) $, falls
+\begin{align*}
+\int_{-\infty}^\infty f(x) \ dx = 1
+\end{align*}
+gilt.
+Damit folgt
+\begin{align*}
+\int_{-\infty}^\infty f(x) \ dx
+=
+8a + \frac{1}{2} = 1 
+\ \Leftrightarrow \
+8a = \frac{1}{2}
+\ \Leftrightarrow \
+a =  \frac{1}{16}
+\end{align*}
+und wegen $ a > 0 $ erhalten wir $ f(x) \geq 0  $ für alle $ x \in \mathbb{R} $.\\
+Damit ist sind die Eigenschaften einer Dichtefunktion für $ a = \frac{1}{16} $ erfüllt.\\
+\\
+Somit ist die Antwort (b) korrekt.
+\newpage
+
+\subsection*{\frage{3}{2}}
+Sei $ f : [a,b] \to \mathbb{R} $ eine beliebige, auf dem Intervall $ [a,b] $ definierte Funktion.\\
+\\
+Welche der folgenden Aussagen ist \textit{richtig}?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Wenn das bestimmte Integral von $ f $ über $ [a,b] $ existiert, dann ist $ f $ stetig auf $ [a,b] $.
+	\item 
+	Wenn $ f $ nicht stetig ist auf $ [a,b] $, dann existiert das bestimmte Integral von $ f $ über $ [a,b] $ nicht.
+	\item 
+	Wenn $ f $ differenzierbar ist auf $ [a,b] $, dann existiert das bestimmte Integral von $ f $ über $ [a,b] $.
+	\item
+	Das bestimmte Integral von $ f $ über $ [a,b]$ existiert immer.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Eliminiere Lösungen mithilfe des Verständnisses von Differenzierbarkeit und Integrierbarkeit.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Eliminiere Lösungen mithilfe des Verständnisses von Differenzierbarkeit und Integrierbarkeit.}\\
+Folgende Grafik veranschaulicht eine Sprungfunktion.
+Das Integral über diese Funktion existiert auf dem Intervall $ [0,5] $, jedoch ist diese offensichtlich nicht stetig.
+Damit ist (a) und (b) falsch.
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	domain=0:5,
+	xmin=0, xmax=5,
+	ymin=0, ymax=2,
+	samples=5,
+	axis y line=center,
+	axis x line=middle,
+	]
+	\addplot+[jump mark left] { 0.5 * floor(x)};
+	%\addplot+[mark=none] { sin(deg(2*x)};
+	%\legend{$ \sin(2x) $}
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+Wir betrachten nun die Funktion
+\begin{align*}
+f : [a,b] \to \mathbb{R},
+x \mapsto 
+\begin{cases}
+\quad 1  &\quad \textrm{falls} \ x \ \textrm{rational}\\
+ \quad 0  &\quad \textrm{falls} \ x \ \textrm{irrational}
+\end{cases}.
+\end{align*}
+Das bestimmte Integral über $ [a,b] $ existiert in diesem Fall nicht.
+Jedoch würde die Begründung unseren Rahmen sprengen.
+Damit ist (d) auch falsch und es bleibt nur (c) übrig.\\
+\\
+Wenn $ f $ differenzierbar auf $ [a,b] $ ist, ist $ f $ auch stetig auf $ [a,b] $.
+Stetige Funktionen auf $ [a,b] $ sind immer integrierbar.\\
+\\
+Damit ist die Antwort (c) korrekt.
+
+\newpage
+
+\subsection*{\frage{4}{2}}
+$A$ und $B$ seien quadratische Matrizen mit
+$\det(A) = 5$ und $\det(B) = 2$; die Matrix $ C $ ist definiert durch 
+$C \ = \ A^{-1}B A $. 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 1$.
+\item
+Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 2^n$.
+\item
+Dann gilt für jedes $ n \in \mathbb{N}: $ $ \det(C^n)  = 2^n \cdot 5^n$.
+\item
+Keine der obigen Aussagen ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Rechenregeln der Determinante.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Rechenregeln der Determinante}\\
+Für quadratische Matrizen $ X $ und $ Y $ gilt
+\begin{align*}
+\det (X\cdot Y) = \det(X) \cdot \det(Y).
+\end{align*}
+Insbesondere gilt dann auch
+\begin{align*}
+\det(C^n) = \underbrace{\det(C) \cdots \det(C)}_{
+	 n -\textrm{mal}
+}
+=\left(\det(C)\right)^n.
+\end{align*}
+Außerdem benötigen wir noch
+\begin{align*}
+\det (A^{-1}) = \frac{1}{\det(A)}.
+\end{align*}
+Wir erhalten
+\begin{align*}
+\det(C) = \det(A^{-1} B A)
+=
+\frac{1}{\det(A)} \det(B) \det(A)
+=
+\det(B) = 2
+\
+\Rightarrow 
+\
+\det(C^n) = 2^n.
+\end{align*}
+\ \\
+Damit ist Antwort (b) korrekt.
+\newpage
+
+\subsection*{\frage{5}{4}}
+Gegeben sind die Vektoren
+\begin{align*}
+\textbf{a}
+= 
+\begin{pmatrix}
+1 \\ 2 \\ 3
+\end{pmatrix},
+\textbf{b}
+=
+\begin{pmatrix}
+1 \\ -1 \\ 1
+\end{pmatrix},
+\textbf{c}
+=
+\begin{pmatrix}
+0 \\ 0 \\ 2
+\end{pmatrix},
+\textbf{d}
+=
+\begin{pmatrix}
+2 \\ 1 \\ t
+\end{pmatrix}.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Es ist nur für $ t = 6 $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+	\item
+	Es ist nur für $ t = 6 $ und $ t = 0 $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+	\item
+	Es ist für alle $ t\in \mathbb{R} $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+	\item
+	Es ist für kein $ t\in \mathbb{R} $ möglich, $ \textbf{d} $ als Linearkombination von $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ zu schreiben.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir, ob die Vektoren $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ linear unabhängig sind.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir, ob die Vektoren $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ linear unabhängig sind}\\
+Die Vektoren $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $
+sind linear unabhängig genau dann, wenn
+$ \det( \textbf{a} ,  \textbf{b}, \textbf{c} ) \neq 0$ ist.
+Wir entwickeln nach der dritten Spalte, da dort zwei Nullen auftreten.
+Durch die Entwicklung nach der dritten Spalte erhalten wir:
+\begin{align*}
+\det( \textbf{a} ,  \textbf{b}, \textbf{c} )
+=
+\det
+\begin{pmatrix}
+1 & 1 & 0\\
+2 & -1 & 0\\
+3 & 1 & 2
+\end{pmatrix}
+= 2 \cdot \det 
+\begin{pmatrix}
+1 & 1\\
+2 & -1
+\end{pmatrix}
+= 
+2 \cdot (1 \cdot (-1) - 2 \cdot 1)
+=
+2 \cdot (-3) = 6.
+\end{align*}
+Damit bilden die Vektoren $ \textbf{a} $, $ \textbf{b} $ und $ \textbf{c} $ eine Basis des $ \mathbb{R}^3 $.
+Insbesondere lässt sich mit diesen jeder beliebige Vektor des $ \mathbb{R}^3 $ darstellen.\\
+\\
+Damit ist die Antwort (c) korrekt.
+\newpage
+
+\subsection*{\frage{6}{2}}
+$ A $ ist eine $ 6 \times 5 $ Matrix, das lineare Gleichungssystem $ A \textbf{x} = \textbf{b} $ hat unendlich viele Lösungen und der Lösungsraum hat die Dimension $ 2 $.
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \text{rg}(A) = \text{rg}(A; \textbf{b}) = 3 $.
+	\item
+	$ \text{rg}(A) = \text{rg}(A; \textbf{b}) = 4 $.
+	\item
+	$ \text{rg}(A) < \text{rg}(A; \textbf{b}) = 3 $..
+	\item
+	Keine der obigen Aussagen ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Berechne den Rang der Matrix $ A $.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Berechne den Rang der Matrix $ A $}\\
+Da das lineare Gleichungssystem $ A \textbf{x} = \textbf{b} $ lösbar ist, gilt
+\begin{align*}
+rg(A) = rg(Ab).
+\end{align*}
+Sie $ L $ der Lösungsraum des LGS $ A \textbf{x} = \textbf{b} $ und $ n = 5 $ die Anzahl der Variablen. Dann gilt
+\begin{align*}
+\dim \ L = n - rg(A)
+\ \Leftrightarrow \
+2 = 5 - rg(A)
+\ \Leftrightarrow \
+rg(A) = 3.
+\end{align*}
+\ \\
+Damit ist die Antwort (a) korrekt.
+\newpage
+\subsection*{\frage{7}{4}}
+Das unbestimmte Integral von
+\begin{align*}
+\int \ln(x \ e^x ) \ dx, \ (x > 0)
+\end{align*}
+ist
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ x \ \ln(x) + x^2 - x + C $.
+	\item
+	$ x \ \ln(x) + \frac{x^2}{2} - x + C $.
+	\item
+	$ x \ \ln(x) + x^2  + C $.
+	\item
+	Keine der obigen Antworten ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Vereinfache den Integranden.
+\item Bestimme die Stammfunktion.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Vereinfache den Integranden und bestimme die Stammfunktion}\\
+Für den Integranden gilt
+\begin{align*}
+f(x) := \ln(x e^x) = \ln(x) + \ln(e^x) = \ln(x) + x.
+\end{align*}
+Mit der Vorüberlegung erhalten wir
+\begin{align*}
+\int f(x) \ dx 
+=
+\int \ln(x) \ dx + \int x \ dx
+= 
+\int \ln(x) \ dx + \frac{x^2}{2} + C,
+\end{align*}
+wodurch wir nur noch die Stammfunktion von $ \ln(x) $ bestimmen müssen.\\
+\\
+\underline{2. Bestimme die Stammfunktion}\\
+Aufgrund der Stammfunktion von $ x $ liegt jedoch die Vermutung nahe, dass die Antworten (a) und (c) falsch sind, da in beiden Fällen der Faktor $ \frac{1}{2} $ fehlt.
+Mit partieller Integration erhalten wir
+\begin{align*}
+\int 1 \cdot \ln(x) \ dx
+= x \ln(x) - \int x  \cdot\frac{1}{x} \ dx
+= x\ln(x) - x + C.
+\end{align*}
+Insgesamt folgt dann
+\begin{align*}
+\int f(x) \ dx = 
+x \ln(x) -x + \frac{x^2}{2} + C.
+\end{align*}
+\ \\
+Damit ist die Antwort (b) korrekt.\\
+\\
+\textit{Alternativ lässt sich die korrekte Antwort durch Differenzieren der Möglichkeiten (a)-(c) herleiten.
+}
+
+
+\newpage
+
+\subsection*{\frage{8}{4}}
+Gegeben ist die Matrix
+\begin{align*}
+A = 
+\begin{pmatrix}
+2 & a\\
+a & 2
+\end{pmatrix},
+\ \textrm{wobei } a\neq 0.
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ zwei verschiedene reelle Eigenwerte.
+\item
+Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ genau einen reellen Eigenwert.
+
+\item
+Die Matrix hat für alle $ a \neq 0 $ in $ \mathbb{R} $ keinen reellen Eigenwert..
+\item
+Die Matrix $ A $ hat abhängig von $ a \neq 0 $ keinen, einen oder zwei reelle Eigenwerte.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bestimme die Eigenwerte der Matrix $ A $.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bestimme die Eigenwerte der Matrix $ A $}\\
+Die Eigenwerte der Matrix $ A $ sind die Lösungen der Gleichung
+\begin{align*}
+\det(A - \lambda I) = 0.
+\end{align*}
+Es gilt
+\begin{align*}
+\det(A - \lambda I)=
+\det
+\begin{pmatrix}
+2- \lambda & a \\
+a & 2 - \lambda
+\end{pmatrix}
+= (2- \lambda)^2 - a^2
+= 4 - 4 \lambda + \lambda^2 - a^2.
+\end{align*}
+Die Nullstellen hiervon erhalten wir durch
+\begin{align*}
+\lambda_{\nicefrac{1}{2}}
+=
+\frac{4 \pm \sqrt{(-4)^2 - 4 \cdot 1 \cdot (4 - a^2)}}{2}
+=
+\frac{4 \pm \sqrt{4 a^2}}{2}
+=
+\frac{4 \pm 2 |a|}{2}
+=
+2 \pm |a|.
+\end{align*}
+Damit hat $ A $ zwei reelle Eigenwerte.
+Alternativ lassen sich die Nullstellen auch wie folgt bestimmen:
+\begin{align*}
+(2- \lambda)^2 - a^2 = 0 
+\ \Leftrightarrow \
+(2- \lambda)^2 = a^2 
+\ \Leftrightarrow \
+2 - \lambda = \pm|a|
+\ \Leftrightarrow \
+\lambda = 2 \pm |a|.
+\end{align*}
+\\
+\\
+Somit ist Antwort (a) korrekt.
+
+\newpage

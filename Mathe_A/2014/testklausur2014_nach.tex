@@ -1,0 +1,65 @@
+\documentclass[a4paper,11pt,german]{report}
+
+  \usepackage[ngerman]{babel}   % deutsche Sprachanpassung
+  \usepackage[utf8]{inputenc} % erlaubt Umlaute in der tex-Datei
+  \usepackage[T1]{fontenc}      % Trennung bei Wörtern mit Umlauten
+  \usepackage[DIV15]{typearea}  % Vergrößerung des Textbereichs
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{units}	
+\usepackage{esvect}
+\usepackage{ wasysym }
+\usepackage{wrapfig}
+	\usepackage{graphicx} %graphiken einfügen
+	\usepackage{floatflt} % graphik als fließtext
+\usepackage[framemethod=tikz]{mdframed} %Rahmen für Boxen
+\usepackage{ulem} %Unterschtreichen 
+\usepackage{tikz}
+\usepackage{pgfplots}
+%%%%%%%%%%%%%%%%%%%% KOPF-ZEILE %%%%%%%%%%%%%%%%%%%%		
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\normalsize\textbf{Testklausur 2014 Nachholtermin}}
+%Kopfzeile mittig
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
+%Kopfzeile rechts bzw. außen
+\fancyhead[R]{\normalsize\textbf{Glemser Learning}}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% KEIN EINRÜCKEN %%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+\cfoot{Testklausur 2014 Nachholtermin - Seite \thepage}
+\setcounter{page}{1}
+
+\newcommand{\nummer}[2]{(#1) (#2 Punkte)}
+%\newcommand{\frage}[2]{Frage #1 (#2 Punkte)}
+
+\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+\newcommand{\frage}[2]{Frage #1 (#2 Punkte)}
+\newcommand{\td}[1]{\text{\rmfamily d} #1}
+				
+%% \begin{document}	- Textanfang!	
+\begin{document}
+\pgfkeys{/pgfplots/scale/.style={
+  x post scale=#1,
+  y post scale=#1,
+  z post scale=#1}
+}
+%\section*{\hfil Aufgaben \hfil}
+\input{aufgaben/aufgaben.tex}
+\newpage
+\section*{\hfil Lösungen \hfil}
+\input{aufgaben/1.tex}
+\newpage
+\input{aufgaben/2.tex}
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\input{aufgaben/3.tex}
+\input{aufgaben/4.tex}
+
+\end{document} 

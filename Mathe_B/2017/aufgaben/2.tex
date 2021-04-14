@@ -1,0 +1,575 @@
+\section*{Aufgabe 2 (25 Punkte)}
+\vspace{0.4cm}
+\subsection*{\aufgabe{a}{4}}
+Die quadratischen $ n \times n $ Matrizen $ A $ und $ B $ seien regulär, $ A $ sei ausserdem symmetrisch.\\
+\\
+Beweisen Sie:
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (A B)^{-1}
+=
+(A^{-1} B )^\top.
+\end{align*}
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\renewcommand{\labelenumi}{\theenumi.}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\item Rufe dir die notwendigen Rechengesetze in Erinnerung.
+\item Beweise die Aussage.
+\end{enumerate}
+\end{mdframed}
+
+
+\underline{1. Rufe dir die notwendigen Rechengesetze in Erinnerung }\\
+Wir rufen uns die nötigen Rechengesetze in Erinnerung.
+Eine Matrix $ A $ heißt symmetrisch, falls
+\begin{align*}
+A = A^\top
+\end{align*}
+gilt. Dementsprechend erhalten wir
+\begin{align*}
+A^{-1} = (A^\top)^{-1} = (A^{-1})^\top.
+\end{align*}
+Außerdem gelten:
+\begin{align*}
+(A B)^{-1} &= B^{-1} A^{-1}\\
+(A B)^\top &= B^\top A^\top.
+\end{align*}
+\ \\
+\underline{2. Beweise die Aussage}\\
+Durch die Umformungen
+\begin{align*}
+B^\top (AB)^\top (B^{-1} A^{-1})^\top B (A B)^{-1}
+&=
+B^\top B^\top A^\top (A^{-1})^\top (B^{-1})^\top B B^{-1} A^{-1}\\
+&=
+B^\top B^\top A^\top (A^\top)^{-1} (B^{-1})^\top B B^{-1} A^{-1}\\
+&=
+B^\top B^\top I (B^{-1})^\top B B^{-1} A^{-1}\\
+&=
+B^\top B^\top I (B^\top)^{-1} B B^{-1} A^{-1}\\
+&=
+B^\top I B B^{-1} A^{-1}\\
+&=
+B^\top A^{(-1)}\\
+&=
+((A^{-1})^\top B)^\top\\
+&= (A^{-1} B)^\top
+\end{align*}
+erhalten wir die Aussage.
+\newpage
+
+\subsection*{\aufgabe{b}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+f(x,y) = a \ln(x-2) + x \ y^2 + 8 \ y, \quad \textrm{wobei} \ a \in \mathbb{R}.
+\end{align*}
+Berechnen Sie den Gradienten von $ f $ an der Stelle $ (x_0,y_0) = (8,2) $.\\
+\\
+Wie muss der Parameter $ a \in \mathbb{R} $ gewählt werden, damit die Funktion $ f $ im Punkt $ (x_0,y_0) = (8,2) $ in der Richtung
+$ \textbf{b} = \begin{pmatrix}
+3 \\
+4
+\end{pmatrix} $ am stärksten zunimmt?\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\theenumi.}
+\item Berechne den Gradienten an der Stelle $ (x_0,y_0) $.
+\item Richte den Gradienten nach $ \textbf{b} $ aus.
+\end{enumerate}
+\end{mdframed}
+\underline{1. Berechne den Gradienten an der Stelle $ (x_0,y_0) $}\\
+Zunächst berechnen wir die partiellen Ableitungen von $ f $. Hierfür erhalten wir
+\begin{align*}
+f_x(x,y) &=  \frac{a}{x-2}+ y^2 \\
+f_y(x,y) &= 2 xy + 8,
+\end{align*}
+wodurch für den Gradienten
+\begin{align*}
+\textbf{grad}f(x,y)
+= \begin{pmatrix}
+\frac{a}{x-2} +y^2\\
+2xy +8
+\end{pmatrix}
+\ \Rightarrow \
+\textbf{grad}f(8,2) =
+\begin{pmatrix}
+\frac{a}{6} + 4\\
+40
+\end{pmatrix}
+\end{align*}
+gilt.\\
+\\
+\underline{2. Richte den Gradienten nach $ \textbf{b} $ aus}\\
+Der Gradient an der Stelle $ (x_0,y_0) $ zeigt in die Richtung des steilsten Anstiegs. Dementsprechend muss
+\begin{align*}
+\lambda \textbf{b} = \textbf{grad} f(8,2)
+\ \Leftrightarrow \
+\lambda 
+\begin{pmatrix}
+3 \\ 4
+\end{pmatrix}
+= 
+\begin{pmatrix}
+\frac{a}{6} + 4\\
+40
+\end{pmatrix}
+\end{align*}
+erfüllt sein. Aus der zweiten Komponente erhalten wir $ \lambda = 10 $.
+Die erste Komponente liefert dann mit
+\begin{align*}
+10 \cdot 3 = \frac{a}{6} + 4
+\ \Leftrightarrow \
+30  - 4 = 26 =  \frac{a}{6}
+\ \Leftrightarrow \
+a = 6 \cdot 26 = 156
+\end{align*}
+das passende $ a $.
+
+
+\newpage
+
+\subsection*{\aufgabe{c}{3}}
+Gegeben sind die Vektoren
+\begin{align*}
+\textbf{b}_1 =
+\begin{pmatrix}
+1 \\
+t\\ 
+0
+\end{pmatrix},
+\
+\textbf{b}_2 =
+\begin{pmatrix}
+2t \\
+4\\ 
+t
+\end{pmatrix},
+\
+\textbf{b}_3 =
+\begin{pmatrix}
+8 \\
+t\\ 
+t^2
+\end{pmatrix}.
+\end{align*}
+Für welche Werte von $ t \in \mathbb{R} $ ist das Vektorsystem $ \{ \textbf{b}_1, \textbf{b}_2, \textbf{b}_3 \} $ \textit{keine} Basis des dreidimensionalen Raumes $ \mathbb{R}^3 $?
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Überlege dir den Zusammenhang von linearer Abhängigkeit und der Determinante einer Matrix.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Überlege dir den Zusammenhang von linearer Abhängigkeit und der Determinante einer Matrix}\\
+Die drei Vektoren $ \textbf{b}_1 $, $ \textbf{b}_2 $ und $ \textbf{b}_3$ bilden keine Basis, wenn diese linear abhängig sind. 
+$ \textbf{b}_1 $, $ \textbf{b}_2 $ und $ \textbf{b}_3$ sind linear abhängig genau dann, wenn
+\begin{align*}
+\det \begin{pmatrix}
+\textbf{b}_1,\textbf{b}_2,\textbf{b}_3
+\end{pmatrix}
+= 0
+\end{align*}
+gilt. 
+Wir bestimmen nun die Determinante abhängig von $ t $. Wir werden nach der ersten Spalte entwickeln, da dort eine Null vorkommt. Mit der Entwicklung nach der ersten Spalte gilt:
+\begin{align*}
+\det \begin{pmatrix}
+\textbf{b}_1,\textbf{b}_2,\textbf{b}_3
+\end{pmatrix}
+= 
+\det 
+\begin{pmatrix}
+1 & 2t & 8\\
+t & 4 &t \\
+0 & t & t^2
+\end{pmatrix}
+&=
+1 \cdot \det \begin{pmatrix}
+4 & t \\
+t & t^2
+\end{pmatrix}
+- t \det
+\begin{pmatrix}
+2t & 8 \\
+t & t^2
+\end{pmatrix}\\
+&=
+4t^2 - t^2 - t(2t^3 - 8t)
+= 
+3t^2 - 2t^4 + 8 t^2 \\
+&= -2t^4 + 11 t^2
+=
+t^2(11 - 2 t^2).
+\end{align*}
+Für $ t = 0 $ ist diese Determinante gleich null.
+Außerdem gilt
+\begin{align*}
+11 - 2t^2 = 0
+\ \Leftrightarrow \
+t^2 = \frac{ 11}{2}
+\ \Leftrightarrow \
+t = \pm \sqrt{\frac{11}{2}}.
+\end{align*} 
+Damit sind die Vektoren $ \textbf{b}_1 $, $ \textbf{b}_2 $ und $ \textbf{b}_3$ für 
+\begin{align*}
+\left\lbrace - \sqrt{\frac{11}{2}} , 0 ,  \sqrt{\frac{11}{2}} \right\rbrace
+\end{align*}
+linear abhängig.
+\newpage
+\subsection*{\aufgabe{d}{6}}
+Gegeben ist die Matrix
+\begin{align*}
+M = 
+\begin{pmatrix}
+0  & 2a\\
+-3a & 5a
+\end{pmatrix}
+,
+\quad
+\textrm{wobei } a \neq 0.
+\end{align*}
+Berechnen Sie die Eigenwerte und Eigenvektoren der Matrix $ M $.\\
+\\
+Berechnen Sie den Vektor $ M^n \textbf{x} $, wobei $ \textbf{x} = \begin{pmatrix}
+2 \\ 2
+\end{pmatrix}. $
+\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Berechne die Eigenwerte und zugehörige Eigenvektoren.
+\item Bestimme den gesuchten Vektor.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Berechne die Eigenwerte und zugehörige Eigenvektoren }\\
+Die Eigenwerte der Matrix $ M $ bestimmen wir, indem wir die Gleichung
+\begin{align*}
+\det ( M - \lambda I) = 0
+\end{align*}
+lösen.
+Es gilt
+\begin{align*}
+\det 
+\begin{pmatrix}
+- \lambda & 2a\\
+-3a & 5a - \lambda
+\end{pmatrix}
+=
+- \lambda (5a - \lambda) - (-3a) \cdot 2a
+=
+- \lambda (5a - \lambda) + 6 a^2
+=
+\lambda^2 - 5a \lambda + 6 a^2,
+\end{align*}
+womit wir 
+\begin{align*}
+\lambda_{\nicefrac{1}{2} }
+&=
+\frac{5a \pm \sqrt{(-5a)^2- 4 \cdot 6 a^2}}{2}
+=
+\frac{5a \pm \sqrt{25 a^2 - 24 a^2}}{2}
+=
+\frac{5a \pm \sqrt{a^2}}{2}
+= \frac{5a \pm a}{2}\\
+\ \Leftrightarrow \
+\lambda_1 &= 2 a, \quad \lambda_2 = 3a
+\end{align*}
+erhalten.
+Zuerst bestimmen wir die Eigenvektoren zu $ \lambda_1 $. Hierfür lösen wir
+\begin{align*}
+(M - \lambda_1 I ) x = 0.
+\end{align*}
+Wir erhalten 
+\begin{align*}
+\begin{pmatrix}
+0 - \lambda_1 & 2a \\
+-3a & 5a - \lambda_1
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 - 2a & 2a \\
+-3a & 5a - 2a
+\end{pmatrix}
+=
+\begin{gmatrix}[p]
+-2a & 2a \\
+-3a & 3a
+\rowops
+\mult{0}{\cdot ( \frac{1}{2a} )}
+\mult{1}{\cdot ( \frac{1}{3a} )}
+\end{gmatrix}
+\leadsto 
+\begin{gmatrix}[p]
+-1 & 1 \\
+-1 &1
+\end{gmatrix}
+\leadsto
+\begin{pmatrix}
+-1 & 1 \\
+0 & 0
+\end{pmatrix},
+\end{align*}
+wobei wir die rechte Seite bewusst weglassen. Damit gilt insbesondere 
+\begin{align*}
+-x_1 + x_2 = 0 \ \Leftrightarrow \ x_1 = x_2, 
+\end{align*}
+wodurch wir die Eigenvektoren
+\begin{align*}
+\textbf{v}_1 = t \cdot \begin{pmatrix}
+1 \\ 1
+\end{pmatrix}, \quad t \in \mathbb{R}
+\end{align*}
+zu $ \lambda_1  $ erhalten.
+Für $ \lambda_2 $ lösen wir 
+\begin{align*}
+(M-\lambda_2I)x = 0.
+\end{align*}
+Die Zeilenumformungen 
+\begin{align*}
+\begin{pmatrix}
+0 - \lambda_2 & 2a \\
+-3a & 5a - \lambda_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+-3a - 2a & 2a \\
+-3a & 5a - 3a
+\end{pmatrix}
+=
+\begin{gmatrix}[p]
+-3a & 2a \\
+-3a & 2a
+\rowops
+\add[-1]{0}{1} 
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+-3a & 2a \\
+0 & 0
+\rowops
+\mult{0}{\cdot \frac{1}{3} a}
+\end{gmatrix}\\
+&\leadsto 
+\begin{pmatrix}
+-1 & \frac{2}{3} \\
+0 & 0
+\end{pmatrix}
+\end{align*}
+führen auf
+\begin{align*}
+-x_1 + \frac{2}{3} x_2 = 0 
+\ \Leftrightarrow \
+x_1 = \frac{2}{3} x_2 
+\end{align*}
+Dies liefert uns die Eigenvektoren
+\begin{align*}
+\textbf{v}_2
+= s \cdot \begin{pmatrix}
+2 \\ 3
+\end{pmatrix}, \quad s \in \mathbb{R}
+\end{align*}
+für den Eigenwert $ \lambda_2 $.\\
+\\
+\underline{2. Bestimme den gesuchten Vektor}\\
+Der Wert $\lambda$ heißt \textit{Eigenwert} zum Eigenvektor $\textbf{x} \neq 0$, falls
+\begin{align*}
+M \cdot \textbf{x} = \lambda \cdot \textbf{x}
+\end{align*}
+gilt.
+Der Vektor $ \textbf{x} = \begin{pmatrix}
+2 \\ 2
+\end{pmatrix} $ ist ein Vielfaches des Vektors
+\begin{align*}
+\begin{pmatrix}
+1 \\ 1
+\end{pmatrix}
+\end{align*}
+und damit ein Eigenvektor zum Eigenwert $ \lambda_1 = 2a $. 
+Dementsprechend gilt
+\begin{align*}
+M^n \textbf{x } = 
+\lambda_1 M^{n-1} \textbf{x}
+= \dots 
+= 
+\lambda_1^n \textbf{x}
+= 
+(2a)^n 
+\begin{pmatrix}
+2\\2
+\end{pmatrix}
+=
+2^{n+1} a^n 
+\begin{pmatrix}
+1\\1	
+\end{pmatrix}.
+\end{align*}
+\newpage
+
+\subsection*{\aufgabe{e}{8}}
+Gegeben ist das Gleichungssystem
+\begin{equation*}
+\begin{split}
+x_1 \ + \  x_2 \ + \  x_3 \ + \  x_4 \ + \ x_5 \ &= \ \ 0 \\
+2x_1 \ + \ 3 x_2 \ + \ 4 x_3 \ + \ 5 x_4 \ - \ x_5 \ &= \ \ 0 \\
+x_1 \ + \ 2 x_2 \ + \ 4 x_3 \ - \  x_4 \ + \ 2x_5 \ &= \ 0
+\end{split}
+.
+\end{equation*}
+Berechnen Sie die allgemeine Lösung dieses Gleichungssystems mit dem Gauß-Verfahren.\\
+\\
+Für den Unterraum
+\begin{align*}
+W 
+=
+\{
+\textbf{x} \in \mathbb{R}^5 | x_1 + x_2 + x_3 + x_4 + x_5 = 0 \wedge
+2 x_1 + 3 x_2 +4 x_3 + 5 x_4 - x_5 = 0
+\wedge
+x_1 + 2x_2 +4 x_3 - x_4 + 2x_5 = 0
+\}
+\end{align*}
+ist eine Basis anzugeben.\\
+\\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Stelle die erweiterte Koeffizientenmatrix auf.
+\item Löse das System und gebe die Basis von $ W $ an.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Stelle die erweiterte Koeffizientenmatrix auf}\\
+Die erweiterte Koeffizientenmatrix ist durch
+\begin{align*}
+	(A| \textbf{b})
+	=
+	\begin{gmatrix}[p]
+	1 & 1 & 1 & 1 & 1 &  \BAR & 0 \\ 
+	2 & 3 & 4 & 5 & -1 &  \BAR & 0 \\
+	1 & 2 & 4 & -1 & 2 &  \BAR & 0 
+	\end{gmatrix}
+\end{align*}
+gegeben. Da die rechte Seite null ist, können wir diese bei weiteren Umformungen ignorieren.\\
+\\
+\underline{2. Löse das System und gebe die Basis von $ W $ an}\\
+Die Lösung des Systems erhalten wir durch elementare Zeilenumformungen. Diese Umformungen liefern
+\begin{align*}
+\begin{gmatrix}[p]
+1 & 1 & 1 & 1 & 1 \\ 
+2 & 3 & 4 & 5 & -1  \\
+1 & 2 & 4 & -1 & 2 
+\rowops
+\add[-2]{0}{1}
+\add[-1]{0}{2} 
+\end{gmatrix}
+&\leadsto
+\begin{gmatrix}[p]
+1 & 1 & 1 & 1 & 1 \\ 
+0 & 1 & 2 & 3 & -3  \\
+0 & 1 & 3 & -2 & 1 
+\rowops
+\add[-1]{1}{0}
+\add[-1]{1}{2} 
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 0 & -1 & -2 & 4 \\ 
+0 & 1 & 2 & 3 & -3  \\
+0 & 0 & 1 & -5 & 4 
+\rowops
+\add[-2]{2}{1}
+\add[1]{2}{0} 
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+1 & 0 & 0 & -7 & 8 \\ 
+0 & 1 & 0 & 13 & -11  \\
+0 & 0 & 1 & -5 & 4 
+\end{gmatrix},
+\end{align*}
+wodurch wir die Gleichungen
+\begin{align*}
+x_1 -7x_4 +8x_5 = 0 
+\ &\Leftrightarrow \
+x_1 = 7x_4 - 8 x_5\\
+x_2 + 13 x_4 -11 x_5
+\ &\Leftrightarrow \
+x_2 = -13 x_4 + 11 x_5\\
+x_3 -5x_4 + 4 x_5
+\ &\Leftrightarrow \
+x_3 = 5x_4 -4 x_5 
+\end{align*}
+extrahieren können.
+Die $ x_1 $, $ x_2 $ und $ x_3 $ Komponente hängen also von $ x_4 $ und $ x_5 $ ab.
+Dies bedeutet, dass sich die allgemeine Lösung durch
+\begin{align*}
+\begin{pmatrix}
+x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5
+\end{pmatrix}
+=
+\begin{pmatrix}
+7 x_4 - 8 x_5\\
+-13 x_4 + 11 x_5\\
+5x_4 - 4 x_5\\
+x_4 \\
+x_5
+\end{pmatrix}
+=
+x_4 \cdot
+\begin{pmatrix}
+7 \\ -13 \\ 5 \\1 \\ 0
+\end{pmatrix}
++
+x_5
+\begin{pmatrix}
+-8 \\ 11 \\ -  4 \\ 0 \\ 1
+\end{pmatrix}
+\end{align*}
+darstellen lässt. Damit gilt für die Lösungsmenge
+\begin{align*}
+W = 
+\left\lbrace 
+\textbf{x} \in \mathbb{R} \ | \
+\textbf{x} = 
+t \cdot
+\begin{pmatrix}
+7 \\ -13 \\ 5 \\1 \\ 0
+\end{pmatrix}
++
+s \cdot
+\begin{pmatrix}
+-8 \\ 11 \\ -  4 \\ 0 \\ 1
+\end{pmatrix},
+\ s,t \in \mathbb{R}
+\right\rbrace.
+\end{align*}
+Die Lösungsmenge $ W $ ist gleichzeitig der gesuchte Unterraum und die Basis ist durch
+\begin{align*}
+\left\lbrace
+\begin{pmatrix}
+7 \\ -13 \\ 5 \\1 \\ 0
+\end{pmatrix},
+\begin{pmatrix}
+-8 \\ 11 \\ -  4 \\ 0 \\ 1
+\end{pmatrix}
+\right\rbrace
+\end{align*}
+gegeben.
+
+
+\newpage
