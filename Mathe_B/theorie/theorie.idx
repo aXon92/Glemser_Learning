@@ -1,7 +1,7 @@
 \indexentry{Integral!unbestimmt}{2}
 \indexentry{Integral!Konstante}{2}
 \indexentry{Integral!Stammfunktion}{2}
-\indexentry{Integral!Linearit\IeC {\"a}t}{2}
+\indexentry{Integral!Linearität}{2}
 \indexentry{Integral!Stammfunktion}{3}
 \indexentry{Integral!bestimmt}{4}
 \indexentry{Integral!Hauptsatz}{4}
@@ -10,8 +10,8 @@
 \indexentry{Integral!uneigentlich}{14}
 \indexentry{Dichtefunktion}{16}
 \indexentry{Dichtefunktion}{16}
-\indexentry{station\IeC {\"a}re Punkte!notwendiges Bed.}{18}
-\indexentry{station\IeC {\"a}re Punkte!hinreichende Bed.}{18}
+\indexentry{stationäre Punkte!notwendiges Bed.}{18}
+\indexentry{stationäre Punkte!hinreichende Bed.}{18}
 \indexentry{Minimum}{18}
 \indexentry{Maximum}{18}
 \indexentry{Sattelpunkt}{18}
@@ -27,8 +27,8 @@
 \indexentry{homogene Funktionen}{32}
 \indexentry{Differenzengleichung}{34}
 \indexentry{Differenzengleichung!Normalform}{34}
-\indexentry{Differenzengleichung!allgemeine L\IeC {\"o}sung}{35}
-\indexentry{Differenzengleichung!L\IeC {\"o}sungsverhalten}{35}
+\indexentry{Differenzengleichung!allgemeine Lösung}{35}
+\indexentry{Differenzengleichung!Lösungsverhalten}{35}
 \indexentry{Matrix}{41}
 \indexentry{Matrix}{41}
 \indexentry{Matrix!Elementare Operationen}{41}
@@ -44,16 +44,16 @@
 \indexentry{Vektor!orthogonal}{47}
 \indexentry{Zeilenstufenform}{49}
 \indexentry{Zeilenstufenform}{49}
-\indexentry{Lineare!Abh\IeC {\"a}ngigkeit}{52}
-\indexentry{Lineare!Unabh\IeC {\"a}ngigkeit}{52}
+\indexentry{Lineare!Abhängigkeit}{52}
+\indexentry{Lineare!Unabhängigkeit}{52}
 \indexentry{Basis}{52}
 \indexentry{Lineare!Entscheidungsverfahren}{53}
 \indexentry{Matrix!Rang}{54}
 \indexentry{Matrix!invers}{55}
-\indexentry{Matrix!regul\IeC {\"a}r}{55}
+\indexentry{Matrix!regulär}{55}
 \indexentry{Matrix!invers}{55}
-\indexentry{Verfahren inv. Matrix}{55}
-\indexentry{Krit. f\IeC {\"u}r Invert.}{56}
+\indexentry{Verfahren inv. Matrix}{56}
+\indexentry{Krit. für Invert.}{56}
 \indexentry{Matrix!formales Rechnen}{57}
 \indexentry{Untermatrix}{58}
 \indexentry{Determinante!elementar}{59}
@@ -61,10 +61,10 @@
 \indexentry{Determinante}{59}
 \indexentry{Determinante!Rechenregeln}{60}
 \indexentry{LGS}{68}
-\indexentry{LGS!L\IeC {\"o}sung}{68}
+\indexentry{LGS!Lösung}{68}
 \indexentry{LGS!Matrixdarst.}{69}
-\indexentry{Gau\IeC {\ss } f\IeC {\"u}r LGS}{71}
-\indexentry{LGS!L\IeC {\"o}sbarkeitskrit.}{75}
+\indexentry{Gauß für LGS}{71}
+\indexentry{LGS!Lösbarkeitskrit.}{75}
 \indexentry{Eigenvektor}{77}
 \indexentry{Eigenwerte}{77}
 \indexentry{Eigenwerte!Bestimmung}{77}
