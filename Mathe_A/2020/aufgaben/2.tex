@@ -1,0 +1,416 @@
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\section*{Aufgabe 2 (34 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+$ A $ und $ B $ seien zwei Aussagen. Die zusammengesetzte Aussage
+\begin{align*}
+	\neg (A \ \Rightarrow \ B)
+\end{align*}
+ist äquivalent zu 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ A \vee B $.
+	\item $ A \wedge B $.
+	\item $ (\neg A) \vee (\neg B)$
+	\item $ (\neg A) \wedge (\neg B)$.
+\end{enumerate}\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Löse die Aufgabe mithilfe einer Wahrheitstabelle.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Löse die Aufgabe mithilfe einer Wahrheitstabelle}\\
+Eine Aussage kann nur die Wahrheitswerte wahr ($ W $) oder falsch ($ F $) annehmen.
+Dementsprechend gibt es bei zwei Aussagen $ A $, $ B $ genau vier Kombinationsmöglichkeiten der Wahrheitswerte.
+Aus diesen Kombinationen ergeben sich dann die Wahrheitswerte der verknüpften Aussagen.
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ \hline
+		\multicolumn{1}{c|}{(a) \ \ $ A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\ 
+		\multicolumn{1}{c|}{(b) \ \ $ A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\ 
+		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\ 
+		\hline
+		\multicolumn{1}{c|}{$\neg ( A \wedge B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\ 
+		\multicolumn{1}{c|}{(c) \ \ $\neg (A \Rightarrow B)$} & \multicolumn{4}{l}{$F$ $W$ $F$ $F$} \\ 
+		\hline
+		\multicolumn{1}{c|}{(d) \ \ $ (A \vee B) \wedge (\neg ( A \wedge B))$} & \multicolumn{4}{l}{$F$ $W$ $W$ $F$} \\
+		\hline
+	\end{tabular}
+\end{center}
+Damit sind die Antworten (a)--(c) falsch und die richtige Antwort bleibt übrig.\\
+\\
+Also ist die Antwort (d) korrekt.\\
+\\
+Alternativ lässt sich die Antwort auch anders herleiten. Durch Umformungen erhalten wir:
+\begin{align*}
+	(A\vee B) \wedge (\neg (A\wedge B))
+	&=
+	(A\vee B) \wedge (\neg A \vee  \neg B)
+	=
+	((A\vee B) \wedge (\neg A)) \vee ( (A\vee B) \wedge  (\neg B))\\
+	&=(A \wedge \neg A) \vee (\neg A \wedge B) \vee (A \wedge \neg B) \vee (B \wedge \neg B)\\
+	&=
+	(\neg A \wedge B) \vee (A \wedge \neg B).
+\end{align*}
+Hierbei geht ein, dass $ (A \wedge \neg A)  $ unabhängig von dem Wahrheitsgehalt der Aussage falsch ist und für logische Operationen das Distributivgesetz gilt.\\
+\\
+Man nennt diese logische Verknüpfung auch exklusives Oder und entspricht der sprachlichen Verwendung von \grqq oder \grqq.
+
+\newpage
+
+\subsection*{\frage{2}{2}}
+Die Folge $ \lbrace a_n \rbrace_{n \in \N} $ ist monoton wachsend und konvergiert mit $ \lim_{n \to \infty} a_n = -2 $.
+Die Folge $ \lbrace b_n \rbrace_{n \in \N} $ ist definiert durch $ b_n = (-3) \cdot a_n $.\\
+\\
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $ \lbrace b_n \rbrace_{n \in \N} $ ist monoton wachsend und divergent.
+	\item $ \lbrace b_n \rbrace_{n \in \N} $ ist monoton wachsend und konvergent.
+	\item $ \lbrace b_n \rbrace_{n \in \N} $ ist monoton fallend und divergent.
+	\item $ \lbrace b_n \rbrace_{n \in \N} $ ist monoton fallend und konvergent.
+	\item $ \lbrace b_n \rbrace_{n \in \N} $ ist nicht monoton und divergent.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+\underline{1. }\\
+
+ 
+
+\newpage
+\subsection*{\frage{3}{3}}
+Eine Möbelfirma wirbt:
+\begin{center}
+	\glqq Wir schenken Ihnen die Mehrwertsteuer auf Ihren Möbelkauf\grqq
+\end{center}
+Die Mehrwertsteuer auf Möbel beträgt in der Schweiz $ 7.7 \% $.\\
+Wie viel Prozent Rabatt gewährt also die Möbelfirma?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Es sind etwa $ 7.15 \% $.
+	\item 
+	Es sind etwa $ 7.56 \% $.
+	\item 
+	Es sind genau $ 7.7 \% $.
+	\item
+	Es sind etwa $ 7.78 \% $.
+	\item
+	Es sind etwa $ 8.34 \% $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+
+
+
+
+\newpage
+
+\subsection*{\frage{4}{3}}
+Sei $ f $ eine Funktion einer reellen Variablen und $ x_0 \in D_f $.
+$ x_0  $ heißt \textit{Fixpunkt von} $ f $, wenn gilt: $ f(x_0) = x_0 $.\\
+\\
+Welche der folgenden Aussagen ist wahr? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Wenn $ f $ invertierbar ist, dann hat $ f $ keinen Fixpunkt.
+	\item
+	Wenn $ f $ invertierbar ist und $ f^{-1} $ mehrere Fixpunkte hat, dann hat $ f $ höchstens einen Fixpunkt.
+	\item
+	Wenn $ f $ invertierbar ist, dann hat $ f $ mindestens einen Fixpunkt.
+	\item
+	Wenn $ f  $ einen Fixpunkt hat, dann ist $ f $ invertierbar.
+	\item
+	Wenn $ f $ invertierbar ist und einen Fixpunkt hat, dann hat auch $ f^{-1} $ einen Fixpunkt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+
+\newpage
+\subsection*{\frage{5}{3}}
+Seien $ a,b >0, \ b \neq 1 , \ n \in \N  $.\\
+Welche der folgenden Identitäten ist allgemein gültig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \log_{b^n}(a^n) = \frac{\log_{b}(a)}{n} $.
+	\item 
+	$ \log_{b^n}(a^n) = \sqrt[n]{\log_{b}(a)} $.
+	\item
+	$ \log_{b^n}(a^n) = \log_{b}(a) $.
+	\item
+	$ \log_{b^n}(a^n) = n \ \log_{b}(a) $.
+	\item
+	Keine der vorangehenden Aussagen ist im Allgemeinen gültig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+
+ \newpage
+
+\subsection*{\frage{6}{3}}
+Ein Bergsteiger startet bei seinem Auto bei Sonnenaufgang um $ 5 $ Uhr mit dem Aufstieg und erreicht auf direktem Weg ohne Pause die Hütte um $ 13 $ Uhr.
+Am anderen Tag geht er den genau gleichen Weg zurück; er startet um $ 8 $ Uhr und geht ohne anzuhalten. So erreicht er sein Auto um $ 12:50 $ Uhr.\\
+\\
+Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Ja, es gibt genau einen solchen Zeitpunkt.
+	\item 
+	Nein.
+	\item
+	Es kann sein, muss aber nicht sein.
+	\item
+	Es kann auch mehrere Zeitpunkte geben.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item
+
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+\newpage
+\subsection*{\frage{7}{3}}
+Gegeben ist die Funktion $ f $ definiert durch
+\begin{align*}
+	f(x) = \sin(x) + \cos(x)
+\end{align*}
+mit Definitionsgebiet $ D_f \in \R $. Für den Wertebereich $ W_f $ von $ f $ gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ W_f = [-1,1] $.
+	\item
+	$ W_f = [-\sqrt{2},\sqrt{2}] $.
+	\item
+	$ W_f = [-2,2] $.
+	\item
+	$ W_f = [0,2] $.
+	\item
+	$ W_f = [-\nicefrac{\pi }{2}, \nicefrac{\pi }{2}] $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+\newpage
+
+\subsection*{\frage{8}{3}}
+$ f $ und $ g $ seien ungerade, differenzierbare Funktionen. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f^\prime + g^\prime $ ist ungerade.
+	\item
+	$ f^\prime + g^\prime $ ist gerade.
+	\item
+	$ f^\prime \cdot g^\prime $ ist ungerade.
+	\item
+	Keine der obigen Antworten ist im Allgemeinen richtig.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+\newpage
+\subsection*{\frage{9}{2}}
+Wir betrachten die differenzierbaren Funktionen $ f(x) $ und $ g(x) $, wobei $ g(x) > 0 $ für $ x \in \R $ gelte. Die Ableitung der Funktion
+\begin{align*}
+	k(x)
+	=
+	\frac{f(g(x))}{g(f(x))}
+\end{align*}
+ist dann
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) + f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+	\item
+	$ k^\prime(x) = \frac{f^\prime(g(x))g^\prime(x) }{g^\prime(f(x))f^\prime(x)} $.
+	
+	\item
+	$ k^\prime(x) = 
+	\frac{f^\prime(g(x))g^\prime(x)g(f(x)) - f(g(x)) g^\prime(f(x)) f^\prime(x) }
+	{(g(f(x)))^2} $.
+	\item
+	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) - f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+
+\newpage
+\subsection*{\frage{10}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+	f \ : \ \R \rightarrow \R, \ x \mapsto y = x \cdot |x| 
+\end{align*}
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f $ ist überall stetig und differenzierbar.
+	\item
+	$ f $ ist stetig in $ x_0 = 0 $, aber nicht differenzierbar in $ x_0 = 0 $.
+	\item
+	$ f $ ist differenzierbar in $ x_0 = 0 $, aber nicht stetig in $ x_0 = 0 $.
+	\item
+    $ f $ ist nicht stetig und nicht differenzierbar in $ x_0 = 0 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+\newpage
+\subsection*{\frage{11}{3}}
+Das Taylorpolynom $ 4 $. Ordnung in $ x_0 = 0 $ der Funktion
+\begin{align*}
+	f(x) = e^{x^3}
+\end{align*}
+lautet:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x $. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} - x $. 
+	\item
+	$ P_4(x) = x^3 + x^2 + x + 2$. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x +1 $. 
+	\item
+	$ P_4(x) = x^3 + 1$. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} - \frac{x^3}{3} + \frac{x^2}{2} - x + 2 $. 
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
+
+\newpage
+
+\subsection*{\frage{12}{3}}
+Die Funktion zweier Variablen $ f $ ist homogen vom Grad $ 3 $ und die Funktion zweier Variablen ist homogen vom Grade $ -3 $.\\
+\\
+Die Funktion $ h $ ist definiert durch
+\begin{align*}
+	h(x,y) = f(g(x,y),g(x,y)).
+\end{align*}
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ h $ ist homogen vom Grad $ -1 $. 
+	\item
+	$ h $ ist homogen vom Grad $ 0 $. 
+	\item
+	$ h $ ist homogen vom Grad $ 6 $. 
+	\item
+	$ h $ ist homogen vom Grad $ -9 $.  
+	\item
+	$ h $ ist nicht homogen.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. }\\
