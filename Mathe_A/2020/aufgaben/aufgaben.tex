@@ -2,7 +2,7 @@
 
 
 \begin{Large}
-\textbf{Teil I: Offene Aufgaben (40 Punkte)}
+\textbf{Teil I: Offene Aufgaben (36 Punkte)}
 \end{Large}
 \\
 \\
@@ -42,39 +42,60 @@ Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werde
 \newpage
 \section*{\hfil Aufgaben \hfil}
 \vspace{1cm}
-\section*{Aufgabe 1 (40 Punkte)}
+\section*{Aufgabe 1 (36 Punkte)}
 \vspace{0.4cm}
-Ein institutioneller Anleger beabsichtigt im großen Stil Aktien einer Firma zu kaufen.
-Da der Handelspreis der Aktie jedoch von der Nachfrage abhängt, möchte der Investor zuerst verstehen, wie seine Nachfrage den Preis beeinflussen wird.
-Die Nachfrage des Investors in Abhängigkeit vom Preis ist gegeben durch $ d = D(p) =4 - 2 e^{p-1}$.
-Der Preis der Aktie in Abhängigkeit von der Nachfrage $ d $ des Investors ist gegeben durch $ P(d) = \frac{1}{4} + \frac{1}{2} d $.
 %\titleformat{\subsection}[runin]
 %{\normalfont\large\bfseries}{\thesubsection}{1em}{}
-\subsection*{\aufgabe{a1}{2}} 
-Verknüpfen Sie die beiden Funktionen $ P $ und $ D $ \hspace{\parindent}zur Funktion $ Q = P \circ D $,
+\subsection*{\aufgabe{a1}{6}} 
+Thomas Robert Malthus (1766-1834), ein britischer Ökonom und Pfarrer, veröffentlichte
+1798 seinen vielbeachteten \textit{Essay on the Principle of Population}.
+Er formulierte das Axiom, dass die Weltbevölkerung exponentiell wachse, die Nahrung dagegen nur linear. 
+Das bedeutet, dass die Funktion $ n(t) $, welche die Anzahl Menschen angibt, die man bei optimaler Verteilung der zur Verfügung stehenden Nahrungsmittel zu Zeit $ t $ ernähren könnte, eine lineare ist:
 \begin{align*}
-	Q : R_+ \to \R_{++} , \ p \mapsto q= Q(p),
+	n(t) = a + b \cdot t.
 \end{align*}
-welche die Beziehung zwischen dem neuen Preis $ q $ und dem alten Preis $ p $ beschreibt, nachdem 
-der Investor $ D(p) $ Stück Aktien gekauft hat.
-Geben Sie die Abbildungsvorschrift $ Q $ an.
-\\
+Die Weltbevölkerung $ w(t) $ betrug im Jahre 1800 ($ t= 0 $) rund eine Milliarde, d.h. $ w(0) = 10^9 $.
+Wir wollen annehmen, dass die Weltbevölkerung rund $ 1\% $ pro Jahr wächst.
+Außerdem wollen wir mit
+\begin{align*}
+	a = 2 \cdot 10^9 \ \textrm{und} \ b = 0.2 \cdot 10^9
+\end{align*}
+rechnen.
+\begin{description}
+	\item[Beweisen Sie:] 
+	Es gibt genau einen Zeitpunkt $ t^\star > 400 $, an dem die Weltbevölkerung gerade noch ernährt werden kann, d.h., für $ w(t^\star)  = n(t^\star )$ ist.
+\end{description}  
+\
 \\
 
 
-\subsection*{\aufgabe{a2}{6}} Zeigen Sie, dass es einen eindeutigen Fixpunkt $ p^\star \in \left[0,\frac{3}{2}\right] $ gibt, für welchen die Relation $ p^\star = Q(p^\star) $ gilt.
-Gesucht ist also der Gleichgewichtspreis $ p^\star $, welcher unverändert bleibt, wenn der Investor $ D(p^\star ) $ Stück Aktien kauft.
+\subsection*{\aufgabe{a2}{6}}
+Thomas Robert Malthus (1766-1834), ein britischer Ökonom und Pfarrer, veröffentlichte
+1798 seinen vielbeachteten \textit{Essay on the Principle of Population}.
+Er formulierte das Axiom, dass die Weltbevölkerung exponentiell wachse, die Nahrung dagegen nur linear. 
+Das bedeutet, dass die Funktion $ n(t) $, welche die Anzahl Menschen angibt, die man bei optimaler Verteilung der zur Verfügung stehenden Nahrungsmittel zu Zeit $ t $ ernähren könnte, eine lineare ist:
+\begin{align*}
+	n(t) = a + b \cdot t.
+\end{align*}
+Die Weltbevölkerung $ w(t) $ betrug im Jahre 1800 ($ t= 0 $) rund eine Milliarde, d.h. $ w(0) = 10^9 $.
+Wir wollen annehmen, dass die Weltbevölkerung rund $ 1\% $ pro Jahr wächst.
+Außerdem wollen wir mit
+\begin{align*}
+	a = 2 \cdot 10^9 \ \textrm{und} \ b = 0.2 \cdot 10^9
+\end{align*}
+rechnen.\\
+\\
+Es gibt genau einen Zeitpunkt $ t^\star > 400 $, an dem die Weltbevölkerung gerade noch ernährt werden kann, d.h., für $ w(t^\star)  = n(t^\star )$ ist.\\
+\\
+Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, um eine Näherung für $ t^\star $ zu finden.
  \\
 \\
 \titleformat{\subsection}[display]
 {\normalfont\large\bfseries}{\thesubsection}{1mm}{}
-\subsection*{\aufgabe{a3}{6}}
-Ein institutioneller Anleger beabsichtigt im großen Stil Aktien einer Firma zu kaufen.
-Da der Handelspreis der Aktie jedoch von der Nachfrage abhängt, möchte der Investor zuerst verstehen, wie seine Nachfrage den Preis beeinflussen wird.
-Die Nachfrage des Investors in Abhängigkeit vom Preis ist gegeben durch $ d = D(p) =4 - 2 e^{p-1}$.
-Der Preis der Aktie in Abhängigkeit von der Nachfrage $ d $ des Investors ist gegeben durch $ P(d) = \frac{1}{4} + \frac{1}{2} d $.\\
-Für die Funktion $ Q = P \circ D $ gibt es einen eindeutigen Punkt $ p^\star \in \left[0,\frac{3}{2}\right]  $ mit $ p^\star = Q(p^\star) $.\\
-Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ p_0 = 1 $, um eine Näherung für $ p^\star  $ zu finden.
+\subsection*{\aufgabe{b}{10}}
+Max hat über seine Verhältnisse gelebt. 
+Deshalb hat er nun Schulden von mehreren hunderttausend Franken.
+Die Schuldenberatung vermittelt ihm am Anfang des Jahres einen Privatkredit mit $ i = 5 \% $ in der genannten Höhe von $ S = 355'000 \ [\textrm{CHF}] $, den er in $ 12 $ gleich grossen Raten $ C $ jeweils per Jahresende abbezahlen muss. 
 \\ \\
 \subsection*{\aufgabe{b}{6}}
 Ein Computer hat eine Rechenleistung von $ a_n $ während der Periode $ n, \ n = 1,2,... $

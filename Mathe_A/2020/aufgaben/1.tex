@@ -1,120 +1,84 @@
 \vspace{1cm}
 \fancyhead[C]{\normalsize\textbf{$\qquad$ Teil I: Offene Aufgaben}}
 \renewcommand{\labelenumi}{\theenumi.}
-\section*{Aufgabe 1 (40 Punkte)}
+\section*{Aufgabe 1 (36 Punkte)}
 \vspace{0.4cm}
-Ein institutioneller Anleger beabsichtigt im großen Stil Aktien einer Firma zu kaufen.
-Da der Handelspreis der Aktie jedoch von der Nachfrage abhängt, möchte der Investor zuerst verstehen, wie seine Nachfrage den Preis beeinflussen wird.
-Die Nachfrage des Investors in Abhängigkeit vom Preis ist gegeben durch $ d = D(p) =4 - 2 e^{p-1}$.
-Der Preis der Aktie in Abhängigkeit von der Nachfrage $ d $ des Investors ist gegeben durch $ P(d) = \frac{1}{4} + \frac{1}{2} d $.
-\subsection*{\aufgabe{a1}{2}}
-Verknüpfen Sie die beiden Funktionen $ P $ und $ D $ zur Funktion $ Q = P \circ D $,
+\section*{Aufgabe 1 (36 Punkte)}
+\vspace{0.4cm}
+%\titleformat{\subsection}[runin]
+%{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\subsection*{\aufgabe{a1}{6}} 
+Thomas Robert Malthus (1766-1834), ein britischer Ökonom und Pfarrer, veröffentlichte
+1798 seinen vielbeachteten \textit{Essay on the Principle of Population}.
+Er formulierte das Axiom, dass die Weltbevölkerung exponentiell wachse, die Nahrung dagegen nur linear. 
+Das bedeutet, dass die Funktion $ n(t) $, welche die Anzahl Menschen angibt, die man bei optimaler Verteilung der zur Verfügung stehenden Nahrungsmittel zu Zeit $ t $ ernähren könnte, eine lineare ist:
 \begin{align*}
-	Q : R_+ \to \R_{++} , \ p \mapsto q= Q(p),
+	n(t) = a + b \cdot t.
 \end{align*}
-welche die Beziehung zwischen dem neuen Preis $ q $ und dem alten Preis $ p $ beschreibt,
-nachdem der Investor $ D(p) $ Stück Aktien gekauft hat.
-Geben Sie die Abbildungsvorschrift $ Q $ an.
-\\
+Die Weltbevölkerung $ w(t) $ betrug im Jahre 1800 ($ t= 0 $) rund eine Milliarde, d.h. $ w(0) = 10^9 $.
+Wir wollen annehmen, dass die Weltbevölkerung rund $ 1\% $ pro Jahr wächst.
+Außerdem wollen wir mit
+\begin{align*}
+	a = 2 \cdot 10^9 \ \textrm{und} \ b = 0.2 \cdot 10^9
+\end{align*}
+rechnen.
+\begin{description}
+	\item[Beweisen Sie:] 
+	Es gibt genau einen Zeitpunkt $ t^\star > 400 $, an dem die Weltbevölkerung gerade noch ernährt werden kann, d.h., für $ w(t^\star)  = n(t^\star )$ ist.
+\end{description}  
+\
 \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Berechne die Verknüpfung der beiden Funktionen
+\item 
 
 \end{enumerate}
 \end{mdframed}
-\underline{1. Berechne die Verknüpfung der beiden Funktionen}\\
-Um die Abbildungsvorschrift von $ Q $ zu bestimmen, müssen wir die Verknüpfung $ P \circ D $ berechnen.
-Es gilt
-\begin{align*}
-	Q(p) = (P \circ D)(p)
-	=
-	P(D(p))
-	=
-	P(4 - 2e^{p-1})
-	=
-	\frac{1}{4} + \frac{1}{2}(4 - 2e^{p-1})
-	=
-	\frac{1}{4} + 2 -e^{p-1}
-	=
-	\frac{9}{4} - e^{p-1}
-\end{align*}
-für den Preis $ p \in \R_+ $.
-Durch $ Q $ erhalten wir eine Funktion, welche den Preis der Aktie $ p = P(d) $ in Abhängigkeit von der Nachfrage $ d = D(p) $ beschreibt.
+\underline{1. }\\
+
  
 
 
 \newpage
 
 \subsection*{\aufgabe{a2}{6}}
-Zeigen Sie, dass es einen eindeutigen Fixpunkt $ p^\star \in \left[0,\frac{3}{2}\right] $ gibt, für welchen die Relation $ p^\star = Q(p^\star) $ gilt.
-Gesucht ist also der Gleichgewichtspreis $ p^\star $, welcher unverändert bleibt, wenn der Investor $ D(p^\star ) $ Stück Aktien kauft.
+Thomas Robert Malthus (1766-1834), ein britischer Ökonom und Pfarrer, veröffentlichte
+1798 seinen vielbeachteten \textit{Essay on the Principle of Population}.
+Er formulierte das Axiom, dass die Weltbevölkerung exponentiell wachse, die Nahrung dagegen nur linear. 
+Das bedeutet, dass die Funktion $ n(t) $, welche die Anzahl Menschen angibt, die man bei optimaler Verteilung der zur Verfügung stehenden Nahrungsmittel zu Zeit $ t $ ernähren könnte, eine lineare ist:
+\begin{align*}
+	n(t) = a + b \cdot t.
+\end{align*}
+Die Weltbevölkerung $ w(t) $ betrug im Jahre 1800 ($ t= 0 $) rund eine Milliarde, d.h. $ w(0) = 10^9 $.
+Wir wollen annehmen, dass die Weltbevölkerung rund $ 1\% $ pro Jahr wächst.
+Außerdem wollen wir mit
+\begin{align*}
+	a = 2 \cdot 10^9 \ \textrm{und} \ b = 0.2 \cdot 10^9
+\end{align*}
+rechnen.\\
+\\
+Es gibt genau einen Zeitpunkt $ t^\star > 400 $, an dem die Weltbevölkerung gerade noch ernährt werden kann, d.h., für $ w(t^\star)  = n(t^\star )$ ist.\\
+\\
+Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, um eine Näherung für $ t^\star $ zu finden.
 \\ \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Überlege dir, wie der Nullstellensatz von Bolzano anwendbar ist.
-\item Zeige mit dem Nullstellensatz die Existenz eines Fixpunktes.
-\item Zeige die Eindeutigkeit des Fixpunktes.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Überlege dir, wie der Nullstellensatz von Bolzano anwendbar ist}\\
-Wir beginnen mit der Aussage des Nullstellensatzes von Bolzano.
-Gegeben ist eine stetige Funktion $  f : [a,b] \to \R $ mit $ f(a) < 0 $ und $ f(b) > 0 $ (oder umgekehrt).
-Dann existiert mindestens ein $ x \in [a,b] $, sodass $ f(x) = 0 $ ist.\\
-Wir können also sagen, dass eine stetige Funktion mit wechselnden Vorzeichen mindestens eine Nullstelle dazwischen besitzt.\\
-Unser Ziel ist nun nachzuweisen, dass genau ein $ p^\star \in \left[0,\frac{3}{2}\right] $ mit $ p^\star = Q(p^\star) $ existiert. Um den Nullstellensatz anzuwenden, behelfen wir uns mit der Funktion
-\begin{align*} 
-	f : \left[0,\frac{3}{2}\right] \to \R, \ p \mapsto f(p) = Q(p) - p
-\end{align*}
-und erhalten die Tatsache, dass
-\begin{align*}
-	 p = Q(p)  \ \Leftrightarrow \ 0 = Q(p) - p = f(p)
-\end{align*}
-gilt. Die Nullstellen von $ f $ entsprechen also den Fixpunkten von $ Q $ auf $ \left[0,\frac{3}{2}\right] $ und $ f $ ist stetig. Falls nun die Funktionswerte an den Intervallgrenzen unterschiedliche Vorzeichen besitzen, können wir den Nullstellensatz von Bolzano anwenden.\\
-\\
-\underline{2. Zeige mit dem Nullstellensatz die Existenz eines Fixpunktes}\\
-Die Stetigkeit von $ f $ haben wir bereits abgeklärt. Für die Werte von $ f $ an den Grenzen des Intervalls gilt:
-\begin{align*}
-	f(0) &= Q(0) - 0 = \underbrace{\underbrace{\frac{9}{4}}_{> 2}- \underbrace{e^{-1}}_{< 1}}_{>0 } \approx 1.88 > 0\\
-	f\left(\frac{3}{2}\right)
-	&= 
-	Q\left(\frac{3}{2}\right) - \frac{3}{2}
-	=
-	\frac{9}{4} - e^{\frac{3}{2} - 1} - \frac{6}{4}
-	=
-	\underbrace{\underbrace{\frac{3}{4}}_{< 1} - \underbrace{e^{\frac{1}{2}}}_{> 1}}_{< 0} \approx -0.90 <  0.
-\end{align*}
-Nach dem Nullstellensatz von Bolzano existiert mindestens ein $ p \in \left[0,\frac{3}{2}\right]  $ mit $ f(p) = 0$.\\
-\\
-\newpage
-\underline{3. Zeige die Eindeutigkeit des Fixpunktes}\\
-Bisher wurde abgeklärt das wir Fixpunkte von $ Q $ in $ \left[0,\frac{3}{2}\right] $ finden. Nun müssen wir nachweisen, dass nur ein solcher gefunden werden kann.
-Falls $ f $ streng monoton ist, wissen wir das jeder Wert nur einmal von $ f $ angenommen werden kann.
-Damit erhalten wir einen eindeutigen Fixpunkt. Es gilt
-\begin{align*}
-	f^\prime(p) = -e^{p-1} - 1 < 0
-\end{align*}
-für einen beliebigen Preis $ p $. Insbesondere ist $ f $ auf $ \left[0,\frac{3}{2}\right] $ streng monoton.\\
-Alternativ ist $ f $ die Summe zweier streng monoton fallender Funktionen.\\
-\\
-Insgesamt haben wir gezeigt, dass wir einen eindeutigen Fixpunkt finden.
-Damit existiert genau ein $ p^\star  \in \left[0,\frac{3}{2}\right]  $, sodass $ p^\star = Q(p^\star ) $ gilt.
+\underline{1. }\\
+
 
 \newpage
-\subsection*{\aufgabe{a3}{6}}
-Ein institutioneller Anleger beabsichtigt im großen Stil Aktien einer Firma zu kaufen.
-Da der Handelspreis der Aktie jedoch von der Nachfrage abhängt, möchte der Investor zuerst verstehen, wie seine Nachfrage den Preis beeinflussen wird.
-Die Nachfrage des Investors in Abhängigkeit vom Preis ist gegeben durch $ d = D(p) =4 - 2 e^{p-1}$.
-Der Preis der Aktie in Abhängigkeit von der Nachfrage $ d $ des Investors ist gegeben durch $ P(d) = \frac{1}{4} + \frac{1}{2} d $.\\
-Für die Funktion $ Q = P \circ D $ gibt es einen eindeutigen Punkt $ p^\star \in \left[0,\frac{3}{2}\right]  $ mit $ p^\star = Q(p^\star) $.\\
-Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ p_0 = 1 $, um eine Näherung für $ p^\star  $ zu finden.
+\subsection*{\aufgabe{b}{10}}
+Max
 \\ \\
 \textbf{Lösung:}
 \begin{mdframed}
