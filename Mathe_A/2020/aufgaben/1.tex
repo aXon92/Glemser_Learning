@@ -78,235 +78,63 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, 
 
 \newpage
 \subsection*{\aufgabe{b}{10}}
-Max
-\\ \\
+Max hat über seine Verhältnisse gelebt. 
+Deshalb hat er nun Schulden von mehreren hunderttausend Franken.
+Die Schuldenberatung vermittelt ihm am Anfang des Jahres einen Privatkredit mit $ i = 5 \% $ in der genannten Höhe von $ S = 355'000 \ [\textrm{CHF}] $, den er in $ 12 $ gleich grossen Raten $ C $ jeweils per Jahresende abbezahlen muss. 
+\begin{enumerate}
+	\item[(b1)] Fügen Sie die Ereignisse und Mittelflüsse dem Zeitstrahl hinzu.
+	\item[(b2)] Berechnen Sie die Höhe der Ratenzahlung $ C $.
+\end{enumerate}
+Am Ende des vierten Jahres gewinnt Max im Lotto CHF $ 160'000 $.
+Er beschließt in diesem Jahr statt der normalen Rate $ C $ den ganzen Lottogewinn zur Abzahlung des Kredits zu benützen.
+\begin{enumerate}
+	\item[(b3)] Ergänzen Sie die Information am Zeitstrahl und berechnen Sie die Restschuld $ \overline{S} $ nach der Einzahlung am Ende des vierten Jahres.
+\end{enumerate}
+Max zahlt nun weiter am Ende jeden Jahres den Betrag $ C $ zu Tilgung seiner Restschuld $ \overline{S} $.
+\begin{enumerate}
+	\item[(b4)] Wie viele Zahlungen muss er machen, bis er die Restschuld vollkommen getilgt hat?
+	\item[(b5)] Mit der letzten Rate muss nicht mehr der komplette Betrag $ C $ geleistet werden. Wie hoch ist die Zahlung genau?
+\end{enumerate}
+\begin{center}
+	\includegraphics[scale=0.3]{pictures/zeitstrahl_1_b}
+\end{center}
+\ \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item Gebe zwei verschiedene Lösungswege an.
-\item Lösungsweg nach Variante 1.
-\item Lösungsweg nach Variante 2.
-\item Bestimme die Annäherung an den Fixpunkt.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Gebe zwei verschiedene Lösungswege an}\\
-Wir haben in den vorherigen Aufgaben bereits festgestellt, dass
-\begin{align*}
-	Q(p) = p \ \Leftrightarrow f(p) = 0
-\end{align*}
-mit $ f(p) = Q(p) - p  $ für $ p \in \left[0,\frac{3}{2}\right]   $ gilt.
-Demnach lässt sich der Fixpunkt $ p^\star $ von $ Q $ über eine Taylor-Approximation von $ Q $  selbst oder über eine Taylor-Approximation von $ f $
-annähern.
-In der ersten Variante lösen wir ein Fixpunktproblem und in der zweiten Variante ein Nullstellenproblem für das jeweilig auftretende Taylorpolynom.\\
-Wir werden jedoch sehen, dass beide Varianten äquivalent sind.\\
-\\
-\underline{2. Lösungsweg nach Variante 1}\\
-Wir bestimmen nun das Taylorpolynom zweiter Ordnung $ P_{Q,2} $ im Punkt $ p_0 = 1 $.
-Dieses ist schematisch durch
-\begin{align*}
-	P_{Q,2}(p)
-	=
-	Q(p_0) + Q^\prime(p_0)(p -p_0) + \frac{1}{2}Q^{\prime \prime}(p_0)(p-p_0)^2
-	=
-	Q(1)+ Q^\prime(1)(p -1) + \frac{1}{2}Q^{\prime \prime}(1)(p-1)^2
-\end{align*}
-gegeben. Es gilt $ Q(p) = \frac{9}{4} - e^{p-1} $.
-Also folgt $ Q^{(k)}(p) = -e^{p-1} $ für $ k \geq 1 $ mithilfe der Kettenregel.
-Das heißt, die Ableitungen ab der ersten Ordnung sind alle identisch.
-Damit erhalten wir
-\begin{align*}
-	Q(1) &= \frac{9}{4} - e^{1-1} = \frac{9}{4} - 1 = \frac{5}{4}\\
-	Q^\prime(1) &= Q^{\prime \prime}(1) =-  e^{1-1 } = e^0 =  - 1,
-\end{align*}
-woraus sich
-\begin{align*}
-	P_{Q,2}(p)
-	&=
-	\frac{5}{4} - (p - 1) - \frac{1}{2} (p - 1)^2 
-	=
-	\frac{5}{4} - p + 1 -\frac{1}{2}(p^2 - 2p +  1)
-	=
-	\frac{5}{4} - p + 1 - \frac{1}{2} p^2 + p - \frac{1}{2}\\
-	&=
-	- \frac{1}{2} p^2 + \frac{5}{4} + \frac{4}{4} - \frac{2}{4}
-	=
-	- \frac{1}{2} p^2 + \frac{7}{4} 
-\end{align*}
-ergibt. Damit entspricht das Fixpunktproblem einer quadratischen Gleichung:
-\begin{align*}
-	p = P_{Q,2}(p) = - \frac{1}{2} p^2 + \frac{7}{4} 
-	\ \Leftrightarrow \
-	- \frac{1}{2} p^2 - p  + \frac{7}{4} = 0
-	\ \Leftrightarrow \
-	\frac{1}{2} p^2 + p  - \frac{7}{4} = 0
-	\ \Leftrightarrow \
-	 p^2 + 2p  - \frac{7}{2} = 0.
-\end{align*}
-Wir werden nun hier die Notbremse ziehen und die zweite Variante auf die selbe quadratische Gleichung führen. Falls hieran kein Interesse besteht, kann gerne zu dem vierten Schritt gesprungen werden.\\
-\\
-\underline{3. Lösungsweg nach Variante 2}\\
-Wir betrachten nun $ f(p) = Q(p) - p$ und erhalten:
-\begin{align*}
-	f(1) &= Q(1) - 1 = \frac{5}{4} -1 = \frac{1}{4}\\
-	f^\prime(p) &= Q^\prime(p) - 1 \ \Rightarrow \
-	f^\prime(1) = Q^\prime(1) - 1  = - 1 - 1 = -2\\
-	f^{\prime \prime }(p) &= Q^{\prime \prime}(p) \ \Rightarrow \
-		f^{\prime \prime }(1) = Q^{\prime \prime}(1) = -1.
-\end{align*}
-Damit ergibt die Taylor-Approximation von $ f $ in $ p_0 = 1 $:
-\begin{align*}
-	P_{f,2}(p)
-	&=
-	f(p_0) + f^\prime(p_0)(p -p_0) + \frac{1}{2}f^{\prime \prime}(p_0)(p-p_0)^2
-	=
-	\frac{1}{4} - 2 (p -1) - \frac{1}{2} p^2 + p - \frac{1}{2}\\
-	&=
-	\frac{1}{4} - 2p  + 2 - \frac{1}{2} p^2 + p - \frac{1}{2}\\
-	&=
-	- \frac{1}{2} p^2 - p + \frac{7}{4}.
-\end{align*}
-Unser Ziel ist nun, dass Nullstellenproblem
-\begin{align*}
-	0 = P_{f,2}(p) 
-	\ \Leftrightarrow \
-	- \frac{1}{2} p^2 - p + \frac{7}{4} = 0
-	\ \Leftrightarrow \
-	 p^2 +2 p - \frac{7}{2} = 0
-\end{align*}
-zu lösen. Dieses Problem ist äquivalent zu dem in Variante 1 auftretenden Fixpunktproblem.\\
-\\
-\underline{4. Bestimme die Annäherung an den Fixpunkt}\\
-Wir wissen, dass wir durch das Lösen der Gleichung $  p^2 +2 p - \frac{7}{2} = 0 $ die Näherung an den Fixpunkt $ p^\star \in \left[0,\frac{3}{2}\right] $ erhalten.
-Die Lösungen der Gleichung sind durch
-\begin{align*}
-	p^2 +2 p - \frac{7}{2} = 0
-	\ \Leftrightarrow \
-	p_{\nicefrac{1}{2}} 
-	=  -1 \pm \sqrt{1 - \left(\frac{7}{2}\right)}
-	=
-	\ -1 \pm \sqrt{\frac{9}{2}}
-\end{align*}
-gegeben. Es gilt $ p_{-} = -1 - \sqrt{\frac{9}{2}}  < 0  $. Damit kommt nur $ p_+  $ infrage.
-Für diese Lösung gilt:
-\begin{align*}
-	p_+ = -1 + \sqrt{\frac{9}{2}} \approx 1.12132 \approx p^\star. 
-\end{align*}
-Damit haben wir eine Näherung an den Fixpunkt $ p^\star  $ gefunden.
+\underline{1. }\\
+
 
 
 \newpage
-\subsection*{\aufgabe{b}{6}}
-Ein Computer hat eine Rechenleistung von $ a_n $ während der Periode $ n, \ n = 1,2,... $
-Mithilfe maschinellen Lernens erhöht sich die Rechenleistung in jeder Periode um $ 2 \%  $, wobei sie zu Beginn $ a_1 = 10 $ beträgt.
-Mit dem Computer benötigt die vollständige Berechnung einer bestimmten, anspruchsvollen Aufgabe $ 15 $ Perioden (d.h. die komplette Rechenleistung der ersten 15 Perioden wird für die Berechnung benötigt).\\
-Anstelle die Berechnungen direkt zu starten, beschliesst das Rechenzentrum  zunächst die Rechenleistung des Computers aufzustocken.
-Damit kann mit der Aufgabe zwar erst nach $ 3 $ Perioden begonnen werden, dafür aber hat der Computer nun eine neue anfängliche Rechenleistung von $ 15 $, welche sich pro Periode um $ 3 \% $ erhöht.\\
-Wie viel Zeit (in Perioden) kann das Rechenzentrum durch das Aufstocken des Computers und den Aufschub der Berechnung einsparen?
-\\ \\
+\subsection*{\aufgabe{c}{6}}
+Nach der Relativitätstheorie gilt für die Masse $ m $ eines Körpers, der sich mit der Geschwindigkeit $ v $ bewegt
+\begin{align*}
+	m(v)
+	=
+	\frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}}.
+\end{align*}
+Dabei ist $ c $ die Lichtgeschwindigkeit $ (299'792'458 \nicefrac{m}{s}) $ und $ m_0 $ die Masse in Ruhe.
+\begin{enumerate}
+	\item[(c1)] Berechnen Sie die Elastizität $ \varepsilon_m $ von $ m(v) $.
+	\item[(c2)] Um wie viel Prozent ändert sich näherungsweise die Masse, wenn die Geschwindigkeit von $ v_0 = 0.5c $ um $ 5 \% $ erhöht wird?
+\end{enumerate}
+\ \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item Bestimme die Rechenleistung der ersten 15 Perioden ohne die Verbesserung.
-\item Bestimme die Anzahl der notwendigen Perioden nach der Verbesserung.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme die Rechenleistung der ersten 15 Perioden ohne die Verbesserung}\\
-Um eine bestimmte, anspruchsvolle Rechenaufgabe zu lösen, benötigt der Computer 15 Perioden. Demnach ist die benötigte Rechenleistung durch
-\begin{align*}
-	s_{15}
-	=
-	\sum \limits_{n = 1}^\infty a_n 
-	=
-	a_1 +...+ a_{15}
-\end{align*}
-gegeben. Dies ist die $ 15. $ Partialsumme zur Folge $ \{a_n\}_{n \in \N} $.
-Die Folge selbst ist rekursiv durch
-\begin{align*}
-	a_{n+1} = (1+ 2 \%) a_n = 1.02 \ a_n, \quad a_1 = 10
-\end{align*}
-definiert. Damit liegt eine geometrische Folge mit $ a_1  = 10$ und $ q =1.02 $ vor.
-Also folgt
-\begin{align*}
-	s_{15}
-	&=
-	\sum \limits_{n = 1}^{15} a_n 
-	=
-	\sum \limits_{n = 1}^{15} a_1 q^{n-1} 
-	=
-	a_1 \sum \limits_{n = 1}^{15}  q^{n-1} 
-	=
-	a_1 \sum \limits_{n = 0}^{14}  q^{n}
-	=
-	a_1 \frac{1 - q^{14 + 1}}{1- q} 
-	=
-	10 \frac{1 - (1.02)^{15}}{1 - 1.02}\\
-	&\approx 1729342
-\end{align*}
-mithilfe der geometrischen Summenformel.\\
-Durch die Verbesserung erhalten wir die rekursive Vorschrift
-\begin{align*}
-	b_{n+1} = (1 + 3\%) b_n = 1.03 \ b_n
-\end{align*}
-mit der Ausgangsrechenleistung $ b_1 = 15 $. Dies ist eine geometrische Folge mit $ b_1 = 15 $ und $ \tilde{q} = 1.03 $
-Die Rechenleistung nach $ n $ Perioden erhalten wir dann wieder mit der geometrischen Summenformel:
-\begin{align*}
-	\tilde{s}_n
-	=
-	\sum \limits_{k = 1}^n b_k
-	=
-	\sum \limits_{k = 1}^n b_1 \tilde{q}^{k-1}
-	=
-	b_1 \sum \limits_{k = 0}^{n-1}  \tilde{q}^{k}
-	=
-	b_1 \frac{1 - \tilde{q}^{n}}{1- \tilde{q}}
-	=
-	15 \frac{1 - (1.03)^n}{1- 1.03}.
-\end{align*}
-Wir wollen nach herausfinden wie viele Perioden nach der Verbesserung für die geforderte Rechenleistung notwendig sind.
-Dies erhalten wir mit :
-\begin{align*}
-	\tilde{s}_n = s_{15}
-	\ &\Leftrightarrow \
-	15 \frac{1 - (1.03)^n}{1- 1.03} = s_{15}
-	\ \Leftrightarrow \ 
-	\frac{1 - (1.03)^n}{1- 1.03} = s_{15} \frac{1}{15}
-	\ \Leftrightarrow \ 
-	1 - (1.03)^n = s_{15} \frac{1- 1.03}{15}\\
-	\ &\Leftrightarrow \ 
-	 (1.03)^n = 1 -  s_{15} \frac{1- 1.03}{15}
-	 \overset{(I)}{=}
-	(1.02)^{15} 
-	\ \Leftrightarrow \ 
-	\ln(1.03^n) =  \ln (1.02^{15})\\
-	\ &\Leftrightarrow \ 
-	n \cdot \ln(1.03) =  \ln ((1.02)^{15})\\
-	\ &\Leftrightarrow \ 
-	n =  \frac{\ln (1.02^{15})}{\ln(1.03)}
-	=15 \frac{\ln(1.02)}{\ln(1.03)}
-	\approx 10.0491
-\end{align*}
-Damit braucht der verbesserte Computer ungefähr $ 10 $ Perioden um die Berechnung der Aufgabe abzuschließen. Da $ 3 $ Perioden zur Verbesserung benötigt werden erhalten wir eine Beschleunigung von $ 15 -10 -3  = 2 $ Perioden im Vergleich zu dem alten Computer.\\
-\\
-\textbf{\textit{Nebenrechnung (I):}}
-\begin{align*}
-	1 -  s_{15} \frac{1- 1.03}{15}
-	&=
-	1 - 10 \frac{1 - (1.02)^{15}}{1 - 1.02} \frac{1- 1.03}{15}
-	=
-	1 - \frac{2}{3}  \cdot \frac{1 - (1.02)^{15}}{-0.02} \cdot  (- 0.03)\\
-	&=
-	1 - \frac{2}{3} \cdot \frac{1 - (1.02)^{15}}{\frac{2}{100}} \cdot  \frac{3}{100}
-	=
-	1 - \frac{2}{3} \cdot (1 - (1.02)^{15} )\cdot  \frac{3}{100}  \frac{100}{2}\\
-	&=
-	1 - \frac{2}{3} \cdot (1 - (1.02)^{15} )\cdot  \frac{3}{2} 
-	=
-	(1.02)^{15} 
-\end{align*}
+\underline{1.}\\
+
 
 \newpage
 \subsection*{\aufgabe{c}{10}}
