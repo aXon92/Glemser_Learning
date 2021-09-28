@@ -114,13 +114,48 @@ für einen fest gewählten Parameter $ a > 0  $ ist gleich:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Wende die Regel von l'H\^{o}pital an
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Wende die Regel von l'H\^{o}pital an}\\
+Wegen
+\begin{align*}
+	\lim \limits_{x \to 0} \sqrt[n]{a+x} - \sqrt[n]{a-x} = 0
+	\ \textrm{und} \
+	\lim \limits_{x \to 0} x = 0
+\end{align*}
+liegt der l'H\^{o}pital-Fall \glqq$ \nicefrac{0}{0} $\grqq~vor.
+Zunächst bestimmen wir die Ableitung des Zählers:
+\begin{align*}
+	\frac{\mathrm{d}}{ \mathrm{dx} }\sqrt[n]{a+x}
+	&=
+	\frac{\mathrm{d}}{\mathrm{dx} }(a+x)^{\frac{1}{n}}
+	=
+	\frac{1}{n}(a+x)^{\frac{1}{n} -1}
+	= 
+	\frac{1}{n}(a+x)^{\left(1 - n\right) \frac{1}{n} }
+	=
+	\sqrt[n]{(a+x)^{1 - n }}\\
+	\frac{\mathrm{d}}{\mathrm{dx} }\sqrt[n]{a-x}
+	&=
+	\frac{\mathrm{d}}{\mathrm{dx} }(a-x)^{\frac{1}{n}}
+	=
+	...
+	=
+	-\frac{1}{n}\sqrt[n]{(a-x)^{1 - n }}.
+\end{align*}
+Damit ergibt sich für die Ableitung des Zählers:
+\begin{align*}
+		\frac{\mathrm{d}}{ \mathrm{dx} } \left(\sqrt[n]{a+x} - \sqrt[n]{a-x} \right)
+		&=
+		\frac{1}{n}\sqrt[n]{(a+x)^{1 - n }} -\left(-\frac{1}{n}\sqrt[n]{(a-x)^{1 - n }}\right)
+		=
+		\frac{1}{n}\sqrt[n]{(a+x)^{1 - n }} +\frac{1}{n}\sqrt[n]{(a-x)^{1 - n }}\\
+		&=
+		\frac{1}{n}
+		\left(\sqrt[n]{(a+x)^{1 - n }}+\sqrt[n]{(a-x)^{1 - n }}\right)
+\end{align*}
 
 
 
