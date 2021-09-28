@@ -485,12 +485,12 @@ Wir betrachten die Ableitungen bis zur vierten Ordnung:
 \end{align*}
 Spannend für uns ist, was für diese Ableitungen an $ x_0 = 0 $ passiert.
 Es gilt $ f^{(1)}(0) = f^{(2)}(0) = f^{(4)}(0) = 0  $ und $ f^{(0)}(0) = 1 $ bzw. $ f^{(3)}(0) = 6 $.
-Damit können die Antworten (a)--(d) und (f) gar nicht das korrekte Taylorpolynom sein und die Antwort (e) ist korrekt.
+Damit können die Antworten (a)--(d) und (f) nicht das korrekte Taylorpolynom sein und die Antwort (e) ist korrekt.
 
 \newpage
 
 \subsection*{\frage{12}{3}}
-Die Funktion zweier Variablen $ f $ ist homogen vom Grad $ 3 $ und die Funktion zweier Variablen ist homogen vom Grade $ -3 $.\\
+Die Funktion zweier Variablen $ f $ ist homogen vom Grad $ 3 $ und die Funktion zweier Variablen $ g $ ist homogen vom Grade $ -3 $.\\
 \\
 Die Funktion $ h $ ist definiert durch
 \begin{align*}
@@ -516,8 +516,23 @@ Dann gilt:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Definition der Homogenität.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Definition der Homogenität}\\
+Wir betrachten für $ \lambda \in \R $:
+\begin{align*}
+	h(\lambda \cdot x, \lambda \cdot y)
+	=
+	f(g(\lambda \cdot x,\lambda \cdot y),g(\lambda \cdot x,\lambda \cdot y))
+	=
+	f(\lambda^{-3}g(x,y),\lambda^{-3} g(x,y))
+	=
+	(\lambda^{-3})^3 f(g(x,y),g(x,y))
+	=
+	\lambda^{-9} h(x,y).
+\end{align*}
+Damit ist $ h $ homogen vom Grad $ -9 $.\\
+\\
+Also ist die Antwort (d) korrekt.
