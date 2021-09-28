@@ -413,12 +413,33 @@ Dann folgt:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende den Differenzenquotienten.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Verwende den Differenzenquotienten}\\
+Da $ f $ ein Produkt stetiger Funktionen ist, ist $ f $ selbst überall stetig.
+Damit können wir die Antworten (c) und (d) ausschließen.\\
+\\
+Wir müssen nun klären, ob $ f $ in $ x_0 = 0 $ differenzierbar ist. Hierfür betrachten wir den Differenzenquotient:
+\begin{align*}
+	\frac{f(x) - f(x_0)}{x - x_0 } = \frac{x \cdot |x|}{x} = |x|.
+\end{align*}
+Eine Funktion heißt differenzierbar in $ x_0 $, wenn der Grenzwert
+\begin{align*}
+	\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0 }
+\end{align*}
+existiert. In unserem Fall gilt:
+\begin{align*}
+	\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0 }
+	=
+	\lim \limits_{x \to 0} |x| = 0.
+\end{align*}
+Damit ist $ f  $ in $ x_0 = 0 $ differenzierbar.\\
+\\
+Also ist die Antwort (a) korrekt.\\
+\\
+\textit{Zusatzaufgabe: Überlege dir, welche Antwort für die Betragsfunktion korrekt wäre.}
 \newpage
 \subsection*{\frage{11}{3}}
 Das Taylorpolynom $ 4 $. Ordnung in $ x_0 = 0 $ der Funktion
