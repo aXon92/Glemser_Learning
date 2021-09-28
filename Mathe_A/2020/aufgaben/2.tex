@@ -370,11 +370,23 @@ ist dann
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Quotientenregel.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Quotientenregel}\\
+Nach der Quotientenregel gilt:
+\begin{align*}
+	k^\prime(x)
+	=
+	\frac{(f(g(x)))^\prime g(f(x)) - f(g(x)) (g(f(x)))^\prime}{(g(f(x)))^2}
+	=
+	\frac{f^\prime(g(x)) \cdot g^\prime(x) \cdot g(f(x))
+		- 
+		f(g(x)) g^\prime(f(x)) \cdot f^\prime(x)
+		}{(g(f(x)))^2}.
+\end{align*}
+Damit ist Antwort (c) korrekt.
 
 
 \newpage
