@@ -220,11 +220,30 @@ Welche der folgenden Identitäten ist allgemein gültig?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende die Basisumrechnung des Logarithmus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Basisumrechnung des Logarithmus}\\
+Mithilfe der Basisumrechnung des Logarithmus gilt allgemein:
+\begin{align*}
+	\log_{b^n}(a^n)
+	=
+	\frac{\log_{b}(a^n)}{\log_{b}(b^n)}
+	=
+	\frac{n \log_{b}(a)}{n \log_b(b)}
+	=
+	\frac{\log_b(a)}{\log_{b}(b)}
+	=
+	\log_{b}(a).
+\end{align*}
+Damit ist die Antwort (c) korrekt.\\
+\\
+\textit{Anmerkung:}
+Seien $a,b>0$ beliebig. Der Logarithmus zur Basis $ b $ lässt sich über eine andere Basis $ a $ folgendermaßen berechnen:
+\begin{align*}
+	\log_b(x) = \frac{\log_a(x)}{\log_a(b)}.
+\end{align*}
 
 
  \newpage
