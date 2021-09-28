@@ -250,7 +250,7 @@ Seien $a,b>0$ beliebig. Der Logarithmus zur Basis $ b $ lässt sich über eine a
 
 \subsection*{\frage{6}{3}}
 Ein Bergsteiger startet bei seinem Auto bei Sonnenaufgang um $ 5 $ Uhr mit dem Aufstieg und erreicht auf direktem Weg ohne Pause die Hütte um $ 13 $ Uhr.
-Am anderen Tag geht er den genau gleichen Weg zurück; er startet um $ 8 $ Uhr und geht ohne anzuhalten. So erreicht er sein Auto um $ 12:50 $ Uhr.\\
+Am anderen Tag geht er den genau gleichen Weg zurück; er startet um $ 8 $ Uhr und geht ohne anzuhalten. So erreicht er sein Auto um $12$:$50$ Uhr.\\
 \\
 Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist? 
 \renewcommand{\labelenumi}{(\alph{enumi})}
@@ -270,12 +270,48 @@ Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg a
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item
-
+\item Überlege dir eine Modellierung dieser Fragestellung.
+\item Finde die korrekte Antwort.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Überlege dir eine Modellierung dieser Fragestellung}\\
+Wir nehmen an, dass sich das Auto auf der Höhe $ 0 $ und die Hütte auf der Höhe $ 1 $ befindet. Da der Bergsteiger für den Hin-und Rückweg den gleichen Weg ohne Pause wählt, können wir den zurückgelegten Weg in Abhängigkeit von der Zeit mit Geraden modellieren.
+Mit $ g_1 $ bezeichnen wir die Gerade für den Hinweg. Diese wird definiert durch:
+\begin{align*}
+	g_1(5\mathrm{:}00) = 0 \ \textrm{und} \ g_1(13\mathrm{:}00) = 1. 
+\end{align*}
+Sei $ g_2 $ die Gerade für den Rückweg. Diese wird definiert durch:
+\begin{align*}
+	g_2(8\mathrm{:}00) = 1 \ \textrm{und} \ g_2(12\mathrm{:}50) = 0.
+\end{align*}
+\ \\
+\underline{2. Finde die korrekte Antwort}\\
+Der Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist, ist ein Schnittpunkt der Geraden $ g_1 $ und $ g_2 $.
+Nun kann für zwei Geraden nur eine der folgenden Tatsachen gelten:
+\begin{itemize}
+	\item Die Geraden haben einen Schnittpunkt.
+	\item Die Geraden haben keinen Schnittpunkt.
+	\item Die Geraden haben unendlich viele Schnittpunkte.
+\end{itemize}
+Deswegen bestimmen wir nun die Steigung von $ g_1 $ und $ g_2 $:
+\begin{align*}
+	m_1 &= \frac{g_1(13\mathrm{:}00) - g_1(5\mathrm{:}00)}{13\mathrm{:}00 - 5\mathrm{:}00}
+	=
+	\frac{1 - 0}{8\ \mathrm{h}} = \frac{1}{8\ \mathrm{h}}\\
+	m_2 &= \frac{g_2(12\mathrm{:}50) - g_2(08\mathrm{:}00)}{12\mathrm{:}50 - 8\mathrm{:}00}
+	=
+	\frac{0 - 1}{4\mathrm{:}50 \ \mathrm{h}}
+	=
+	\frac{- 1}{4\mathrm{:}50 \ \mathrm{h}}.
+\end{align*}
+Das $ \mathrm{h} $ soll verdeutlichen, dass es sich um einen Zeitraum und keine Uhrzeit handelt. Wegen $ m_1 > 0 $ und $ m_2 < 0 $ sind die Geraden nicht parallel bzw. liegen nicht aufeinander. Deswegen kann nur ein Schnittpunkt vorliegen.\\
+Da der Zeitraum des Rückwegs innerhalb des Zeitraums des Hinweges befindet, gibt es genau einen Zeitpunkt an welchem sich die Wege schneiden.\\
+\\
+Damit ist die Antwort (a) korrekt.\\
+\\
+\textit{Zusatz: } Skizziere diese Situation.
+
 
 \newpage
 \subsection*{\frage{7}{3}}
@@ -303,11 +339,42 @@ mit Definitionsgebiet $ D_f \in \R $. Für den Wertebereich $ W_f $ von $ f $ gi
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bestimme lokale Minima und Maxima.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bestimme lokale Minima und Maxima}\\
+Um den Wertebereich bestimmen werden wir  die lokalen Minima und Maxima von $ f $ betrachten. Die erste Ableitung ist:
+\begin{align*}
+	f^\prime(x) = \cos(x) - \sin(x).
+\end{align*}
+Die kritischen Stellen erhalten wir wegen
+\begin{align*}
+	\cos(x) - \sin(x) = 0 \ \Leftrightarrow \
+	\sin(x) = \cos(x)
+\end{align*}
+an den Schnittpunkten des Sinus und Kosinus. Da $ f $ periodisch ist, werden uns auf $ D_f = [0,2\pi] $ einschränken.
+Mögliche Kandidaten für Extrempunkte sind:
+\begin{align*}
+	x_0 &= \frac{\pi}{4}\\
+	x_1 &= \frac{\pi}{4} + \frac{\pi}{2} = \frac{3 \pi}{4}\\
+	x_2 &= \frac{3 \pi }{4} + \frac{\pi}{2} = \frac{5 \pi}{4}\\
+	x_3 &= \frac{5 \pi}{4}+ \frac{\pi}{2} = \frac{7 \pi}{4}.
+\end{align*}
+Die zweite Ableitung ist:
+\begin{align*}
+	f^{\prime \prime} (x) = -\sin(x) - \cos(x) = -f(x). 
+\end{align*}
+Eingesetzt erhalten wir:
+\begin{align*}
+	f^{\prime \prime} (x_0) &= -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} = -\sqrt{2} < 0\\
+	f^{\prime \prime} (x_1) &= -\left(-\frac{\sqrt{2}}{2}\right) - \frac{\sqrt{2}}{2} = 0.\\
+	f^{\prime \prime} (x_2) &= -\left(-\frac{\sqrt{2}}{2}\right) - \left(-\frac{\sqrt{2}}{2}\right) = \sqrt{2} >0.\\
+	f^{\prime \prime} (x_3) &= -\frac{\sqrt{2}}{2} -\left(- \frac{\sqrt{2}}{2}\right) = 0.
+\end{align*}
+Wegen $ f(x_0) = \sqrt{2} $ und $ f(x_2) = -\sqrt{2} $ ist der Wertebereich $ W_f = [-\sqrt{2}, \sqrt{2}] $.\\
+\\
+Damit ist die Antwort (b) korrekt.
 
 \newpage
 
