@@ -468,11 +468,24 @@ lautet:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Struktur der Ableitungen.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Struktur der Ableitungen.}\\
+Wir betrachten die Ableitungen bis zur vierten Ordnung:
+\begin{align*}
+	f^{(0)}(x) &= e^{x^3}\\
+	f^{(1)}(x) &= 3x^2 e^{x^3}\\
+	f^{(2)}(x) &= 6x e^{x^3} + 3x^2 \cdot 3x^2 e^{x^3} = (9x^4 + 6x) e^{x^3}\\
+	f^{(3)}(x) &= (36x^3+ 6) e^{x^3} + (9x^4 + 6x) \cdot 3 x^2 e^{x^3} 
+	= (27x^6 + 54x^3 + 6) e^{x^3}\\
+	f^{(4)}(x) &= (27 \cdot 6\cdot x^5+54 \cdot 3 \cdot x^2) e^{x^3}
+	+ (27x^6 + 54x^3 + 6)\cdot 3 x^2 e^{x^3}.
+\end{align*}
+Spannend für uns ist, was für diese Ableitungen an $ x_0 = 0 $ passiert.
+Es gilt $ f^{(1)}(0) = f^{(2)}(0) = f^{(4)}(0) = 0  $ und $ f^{(0)}(0) = 1 $ bzw. $ f^{(3)}(0) = 6 $.
+Damit können die Antworten (a)--(d) und (f) gar nicht das korrekte Taylorpolynom sein und die Antwort (e) ist korrekt.
 
 \newpage
 
