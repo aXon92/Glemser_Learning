@@ -311,11 +311,35 @@ $ f $ und $ g $ seien ungerade, differenzierbare Funktionen. Dann gilt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Leite die Antwort mithilfe der Kettenregel her.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Leite die Antwort mithilfe der Kettenregel her}\\
+Sei $ h  $ eine ungerade, differenzierbare Funktion.
+Dann gilt
+\begin{align*}
+	h(x) = -h(-x)
+	\ \Rightarrow \
+	h^\prime (x) = (-1) \cdot (-1) \cdot h^\prime(-x) = h^\prime(-x)
+\end{align*}
+für alle $ x \in D_h $. Das bedeutet, dass die Ableitung einer ungeraden Funktion gerade ist.\\
+\\
+\textit{Frage: Was gilt dann für die Ableitung einer geraden Funktion?}\\
+\\
+Wegen 
+\begin{align*}
+	(f+g)(x) = f(x) +g(x) =-f(-x) - g(-x)
+	=-(f(-x) + g(-x))= -(f+g)(-x)
+\end{align*}
+ist auch die Summe zweier ungerader Funktion ungerade. Aufgrund von 
+\begin{align*}
+	(f+g)^\prime = f^\prime + g^\prime
+\end{align*}
+ist $ f^\prime + g^\prime $ gerade (Weil $ f+g $ ungerade ist).\\
+\\
+Damit ist Antwort (b) korrekt.
+
 
 \newpage
 \subsection*{\frage{9}{2}}
