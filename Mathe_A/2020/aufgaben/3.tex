@@ -154,7 +154,23 @@ Damit ergibt sich für die Ableitung des Zählers:
 		\frac{1}{n}\sqrt[n]{(a+x)^{1 - n }} +\frac{1}{n}\sqrt[n]{(a-x)^{1 - n }}\\
 		&=
 		\frac{1}{n}
-		\left(\sqrt[n]{(a+x)^{1 - n }}+\sqrt[n]{(a-x)^{1 - n }}\right)
+		\left(\sqrt[n]{(a+x)^{1 - n }}+\sqrt[n]{(a-x)^{1 - n }}\right).
+\end{align*}
+Mit der Regel von l'H\^{o}pital erhalten wir dann:
+\begin{align*}
+	\lim \limits_{x \to 0}
+	\frac{\sqrt[n]{a+x} - \sqrt[n]{a-x}}{x}
+	&=
+	\lim \limits_{x \to 0}
+	\frac{\frac{\mathrm{d}}{ \mathrm{dx} } \left(\sqrt[n]{a+x} - \sqrt[n]{a-x} \right)}{ \frac{\mathrm{d}}{ \mathrm{dx} }  x}
+	=
+	\lim \limits_{x \to 0}
+	\frac{\frac{1}{n}
+		\left(\sqrt[n]{(a+x)^{1 - n }}+\sqrt[n]{(a-x)^{1 - n }}\right)}{1}\\
+	&=\frac{1}{n}\cdot
+	\left(\sqrt[n]{a^{1 - n }} + \sqrt[n]{a^{1 - n }}\right)
+	=
+	\frac{2}{n} \cdot \sqrt[n]{a^{1 - n }}
 \end{align*}
 
 
