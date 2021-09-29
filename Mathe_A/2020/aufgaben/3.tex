@@ -170,9 +170,9 @@ Mit der Regel von l'H\^{o}pital erhalten wir dann:
 	&=\frac{1}{n}\cdot
 	\left(\sqrt[n]{a^{1 - n }} + \sqrt[n]{a^{1 - n }}\right)
 	=
-	\frac{2}{n} \cdot \sqrt[n]{a^{1 - n }}
+	\frac{2}{n} \cdot \sqrt[n]{a^{1 - n }}.
 \end{align*}
-
+Damit ist die Antwort (e) korrekt.
 
 
 \newpage
@@ -201,13 +201,37 @@ Welcher der folgenden Ausdrücke beschreibt die erste Ableitung von $ f $ ?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bestimme die Ableitung von $ f $.
 \end{enumerate}
 \end{mdframed}
 %\allowdisplaybreaks
-\underline{1. }\\
-
-
+\underline{1. Bestimme die Ableitung von $ f $}\\
+Um die Ableitung von $ f $ zu bestimmen, wenden wir einen Trick an:
+\begin{align*}
+	f(x) = x^{\ln(x)} = e^{\ln(x^{\ln(x)})}
+	=
+	e^{\ln(x) \ln(x)}
+	=
+	e^{(\ln(x))^2}.
+\end{align*}
+Dies können wir mit der Kettenregel ableiten. Hierfür bestimmen wir zunächst die Ableitung von $ (\ln(x))^2 $ :
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{dx}}
+	(\ln(x))^2
+	=
+	2 \ln(x) \frac{1}{x}.
+\end{align*}
+Damit ergibt sich mit der Kettenregel:
+\begin{align*}
+	f^\prime(x)
+	=
+	e^{(\ln(x))^2} \cdot  2 \ln(x) \frac{1}{x}
+	=
+	2 x^{\ln(x)} \frac{1}{x} \ln(x)
+	=
+	2 x^{\ln(x) - 1} \ln(x).
+\end{align*}
+Damit ist die Antwort (b) korrekt.
 \newpage
 \subsection*{\frage{4}{4}}
 Gegeben ist die Funktion $ f $ zweier reeller Variablen
@@ -240,13 +264,39 @@ Welches der folgenden Bilder zeigt grau schraffiert den Definitionsbereich $ D_f
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bestimme den Definitionsbereich.
 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1.}\\
-
+\underline{1. Bestimme den Definitionsbereich}\\
+Für den Term unter der Wurzel muss $ (36 - x^2 -y^2) y \geq  0 $ gelten.
+Hierfür betrachten wir zwei Fälle:
+\begin{description}
+	\item[1. Fall $ y \geq 0 $:] 
+	Wir können $ y > 0  $ annehmen, denn $ y = 0 $ ist uninteressant.
+	Damit gilt:
+	\begin{align*}
+		(36 - x^2 -y^2) y  \geq   0
+		\ \Leftrightarrow \ 
+		36 - x^2 -y^2   \geq   0
+		\ \Leftrightarrow \ 
+		x^2 +y^2 \leq 36 = 6^2.
+	\end{align*}
+	Für $ y > 0  $ erhalten wir eine Kreisscheibe mit Radius $ 6 $.
+	
+	\item[2. Fall $ y < 0 $:] 
+	Für $ y <0  $ gilt:
+	\begin{align*}
+		(36 - x^2 -y^2) y  \geq   0
+		\ \Leftrightarrow \
+		(36 - x^2 -y^2) \leq 0
+		\ \Leftrightarrow \
+		x^2 + y^2 \geq 36 = 6^2.
+	\end{align*}
+	Somit erhalten wir in diesem Fall den Bereich auf und außerhalb des Kreises mit Radius $ 6 $.
+\end{description}
+Damit ist die Antwort (c) korrekt.
 \newpage
 
 \subsection*{\frage{5}{3}}
