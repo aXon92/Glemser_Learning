@@ -379,14 +379,85 @@ Von seinem Bruttogewinn muss der Hersteller $ i \% $  $ (0 < i < 100) $ an Steue
 \begin{mdframed}
 	\underline{\textbf{Vorgehensweise:}}
 	\begin{enumerate}
-		\item[(d1)] 
-	\end{enumerate}
+		\item[(d1)] Stelle eine geeignete Funktion auf.
+		\item[(d2)] Bestimme das Maximum der Funktion.
+ 	\end{enumerate}
 \end{mdframed}
 
 
-\underline{(d1) }\\
-
-
+\underline{(d1) Stelle eine geeignete Funktion auf}\\
+Da wir am Gewinn interessiert sind, ist es naheliegend die Kosten $ K(x) $ vom Ertrag $ E(x) $ abzuziehen. Dies ist der Gewinn vor den Steuern.
+Damit erhalten wir die Funktion
+\begin{align*}
+	P(x) := E(x) - K(x)
+	=
+	-0.5x^{1.5} + 100 x- (-200\sqrt{x} + 50 x +120)
+	=
+	-0.5x^{1.5} + 50 x + 200 \sqrt{x} -120.
+\end{align*}
+Der Gewinn nach Steuern ergibt sich dann aus
+\begin{align*}
+	G(x) = P(x) - \frac{i}{100} P(x)
+	=
+	\left(1- \frac{i}{100}\right)P(x)
+	=
+	\left(1- \frac{i}{100}\right) \cdot (-0.5x^{1.5} + 50 x + 200 \sqrt{x} -120),
+\end{align*}
+wobei $ i \% = \frac{i}{100}$ der Steuersatz mit $ 0 < i < 100 $ ist.\\
+\\
+\underline{(d2) Bestimme das Maximum der Funktion}\\
+Für das Maximum von $ G $ bestimmen wir zunächst die Ableitung von $ G $:
+\begin{align*}
+	G^\prime(x)
+	= \left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.5 \cdot 1.5 x^{0.5} + 50 + 200 \cdot \frac{1}{2} x^{- \frac{1}{2}} \right)
+	=
+	\left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}} \right).
+\end{align*}
+Für ein Maximum muss die hinreichende Bedingung $ G^\prime(x) = 0 $ erfüllt sein.
+Dies ist äquivalent zu:
+\begin{align*}
+	\left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}} \right) = 0
+	\ &\Leftrightarrow \
+	-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}}  = 0\\
+	\ &\overset{\cdot x^{\frac{1}{2}}}{\Leftrightarrow}\
+	-0.75 x + 50 x^{\frac{1}{2}} + 100   = 0.
+\end{align*}
+Mit der Substitution $ y = x^{\frac{1}{2}} $ erhalten wir die quadratische Gleichung
+\begin{align*}
+	-0.75 x + 50 x^{\frac{1}{2}} + 100 
+	=
+	-0.75 y^2 + 50 y + 100 = 0.
+\end{align*}
+Deren Lösungen sind gegeben durch:
+\begin{align*}
+	y_{\nicefrac{1}{2}}
+	=
+	\frac{-50 \pm \sqrt{50^2 - 4 \cdot (-0.75) \cdot 100}}{-2 \cdot 0.75}
+	= 
+	\frac{-50 \pm \sqrt{2800}}{-1.5}.
+\end{align*}
+Wegen $ y_1 = \frac{-50 + \sqrt{2800}}{-1.5}  < 0 $ und $ y = x^{\frac{1}{2}} =  \sqrt{x} $ ist diese Lösung für unsere ursprüngliche Gleichung nicht relevant.
+Damit bleibt der Kandidat 
+\begin{align*}
+	x^\star = y_2^2 = 
+	\left(\frac{-50 - \sqrt{2800}}{-1.5}\right)^2
+	\approx
+	4707.33
+\end{align*}
+für eine Extremstelle von $ G $. Wir müssen überprüfen, ob diese Stelle ein Maximum ist.
+Hierfür bestimmen wir die zweite Ableitung von $ G $:
+\begin{align*}
+	G^{\prime \prime}(x)
+	\left(1 - \frac{i}{100}\right)\cdot 
+	\left(
+	-0.75 \cdot 0.5\cdot x^{- \frac{1}{2}} - \frac{1}{2} 100 x^{- \frac{3}{2}}
+	\right).
+\end{align*}
+Hieraus wird ersichtlich, dass $ G^{\prime \prime}(x) < 0 $ ist.
+Demnach muss $ x^\star $ ein Maximum sein.
 
 
 
