@@ -131,9 +131,75 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Bestimme das Taylorpolynom}\\
+In dieser Aufgabe wollen wir $ t^\star $ aus der letzten Aufgabe mit Hilfe des Taylorpolynoms zweiter Ordnung $ P_2 $ von $ f $ bei $ t_0 = 400 $ approximieren.
+Das bedeutet: Wir lösen 
+\begin{align*}
+	P_2(t) = 0
+\end{align*}
+als Näherung der ursprünglichen Gleichung $ f(t) = 0 $. Zunächst müssen wir das Taylorpolynom zweiter Ordnung $ P_2 $ von $ f $ bei $ t_0 = 400 $ bestimmen.
+Formal ausgeschrieben ist dies:
+\begin{align*}
+	P_2(t)
+	=
+	f(400) + f^\prime(400) \cdot (t -400) + \frac{f^{\prime \prime }(400)}{2}(t -400)^2. 
+\end{align*}
+Wir benötigen noch die erste und zweite Ableitung von $ f $:
+\begin{align*}
+	f^\prime(t) &= 10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.2\cdot 10^9\\
+	f^{\prime \prime}(t) &= 10^9 \cdot \ln(1.01)^2 \cdot 1.01^t.
+\end{align*}
+Hierbei haben wir den selben Trick verwendet, wie bei der Ableitung von $ w $ in der letzten Aufgabe. Nun müssen wir $ f $ und dessen Ableitungen noch auswerten:
+\begin{align*}
+	f(400) &= 10^9 \cdot 1.01^{400} - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot 400)
+	= 10^9 \cdot (1.01^{400} - 82)\\
+	f^\prime(400)
+	&=
+	10^9 \cdot (\ln(1.01) \cdot  1.01^{400}- 0.2)\\
+	f^{\prime \prime}(400)
+	&=
+	10^9 \cdot  \ln(1.01)^2 \cdot 1.01^{400}.
+\end{align*}
+Damit erhalten wir das Taylorpolynom zweiter Ordnung $ P_2 $ von $ f $ in $ t_0 = 400 $:
+\begin{align*}
+	P_2(t)
+	&=
+	10^9 \cdot (1.01^{400} - 82) + 10^9 \cdot (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot (t -400) + \frac{10^9 \cdot  \ln(1.01)^2 \cdot 1.01^{400}}{2}(t -400)^2\\
+	&=
+	10^9 \cdot 
+	\left(
+	1.01^{400} - 82 + (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot (t -400)
+	+
+	\frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400}  \cdot (t -400)^2
+	\right).
+\end{align*}
+Für die Gleichung $ P_2(t) = 0  $ ist der Faktor $ 10^9  $ nicht relevant. Mit der Substitution $  s = t - 400 $ erhalten wir die Gleichung
+\begin{align*}
+	1.01^{400} - 82 + (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot s
+	+
+	\frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400}  \cdot s^2.
+\end{align*}
+Hierauf können wir die Mitternachtsformel anwenden und erhalten die Lösungen:
+\begin{align*}
+	s_{\nicefrac{1}{2}}
+	=
+	\frac{-\left(\ln(1.01) \cdot  1.01^{400}- 0.2\right) \pm 
+	\sqrt{\left(\ln(1.01) \cdot  1.01^{400}- 0.2\right)^2 -
+		4 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400} \cdot (1.01^{400} - 82 )}}
+	{2 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400 }}.
+\end{align*}
+Nachdem man diesen Sadismus in den Taschenrechner eingeben hat, erhält man die Lösungen\\
+$ s_1 = -189.94 $ und $ s_2 = 58.43 $.
+Mit der Rücksubstitution $ t = s + 400 $ folgt:
+\begin{align*}
+	t_1 &= 216.06\\
+	t_2 &= 458.43.
+\end{align*}
+Die Lösung $ t_1 $ erfüllt die Bedingung $ t^\star > 400  $ nicht. Damit erhalten wir
+\begin{align*}
+	t^\star \approx 458.43
+\end{align*}  
+als Approximation von $ t^\star $.
 \newpage
 \subsection*{\aufgabe{b}{10}}
 Max hat über seine Verhältnisse gelebt. 
