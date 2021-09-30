@@ -31,15 +31,74 @@ rechnen.
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Stelle den mathematischen Rahmen her.
+\item Zeige die Aussage.
 
 \end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Stelle den mathematischen Rahmen her}\\
+Wir sind an der Existenz und Eindeutigkeit eines Zeitpunktes $ t^\star $ interessiert, an welchem die vorhandenen Lebensmittel gerade noch ausreichen um die Weltbevölkerung zu ernähren. Sei $ n(t)  $ die Anzahl an Personen, welche zu dem Zeitpunkt $ t $ ernährt werden können und $ w(t) $ die Weltbevölkerung zum Zeitpunkt $ t $.
+Wenn 
+\begin{align*}
+	w(t) = n(t) \ \Leftrightarrow \ w(t) - n(t) = 0
+\end{align*}
+gilt, kann die Weltbevölkerung gerade noch ernährt werden. Aus diesem Grund definieren wir die Funktion
+\begin{align*}
+	f(t) := w(t) - n(t).
+\end{align*}
+Unser Ziel ist: Zeige das ein eindeutiger Zeitpunkt $ t^\star \in (400, \infty) $ mit $ f(t^\star) = 0 $ existiert.
+Hier kommt uns der Nullstellensatz von Bolzano zur Hilfe. Dieser besagt: \\
+Sei $ g  $ stetig auf dem Intervall $  [a,b] $, $ g(a) $ und $ g(b) $ haben verschiedene Vorzeichen. Dann hat $ g $ mindestens eine Nullstelle in $ [a,b] $.\\
+Nun ist es an der Zeit $ f $ konkret aufzustellen. Hierfür betrachten wir zuerst die Funktion für die exponentiell wachsende Weltbevölkerung:
+\begin{align*}
+	w(t) = w(0) \cdot (1 + 1 \% )^t= 10^9 \cdot 1.01^t.
+\end{align*}
+Diese ist als Zusammensetzung stetiger Funktionen stetig auf $ \R $. Das lineare Wachstum der ernährbaren Menschen ergibt sich aus der Aufgabenstellung:
+\begin{align*}
+	n(t) = a + b \cdot t
+	= 2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot t.
+\end{align*}
+Auch diese Funktion ist als Zusammensetzung stetiger Funktionen stetig auf $ \R $.
+Daraus ergibt sich die auf $ \R $ stetige Funktion 
+\begin{align*}
+	f(t) = w(t) - n(t)
+	=
+	10^9 \cdot 1.01^t - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot t).
+\end{align*}
 
+\underline{2. Zeige die Aussage}\\
+Da $ f $ auf $ \R $ stetig ist, ist diese auch auf $ [400, b] $ mit $ b > 400 $ stetig.
+Wir bestimmen:
+\begin{align*}
+	f(400) &= 10^9 \cdot 1.01^{ 400} - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot 400 )
+	= 10^9 \cdot (1.01^{ 400} - 2 - 0.2 \cdot 400)\\
+	&= 10^9 \cdot (1.01^{ 400} - 2 - 80) 
+	=  10^9 \cdot (1.01^{ 400} -82) 
+	\approx 10^9 \cdot (- 28.48) < 0\\
+	f(500) &= 10^9 \cdot (1.01^{ 500} - 2 - 0.2 \cdot 500)
+	 = 10^9 \cdot (1.01^{ 500} - 2 - 0.2 \cdot 500)
+	= 10^9 \cdot (1.01^{ 500} - 102)\\
+	&\approx 10^9 \cdot 42.77 > 0.
+\end{align*}
+Nach dem Nullstellensatz von Bolzano hat $ f $ in dem Intervall $ [400,500] $  mindestens eine Nullstelle. Wir müssen zeigen, dass $ f  $ auf diesem Intervall streng monoton wachsend ist. Dann ist diese Nullstelle eindeutig.
+Hierfür betrachten bestimmen wir die Ableitungen von $ w $ und $ n $:
+\begin{align*}
+	w(t) = 10^9 1.01^t = 10^9 e^{\ln(1.01^t)}
+	=
+	10^9 e^{t \ln(1.01)} \ \Rightarrow \
+	w^\prime(t) &= 10^9 \ln(1.01) e^{t \ln(1.01)} = 10^9 \ln(1.01) 1.01^t\\
+	n^\prime(t) &= 0.02\cdot 10^9.
+\end{align*}
+Damit ergibt sich
+\begin{align*}
+	f^\prime(t) = w^\prime(t) - n^\prime(t)
+	= 
+	10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.02\cdot 10^9 > 0
+\end{align*}
+für $ t > 400 $. 
+Dies erkennt man an $ f^\prime(400) >0  $ und der strengen Monotonie von $ 1.01^t $.
+Also ist $ f $ streng monoton wachsend auf $ [400,500] $ und die Nullstelle ist eindeutig.
  
-
-
 \newpage
 
 \subsection*{\aufgabe{a2}{6}}
@@ -67,7 +126,8 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bestimme das Taylorpolynom. 
+\item Approximiere den Zeitpunkt.
 \end{enumerate}
 \end{mdframed}
 
