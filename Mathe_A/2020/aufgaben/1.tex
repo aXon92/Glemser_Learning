@@ -37,7 +37,7 @@ rechnen.
 \end{enumerate}
 \end{mdframed}
 \underline{1. Stelle den mathematischen Rahmen her}\\
-Wir sind an der Existenz und Eindeutigkeit eines Zeitpunktes $ t^\star $ interessiert, an welchem die vorhandenen Lebensmittel gerade noch ausreichen um die Weltbevölkerung zu ernähren. Sei $ n(t)  $ die Anzahl an Personen, welche zu dem Zeitpunkt $ t $ ernährt werden können und $ w(t) $ die Weltbevölkerung zum Zeitpunkt $ t $.
+Wir sind an der Existenz und Eindeutigkeit eines Zeitpunktes $ t^\star $ interessiert, an welchem die vorhandenen Lebensmittel gerade noch ausreichen, um die Weltbevölkerung zu ernähren. Sei $ n(t)  $ die Anzahl an Personen, welche zu dem Zeitpunkt $ t $ ernährt werden können und $ w(t) $ die Weltbevölkerung zum Zeitpunkt $ t $.
 Wenn 
 \begin{align*}
 	w(t) = n(t) \ \Leftrightarrow \ w(t) - n(t) = 0
@@ -48,7 +48,7 @@ gilt, kann die Weltbevölkerung gerade noch ernährt werden. Aus diesem Grund de
 \end{align*}
 Unser Ziel ist: Zeige das ein eindeutiger Zeitpunkt $ t^\star \in (400, \infty) $ mit $ f(t^\star) = 0 $ existiert.
 Hier kommt uns der Nullstellensatz von Bolzano zur Hilfe. Dieser besagt: \\
-Sei $ g  $ stetig auf dem Intervall $  [a,b] $, $ g(a) $ und $ g(b) $ haben verschiedene Vorzeichen. Dann hat $ g $ mindestens eine Nullstelle in $ [a,b] $.\\
+Sei $ g  $ stetig auf dem Intervall $  [a,b] $, $ g(a) $ und $ g(b) $ haben verschiedene Vorzeichen. Dann hat $ g $ mindestens eine Nullstelle in $ [a,b] $. Ist g auch noch streng monoton, dann existiert nur eine Nullstelle sprich der Zeitpunkt ist eindeutig. \\
 Nun ist es an der Zeit $ f $ konkret aufzustellen. Hierfür betrachten wir zuerst die Funktion für die exponentiell wachsende Weltbevölkerung:
 \begin{align*}
 	w(t) = w(0) \cdot (1 + 1 \% )^t= 10^9 \cdot 1.01^t.
@@ -81,19 +81,19 @@ Wir bestimmen:
 	&\approx 10^9 \cdot 42.77 > 0.
 \end{align*}
 Nach dem Nullstellensatz von Bolzano hat $ f $ in dem Intervall $ [400,500] $  mindestens eine Nullstelle. Wir müssen zeigen, dass $ f  $ auf diesem Intervall streng monoton wachsend ist. Dann ist diese Nullstelle eindeutig.
-Hierfür betrachten bestimmen wir die Ableitungen von $ w $ und $ n $:
+Hierfür bestimmen wir die Ableitungen von $ w $ und $ n $:
 \begin{align*}
 	w(t) = 10^9 1.01^t = 10^9 e^{\ln(1.01^t)}
 	=
 	10^9 e^{t \ln(1.01)} \ \Rightarrow \
 	w^\prime(t) &= 10^9 \ln(1.01) e^{t \ln(1.01)} = 10^9 \ln(1.01) 1.01^t\\
-	n^\prime(t) &= 0.02\cdot 10^9.
+	n^\prime(t) &= 0.2\cdot 10^9.
 \end{align*}
 Damit ergibt sich
 \begin{align*}
 	f^\prime(t) = w^\prime(t) - n^\prime(t)
 	= 
-	10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.02\cdot 10^9 > 0
+	10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.2\cdot 10^9 > 0
 \end{align*}
 für $ t > 400 $. 
 Dies erkennt man an $ f^\prime(400) >0  $ und der strengen Monotonie von $ 1.01^t $.
@@ -188,7 +188,7 @@ Hierauf können wir die Mitternachtsformel anwenden und erhalten die Lösungen:
 		4 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400} \cdot (1.01^{400} - 82 )}}
 	{2 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400 }}.
 \end{align*}
-Nachdem man dies in den Taschenrechner eingeben hat, erhält man die Lösungen\\
+Nachdem man dies in den Taschenrechner eingegeben hat, erhält man die Lösungen\\
 $ s_1 = -189.94 $ und $ s_2 = 58.43 $.
 Mit der Rücksubstitution $ t = s + 400 $ folgt:
 \begin{align*}
@@ -227,7 +227,7 @@ Max zahlt nun weiter am Ende jeden Jahres den Betrag $ C $ zu Tilgung seiner Res
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[(b1)] Füge den Kredit und Raten dem Zeitstrahl hinzu.
+\item[(b1)] Füge den Kredit und die Raten zum Zeitstrahl hinzu.
 \item[(b2)] Bestimme die Höhe der Ratenzahlung $ C $.
 \item[(b3)] Ergänze den Lottogewinn und berechne die Restschuld.
 \item[(b4)] Bestimme die restliche Laufzeit mit Hilfe der Restschuld.
@@ -236,7 +236,7 @@ Max zahlt nun weiter am Ende jeden Jahres den Betrag $ C $ zu Tilgung seiner Res
 \end{mdframed}
 
 \newpage
-\underline{(b1) Füge den Kredit und Raten dem Zeitstrahl hinzu}\\
+\underline{(b1) Füge den Kredit und die Raten zum Zeitstrahl hinzu}\\
 \begin{center}
 	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_1}
 \end{center}
@@ -268,7 +268,7 @@ Hiervon müssen wir noch den Lottogewinn von $ 160'000 $ abziehen:
 \begin{align*}
 	\overline{S}
 	=
-	\underbrace{355'000 \cdot (1.05)^{12}}_{\textrm{aufgezinster Wert nach vier Jahren} }
+	\underbrace{355'000 \cdot (1.05)^{4}}_{\textrm{aufgezinster Wert nach vier Jahren} }
 	&-
 	\underbrace{C\frac{1.05^4 - 1}{0.05}}_{\textrm{Endwert der Rente am Schluss des vierten Jahres}}\\
 	&-\underbrace{(160'000 -40'053.02 ) }_{\textrm{Lottogewinn abzügl. der am Ende des $ 4. $ Jahres fälligen Rate}}\\
@@ -471,7 +471,7 @@ Von seinem Bruttogewinn muss der Hersteller $ i \% $  $ (0 < i < 100) $ an Steue
 
 
 \underline{(d1) Stelle eine geeignete Funktion auf}\\
-Da wir am Gewinn interessiert sind, ist es naheliegend die Kosten $ K(x) $ vom Ertrag $ E(x) $ abzuziehen. Dies ist der Gewinn vor den Steuern.
+Da wir am Gewinn interessiert sind, ist es naheliegend die Kosten $ K(x) $ vom Ertrag $ E(x) $ abzuziehen. Dies ist der Gewinn vor Steuern.
 Damit erhalten wir die Funktion
 \begin{align*}
 	P(x) := E(x) - K(x)
@@ -500,7 +500,7 @@ Für das Maximum von $ G $ bestimmen wir zunächst die Ableitung von $ G $:
 	\left(1 - \frac{i}{100}\right)
 	\cdot \left(-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}} \right).
 \end{align*}
-Für ein Maximum muss die hinreichende Bedingung $ G^\prime(x) = 0 $ erfüllt sein.
+Für ein Maximum muss die notwendige Bedingung $ G^\prime(x) = 0 $ erfüllt sein.
 Dies ist äquivalent zu:
 \begin{align*}
 	\left(1 - \frac{i}{100}\right)
@@ -520,7 +520,7 @@ Deren Lösungen sind gegeben durch:
 \begin{align*}
 	y_{\nicefrac{1}{2}}
 	=
-	\frac{-50 \pm \sqrt{50^2 - 4 \cdot (-0.75) \cdot 100}}{-2 \cdot 0.75}
+	\frac{-50 \pm \sqrt{50^2 - 4 \cdot (-0.75) \cdot 100}}{2 \cdot (-0.75)}
 	= 
 	\frac{-50 \pm \sqrt{2800}}{-1.5}.
 \end{align*}
@@ -541,7 +541,7 @@ Hierfür bestimmen wir die zweite Ableitung von $ G $:
 	-0.75 \cdot 0.5\cdot x^{- \frac{1}{2}} - \frac{1}{2} 100 x^{- \frac{3}{2}}
 	\right).
 \end{align*}
-Hieraus wird ersichtlich, dass $ G^{\prime \prime}(x) < 0 $ ist.
+Hieraus ist ersichtlich, dass $ G^{\prime \prime}(x) < 0 $ ist.
 Demnach muss $ x^\star $ ein Maximum sein.
 
 
