@@ -227,13 +227,98 @@ Max zahlt nun weiter am Ende jeden Jahres den Betrag $ C $ zu Tilgung seiner Res
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item 
+\item[(b1)] Füge den Kredit und Raten dem Zeitstrahl hinzu.
+\item[(b2)] Bestimme die Höhe der Ratenzahlung $ C $.
+\item[(b3)] Ergänze den Lottogewinn und berechne die Restschuld.
+\item[(b4)] Bestimme die restliche Laufzeit mit Hilfe der Restschuld.
+\item[(b5)] Bestimme die letzte Rate.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\newpage
+\underline{(b1) Füge den Kredit und Raten dem Zeitstrahl hinzu}\\
+\begin{center}
+	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_1}
+\end{center}
 
+\underline{(b2) Bestimme die Höhe der Ratenzahlung $ C $}\\
+Die konstanten Zahlungen $ C $ über $ 12 $ Jahre am Ende des Jahres entspricht einer nachschüssigen Rentenzahlung.
+Damit die Schuld vollständig beglichen ist, muss der Endwert der nachschüssigen Rente der über $ 12 $ Jahre aufgezinsten Schuld entsprechen.
+Das heißt:
+\begin{align*}
+	\underbrace{355'000 \cdot (1+ 0.05)^{12}}_{\textrm{Schuldenwert nach $ 12 $ Jahren}}
+	=
+	\underbrace{C \frac{(1+0.05)^{12} -1}{0.05}}_{\textrm{Endwert einer zwölfjährigen nachschüssigen Rente}}.
+\end{align*}
+Dies ist äquivalent zu:
+\begin{align*}
+	C = 355'000 \cdot (1+ 0.05)^{12} \cdot \frac{0.05}{(1+0.05)^{12} -1}
+	=
+	\frac{355'000\cdot (1+ 0.05)^{12} \cdot 0.05 }{(1+0.05)^{12} -1}
+	\approx
+	40'053.02 \ \mathrm{(CHF)}.
+\end{align*}
 
+\underline{(b3) Ergänze den Lottogewinn und berechne die Restschuld}\\
+\begin{center}
+	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_2}
+\end{center}
+Der offene Betrag am Ende  des vierten Jahren entspricht der aufgezinsten Schuld nach $ 4 $ Jahren abzüglich der bereits gezahlten Renten.
+Hiervon müssen wir noch den Lottogewinn von $ 160'000 $ abziehen:
+\begin{align*}
+	\overline{S}
+	=
+	\underbrace{355'000 \cdot (1.05)^{12}}_{\textrm{aufgezinster Wert nach vier Jahren} }
+	&-
+	\underbrace{C\frac{1.05^4 - 1}{0.05}}_{\textrm{Endwert der Rente am Schluss des vierten Jahres}}\\
+	&-\underbrace{(160'000 -40'053.02 ) }_{\textrm{Lottogewinn abzügl. der am Ende des $ 4. $ Jahres fälligen Rate}}\\
+	&\approx 
+	138'924.30 \ \mathrm{(CHF)}.
+\end{align*}
+
+\underline{(b4) Bestimme die restliche Laufzeit mit Hilfe der Restschuld}\\
+Wir gehen davon aus, dass Max mit der Zahlung $ C $ fortfährt.
+Also ist die Schuld getilgt, wenn die aufgezinste Restschuld $ \overline{S} $ nach dem vierten Jahr dem Endwert der Rente $ C $ entspricht. Das bedeutet:
+\begin{align*}
+	\underbrace{1.05^n \cdot \overline{S}}_{\textrm{aufgezinster Schuldenwert}}
+	&=
+	\underbrace{C\frac{1.05^n -1}{0.05}}_{\textrm{Endwert der nachschüssigen Rente}}
+	=
+	\frac{C \cdot 1.05^n}{0.05} - \frac{C}{0.05}\\
+	\ \Leftrightarrow \
+	1.05^n \left(\overline{S} - \frac{C}{0.05}\right) &= - \frac{C}{0.05}
+	\ \Leftrightarrow \
+	1.05^n \cdot \frac{0.05 \cdot \overline{S} -C}{0.05}  = -\frac{C}{0.05}\\
+	\ \Leftrightarrow \
+	1.05^n &= -\frac{C}{0.05} \cdot \frac{0.05}{0.05 \cdot \overline{S} -C}
+	 \  \Leftrightarrow \
+	1.05^n =  \frac{C}{C - 0.05 \cdot \overline{S}}\\
+	\ \Leftrightarrow \
+	\ln(1.05^n) &= \ln\left(\frac{C}{C - 0.05 \cdot \overline{S}}\right)\\
+	\ \Leftrightarrow \
+	n &= \ln\left(\frac{C}{C - 0.05 \cdot \overline{S}}\right)\cdot \frac{1}{\ln(1.05)}
+	\approx 3.9 \ \textrm{(Jahre)}.
+\end{align*}
+Damit sind insgesamt noch $ 4 $ Zahlungen notwendig.\\
+\\
+\underline{(b5) Bestimme die letzte Rate}\\
+Der Endwert der $ 4 $ Zahlungen aus (b4) ist
+\begin{align*}
+	C \cdot \frac{1.05^4 -1 }{0.05}
+	\approx 172'633.52 \ \mathrm{(CHF)}.
+\end{align*}
+Der Endwert des ausstehen Schulden beträgt hingegen
+\begin{align*}
+	1.05^4 \overline{S}
+	\approx 
+	168'863.35 \ \mathrm{(CHF)}.
+\end{align*}
+Demnach muss die letzte Zahlung kleiner als $ C = 40'053.02 \ \mathrm{(CHF)} $ sein.
+Diese erhalten wir mit:
+\begin{align*}
+	40'053.02 - (172'633.52 - 168'863.35)
+	=36'282.85 \ \mathrm{(CHF)}.
+\end{align*}
 
 \newpage
 \subsection*{\aufgabe{c}{6}}
