@@ -31,15 +31,74 @@ rechnen.
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Stelle den mathematischen Rahmen her.
+\item Zeige die Aussage.
 
 \end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Stelle den mathematischen Rahmen her}\\
+Wir sind an der Existenz und Eindeutigkeit eines Zeitpunktes $ t^\star $ interessiert, an welchem die vorhandenen Lebensmittel gerade noch ausreichen, um die Weltbevölkerung zu ernähren. Sei $ n(t)  $ die Anzahl an Personen, welche zu dem Zeitpunkt $ t $ ernährt werden können und $ w(t) $ die Weltbevölkerung zum Zeitpunkt $ t $.
+Wenn 
+\begin{align*}
+	w(t) = n(t) \ \Leftrightarrow \ w(t) - n(t) = 0
+\end{align*}
+gilt, kann die Weltbevölkerung gerade noch ernährt werden. Aus diesem Grund definieren wir die Funktion
+\begin{align*}
+	f(t) := w(t) - n(t).
+\end{align*}
+Unser Ziel ist: Zeige das ein eindeutiger Zeitpunkt $ t^\star \in (400, \infty) $ mit $ f(t^\star) = 0 $ existiert.
+Hier kommt uns der Nullstellensatz von Bolzano zur Hilfe. Dieser besagt: \\
+Sei $ g  $ stetig auf dem Intervall $  [a,b] $, $ g(a) $ und $ g(b) $ haben verschiedene Vorzeichen. Dann hat $ g $ mindestens eine Nullstelle in $ [a,b] $. Ist g auch noch streng monoton, dann existiert nur eine Nullstelle sprich der Zeitpunkt ist eindeutig. \\
+Nun ist es an der Zeit $ f $ konkret aufzustellen. Hierfür betrachten wir zuerst die Funktion für die exponentiell wachsende Weltbevölkerung:
+\begin{align*}
+	w(t) = w(0) \cdot (1 + 1 \% )^t= 10^9 \cdot 1.01^t.
+\end{align*}
+Diese ist als Zusammensetzung stetiger Funktionen stetig auf $ \R $. Das lineare Wachstum der ernährbaren Menschen ergibt sich aus der Aufgabenstellung:
+\begin{align*}
+	n(t) = a + b \cdot t
+	= 2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot t.
+\end{align*}
+Auch diese Funktion ist als Zusammensetzung stetiger Funktionen stetig auf $ \R $.
+Daraus ergibt sich die auf $ \R $ stetige Funktion 
+\begin{align*}
+	f(t) = w(t) - n(t)
+	=
+	10^9 \cdot 1.01^t - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot t).
+\end{align*}
 
+\underline{2. Zeige die Aussage}\\
+Da $ f $ auf $ \R $ stetig ist, ist diese auch auf $ [400, b] $ mit $ b > 400 $ stetig.
+Wir bestimmen:
+\begin{align*}
+	f(400) &= 10^9 \cdot 1.01^{ 400} - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot 400 )
+	= 10^9 \cdot (1.01^{ 400} - 2 - 0.2 \cdot 400)\\
+	&= 10^9 \cdot (1.01^{ 400} - 2 - 80) 
+	=  10^9 \cdot (1.01^{ 400} -82) 
+	\approx 10^9 \cdot (- 28.48) < 0\\
+	f(500) &= 10^9 \cdot (1.01^{ 500} - 2 - 0.2 \cdot 500)
+	 = 10^9 \cdot (1.01^{ 500} - 2 - 0.2 \cdot 500)
+	= 10^9 \cdot (1.01^{ 500} - 102)\\
+	&\approx 10^9 \cdot 42.77 > 0.
+\end{align*}
+Nach dem Nullstellensatz von Bolzano hat $ f $ in dem Intervall $ [400,500] $  mindestens eine Nullstelle. Wir müssen zeigen, dass $ f  $ auf diesem Intervall streng monoton wachsend ist. Dann ist diese Nullstelle eindeutig.
+Hierfür bestimmen wir die Ableitungen von $ w $ und $ n $:
+\begin{align*}
+	w(t) = 10^9 1.01^t = 10^9 e^{\ln(1.01^t)}
+	=
+	10^9 e^{t \ln(1.01)} \ \Rightarrow \
+	w^\prime(t) &= 10^9 \ln(1.01) e^{t \ln(1.01)} = 10^9 \ln(1.01) 1.01^t\\
+	n^\prime(t) &= 0.2\cdot 10^9.
+\end{align*}
+Damit ergibt sich
+\begin{align*}
+	f^\prime(t) = w^\prime(t) - n^\prime(t)
+	= 
+	10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.2\cdot 10^9 > 0
+\end{align*}
+für $ t > 400 $. 
+Dies erkennt man an $ f^\prime(400) >0  $ und der strengen Monotonie von $ 1.01^t $.
+Also ist $ f $ streng monoton wachsend auf $ [400,500] $ und die Nullstelle ist eindeutig.
  
-
-
 \newpage
 
 \subsection*{\aufgabe{a2}{6}}
@@ -67,13 +126,80 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ t_0 = 400 $, 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bestimme das Taylorpolynom. 
+\item Approximiere den Zeitpunkt.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Bestimme das Taylorpolynom}\\
+In dieser Aufgabe wollen wir $ t^\star $ aus der letzten Aufgabe mit Hilfe des Taylorpolynoms zweiter Ordnung $ P_2 $ von $ f $ bei $ t_0 = 400 $ approximieren.
+Das bedeutet: Wir lösen 
+\begin{align*}
+	P_2(t) = 0
+\end{align*}
+als Näherung der ursprünglichen Gleichung $ f(t) = 0 $. Zunächst müssen wir das Taylorpolynom zweiter Ordnung $ P_2 $ von $ f $ bei $ t_0 = 400 $ bestimmen.
+Formal ausgeschrieben ist dies:
+\begin{align*}
+	P_2(t)
+	=
+	f(400) + f^\prime(400) \cdot (t -400) + \frac{f^{\prime \prime }(400)}{2}(t -400)^2. 
+\end{align*}
+Wir benötigen noch die erste und zweite Ableitung von $ f $:
+\begin{align*}
+	f^\prime(t) &= 10^9 \cdot  \ln(1.01) \cdot 1.01^t - 0.2\cdot 10^9\\
+	f^{\prime \prime}(t) &= 10^9 \cdot \ln(1.01)^2 \cdot 1.01^t.
+\end{align*}
+Hierbei haben wir den selben Trick verwendet, wie bei der Ableitung von $ w $ in der letzten Aufgabe. Nun müssen wir $ f $ und dessen Ableitungen noch auswerten:
+\begin{align*}
+	f(400) &= 10^9 \cdot 1.01^{400} - (2 \cdot 10^9 + 0.2 \cdot 10^9 \cdot 400)
+	= 10^9 \cdot (1.01^{400} - 82)\\
+	f^\prime(400)
+	&=
+	10^9 \cdot (\ln(1.01) \cdot  1.01^{400}- 0.2)\\
+	f^{\prime \prime}(400)
+	&=
+	10^9 \cdot  \ln(1.01)^2 \cdot 1.01^{400}.
+\end{align*}
+Damit erhalten wir das Taylorpolynom zweiter Ordnung $ P_2 $ von $ f $ in $ t_0 = 400 $:
+\begin{align*}
+	P_2(t)
+	&=
+	10^9 \cdot (1.01^{400} - 82) + 10^9 \cdot (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot (t -400) + \frac{10^9 \cdot  \ln(1.01)^2 \cdot 1.01^{400}}{2}(t -400)^2\\
+	&=
+	10^9 \cdot 
+	\left(
+	1.01^{400} - 82 + (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot (t -400)
+	+
+	\frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400}  \cdot (t -400)^2
+	\right).
+\end{align*}
+Für die Gleichung $ P_2(t) = 0  $ ist der Faktor $ 10^9  $ nicht relevant. Mit der Substitution $  s = t - 400 $ erhalten wir die Gleichung
+\begin{align*}
+	1.01^{400} - 82 + (\ln(1.01) \cdot  1.01^{400}- 0.2) \cdot s
+	+
+	\frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400}  \cdot s^2.
+\end{align*}
+Hierauf können wir die Mitternachtsformel anwenden und erhalten die Lösungen:
+\begin{align*}
+	s_{\nicefrac{1}{2}}
+	=
+	\frac{-\left(\ln(1.01) \cdot  1.01^{400}- 0.2\right) \pm 
+	\sqrt{\left(\ln(1.01) \cdot  1.01^{400}- 0.2\right)^2 -
+		4 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400} \cdot (1.01^{400} - 82 )}}
+	{2 \cdot \frac{1}{2} \cdot  \ln(1.01)^2 \cdot 1.01^{400 }}.
+\end{align*}
+Nachdem man dies in den Taschenrechner eingegeben hat, erhält man die Lösungen\\
+$ s_1 = -189.94 $ und $ s_2 = 58.43 $.
+Mit der Rücksubstitution $ t = s + 400 $ folgt:
+\begin{align*}
+	t_1 &= 216.06\\
+	t_2 &= 458.43.
+\end{align*}
+Die Lösung $ t_1 $ erfüllt die Bedingung $ t^\star > 400  $ nicht. Damit erhalten wir
+\begin{align*}
+	t^\star \approx 458.43
+\end{align*}  
+als Approximation von $ t^\star $.
 \newpage
 \subsection*{\aufgabe{b}{10}}
 Max hat über seine Verhältnisse gelebt. 
@@ -101,13 +227,98 @@ Max zahlt nun weiter am Ende jeden Jahres den Betrag $ C $ zu Tilgung seiner Res
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item 
+\item[(b1)] Füge den Kredit und die Raten zum Zeitstrahl hinzu.
+\item[(b2)] Bestimme die Höhe der Ratenzahlung $ C $.
+\item[(b3)] Ergänze den Lottogewinn und berechne die Restschuld.
+\item[(b4)] Bestimme die restliche Laufzeit mit Hilfe der Restschuld.
+\item[(b5)] Bestimme die letzte Rate.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\newpage
+\underline{(b1) Füge den Kredit und die Raten zum Zeitstrahl hinzu}\\
+\begin{center}
+	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_1}
+\end{center}
 
+\underline{(b2) Bestimme die Höhe der Ratenzahlung $ C $}\\
+Die konstanten Zahlungen $ C $ über $ 12 $ Jahre am Ende des Jahres entspricht einer nachschüssigen Rentenzahlung.
+Damit die Schuld vollständig beglichen ist, muss der Endwert der nachschüssigen Rente der über $ 12 $ Jahre aufgezinsten Schuld entsprechen.
+Das heißt:
+\begin{align*}
+	\underbrace{355'000 \cdot (1+ 0.05)^{12}}_{\textrm{Schuldenwert nach $ 12 $ Jahren}}
+	=
+	\underbrace{C \frac{(1+0.05)^{12} -1}{0.05}}_{\textrm{Endwert einer zwölfjährigen nachschüssigen Rente}}.
+\end{align*}
+Dies ist äquivalent zu:
+\begin{align*}
+	C = 355'000 \cdot (1+ 0.05)^{12} \cdot \frac{0.05}{(1+0.05)^{12} -1}
+	=
+	\frac{355'000\cdot (1+ 0.05)^{12} \cdot 0.05 }{(1+0.05)^{12} -1}
+	\approx
+	40'053.02 \ \mathrm{(CHF)}.
+\end{align*}
 
+\underline{(b3) Ergänze den Lottogewinn und berechne die Restschuld}\\
+\begin{center}
+	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_2}
+\end{center}
+Der offene Betrag am Ende  des vierten Jahren entspricht der aufgezinsten Schuld nach $ 4 $ Jahren abzüglich der bereits gezahlten Renten.
+Hiervon müssen wir noch den Lottogewinn von $ 160'000 $ abziehen:
+\begin{align*}
+	\overline{S}
+	=
+	\underbrace{355'000 \cdot (1.05)^{4}}_{\textrm{aufgezinster Wert nach vier Jahren} }
+	&-
+	\underbrace{C\frac{1.05^4 - 1}{0.05}}_{\textrm{Endwert der Rente am Schluss des vierten Jahres}}\\
+	&-\underbrace{(160'000 -40'053.02 ) }_{\textrm{Lottogewinn abzügl. der am Ende des $ 4. $ Jahres fälligen Rate}}\\
+	&\approx 
+	138'924.30 \ \mathrm{(CHF)}.
+\end{align*}
+
+\underline{(b4) Bestimme die restliche Laufzeit mit Hilfe der Restschuld}\\
+Wir gehen davon aus, dass Max mit der Zahlung $ C $ fortfährt.
+Also ist die Schuld getilgt, wenn die aufgezinste Restschuld $ \overline{S} $ nach dem vierten Jahr dem Endwert der Rente $ C $ entspricht. Das bedeutet:
+\begin{align*}
+	\underbrace{1.05^n \cdot \overline{S}}_{\textrm{aufgezinster Schuldenwert}}
+	&=
+	\underbrace{C\frac{1.05^n -1}{0.05}}_{\textrm{Endwert der nachschüssigen Rente}}
+	=
+	\frac{C \cdot 1.05^n}{0.05} - \frac{C}{0.05}\\
+	\ \Leftrightarrow \
+	1.05^n \left(\overline{S} - \frac{C}{0.05}\right) &= - \frac{C}{0.05}
+	\ \Leftrightarrow \
+	1.05^n \cdot \frac{0.05 \cdot \overline{S} -C}{0.05}  = -\frac{C}{0.05}\\
+	\ \Leftrightarrow \
+	1.05^n &= -\frac{C}{0.05} \cdot \frac{0.05}{0.05 \cdot \overline{S} -C}
+	 \  \Leftrightarrow \
+	1.05^n =  \frac{C}{C - 0.05 \cdot \overline{S}}\\
+	\ \Leftrightarrow \
+	\ln(1.05^n) &= \ln\left(\frac{C}{C - 0.05 \cdot \overline{S}}\right)\\
+	\ \Leftrightarrow \
+	n &= \ln\left(\frac{C}{C - 0.05 \cdot \overline{S}}\right)\cdot \frac{1}{\ln(1.05)}
+	\approx 3.9 \ \textrm{(Jahre)}.
+\end{align*}
+Damit sind insgesamt noch $ 4 $ Zahlungen notwendig.\\
+\\
+\underline{(b5) Bestimme die letzte Rate}\\
+Der Endwert der $ 4 $ Zahlungen aus (b4) ist
+\begin{align*}
+	C \cdot \frac{1.05^4 -1 }{0.05}
+	\approx 172'633.52 \ \mathrm{(CHF)}.
+\end{align*}
+Der Endwert der ausstehenden Schulden beträgt hingegen
+\begin{align*}
+	1.05^4 \overline{S}
+	\approx 
+	168'863.35 \ \mathrm{(CHF)}.
+\end{align*}
+Demnach muss die letzte Zahlung kleiner als $ C = 40'053.02 \ \mathrm{(CHF)} $ sein.
+Diese erhalten wir mit:
+\begin{align*}
+	40'053.02 - (172'633.52 - 168'863.35)
+	=36'282.85 \ \mathrm{(CHF)}.
+\end{align*}
 
 \newpage
 \subsection*{\aufgabe{c}{6}}
@@ -127,11 +338,112 @@ Dabei ist $ c $ die Lichtgeschwindigkeit $ (299'792'458 \nicefrac{m}{s}) $ und $
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item 
+\item[(c1)] Bestimme die Elastizität.
+\item[(c1)] Alternative: Bestimme die Elastizität mit Hilfe des Logarithmus.
+\item[(c2)] Approximiere die Massenänderung mit der Elastizität.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1.}\\
+\underline{(c1) Bestimme die Elastizität}\\
+Die Elastizität ist definiert durch
+\begin{align*}
+	\varepsilon_m(v) = v \frac{m^\prime(v)}{m(v)}.
+\end{align*}
+Um die Ableitung von $ m $ zu bestimmen, stellen wir $ m $ zunächst um:
+\begin{align*}
+	m(v)
+	=
+	\frac{m_0}{\sqrt{1 - \frac{v^2}{c^2}}}
+	= 
+	m_0 \cdot \left(1 - \frac{v^2}{c^2}\right)^{-\frac{1}{2}}.
+\end{align*}
+Damit folgt:
+\begin{align*}
+	m^\prime(v)
+	=
+	m_0 \left(-\frac{1}{2}\right) \left(1 - \frac{v^2}{c^2}\right)^{-\frac{3}{2}} \cdot  \left(-\frac{2v}{c^2}\right)
+	=
+	m_0 \frac{v}{c^2} \left(1 - \frac{v^2}{c^2}\right)^{-\frac{3}{2}}.
+\end{align*}
+Somit erhalten wir für die Elastizität:
+\begin{align*}
+	\varepsilon_m(v)
+	=
+	v \frac{m^\prime(v)}{m(v)}
+	=
+	v
+	\frac{m_0 \frac{v}{c^2} \left(1 - \frac{v^2}{c^2}\right)^{-\frac{3}{2}}}{m_0  \left(1 - \frac{v^2}{c^2}\right)^{-\frac{1}{2}}}
+	=
+	v
+	\frac{\frac{v}{c^2} \left(1 - \frac{v^2}{c^2}\right)^{\frac{1}{2}}}{ \left(1 - \frac{v^2}{c^2}\right)^{\frac{3}{2}}}
+	=
+	v
+	\frac{\frac{v}{c^2} }{ \left(1 - \frac{v^2}{c^2}\right)}
+	=
+	\frac{\frac{v^2}{c^2} }{ \left(1 - \frac{v^2}{c^2}\right)}.
+\end{align*}
+\ \\
+\underline{(c1) Alternative: Bestimme die Elastizität mit Hilfe des Logarithmus}\\
+Mit der Kettenregel erhalten wir:
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{dv}} \ln(m(v))
+	=
+	\frac{m^\prime(v)}{m(v)}.
+\end{align*}
+Deswegen lässt sich die Definition der Elastizität auch durch 
+\begin{align*}
+		\varepsilon_m(v) = v \frac{\mathrm{d}}{\mathrm{dv}}\ln(m(v))
+\end{align*}
+beschreiben. Hiermit folgt:
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{dv}}\ln(m(v))
+	&=
+	\frac{\mathrm{d}}{\mathrm{dv}}
+	\ln\left(	m_0 \cdot \left(1 - \frac{v^2}{c^2}\right)^{-\frac{1}{2}}\right)
+	=
+	\frac{\mathrm{d}}{\mathrm{dv}}
+	\ln\left(	m_0 \right)+ \ln\left( \left(1 - \frac{v^2}{c^2}\right)^{-\frac{1}{2}}\right)\\
+	&=
+	\frac{\mathrm{d}}{\mathrm{dv}}\left(
+	\ln\left(	m_0 \right)- \frac{1}{2} \ln\left( 1 - \frac{v^2}{c^2}\right)
+	\right)
+	=
+	- \frac{1}{2}\frac{\mathrm{d}}{\mathrm{dv}}\ln\left( 1 - \frac{v^2}{c^2}\right)
+	=
+	\left(- \frac{1}{2}\right) \cdot  \frac{1}{1 - \frac{v^2}{c^2}} \cdot \left(-\frac{2v}{c^2}\right)\\
+	&=
+	\frac{\frac{v}{c^2}}{1 - \frac{v^2}{c^2}}.
+\end{align*}
+Damit ergibt sich die Elastizität 
+\begin{align*}
+	\varepsilon_m(v) = v \frac{\mathrm{d}}{\mathrm{dv}}\ln(m(v))=
+	v \frac{\frac{v}{c^2}}{1 - \frac{v^2}{c^2}}
+	=\frac{\frac{v^2}{c^2}}{1 - \frac{v^2}{c^2}}.
+\end{align*}
+\ \\
+\underline{(c2) Approximiere die Massenänderung mit der Elastizität}\\
+Die Massenänderung lässt sich durch 
+\begin{align*}
+	\frac{\Delta m(v_0)}{m(v_0)}
+	\approx 
+	\varepsilon_m(v_0) \frac{\Delta v}{v_0}
+\end{align*}
+approximieren. Hierbei ist $  \Delta m(v_0) = m(v_0 + \Delta v) - m(v_0)$.
+Mit $ v_0 = 0.5 c $ und $ \frac{\Delta v}{v_0}  = 5 \% = 0.05$ erhalten wir für die Massenänderung:
+\begin{align*}
+	\frac{\Delta m(v_0)}{m(v_0)}
+	=
+	\frac{\frac{v^2}{c^2}}{1 - \frac{v^2}{c^2}} 5 \%
+	=
+	\frac{\frac{(0.5 c)^2}{c^2}}{1 - \frac{(0.5 c)^2}{c^2}} \cdot 0.05
+	=
+	\frac{\left(\frac{1}{2}\right)^2}{1 - \left(\frac{1}{2}\right)^2}\cdot 0.05
+	=
+	\frac{\frac{1}{4}}{1- \frac{1}{4}} \cdot 0.05
+	=
+	\frac{1}{3} \cdot 0.05 \approx 1.67 \%.
+\end{align*}
+Damit ändert sich die Masse um $ 1.67 \% $, wenn sich die Geschwindigkeit $ v_0 =0.5 c $ um $ 5 \% $ erhöht.
 
 
 \newpage
@@ -152,14 +464,85 @@ Von seinem Bruttogewinn muss der Hersteller $ i \% $  $ (0 < i < 100) $ an Steue
 \begin{mdframed}
 	\underline{\textbf{Vorgehensweise:}}
 	\begin{enumerate}
-		\item[(d1)] 
-	\end{enumerate}
+		\item[(d1)] Stelle eine geeignete Funktion auf.
+		\item[(d2)] Bestimme das Maximum der Funktion.
+ 	\end{enumerate}
 \end{mdframed}
 
 
-\underline{(d1) }\\
-
-
+\underline{(d1) Stelle eine geeignete Funktion auf}\\
+Da wir am Gewinn interessiert sind, ist es naheliegend die Kosten $ K(x) $ vom Ertrag $ E(x) $ abzuziehen. Dies ist der Gewinn vor Steuern.
+Damit erhalten wir die Funktion
+\begin{align*}
+	P(x) := E(x) - K(x)
+	=
+	-0.5x^{1.5} + 100 x- (-200\sqrt{x} + 50 x +120)
+	=
+	-0.5x^{1.5} + 50 x + 200 \sqrt{x} -120.
+\end{align*}
+Der Gewinn nach Steuern ergibt sich dann aus
+\begin{align*}
+	G(x) = P(x) - \frac{i}{100} P(x)
+	=
+	\left(1- \frac{i}{100}\right)P(x)
+	=
+	\left(1- \frac{i}{100}\right) \cdot (-0.5x^{1.5} + 50 x + 200 \sqrt{x} -120),
+\end{align*}
+wobei $ i \% = \frac{i}{100}$ der Steuersatz mit $ 0 < i < 100 $ ist.\\
+\\
+\underline{(d2) Bestimme das Maximum der Funktion}\\
+Für das Maximum von $ G $ bestimmen wir zunächst die Ableitung von $ G $:
+\begin{align*}
+	G^\prime(x)
+	= \left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.5 \cdot 1.5 x^{0.5} + 50 + 200 \cdot \frac{1}{2} x^{- \frac{1}{2}} \right)
+	=
+	\left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}} \right).
+\end{align*}
+Für ein Maximum muss die notwendige Bedingung $ G^\prime(x) = 0 $ erfüllt sein.
+Dies ist äquivalent zu:
+\begin{align*}
+	\left(1 - \frac{i}{100}\right)
+	\cdot \left(-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}} \right) = 0
+	\ &\Leftrightarrow \
+	-0.75 x^{0.5} + 50 + 100 x^{- \frac{1}{2}}  = 0\\
+	\ &\overset{\cdot x^{\frac{1}{2}}}{\Leftrightarrow}\
+	-0.75 x + 50 x^{\frac{1}{2}} + 100   = 0.
+\end{align*}
+Mit der Substitution $ y = x^{\frac{1}{2}} $ erhalten wir die quadratische Gleichung
+\begin{align*}
+	-0.75 x + 50 x^{\frac{1}{2}} + 100 
+	=
+	-0.75 y^2 + 50 y + 100 = 0.
+\end{align*}
+Deren Lösungen sind gegeben durch:
+\begin{align*}
+	y_{\nicefrac{1}{2}}
+	=
+	\frac{-50 \pm \sqrt{50^2 - 4 \cdot (-0.75) \cdot 100}}{2 \cdot (-0.75)}
+	= 
+	\frac{-50 \pm \sqrt{2800}}{-1.5}.
+\end{align*}
+Wegen $ y_1 = \frac{-50 + \sqrt{2800}}{-1.5}  < 0 $ und $ y = x^{\frac{1}{2}} =  \sqrt{x} $ ist diese Lösung für unsere ursprüngliche Gleichung nicht relevant.
+Damit bleibt der Kandidat 
+\begin{align*}
+	x^\star = y_2^2 = 
+	\left(\frac{-50 - \sqrt{2800}}{-1.5}\right)^2
+	\approx
+	4707.33
+\end{align*}
+für eine Extremstelle von $ G $. Wir müssen überprüfen, ob diese Stelle ein Maximum ist.
+Hierfür bestimmen wir die zweite Ableitung von $ G $:
+\begin{align*}
+	G^{\prime \prime}(x)
+	\left(1 - \frac{i}{100}\right)\cdot 
+	\left(
+	-0.75 \cdot 0.5\cdot x^{- \frac{1}{2}} - \frac{1}{2} 100 x^{- \frac{3}{2}}
+	\right).
+\end{align*}
+Hieraus ist ersichtlich, dass $ G^{\prime \prime}(x) < 0 $ ist.
+Demnach muss $ x^\star $ ein Maximum sein.
 
 
 
