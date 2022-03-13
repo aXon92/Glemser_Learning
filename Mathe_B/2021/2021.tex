@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt,german]{report}
+
+\usepackage[ngerman]{babel}   % deutsche Sprachanpassung
+\usepackage[utf8]{inputenc} % erlaubt Umlaute in der tex-Datei
+\usepackage[T1]{fontenc}      % Trennung bei Wörtern mit Umlauten
+\usepackage[DIV15]{typearea}  % Vergrößerung des Textbereichs
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{units}	
+\usepackage{esvect}
+\usepackage{ wasysym }
+\usepackage{wrapfig}
+\usepackage{graphicx} %graphiken einfügen
+\usepackage{floatflt} % graphik als fließtext
+\usepackage[framemethod=tikz]{mdframed} %Rahmen für Boxen
+\usepackage{ulem} %Unterschtreichen 
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{gauss}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{multirow}
+\usepgfplotslibrary{fillbetween}
+
+%\usepackage{tabular}
+%%%%%%%%%%%%%%%%%%%% KOPF-ZEILE %%%%%%%%%%%%%%%%%%%%		
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\g@matrix
+ {\vbox\bgroup}
+ {\vbox\bgroup\normalbaselines}% restore the standard baselineskip
+ {}{}
+\makeatother
+
+
+\newcommand{\BAR}{%
+  \hspace{-\arraycolsep}%
+  \strut\vrule % the `\vrule` is as high and deep as a strut
+  \hspace{-\arraycolsep}%
+}
+
+%Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%Kopfzeile links bzw. innen
+\fancyhead[L]{\normalsize\textbf{Testklausur 2020}}
+%Kopfzeile mittig
+\fancyhead[C]{\normalsize\textbf{Teil I: Offene Aufgaben}}
+%Kopfzeile rechts bzw. außen
+\fancyhead[R]{\normalsize\textbf{Glemser Learning}}
+%Linie oben
+\renewcommand{\headrulewidth}{0.5pt}
+\cfoot{Testklausur 2020 - \thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% KEIN EINRÜCKEN %%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+
+
+
+
+%\cfoot{Testklausur 2019 - Seite \thepage}
+\setcounter{page}{1}
+
+
+
+\newcommand{\td}[1]{\text{\rmfamily d} #1}
+\newcommand{\aufgabe}[2]{(#1) (#2 Punkte)}
+\newcommand{\frage}[2]{Frage #1 (#2 Punkte)}			
+\allowdisplaybreaks	
+%% \begin{document}	- Textanfang!	
+\begin{document}
+
+
+\input{aufgaben/aufgaben.tex}
+\newpage
+\section*{\hfil Lösungen \hfil}
+\input{aufgaben/1.tex}
+%\input{aufgaben/2.tex}
+\newpage
+\input{aufgaben/2.tex}
+\newpage
+\input{aufgaben/3.tex}
+
+
+\end{document} 
