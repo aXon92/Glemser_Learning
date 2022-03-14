@@ -1,20 +1,29 @@
 \section*{Aufgabe 3 (30 Punkte)}
 \vspace{0.4cm}
-\subsection*{\frage{1}{4}}
-Gegeben ist die Funktion $ f(x,y) = e^{-\frac{1}{3} x^3 + x +y^2 } $.
-Welche der folgenden Aussagen ist wahr?
+\subsection*{\frage{1}{3}}
+Die Funktion
+\begin{align*}
+	f(x,y) = 2^{xy}
+\end{align*}
+unter der Nebenbedingung
+\begin{align*}
+	\varphi(x,y)
+	=
+	x - 2 y - 2
+	= 
+	0
+\end{align*}
+hat
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ P = (1,0) $ ist ein lokales Minimum von $ f $.
+	ein Minimum $ P = \left(1,-\frac{1}{2} \right) $.
 	\item
-	$ P = (1,0) $ ist ein lokales Maximum von $ f $.
+	ein Maximum $ P = \left(1,-\frac{1}{2} \right) $.
 	\item
-	$ P = (0,0) $ ist ein Sattelpunkt von $ f $.
+	einen Sattelpunkt $ P = \left(1,-\frac{1}{2} \right) $.
 	\item 
-	$ P = (-1,0) $ ist ein lokales Minimum von $ f $.
-	\item
-	$ P = (-1,0) $ ist ein lokales Maximum von $ f $.
+	Keine der obigen Aussagen ist richtig.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -22,82 +31,35 @@ Welche der folgenden Aussagen ist wahr?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die strenge Monotonie der Exponentialfunktion.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die strenge Monotonie der Exponentialfunktion}\\
-Die Funktion $ f $ ist von der Form $ f(x,y) = e^{g(x,y)} $.
-Die lokalen Extrema von $ g $ entsprechen den von $ f $, da die Exponentialfunktion streng monoton wachsend ist.
-In unseren Fall ist $ g $ durch
-\begin{align*}
-	g(x,y) 
-	=
-	-\frac{1}{3} x^3 + x +y^2  
-\end{align*}
-gegeben. Die partiellen Ableitungen erster Ordnung sind:
-\begin{align*}
-	g_x(x,y)
-	&=
-	-x^2 + 1 = 1 - x^2\\
-	g_y(x,y)
-	&=
-	2 y.
-\end{align*}
-Für $ \mathrm{grad}\ g(x,y) = \textbf{0} $ muss
-\begin{align*}
-	1 - x^2 = 0 \ &\Leftrightarrow \ x = \pm 1\\
-	2y = 0 \ &\Leftrightarrow \ y = 0
-\end{align*}
-gelten. Damit sind $ (1,0) $ und $ (-1,0) $ Kandidaten für lokale Extrema.
-Die partiellen Ableitungen zweiter Ordnung sind:
-\begin{align*}
-	g_{xx }(x,y) &= -2x\\
-	g_{yy}(x,y) &= 2\\
-	g_{xy}(x,y) &= 0.
-\end{align*}
-Wegen 
-\begin{align*}
-	g_{xx }(1,0) g_{yy }(1,0) - (g_{xy }(1,0))^2
-	=
-	-2 \cdot 2 - 0 < 0
-\end{align*}
-liegt an $ (1,0) $ ein Sattelpunkt vor.
-Wegen 
-\begin{align*}
-	g_{xx}(-1,0) &> 0 \\
-	g_{yy}(-1,0) &> 0\\
-	g_{xx}(-1,0) g_{yy}(-1,0) &> 0
-\end{align*}
-liegt an $ (-1,0) $ ein Minimum vor.\\
-\\
-Damit ist die Antwort (d) korrekt.
-%\\
-%\\
-%\textit{Alternativer Lösungsweg:}\\
+\underline{1. }\\
 
 
  
 \newpage
 
-\subsection*{\frage{2}{3}}
-Gegeben ist die Funktion $ f $ mit 
+\subsection*{\frage{2}{4}}
+Sei $ a \in \mathbb{R}_{++} $. Das bestimmte Integral
 \begin{align*}
-	f^\prime(x) = \frac{2 e^{2x}}{e^{2x} + 1} \quad \textrm{mit } \quad f(0) = \ln(2)
+	\int_0^1
+	\frac{1}{x^2} e^{\frac{a}{x}} dx
 \end{align*}
-Es folgt:
+ist gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$f(x) = \ln(e^{2x} +1) $.
+	$a e^{-a} $.
 	\item
-	$f(x) = \ln(e^{2x} +1) + \ln(2) $.
+	$\frac{1}{a^2} e^{-a}$.
 	\item
-	$f(x) = \ln(e^{x} +e^{-x}) $.
+	$e^{-a} $.
 	\item
-	$f(x) = \ln(e^{x} +e^{-x}) + \ln(2) $.	
+	$\frac{1}{a} e^{-a}$.	
 	\item
-	$f(x) = 2 \ln(e^{2x} +1) - \ln(2) $.
+	Das Integral existiert nicht.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -105,63 +67,34 @@ Es folgt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme die richtige Lösung mit dem Eliminationsverfahren.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme die richtige Lösung mit dem Eliminationsverfahren}\\
-Es gilt 
-\begin{align*}
-	\ln(e^{2\cdot 0} +1) &= \ln ( 1+ 1 ) = \ln (2)\\
-	\ln(e^{0} + e^{-0})&= \ln(2).
-\end{align*}
-Damit können wir die Antwortmöglichkeiten (b) und (d) auschließen.
-Wir betrachten nun folgende Ableitungen:
-\begin{align*}
-	\frac{\mathrm{d}}{\mathrm{dx}}
-	\left(\ln(e^{2x} +1)\right)
-	&=
-	\frac{1}{e^{2x} +1} \cdot (e^{2x} +1)^\prime
-	=
-	\frac{1}{e^{2x} +1} \cdot 2 e^{2x}
-	=
-	\frac{ 2 e^{2x}}{e^{2x} +1}\\
-	\frac{\mathrm{d}}{\mathrm{dx}}
-	\left(\ln(e^{x} +e^{-x})\right)
-	&=
-	\frac{1}{e^{x} +e^{-x}} \cdot (e^{x} +e^{-x})^\prime
-	=
-	\frac{1}{e^{x} +e^{-x}} \cdot (e^x - e^{-x})
-	=
-	\frac{e^x - e^{-x}}{e^{x} +e^{-x}}.
-\end{align*}
-Also sind die Antwortmöglichkeiten (c) und (e) falsch.\\
-\\
-Damit ist die Antwort (a) korrekt.   
+\underline{1. }\\
 
 \newpage
 \subsection*{\frage{3}{4}}
-Die stetige Zufallsvariable $ X $ habe die Dichtefunktion
+Sei $ n \in \mathbb{N} $.
+Das bestimmte Integral
 \begin{align*}
-	f(x) =
-	\begin{cases}
-		ax^2 + bx^3 \quad &\textrm{falls } 0 \leq x \leq 1\\
-		\quad  \  0 \ \ &\textrm{sonst}
-	\end{cases}
+	\int_0^1
+	x(1-x)^n
+	\ \td{x}
 \end{align*}
-und den Erwartungswert $ \mathbb{E}[X] = 0.75 $.
+ist gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$a= 3,b=0$.
+	$\frac{1}{n(n+1)}$.
 	\item
-	$a= \frac{3}{2},b=2$.
+	$\frac{n}{(n+1)(n+2)}$.
 	\item
-	$a= -1,b=4$.
+	$\frac{n}{n+1}$.
 	\item
-	$a= 0,b=2$.
+	$\frac{1}{n(n+2)}$.
 	\item
-	$a= \frac{12}{5},b=\frac{3}{4}$.	
+	$\frac{1}{(n+1)(n+2)}$.	
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -169,100 +102,38 @@ und den Erwartungswert $ \mathbb{E}[X] = 0.75 $.
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die Definition einer Dichtefunktion und des Erwartungswerts.
+\item .
 \end{enumerate}
 \end{mdframed}
 %\allowdisplaybreaks
-\underline{1. Verwende die Definition einer Dichtefunktion und des Erwartungswerts}\\
-Wir verwenden die Definitionen der Dichtefunktion und des Erwartungswerts um ein lineares Gleichungssystem aufzustellen.
-Da $ f $ eine Dichtefunktion ist, muss diese $ \int_\mathbb{R} f(x) \td{x} = 1 $ erfüllen.
-Dies führt zu der der Gleichung:
-\begin{align*}
-	\int \limits_{\mathbb{R}} f(x) \td{x}
-	&=
-	\int \limits_0^1 a x^2 + bx^3 \td{x}
-	=
-	\frac{a}{3}x^3 + \frac{b}{4} x^4 \bigg|_{0}^1\\
-	&=
-	\frac{a}{3} + \frac{b}{4} = 1
-	\ \Leftrightarrow \
-	4 a + 3 b = 12. 
-\end{align*}
-Wenn $ f $ die Dichtefunktion der Zufallsvariablen $ X $ ist, gilt für deren Erwartungswert:
-\begin{align*}
-	\mathbb{E}[X]
-	= 
-	\int \limits_{\mathbb{R}} x f(x) \td{x}.
-\end{align*}
-%Da $ f $ zudem die Dichtefunktion der Zufallsvariablen $ X $ ist, gilt für deren Erwartungswert:
-Deswegen folgt:
-\begin{align*}
-	\mathbb{E}[X]
-	&= 
-	\int \limits_{\mathbb{R}} x f(x) \td{x}
-	= 
-	\int \limits_0^1
-	x\left(ax^2 + b x^3\right) \td{x}
-	=
-	\int \limits_0^1
-	ax^3 + b x^4\td{x}
-	=
-	\frac{a}{4}x^4 + \frac{b}{5} x^5 \bigg|_{0}^1\\
-	&=
-	\frac{a}{4} + \frac{b}{5} = 0.75 = \frac{3}{4}
-	\ \Leftrightarrow \
-	5 a + 4 b = 15.
-\end{align*}
-Mit diesen beiden Gleichungen erhalten wir das lineare Gleichungssystem:
-\begin{align*}
-	\begin{pmatrix}
-		4 & 3 & \BAR & 12\\
-		5 & 4 & \BAR & 15
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		20 & 15 & \BAR & 60\\
-		20 & 16 & \BAR & 60
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		20 & 15 & \BAR & 60\\
-		0 & 1 & \BAR & 0
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		20 & 0 & \BAR & 60\\
-		0 & 1 & \BAR & 0
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		1 & 0 & \BAR & 3\\
-		0 & 1 & \BAR & 0
-	\end{pmatrix}.
-\end{align*}
-Also hat das LGS die Lösung $ a = 3 $ und $ b = 0 $.\\
-\\
-Damit ist die Antwort (a) korrekt.
+\underline{1. }\\
 \newpage
 
 \subsection*{\frage{4}{4}}
-Gegeben ist die Funktion 
+Gegeben ist die Matrix
 \begin{align*}
-	f(x,y) = 2 \ln(x^2 +y^2 ) + (3-a) \ln(y^2), \qquad x,y > 0.
+	A
+	=
+	\begin{pmatrix}
+		2 & a & -4 \\
+		-1 & 3 & 4\\
+		1 & -2 & -3
+	\end{pmatrix}.
 \end{align*}
-Für welche Werte $ a \in \mathbb{R} $ ist der Gradient der Funktion $ f $ an der Stelle $ (1,1)  $ orthogonal zum Vektor $ \textbf{n} = \begin{pmatrix}2 \\ 1 \end{pmatrix} $?
+Für welche Werte von $ a \in \mathbb{R} $ ist die Matrix $ A $
+\textit{idempotent}, d.h., es gilt $ A^2 = A $?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ a= 3 $.
+	$ a= 0 $.
 	\item 
-	$ a= 6 $.
+	$ a= -2 $.
 	\item
-	$ a= 9 $.
+	$ a= 2 $ oder $ a= -1 $.
 	\item
-	$ a= 12 $.
+	Es gibt kein $ a \in \mathbb{R} $, sodass $ A $ idempotent ist.
 	\item
-	Für kein $ a \in \mathbb{R} $.
+	$ A $ ist idempotent für jedes $ a \in \mathbb{R} $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -270,62 +141,11 @@ Für welche Werte $ a \in \mathbb{R} $ ist der Gradient der Funktion $ f $ an de
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme den Gradienten der Funktion.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme den Gradienten der Funktion}\\
-Die partiellen Ableitungen von $ f $ sind durch
-\begin{align*}
-	f_x(x,y) 
-	&= 
-	2\frac{2x}{x^2 +y^2}
-	=
-	\frac{4x}{x^2 +y^2}
-	\\
-	f_y(x,y)
-	&=
-	2\frac{2y}{x^2 +y^2}
-	+
-	(3-a) \frac{2y}{y^2} 
-	=
-	\frac{4y}{x^2 +y^2}+
-	(3-a) \frac{2}{y} 
-\end{align*}
-gegeben. Damit ist der Gradient an der Stelle $ (1,1) $:
-\begin{align*}
-	\mathrm{grad} f(1,1)
-	=
-	\begin{pmatrix}
-		\frac{4}{2}\\
-		2 + (3-a)\cdot 2
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		2\\
-		8 - 2a
-	\end{pmatrix}.
-\end{align*}
-Dieser ist orthogonal zu $ \textbf{n} $, falls gilt:
-\begin{align*}
-	\begin{pmatrix}
-		2\\
-		8 - 2 a
-	\end{pmatrix}
-	\cdot
-	\begin{pmatrix}
-		2\\
-		1
-	\end{pmatrix}
-	=
-	2 \cdot 2 +  (8-2a) \cdot 1
-	=
-	4 +8  - 2a 
-	=12 - 2a = 0
-	\ \Leftrightarrow \
-	a = 6.
-\end{align*}
-Damit ist die Antwort (b) korrekt.
+\underline{1. }\\
 \newpage
 
 \subsection*{\frage{5}{4}}
@@ -333,25 +153,24 @@ Gegeben ist die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		2 & 0 & 1 & 8 \\
-		-1 & 2 & 1 & 1 \\
-		1 & 2 & 1 &  0 \\
-		0 & 0 & 1 & 9
+		1 & 0 & 2 & 3 \\
+		2 & 1 & r & 7 \\
+		3 & 2 & 4 &  s 
 	\end{pmatrix}.
 \end{align*}
-$ A $ hat
+Für welche Werte von $ r \in \mathbb{R} $ und $ s \in \mathbb{R} $ besitzt die Matrix $ A $ den Rang $ 2 $?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Rang $ 1 $.
+	$ r = 10 $ und $ s = 2 $.
 	\item 
-	Rang $ 2 $.
+	$ r =  2 $ und $ s = 10 $.
 	\item
-	Rang $ 3 $.
+	$ r = 2 $ und $ s $ beliebig.
 	\item
-	Rang $ 4 $.
+	$ r = 3 $ und $ s = 11 $.
 	\item
-	Rang $ 5 $.
+	Die Matrix $ A $ hat für alle $ (r,s) \in \mathbb{R}^2 $ \textit{nicht} den Rang $ 2 $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -359,107 +178,11 @@ $ A $ hat
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende den Gaußalgorithmus.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende den Gaußalgorithmus}\\
-Wir wenden elementare Zeilenoperationen an, um den Rang abzulesen:
-\begin{align*}
-	A 
-	&=
-	\begin{gmatrix}[p]
-		2 & 0 & 1 & 8 \\
-		-1 & 2 & 1 & 1 \\
-		1 & 2 & 1 &  0 \\
-		0 & 0 & 1 & 9
-		\rowops
-		\swap{0}{1}	
-	\end{gmatrix}
-	\leadsto
-	\begin{gmatrix}[p]
-		-1 & 2 & 1 & 1 \\
-		2 & 0 & 1 & 8 \\
-		1 & 2 & 1 &  0 \\
-		0 & 0 & 1 & 9
-		\rowops
-		\add[ \cdot 2]{0}{1}
-		\add[\cdot 1]{0}{2}	
-	\end{gmatrix}\\
-	&\leadsto
-	\begin{gmatrix}[p]
-		-1 & 2 & 1 & 1 \\
-		0 & 4 & 3 & 10 \\
-		0 & 4 & 2 &  1 \\
-		0 & 0 & 1 & 9
-		\rowops
-		\add[ \cdot (-1)]{1}{2}	
-	\end{gmatrix}
-	\leadsto
-	\begin{gmatrix}[p]
-		-1 & 2 & 1 & 1 \\
-		0 & 4 & 3 & 10 \\
-		0 & 0 & -1 &  -9 \\
-		0 & 0 & 1 & 9
-		\rowops
-		\add[ \cdot 1]{2}{3}	
-	\end{gmatrix}\\
-	&\leadsto
-	\begin{gmatrix}[p]
-		-1 & 2 & 1 & 1 \\
-		0 & 4 & 3 & 10 \\
-		0 & 0 & -1 &  -9 \\
-		0 & 0 & 0 & 0
-		\rowops	
-	\end{gmatrix}.
-\end{align*}
-Wir erhalten drei linear unabhängige Zeilen, womit $ \mathrm{rg}(A) = 3 $ gilt.\\
-\\
-Damit ist die Antwort (c) korrekt.
-%\underline{1. Überlege dir, welche Möglichkeiten keine Eigenvektoren sein können}\\
-%Wir kürzen mit $ \textbf{x}_a $, $ \textbf{x}_b $, $ \textbf{x}_c $ und $ \textbf{x}_d $ die Vektoren von (a) bis (d) ab.\\
-%\\
-%Ein Vektor $ \textbf{x} \neq 0 $ heißt Eigenvektor zum Eigenwert $ \lambda $, falls
-%\begin{align*}
-%M \textbf{x} = \lambda \textbf{x}
-%\end{align*}
-%gilt. Das heißt $ M \textbf{x} $ muss ein Vielfaches von $ \textbf{x} $ sein.
-%Ansonsten ist $ \textbf{x} $ kein Eigenvektor.\\
-%\\
-%Wegen 
-%\begin{align*}
-%M \textbf{x}_b = \begin{pmatrix}
-%0 \\ 1 \\ 1
-%\end{pmatrix}
-%\end{align*}
-%kann $ \textbf{x}_b $ kein Eigenvektor sein. 
-%\newpage
-%Ebenso gilt:
-%\begin{align*}
-%M \textbf{x}_d = \begin{pmatrix}
-%-2 \\ 4 \\ 4
-%\end{pmatrix}.
-%\end{align*}
-%Also kann $ \textbf{x}_d $ auch kein Eigenvektor sein.\\
-%\\
-%\underline{2. Bestimme die richtige Aussage}\\
-%Es bleiben die Möglichkeiten (a) und (c).
-%Wir erhalten:
-%\begin{align*}
-%M \textbf{x}_a = \begin{pmatrix}
-%2 \\ 0 \\-2
-%\end{pmatrix}
-%= 2 \cdot \textbf{x}_a\\
-%M \textbf{x}_c = 
-%\begin{pmatrix}
-%-2 \\ 1 \\ 1
-%\end{pmatrix}
-%= 
-%1 \cdot \textbf{x}_c.
-%\end{align*}
-%Also ist $ \textbf{x}_a $ ein Eigenvektor zum Eigenwert $ 2 $ und $ \textbf{x}_c $ ein Eigenvektor zum Eigenwert $ 1 $.\\
-%\\
-%Damit ist die Antwort (c) korrekt.
+\underline{1. }\\
 \newpage
 
 \subsection*{\frage{6}{4}}
@@ -467,33 +190,83 @@ Gegeben ist die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		0 & -1 & 0 \\
-		1 & 0 & 0 \\
-		1 & 1 & m
+		0 & 3 & 0 \\
+		1 & 2 & 0 \\
+		-5m & 5 & 4
 	\end{pmatrix}
+	, 
+	\quad 
+	\textrm{mit } m \in \mathbb{R}.
 \end{align*}
-und ihre Inverse
-\begin{align*}
-	A^{-1} =
-	\begin{pmatrix}
-		0 & 1 & 0 \\
-		-1 & 0 & 0 \\
-		0.5 & -0.5 &0.5
-	\end{pmatrix}
-\end{align*}
-Es folgt:
+Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ A $ ist singulär für alle $ m \in \mathbb{R} $.
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s 
+	\begin{pmatrix}
+		3 \\ -1 \\ 1 - 3m
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
 	\item 
-	$ m = -1 $.
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		-3 \\ 1 \\ -1 - 3m
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
 	\item
-	$ m = 0 $.
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		1 \\ -3 \\ 1 - 3m
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
 	\item
-	$ m = 1 $.
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		3m \\ -1 \\ m-1
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
 	\item
-	$ m = 2 $.
+	$ \lambda = -1 $ ist kein Eigenwert von $ A $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -501,83 +274,37 @@ Es folgt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme das Produkt der Matrix mit ihrer Inversen.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme das Produkt der Matrix mit ihrer Inversen}\\
-Das Matrixprodukt von $ A $ und $ A^{-1} $ ist:
-\begin{align*}
-	A \cdot A^{-1}
-	=
-	\begin{pmatrix}
-		0 & -1 & 0 \\
-		1 & 0 & 0 \\
-		1 & 1 & m
-	\end{pmatrix}
-	\cdot
-	\begin{pmatrix}
-		0 & 1 & 0 \\
-		-1 & 0 & 0 \\
-		0.5 & -0.5 &0.5
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		(-1) \cdot (-1) & 0 & 0\\
-		0 & 1 & 0\\
-		-1 + \frac{m}{2} & 1 - \frac{m}{2} & \frac{m}{2}
-	\end{pmatrix}.
-\end{align*}
-Nun gilt 
-\begin{align*}
-	\begin{pmatrix}
-		(-1) \cdot (-1) & 0 & 0\\
-		0 & 1 & 0\\
-		-1 + \frac{m}{2} & 1 - \frac{m}{2} & \frac{m}{2}
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		1 & 0 & 0 \\
-		0 & 1 & 0 \\
-		0 & 0 & 1
-	\end{pmatrix}
-\end{align*}
-für $ m = 2 $.\\
-\\
-Damit ist die Antwort (e) korrekt.
-
-
-
-
-
-
+\underline{1. }\\
 \newpage
 
-
-
-\subsection*{\frage{7}{4}}
-Gegeben ist die Matrix
+\subsection*{\frage{7}{3}}
+Von der Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ der Differenzengleichung
 \begin{align*}
-	A =
-	\begin{pmatrix}
-		4 & 1 & 1 \\
-		1 & 4 & 1 \\
-		1 & 1 & 4
-	\end{pmatrix}.
+	y_{k+1} = A y_k + B \quad (k = 0,1,2,...)
 \end{align*}
-Die Matrix $ B = A^3 $ hat den Eigenwert
+sind die Werte
+\begin{align*}
+	y_0 = 2, y_1 = 1 \ \textrm{und} \ y_2 = 3
+\end{align*}
+bekannt.\\
+\\
+Bestimmen Sie $ A $ und $ B $.
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	$ 64 $.
+	$ A=1 $ und $ B=2 $.
 	\item
-	$ 27 $.	
+	$ A=2 $ und $ B=1 $.	
 	\item 
-	$ 8 $.
+	$ A=-1 $ und $ B=4 $.
 	\item
-	$ 5 $.
+	$ A=1 $ und $ B=2 $.
 	\item
-	$ 1 $.
+	$ A=-2 $ und $ B=5 $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -585,101 +312,33 @@ Die Matrix $ B = A^3 $ hat den Eigenwert
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die Definition der Eigenwerte.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die Definition der Eigenwerte}\\
-Ein Vektor $ \textbf{x} \neq \textbf{0} $ heißt Eigenvektor zum Eigenwert $ \lambda $ der Matrix $ A $, falls
-\begin{align*}
-	A \textbf{x} = \lambda \cdot \textbf{x} 
-\end{align*}
-gilt. Hieraus folgt:
-\begin{align*}
-	B \textbf{x} = A^3  \textbf{x}
-	= A^2 ( A \textbf{x} ) 
-	= \lambda A^2 \textbf{x}
-	= \lambda^2 A \textbf{x}
-	= \lambda^3\textbf{x}.
-\end{align*}
-Damit gilt: Wenn $ \lambda $ ein Eigenwert von $ A $ ist, ist $ \lambda^3 $ ein Eigenwert von $ B $.
-Umgekehrt gilt: Ist $ \mu $ ein Eigenwert von $ B $, so ist $ \sqrt[3]{\mu} $ ein Eigenwert von $ A $.
-Um die Frage zu beantworten, benötigen wir die Eigenwerte von $ A $. Hierfür zerlegen wir das charakteristische Polynom in Linearfaktoren:
-\begin{align*}
-	\det(A - \lambda I)
-	&=
-	\begin{vmatrix}
-		4- \lambda & 1 & 1 \\
-		1 & 4- \lambda & 1\\
-		1 & 1 & 4 - \lambda
-	\end{vmatrix}
-=
-	(4 - \lambda) 
-	\begin{vmatrix}
-		4- \lambda & 1\\
-		 1 & 4 - \lambda
-	\end{vmatrix}
-	-
-	\begin{vmatrix}
-		1 & 1\\
-		1 & 4 - \lambda
-	\end{vmatrix}
-	+
-	\begin{vmatrix}
-		1 & 1\\
-		4 - \lambda &  1
-	\end{vmatrix}\\
-	&=
-	(4-\lambda)^3 - (4- \lambda)
-	-(4-\lambda) + 1 
-	+1 - (4-\lambda )\\
-	&=
-	(4-\lambda)( (4-\lambda)^2 - 1) + 2 ( 1 - (4- \lambda))\\
-	&=
-	(4 - \lambda)(15 - 8 \lambda + \lambda^2) + 2 (\lambda -3)\\
-	&=
-	(4 - \lambda)(\lambda - 5)(\lambda - 3) + 2 ( \lambda -3)\\
-	&=
-	(\lambda - 3) 
-	\left(
-	(4 - \lambda)(\lambda - 5) +2
-	\right)\\
-	&=
-	(\lambda - 3) 
-	\left(
-	4 \lambda - 18 - \lambda^2 + 5 \lambda
-	\right)\\
-	&=
-	-(\lambda - 3) 
-	\left(
-	\lambda^2 - 9 \lambda + 18
-	\right)\\
-	&=
-	(\lambda-3)^2(\lambda-6).
-\end{align*}
-Damit lassen sich die  Eigenwerte $ \lambda_1 = 3 $ und $ \lambda_2 = 6 $ von $ A $ ablesen.
-Also besitzt $ B $ die Eigenwerte $ \lambda_1^3 = 27 $ und $ \lambda_2^3 = 216 $.\\
-\\
-Somit ist Antwort (b) korrekt.
+\underline{1. }\\
 
 \newpage
 
-\subsection*{\frage{8}{3}}
+\subsection*{\frage{8}{4}}
 Die allgemeine Lösung der  Differenzengleichung
 \begin{align*}
-	\frac{1}{3} y_k - \frac{3}{4} y_{k+1} + \frac{1}{27} y_k  = \frac{1}{9} y_k + 2 \quad (k = 0,1,2,...)
+	(1+a) y_{k+1} + y_k -1 = 0
+	\quad (k = 0,1,2,...)
 \end{align*}
-ist
+mit $ a \in \mathbb{R} \setminus \{-1,-2\} $, ist genau dann monoton und konvergent, wenn
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	monoton und konvergent.
+	$ a > 0 $.
 	\item
-	monoton und divergent.	
+	$ a >0 $ oder $ a < -1 $.	
 	\item 
-	oszillierend und konvergent.
+	$ -2 < a < 0 $.
 	\item
-	oszillierend und divergent.
+	$ a < -2 $.
+	\item 
+	Die allgemeine Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ ist nie monoton und konvergent.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -687,40 +346,8 @@ ist
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Forme in die Normalform um.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Forme in die Normalform um}\\
-Die Normalform der Differenzengleichung erhalten wir durch:
-\begin{align*}
-	&\frac{1}{3} y_k - \frac{3}{4} y_{k+1} + \frac{1}{27} y_k  = \frac{1}{9} y_k + 2\\
-	\ \Leftrightarrow \
-	- &\frac{3}{4} y_{k+1}
-	=
-	\left(
-	\frac{1}{9} - \frac{1}{3} - \frac{1}{27} 
-	\right)
-	\cdot 
-	y_k + 2
-	=
-	\left(
-	\frac{3}{27} - \frac{9}{27} - \frac{1}{27} 
-	\right)
-	\cdot 
-	y_k + 2
-	=
-	-\frac{7}{27} y_k +2\\
-	\ \Leftrightarrow \
-	&\ 
-	y_{k+1} = -\frac{4}{3} \cdot
-	\left(-\frac{7}{27} y_k +2\right)
-	=
-	\frac{28}{81} y_k -\frac{8}{3}.
-\end{align*}
-Hierbei ist $ A = \frac{28}{81} $  und $ B= - \frac{8}{3} $.
-Für das Konvergenzverhalten ist $ A $ relevant.
-Wegen $ 0 < A < 1 $ ist $ |A| < 1 $ und $ A > 0 $ erfüllt.
-Die erste Eigenschaft sorgt für die Konvergenz und die Zweite für die Monotonie.\\
-\\
-Damit ist die Antwort (a) korrekt.
+\underline{1. }\\
