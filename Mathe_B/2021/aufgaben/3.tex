@@ -312,12 +312,42 @@ Bestimmen Sie $ A $ und $ B $.
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Stelle ein lineares Gleichungssystem auf.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Stelle ein lineares Gleichungssystem auf}\\
+Die bekannten Werte ergeben die beiden Gleichungen
+\begin{align*}
+	 y_1 = A y_0 + B 
+	\ &\Leftrightarrow \
+	1 = 2 A + B\\
+	y_2 = A y_1 + B 
+	\ &\Leftrightarrow \
+	3 = A + B.
+\end{align*}
+Dies ist ein lineares Gleichungssystem in den Variablen $ A $ und $ B $. Das Aufstellen der Koeffizientenmatrix und Anwenden elementarer Zeilenumforungen ergibt:
 
+\begin{align*}
+	\begin{pmatrix}
+		2 & 1 & \BAR & 1\\
+		1 & 1 & \BAR & 3
+	\end{pmatrix}
+	\leadsto
+	\begin{pmatrix}
+		1 & 0 & \BAR & -2\\
+		1 & 1 & \BAR & 3
+	\end{pmatrix}
+	\leadsto
+	\begin{pmatrix}
+		1 & 0 & \BAR & -2\\
+		0 & 1 & \BAR & 5
+	\end{pmatrix}
+	\ \Rightarrow A = -2, B = 5.
+\end{align*}
+Damit ist die Anwort (e) korrekt.\\
+\\
+Alternativ lässt sich das LGS auch durch Einsetzen lösen.
 \newpage
 
 \subsection*{\frage{8}{4}}
