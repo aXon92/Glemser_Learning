@@ -340,17 +340,69 @@ Welche der folgenden Aussagen ist \textit{falsch}?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item Bestimme die richtige Lösung mit dem Eliminationsverfahren. 
+		\item Finde ein geeignetes Gegenbeispiel. 
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme die richtige Lösung mit dem Eliminationsverfahren}\\
-Die Differenzengleichung ist in Normalform.
-Wegen $ |A| < 1 $ konvergiert die Folge gegen $ y^\star $.
-Damit ist Antwort (a) falsch.
-Wir setzen $ B = 0 $. Dann konvergiert $ y_k $ gegen $ 0 $ und es gilt $ y_k = A^k y_0 $.
-Damit hängt das Vorzeichen von der Anfangsbedingung $ y_0 $ ab.
-Für $ y_0 < 0  $ ist (b) falsch und für $ y_0 > 0 $ ist (c) falsch.
-Also bleibt Antwort (d) übrig.\\
+\underline{1. Finde ein geeignetes Gegenbeispiel}\\
+Angenommen $ A $ sei regulär. Dann gilt 
+\begin{align*}
+	A + (-A) = 0,
+\end{align*}
+wobei mit $ 0 $ die Nullmatrix gemeint ist. Diese ist wegen $ \det(0) = 0 $ singulär. Mit der Einheitsmatrix sieht dieses Beispiel wie folgt aus:
+\begin{align*}
+	I + (-I)
+	=
+	\begin{pmatrix}
+		1 & 0 \\
+		0 & 1
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+	 -1 & 0 \\
+	 0 & -1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}.
+\end{align*} 
+Wegen $ \det(I) = \det(-I) = 1 $ liegen hier zwei reguläre Matrizen vor, deren Summe singulär ist.\\
 \\
-Somit ist die Antwort (d) korrekt.
+Damit ist die Antwort (a) korrekt.\\
+\\
+Alternativ lässt sich die richtige Antwort auch durch Ausschließen der wahren Aussagen finden:
+\begin{enumerate}
+	\item[(b)]
+	Seien $ A, B $ singuläre Matrizen. Dann ist das Produkt wegen 
+	\begin{align*}
+		\det(A \cdot B) = \det(A) \cdot \det(B) = 0 \cdot 0 = 0
+	\end{align*}
+	singulär.
+	\item[(c)] Der Zeilenrang einer Matrix ist gleich dem Spaltenrang der Matrix.
+	\item[(d)] 
+	Sei $ A $ eine $ (n\times m) $-Matrix. Dann gilt
+	\begin{align*}
+		\mathrm{rg}(A) \leq \min(n,m) \leq n.
+	\end{align*}
+	\item[(e)]
+	Die reguläre Einheitsmatrix lässt sich durch
+	\begin{align*}
+		\begin{pmatrix}
+			1 & 0\\
+			0 & 1
+		\end{pmatrix}
+		= 
+		\begin{pmatrix}
+			1 & 0 \\
+			0 & 0
+		\end{pmatrix}
+		+
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 1
+		\end{pmatrix}
+	\end{align*}
+	zerlegen. Die zwei Summanden sind jeweils singulär.
+\end{enumerate}
