@@ -311,11 +311,31 @@ Dann folgt:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item . 
+		\item Verwende die lineare Unabhängigkeit. 
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die lineare Unabhängigkeit}\\
+Der Rang einer Matrix $ A $ ist wie folgt definert:
+\begin{align*}
+	\mathrm{rg}(A) &:= \textrm{Anzahl der linear unabhängigen Spalten}\\
+	&:=\textrm{Anzahl der linear unabhängigen Zeilen}.
+\end{align*}
+Die Definition über die Zeilen ist in dieser Aufgabe nicht relevant. Diese soll die Gleichheit von Spalten/Zeilenrang verdeutlichen.\\
+\\
+Wir wissen, dass die $ (7 \times 4) $-Matrix $ A $ den Rang $ 4 $ besitzt. 
+Damit sind die $ 4 $ Spalten der Matrix $ A $ linear unabhängig 
+Durch das Streichen der dritten Spalte sind die $ 3 $ verbliebenen Spalten der $ (7 \times 3) $-Matrix $ B $ linear unabhängig.
+Dies gilt, da jede Teilmenge einer linear unabhängigen Menge linear unabhängig ist. Nach der Definiton des Ranges gilt somit $ \mathrm{rg}(B) = 3 $.\\
+\\
+Damit ist die Anwort (b) korrekt.\\
+\\
+Alternativ gilt: Da $ B $ drei linear unabhängige Spalten besitzt, folgt $ \mathrm{rg}(B) \geq 3 $. Da $ B $ eine $ (7 \times 3) $-Matrix ist, gilt auch
+\begin{align*}
+	\mathrm{rg}(B) \leq \min(7,3) = 3
+\end{align*}
+und somit $ \mathrm{rg}(B) = 3 $.
+
 
 \newpage
 \subsection*{\frage{10}{3}}
