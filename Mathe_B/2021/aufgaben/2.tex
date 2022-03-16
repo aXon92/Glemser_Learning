@@ -137,13 +137,49 @@ gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Eigenschaft der ungeraden Funktion.
+\item Setze die Integrale zusammen.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
- 
+\underline{1. Verwende die Eigenschaft der ungeraden Funktion}\\
+Da $ f $ ungerade ist, gilt
+\begin{align*}
+	\int_{-1}^1 f(x) \td{x}
+	= 
+	0.
+\end{align*} 
+Damit gilt 
+\begin{align*}
+	15 = \int_{-1}^9 f(x) \td{x}
+	= 
+	\int_{-1}^1 f(x) \ \td{x} + \int_{1}^9 f(x) \ \td{x}
+	=
+	\int_{1}^9 f(x) \ \td{x}.
+\end{align*}
 
+\underline{2. Setze die Integrale zusammen}\\
+Das gesuchte Integral bestimmt sich nun durch
+\begin{align*}
+	\int_4^6 f(x) \ \td{x}
+	&=
+	\int_4^9 f(x) \ \td{x}
+	-
+	\int_6^9 f(x) \ \td{x}
+	=
+	\int_4^9 f(x) \ \td{x}
+	-
+	\left(
+	\int_1^9 f(x) \ \td{x}
+	-
+	\int_1^6 f(x) \ \td{x}
+	\right)\\
+	&=
+	5-(15-7)
+	=
+	5 - 8 = -3.
+\end{align*}
+Damit ist die Antwort (d) korrekt.
 \newpage
 \subsection*{\frage{5}{4}}
 Gegeben ist die Funktion
