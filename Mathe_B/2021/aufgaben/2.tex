@@ -86,11 +86,24 @@ Welcher der folgenden Ausdrücke gibt die Ableitung $ f^\prime(x) $ wieder?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende den Fundamentalsatz und die Kettenregel.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende den Fundamentalsatz und die Kettenregel}\\
+Wir definieren 
+\begin{align*}
+	g(x) = 
+	\int_0^x e^{\sin(t)} \td{t}.
+\end{align*}
+Dann gilt $ f(x)  = g(x^2)$ und der Fundamentalsatz der Infinitismalrechnung liefert $ g^\prime(x) = e^{\sin(x)} $.
+Mit der Kettenregel erhalten wir dann
+\begin{align*}
+	f^\prime(x) = g^\prime(x^2) \cdot \left(\frac{\mathrm{d}}{\mathrm{dx}} x^2\right)
+	=
+	e^{\sin(x^2)} \cdot 2x.
+\end{align*}
+Damit ist die Antwort (b) korrekt.
 
 \newpage
 
