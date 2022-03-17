@@ -186,7 +186,7 @@ Gegeben ist die Funktion
 \begin{align*}
 	f(x) =
 	\begin{cases}
-		2 x c e^{1 - x^2}, \ &x \geq c  \geq 0\\
+		2 x  e^{1 - x^2}, \ &x \geq c  \geq 0\\
 		\qquad	\ 0 , \ &x < c
 	\end{cases}.
 \end{align*}
@@ -210,13 +210,60 @@ $ f $ ist eine Dichtefunktion für
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Definition einer Dichtefunktion und berechne das uneigentliche Integral.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
- 
-
+\underline{1. Verwende die Definition einer Dichtefunktion und berechne das uneigentliche Integral}\\
+$ f $ ist eine Dichtefunktion, falls
+\begin{align*}
+	\int_{\mathbb{R}} f(x) \ \td{x}
+	=
+	\int^\infty_{-\infty} f(x) \ \td{x}
+	=1
+\end{align*} 
+gilt. Wegen $ c \geq 0 $ erhalten wir
+\begin{align*}
+	\int^\infty_{-\infty} f(x) \ \td{x}
+	=
+	\int_{-\infty}^c \underbrace{f(x)}_{=0} \td{x} +
+	\int_c^\infty f(x) \ \td{x}
+	=
+	\int_c^\infty f(x) \ \td{x}
+	=
+	\int_c^\infty 2x e^{1-x^2} \ \td{x}
+	.
+\end{align*}
+Bei Integranden mit Exponentialfunktion der Form $ e^{g(x)} $ lohnt es sich oft, die Ableitung dieser zu betrachten:
+\begin{align*}
+	\frac{\mathrm{d}}{\mathrm{dx}} e^{1-x^2}
+	= -2x e^{1-x^2}.
+\end{align*}
+Bis auf das Vorzeichen entspricht dies unserem Integranden und wir erhalten: 
+\begin{align*}
+	\int_c^\infty 2x e^{1-x^2} \ \td{x}
+	&=
+	-\int_c^\infty -2x e^{1-x^2} \ \td{x}
+	=
+	- \lim \limits_{N \to \infty}
+	 \int_c^N -2x e^{1-x^2} \ \td{x}
+	 =
+	 -\lim \limits_{N \to \infty}
+	 \left[e^{1-x^2}\right]_c^N\\
+	 &=
+	 - \lim \limits_{N \to \infty}
+	 \left( \underset{ \to 0}{e^{1-N^2}}- e^{1-c^2}\right)
+	 =-(-e^{1-c^2}) = e^{1-c^2}.
+\end{align*}
+Damit $ f $ eine Dichtefunktion ist, muss
+\begin{align*}
+	e^{1-c^2} = 1 \ \Leftrightarrow \
+	1-c^2 = 0 \ \underset{c >0}{\Leftrightarrow} \
+	c = 1
+\end{align*}
+gelten.\\
+\\
+Also ist die Antwort (c) korrekt.
 \newpage
 
 \subsection*{\frage{6}{3}}
