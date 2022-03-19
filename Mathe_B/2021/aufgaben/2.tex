@@ -96,7 +96,7 @@ Wir definieren
 	g(x) = 
 	\int_0^x e^{\sin(t)} \td{t}.
 \end{align*}
-Dann gilt $ f(x)  = g(x^2)$ und der Fundamentalsatz der Infinitismalrechnung liefert $ g^\prime(x) = e^{\sin(x)} $.
+Dann gilt $ f(x)  = g(x^2)$ und der Fundamentalsatz der Infinitesimalrechnung liefert $ g^\prime(x) = e^{\sin(x)} $.
 Mit der Kettenregel erhalten wir dann
 \begin{align*}
 	f^\prime(x) = g^\prime(x^2) \cdot \left(\frac{\mathrm{d}}{\mathrm{dx}} x^2\right)
@@ -340,11 +340,57 @@ Der Flächeninhalt $ A $ des Parallelogramms in der obigen Figur ist gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Determinante um den Flächeninhalt $ A $ zu berechnen.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Determinante um den Flächeninhalt $ A $ zu berechnen}\\
+Mithilfe der Determinante lässt sich der Flächeninhalt eines Parallelogramms bestimmen. Der Flächeninhalt $ A $ berechnet sich durch
+\begin{align*}
+	A = | \det (v_1,v_2) |, 
+\end{align*}
+wobei $ v_1 $ und $ v_2 $ die Vektoren sind, welche das Parallelogramm aufspannen. In unserem Fall sind dies die Richtungsvektoren
+\begin{align*}
+	v_1 &= 
+	\begin{pmatrix}
+		3\\
+		5
+	\end{pmatrix}
+	-\begin{pmatrix}
+	2 \\ 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1\\4
+	\end{pmatrix}\\
+	v_2 &=
+	\begin{pmatrix}
+		6\\
+		4
+	\end{pmatrix}
+	-\begin{pmatrix}
+		2 \\ 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		4\\3
+	\end{pmatrix}.
+\end{align*}
+Damit ergibt sich:
+\begin{align*}
+	A = | \det (v_1,v_2) |
+	= \left|
+	\begin{pmatrix}
+		1 & 4 \\
+		4 & 3
+	\end{pmatrix}
+	\right|
+	= | 3 - 16 | = | -13 |
+	= 13.
+\end{align*}
+Also ist die Antwort (e) korrekt.
+
+
 
 \newpage
 
