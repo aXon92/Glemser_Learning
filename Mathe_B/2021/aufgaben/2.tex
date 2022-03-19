@@ -438,12 +438,56 @@ Dann gilt
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Wende die Rechenregel für Determinanten an.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Wende die Rechenregel für Determinanten an}\\
+Zuerst erinnern wir uns, dass sich die Determinante durch Addition eines Vielfachen einer Zeile/Spalte auf eine andere Zeile/Spalte nicht ändert.
+Das führt zu der Umformung:
+\begin{align*}
+	\det(B)
+	=
+	\det(\left[
+	\textbf{a}_1 - 3 \textbf{a}_2,
+	\textbf{a}_2,
+	\textbf{a}_3 + \textbf{a}_2 - \textbf{a}_5,
+	-2 \textbf{a}_4,
+	\textbf{a}_5
+	\right])
+	=
+	\det(\left[
+	\textbf{a}_1 ,
+	\textbf{a}_2,
+	\textbf{a}_3 ,
+	-2 \textbf{a}_4,
+	\textbf{a}_5
+	\right]).
+\end{align*}
+Die Matrix $ B $ ergibt sich aus der Matrix $ A $, indem man eine Zeile/Spalte mit dem Faktor $ c\neq 0 $ multipliziert. Dann gilt $ \det(B) =c \det(A) $. Auf unseren Fall angewendet erhalten wir:
+\begin{align*}
+	\det(B)
+	=
+	\det(\left[
+	\textbf{a}_1 ,
+	\textbf{a}_2,
+	\textbf{a}_3 ,
+	-2 \textbf{a}_4,
+	\textbf{a}_5
+	\right])
+	=
+	-2 
+	\det(\left[
+	\textbf{a}_1 ,
+	\textbf{a}_2,
+	\textbf{a}_3 ,
+	\textbf{a}_4,
+	\textbf{a}_5
+	\right])
+	=
+	-2 \det(A).
+\end{align*}
+Damit ist die Antwort (a) korrekt.
 \newpage
 \subsection*{\frage{9}{2}}
 Die Matrix $ A $ ist eine $ (7 \times 4) $-Matrix mit Rang $ 4 $.
