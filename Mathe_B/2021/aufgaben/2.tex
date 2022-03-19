@@ -54,10 +54,40 @@ Dann gilt:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item .
+		\item Überprüfe die hinreichende Bedingung für einen stationären Punkt.
 	\end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Überprüfe die hinreichende Bedingung für einen stationären Punkt}\\
+Wegen 
+\begin{align*}
+	f_{xx}(x_0,y_0) < f_{yy}(x_0,y_0) < f_{xy}(x_0,y_0) < 0
+\end{align*}
+erhalten wir $ f_{xx}(x_0,y_0)  < 0 $ und $  f_{xx}(x_0,y_0) <0 $. 
+Anhand von 
+\begin{align*}
+	\Delta_f(x_0,y_0)  > 0 
+	 \ \textrm{oder} \
+	 \Delta_f(x_0,y_0) < 0 
+\end{align*}
+entscheiden wir ob ein Maximum oder ein Sattelpunkt an $ (x_0,y_0) $ vorliegt. 
+Hierbei steht $ \Delta_f(x_0,y_0) $ für $ f_{xx}(x_0,y_0) f_{xx}(x_0,y_0) - ( f_{xy}(x_0,y_0))^2 $.
+Außerdem gilt 
+\begin{align*}
+	f_{xx}(x_0,y_0) < f_{yy}(x_0,y_0) < f_{xy}(x_0,y_0) < 0
+	\ \Rightarrow \
+	|f_{xx}(x_0,y_0)| > |f_{yy}(x_0,y_0)| > |f_{xy}(x_0,y_0)| > 0.
+\end{align*}
+Damit erhalten wir  
+\begin{align*}
+	\Delta_f(x_0,y_0) =
+	f_{xx}(x_0,y_0) f_{xx}(x_0,y_0) - ( f_{xy}(x_0,y_0))^2 
+	=
+	|f_{xx}(x_0,y_0)| |f_{xx}(x_0,y_0)| - | f_{xy}(x_0,y_0)|^2
+	>0 
+\end{align*}
+für den stationären Punkt $ (x_0,y_0) $ und es liegt ein Maximum an $ (x_0,y_0) $ vor.\\
+\\
+Also ist die Antwort (b) korrekt.
 \newpage
 \subsection*{\frage{3}{4}}
 Die Funktion $ f $ sei gegeben durch
