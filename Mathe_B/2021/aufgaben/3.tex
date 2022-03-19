@@ -67,11 +67,57 @@ ist gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bestimme die Stammfunktion durch Substitution.
+\item Berechne das bestimmte Integral.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bestimme die Stammfunktion durch Substitution}\\
+Wir formen das zugehörige unbestimmte Integral zunächst um:
+\begin{align*}
+	\int \frac{1}{x^2} e^{-\frac{a}{x}} \td{x}
+	=
+	\frac{1}{a} \int \frac{a}{x^2} e^{-\frac{a}{x}} \td{x}.
+\end{align*}
+Wir substituieren nun $ t = -\frac{a}{x} $. Hierfür gilt:
+\begin{align*}
+	\frac{\td{t}}{\td{x}} = \frac{a}{x^2} \ \Rightarrow
+	\ 
+	\td{t} =\frac{a}{x^2} \td{x} .
+\end{align*}
+Damit erhalten wir
+\begin{align*}
+	\frac{1}{a} \int \frac{a}{x^2} e^{-\frac{a}{x}} \td{x}
+	=
+	\frac{1}{a} \int e^{t} \td{t}
+	=
+	\frac{1}{a} e^t + C
+	=
+	\frac{1}{a} e^{- \frac{a}{x}} +C.
+\end{align*}
+\ \\
+\underline{2. Berechne das bestimmte Integral}\\
+Das bestimmte Integral berechnet sich nun wegen $ a > 0  $ durch:
+\begin{align*}
+	\int_0^1
+	\frac{1}{x^2} e^{\frac{a}{x}} dx
+	=
+	\lim
+	\limits_{N\to 0^+}
+	\int_N^1
+	\frac{1}{x^2} e^{\frac{a}{x}} dx
+	=
+	\lim 
+	\limits_{N\to 0^+}
+	\left[\frac{1}{a} e^{- \frac{a}{x}}\right]_N^1
+	=
+	\frac{1}{a}
+	\lim
+	\limits_{N\to 0^+} \left(e^{- \frac{a}{1}}  - \underbrace{e^{- \frac{a}{N}}}_{\to 0}\right)
+	=
+	\frac{1}{a}  e^{-a}.
+\end{align*}
+Damit ist die Antwort (d) korrekt.
 
 \newpage
 \subsection*{\frage{3}{4}}
