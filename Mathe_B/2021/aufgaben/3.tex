@@ -31,11 +31,36 @@ hat
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Forme die Nebenbedingung um und verwende die Monotonie der Exponentialfunktion.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Forme die Nebenbedingung um und verwende die Monotonie der Exponentialfunktion}\\
+Die Nebenbedingung lässt sich durch
+\begin{align*}
+	\varphi(x,y) = x - 2y -2 = 0
+	\ \Leftrightarrow \
+	x = 2 y  +2 
+\end{align*}
+umformen. Hiermit lässt sich die Funktion $ f $ unter der Nebenbedingung $ \varphi $ folgendermaßen darstellen:
+\begin{align*}
+	F(y) = f(2y+2,y) = 2^{(2y +2) y }
+	=2^{2y^2 + 2y}.
+\end{align*}
+Wir setzen $ g(y) := 2y^2 +2y $. Da die Exponentialfunktion $ 2^{(\cdot)} $ streng monoton wachsend ist, bleiben Extremstellen von $ g $ durch $ 2^{g(y)} $ erhalten.\\
+Die Funktion $ g $ ist eine nach oben geöffnete Parabel. Demnach besitzt diese ein Minimum an ihrem Scheitelpunkt.
+Wegen 
+\begin{align*}
+	g(y) = 2 y^2 +2 y
+	= 2 y (y +1)
+\end{align*}
+besitzt $ g $ die Nullstellen $ -1 $ und $ 0 $. Wegen der Symmetrie der Parabel liegt der Scheitelpunkt und somit das Minimum an $ y^\star = -\frac{1}{2} $. Das Einsetzten von $ y^\star $ in die Nebenbedingung liefert:
+\begin{align*}
+	x = 2 y^\star + 2 = -1 + 2 = 1.
+\end{align*}
+Somit hat $ f $ unter der Nebenbedingung $ \varphi $ ein Minimum am Punkt $ P = \left(1, -\frac{1}{2}\right) $.\\
+\\
+Also ist die Antwort (a) korrekt.
 
 
  
