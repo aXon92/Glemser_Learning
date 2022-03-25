@@ -303,11 +303,44 @@ Für welche Werte von $ r \in \mathbb{R} $ und $ s \in \mathbb{R} $ besitzt die 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bringe die Matrix in Zeilenstufenform.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bringe die Matrix in Zeilenstufenform}\\
+Das Anwenden elementarer Zeilenoperationen ergibt:
+\begin{align*}
+	\begin{gmatrix}[p]
+		1 & 0 & 2 & 3 \\
+		2 & 1 & r & 7 \\
+		3 & 2 & 4 &  s
+		\rowops
+		\add[ \cdot (-2)]{0}{1}
+		\add[ \cdot (-3)]{0}{2}	
+	\end{gmatrix}
+	&\leadsto
+	\begin{gmatrix}[p]
+		1 & 0 & 2 & 3 \\
+		0 & 1 & r-4 & 1 \\
+		0 & 2 & -2 &  s -9
+		\rowops
+		\add[ \cdot (-2)]{1}{2}
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		1 & 0 & 2 & 3 \\
+		0 & 1 & r-4 & 1 \\
+		0 & 0 & -2r  + 6 &  s -11
+	\end{gmatrix}.
+\end{align*}
+Damit $ \mathrm{rg}(A) = 2 $ gilt, muss $ A $ eine Nullzeile besitzen. Dies ist erfüllt, falls 
+\begin{align*}
+	-2 r + 6 = 0 \ &\Leftrightarrow \ r = 3\\
+	s - 11 = 0 \ &\Leftrightarrow \ s = 11
+\end{align*}
+gilt.\\
+\\
+Also ist die Antwort (d) korrekt.
 \newpage
 
 \subsection*{\frage{6}{4}}
