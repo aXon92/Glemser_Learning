@@ -212,11 +212,65 @@ Für welche Werte von $ a \in \mathbb{R} $ ist die Matrix $ A $
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bestimme $ A^2 $ und überlege, wann $ A $ idempotent ist.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bestimme $ A^2 $ und überlege, wann $ A $ idempotent ist}\\
+Es gilt
+\begin{align*}
+	A^2 = A \cdot A
+	&=
+	\begin{pmatrix}
+		2 & a & -4 \\
+		-1 & 3 & 4\\
+		1 & -2 & -3
+	\end{pmatrix}
+	\cdot
+	\begin{pmatrix}
+		2 & a & -4 \\
+		-1 & 3 & 4\\
+		1 & -2 & -3
+	\end{pmatrix}\\
+	&=
+	\begin{pmatrix}
+		4-a-4 & 2a +3a+8 & -8+4a +12\\
+		-2-3+4 & -a+9 -8 & 4 +12 -12\\
+		2 +2 -3 & a-6 +6 & -4-8 + 9
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-a & 5a+8 & 4a +4\\
+		-1 & -a+1 & 4 \\
+		1 & a & -3
+	\end{pmatrix}. 
+\end{align*}
+Damit $ A $ idempotent ist, muss
+\begin{align*}
+	\begin{pmatrix}
+		2 & a & -4 \\
+		-1 & 3 & 4\\
+		1 & -2 & -3
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-a & 5a+8 & 4a +4\\
+		-1 & -a+1 & 4 \\
+		1 & a & -3
+	\end{pmatrix}
+\end{align*}
+erfüllt sein. Wegen dem ersten Eintrag der ersten Spalte und dem dritten Eintrag der zweiten Spalte, muss $ a = -2 $ gelten. Für die Idempotenz müssen wir noch die weiteren Bedingungen überprüfen:
+\begin{align*}
+	a &= 5a +8 \ \overset{a=-2}{\Rightarrow} \
+	-2 = 5 (-2) +8 = -10 +8 = -2\\
+	-4 &= 4a +4 \ \overset{a=-2}{\Rightarrow} \
+	-4 = 4 (-2) + 4 = -8 +4 = -4\\
+	3 &= -a +1 \ \overset{a=-2}{\Rightarrow} \
+	3 = -(-2) +1 = 2 +1 = 3.
+\end{align*}
+Damit ist die Matrix $ A $ für $ a=-2 $ idempotent.\\
+\\
+Also ist die Antwort (b) korrekt.
 \newpage
 
 \subsection*{\frage{5}{4}}
