@@ -432,11 +432,66 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Definition des Eigenwerts.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Definition des Eigenwerts}\\
+Der Vektor $ \textbf{x} $ heißt Eigenvektor zum Eigenwert $ -1 $, falls
+\begin{align*}
+	A \textbf{x} = - \textbf{x}
+\end{align*}
+für $ \textbf{x} \neq 0 $ gilt. Mit $ \textbf{x}_a $,..., $ \textbf{x}_d $ bezeichnen wir die Vektoren der Antwortmöglichkeiten mit $ s = 1 $. 
+Es gilt:
+\begin{align*}
+	A \cdot \textbf{x}_a
+	&=
+	\begin{pmatrix}
+		0 & 3 & 0 \\
+		1 & 2 & 0 \\
+		-5m & 5 & 4
+	\end{pmatrix} 
+	\cdot 
+	\begin{pmatrix}
+		3 \\ -1 \\ 1-3m
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-3 \\ 1 \\ -15m - 5 +4 -12m
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-3 \\ 1 \\ -1 -27m
+	\end{pmatrix}
+	\neq - \textbf{x}_a
+	\\
+	A \cdot \textbf{x}_b
+	&=
+	\begin{pmatrix}
+		0 & 3 & 0 \\
+		1 & 2 & 0 \\
+		-5m & 5 & 4
+	\end{pmatrix} 
+	\cdot 
+	\begin{pmatrix}
+		-3 \\ 1 \\ -1-3m
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		3 \\ -1 \\ 15 m +5 -4 -12m
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		3 \\ -1 \\ 1 +3m
+	\end{pmatrix}
+	= - \textbf{x}_b.
+\end{align*} 
+Damit ist $ \textbf{x}_b $ ein Eigenvektor zum Eigenwert $ -1 $.\\
+\\
+Also ist die Antwort (b) korrekt.\\
+\\
+Alternativ lässt sich die korrekte Antwort auch über das Lösen des LGS $ (A - (-1) \cdot I) = 0 $ finden.
+
 \newpage
 
 \subsection*{\frage{7}{3}}
