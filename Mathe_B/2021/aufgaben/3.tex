@@ -173,11 +173,39 @@ ist gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende partielle Integration.
 \end{enumerate}
 \end{mdframed}
 %\allowdisplaybreaks
-\underline{1. }\\
+\underline{1. Verwende partielle Integration}\\
+Für die partielle Integration setzen wir:
+\begin{align*}
+	u(x) &:= x \ \Rightarrow \ u^\prime(x) = 1\\
+	v^\prime(x) &:=(1-x)^n  \ \Rightarrow \ v(x) = -\frac{1}{n+1}(1-x)^{n+1}.
+\end{align*}
+Damit ergibt sich:
+\begin{align*}
+	\int_0^1
+	x(1-x)^n
+	\ \td{x}
+	&=
+	\int_0^1
+	u(x) v^\prime(x)
+	\ \td{x}
+	=
+	\left[x \cdot \frac{-1}{n+1}(1-x)^{n+1}\right]_0^1 
+	-\int_0^1 \frac{-1}{n+1}(x-1)^{n+1} \ \td{x}  \\
+	&= 
+	-\frac{1}{n+1}\left[x \cdot (1-x)^{n+1}\right]_0^1+
+	\frac{1}{n+1}\int_0^1 (1-x)^{n+1} \ \td{x}
+	=
+	\frac{1}{n+1}\left[\frac{-1}{n+2} (1-x)^{n+2}\right]_0^1\\
+	&=
+	\frac{1}{n+1} \left( 0  - \frac{-1}{n+2} 1^{n+2}\right) 
+	=
+	\frac{1}{(n+1)(n+2)}.
+\end{align*}
+Also ist die Antwort (e) korrekt.
 \newpage
 
 \subsection*{\frage{4}{4}}
