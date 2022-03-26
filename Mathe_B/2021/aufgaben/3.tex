@@ -589,8 +589,45 @@ mit $ a \in \mathbb{R} \setminus \{-1,-2\} $, ist genau dann monoton und konverg
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Forme in die Normalform um.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Forme in die Normalform um}\\
+Wir formen die Differenzengleichung in die Normalform um:
+\begin{align*}
+	(1+a) y_{k+1} + y_k -1 = 0
+	\ \Leftrightarrow \
+	(1+a) y_{k+1} =  -y_k + 1
+	\ \Leftrightarrow \
+	y_{k+1} = -\frac{1}{1+a} y_k + \frac{1}{1+a}.
+\end{align*}
+Die Differenzengleichung ist genau dann monoton und konvergent, wenn $ 0 < A < 1 $ für
+\begin{align*}
+	A := -\frac{1}{1+a}
+\end{align*}
+gilt. 
+Das bedeutet, dass $ A> 0  $ und $ A < 1 $ gleichzeitig gelten muss.
+Für $ A > 0 $ gilt:
+\begin{align*}
+	A  = - \frac{1}{1+a} > 0
+	\ \overset{\cdot (-1)}{\Leftrightarrow} \
+	\frac{1}{(1+a)} < 0
+	\ \Leftrightarrow \
+	1+a < 0 
+	\ \Leftrightarrow \
+	a < -1. 
+\end{align*}
+Für $ A < 1 $ erhalten wir wegen $ a < -1 $:
+\begin{align*}
+	A < 1 
+	\ \overset{\cdot (-1)}{\Leftrightarrow} \
+	\frac{1}{1+a} > -1
+	\ \overset{a < -1}{\Leftrightarrow} \
+	1 < -(1+a) = -1 -a
+	\ \Leftrightarrow \
+	a < -2.
+\end{align*}
+Damit sind die Bedingungen für Monotonie und Konvergenz für $ a < -2 $ erfüllt.\\
+\\
+Also ist die Antwort (d) korrekt.
