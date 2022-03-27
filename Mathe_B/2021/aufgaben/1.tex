@@ -30,11 +30,123 @@ In Abhängigkeit von den Preisen $ p_1 $ und $ p_2 $ je Mengeneinheit von Gut $ 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item  
+\item{\textbf{(a1)}} 
+\begin{enumerate}
+	\item[1.] Stelle die Preise in Abhängigkeit der Absatzmengen dar.
+	\item[2.] Bestimme den Gesamtumsatz in Abhängigkeit von $ x $ und $ y $.
+\end{enumerate} 
+\item[\textbf{(a2)}] 
+\begin{enumerate}
+	\item[1.] Bestimme den Reingewinn und dessen Maximum
+\end{enumerate} 
 \end{enumerate}
 \end{mdframed}
-\underline{1. }\\
-
+\underline{\textbf{(a1)} 1. Stelle die Preise in Abhängigkeit der Absatzmengen dar}\\
+Der Gesamtumsatz ist gegeben durch
+\begin{align*}
+	U(x,y) = x p_1 + y p_2.
+\end{align*}
+Die Absatzmengen $ x $ und $ y $ sind lineare Funktionen in $ p_1 $ und $ p_2 $. Deswegen lassen sich die Preise $ p_1 $ und $ p_2 $ als Funktionen in Abhängigkeit von $ x $ und $ y $ darstellen.
+Die Absatzmengen sind gegeben durch
+\begin{align*}
+	\textrm{(I)}&	x = 30 - 3 p_1 + 2 p_2\\
+	\textrm{(II)}&  y = 20 + p_1 - p_2 .
+\end{align*}
+Die Addition des zweifachen der zweiten Gleichung auf die erste Gleichung ergibt:
+\begin{align*}
+	x + 2y = 70 - p_1
+	\ \Leftrightarrow \ 
+	p_1 = 70 - x - 2y.
+\end{align*}
+Durch Einsetzen in Gleichung (II) erhalten wir:
+\begin{align*}
+	y = 20 + 70 - x - 2y - p_2 
+	\ \Leftrightarrow \
+	p_2 = 90 -x - 3y.
+\end{align*}
+Damit haben wir für die Preise $ p_1 $ und $ p_2 $ die Darstellungen:
+\begin{align*}
+	p_1 &= 70 - x - 2y\\
+	p_2 &= 90 -x - 3y.
+\end{align*}
+\ \\
+\underline{\textbf{(a1)} 2. Bestimme den Gesamtumsatz in Abhängigkeit von $ x $ und $ y $}\\
+Mit den Preisen erhalten wir für den Gesamtumsatz
+\begin{align*}
+	U(x,y) = 
+	x p_1 + y p_2 = 
+	x (70 - x - 2y) + y (90 -x - 3y)
+	=
+	70x + 90 y- x^2 - 3 xy - 3 y^2.
+\end{align*} 
+Damit ist der Gesamtumsatz nur durch $ x $ und $ y $ dargestellt.\\
+\\
+\underline{\textbf{(a2)} 1. Bestimme den Reingewinn und dessen Maximum}\\
+Der Reingewinn ist gegeben als 
+\begin{align*}
+	G(x,y) &= U(x,y) - K(x,y) = 70x + 90 y- x^2 - 3 xy - 3 y^2 - (x^2 + xy + y^2 )\\
+	&=
+	70x + 90 y- 2x^2 -4 xy- 4 y^2.
+\end{align*}
+Die notwendige Bedingung für Extrem -und Sattelpunkte $ (x_0,y_0) $ von $ G $ ist
+\begin{align*}
+	G_x(x_0,y_0) =0 \\
+	G_y(x_0,y_0) =0.
+\end{align*}
+Die partiellen Ableitungen sind:
+\begin{align*}
+	G_x(x,y) &= 70 - 4x - 4 y\\
+	G_y(x,y) &= 98 -8y -4 x.
+\end{align*}
+Damit ergibt sich aus der notwendigen Bedingung das lineare Gleichungssystem
+\begin{align*}
+	70 - 4 x_0 - 4y_0 &= 0 \ \Leftrightarrow \ 4 x_0 + 4 y_0 = 70\\
+	90 - 8 y_0 - 4 x_0 &= 0 \ \Leftrightarrow \ 4x_0 + 8y_0 = 90.
+\end{align*}
+Umgeschrieben in die erweiterte Koeffizientenmatrix erhalten wir mit dem Gauß-Verfahren:
+\begin{align*}
+	\begin{pmatrix}
+		4 & 4 & \BAR &  70\\
+		4 & 8 & \BAR & 90
+	\end{pmatrix}
+	\leadsto
+	\begin{pmatrix}
+		4 & 4 & \BAR &  70\\
+		0 & 4 & \BAR & 20
+	\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+	4 & 0 & \BAR &  50\\
+	0 & 4 & \BAR & 20
+\end{pmatrix}
+\leadsto
+\begin{pmatrix}
+	1 & 0 & \BAR &  \frac{50}{4}\\
+	0 & 1 & \BAR & 5
+\end{pmatrix} \ \Rightarrow x_0 = \frac{50}{4}  =12.5, y_0 = 5
+\end{align*}
+Damit ist $ (x_0,y_0 ) = (12.5, 5) $ der einzige Kandidat für ein Maximum.\\
+Für ein Maximum müssen wir noch die hinreichende Bedingung 
+\begin{align*}
+	&G_{xx}(x_0,y_0) < 0 \\
+	&G_{yy}(x_0,y_0) < 0\\
+	&\Delta(x,y) := G_{xx}(x_0,y_0)G_{yy}(x_0,y_0)-(G_{xy}(x_0,y_0))^2 > 0
+\end{align*}
+überprüfen. Dafür bestimmen wir die partiellen Ableitungen zweiter Ordnung von $ G $:
+\begin{align*}
+	G_{xx}(x,y) = -4 < 0
+	G_{yy}(x,y) = -8 < 0
+	G_{xy}(x,y) = G_{yx}(x,y) = -4.
+\end{align*}
+Hiermit folgt
+\begin{align*}
+	\Delta(x,y) = G_{xx}(x_0,y_0)G_{yy}(x_0,y_0)-(G_{xy}(x_0,y_0))^2
+	= (-4)\cdot(-8) - (-4)^2 = 16  >0
+\end{align*}
+für alle $ (x,y) \in \mathbb{R}^2 $. Insbesondere gilt dies auch für unseren Kandidaten $ (x_0,y_0) = (12.5,5) $, womit dieser ein Maximum ist. Der maximale Reingewinn ist:
+\begin{align*}
+	G(12.5,5) = 662.5 \ \textrm{(CHF)}.
+\end{align*} 
 
 
 
