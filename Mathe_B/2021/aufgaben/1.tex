@@ -92,9 +92,9 @@ Gesucht sind geeignete Kombinationen dieser Geldanlagen (Käufe, respektive Leer
 \subsection*{\aufgabe{c}{10}}
 Für einen elliptischen Tisch mit den Halbachsen $ a > 0  $ und $ b > 0 $ ist eine flächenmässig möglichst grosse rechteckige Auflage anzufertigen, die an keiner Stelle übersteht.
 \begin{enumerate}
-	\item[\textbf(c1)]
+	\item[\textbf{(c1)}]
 	Welche Ausmasse (Länge und Breite) hat die rechteckige Auflage?
-	\item[\textbf(c2)]
+	\item[\textbf{(c2)}]
 	Wie gross ist die maximale Fläche?
 \end{enumerate}
 \textit{Wichtige Bemerkung}: Eine Abklärung, ob es sich wirklich um ein Maximum handelt, wird \textbf{nicht} verlangt, weil es offensichtlich ein Maximum geben muss.
@@ -103,12 +103,141 @@ Für einen elliptischen Tisch mit den Halbachsen $ a > 0  $ und $ b > 0 $ ist ei
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item 
+\item[\textbf{(c1)}]
+\begin{enumerate}
+	\item[1.] Beschreibe die Situation und verwende die Symmetrie. 
+\end{enumerate} 
+\item[\textbf{(c2)}] 
+\begin{enumerate}
+	\item[1.] Formuliere das Optimierungsproblem.
+	\item[2.] Wende die Methode von Lagrange an. 
+\end{enumerate}
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{\textbf{(c1)} 1. Beschreibe die Situation und verwende die Symmetrie}\\
+Die Situation der Aufgabenstellung lässt sich durch folgende Grafik darstellen:
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{pictures/aufgabe1_c}
+\end{center}
+Das Ziel ist es, eine größtmögliche rechteckige Auflage für einen elliptischen Tisch mit den Halbachsen $ a,b > 0  $ zu finden. Damit die Fläche maximal wird, müssen die Ecken der Auflage die Tischkante berühren.\\
+Die Symmetrieeigenschaft vereinfacht uns die Berechnung der Rechtecksfläche:\\
+Die Fläche $ A $ der Auflage ist genau viermal so groß wie die Fläche des Rechtecks mit einem Eckpunkt im Ursprung und einem Eckpunkt $ P = (x,y), \ x,y > 0  $ auf der Ellipse. Die Symmetrie der Ellipse liefert uns für die Auflage eine Länge von $ 2x $, eine Breite von $ 2y $ und einen Flächeninhalt von $ A = 4 xy $.\\
+\\
+\newpage
+\underline{\textbf{(c2)} 1. Formuliere das Optimierungsproblem}\\
+Alle Punkte $ P=(x,y) $ auf der Ellipse mit dem Mittelpunkt $ (0,0) $ und den Halbachsen $ a,b > 0 $ werden durch die Gleichung
+\begin{align*}
+	\varphi(x,y) = \frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0
+\end{align*} 
+beschrieben
+Mit unseren vorangegangen Überlegungen erhalten wir das Optimierungsproblem
+\begin{align*}
+	\max \limits_{x,y} A(x,y) = 4 xy
+\end{align*}
+unter der Nebenbedingung $ \varphi(x,y) = \frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0 $.\\
+\\
+\underline{\textbf{(c2)} 2. Wende die Methode von Lagrange an}\\
+Die Lagrange-Funktion ist durch
+\begin{align*}
+	L(x,y,\lambda) 
+	= A(x,y) + \lambda\varphi(x,y)
+	= 4xy + \lambda \left(\frac{x^2}{a^2} + \frac{y^2}{b^2} - 1\right)
+\end{align*}
+gegeben. Die partiellen Ableitungen dieser sind:
+\begin{align*}
+	\frac{\partial L}{\partial \mathrm{x}}L(x,y,\lambda)
+	&= 4 y + \frac{2\lambda}{a^2} x \\
+	\frac{\partial L}{\partial \mathrm{y}}L(x,y,\lambda)
+	&= 4 x + \frac{2\lambda}{b^2} y \\
+	\frac{\partial L}{\partial \mathrm{\lambda}}L(x,y,\lambda)
+	&= \frac{x^2}{a^2} + \frac{y^2}{b^2} - 1.
+\end{align*}
+Hieraus ergeben sich durch Nullsetzen die Lagrange-Bedingungen:
+\begin{align*}
+	\textrm{(I)}& \quad 
+	4 y + \frac{2\lambda}{a^2} x = 0
+	\ \Leftrightarrow \ 4y = - \frac{2\lambda}{a^2} x 
+	\ \Leftrightarrow \ y = -\frac{\lambda}{2a^2} x
+	\\
+	\textrm{(II)}& \quad 
+	4 x + \frac{2\lambda}{b^2} y = 0
+	\ \Leftrightarrow \
+	x = - \frac{\lambda}{2 b^2} y 
+	\\
+	\textrm{(III)}& \quad 
+	\frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0\\
+\end{align*}
+Die Gleichungen (I) und (II) sind für $ x = y = 0 $ trivialerweise erfüllt.
+Der Punkt $ (0,0)  $ erfüllt jedoch die Nebenbedingung (III) nicht.
+Für $ x \neq 0, y = 0$ oder $ x = 0, y \neq 0 $ gilt $ A(x,y) = 0 $.
+Anschaulich kann dies nicht die maximale Fläche sein. Deswegen können wir $ x,y \neq 0 $ annehmen. Wir erhalten:
+\begin{align*}
+	\frac{y}{x} = \frac{-\frac{2 \lambda}{a^2} x}{- \frac{2\lambda}{b^2} y}
+	= 
+	\frac{b^2}{a^2} \frac{x}{y}
+	\
+	\Leftrightarrow \
+	y^2 = \frac{b^2}{a^2} x^2
+	\ \Leftrightarrow \
+	\frac{y^2}{b^2} = \frac{x^2}{a^2}.
+\end{align*}
+Mit der Gleichung (III) folgt
+\begin{align*}
+	\frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0
+	\ \Leftrightarrow \
+	2 \frac{x^2}{a^2}  -1 = 0
+	\ \Leftrightarrow \
+	2 \frac{x^2}{a^2}   = 1
+	\ \Leftrightarrow \
+	\frac{x^2}{a^2} = \frac{1}{2} = \frac{y^2}{b^2}
+\end{align*}
+und es ergibt sich 
+\begin{align*}
+	\frac{x^2}{a^2} = \frac{1}{2} 
+	 \ \Leftrightarrow \ 
+	 x^2  = \frac{1}{2} a^2
+	 \ \Leftrightarrow \
+	 x = \pm \frac{1}{\sqrt{2}} a\\
+	 \frac{y^2}{b^2} = \frac{1}{2} 
+	 \ \Leftrightarrow \ 
+	 y^2  = \frac{1}{2} b^2
+	 \ \Leftrightarrow \
+	 x = \pm \frac{1}{\sqrt{2}} b.
+\end{align*}
+Da wir die maximale Fläche suchen, ist nur die positive Lösung relevant für $ x $ und $ y $ relevant. Für 
+\begin{align*}
+	x^\ast = \frac{a}{\sqrt{2}}, \quad y^\ast = \frac{b}{\sqrt{2}}
+\end{align*}  
+wird die Fläche $ A(x^\ast, y^\ast ) $ maximal. Die optimale Auflage hat eine Länge von $ l = 2 x^\ast = \sqrt{2} a  $ und eine Breite von $ w = 2 y^\ast = \sqrt{2} b  $.
+Das führt zu der maximalen Fläche 
+\begin{align*}
+	A(x^\ast, y^\ast) = 2 ab.
+\end{align*}
+\ \\
+\textbf{Alternativer Lösungsansatz}\\
+Wir können das Optimierungsproblem
+\begin{align*}
+	\max \limits_{x,y} A(x,y) = 4 xy
+\end{align*}
+unter der Nebenbedingung $ \varphi(x,y) = \frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0$ auch durch Substitution lösen. Aufgrund der vorherigen Diskussion können wir $ x,y > 0 $ annehmen. Hieraus folgt $ A(x,y) = 4 xy > 0 $. Das führt durch
+\begin{align*}
+	A(x,y) = 4 xy \ \Leftrightarrow \
+	\frac{1}{4} A(x,y) = xy
+	\ \Leftrightarrow \
+	\overline{A}(x,y) := \frac{1}{16}A(x,y) = x^2 y^2
+\end{align*}
+zu einem äquivalenten Optimierungsproblem. Durch Umformung der Nebenbedingung
+\begin{align*}
+	\frac{x^2}{a^2} + \frac{y^2}{b^2} - 1 = 0 
+	\ \Leftrightarrow \
+	x^2 = a^2\left(1 - \frac{y^2}{b^2} \right) = a^2 - \frac{a^2}{b^2} y^2
+\end{align*}
+erhalten wir durch
+\begin{align*} 
+	F(y) = \left(a^2 - \frac{a^2}{b^2} y^2\right) y^2
+\end{align*}
+eine Funktion, welche sich gut für eine eindimensionale Kurvendiskussion eignet. Der Faktor $ \frac{1}{16} $ wurde hier bewusst ignoriert, da dieser keine Auswirkung auf das Maximum hat.
 \newpage
 \subsection*{\aufgabe{d}{6}}
 \begin{enumerate}
