@@ -81,14 +81,224 @@ Gesucht sind geeignete Kombinationen dieser Geldanlagen (Käufe, respektive Leer
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item[\textbf{(b1)}]
+\begin{enumerate}
+	\item[1.] Stelle das lineare Gleichungssystem auf.
+\end{enumerate}
+\item[\textbf{(b2)}]
+\begin{enumerate}
+	\item[1.] Verwende das Gauß-Verfahren.
+\end{enumerate}
+\item[\textbf{(b3)}]
+\begin{enumerate}
+	\item[1.] Bestimme die eindeutige Lösung.
+\end{enumerate}
+\item[\textbf{(b4)}]
+\begin{enumerate}
+	\item[1.] Bestimme den unendlichen Lösungsraum.
+\end{enumerate}
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
-\newpage
+\underline{\textbf{(b1)} 1. Stelle das lineare Gleichungssystem auf}\\
+Die Auszahlungen ergeben für gute, mittlere und schlechte Konjunktur die Linearkombination
+\begin{align*}
+	\underbrace{x_1}_{\textrm{Anzahl Aktie 1}}
+	\underbrace{\begin{pmatrix}
+		2 \\ 1 \\ 0
+	\end{pmatrix}}_{\textrm{erwartete Auszahlung  Aktie 1}}
+	+
+	x_2 
+	\begin{pmatrix}
+		a \\ 1 \\ 1
+	\end{pmatrix}
+	+
+	x_3
+	\begin{pmatrix}
+		5 \\ 1 \\ a
+	\end{pmatrix}
+	= 
+	\begin{pmatrix}
+		7'000\\
+		5'000\\
+		1'000\\
+	\end{pmatrix}.
+\end{align*}
+Hier stellen die Zeilen absteigend die gute bis schlechte Konjunktur dar. Umgeschrieben in ein lineares Gleichungssystem erhalten wir:
+\begin{align*}
+	\textrm{gut:} \quad 2 x_1 + a x_2 + 5 x_3 &= 7'000\\
+	\textrm{mittel:} \quad  \ x_1 + x_2 + x_3  &= 5'000\\
+	\textrm{schlecht: } \quad \ \ \ x_2 + a x_3 &= 1'000.
+\end{align*}
+Hieraus ergibt sich die erweiterte Koeffizientenmatrix
+\begin{align*}
+	(A | \mathbf{b})
+	=
+	\begin{pmatrix}
+		2 & a & 5 & \BAR & 7'000\\
+		1 & 1 & 1 & \BAR & 5'000\\
+		0 & 1 & a & \BAR & 1'000
+	\end{pmatrix}.
+\end{align*}
+\ \\
+\underline{\textbf{(b2)} 1. Verwende das Gauß-Verfahren}\\
+Die Anwendung des Gauß-Verfahrens ergibt:
+\begin{align*}
+	\begin{gmatrix}[p]
+		2 & a & 5 & \BAR & 7'000\\
+		1 & 1 & 1 & \BAR & 5'000\\
+		0 & 1 & a & \BAR & 1'000
+		\rowops
+		\swap{0}{1}
+	\end{gmatrix}
+	&\leadsto
+	\begin{gmatrix}[p]
+		1 & 1 & 1 & \BAR & 5'000\\
+		2 & a & 5 & \BAR & 7'000\\
+		0 & 1 & a & \BAR & 1'000
+		\rowops
+		\add[ \cdot (-2)]{0}{1}
+	\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+	1 & 1 & 1 & \BAR & 5'000\\
+	0 & a - 2 & 3 & \BAR & -3'000\\
+	0 & 1 & a & \BAR & 1'000
+	\rowops
+	\swap{1}{2}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+	1 & 1 & 1 & \BAR & 5'000\\
+	0 & 1 & a & \BAR & 1'000\\
+	0 & a - 2 & 3 & \BAR & -3'000
+	\rowops
+	\add[ \cdot (-1)]{1}{0}
+	\add[ \cdot (-(a-2)), a \neq 2]{1}{2}
+\end{gmatrix}\\
+&\leadsto
+\begin{gmatrix}[p]
+	1 & 0 & 1-a & \BAR & 4'000\\
+	0 & 1 & a & \BAR & 1'000\\
+	0 & 0 & 3 -a(a-2) & \BAR & -3'000 - 1'000(a-2)
+\end{gmatrix}\\
+&=
+\begin{gmatrix}[p]
+	1 & 0 & 1-a & \BAR & 4'000\\
+	0 & 1 & a & \BAR & 1'000\\
+	0 & 0 & -a^2 + 2a  + 3  & \BAR & -1'000(a+1)
+\end{gmatrix}
+\end{align*}
+Man beachte den Schritt mit $ a \neq 2 $. Für $ a = 2 $ besitzt $ A $ den vollen Rang, womit die Lösung eindeutig ist. Falls 
+\begin{align*}
+	-a^2 + 2a + 3 = -(a-3)(a+1) \neq 0 \ \Rightarrow a \neq 3 \wedge a\neq 1
+\end{align*}
+gilt $ \mathrm{rg}(A) = \mathrm{rg}(A | \mathbf{b}) = 3 $ und das System besitzt eine eindeutige Lösung $ \mathbf{x} = (x_1,x_2 ,x_3)^\top $.
+Für 
+\begin{align*}
+	-a^2 + 2a + 3 = -(a-3)(a+1) = 0 \ \Leftrightarrow a = 3 \vee a = -1
+\end{align*}
+besitzt das LGS entweder unendlich viele Lösungen oder keine Lösung.\\
+Dies ist abhängig von $ -1'000(a+1) = 0  $ oder $ -1'000(a+1) \neq 0 $.
+Für $ a = 3  $ gilt $ \mathrm{rg}(A) = 2 < \mathrm{rg} (A | \mathrm{b}) = 3 $ und das LGS besitzt keine Lösung.
+Für $ a = -1  $ gilt $ \mathrm{rg}(A)  = \mathrm{rg} (A | \mathrm{b}) = 2 $ und das LGS besitzt unendlich viele Lösungen.\\
+\\
+\underline{\textbf{(b3)} 1. Bestimme die eindeutige Lösung}\\
+Durch das Gauß-Verfahren haben wir die erweitere Koeffizientenmatrix wie folgt umgeformt:
+\begin{align*}
+\begin{gmatrix}[p]
+	2 & a & 5 & \BAR & 7'000\\
+	1 & 1 & 1 & \BAR & 5'000\\
+	0 & 1 & a & \BAR & 1'000
+\end{gmatrix}
+\leadsto
+\begin{gmatrix}[p]
+	1 & 0 & 1-a & \BAR & 4'000\\
+	0 & 1 & a & \BAR & 1'000\\
+	0 & 0 & -(a-3)(a+1)  & \BAR & -1'000(a+1)
+\end{gmatrix}
+\end{align*}
+Hieraus ergeben sich die Gleichungen
+\begin{align*}
+	x_1 + (1-a)x_3 &= 4'000\\
+	x_2 + a x_3 &= 1'000\\
+	-(a-3)(a+1) x_3 &= -1'000 (a+1). 
+\end{align*}
+Durch Einsetzen von $ x_3 $ lassen sich die $ x_1 $ und $ x_2 $
+-Koordinate bestimmen. Durch die Umformung
+\begin{align*}
+	-(a-3)(a+1) x_3 &= -1'000 (a+1) \ \Leftrightarrow \
+	x_3 = -1'000 \frac{(a+1)}{-(a-3)(a+1)} = \frac{1'000}{a-3}
+\end{align*}
+folgt 
+\begin{align*}
+	x_1 &= 4'000 - (1-a)x_3 = 4'000- (1-a)\frac{1'000}{a-3}
+	= \frac{4'000(a-3)}{a-3} - \frac{(1-a)1'000}{a-3}
+	= \frac{4'000(a-3) - (1-a)1'000}{a-3}\\
+	&= \frac{5'000 a - 13'000}{a-3} = 1'000 \frac{5a -13}{a-3}
+\end{align*}
+und 
+\begin{align*}
+	x_2 = 1'000 - a x_3 = \frac{1'000(a-3)}{a-3} - a \frac{1'000}{a - 3}
+	=
+	\frac{-3'000}{a-3} = \frac{3'000}{3-a}.
+\end{align*}
+Damit ist die eindeutige Lösung durch
+\begin{align*}
+	\mathbf{x}
+	=
+	1'000 
+	\begin{pmatrix}
+		 \frac{5a -13}{a-3}\\
+		\frac{3}{3-a}\\
+		\frac{1}{a-3}
+	\end{pmatrix}
+\end{align*}
+gegeben.\\
+\\
+\underline{\textbf{(b4)} 1. Bestimme den unendlichen Lösungsraum}\\
+Für $ a = -1 $ ist die in (b2) bestimmte erweitere Koeffizientenmatrix gegeben durch:
+\begin{align*}
+	(A | \mathbf{b}) 
+	= 
+	\begin{gmatrix}[p]
+		1 & 0 & 2 & \BAR & 4'000\\
+		0 & 1 & -1 & \BAR & 1'000\\
+		0 & 0 & 0  & \BAR & 0
+	\end{gmatrix}
+\end{align*}
+Dies führt zu den Gleichungen
+\begin{align*}
+	x_1 + 2 x_3 &= 4'000
+	\ \Leftrightarrow \ x_2 = 4'000 - 2 x_3
+	\\
+	x_2 - x_3 &= 1'000
+	\ \Leftrightarrow \
+	x_2 = 1'000 + x_3
+\end{align*}
+mit der frei wählbaren Variable $ t:=x_3 $. Damit ergibt sich die Lösungsmenge
+\begin{align*}
+	\mathcal{L}
+	= \left\lbrace
+	\mathbf{x} \in \mathbb{R}^3 \ : \
+	\mathbf{x} = 
+	\begin{pmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{pmatrix} 
+	=
+	\begin{pmatrix}
+		4'000\\
+		1'000\\
+		0
+	\end{pmatrix}
+	+ t 
+	\begin{pmatrix}
+		-2\\
+		1 \\
+		1
+	\end{pmatrix}
+	\right\rbrace.
+\end{align*}
 \subsection*{\aufgabe{c}{10}}
 Für einen elliptischen Tisch mit den Halbachsen $ a > 0  $ und $ b > 0 $ ist eine flächenmässig möglichst grosse rechteckige Auflage anzufertigen, die an keiner Stelle übersteht.
 \begin{enumerate}
@@ -266,7 +476,7 @@ eine Funktion, welche sich gut für eine eindimensionale Kurvendiskussion eignet
 \begin{enumerate}
 	\item[1.] Verwende die Definition der Elastizität und der Wachstumrate.
 	\item[2.] 
-	Bestimme alle positiven Funktionen mit der vorgebenen Elastizität.
+	Bestimme alle positiven Funktionen mit der vorgebenden Elastizität.
 \end{enumerate}
 \item[\textbf(d2)] 
 Verwende die erste Teilaufgabe.
@@ -296,7 +506,7 @@ und es folgt
 \end{align*}
 Diese Gleichung lässt sich auf beiden Seiten integrieren.\\
 \\
-\underline{\textbf{(d1)} 2. Bestimme alle positiven Funktionen mit der vorgebenen Elastizität}\\
+\underline{\textbf{(d1)} 2. Bestimme alle positiven Funktionen mit der vorgebenden Elastizität}\\
 Durch Integration beider Seiten erhalten wir:
 \begin{align*}
 	\int \frac{\mathrm{d}}{\mathrm{dx}}\ln(f(x)) \ \td{x}
