@@ -44,90 +44,71 @@ Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werde
 \vspace{1cm}
 \section*{Aufgabe 1 (40 Punkte)}
 \vspace{0.4cm}
-\subsection*{\aufgabe{a}{10}}
-Ein Monopolist stellt zwei Güter her.
-In Abhängigkeit von den Preisen $ p_1 $ und $ p_2 $ je Mengeneinheit von Gut $ 1 $ bzw. Gut $ 2 $ lautet die
-\begin{align*}
-	&\textrm{Absatzmenge für Gut $ 1 $:} \quad 
-	x = 30 - 3 p_1 + 2 p_2\\
-	&\textrm{Absatzmenge für Gut $ 2 $:} \quad
-	y = 20 + p_1 - p_2.
-\end{align*}
+\subsection*{\aufgabe{a}{12}}
+Eine Rederei muss für ihre Schiffe Container herstellen, um darin Güter um die ganze Welt verschiffen zu können. Die Container müssen alle identisch sein und sollen, mathematisch formuliert, die Form eines Quaders  mit Länge $ x $, Höhe $ y $ und Breite $ z $ besitzen. Jeder Container muss ein Fassungsvermögen von 27 Volumeneinheiten haben. 
 \begin{enumerate}
 	\item[\textbf{(a1)}]
-	Stellen Sie den Gesamtumsatz $ U(x,y) $ nur durch $ x $ und $ y  $ dar.
+	Bestimmen Sie $ z $ als Funktion von $ x $ und $ y $ mithilfe der Volumenvorgabe jedes Containers.
 	\item[\textbf{(a2)}] 
-	Die Produktionskosten lauten
-	\begin{align*}
-		K(x,y) = x^2 + xy + y^2.
-	\end{align*}
-	Bei welchen Produktionsmengen $ x^\ast  $ und $ y^\ast $ wird der Reingewinn $ G(x,y) $ maximal?\\
-	Wie gross ist der maximale Reingewinn?
+	Bestimmen Sie die Länge $ x $ und Höhe $ y $ (und damit die Breite $ z $ mit der Hilfe von Aufgabenteil (a1)), sodass die Container die minimale Oberfläche besitzen (und folglich die geringsten Herstellungskosten).
 \end{enumerate}
 \ \\
 \subsection*{\aufgabe{b}{14}}
-Je nach Konjunktur (gut, mittel, schlecht) haben drei Aktien unterschiedliche zu erwartende Auszahlungen.
+Die Renditen der Aktien der Unternehmen BEST, SUCCESS und WINNER hängen von einem von vier möglichen Szenarien ab, wie sich die Finanzmärkte entwickeln. Die möglichen Szenarien und Renditen der jeweiligen Aktie werden in folgender Tabelle beschrieben:
 \begin{table}[H]
 	\centering
 	%
-	\begin{tabular}{|l |c |c |c|}
+	\begin{tabular}{c c c c}
 		\hline
-		\multirow{3}{*}{Konjunktur}
-		& erwartete Auszahlung	& erwartete Auszahlung & erwartete Auszahlung\\
-		& pro Einheit von & pro Einheit von & pro Einheit von\\
-		& Aktie 1 & Aktie 2	& Aktie 3\\
+		Szenario & BEST  &  SUCCESS &  WINNER \\ 
 		\hline
-		gut & $ 2 $  &  $ a $ &  $ 5 $ \\ 
-		\hline
-		mittel & $ 1 $ & $ 1 $ & $ 1 $  \\ 
-		\hline
-		schlecht & $ 0 $ & $ 1 $ & $ a $ \\
+		$ s_1 $ & $ 3 $ & $ 1 $ & $ 2 $  \\ 
+		$ s_2 $ & $ 2 $ & $ 2 $ & $ 2 $ \\
+		$ s_3 $ & $ 3 $ & $ 3 $ & $ 1 $ \\
+		$ s_4 $ & $ -1 $ & $ 1 $ & $ 0 $\\
 		\hline
 	\end{tabular}%
 \end{table}
-Gesucht sind geeignete Kombinationen dieser Geldanlagen (Käufe, respektive Leerverkäufe), die bei guter Konjunktur die Auszahlung $ 7'000 $, bei mittlerer Konjunktur die Auszahlung $ 5'000 $ und bei schlechter Konjunktur die Auszahlung $ 1'000 $ ergeben.
+Eine Investorin möchte in die drei Aktien investieren. Ihr Ziel ist es folgende Rendite, abhängig vom jeweiligen Szenario, zu generieren:
+\begin{table}[H]
+	\centering
+	%
+	\begin{tabular}{c c}
+		\hline
+		Szenario & Rendite  \\
+		\hline
+		$ s_1 $ & $ 5 $ \\ 
+		$ s_2 $ & $ 3 $  \\
+		$ s_3 $ & $ a $  \\
+		$ s_4 $ & $ -2 $ \\
+		\hline
+	\end{tabular}%
+\end{table}
+wobei $ a \in \mathbb{R} $.
 \begin{enumerate}
 	\item[\textbf{(b1)}]
-	Bestimmen Sie ein lineares Gleichungssysteme für die benötigten Einheiten $ x_i \in \mathbb{R} $ der Anteile an Aktie $ i \in \{1,2,3\} $, die man haben muss, um bei jeder Konjunkturlage die gewünschte Auszahlung erreichen zu können.
+	Bestimmen Sie das lineare Gleichungssystem, welches das Allokationsproblem der Investorin beschreibt.
+\end{enumerate}
+Verwenden Sie den Gauß-Algorithmus für die folgenden Aufgaben.
+\begin{enumerate}
 	\item[\textbf{(b2)}] 
-	Für welche Werte von $ a \in \mathbb{R} $ gibt es eine eindeutige Kombination?
-	Für welche Werte von $ a \in \mathbb{R} $ gibt es keine mögliche Kombination?
-	Für welche Werte von $ a \in \mathbb{R} $ gibt es unendlich viele mögliche Kombinationen?
+	Für welche Werte von $ a $ existiert eine Lösung des Investitionsproblems?
 	\item[\textbf{(b3)}]
-	Berechnen Sie im Falle einer eindeutigen Lösung die Lösung $ (x_1,x_2,x_3) $ (in Abhängigkeit von $ a $).
-	\item[\textbf{(b4)}]
-	Beschreiben Sie die Lösungsgesamtkeit der möglichen Kombinationen, wenn es unendlich viele Lösungen gibt.
+	Bestimmen Sie für $ a \ = \ -3.5 $ die Investitionsstrategie der Investorin, welche die entsprechenden Renditen je nach Szenario erwirtschaftet.
 \end{enumerate}
 
 \ \\
-\subsection*{\aufgabe{c}{10}}
-Für einen elliptischen Tisch mit den Halbachsen $ a > 0  $ und $ b > 0 $ ist eine flächenmässig möglichst grosse rechteckige Auflage anzufertigen, die an keiner Stelle übersteht.
+\subsection*{\aufgabe{c}{14}}
+Ein Konsument deckt seine Nachfrage nach zwei Gütern. Dabei beschreibt $ c_1 $ die Menge von Gut $ 1 $ und $ c_2 $ die Menge von Gut $ 2 $. Der Konsument besitzt die Nutzenfunktion $ u(c_1,c_2) $, welche als Kehrwert der geometrischen Distanz zwischen dem Konsumbündel $ (c_1,c_2) $ und einem angestrebten Konsumbündel $ (3,3) $ definiert ist. Der Preis für Gut $ 1 $ beträgt $ p_1 \ = \ 2 $ (CHF) und für Gut $ 2 $ $ p_2 \ = \ 3 $ (CHF). Der Konsument besitzt das Einkommen von $ e = 10 $ (CHF).
 \begin{enumerate}
-	\item[\textbf{(c1)}]
-Welche Ausmasse (Länge und Breite) hat die rechteckige Auflage?
-\item[\textbf{(c2)}]
-Wie gross ist die maximale Fläche?
+	\item[\textbf{(c1)}] 
+	Bestimmen Sie die Nutzenfunktion des Konsumenten sowie dessen Budgetrestriktion.
+	\item[\textbf{(c2)}]
+	Vereinfachen Sie das Optimierungsproblem, indem Sie es geeignet transformieren und bestimmen Sie das optimale Konsumbündel für den Konsumenten.
 \end{enumerate}
-\textit{Wichtige Bemerkung}: Eine Abklärung, ob es sich wirklich um ein Maximum handelt, wird \textbf{nicht} verlangt, weil es offensichtlich ein Maximum geben muss.
 \ \\
-\subsection*{\aufgabe{d}{6}}
-\begin{enumerate}
-	\item[\textbf{(d1)}]
-	Gesucht sind alle (positiven) Funktionen $ f(x) $, welche für alle $ x > 0 $ die Elastizität
-	\begin{align*}
-		\varepsilon_f(x) = \frac{1}{x}
-	\end{align*}
-	besitzen.\\
-	\textit{Tipp:} Erinnern Sie sich, dass für positive Funktonen $ f(x) $ gilt:
-	\begin{align*}
-		\frac{d}{dx} \ln(f(x)) = \rho_f(x) 
-		\ \textrm{und} \
-		\varepsilon_f(x) = x \cdot \rho_f(x),
-	\end{align*}
-	wobei $ \rho_f $ die Wachstumsrate von $ f $ ist.
-	\item[\textbf{(d2)}]
-	Welche positive Funktion $ f(x) $ mit $ f(1) = 1 $ besitzt die Elastizität $ \varepsilon_f(x) = \frac{1}{x} $ für alle alle $ x >0 $.
-\end{enumerate}
+\textit{Bemerkungen: Der Kehrwert eines mathematischen Ausdrucks $ x $ ist definiert als $ \frac{1}{x} $. Es ist \textbf{nicht} nötig zu zeigen, dass es sich um ein Maximum handelt.}
+
 \newpage
 
 
@@ -162,224 +143,208 @@ Bitte lesen Sie die Fragen sorgfältig.
 \newpage
 \section*{Aufgabe 2 (32 Punkte)}
 \vspace{0.4cm}
-\subsection*{\frage{1}{3}}
-In welchem Punkt hat die Funktion
-\begin{align*}
-	f(x,y) = 5x
-\end{align*}
-unter der Nebenbedingung
-\begin{align*}
-	\varphi(x,y) = 2 y^2 - x - 1 = 0
-\end{align*}
-ein Minimum?
+\subsection*{\frage{1}{4}}
+Die Funktion $ f(x,y) \ = \ (x-2)^2 -y^2 $ hat einen Sattelpunkt beim Punkt $ P \ = \ (2,0) $. Welche der folgenden Aussagen ist korrekt?
  \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item $ P= (-2,\sqrt{0.5}) $.
-\item $ P= (0,\sqrt{0.5}) $.
-\item $ P= (7,2) $.
-\item $ P= (-1,0) $.
-\item Keiner der oben gegebenen Punkte ist ein Minimum der Funktion $ f $ unter der Nebenbedingung $ \varphi(x,y)= 0 $.
+\item Die Funktion $ f $ hat unter der Nebenbedingung $ 2x \ - y \ - \ 4 \ = \ 0 $ ein lokales Minimum beim Punkt $ P $.
+\item Die Funktion $ f $ hat unter der Nebenbedingung $ 2x \ - y \ - \ 4 \ = \ 0 $ einen Sattelpunkt beim Punkt $ P $.
+\item Die Funktion $ f $ hat unter der Nebenbedingung $ -x \ - 2y \ - \ 4 \ = \ 0 $ einen Sattelpunkt beim Punkt $ P $.
+\item Die Funktion $ f $ hat unter der Nebenbedingung $ -\frac{1}{2}x \ - y \ + \ 1 \ = \ 0 $ ein lokales Minimum beim Punkt $ P $.
+\item Die Funktion $ f $ hat unter der Nebenbedingung $ -\frac{1}{2}x \ - y \ + \ 1 \ = \ 0 $ ein lokales Maximum beim Punkt $ P $.
 \end{enumerate}
 \ \\
 \subsection*{\frage{2}{3}}
-Sei $ f $ eine zweimal stetig partiell differenzierbare Funktion zweier Variablen. Für den stationären Punkt $ (x_0,y_0) $ gilt:
+Sei $ f \ : \ D_f \to \mathbb{R} $ eine positive Funktion zweier reeller Variablen, welche ein lokales Maximum beim Punkt $ P = (5,2)  $ hat.
+Sei $ h  \ : \ D_f \to \mathbb{R} $ die Funktion definiert durch
 \begin{align*}
-	f_{xx}(x_0,y_0) < f_{yy}(x_0,y_0) < f_{xy}(x_0,y_0) < 0.
+	h(x,y) = e^{\sqrt{f(x,-y)}}.
 \end{align*} 
-Dann gilt:
+Welche der folgenden Aussagen ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item $ f $ hat in $ (x_0,y_0) $ ein lokales Minimum.
-\item $ f $ hat in $ (x_0,y_0) $ ein lokales Maximum.
-\item $ f $ hat in $ (x_0,y_0) $ einen Sattelpunkt.
-\item Die Information genügt nicht, um zu entscheiden, ob $ f $ in $ (x_0,y_0) $ einen Sattelpunkt oder ein lokales Extremum hat.
+\item Die Funktion $ h $ hat ein lokales Maximum beim Punkt $ Q = (-5,2). $
+\item Die Funktion $ h $ hat ein lokales Maximum beim Punkt $ Q = (5,-2). $
+\item Die Funktion $ h $ hat ein lokales Minimum beim Punkt $ Q = (-5,2). $
+\item Die Funktion $ h $ hat ein lokales Minimum beim Punkt $ Q = (5,-2). $
+\item Wir können die Extremstellen von $ h $ nicht analysieren, ohne mehr Informationen zur Funktion $ f $ zu haben.
 \end{enumerate}
 \newpage
-\subsection*{\frage{3}{4}}
-Die Funktion $ f $ sei gegeben durch
+\subsection*{\frage{3}{3}}
+Sei $ F $ die Stammfunktion der stetigen Funktion $ f $ einer reellen Variable $ x $ und sei $ g $ eine lineare Funktion, d.h. $ g(x) = ax +b $ für die Parameter $ a,b \in \mathbb{R} $. Das unbestimmte Integral
 \begin{align*}
-	f(x) = \int_2^{x^2} e^{\sin(t)} \ dt.
+  \int f(x) g(x) \ dx.
 \end{align*}
-Welcher der folgenden Ausdrücke gibt die Ableitung $ f^\prime(x) $ wieder?
+ist gleich:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$ f^\prime(x) = e^{\sin(x^2)} \sin(x^2)$.
+$ a x F(x) + b F(x) - a \int F(x) dx$.
 \item 
-$ f^\prime(x) = 2 x e^{\sin(x^2)}$.
+$ g(x) F(x) - a \int f(x) dx$.
 \item 
-$ f^\prime(x) = e^{\sin(x^2)}$.
+$ \left(\frac{1}{2} a x^2 +b x\right) F(x) - \int a F(x) dx$.
 \item
-$ f^\prime(x) = 2 x e^{\sin(x^2)} \sin(x^2)$.
+$ \left(\frac{1}{2} a x^2 +b x\right) F(x) - \int  F(x) g(x) dx$.
 \item 
-$ f^\prime(x) = x^2 e^{\sin(x^2)}$ 
-\item 
-Keiner der obigen Ausdrücke ist korrekt.
+Wir können das Integral nicht transformieren, ohne mehr Informationen zur Funktion $ f $ zu haben.
 \end{enumerate}
 \ \\
 \subsection*{\frage{4}{3}}
-Sei $ f $ eine \textit{ungerade} Funktion, welche die folgenden drei (Integral-) Gleichungen erfüllt:
+Sei $ f $ eine \textit{gerade} Funktion, welche die folgenden (Integral-) Gleichungen erfüllt:
 \begin{align*}
-	\int_{-1}^9 f(x) \ dx = 15, \
-	\int_4^9 f(x) \ dx = 5 \ \textrm{und} \
-	\int_1^6 f(x) \ dx = 7.
+	\int_{2}^3 f(x) \ dx = 10, \ \textrm{und} \
+	\int_1^3 f(x) \ dx = 15.
 \end{align*}
-Dann ist der Wert des bestimmten Integrals
+Das bestimmte Integral
 \begin{align*}
-	\int_4^6 f(x) \ dx
+	\int_{-2}^{-1} (2 - f(x) ) \ dx
 \end{align*}  
 gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ 0 $.
+	$ -1 $.
 	\item
-	$ 3 $.
-	\item
-	$ 2 $.
+	$ -2 $.
 	\item
 	$ -3 $.
 	\item
-	Die Information genügt nicht, um den Wert des Integrals zu bestimmen.
+	$ -4 $.
+	\item
+	Wir haben nicht genügend Informationen, um diesen Wert auszurechnen.
 \end{enumerate}
 \ \\
 \subsection*{\frage{5}{4}}
-Gegeben ist die Funktion
-\begin{align*}
-f(x) =
-\begin{cases}
-	 2 x  e^{1 - x^2}, \ &x \geq c  \geq 0\\
- \qquad	\ 0 , \ &x < c
-\end{cases}.
-\end{align*}
-$ f $ ist eine Dichtefunktion für
+Gegeben seien die Matrizen $ A_{n \times m} $ und $ B_{m \times n} $ für $ m,n \in \mathbb{N} $.\\
+\\
+Es folgt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$ c = 0 $.
+Die Matrix $ (AB)^\top $ hat die Dimensionen $ n \times m $.
 \item 
-$ c = \frac{1}{e} $.
+Die Matrix $ (AB)^\top $ ist symmetrisch, falls $ A $ symmetrisch ist.
 \item 
-$ c= 1 $.
+Die Matrix $ (AB)^\top $ ist invertierbar, falls $ \mathrm{rg}(A) = \mathrm{rg}(B) = n $.
 \item 
-$ c = 2e $.
-\item
-alle $ c \in \mathbb{R}_{++} $.
+Die Matrix $ (AB)^\top $ ist invertierbar, falls $ BA $ invertierbar ist.
+\item 
+Die Matrix $ (AB)^\top $ ist invertierbar, falls sie $ n $ reelle Eigenwerte besitzt, welche ungleich null sind.
 \end{enumerate}
 \ \\
 \subsection*{\frage{6}{3}}
-Die quadratischen Matrizen $ A_{n \times n} $ und $ B_{n \times n} $ seien regulär.
-Der Ausdruck
+Gegeben sei die $ (n \times n ) $-dimensionale, reguläre Matrix $ A $ mit einem reellen Eigenwert $ \lambda \neq 0 $.\\
+\\
+Es folgt, dass die Matrix
 \begin{align*}
-	(A B)^\top(B^{-1} A^{-1})^\top B (AB)^{-1}
+	A^{-4} = A^{-1} \cdot A^{-1} \cdot A^{-1} \cdot A^{-1}
 \end{align*}
-ist gleich
+den folgenden Eigenwert hat:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ A^{-1} B $.
+	$ \frac{1}{\lambda^4} $.
 	\item 
-	$ I $, die $ (n \times n) $ Einheitsmatrix.
+	$ \frac{4}{\lambda} $.
 	\item
-	$ AB^{-1} $.
+	$ \lambda$.
 	\item
-	$ B $.
+	$\lambda^3 $.
 	\item 
-	$ A^{-1} $
+	Es ist nicht möglich, eine Aussage bezüglich der Eigenwerte von $ A^{-4} $ zu treffen.
 \end{enumerate}
 \ \\
-\subsection*{\frage{7}{2}}
-\begin{center}
-	\includegraphics[width=0.7\textwidth]{pictures/aufgabe2_7}
-\end{center}
-Der Flächeninhalt $ A $ des Parallelogramms in der obigen Figur ist gleich
+\subsection*{\frage{7}{3}}
+Gegeben sei das lineare Gleichungssystem
+\begin{align*}
+	A \textbf{x} = \textbf{b}.
+\end{align*}
+\textit{Keine} notwendige Annahme, um das lineare Gleichungssystem mithilfe der Cramerschen Regel zu lösen zu können, ist:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$ A = 10 $.
+$ A $ ist quadratisch.
 \item
-$ A = 14 $.
+$ A $ hat vollen Rang.
 \item
-$ A = 5 \cdot  \sqrt{17} $.
+$ \det(A) \neq 0$.
 \item
-$ A = 16 $.
+$ \textbf{b} \neq \textbf{0} $.
 \item
-$ A = 13 $.
+$ \mathrm{rg}(A) = \mathrm{rg}([A,\textbf{b}])$.
 \end{enumerate}
 \newpage
 \subsection*{\frage{8}{3}}
-$ A $ sei eine $ (5 \times 5) $-Matrix gegeben durch
+Sei $ A $ eine $ (1 \times 5) $-Matrix definiert als
 \begin{align*}
 	A
 	=
-	\left[
+	\left(
 	\textbf{a}_1,
 	\textbf{a}_2,
 	\textbf{a}_3,
 	\textbf{a}_4,
 	\textbf{a}_5
-	\right].
+	\right).
 \end{align*}
-Sei 
-\begin{align*}
-	B =
-	\left[
-	\textbf{a}_1 - 3 \textbf{a}_2,
-	\textbf{a}_2,
-	\textbf{a}_3 + \textbf{a}_2 - \textbf{a}_5,
-	-2 \textbf{a}_4,
-	\textbf{a}_5
-	\right].
-\end{align*}
-Dann gilt
+für $ a_i \in \mathbb{R}, \ i = 1,2,...,5 $.\\
+\\
+Es folgt, dass:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ \det(B) = -2 \det(A) $.
+	$ \mathrm{rg}(A) = 5 $, falls $ a_i \neq 0 $ für alle $ i \in \{1,2,3,4,5\} $ und $ a_i \neq a_j $ für $ i \neq j $.
 	\item
-	$ \det(B) = \det(A) $.
+	$ \mathrm{rg}(A) = 5 $, falls $ a_i \neq 0 $ für mindestens ein $ i \in \{1,2,3,4,5\} $.
 	\item
-	$ \det(B) = 6 \det(A) $.
+	$ \mathrm{rg}(A) = 1 $, falls $ a_i \neq 0 $ für mindestens ein $ i \in \{1,2,3,4,5\} $.
 	\item
-	$ \det(B) = -\det(A) $.
+	$ \mathrm{rg}(A) = 0 $, falls $ a_i = 0 $ für genau ein $ i \in \{1,2,3,4,5\} $.
 	\item
-	Es gibt im Allgemeinen keine Relation zwischen $ \det(A) $ und $ \det(B) $.
+	$1 <  \mathrm{rg}(A)\leq 5 $, falls $ a_i \neq 0 $ für mindestens ein $ i \in \{1,2,3,4,5\} $.
+	\item 
+	Es ist nicht möglich, mit den gegebenen Informationen eine Aussage zum Rang von $ A $ zu machen.
 \end{enumerate}
 \ \\
-\subsection*{\frage{9}{2}}
-Die Matrix $ A $ ist eine $ (7 \times 4) $-Matrix mit Rang $ 4 $.
-Man bekommt die Matrix $ B $, indem man bei $ A $ die dritte Spalte streicht.\\
+\subsection*{\frage{9}{3}}
+Sei $ A $ eine $ (4 \times 2) $-dimensionale Matrix mit Rang $ 2 $ und $ B $ eine Matrix mit den Dimensionen mit Rang $ 1 $.\\
 \\
-Dann folgt:
+Wir definieren die Matrix $ C $ als die Aneinanderreihung der Spalten von $ A $ und $ B $ wie folgt:
+\begin{align*}
+	C = [A, B, A].
+\end{align*}
+Es folgt, dass:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ \mathrm{rg}(B) = 4 $.
+	$ \mathrm{rg}(C) = 2 $.
 	\item
-	$ \mathrm{rg}(B) = 3 $.
-	
+	$ \mathrm{rg}(C) = 3 $.
 	\item
-	$ \mathrm{rg}(B) < 3 $.
-	
+	$ \mathrm{rg}(C)\in \{2,3\} $.
 	\item
-	Die Informationen reichen nicht aus, den Rang von $ B $ zu bestimmen.
+	$ \mathrm{rg}(C) = 4 $.
+	\item
+	Die gegebenen Informationen sind nicht ausreichend, um eine Aussage über den Rang von $ C $ treffen zu können.
 \end{enumerate}
 \ \\
 \subsection*{\frage{10}{3}}
-Welche der folgenden Aussagen ist \textit{falsch}?
+Sei $ A \in \mathbb{R}^{n\times n} $ eine quadratische obere Dreiecksmatrix, d.h. eine quadratische Matrix deren Elemente unterhalb der Diagonale null sind.\\
+\\
+Welche der folgenden Aussagen ist \textit{nicht} korrekt bezüglich der Matrix $ A $?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Die Summe von zwei regulären Matrizen ist regulär
+	Die Determinante ist das Produkt der Elemente auf der Diagonale.
 	\item
-	Das Produkt von zwei singulären Matrizen ist singulär.
-	
+	Die Matrix $ A + A^\top $ ist symmetrisch.
 	\item
-	Der Rang einer Matrix ist gleich dem Rang der Transponierten.
+	Falls die Inverse $ A^{-1} $ existiert, so ist sie ebenfalls eine obere Dreiecksmatrix.
 	\item
-	Der Rang einer $ (n \times m) $-Matrix ist kleiner gleich $ n $, unabhängig davon, was $ m \in \mathbb{N} $ ist.
+	Die Eigenwerte von $ A $ entsprechen den Elementen auf der Diagonale
 	\item 
-	Die Summe zweier singulärer Matrizen kann regulär sein.
+	Die Eigenvektoren von $ A $ entsprechen den Zeilen von $ A $.
 \end{enumerate}
 
 \newpage
@@ -387,135 +352,134 @@ Welche der folgenden Aussagen ist \textit{falsch}?
 \vspace{0.4cm}
 
 \subsection*{\frage{1}{3}}
-Die Funktion
+Das bestimmte Integral
 \begin{align*}
-	f(x,y) = 2^{xy}
+	\int_0^{2\pi} \cos \left(\frac{x}{t}\right) e^{- \sin(\frac{x}{t})} dx
 \end{align*}
-unter der Nebenbedingung
-\begin{align*}
-	\varphi(x,y)
-	=
-	x - 2 y - 2
-	= 
-	0
-\end{align*}
-hat
+mit $ t \in \mathbb{N} $ ist gleich:
+
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-ein Minimum $ P = \left(1,-\frac{1}{2} \right) $.
+$ \frac{1}{t} -1  $.
 \item
-ein Maximum $ P = \left(1,-\frac{1}{2} \right) $.
+$ (1 - e^{-\sin\left(\frac{2\pi}{t}\right)})t $
 \item
-einen Sattelpunkt $ P = \left(1,-\frac{1}{2} \right) $.
+$ t + e^{\sin\left(\frac{2\pi}{t}\right)} $
 \item 
-Keine der obigen Aussagen ist richtig.
+Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 \ \\
 \subsection*{\frage{2}{4}}
-Sei $ a \in \mathbb{R}_{++} $. Das bestimmte Integral
+Sei $ f \ : \ \mathbb{R}^2 \to \mathbb{R} $ eine partiell differenzierbare Funktion zweier reeller Variablen, definiert als 
 \begin{align*}
-	\int_0^1
-	\frac{1}{x^2} e^{\frac{a}{x}} dx
+	f(x,y) = e^{ax^2 +a^2 xy^2}
 \end{align*}
-ist gleich
+mit $ a \in \mathbb{R}_{++} $. Für welchen Wert $ a $ ist die Richtung des steilsten Anstiegs von $ f $ im Punkt $ P = (1,0.5) $ gegeben durch den Vektor
+\begin{align*}
+	\textbf{v} =
+	\begin{pmatrix}
+		e\\
+		e
+	\end{pmatrix}?
+\end{align*}
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$a e^{-a} $.
+	$0 $.
 	\item
-	$\frac{1}{a^2} e^{-a}$.
+	$\frac{8}{3}$.
 	\item
-	$e^{-a} $.
+	$\frac{1}{2}$.
 	\item
-	$\frac{1}{a} e^{-a}$.	
-	\item
-	Das Integral existiert nicht.
+	Es existiert kein solches $ a \in \mathbb{R}_{++} $.
 \end{enumerate}
 \newpage
-\subsection*{\frage{3}{4}}
-Sei $ n \in \mathbb{N} $.
-Das bestimmte Integral
+\subsection*{\frage{3}{3}}
+Gegeben sein eine Zufallsvariable $ X $ mit der Dichtefunktion
 \begin{align*}
-	\int_0^1
-	x(1-x)^n
-	\ \td{x}
+	f(x)
+	=
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{3}{2} \sqrt{x} \quad &0 \leq x < 1\\
+		0 \quad &x<0
+	\end{cases}.
 \end{align*}
-ist gleich
+Der Erwartungswert von $ X $ ist gleich:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$\frac{1}{n(n+1)}$.
+	$\mathbb{E}[X] = \frac{3}{5}$.
 	\item
-	$\frac{n}{(n+1)(n+2)}$.
+	$\mathbb{E}[X] = \sqrt{2}$.
 	\item
-	$\frac{n}{n+1}$.
+	$\mathbb{E}[X] = \frac{6}{7}$.
 	\item
-	$\frac{1}{n(n+2)}$.
-	\item
-	$\frac{1}{(n+1)(n+2)}$.	
+	$\mathbb{E}[X] = \sqrt{\frac{6}{7}}$.
 \end{enumerate}
 \ \\
 \subsection*{\frage{4}{4}}
-Gegeben ist die Matrix
+Gegeben sei die Funktion $ f $ definiert als
 \begin{align*}
-	A
+	f(x)
 	=
-	\begin{pmatrix}
-		2 & a & -4 \\
-		-1 & 3 & 4\\
-		1 & -2 & -3
-	\end{pmatrix}.
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{c}{2x} \quad &0.5 \leq x < 1\\
+		6x^2 \quad &0 \leq x < 0.5\\
+		0 \quad &x<0
+	\end{cases}.
 \end{align*}
-Für welche Werte von $ a \in \mathbb{R} $ ist die Matrix $ A $
-\textit{idempotent}, d.h., es gilt $ A^2 = A $?
+Für welche Werte von $ c \in \mathbb{R} $ ist $ f $ eine Dichtefunktion?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$ a= 0 $.
+$ c = 10$.
 \item 
-$ a= -2 $.
+$ c= -\frac{3}{2 \ln(0.5)} $.
 \item
-$ a= 2 $ oder $ a= -1 $.
+$ c= -\frac{2}{3 \ln(2)} $.
 \item
-Es gibt kein $ a \in \mathbb{R} $, sodass $ A $ idempotent ist.
+$ c = \ln \left(\frac{2}{3}\right) $.
 \item
-$ A $ ist idempotent für jedes $ a \in \mathbb{R} $.
+$ c = e^{\frac{2}{3}} $.
 \end{enumerate}
 
 \newpage
-\subsection*{\frage{5}{4}}
-Gegeben ist die Matrix
+\subsection*{\frage{5}{3}}
+Gegeben sei die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		1 & 0 & 2 & 3 \\
-		2 & 1 & r & 7 \\
-		3 & 2 & 4 &  s 
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
 	\end{pmatrix}.
 \end{align*}
-Für welche Werte von $ r \in \mathbb{R} $ und $ s \in \mathbb{R} $ besitzt die Matrix $ A $ den Rang $ 2 $?
+Es folgt, dass
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ r = 10 $ und $ s = 2 $.
+	$ \mathrm{rg}(A) = 1 $.
 	\item 
-	$ r =  2 $ und $ s = 10 $.
+	$ \mathrm{rg}(A) = 2 $.
 	\item
-	$ r = 2 $ und $ s $ beliebig.
+	$ \mathrm{rg}(A) = 3 $.
 	\item
-	$ r = 3 $ und $ s = 11 $.
+	$ \mathrm{rg}(A) = 4 $.
 	\item
-	Die Matrix $ A $ hat für alle $ (r,s) \in \mathbb{R}^2 $ \textit{nicht} den Rang $ 2 $.
+	$ \mathrm{rg}(A) = 5 $.
 \end{enumerate}
 \ \\
 
-\subsection*{\frage{6}{4}}
-Gegeben ist die Matrix
+\subsection*{\frage{6}{3}}
+Gegeben sei die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		0 & 3 & 0 \\
+		-7 & 0 & 0 \\
 		1 & 2 & 0 \\
 		-5m & 5 & 4
 	\end{pmatrix}
@@ -523,7 +487,7 @@ Gegeben ist die Matrix
 	\quad 
 	\textrm{mit } m \in \mathbb{R}.
 \end{align*}
-Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
+Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
@@ -536,7 +500,7 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	=
 	s 
 	\begin{pmatrix}
-		3 \\ -1 \\ 1 - 3m
+		0\\ 0 \\ -1
 	\end{pmatrix},
 	s \in \mathbb{R}
 	\right\}
@@ -552,7 +516,23 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	=
 	s	 
 	\begin{pmatrix}
-		-3 \\ 1 \\ -1 - 3m
+		7m \\ -1 \\ m-1
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		3 \\ -7 \\ 1 - 5m
 	\end{pmatrix},
 	s \in \mathbb{R}
 	\right\}
@@ -575,68 +555,46 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	$
 	.
 	\item
-	$ W
-	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s	 
-	\begin{pmatrix}
-		3m \\ -1 \\ m-1
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
-	$
-	.
-	\item
-	$ \lambda = -1 $ ist kein Eigenwert von $ A $.
+	$ \lambda = 4 $ ist kein Eigenwert von $ A $.
 \end{enumerate}
 \ \\
-\subsection*{\frage{7}{3}}
-Von der Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ der Differenzengleichung
+\subsection*{\frage{7}{4}}
+Welche der folgenden Differenzengleichungen wird durch die Folge
 \begin{align*}
-	y_{k+1} = A y_k + B \quad (k = 0,1,2,...)
+	y_{k} = \left(\frac{1}{4}\right)^{k+1} + 4, \quad k \in \mathbb{N},
 \end{align*}
-sind die Werte
-\begin{align*}
-	y_0 = 2, y_1 = 1 \ \textrm{und} \ y_2 = 3
-\end{align*}
-bekannt.\\
-\\
-Bestimmen Sie $ A $ und $ B $.
+gelöst?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item
-$ A=1 $ und $ B=2 $.
+$ 6 y_{k+1}  - 3 y_k = 12$.
 \item
-$ A=2 $ und $ B=1 $.	
+$ 4 y_{k+1} - 32 y_k = -26 $.	
 \item 
-$ A=-1 $ und $ B=4 $.
+$ 8 y_{k+1} - 2 y_k = 24 $
 \item
-$ A=1 $ und $ B=2 $.
-\item
-$ A=-2 $ und $ B=5 $.
+Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 \ \\
 \subsection*{\frage{8}{4}}
-Die allgemeine Lösung der  Differenzengleichung
+Gegeben sei die Differenzengleichung
 \begin{align*}
-(1+a) y_{k+1} + y_k -1 = 0
-\quad (k = 0,1,2,...)
+6y_{k+1} + 2 y_k +7 = 6
+\quad (k = 0,1,2,...).
 \end{align*}
-mit $ a \in \mathbb{R} \setminus \{-1,-2\} $, ist genau dann monoton und konvergent, wenn
+Es folgt, dass:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	$ a > 0 $.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und divergent ist.
 	\item
-	$ a >0 $ oder $ a < -1 $.	
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und divergent ist.	
 	\item 
-	$ -2 < a < 0 $.
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{7} $.
 	\item
-	$ a < -2 $.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{7} $.
 	\item 
-	Die allgemeine Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ ist nie monoton und konvergent.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{8} $.
+	\item 
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{8} $.
 \end{enumerate}

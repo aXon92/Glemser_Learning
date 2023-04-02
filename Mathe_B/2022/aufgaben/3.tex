@@ -1,29 +1,22 @@
-\section*{Aufgabe 3 (30 Punkte)}
+\section*{Aufgabe 3 (28 Punkte)}
 \vspace{0.4cm}
 \subsection*{\frage{1}{3}}
-Die Funktion
+Das bestimmte Integral
 \begin{align*}
-	f(x,y) = 2^{xy}
+	\int_0^{2\pi} \cos \left(\frac{x}{t}\right) e^{- \sin(\frac{x}{t})} dx
 \end{align*}
-unter der Nebenbedingung
-\begin{align*}
-	\varphi(x,y)
-	=
-	x - 2 y - 2
-	= 
-	0
-\end{align*}
-hat
+mit $ t \in \mathbb{N} $ ist gleich:
+
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	ein Minimum $ P = \left(1,-\frac{1}{2} \right) $.
+	$ \frac{1}{t} -1  $.
 	\item
-	ein Maximum $ P = \left(1,-\frac{1}{2} \right) $.
+	$ (1 - e^{-\sin\left(\frac{2\pi}{t}\right)})t $
 	\item
-	einen Sattelpunkt $ P = \left(1,-\frac{1}{2} \right) $.
+	$ t + e^{\sin\left(\frac{2\pi}{t}\right)} $
 	\item 
-	Keine der obigen Aussagen ist richtig.
+	Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -31,60 +24,39 @@ hat
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Forme die Nebenbedingung um und verwende die Monotonie der Exponentialfunktion.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Forme die Nebenbedingung um und verwende die Monotonie der Exponentialfunktion}\\
-Die Nebenbedingung lässt sich durch
-\begin{align*}
-	\varphi(x,y) = x - 2y -2 = 0
-	\ \Leftrightarrow \
-	x = 2 y  +2 
-\end{align*}
-umformen. Hiermit lässt sich die Funktion $ f $ unter der Nebenbedingung $ \varphi $ folgendermaßen darstellen:
-\begin{align*}
-	F(y) = f(2y+2,y) = 2^{(2y +2) y }
-	=2^{2y^2 + 2y}.
-\end{align*}
-Wir setzen $ g(y) := 2y^2 +2y $. Da die Exponentialfunktion $ 2^{(\cdot)} $ streng monoton wachsend ist, bleiben Extremstellen von $ g $ durch $ 2^{g(y)} $ erhalten.\\
-Die Funktion $ g $ ist eine nach oben geöffnete Parabel. Demnach besitzt diese ein Minimum an ihrem Scheitelpunkt.
-Wegen 
-\begin{align*}
-	g(y) = 2 y^2 +2 y
-	= 2 y (y +1)
-\end{align*}
-besitzt $ g $ die Nullstellen $ -1 $ und $ 0 $. Wegen der Symmetrie der Parabel liegt der Scheitelpunkt und somit das Minimum an $ y^\star = -\frac{1}{2} $. Das Einsetzten von $ y^\star $ in die Nebenbedingung liefert:
-\begin{align*}
-	x = 2 y^\star + 2 = -1 + 2 = 1.
-\end{align*}
-Somit hat $ f $ unter der Nebenbedingung $ \varphi $ ein Minimum am Punkt $ P = \left(1, -\frac{1}{2}\right) $.\\
-\\
-Also ist die Antwort (a) korrekt.
+\underline{1.}\\
 
 
  
 \newpage
 
 \subsection*{\frage{2}{4}}
-Sei $ a \in \mathbb{R}_{++} $. Das bestimmte Integral
+Sei $ f \ : \ \mathbb{R}^2 \to \mathbb{R} $ eine partiell differenzierbare Funktion zweier reeller Variablen, definiert als 
 \begin{align*}
-	\int_0^1
-	\frac{1}{x^2} e^{\frac{a}{x}} dx
+	f(x,y) = e^{ax^2 +a^2 xy^2}
 \end{align*}
-ist gleich
+mit $ a \in \mathbb{R}_{++} $. Für welchen Wert $ a $ ist die Richtung des steilsten Anstiegs von $ f $ im Punkt $ P = (1,0.5) $ gegeben durch den Vektor
+\begin{align*}
+	\textbf{v} =
+	\begin{pmatrix}
+		e\\
+		e
+	\end{pmatrix}?
+\end{align*}
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$a e^{-a} $.
+	$0 $.
 	\item
-	$\frac{1}{a^2} e^{-a}$.
+	$\frac{8}{3}$.
 	\item
-	$e^{-a} $.
+	$\frac{1}{2}$.
 	\item
-	$\frac{1}{a} e^{-a}$.	
-	\item
-	Das Integral existiert nicht.
+	Es existiert kein solches $ a \in \mathbb{R}_{++} $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -92,80 +64,36 @@ ist gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme die Stammfunktion durch Substitution.
-\item Berechne das bestimmte Integral.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme die Stammfunktion durch Substitution}\\
-Wir formen das zugehörige unbestimmte Integral zunächst um:
-\begin{align*}
-	\int \frac{1}{x^2} e^{-\frac{a}{x}} \td{x}
-	=
-	\frac{1}{a} \int \frac{a}{x^2} e^{-\frac{a}{x}} \td{x}.
-\end{align*}
-Wir substituieren nun $ t = -\frac{a}{x} $. Hierfür gilt:
-\begin{align*}
-	\frac{\td{t}}{\td{x}} = \frac{a}{x^2} \ \Rightarrow
-	\ 
-	\td{t} =\frac{a}{x^2} \td{x} .
-\end{align*}
-Damit erhalten wir
-\begin{align*}
-	\frac{1}{a} \int \frac{a}{x^2} e^{-\frac{a}{x}} \td{x}
-	=
-	\frac{1}{a} \int e^{t} \td{t}
-	=
-	\frac{1}{a} e^t + C
-	=
-	\frac{1}{a} e^{- \frac{a}{x}} +C.
-\end{align*}
-\ \\
-\underline{2. Berechne das bestimmte Integral}\\
-Das bestimmte Integral berechnet sich nun wegen $ a > 0  $ durch:
-\begin{align*}
-	\int_0^1
-	\frac{1}{x^2} e^{\frac{a}{x}} dx
-	=
-	\lim
-	\limits_{N\to 0^+}
-	\int_N^1
-	\frac{1}{x^2} e^{\frac{a}{x}} dx
-	=
-	\lim 
-	\limits_{N\to 0^+}
-	\left[\frac{1}{a} e^{- \frac{a}{x}}\right]_N^1
-	=
-	\frac{1}{a}
-	\lim
-	\limits_{N\to 0^+} \left(e^{- \frac{a}{1}}  - \underbrace{e^{- \frac{a}{N}}}_{\to 0}\right)
-	=
-	\frac{1}{a}  e^{-a}.
-\end{align*}
-Damit ist die Antwort (d) korrekt.
+\underline{1. }\\
+
 
 \newpage
-\subsection*{\frage{3}{4}}
-Sei $ n \in \mathbb{N} $.
-Das bestimmte Integral
+\subsection*{\frage{3}{3}}
+Gegeben sein eine Zufallsvariable $ X $ mit der Dichtefunktion
 \begin{align*}
-	\int_0^1
-	x(1-x)^n
-	\ \td{x}
+	f(x)
+	=
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{3}{2} \sqrt{x} \quad &0 \leq x < 1\\
+		0 \quad &x<0
+	\end{cases}.
 \end{align*}
-ist gleich
+Der Erwartungswert von $ X $ ist gleich:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$\frac{1}{n(n+1)}$.
+	$\mathbb{E}[X] = \frac{3}{5}$.
 	\item
-	$\frac{n}{(n+1)(n+2)}$.
+	$\mathbb{E}[X] = \sqrt{2}$.
 	\item
-	$\frac{n}{n+1}$.
+	$\mathbb{E}[X] = \frac{6}{7}$.
 	\item
-	$\frac{1}{n(n+2)}$.
-	\item
-	$\frac{1}{(n+1)(n+2)}$.	
+	$\mathbb{E}[X] = \sqrt{\frac{6}{7}}$.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -173,66 +101,79 @@ ist gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende partielle Integration.
+\item 
 \end{enumerate}
 \end{mdframed}
-%\allowdisplaybreaks
-\underline{1. Verwende partielle Integration}\\
-Für die partielle Integration setzen wir:
-\begin{align*}
-	u(x) &:= x \ \Rightarrow \ u^\prime(x) = 1\\
-	v^\prime(x) &:=(1-x)^n  \ \Rightarrow \ v(x) = -\frac{1}{n+1}(1-x)^{n+1}.
-\end{align*}
-Damit ergibt sich:
-\begin{align*}
-	\int_0^1
-	x(1-x)^n
-	\ \td{x}
-	&=
-	\int_0^1
-	u(x) v^\prime(x)
-	\ \td{x}
-	=
-	\left[x \cdot \frac{-1}{n+1}(1-x)^{n+1}\right]_0^1 
-	-\int_0^1 \frac{-1}{n+1}(x-1)^{n+1} \ \td{x}  \\
-	&= 
-	-\frac{1}{n+1}\left[x \cdot (1-x)^{n+1}\right]_0^1+
-	\frac{1}{n+1}\int_0^1 (1-x)^{n+1} \ \td{x}
-	=
-	\frac{1}{n+1}\left[\frac{-1}{n+2} (1-x)^{n+2}\right]_0^1\\
-	&=
-	\frac{1}{n+1} \left( 0  - \frac{-1}{n+2} 1^{n+2}\right) 
-	=
-	\frac{1}{(n+1)(n+2)}.
-\end{align*}
-Also ist die Antwort (e) korrekt.
+
+\underline{1.}\\
+
 \newpage
 
+\newpage
 \subsection*{\frage{4}{4}}
-Gegeben ist die Matrix
+Gegeben sei die Funktion $ f $ definiert als
 \begin{align*}
-	A
+	f(x)
 	=
-	\begin{pmatrix}
-		2 & a & -4 \\
-		-1 & 3 & 4\\
-		1 & -2 & -3
-	\end{pmatrix}.
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{c}{2x} \quad &0.5 \leq x < 1\\
+		6x^2 \quad &0 \leq x < 0.5\\
+		0 \quad &x<0
+	\end{cases}.
 \end{align*}
-Für welche Werte von $ a \in \mathbb{R} $ ist die Matrix $ A $
-\textit{idempotent}, d.h., es gilt $ A^2 = A $?
+Für welche Werte von $ c \in \mathbb{R} $ ist $ f $ eine Dichtefunktion?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ a= 0 $.
+	$ c = 10$.
 	\item 
-	$ a= -2 $.
+	$ c= -\frac{3}{2 \ln(0.5)} $.
 	\item
-	$ a= 2 $ oder $ a= -1 $.
+	$ c= -\frac{2}{3 \ln(2)} $.
 	\item
-	Es gibt kein $ a \in \mathbb{R} $, sodass $ A $ idempotent ist.
+	$ c = \ln \left(\frac{2}{3}\right) $.
 	\item
-	$ A $ ist idempotent für jedes $ a \in \mathbb{R} $.
+	$ c = e^{\frac{2}{3}} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item 
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1.}\\
+
+\newpage
+
+\subsection*{\frage{5}{3}}
+Gegeben sei die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+	\end{pmatrix}.
+\end{align*}
+Es folgt, dass
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}(A) = 1 $.
+	\item 
+	$ \mathrm{rg}(A) = 2 $.
+	\item
+	$ \mathrm{rg}(A) = 3 $.
+	\item
+	$ \mathrm{rg}(A) = 4 $.
+	\item
+	$ \mathrm{rg}(A) = 5 $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -240,143 +181,20 @@ Für welche Werte von $ a \in \mathbb{R} $ ist die Matrix $ A $
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme $ A^2 $ und überlege, wann $ A $ idempotent ist.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme $ A^2 $ und überlege, wann $ A $ idempotent ist}\\
-Es gilt
-\begin{align*}
-	A^2 = A \cdot A
-	&=
-	\begin{pmatrix}
-		2 & a & -4 \\
-		-1 & 3 & 4\\
-		1 & -2 & -3
-	\end{pmatrix}
-	\cdot
-	\begin{pmatrix}
-		2 & a & -4 \\
-		-1 & 3 & 4\\
-		1 & -2 & -3
-	\end{pmatrix}\\
-	&=
-	\begin{pmatrix}
-		4-a-4 & 2a +3a+8 & -8+4a +12\\
-		-2-3+4 & -a+9 -8 & 4 +12 -12\\
-		2 +2 -3 & a-6 +6 & -4-8 + 9
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		-a & 5a+8 & 4a +4\\
-		-1 & -a+1 & 4 \\
-		1 & a & -3
-	\end{pmatrix}. 
-\end{align*}
-Damit $ A $ idempotent ist, muss
-\begin{align*}
-	\begin{pmatrix}
-		2 & a & -4 \\
-		-1 & 3 & 4\\
-		1 & -2 & -3
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		-a & 5a+8 & 4a +4\\
-		-1 & -a+1 & 4 \\
-		1 & a & -3
-	\end{pmatrix}
-\end{align*}
-erfüllt sein. Wegen dem ersten Eintrag der ersten Spalte und dem dritten Eintrag der zweiten Spalte, muss $ a = -2 $ gelten. Für die Idempotenz müssen wir noch die weiteren Bedingungen überprüfen:
-\begin{align*}
-	a &= 5a +8 \ \overset{a=-2}{\Rightarrow} \
-	-2 = 5 (-2) +8 = -10 +8 = -2\\
-	-4 &= 4a +4 \ \overset{a=-2}{\Rightarrow} \
-	-4 = 4 (-2) + 4 = -8 +4 = -4\\
-	3 &= -a +1 \ \overset{a=-2}{\Rightarrow} \
-	3 = -(-2) +1 = 2 +1 = 3.
-\end{align*}
-Damit ist die Matrix $ A $ für $ a=-2 $ idempotent.\\
-\\
-Also ist die Antwort (b) korrekt.
+\underline{1. }\\
+
 \newpage
 
-\subsection*{\frage{5}{4}}
-Gegeben ist die Matrix
+\subsection*{\frage{6}{3}}
+Gegeben sei die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		1 & 0 & 2 & 3 \\
-		2 & 1 & r & 7 \\
-		3 & 2 & 4 &  s 
-	\end{pmatrix}.
-\end{align*}
-Für welche Werte von $ r \in \mathbb{R} $ und $ s \in \mathbb{R} $ besitzt die Matrix $ A $ den Rang $ 2 $?
-\renewcommand{\labelenumi}{(\alph{enumi})}
-\begin{enumerate}
-	\item 
-	$ r = 10 $ und $ s = 2 $.
-	\item 
-	$ r =  2 $ und $ s = 10 $.
-	\item
-	$ r = 2 $ und $ s $ beliebig.
-	\item
-	$ r = 3 $ und $ s = 11 $.
-	\item
-	Die Matrix $ A $ hat für alle $ (r,s) \in \mathbb{R}^2 $ \textit{nicht} den Rang $ 2 $.
-\end{enumerate}
-\ \\
-\textbf{Lösung:}
-\begin{mdframed}
-\underline{\textbf{Vorgehensweise:}}
-\renewcommand{\labelenumi}{\theenumi.}
-\begin{enumerate}
-\item Bringe die Matrix in Zeilenstufenform.
-\end{enumerate}
-\end{mdframed}
-
-\underline{1. Bringe die Matrix in Zeilenstufenform}\\
-Das Anwenden elementarer Zeilenoperationen ergibt:
-\begin{align*}
-	\begin{gmatrix}[p]
-		1 & 0 & 2 & 3 \\
-		2 & 1 & r & 7 \\
-		3 & 2 & 4 &  s
-		\rowops
-		\add[ \cdot (-2)]{0}{1}
-		\add[ \cdot (-3)]{0}{2}	
-	\end{gmatrix}
-	&\leadsto
-	\begin{gmatrix}[p]
-		1 & 0 & 2 & 3 \\
-		0 & 1 & r-4 & 1 \\
-		0 & 2 & -2 &  s -9
-		\rowops
-		\add[ \cdot (-2)]{1}{2}
-	\end{gmatrix}\\
-	&\leadsto
-	\begin{gmatrix}[p]
-		1 & 0 & 2 & 3 \\
-		0 & 1 & r-4 & 1 \\
-		0 & 0 & -2r  + 6 &  s -11
-	\end{gmatrix}.
-\end{align*}
-Damit $ \mathrm{rg}(A) = 2 $ gilt, muss $ A $ eine Nullzeile besitzen. Dies ist erfüllt, falls 
-\begin{align*}
-	-2 r + 6 = 0 \ &\Leftrightarrow \ r = 3\\
-	s - 11 = 0 \ &\Leftrightarrow \ s = 11
-\end{align*}
-gilt.\\
-\\
-Also ist die Antwort (d) korrekt.
-\newpage
-
-\subsection*{\frage{6}{4}}
-Gegeben ist die Matrix
-\begin{align*}
-	A =
-	\begin{pmatrix}
-		0 & 3 & 0 \\
+		-7 & 0 & 0 \\
 		1 & 2 & 0 \\
 		-5m & 5 & 4
 	\end{pmatrix}
@@ -384,7 +202,7 @@ Gegeben ist die Matrix
 	\quad 
 	\textrm{mit } m \in \mathbb{R}.
 \end{align*}
-Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
+Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
@@ -397,7 +215,7 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	=
 	s 
 	\begin{pmatrix}
-		3 \\ -1 \\ 1 - 3m
+		0\\ 0 \\ -1
 	\end{pmatrix},
 	s \in \mathbb{R}
 	\right\}
@@ -413,7 +231,23 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	=
 	s	 
 	\begin{pmatrix}
-		-3 \\ 1 \\ -1 - 3m
+		7m \\ -1 \\ m-1
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		3 \\ -7 \\ 1 - 5m
 	\end{pmatrix},
 	s \in \mathbb{R}
 	\right\}
@@ -436,23 +270,7 @@ Für den Eigenwert $ \lambda = -1 $ ist der Eigenraum $ W $ gegeben durch
 	$
 	.
 	\item
-	$ W
-	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s	 
-	\begin{pmatrix}
-		3m \\ -1 \\ m-1
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
-	$
-	.
-	\item
-	$ \lambda = -1 $ ist kein Eigenwert von $ A $.
+	$ \lambda = 4 $ ist kein Eigenwert von $ A $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -470,82 +288,26 @@ Der Vektor $ \textbf{x} $ heißt Eigenvektor zum Eigenwert $ -1 $, falls
 	A \textbf{x} = - \textbf{x}
 \end{align*}
 für $ \textbf{x} \neq 0 $ gilt. Mit $ \textbf{x}_a $,..., $ \textbf{x}_d $ bezeichnen wir die Vektoren der Antwortmöglichkeiten mit $ s = 1 $. 
-Es gilt:
-\begin{align*}
-	A \cdot \textbf{x}_a
-	&=
-	\begin{pmatrix}
-		0 & 3 & 0 \\
-		1 & 2 & 0 \\
-		-5m & 5 & 4
-	\end{pmatrix} 
-	\cdot 
-	\begin{pmatrix}
-		3 \\ -1 \\ 1-3m
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		-3 \\ 1 \\ -15m - 5 +4 -12m
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		-3 \\ 1 \\ -1 -27m
-	\end{pmatrix}
-	\neq - \textbf{x}_a
-	\\
-	A \cdot \textbf{x}_b
-	&=
-	\begin{pmatrix}
-		0 & 3 & 0 \\
-		1 & 2 & 0 \\
-		-5m & 5 & 4
-	\end{pmatrix} 
-	\cdot 
-	\begin{pmatrix}
-		-3 \\ 1 \\ -1-3m
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		3 \\ -1 \\ 15 m +5 -4 -12m
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-		3 \\ -1 \\ 1 +3m
-	\end{pmatrix}
-	= - \textbf{x}_b.
-\end{align*} 
-Damit ist $ \textbf{x}_b $ ein Eigenvektor zum Eigenwert $ -1 $.\\
-\\
-Also ist die Antwort (b) korrekt.\\
-\\
-Alternativ lässt sich die korrekte Antwort auch über das Lösen des LGS $ (A - (-1) \cdot I) = 0 $ finden.
+
 
 \newpage
 
-\subsection*{\frage{7}{3}}
-Von der Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ der Differenzengleichung
+\subsection*{\frage{7}{4}}
+Welche der folgenden Differenzengleichungen wird durch die Folge
 \begin{align*}
-	y_{k+1} = A y_k + B \quad (k = 0,1,2,...)
+	y_{k} = \left(\frac{1}{4}\right)^{k+1} + 4, \quad k \in \mathbb{N},
 \end{align*}
-sind die Werte
-\begin{align*}
-	y_0 = 2, y_1 = 1 \ \textrm{und} \ y_2 = 3
-\end{align*}
-bekannt.\\
-\\
-Bestimmen Sie $ A $ und $ B $.
+gelöst?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	$ A=1 $ und $ B=2 $.
+	$ 6 y_{k+1}  - 3 y_k = 12$.
 	\item
-	$ A=2 $ und $ B=1 $.	
+	$ 4 y_{k+1} - 32 y_k = -26 $.	
 	\item 
-	$ A=-1 $ und $ B=4 $.
+	$ 8 y_{k+1} - 2 y_k = 24 $
 	\item
-	$ A=1 $ und $ B=2 $.
-	\item
-	$ A=-2 $ und $ B=5 $.
+	Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -553,63 +315,35 @@ Bestimmen Sie $ A $ und $ B $.
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Stelle ein lineares Gleichungssystem auf.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Stelle ein lineares Gleichungssystem auf}\\
-Die bekannten Werte ergeben die beiden Gleichungen
-\begin{align*}
-	 y_1 = A y_0 + B 
-	\ &\Leftrightarrow \
-	1 = 2 A + B\\
-	y_2 = A y_1 + B 
-	\ &\Leftrightarrow \
-	3 = A + B.
-\end{align*}
-Dies ist ein lineares Gleichungssystem in den Variablen $ A $ und $ B $. Das Aufstellen der Koeffizientenmatrix und Anwenden elementarer Zeilenumforungen ergibt:
+\underline{1. }\\
 
-\begin{align*}
-	\begin{pmatrix}
-		2 & 1 & \BAR & 1\\
-		1 & 1 & \BAR & 3
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		1 & 0 & \BAR & -2\\
-		1 & 1 & \BAR & 3
-	\end{pmatrix}
-	\leadsto
-	\begin{pmatrix}
-		1 & 0 & \BAR & -2\\
-		0 & 1 & \BAR & 5
-	\end{pmatrix}
-	\ \Rightarrow A = -2, B = 5.
-\end{align*}
-Damit ist die Anwort (e) korrekt.\\
-\\
-Alternativ lässt sich das LGS auch durch Einsetzen lösen.
 \newpage
 
 \subsection*{\frage{8}{4}}
-Die allgemeine Lösung der  Differenzengleichung
+Gegeben sei die Differenzengleichung
 \begin{align*}
-	(1+a) y_{k+1} + y_k -1 = 0
-	\quad (k = 0,1,2,...)
+	6y_{k+1} + 2 y_k +7 = 6
+	\quad (k = 0,1,2,...).
 \end{align*}
-mit $ a \in \mathbb{R} \setminus \{-1,-2\} $, ist genau dann monoton und konvergent, wenn
+Es folgt, dass:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	$ a > 0 $.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und divergent ist.
 	\item
-	$ a >0 $ oder $ a < -1 $.	
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und divergent ist.	
 	\item 
-	$ -2 < a < 0 $.
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{7} $.
 	\item
-	$ a < -2 $.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{7} $.
 	\item 
-	Die allgemeine Lösung $ \{y_k\}_{k \in \mathbb{N}_0} $ ist nie monoton und konvergent.
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{8} $.
+	\item 
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{8} $.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -617,45 +351,8 @@ mit $ a \in \mathbb{R} \setminus \{-1,-2\} $, ist genau dann monoton und konverg
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Forme in die Normalform um.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Forme in die Normalform um}\\
-Wir formen die Differenzengleichung in die Normalform um:
-\begin{align*}
-	(1+a) y_{k+1} + y_k -1 = 0
-	\ \Leftrightarrow \
-	(1+a) y_{k+1} =  -y_k + 1
-	\ \Leftrightarrow \
-	y_{k+1} = -\frac{1}{1+a} y_k + \frac{1}{1+a}.
-\end{align*}
-Die Differenzengleichung ist genau dann monoton und konvergent, wenn $ 0 < A < 1 $ für
-\begin{align*}
-	A := -\frac{1}{1+a}
-\end{align*}
-gilt. 
-Das bedeutet, dass $ A> 0  $ und $ A < 1 $ gleichzeitig gelten muss.
-Für $ A > 0 $ gilt:
-\begin{align*}
-	A  = - \frac{1}{1+a} > 0
-	\ \overset{\cdot (-1)}{\Leftrightarrow} \
-	\frac{1}{(1+a)} < 0
-	\ \Leftrightarrow \
-	1+a < 0 
-	\ \Leftrightarrow \
-	a < -1. 
-\end{align*}
-Für $ A < 1 $ erhalten wir wegen $ a < -1 $:
-\begin{align*}
-	A < 1 
-	\ \overset{\cdot (-1)}{\Leftrightarrow} \
-	\frac{1}{1+a} > -1
-	\ \overset{a < -1}{\Leftrightarrow} \
-	1 < -(1+a) = -1 -a
-	\ \Leftrightarrow \
-	a < -2.
-\end{align*}
-Damit sind die Bedingungen für Monotonie und Konvergenz für $ a < -2 $ erfüllt.\\
-\\
-Also ist die Antwort (d) korrekt.
+\underline{1. }\\
