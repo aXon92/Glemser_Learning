@@ -315,12 +315,51 @@ gelöst?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Löse die Aufgabe durch geschicktes Einsetzen
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Löse die Aufgabe durch geschicktes Einsetzen}\\
+Wir könnten die korrekte Antwort durch sukzessives Einsetzen in alle Möglichkeiten finden. Die Koeffizienten $2$ und $8$ der Antwort (c) bilden das Verhältnis $\frac{1}{4}$. Damit ist diese Möglichkeit die erste Wahl. Eingesetzt erhalten wir:
+\begin{align*}
+	8 \left( \left(\frac{1}{4}\right)^{k+2} + 4 \right) 
+	-
+	2 \left(\left(\frac{1}{4}\right)^{k+1} + 4\right)
+	&=
+	8 \left(\frac{1}{4}\right)^{k+2}  + 32
+	- 2 \left(\frac{1}{4}\right)^{k+1} - 8\\
+	&=
+	2 \cdot 4 \left(\frac{1}{4}\right)^{k+2} - 2 \left(\frac{1}{4}\right)^{k+1} + 24\\
+	&=
+	2  \left(\frac{1}{4}\right)^{k+1} - 2 \left(\frac{1}{4}\right)^{k+1}  + 24
+	= 24
+\end{align*}
+Damit ist Antwort (c) korrekt.
+\\
+\textit{Alternative Lösung:} 
+Die Antwortmöglichkeiten besitzen die allgemeine Form
+\begin{align*}
+	a y_{k+1} + b y_k = c
+\end{align*}
+für $a ,b ,c \neq 0$. Wir definieren 
+\begin{align*}
+	x_k := \left(\frac{1}{4}\right)^{k+1} = \frac{1}{4^{k+1}}.
+\end{align*}
+Damit gilt $y_k = x_k + 4$ und wir können die allgemeine Form umstellen:
+\begin{align*}
+	a x_{k+1} + b x_k = c - 4(a+b).
+\end{align*}
+Für die Antwortmöglichkeiten (a)-(c) erhalten wir die Gleichungen:
+\begin{enumerate}
+	\item $6 x_{k+1} - 3 x_k = 12 - 12 = 0$.
+	\item $4 x_{k+1} - 32 x_k = -26 + 4 \cdot 28$.
+	\item $8 x_{k+1} - 2 x_k = 0$.
+\end{enumerate}
+Durch Einsetzen der Anfangsbedingung $y_0 = \frac{1}{4}$ sieht man schnell, dass (a) und (b) nicht gelten kann. 
+$y_0$ erfüllt die Gleichung (c). Im Allgemeinen sieht man dies durch
+\begin{align*}
+	8 x_{k+1} - 2 x_k = 2 \cdot 4 \frac{1}{4^{k+1}} - 2 \frac{1}{4^k} = 0.
+\end{align*}
 \newpage
 
 \subsection*{\frage{8}{4}}
