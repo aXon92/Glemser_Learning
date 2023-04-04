@@ -390,8 +390,46 @@ Es folgt, dass:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bringe die Differenzengleichung in die Normalform.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bringe die Differenzengleichung in die Normalform}\\
+Die Normalform der Gleichung ist gegeben durch:
+\begin{align*}
+	6y_{k+1} + 2 y_k +7 = 6
+	\ \Leftrightarrow \
+	6y_{k+1} + 2 y_k  = -1
+	\ \Leftrightarrow \
+	6y_{k+1} = - 2 y_k   -1
+	\ \Leftrightarrow \
+	y_{k+1} = - \frac{1}{3} y_k   - \frac{1}{6}
+\end{align*}
+Damit liegt die Normalform mit $A = -\frac{1}{3}$ und $B = - \frac{1}{6}$ vor. Wegen $-1 < A  < 0 $ ist die Lösung konvergent und oszillierend. Mit der Normalform können wir den Grenzwert der Lösung $y_k$ durch 
+\begin{align*}
+	\lim \limits_{k \to \infty} y_k = \frac{B}{1 -A} = \frac{-\frac{1}{6}}{\frac{2}{3}}
+	=
+	- \frac{1}{6} \cdot \frac{3}{2} = -\frac{1}{8}
+\end{align*}
+angeben.\\
+\\
+Damit ist die Antwort (e) korrekt.\\
+\\
+\textit{Bemerkung:} Angenommen es liegt eine Differenzengleichung
+in Normalform 
+\begin{align*}
+	y_{k+1} = A y_k + B
+\end{align*}
+mit $|A|<1$ vor. Dann ist die Lösung $y_k$ konvergent und es existiert der (eindeutige) Grenzwert
+\begin{align*}
+	y^\star = \lim \limits_{k \to \infty} y_k.
+\end{align*}
+Wenn wir dies auf die Differenzengleichung in Normalform anwenden erhalten wir durch $y_k \to y^\star$ und $y_{k+1} \to y^\star$ für $k \to \infty$
+\begin{align*}
+	y^\star = A y^\star + B
+	\ \Leftrightarrow \
+	y^\star - A y^\star = (1 -A) y^\star = B
+	\ \Leftrightarrow \
+	y^\star = \frac{B}{1-A}
+\end{align*}
+die Formel für den Grenzwert. Falls bekannt ist, dass eine Differenzengleichung konvergent ist, kann dieses Verfahren auch ohne Normalform angewendet werden.
