@@ -142,11 +142,49 @@ Für welche Werte von $ c \in \mathbb{R} $ ist $ f $ eine Dichtefunktion?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Definition der Dichtefunktion.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1.}\\
+\underline{1. Verwende die Definition der Dichtefunktion}\\
+Eine Funktion $f : \mathbb{R} \to \mathbb{R}$ heißt \textit{Dichtefunktion}, falls $f(x) \geq 0$ für alle $x \in \mathbb{R}$ und
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx = 1.
+\end{align*}
+Wegen $f(x) \geq 0 $ muss $c \geq 0 $ sein und mit der Definition von $f$ erhalten wir:
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx
+	&=
+	\int \limits_{- \infty}^0 f(x) \ dx
+	+
+	\int \limits_{0}^{0.5} f(x) \ dx
+	+
+	\int \limits_{0.5}^{1} f(x) \ dx
+	+
+	\int \limits_{1}^{\infty} f(x) \ dx\\
+	&=
+	\int \limits_{0}^{0.5} 6x^2 \ dx
+	+
+	\int \limits_{0.5}^{1} \frac{c}{2x} \ dx
+	=
+	\left[\frac{6}{3} x^3 \right]_0^{0.5}
+	+
+	\frac{c}{2} \left[\ln(x)\right]_{0.5}^1\\
+	&=
+	2 (0.5)^3 - \frac{c}{2} \ln(0.5)	
+	=
+	2 \frac{1}{8} - \frac{c}{2} \ln(0.5).
+\end{align*}
+Damit $f$ eine Dichtefunktion ist, muss folgende Gleichung erfüllt sein:
+\begin{align*}
+	2 \frac{1}{8} - \frac{c}{2} \ln(0.5) = 1
+	\ \Leftrightarrow \
+	- \frac{c}{2} \ln(0.5) = \frac{6}{8}
+	\ \Leftrightarrow \
+	- c \ln(0.5) = \frac{6}{4}
+	c = - \frac{6}{4 \ln(0.5)} = -\frac{3}{2 \ln(0.5)}.
+\end{align*}
+Dieses $c$ ist wegen $\ln(0.5 ) < 0 $ positiv und die Anwort (b) ist korrekt.
 
 \newpage
 
