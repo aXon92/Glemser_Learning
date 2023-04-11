@@ -321,11 +321,40 @@ Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
 \end{mdframed}
 
 \underline{1. Verwende die Definition des Eigenwerts}\\
-Der Vektor $ \textbf{x} $ heißt Eigenvektor zum Eigenwert $ -1 $, falls
+Der Vektor $ \textbf{x} \neq 0 $ heißt Eigenvektor zum Eigenwert $ 4 $, falls
 \begin{align*}
-	A \textbf{x} = - \textbf{x}
+	A \textbf{x} = 4 \cdot  \textbf{x}
 \end{align*}
-für $ \textbf{x} \neq 0 $ gilt. Mit $ \textbf{x}_a $,..., $ \textbf{x}_d $ bezeichnen wir die Vektoren der Antwortmöglichkeiten mit $ s = 1 $. 
+gilt. Unter einem Eigenraum $ W $ zu einem Eigenwert $ \lambda $ verstehen wir die Lösungsmenge des homogenen LGS $ (A - \lambda I) \textbf{x}  = \textbf{0}$. Für unsere Aufgabenstellung also:
+\begin{align*}
+	 W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\ 
+	(A - 4 I) \textbf{x}  = \textbf{0}
+	\right\}
+\end{align*}
+Mit $ \textbf{x}_a $,..., $ \textbf{x}_d $ bezeichnen wir die Vektoren der Antwortmöglichkeiten mit $ s = 1 $ und mit $ W_a $,...,$ W_d $ die potentiellen Eigenräume. 
+Durch die obere Dreiecksgestalt von $ A $ kann man direkt erkennen:
+\begin{align*}
+	A \cdot \textbf{x}_a = 
+	\begin{pmatrix}
+		0 \\ 0 \\ -4
+	\end{pmatrix}
+	=
+	4
+	\begin{pmatrix}
+		0 \\ 0 \\ -1
+	\end{pmatrix} 
+	.
+\end{align*}
+Damit ist $ \textbf{x}_a $ ein Eigenvektor von $ A $ zum Eigenwert $ 4 $ und $ \textbf{x}_a $ spannt den zugehörigen Eigenraum $ W_a $ auf.\\
+\\
+Also ist die Antwort (a) korrekt.\\
+
+Falls man dies nicht direkt erkennt, prüft man die Definition mit $ \textbf{x}_a $,..., $ \textbf{x}_d $.
 
 
 \newpage
