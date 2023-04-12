@@ -260,11 +260,26 @@ Es folgt, dass:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende die Definition des Ranges.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Definition des Ranges}\\
+Der Rang einer Matrix $ A $ ist definiert durch
+\begin{align*}
+	\mathrm{rg}(A) := \ \text{Anzahl der linear unabhängigen Spalten von $ A $}.
+\end{align*}
+Da $ A $ eine $ (1 \times 5) $ Matrix ist, sind die einzelnen Spalten Skalare.
+Damit kann der Rang höchstens $ 1 $ sein und ist genau dann $ 1 $, wenn mindestens einer dieser Skalare ungleich $ 0 $ ist.\\
+\\
+Also ist die Antwort (c) korrekt.\\
+\\
+Man kann den Rang einer Matrix auch als die Anzahl der linear unabhängigen Zeilen definieren. Diese ist äquivalent zu der Definition über die linear unabhängigen Spalten. Sei $ \textbf{v} := A^\top $ der Zeilenvektor von $ A $. Die Definition der lineare Unabhängigkeit über einen Vektor ist: 
+\begin{align*}
+	\lambda \textbf{v} = \textbf{0} \ \Rightarrow \ \lambda = 0.
+\end{align*}
+Diese kann nur erfüllt sein, falls mindestens ein Eintrag von $ \textbf{v} $ ungleich $ 0 $ ist. 
+
 
 \newpage
 \subsection*{\frage{9}{3}}
