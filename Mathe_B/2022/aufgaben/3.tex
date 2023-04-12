@@ -101,11 +101,28 @@ Der Erwartungswert von $ X $ ist gleich:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende die Definition des Erwartungswerts.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1.}\\
+\underline{1. Verwende die Definition des Erwartungswerts}\\
+Der Erwartungswert von $ X $ ist definiert als
+\begin{align*}
+	\mathbb{E}[X] = \int \limits_{- \infty}^\infty x f(x) \ dx.
+\end{align*}
+Durch Einsetzen der Funktion erhalten wir:
+\begin{align*}
+	\mathbb{E}[X] 
+	&= \int \limits_{- \infty}^\infty x f(x) \ dx
+	= \int \limits_{- \infty}^0 x f(x) \ dx 
+	+ \int \limits_{0}^1 x f(x) \ dx 
+	+ \int \limits_{1}^\infty x f(x) \ dx \\
+	&= \frac{3}{2} \int \limits_{0}^1 x \sqrt{x} \ dx
+	= \frac{3}{2} \int \limits_{0}^1 x^{\frac{3}{2}} \ dx
+	= \frac{3}{2} \left[\frac{2}{5} x^{\frac{5}{2}}\right]_0^1
+	= \frac{3}{2} \cdot \frac{2}{5} = \frac{3}{5}.
+\end{align*}
+Damit ist die Antwort (a) korrekt.
 
 \newpage
 
