@@ -147,11 +147,11 @@ Es folgt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Schließe falsche Antworten aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Schließe falsche Antworten aus}\\
 
 \newpage
 
@@ -215,12 +215,23 @@ Gegeben sei das lineare Gleichungssystem
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Nutze den Quotienten aus Determinanten der Cramerschen Regel.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Nutze den Quotienten aus Determinanten der Cramerschen Regel}\\
+Ein Komponente $ x_i $ des Lösungsvektors wird mit der Cramerschen Regel durch
+\begin{align*}
+	x_i = \frac{\det(A_i)}{\det(A)}
+\end{align*}
+bestimmt. Da ist $ \det(A)  $ im Nenner vorkommt, ist $ \det(A) \neq 0 $ notwendig um die Cramersche Regel anzuwenden.
+Determinanten sind nur für quadratische Matrizen definiert, womit $ A $ quadratisch sein muss.
+Wegen $ \det(A) \neq 0 $ muss $ A $ invertierbar sein. Für quadratische Matrizen ist dies äquivalent zu einem vollem Rang. Der volle Rang wiederum ist äquivalent dazu, dass $ \mathrm{rg}(A) = \mathrm{rg}([A,\textbf{b}]) $ gilt.
+Damit haben wir festgestellt, dass für die Cramersche Regel die Annahmen (a), (b), (c) und (e) notwendig sind.\\
+\\
+Damit ist Antwort (d) korrekt.\\
+\\
+Die Annahme $ \textbf{b} \neq \textbf{0} $ ist nicht notwendig. Für den Nullvektor würde man mit der Cramerschen Regel eben auch den Nullvektor als Lösung erhalten. 
 \newpage
 
 \subsection*{\frage{8}{3}}
