@@ -182,11 +182,38 @@ den folgenden Eigenwert hat:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende die Definition des Eigenwerts.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Definition des Eigenwerts}\\
+Sei $ \lambda  $ der Eigenwert der regulären Matrix $ A $ und $ \textbf{v} $ ein zugehöriger Eigenvektor. Dann gilt:
+\begin{align*}
+	A \cdot  \textbf{v} = \lambda \textbf{v}
+	\ \Leftrightarrow \
+	A^{-1} \cdot A \textbf{v} = I \cdot \textbf{v} = \textbf{v} = A^{-1} \cdot \lambda \textbf{v}
+	\ \Leftrightarrow \
+	A^{-1} \cdot \textbf{v} = \frac{1}{\lambda} \textbf{v}.
+\end{align*} 
+Somit ist $ \frac{1}{\lambda} $ ein Eigenwert von $ A^{-1} $.\\
+\\
+\textit{Hinweis}: Wegen $ \det(A) \neq  0 $ kann $ 0 $ kein Eigenwert einer regulären Matrix sein.\\
+\\
+Wegen
+\begin{align*}
+	A^{-4} \cdot \textbf{v} 
+	= 
+	A^{-1} \cdot A^{-1} \cdot A^{-1} \cdot A^{-1} \cdot  \textbf{v}
+	=
+	A^{-1} \cdot A^{-1} \cdot A^{-1} \cdot \frac{1}{\lambda} \textbf{v}
+	=
+	...
+	=
+	\frac{1}{\lambda^4} \textbf{v}  
+\end{align*}
+ist $ \frac{1}{\lambda^4} $ ein Eigenwert von $ A^{-4} $.\\
+\\
+Damit ist die Antwort (a) korrekt.
 
 
 \newpage
