@@ -236,11 +236,167 @@ Es folgt, dass
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bringe die Matrix auf Zeilenstufenform.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bringe die Matrix auf Zeilenstufenform}\\
+Durch elementare Zeilenoperationen erhalten wir:
+\begin{align*}
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+		\rowops
+		\add[ \cdot (-4)]{0}{3}
+		\add[ \cdot (-2)]{1}{2}	
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & -4 & 4 & 4 & 4 \\ 
+		0 & -3 & 3 & 4 & 3
+		\rowops
+		\mult{2}{ \cdot (-\frac{1}{4})}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & 1 & -1 & -1 & -1 \\ 
+		0 & -3 & 3 & 4 & 3
+		\rowops
+		\add[ \cdot (-3)]{2}{3}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & 1 & -1 & -1 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-3)]{2}{3}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 0 & 1 \\
+		3 & 2 & 1 & 0 & 1 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\mult{0}{ \cdot (3)}
+		\mult{1}{ \cdot (2)}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		6 & 4 & 2 & 0 & 2 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-1)]{0}{1}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-1)]{1}{2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\swap{1}{2}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 0 & 0 & 1 & 0 \\ 
+		0 & 0 & 0 & 0 & 0
+	\end{gmatrix}
+\end{align*}
+Damit sind drei Zeilen der Matrix $ A $ linear unabhängig und der Rang der Matrix ist $ 3 $. Also ist die Antwort (c) korrekt.\\
+\\
+\textit{Alternative Vorgehensweise}:\\
+Das direkte Anwenden von elementaren Zeilenumformungen führt bei diesem Aufgabentyp immer zum Ziel. Der Nachteil ist, dass dies potentiell fehleranfällig ist.\\
+\\
+Da $ A $ eine $ (4 \times 5) $ Matrix ist, kann der Rang maximal $ 4 $ betragen.
+Die dritte Spalte entspricht der fünften Spalte, weswegen eine davon für die Rangbestimmung irrelevant ist. Durch Anwenden von einer elementaren Spaltenoperation (analog zu elementaren Zeilenoperationen) erhalten wir:
+\begin{align*}
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}
+	\leadsto
+		\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 0 \\
+		3 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		8 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}.
+\end{align*}
+Weiter kann man sehen, dass die erste Spalte die Summe der zweiten und dritten Spalte ist, d.h. die ersten drei Spaltenvektoren sind linear abhängig. Darstellen können wir das durch elementare Spaltenoperationen:
+\begin{align*}
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 0 \\
+		3 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		8 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}
+	&\leadsto
+	\begin{gmatrix}[p]
+	2 & 1 & 1 & 1 & 0 \\
+	3 & 2 & 1 & 1 & 0 \\
+	6 & 0 & 6 & 6 & 0 \\ 
+	8 & 1 & 7 & 8 & 0
+	\colops
+	\add[ \cdot (-1)]{1}{0}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		1 & 1 & 1 & 1 & 0 \\
+		1 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		7 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{0}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		0 & 1 & 1 & 1 & 0 \\
+		0 & 2 & 1 & 1 & 0 \\
+		0 & 0 & 6 & 6 & 0 \\ 
+		0 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{0}
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		1 & 1 & 1 & 0 & 0 \\
+		2 & 1 & 1 & 0 & 0 \\
+		0 & 6 & 6 & 0 & 0 \\ 
+		1 & 7 & 8 & 0 & 0
+	\end{gmatrix}.
+\end{align*}
+Damit hat $ A $ drei linear unabhängige Spalten und der Rang der Matrix ist $ 3 $.
+
 
 \newpage
 
