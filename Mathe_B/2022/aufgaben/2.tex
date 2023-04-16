@@ -321,7 +321,7 @@ Diese kann nur erfüllt sein, falls mindestens ein Eintrag von $ \textbf{v} $ un
 
 \newpage
 \subsection*{\frage{9}{3}}
-Sei $ A $ eine $ (4 \times 2) $-dimensionale Matrix mit Rang $ 2 $ und $ B $ eine Matrix mit den Dimensionen mit Rang $ 1 $.\\
+Sei $ A $ eine $ (4 \times 2) $-dimensionale Matrix mit Rang $ 2 $ und $ B $ eine Matrix mit den Dimensionen $ (4 \times 3) $ mit Rang $ 1 $.\\
 \\
 Wir definieren die Matrix $ C $ als die Aneinanderreihung der Spalten von $ A $ und $ B $ wie folgt:
 \begin{align*}
@@ -347,13 +347,33 @@ Es folgt, dass:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Definition des Ranges.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Verwende die Definition des Ranges}\\
+Der Rang der Matrix $ C $ ist definiert durch
+\begin{align*}
+	\mathrm{rg}(C) := \ \text{Anzahl der linear unabhängigen Spalten von $ C $}.
+\end{align*}
+Die Matrix $ C $ hat die Dimension $ (4 \times 7) $. Die Spalten von $ A $ treten doppelt auf. Damit tragen von $ A $ zwei Spalten und von $ B $ eine Spalte zu dem Rang von $ C $ bei. Durch elementare Spaltenoperationen gilt:
+\begin{align*}
+	C = \begin{pmatrix}
+		\textbf{a}_1 \ \textbf{a}_2  \
+		\textbf{b}_1  \ \textbf{b}_2 \ \textbf{b}_3 \
+		\textbf{a}_1  \ \textbf{a}_2
+	\end{pmatrix}
+\leadsto
+	\begin{pmatrix}
+		\textbf{a}_1 \ \textbf{a}_2 \ 
+		\tilde{\textbf{b}_1} \ \textbf{0} \  \textbf{0} \
+		\textbf{0} \ \textbf{0}
+	\end{pmatrix}
+\end{align*}
+Hierbei sind $ \textbf{a}_i $, $ i = 1,2 $ und $ \textbf{b}_i $, $ i = 1,2,3 $ die Spaltenvektoren von $ A $ und $ B $ und $ \tilde{\textbf{b}_1} $ der aus den Spaltenoperationen entstehende Spaltenvektor. 
+Da $ \textbf{a}_1 $ und $ \textbf{a}_2 $ linear unabhängig sind, beträgt der Rang von $ C $ mindestens $ 2 $. Der Rang von $ C $ ist $ 3 $, falls sich $ \tilde{\textbf{b}_1} $ nicht von $ \textbf{a}_1 $ und $ \textbf{a}_2 $ linear kombinieren lässt, d.h. die Vektoren $ \textbf{a}_1 $, $ \textbf{a}_2 $ und $ \tilde{\textbf{b}_1} $ sind linear unabhängig.\\
+\\
+Damit ist die Antwort (c) korrekt.
 
 \newpage
 \subsection*{\frage{10}{3}}
