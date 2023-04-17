@@ -24,12 +24,33 @@ mit $ t \in \mathbb{N} $ ist gleich:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Substitutionsregel.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1.}\\
-
+\underline{1. Verwende die Substitutionsregel}\\
+Wir verwenden die Substitution $u = \sin\left(\frac{x}{t}\right)$. Dann gilt
+\begin{align*}
+	\frac{\mathrm{du}}{\mathrm{dx}} =\frac{1}{t} \cos\left(\frac{x}{t}\right)
+	\ \Leftrightarrow \
+	\mathrm{dx} = t \frac{1}{\cos\left(\frac{x}{t}\right)} \mathrm{du}
+\end{align*}
+und wir erhalten 
+\begin{align*}
+	\int_0^{2\pi} \cos \left(\frac{x}{t}\right) e^{- \sin(\frac{x}{t})} \mathrm{dx}
+	&=
+	\int_{\sin\left(\frac{0}{t}\right)}^{\sin\left(\frac{2\pi}{t}\right)} \cos\left(\frac{x}{t}\right) e^{-u}\cdot  t \frac{1}{\cos\left(\frac{x}{t}\right)} \mathrm{du}
+	=
+	t\cdot\int_{0}^{\sin\left(\frac{2\pi}{t}\right)} e^{-u}  \mathrm{du}\\
+	&=
+	t \cdot \left[-e^{-u}\right]_0^{\sin\left(\frac{2\pi}{t}\right)}
+	t \cdot \left(-e^{-\sin\left(\frac{2\pi}{t}\right)} + 1\right)
+	=
+	\left(1 - e^{-\sin\left(\frac{2\pi}{t}\right)}\right)t.
+\end{align*}
+Damit ist die Antwort (b) korrekt.\\
+\\
+Alternativ ist auch die Substitution $u = - \sin\left(\frac{x}{t}\right)$ möglich. Weiter kann man mit einer dieser Subsitutionen zunächst die Stammfunktionen bestimmen und dann das bestimmte Integral berechnet werden.
 
  
 \newpage
