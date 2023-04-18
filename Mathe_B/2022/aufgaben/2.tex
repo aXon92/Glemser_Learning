@@ -399,9 +399,47 @@ Welche der folgenden Aussagen ist \textit{nicht} korrekt bezüglich der Matrix $
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Schließe falsche Antworten aus.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Schließe falsche Antworten aus}\\
+Um die richtige Antwort zu finden, stellen wir fest welche Aussagen korrekt sind.\\
+\\
+Die Aussage (a) folgt direkt aus dem Laplaceschen Entwicklungssatz. Um die Eigenwerte von $A$ zu bestimmen lösen wir $\det(A - \lambda I) = 0$. Da $A$ eine obere Dreiecksmatrix ist, gilt dies auch für $A - \lambda I$. Dementsprechend gilt
+\begin{align*}
+	\det(A - \lambda I)
+	=(a_{11} - \lambda) \cdot (a_{22} - \lambda) \cdots (a_{nn} - \lambda)
+\end{align*}
+mit dem Laplaceschen Entwicklungssatz. Die Nullstellen (also Eigenwerte) entsprechen den Elementen auf der Diagonale womit die Aussage (d) korrekt ist.
+Die Aussage (b) gilt wegen
+\begin{align*}
+	(A + A^\top)^\top 
+	= A^\top + \left( A^\top \right)^\top  
+	= A + A^\top,
+\end{align*}
+d.h. obige Addition erzwingt für alle $(n \times n)$ Matrizen die Symmetrieeigenschaft $B = B^\top$.
+Die Antwort (c) ist korrekt, da bei einer Matrixmultiplikation mit einer oberern Dreiecksmatrix auch nur diejenigen Elemente zum Ergebnis beitragen, welche auf oder oberhalb der Diagonalen liegen. Alternativ kann man sich hierfür überlegen, welche elementaren Zeilenoperationen bei der Bestimmung der inversen Matrix notwendig sind.\\
+\\
+Somit bleibt nur die Antwort (e) übrig. Diese Aussage ist in der Tat nicht korrekt.
+Wir betrachten
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		1 & 1 \\
+		0 & 2
+	\end{pmatrix}.
+\end{align*}
+Diese obere Dreiecksmatrix hat die Eigenwerte $1$ und $2$ mit den Eigenvektoren
+\begin{align*}
+	\begin{pmatrix}
+		1\\
+		0
+	\end{pmatrix}
+	\ \text{und} \
+	\begin{pmatrix}
+		1\\
+		1
+	\end{pmatrix}.
+\end{align*}
+Dies ist ein Gegenbeispiel, womit Antwort (e) korrekt ist.
