@@ -117,11 +117,33 @@ gleich
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Forme das Integral um und verwende, dass die Funktion gerade ist.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Forme das Integral um und verwende, dass die Funktion gerade ist}\\
+Mit der Information, dass $f$ gerade ist und den gegebenen Werten für das Integral gilt:
+\begin{align*}
+	\int_{-2}^{-1} (2 - f(x) ) \ dx
+	&=
+	\int_{-2}^{-1} 2  \ dx
+	-
+	\int_{-2}^{-1} f(x) \ dx
+	\underset{f \ \text{gerade}}{=}
+	2
+	-
+	\int_{1}^{2} f(x) \ dx\\
+	&=
+	2 
+	-
+	\left(\int_{1}^{3} f(x) \ dx - \int_{2}^{3} f(x) \ dx\right)
+	=
+	2
+	-
+	(15 - 10)
+	=-3
+\end{align*}
+Damit ist die Antwort (c) korrekt.
 
 \newpage
 \subsection*{\frage{5}{4}}
