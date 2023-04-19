@@ -174,7 +174,103 @@ Es folgt:
 \end{mdframed}
 
 \underline{1. Schließe falsche Antworten aus}\\
-
+Das Produkt $AB$ ist eine $(n \times n)$ Matrix. 
+Somit gilt dies auch für $(AB)^\top$. Also ist Antwort (a) nur korrekt, falls $n = m$ ist und gilt nicht im Allgemeinen.
+Für die Antwort (b) geben wir ein Gegenbeispiel an:
+\begin{align*}
+	A
+	= 
+	\begin{pmatrix}
+		1 & 0\\
+		0 & 1
+	\end{pmatrix},
+	\
+	B
+	=
+	\begin{pmatrix}
+		1 & 1 \\
+		0 & 1
+	\end{pmatrix}
+	\
+	\Rightarrow
+	\
+	(AB)^\top
+	= 
+	\begin{pmatrix}
+		1 & 0\\
+		1 & 1
+	\end{pmatrix}.
+\end{align*}
+Auch für die Antwort (c) finden wir ein Gegenbeispiel. Hierbei nutzen wir aus, dass $A$ und $B$ nicht quadratisch sein müssen:
+\begin{align*}
+	A
+	=
+	\begin{pmatrix}
+		1 & 0 & 0 & 0\\
+		0 & 1 & 0 & 0
+	\end{pmatrix},
+	\
+	B =
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0 \\
+		1 & 0 \\
+		0 & 1
+	\end{pmatrix}
+	\
+	\Rightarrow
+	\
+	(AB)^\top = 
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{align*}
+Es gilt $\mathrm{rg}(A) = \mathrm{rg}(B) = 2 = n$ und $\mathrm{rg}\left((AB)^\top\right) = 0$, womit $(AB)^\top$ nicht invertierbar ist.\\
+Zur Antwort (d): Falls $AB$ invertierbar ist, gilt dies wegen
+\begin{align*}
+	\left((AB)^\top\right)^{-1} = \left((AB)^{-1}\right)
+\end{align*}
+Wenn $n = m $ gelten würde, wäre (d) wegen 
+\begin{align*}
+	\det(BA) = \det(B) \det(A) \neq 0
+\end{align*}
+korrekt. Für $n \neq m$ gilt dies nicht, da die Matrixmultiplikation nicht kommutativ ist. Dies lässt sich auch durch ein Gegenbeispiel untermauern:
+\begin{align*}
+	B
+	=
+	\begin{pmatrix}
+		1 & 0 & 0 \\
+		0 & 1 & 0
+	\end{pmatrix},
+	\
+	A 
+	=
+	\begin{pmatrix}
+		1 & 0 \\
+		0 & 1\\
+		0 & 0
+	\end{pmatrix}
+	\ \Rightarrow \
+	BA=
+	\begin{pmatrix}
+		1 & 0\\
+		0 & 1
+	\end{pmatrix}, \
+	AB =
+	\begin{pmatrix}
+		1 & 0 & 0\\
+		0 & 1 & 0\\
+		0 & 0 & 0
+	\end{pmatrix}.
+\end{align*}
+$BA$ ist invertierbar, $AB$ jedoch nicht.\\
+\\
+Somit bleibt die Anwort (e) als korrekte Antwort übrig.
+In der Tat gilt diese Aussage für jede quadratische Matrix,
+da der Rang einer quadratischen Matrix für jeden Eigenwert ungleich $0$ um eins anwächst. Somit gilt $\mathrm{rg}\left((AB)^\top\right) = n$ und $(AB)^\top $ ist invertierbar.\\
+\\
+Damit ist Antwort (e) korrekt.
 \newpage
 
 \subsection*{\frage{6}{3}}
