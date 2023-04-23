@@ -17,13 +17,77 @@ Die Funktion $ f(x,y) \ = \ (x-2)^2 -y^2 $ hat einen Sattelpunkt beim Punkt $ P 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Prüfe, ob $ P $ die Nebenbedingung erfüllt.
+\item Verwende Substitution für die übrigen Antwortmöglichkeiten.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Prüfe, ob $ P $ die Nebenbedingung erfüllt}\\
+Die Antwortmöglichkeiten (a),(b) und (d),(e) besitzen jeweils identische Nebenbedingungen.
+Durch Einsetzen von $ P $ erhalten wir:
+\begin{align*}
+	2 x - y -4 = 0 \ &\Rightarrow 2 \cdot 2 -4  = 0 \ \text{NB (a),(b)}\\
+	-x  - 2y - 4 = 0 \ &\Rightarrow \ -2 -4 \neq 0 \ \text{NB (c)}\\
+	-\frac{1}{2}x - y + 1 = 0 \ &\Rightarrow 2 \cdot 2 -4  = 0 \ \text{NB (d),(e)}
+\end{align*}
+Von (c) wird die Nebenbedingung nicht erfüllt, die übrigen Antwortmöglichkeiten müssen wir untersuchen.\\
+\\
+\underline{2. Verwende Substitution für die übrigen Antwortmöglichkeiten}\\
+Da die Nebenbedingung lineare Funktionen sind können wir diese problemlos substituieren.
+Wir beginnen mit $ \varphi_1(x,y) = 2x-y -4 = 0 $. Dies können wir durch
+\begin{align*}
+	2x -y -4 = 0 \ \Leftrightarrow \ y = 2x - 4
+\end{align*}
+umformen und erhalten damit die Zielfunktion:
+\begin{align*}
+	F_1(x) = f(x, 2x -4) = (x-2)^2 - (2x-4)^2
+	= (x-2)^2 - 4 (x-2)^2
+	= -3 (x-2)^2.
+\end{align*}
+Damit ergibt sich (mit der Kettenregel)
+\begin{align*}
+	F_1^\prime(x) &= -3 \cdot 2 (x -2 ) = -6 (x-2) \ \Rightarrow \ F_1^\prime(2) = 0\\
+	F_1^{\prime \prime}(x) &= -6 < 0,
+\end{align*}
+womit $ f $ an $ P $ unter der Nebenbedingung $ \varphi_1 $ ein lokales Maximum besitzt. Die Antwortmöglichkeiten (a) und (b) sind also falsch.\\
+\\
+Wir wenden uns der Nebenbedingung $ \varphi_2(x,y) = - \frac{1}{2} x -y +1 $ zu. Diese können wir durch 
+\begin{align*}
+	- \frac{1}{2} x -y  +1 = 0 
+	\ \Leftrightarrow \
+	y = - \frac{1}{2}x +1
+\end{align*}
+umformen und erhalten die Zielfunktion
+\begin{align*}
+	F_2(x) = f\left(x,-\frac{1}{2} x +1\right)
+	&=
+	(x-2)^2 - \left(-\frac{1}{2} x +1\right)^2
+	=
+	(x-2)^2- \left(-\frac{1}{2}\right)^2 (x - 2)^2\\
+	&=
+	(x-2)^2 - \frac{1}{4}(x - 2)^2
+	= \frac{3}{4} (x-2)^2.
+\end{align*}
+Damit ergibt sich (mit der Kettenregel)
+\begin{align*}
+	F_2^\prime(x) &= \frac{3}{4} \cdot 2 (x -2 ) = \frac{3}{4} (x-2) \ \Rightarrow \ F_1^\prime(2) = 0\\
+	F_1^{\prime \prime}(x) &= \frac{3}{4} > 0,
+\end{align*}
+womit $ f $ an $ P $ unter der Nebenbedingung $ \varphi_2 $ ein lokales Minimum besitzt.\\
+\\
+Damit ist die Antwort (d) korrekt.\\
+\\
+Alternativ lässt sich die Aufgabe auch über graphische Veranschaulichung lösen.
+Die erste Grafik beinhaltet $ f $ mit der Nebenbedingung $\varphi_1(x,y) = 2x -y -4 = 0$.
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{pictures/aufgabe2_1_1}
+\end{center}
+Man sieht, dass $ f $ an $ P $ unter $ \varphi_1 $ ein lokales Maximum besitzt, womit die Antwortmöglichkeiten (a) und (b) ausgeschlossen sind.\\
+Die zweite Grafik beinhaltet $ f $ mit der Nebenbedingung $\varphi_2(x,y) = -\frac{1}{2}x -y +1 = 0$.
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{pictures/aufgabe2_1_2}
+\end{center}
+Man erkennt, dass $ f $ an $ P $ unter $ \varphi_2 $ ein lokales Minimum besitzt.
 \newpage
 
 \subsection*{\frage{2}{3}}
@@ -53,7 +117,6 @@ Welche der folgenden Aussagen ist korrekt?
 \underline{1. Verwende die Monotonie}\\
 Da $ f(x,y) $ in  $ (5,2) $ ein lokales Maximum hat, besitzt $ f(x,-y) $ in $ (5,-2) $ ein Maximum. 
 Es gilt im Allgemeinen gilt: $ f(x,y) $ hat ein lokales Maximum in $ (x_0,y_0) $ genau dann, wenn $ f(x,-y) $ ein lokales Maximum in $ (x_0,-y_0) $ besitzt.
-
 Weiter erhalten streng monotone Funktionen die lokalen Extrema.
 Da die Exponentialfunktion und die Wurzelfunktion streng monoton sind, ist deren Zusammensetzung auch streng monoton. Damit besitzen $ h(x,y) $ und $ f(x,-y) $ dieselben Extrema. Somit ist $ (5,-2) $ ein lokales Maximum von $ h$. 
 
