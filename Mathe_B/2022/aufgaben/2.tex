@@ -78,12 +78,29 @@ ist gleich:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende partielle Integration.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Verwende partielle Integration}\\
+Wir definieren durch
+\begin{align*}
+	u(x)  = F(x)  \ &\Rightarrow \ u^\prime(x) = f(x)\\
+	v(x) = g(x)  \ &\Rightarrow \ v^\prime (x) = a	
+\end{align*}
+Funktionen für die partielle Integration. Damit erhalten wir
+\begin{align*}
+	\int f(x) g(x) \ dx.
+	=
+	\int u^\prime(x) v(x) \ dx
+	=
+	u(x) v(x) - \int u(x) v^\prime(x) \ dx
+	=
+	F(x)(ax+b) - a \int F(x) \ dx
+	=
+	axF(x) + b F(x) - a \int F(X) \ dx,
+\end{align*}
+womit die Antwort (a) korrekt ist.
 
 \newpage
 
