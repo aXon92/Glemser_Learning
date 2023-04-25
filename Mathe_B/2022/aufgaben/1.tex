@@ -84,14 +84,58 @@ Verwenden Sie den Gauß-Algorithmus für die folgenden Aufgaben.
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(b1)}] Stelle das lineare Gleichungssystem auf.
-\item[\textbf{(b2)}] 
+\item[\textbf{(b2)}] Wende das Gaußverfahren an.
 \item[\textbf{(b3)}] 
 \end{enumerate}
 \end{mdframed}
 
-
+In dieser Aufgabe liegt ein lineares Gleichungssystem vor.
+Dies müssen wir zunächst aus der Aufgabenstellung extrahieren und darauf dessen Struktur und Eigenschaften untersuchen.
+Wir schreiben die Renditen der einzelen Szenarien zu einer Aktie als Vektor und linear kombinieren diese zu den Gesamtrenditen der einzelnen Szenarien:
+\begin{align*}
+	x_1
+	\begin{pmatrix}
+		3 \\ 2 \\ 3 \\ -1
+	\end{pmatrix}
+	+
+	x_2
+	\begin{pmatrix}
+		1 \\ 2 \\ 3 \\ 1
+	\end{pmatrix}
+	+
+	x_3
+	\begin{pmatrix}
+		2 \\ 2 \\ 1 \\ 0
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		5 \\ 3 \\ a \\ -2
+	\end{pmatrix}
+\end{align*}
 
 \underline{\textbf{(b1)} Stelle das lineare Gleichungssystem auf}\\
+In der Einleitung haben wir das Aufstellen des Gleichungssystems
+\begin{align*}
+	s_1 : 3x_1 +  \ x_2 + 2 x_3 \ &=\ 5\\
+	s_2 : 2x_2 + 2 x_2 + 2 x_3 \ &= \ 3\\
+	s_3 : 3x_1 + 3x_2 + \ \ x_3 \ &= \ a \ \\
+	s_4 : -x_1 + x_2 \qquad \quad \ \ &= -2
+\end{align*}
+für die einzelen Szenarien $s_i$ mit $i = 1,...,4$ vorwegenommen.
+Übersetzt in eine erweiterte Koeffizientenmatrix erhalten wir:
+\begin{align*}
+	(A,\mathbf{b})
+	=
+	\begin{pmatrix}
+		3 & 1 & 2 & \BAR & 5\\
+		2 & 2 & 2 & \BAR & 3\\
+		3 & 3 & 1 & \BAR & a \\
+		-1 & 1 & 0 & \BAR & -2
+	\end{pmatrix}.
+\end{align*}
+\ \\
+\underline{\textbf{(b2)} Wende das Gaußverfahren an}\\
+
 
 \newpage
 \subsection*{\aufgabe{c}{14}}
