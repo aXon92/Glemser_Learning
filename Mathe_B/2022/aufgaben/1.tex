@@ -84,14 +84,19 @@ Verwenden Sie den Gauß-Algorithmus für die folgenden Aufgaben.
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(b1)}] Stelle das lineare Gleichungssystem auf.
-\item[\textbf{(b2)}] Wende das Gaußverfahren an.
+\item[\textbf{(b2)}] 
+\begin{enumerate}
+	\item[1.] Wende das elementare Zeilenumformungen an (Gauß-Verfahren).
+	\item[2.] Überlege ob Lösungen existieren und prüfe deren Eindeutigkeit.
+\end{enumerate}
+
 \item[\textbf{(b3)}] 
 \end{enumerate}
 \end{mdframed}
 
 In dieser Aufgabe liegt ein lineares Gleichungssystem vor.
 Dies müssen wir zunächst aus der Aufgabenstellung extrahieren und darauf dessen Struktur und Eigenschaften untersuchen.
-Wir schreiben die Renditen der einzelen Szenarien zu einer Aktie als Vektor und linear kombinieren diese zu den Gesamtrenditen der einzelnen Szenarien:
+Wir schreiben die Renditen der einzelnen Szenarien zu einer Aktie als Vektor und linear kombinieren diese zu den Gesamtrenditen der einzelnen Szenarien:
 \begin{align*}
 	x_1
 	\begin{pmatrix}
@@ -134,7 +139,84 @@ für die einzelen Szenarien $s_i$ mit $i = 1,...,4$ vorwegenommen.
 	\end{pmatrix}.
 \end{align*}
 \ \\
-\underline{\textbf{(b2)} Wende das Gaußverfahren an}\\
+\underline{\textbf{(b2)} 1. Wende das elementare Zeilenumformungen an (Gauß-Verfahren)}\\
+Durch elementare Zeilenumformungen erhalten wir:
+\begin{align*}
+	\begin{gmatrix}[p]
+		3 & 1 & 2 & \BAR & 5\\
+		2 & 2 & 2 & \BAR & 3\\
+		3 & 3 & 1 & \BAR & a \\
+		-1 & 1 & 0 & \BAR & -2
+		\rowops
+		\add[ \cdot 3]{3}{2}
+		\add[ \cdot 2]{3}{1}
+		\add[ \cdot 3]{3}{0}
+	\end{gmatrix}
+	&\leadsto
+	\begin{gmatrix}[p]
+		0 & 4 & 2 & \BAR & -1\\
+		0 & 4 & 2 & \BAR & -1\\
+		0 & 6 & 1 & \BAR & a - 6\\
+		-1 & 1 & 0 & \BAR & -2
+		\rowops
+		\add[ \cdot (-1)]{0}{2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		0 & 4 & 2 & \BAR & -1\\
+		0 & 0 & 0 & \BAR & 0\\
+		0 & 6 & 1 & \BAR & a - 6\\
+		-1 & 1 & 0 & \BAR & -2
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		-1 & 1 & 0 & \BAR & -2\\
+		0 & 4 & 2 & \BAR & -1\\
+		0 & 6 & 1 & \BAR & a - 6\\
+		0 & 0 & 0 & \BAR & 0
+		\rowops
+		\mult{1}{ \cdot (3)}
+		\mult{2}{ \cdot (2)}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		-1 & 1 & 0 & \BAR & -2\\
+		0 & 12 & 6 & \BAR & -3\\
+		0 & 12 & 2 & \BAR & 2a - 12\\
+		0 & 0 & 0 & \BAR & 0
+		\rowops
+		\mult{1}{ \cdot (3)}
+		\mult{2}{ \cdot (2)}
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		-1 & 1 & 0 & \BAR & -2\\
+		0 & 12 & 6 & \BAR & -3\\
+		0 & 12 & 2 & \BAR & 2a - 12\\
+		0 & 0 & 0 & \BAR & 0
+		\rowops
+		\add[ \cdot (-1)]{1}{2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		-1 & 1 & 0 & \BAR & -2\\
+		0 & 12 & 6 & \BAR & -3\\
+		0 & 0 & 4 & \BAR & 2a - 9\\
+		0 & 0 & 0 & \BAR & 0
+		\rowops
+		\mult{1}{ \cdot (\frac{1}{3})}
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		-1 & 1 & 0 & \BAR & -2\\
+		0 & 4 & 2 & \BAR & -1\\
+		0 & 0 & 4 & \BAR & 2a - 9\\
+		0 & 0 & 0 & \BAR & 0
+	\end{gmatrix}
+\end{align*}
+\ \\
+\underline{\textbf{(b2)} 2. Überlege ob Lösungen existieren und prüfe deren Eindeutigkeit}\\
+Damit ein Gleichungssystem $ A \mathbf{x} = \mathbf{b} $ mindestens eine Lösung besitzt, muss $ \mathrm{rg}(A) = \mathrm{rg}( (A,\mathbf{b} ) $ gelten.
 
 
 \newpage
