@@ -17,16 +17,27 @@ Eine Rederei muss für ihre Schiffe Container herstellen, um darin Güter um die
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item[\textbf{(a1)}] 
-\begin{enumerate}
-	\item[1.] .
-	\item[2.] .
-\end{enumerate} 
+\item[\textbf{(a1)}] Stelle die Funktion mithilfe des Quadervolumens auf.
 \item[\textbf{(a2)}] 
 \end{enumerate}
 \end{mdframed}
-\underline{\textbf{(a1)} 1. }\\
-
+Die Verwendung von \glqq minimal\grqq \ lässt vermuten, dass ein Optimierungsproblem vorliegt.
+Hierbei müssen wir zunächst prüfen ob und welche Nebenbedingungen vorliegen. Diese beschränken die Variablen. In unseren Fall müssen wir $ x $,  $ y $ und $ z $ so wählen, dass das Volumen des quaderförmigen Containers $ 27 $ Einheiten beträgt.
+Es liegt also ein Minimierungsproblem mit Nebenbedingung vor.\\
+\\
+\underline{\textbf{(a1)} Stelle die Funktion mithilfe des Quadervolumens auf }\\
+Ein Quader(Container) mit Länge $ x $, Höhe $ y $ und Breite $ z $ hat das Volumen $ V $
+\begin{align*}
+	V(x,y,z) = xyz.
+\end{align*}
+In unserem Fall soll das Volumen des Containers $ 27 $ Volumeneinheiten betragen.
+Damit erhalten wir die Breite $ z $ als Funktion
+\begin{align*}
+	V(x,y,z) = xyz = 27  
+	\ \Leftrightarrow \
+	z(x,y) := z = \frac{27}{xy}
+\end{align*}
+für $ x,y > 0 $.
 
 
 
