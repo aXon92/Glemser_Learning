@@ -18,7 +18,7 @@ Eine Rederei muss für ihre Schiffe Container herstellen, um darin Güter um die
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(a1)}] Stelle die Funktion mithilfe des Quadervolumens auf.
-\item[\textbf{(a2)}] 
+\item[\textbf{(a2)}] Verwende die Nebenbedingung für Oberfläche eines Quaders.
 \end{enumerate}
 \end{mdframed}
 Die Verwendung von \glqq minimal\grqq \ lässt vermuten, dass ein Optimierungsproblem vorliegt.
@@ -37,11 +37,94 @@ Damit erhalten wir die Breite $ z $ als Funktion
 	\ \Leftrightarrow \
 	z(x,y) := z = \frac{27}{xy}
 \end{align*}
-für $ x,y > 0 $.
-
-
-
-
+für $ x,y > 0 $. Damit liegt eine Darstellung der Nebenbedingung in Abhängigkeit von $x$ und $y$ vor.\\
+\\
+\underline{\textbf{(a2)} Verwende die Nebenbedingung für Oberfläche eines Quaders}\\
+Die Oberfläche eines Quaders(Containers) ist gegeben durch
+\begin{align*}
+	O(x,y,z) = 2 (xy + xz + yz).
+\end{align*}
+Diese soll nun unter der Nebenbedingung $V(x,y,z) = xyz = 27$ minimal werden. In der Teilaufgabe (a1) haben wir diese nach der Variablen $z$ umgeformt, wodurch diese in der Zielfunktion substituiert werden kann:
+\begin{align*}
+	F(x,y) = O(x,y,z(x,y))
+	=
+	2 ( xy +xz +yz )= 2 \left( xy + \frac{27}{y} + \frac{27}{x}\right)
+	=
+	2xy + \frac{54}{x} + \frac{54}{y}.
+\end{align*}
+Durch die Substitution liegt ein Extremwertproblem in zwei Variablen ohne Nebenbedingung vor um die Länge $x$, Höhe $y$ und Breite $z(x,y)$ für die minimale Oberfläche zu bestimmen.
+Die partiellen Ableitungen erster Ordnung sind:
+\begin{align*}
+	F_x(x,y) &= 2 y - \frac{54}{x^2}\\
+	F_y(x,y) &= 2 x - \frac{54}{y^2}.
+\end{align*}
+Die notwendige Bedingung für einen Extrempunkt in $(x_0,y_0)$ ist
+\begin{align*}
+	\textbf{(I)} &\ F_x(x_0,y_0) = 2 y_0 - \frac{54}{x_0^2} = 0
+	\ \Leftrightarrow \
+	= 2 y_0 x_0- \frac{54}{x_0} = 0\\
+	\textbf{(II)} &\ F_y(x_0,y_0) = 2 x_0 - \frac{54}{y_0^2} = 0
+	\ \Leftrightarrow \
+	= 2 y_0 x_0- \frac{54}{y_0} = 0.
+\end{align*}
+Das Gleichsetzen von \textbf{(I)} und \textbf{(II)} liefert:
+\begin{align*}
+	2 y_0 x_0- \frac{54}{x_0} = 2 y_0 x_0- \frac{54}{y_0}
+	\ \Leftrightarrow \
+	 -\frac{54}{x_0} = -\frac{54}{y_0}
+	 \ \Leftrightarrow \
+	 \frac{1}{x_0} = \frac{1}{y_0}
+	 \ \Leftrightarrow \
+	 x_0 = y_0.
+\end{align*}
+Durch Einsetzen hiervon in \textbf{(I)} (oder \textbf{(II)}) erhalten wir:
+\begin{align*}
+	2x_0^2 - \frac{54}{x_0} = 0
+	\ \Leftrightarrow \
+	2 x_0^3 - 54 = 0
+	\ \Leftrightarrow \
+	2 x_0^3 = 54 
+	\ \Leftrightarrow \
+	x_0^3 = 27
+	\ \Leftrightarrow \
+	x_0 = \sqrt[3]{27} = 3.
+\end{align*}
+Damit gilt auch $y_0 = 3$ und es folgt 
+\begin{align*}
+	z(x_0,y_0) = \frac{27}{3 \cdot 3 } = 3.
+\end{align*}
+Somit liegt die potientiell minimale Fläche für die Länge, Höhe und Breite von $3$ vor.\\
+\\
+Um zu zeigen, dass an $(x_0,y_0) =(3,3)$ wirklich ein Minimum vorliegt, muss die hinreichende Bedingung
+\begin{align*}
+	\Delta(x_0,y_0)
+	=F_{xx}(x_0,y_0)F_{yy}(x_0,y_0)
+	- (F_{xy}(x_0,y_0))^2 > 0 
+\end{align*}
+mit $F_{xx}(x_0,y_0) > 0 $ und $F_{yy}(x_0,y_0)>0$ erfüllt sein.
+Für die Ableitungen zweiter Ordnung gilt:
+\begin{align*}
+	F_{xx}(x,y)
+	=
+	\frac{2 \cdot 54}{x_3}, 
+	\quad
+	F_{yy}(x,y)
+	=
+	\frac{2 \cdot 54}{y_3},
+	\quad
+	F_{xy}(x,y)
+	=
+	F_{yx}(x,y) = 2.
+\end{align*}
+Durch Einsetzen von $(x_0,y_0)$ erhalten wir
+\begin{align*}
+	F_{xx}(3,3) = F_{yy}(3,3) = \frac{2 \cdot 54}{27} = 2 \cdot 2 = 4 > 0
+\end{align*}
+und es folgt:
+\begin{align*}
+	\Delta(3,3) = 4^2 - 2^2 = 12 > 0.
+\end{align*}
+Damit liegt für $(x_0,y_0) = (3,3)$ wirklich ein Minimum von $F$ vor, d.h. der Container hat die minimale Oberfläche als Würfel mit der Kantenlänge $3$.
 
 \newpage
 
