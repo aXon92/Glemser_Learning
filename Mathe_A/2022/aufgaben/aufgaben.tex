@@ -1,0 +1,574 @@
+%\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+
+
+\begin{Large}
+\textbf{Teil I: Offene Aufgaben (38 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für offene Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Ihre Antworten müssen alle Rechenschritte enthalten,
+diese müssen klar ersichtlich sein.
+Verwendung korrekter mathematischer Notation wird erwartet
+und fliesst in die Bewertung ein.
+
+\item
+Ihre Antworten zu den jeweiligen Teilaufgaben müssen in den dafür vorgesehenen Platz geschrie-
+ben werden. Sollte dieser Platz nicht ausreichen, setzen Sie Ihre Antwort auf der Rückseite oder
+dem separat zur Verfügung gestellten Papier fort. Verweisen Sie in solchen Fällen ausdrücklich
+auf Ihre Fortsetzung. Bitte schreiben Sie zudem Ihren Vor- und Nachnamen auf jeden separaten
+Lösungsbogen.
+
+\item
+Es werden nur Antworten im dafür vorgesehenen Platz bewertet. Antworten auf der Rückseite
+oder separatem Papier werden nur bei einem vorhandenen und klaren Verweis darauf bewertet.
+
+\item
+Die Teilaufgaben werden mit den jeweils oben auf der Seite angegebenen Punkten bewertet.
+
+\item
+Ihre endgültige Lösung jeder Teilaufgabe darf nur eine einzige Version enthalten.
+
+\item
+Zwischenrechnungen und Notizen müssen auf einem getrennten Blatt gemacht werden. Diese
+Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werden.
+\end{enumerate}
+
+\newpage
+\section*{\hfil Aufgaben \hfil}
+\vspace{1cm}
+\section*{Aufgabe 1 (38 Punkte)}
+\vspace{0.4cm}
+%\titleformat{\subsection}[runin]
+%{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\subsection*{\aufgabe{a1}{8}} 
+Die durchschnittlichen jährlichen Stromkosten eines Schweizer Haushalts sind von ungefähr $800$ Schweizer Franken im Jahr $2012$ auf (voraussichtlich) $1'200$ Schweizer Franken im Jahr $2023$ gestiegen. Um diese Entwicklung darzustellen, nehmen wir an, dass sich die Kosten $C$ über die Zeit gemäss dem folgenden mathematischen Modell entwickeln:
+\begin{align*}
+	C_\lambda(t)
+	=
+	\frac{1600}{1 + e^{-\lambda t}},
+\end{align*}
+wobei $t \geq 0$ die Anzahl der Jahre \textit{nach} $2012$ entspricht und $\lambda = 0.1$.
+\\
+\\
+Nehmen wir an, dass man die Preisentwicklung durch eine Verbesserung der Energieeffizienz entgegenwirken kann, was durch den Parameter $\lambda$ ausgedrückt wird. Das heisst, die Kosten im Jahr $2023$ können beschrieben werden als:
+\begin{align*}
+	c_{2023}(\lambda) 
+	=
+	\frac{1600}{1 + e^{- \lambda (2023 - 2012)}}.
+\end{align*}
+Zeigen Sie, dass es genau einen Wert $\lambda^\star \in [0,0.1]$ gibt, bei dem die Kosten im Jahr $2023$ $1'000$ Schweizer Franken entsprechen.
+
+\subsection*{\aufgabe{a2}{8}}
+Die durchschnittlichen jährlichen Stromkosten eines Schweizer Haushalts sind von ungefähr $800$ Schweizer Franken im Jahr $2012$ auf (voraussichtlich) $1'200$ Schweizer Franken im Jahr $2023$ gestiegen. Um diese Entwicklung darzustellen, nehmen wir an, dass sich die Kosten $C$ über die Zeit gemäss dem folgenden mathematischen Modell entwickeln:
+\begin{align*}
+	C_\lambda(t)
+	=
+	\frac{1600}{1 + e^{-\lambda t}},
+\end{align*}
+wobei $t \geq 0$ die Anzahl der Jahre \textit{nach} $2012$ entspricht und $\lambda = 0.1$.
+\\
+\\
+Nehmen wir an, dass man die Preisentwicklung durch eine Verbesserung der Energieeffizienz entgegenwirken kann, was durch den Parameter $\lambda$ ausgedrückt wird. Das heisst, die Kosten im Jahr $2023$ können beschrieben werden als:
+\begin{align*}
+	c_{2023}(\lambda) 
+	=
+	\frac{1600}{1 + e^{- \lambda (2023 - 2012)}}.
+\end{align*}
+Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ \lambda_0 = 0.5 $, um eine Näherung für $ \lambda^\star $ zu finden.
+ \\
+\\
+\titleformat{\subsection}[display]
+{\normalfont\large\bfseries}{\thesubsection}{1mm}{}
+\subsection*{\aufgabe{b}{12}}
+Sam begeistert sich für non-fungible tokens (NFTs).
+Er beschliesst ein digitales Kunstwerk zu kaufen, da er fest daran glaubt, dass der Wert des Kunstwerks innerhalb der nächsten Jahre signifikant steigen wird. 
+Das NFT Kunstwerk kostet $100'000$ Schweizer Franken und Sam
+beschliesst, sich einen Teil des Geldes für die Finanzierung zu leihen.
+Eine Freundin, Caroline, willigt ein, ihm zum 1. Januar 2023 $60'000$
+Schweizer Franken zu leihen, wodurch $60 \% $ der Kosten gedeckt werden.
+Allerdings verlangt sie einen recht hohen jährlichen Zinssatz
+von $5 \%$, da sie Sams Investitionsvorhaben eher skeptisch gegenübersteht.
+Darüber hinaus besteht sie darauf, dass Sams Schulden bis Ende des Jahres 2025 auf
+$30'000$ Schweizer Franken gesunken und schliesslich bis Ende des Jahres 2028 vollständig getilgt sind.
+Um diese Bedingungen zu erfüllen, stimmt Sam zu, dass er jedes Jahr, jeweils am Jahresende, bis zum 31. Dezember 2025 $C_1$ zurückzahlt und $C_2 = 5'000$ Schweizer Franken am Ende jeden Jahres vom 1. Januar 2026 bis zum 31. Dezember 2028.
+Die verbleibenden Schulden am Ende des Jahres 2028 will er dann mit dem durch den Verkauf des Kunstwerks generierten
+Erlös zurückzahlen.
+\begin{enumerate}
+	\item[(b1)] Fügen Sie die Ereignisse und Mittelflüsse dem Zeitstrahl hinzu.
+	\item[(b2)] Bestimmen Sie die jährlichen Zahlungen $C_1$ jeweils am Ende der Jahre 2023, 2024 und 2025.
+	\item[(b3)] Bestimmen Sie die Restschuld am Ende des Jahres 2028 \textit{bevor} Sam das Kunstwerk verkaufen und die Schulden vollständig tilgen wird.
+	\item[(b4)] Angenommen Sams Erwartungen bezüglich der Wertentwicklung seines NFT Kunstwerks waren falsch und das Kunstwerk hat seit 1. Januar 2023 jährlich $3 \%$ an Wert verloren. Prüfen Sie, ob es Sam möglich ist, seine Schulden vollständig zurückzuzahlen, wenn er \textit{ausschliesslich} seine Einnahmen aus dem Verkauf des Kunstwerks dafür verwendet.
+\end{enumerate}
+\begin{center}
+	\includegraphics[scale=0.45]{pictures/zeitstrahl_1_b}
+\end{center}
+\newpage
+\subsection*{\aufgabe{c}{10}}
+Die Alterung der Bevölkerung hat bedeutende ökonomische und soziale Auswirkungen. Deshalb ist es für die Politik von hoher Bedeutung, ein umfassendes Verständnis davon zu haben, wie sich das Bevölkerungswachstum über die nächsten 50 Jahre entwickeln wird.
+Modelle des Bevölkerungswachstums sind eine mathematische Beschreibung, wie die Bevölkerung voraussichtlich in Zukunft wachsen wird.
+Eines dieser Modelle nimmt an, dass die Grösse $s(t)$ einer Bevölkerung zum Zeitpunkt $t \geq 0$ durch die folgende mathematische Formel beschreiben lässt:
+\begin{align*}
+	s(t)
+	=
+	\left(s_0^{1- \gamma} + \mu (1 - \gamma)  t \right)^{\frac{1}{1- \gamma}},
+\end{align*}
+wobei $s_0 = s(0)$ die Grösse der Bevölkerung zum Zeitpunkt $0$ ist und $\mu, \gamma > 0, \ \gamma \neq 1$ gegebene Parameter sind.
+\begin{enumerate}
+	\item[(c1)] Berechnen Sie die Wachstumsrate $ \rho_s(t) $ von $ s $.
+	\item[(c2)] Benutzen Sie unter der Annahme, dass $s(0) = 10'000 $ Individuen, $\mu = 10$, und $\gamma = 0.5$, die Ableitung von $s$, um die relative Änderung der Bevölkerung zwischen dem Zeitpunkt $t_0 = 5 $ und dem Zeitpunkt $t_0 + \Delta t = 6$ zu approximieren.
+\end{enumerate}
+
+
+\newpage
+
+
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\begin{Large}
+\textbf{Teil II: Multiple-Choice-Fragen (64 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für Multiple-Choice-Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Die Antworten auf die Multiple-Choice-Fragen müssen im dafür vorgesehenen Antwortbogen ein-
+getragen werden. Es werden ausschliesslich Antworten auf diesem Antwortbogen bewertet. Der
+Platz unter den Fragen ist nur für Notizen vorgesehen und wird nicht korrigiert.
+
+\item
+Jede Frage hat nur eine richtige Antwort. Es muss also auch jeweils nur eine Antwort angekreuzt werden.
+
+\item
+Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet, auch wenn
+die korrekte Antwort unter den angekreuzten ist.
+
+\item
+Bitte lesen Sie die Fragen und die Anweisungen auf dem Multiple-Choice-Antwortbogen sorgfältig.
+
+\end{enumerate}
+\newpage
+\section*{Aufgabe 2 (34 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{3}}
+$ A $ und $ B $ seien zwei Aussagen. Welche der folgenden zwei zusammengesetzten Aussagen sind äquivalent? 
+ \renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ A \Rightarrow  B $ und $A \vee B$.
+\item $ A \vee B $ und $\neg (A \vee B)$.
+\item $ (A \Rightarrow \neg B) $ und $\neg ( A \vee B )$
+\item Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Welche der folgenden zusammengesetzten Aussagen ist eine Tautologie? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $(A \Rightarrow B ) \wedge (B \Rightarrow A)$.
+	\item $ ((A \wedge B) \Rightarrow B) \vee A$.
+	\item $ ((A \vee B) \Rightarrow B) \vee B$
+	\item $(A \Rightarrow B ) \vee \neg A \vee B$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{3}}
+Eine Möbelfirma wirbt:
+\begin{center}
+	\glqq Wir schenken Ihnen die Mehrwertsteuer auf Ihren Möbelkauf\grqq
+\end{center}
+Die Mehrwertsteuer auf Möbel beträgt in der Schweiz $ 7.7 \% $.\\
+Wie viel Prozent Rabatt gewährt also die Möbelfirma?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+Es sind etwa $ 7.15 \% $.
+\item 
+Es sind etwa $ 7.56 \% $.
+\item 
+Es sind genau $ 7.7 \% $.
+\item
+Es sind etwa $ 7.78 \% $.
+\item
+Es sind etwa $ 8.34 \% $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{3}}
+Sei $ f $ eine Funktion einer reellen Variablen und $ x_0 \in D_f $.
+$ x_0  $ heißt \textit{Fixpunkt von} $ f $, wenn gilt: $ f(x_0) = x_0 $.\\
+\\
+Welche der folgenden Aussagen ist wahr? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Wenn $ f $ invertierbar ist, dann hat $ f $ keinen Fixpunkt.
+	\item
+	Wenn $ f $ invertierbar ist und $ f^{-1} $ mehrere Fixpunkte hat, dann hat $ f $ höchstens einen Fixpunkt.
+	\item
+	Wenn $ f $ invertierbar ist, dann hat $ f $ mindestens einen Fixpunkt.
+	\item
+	Wenn $ f  $ einen Fixpunkt hat, dann ist $ f $ invertierbar.
+	\item
+	Wenn $ f $ invertierbar ist und einen Fixpunkt hat, dann hat auch $ f^{-1} $ einen Fixpunkt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{3}}
+Seien $ a,b >0, \ b \neq 1 , \ n \in \N  $.\\
+Welche der folgenden Identitäten ist allgemein gültig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \log_{b^n}(a^n) = \frac{\log_{b}(a)}{n} $.
+	\item 
+	$ \log_{b^n}(a^n) = \sqrt[n]{\log_{b}(a)} $.
+	\item
+	$ \log_{b^n}(a^n) = \log_{b}(a) $.
+	\item
+	$ \log_{b^n}(a^n) = n \ \log_{b}(a) $.
+	\item
+	Keine der vorangehenden Aussagen ist im Allgemeinen gültig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{3}}
+Ein Bergsteiger startet bei seinem Auto bei Sonnenaufgang um $ 5 $ Uhr mit dem Aufstieg und erreicht auf direktem Weg ohne Pause die Hütte um $ 13 $ Uhr.
+Am anderen Tag geht er den genau gleichen Weg zurück; er startet um $ 8 $ Uhr und geht ohne anzuhalten. So erreicht er sein Auto um $12$:$50$  Uhr.\\
+\\
+Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Ja, es gibt genau einen solchen Zeitpunkt.
+	\item 
+	Nein.
+	\item
+	Es kann sein, muss aber nicht sein.
+	\item
+	Es kann auch mehrere Zeitpunkte geben.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{3}}
+Gegeben ist die Funktion $ f $ definiert durch
+\begin{align*}
+	f(x) = \sin(x) + \cos(x)
+\end{align*}
+mit Definitionsgebiet $ D_f \in \R $. Für den Wertebereich $ W_f $ von $ f $ gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ W_f = [-1,1] $.
+\item
+$ W_f = [-\sqrt{2},\sqrt{2}] $.
+\item
+$ W_f = [-2,2] $.
+\item
+$ W_f = [0,2] $.
+\item
+$ W_f = [-\nicefrac{\pi }{2}, \nicefrac{\pi }{2}] $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{3}}
+$ f $ und $ g $ seien ungerade, differenzierbare Funktionen. Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f^\prime + g^\prime $ ist ungerade.
+	\item
+	$ f^\prime + g^\prime $ ist gerade.
+	\item
+	$ f^\prime \cdot g^\prime $ ist ungerade.
+	\item
+	Keine der obigen Antworten ist im Allgemeinen richtig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{9}{2}}
+Wir betrachten die differenzierbaren Funktionen $ f(x) $ und $ g(x) $, wobei $ g(x) > 0 $ für $ x \in \R $ gelte. Die Ableitung der Funktion
+\begin{align*}
+	k(x)
+	=
+	\frac{f(g(x))}{g(f(x))}
+\end{align*}
+ist dann
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) + f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+	\item
+	$ k^\prime(x) = \frac{f^\prime(g(x))g^\prime(x) }{g^\prime(f(x))f^\prime(x)} $.
+	
+	\item
+    $ k^\prime(x) = 
+    \frac{f^\prime(g(x))g^\prime(x)g(f(x)) - f(g(x)) g^\prime(f(x)) f^\prime(x) }
+    {(g(f(x)))^2} $.
+	\item
+	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) - f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{10}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+	f \ : \ \R \rightarrow \R, \ x \mapsto y = x \cdot |x| 
+\end{align*}
+Dann folgt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ f $ ist überall stetig und differenzierbar.
+	\item
+	$ f $ ist stetig in $ x_0 = 0 $, aber nicht differenzierbar in $ x_0 = 0 $.
+	\item
+	$ f $ ist differenzierbar in $ x_0 = 0 $, aber nicht stetig in $ x_0 = 0 $.
+	\item
+	$ f $ ist nicht stetig und nicht differenzierbar in $ x_0 = 0 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{11}{3}}
+Das Taylorpolynom $ 4 $. Ordnung in $ x_0 = 0 $ der Funktion
+\begin{align*}
+	f(x) = e^{x^3}
+\end{align*}
+lautet:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x $. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} - x $. 
+	\item
+	$ P_4(x) = x^3 + x^2 + x + 2$. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x +1 $. 
+	\item
+	$ P_4(x) = x^3 + 1$. 
+	\item
+	$ P_4(x) = \frac{x^4}{4} - \frac{x^3}{3} + \frac{x^2}{2} - x + 2 $. 
+\end{enumerate}
+\ \\
+\subsection*{\frage{12}{3}}
+Die Funktion zweier Variablen $ f $ ist homogen vom Grad $ 3 $ und die Funktion zweier Variablen $ g $ ist homogen vom Grade $ -3 $.\\
+\\
+Die Funktion $ h $ ist definiert durch
+\begin{align*}
+	h(x,y) = f(g(x,y),g(x,y)).
+\end{align*}
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ h $ ist homogen vom Grad $ -1 $. 
+	\item
+	$ h $ ist homogen vom Grad $ 0 $. 
+	\item
+	$ h $ ist homogen vom Grad $ 6 $. 
+	\item
+	$ h $ ist homogen vom Grad $ -9 $.  
+	\item
+	$ h $ ist nicht homogen.
+\end{enumerate}
+
+\newpage
+\section*{Aufgabe 3 (30 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{4}}
+Es sei
+\begin{align*}
+	s = \sum \limits_{i= 1}^3
+	\sum \limits_{j= 1}^2
+	\sum \limits_{k= 1}^4
+	(i + jk).
+\end{align*}
+Dann gilt:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ s= 138 $.
+	\item
+	$ s= 144 $.
+	\item
+	$ s= 132 $.
+	\item
+	$ s= 180 $.
+	\item
+	$ s= 120 $.
+	\item
+	$ s= 128 $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Der Grenzwert
+\begin{align*}
+	\lim\limits_{x \to 0 }
+	\frac{\sqrt[n]{a+x} - \sqrt[n]{a-x}}{x}
+\end{align*}
+für einen fest gewählten Parameter $ a > 0  $ ist gleich:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$0$.
+	\item
+	$1$.
+	\item
+	$\frac{\sqrt[n]{a}}{na}$.
+	\item
+	$\frac{2}{n} \sqrt[n]{a}$.
+	\item
+	$\frac{2}{n} \sqrt[n]{a^{1-n}}$.
+	\item
+	Der obige Ausdruck hat für $ x \to 0 $ keinen Grenzwert.	
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x) = x^{\ln(x)}.
+\end{align*}
+Welcher der folgenden Ausdrücke beschreibt die erste Ableitung von $ f $ ?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ f^\prime(x) = [\ln(x)]^2 x^{\ln(x)} \frac{1}{x}$.
+\item
+$ f^\prime(x) =2 x^{\ln(x) -1} \ln(x) $.
+\item
+$ f^\prime(x) = \ln(x) x^{\ln(x) -1} $.
+\item
+$ f^\prime(x) =  x^{\ln(x) }\ln(x)\frac{1}{x} $.
+\item
+Keine der vorangehenden Formeln für $ f^\prime(x)  $ ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{4}}
+Gegeben ist die Funktion $ f $ zweier reeller Variablen
+\begin{align*}
+	f \ : \ D_f \to \R, \ (x,y) \mapsto z = f(x,y) =\sqrt{(36 - x^2 -y^2) y}.
+\end{align*}
+Welches der folgenden Bilder zeigt grau schraffiert den Definitionsbereich $ D_f \subset \R^2 $ von $ f $?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+\begin{center}
+	\includegraphics[scale=0.6]{pictures/3_4_a}
+\end{center}
+\item 
+\begin{center}
+	\includegraphics[scale=0.6]{pictures/3_4_b}
+\end{center}
+\item
+\begin{center}
+	\includegraphics[scale=0.6]{pictures/3_4_c}
+\end{center}
+\item
+\begin{center}
+	\includegraphics[scale=0.6]{pictures/3_4_d}
+\end{center}
+\end{enumerate}
+\ 
+\subsection*{\frage{5}{3}}
+Welche der folgenden Funktionen gehört zur unten dargestellten Fläche?\\
+\begin{center}
+	\includegraphics[scale=0.5]{pictures/3_5}
+\end{center}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$ z = f_1(x,y) = e^{-(x+y^2)} $.
+\item
+$ z = f_2(x,y) = e^{x} e^y $.
+\item
+$ z = f_3(x,y) = e^{2 -x^2 +y^2}  $.
+\item
+$ z = f_4(x,y) = \cos(x^2 +y^2) $.
+\item
+$ z = f_5(x,y) = 2^{-(x + y^2)} $.
+\item
+$ z = f_6(x,y) = \sin(x+y) $.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{4}}
+Wir betrachten die Cobb-Douglas Produktionsfunktion
+\begin{align*}
+	P(K,A) 
+	=
+	4 K^{0.25} A^{0.75} \ \ (K,A > 0).
+\end{align*}
+Für welchen Punkt $ (K_0, A_0) $ auf der Isoquante (Niveaulinie) $ P(K,A) = 64 $ ist die technische Substitutionsrate (des Faktors Arbeit $ A $ bezüglich des Faktors $ K $) gleich $ - \frac{1}{3} $ ?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ (K_0, A_0) = ( 8 \sqrt{2}, 8 ) $.
+	\item
+	$ (K_0, A_0) = ( 8 , 16 )$.
+	\item
+	$ (K_0, A_0) = ( 32 , 32)$.
+	\item
+	$ (K_0, A_0) = ( 4 , 4\sqrt{2})$.
+	\item
+	$ (K_0, A_0) = ( 16 , 16\sqrt{2})$.
+	\item
+	$ (K_0, A_0) = ( 16 , 16)$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{3}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x,y) 
+	=
+	x^2 e^{\frac{x+y}{x}}
+	-
+	xy e^{\frac{x+y}{x-y}}
+	+
+	x \ln \left( \frac{x}{y} \right)
+	\quad \textrm{für } x>0,y>0.
+\end{align*}
+Welche der folgenden Aussagen ist richtig?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	$ f  $ ist homogen vom Grad $ 0 $.
+	\item
+	$ f  $ ist homogen vom Grad $ 0.5 $.
+	\item
+	$ f $ ist linear homogen.	
+	\item 
+	$ f  $ ist homogen vom Grad $ 2 $.
+	\item
+	$ f $ ist nicht homogen.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x,y)
+	=
+	\frac{x^{2a} y^b}{x^3 +y^3}
+	- 
+	\frac{1}{x^3 y^{3b} + x y^{2 + 3b}},
+\end{align*}
+wobei $ x > 0, y > 0 $ und $ a,b \in \R $.\\
+\\
+Für welche Werte von $ a $ und $ b $ gilt
+\begin{align*}
+	x f_x(x,y) + y f_y(x,y) = 0 \ \textrm{für alle } x>0, y>0\textrm{?}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$a = 2$ und $ b=-1 $.
+	\item
+	$a = 1$ und $ b=1 $.
+	\item
+	$a = 1$ und $ b=-1 $.
+	\item
+	$a = 3$ und $ b=-2 $.
+	\item
+	$a = -2$ und $ b=1 $.
+	\item
+	Es gibt keine Werte $ a $ und $ b $, die die Bedingung erfüllen.
+\end{enumerate}
