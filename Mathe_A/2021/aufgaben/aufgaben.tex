@@ -1,0 +1,474 @@
+%\newcommand{\ein}[2]{(#1) (#2 Punkte)}
+
+
+\begin{Large}
+\textbf{Teil I: Offene Fragen (38 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für offene Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Ihre Antworten müssen alle Rechenschritte enthalten,
+diese müssen klar ersichtlich sein.
+Verwendung korrekter mathematischer Notation wird erwartet
+und fliesst in die Bewertung ein.
+
+\item
+Ihre Antworten zu den jeweiligen Teilaufgaben müssen in den dafür vorgesehenen Platz geschrie-
+ben werden. Sollte dieser Platz nicht ausreichen, setzen Sie Ihre Antwort auf der Rückseite oder
+dem separat zur Verfügung gestellten Papier fort. Verweisen Sie in solchen Fällen ausdrücklich
+auf Ihre Fortsetzung. Bitte schreiben Sie zudem Ihren Vor- und Nachnamen auf jeden separaten
+Lösungsbogen.
+
+\item
+Es werden nur Antworten im dafür vorgesehenen Platz bewertet. Antworten auf der Rückseite
+oder separatem Papier werden nur bei einem vorhandenen und klaren Verweis darauf bewertet.
+
+\item
+Die Teilaufgaben werden mit den jeweils oben auf der Seite angegebenen Punkten bewertet.
+
+\item
+Ihre endgültige Lösung jeder Teilaufgabe darf nur eine einzige Version enthalten.
+
+\item
+Zwischenrechnungen und Notizen müssen auf einem getrennten Blatt gemacht werden. Diese
+Blätter müssen, deutlich als Entwurf gekennzeichnet, ebenfalls abgegeben werden.
+\end{enumerate}
+
+\newpage
+\section*{\hfil Aufgaben \hfil}
+\vspace{1cm}
+\section*{Aufgabe 1 (38 Punkte)}
+\vspace{0.4cm}
+%\titleformat{\subsection}[runin]
+%{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\subsection*{\aufgabe{a1}{8}} 
+Die Wirtschaftsredakteurin eines wichtigen Verlagshauses zieht in Betracht,
+kostenlose Exemplare eines Buchs an Dozierende der Wirtschaftswissenschaften an Schweizer Hochschulen zu verschicken, da sie weiss, dass Dozierende dazu neigen, Bücher als Kurslektüre auszuwählen, die sie bereits in ihren Regalen stehen haben. Die Fixkosten dieser Werbekampagne belaufen sich auf $100'000$ Schweizer Franken.
+Die Stückkosten eines einzelnen Buchs betragen $10$ Schweizer Franken, im Handel werden die Bücher schließlich für $40$ Schweizer Franken pro Exemplar verkauft.
+Auf der Basis historischer Daten schätzt die Redakteurin, dass wenn $x$ Gratisexemplare versendet werden, ein Verkauf von insgesamt
+\begin{align*}
+	B(x) = 20'000 - 19'000 e^{-0.0002 x }
+\end{align*}
+Exemplaren des Buchs erzielt wird. \\
+\\
+Zeigen Sie, dass wenn die Produktion auf maximal $6'000$ Bücher beschränkt ist, es genau eine Menge $ x^\star \in (0, 6'000)$ an Gratisexemplaren gibt, bei der die Gesamtkosten genau durch den Umsatz gedeckt werden.
+
+
+\subsection*{\aufgabe{a2}{8}}
+Die Wirtschaftsredakteurin eines wichtigen Verlagshauses zieht in Betracht,
+kostenlose Exemplare eines Buchs an Dozierende der Wirtschaftswissenschaften an Schweizer Hochschulen zu verschicken, da sie weiss, dass Dozierende dazu neigen, Bücher als Kurslektüre auszuwählen, die sie bereits in ihren Regalen stehen haben. Die Fixkosten dieser Werbekampagne belaufen sich auf $100'000$ Schweizer Franken.
+Die Stückkosten eines einzelnen Buchs betragen $10$ Schweizer Franken, im Handel werden die Bücher schließlich für $40$ Schweizer Franken pro Exemplar verkauft.
+Auf der Basis historischer Daten schätzt die Redakteurin, dass wenn $x$ Gratisexemplare versendet werden, ein Verkauf von insgesamt
+\begin{align*}
+	B(x) = 20'000 - 19'000 e^{-0.0002 x }
+\end{align*}
+Exemplaren des Buchs erzielt wird. Wenn die Produktion auf maximal $6'000$ Bücher beschränkt ist, gibt es genau eine Menge $ x^\star \in (0, 6'000)$ an Gratisexemplaren, bei der die Gesamtkosten genau durch den Umsatz gedeckt werden.\\
+\\
+Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $x_0 = 750$, um eine Näherung für $x^\star$ zu finden.
+ \\
+\\
+
+\subsection*{\aufgabe{b}{12}}
+Anne und Robert haben gerade erfolgreich ihr Masterprogramm in Quantitativen
+Methoden an der Universität St.Gallen abgeschlossen und sind nun dabei, ihre eigene
+Firma AlgoTrade aufzubauen, die Machine Learning Algorithmen für den computergesteuerten Handel an Finanzmärkten entwickelt. Sie haben bereits viele vielversprechende Ideen, jedoch fehlt ihnen das Eigenkapital. Die anfänglichen Investitionen für den Kauf der IT-Infrastruktur und für die Entwicklung der Software belaufen sich auf $1'500'000$ Schweizer Franken.
+Ein Risikokapitalgeber ist zu einem Investment in Höhe von $500'000$ Schweizer Franken bereit, verlangt aber im Gegenzug einen Anteil von $30 \%$ an der Firma.
+Zusätzlich nehmen Anne und Robert am 1. Januar 2022 einen Kredit in Höhe von $1'000'000$ Schweizer Franken zu einem jährlichen Zinssatz von $2 \% $ auf.
+Die Bank verlangt dabei, dass $40 \%$ des geschuldeten Betrags bis Ende 2026 über konstante Zahlungen $C$, fällig jeweils am Jahresende, zurückgezahlt sein muss.
+\begin{enumerate}
+	\item[(b1)] Fügen Sie die Ereignisse und Mittelflüsse dem Zeitstrahl hinzu.
+	\item[(b2)] Berechnen Sie die Höhe der Ratenzahlung $C$.
+\end{enumerate}
+Bereits nach 3 Jahren ist AlgoTrade sehr erfolgreich und generiert beträchtliche Umsätze. Beginnend mit der nächsten Rückzahlung am 31. Dezember 2025 wollen Anne und Robert jeweils $180'000$ Schweizer Franken am Ende jedes Jahres solange zurückzahlen, bis die bestehende Restschuld komplett getilgt ist.
+\begin{enumerate}
+	\item[(b3)] Ergänzen Sie die Information am Zeitstrahl und berechnen Sie die Restschuld am 1. Januar 2025, also direkt nach der jüngsten Rückzahlung.
+	\item[(b4)] Am 1. Januar 2029, direkt nach der jüngsten Rückzahlung, verkaufen Anne und Robert	ihre Firma für $5'000'000$ Schweizer Franken und tilgen mit ihrem Anteil die bestehende	Restschuld. Wie hoch ist ihr Gewinn?
+\end{enumerate}
+\begin{center}
+	\includegraphics[scale=0.45]{pictures/zeitstrahl_1_b}
+\end{center}
+\newpage
+\subsection*{\aufgabe{c}{10}}
+Information spielt in der Entscheidungsfindung eine wesentliche Rolle. Allerdings
+sehen sich Unternehmen, wie wir erst kürzlich beobachten konnten, einem Zielkonflikt
+ausgesetzt. Einerseits ermöglicht das Sammeln möglichst genauer privater Informationen eine verbesserte, massgeschneiderte Lösung für ihre Kunden (die zu einem höheren Preis verkauft werden kann), andererseits erhöht es den potentiellen Schaden, den sie ihren Kunden durch Datenschutzverletzungen (und sich selbst durch mögliche juristische Folgen) zufügen könnten.\\
+\\
+Sei $I \geq 0 $ die Menge an Informationen, die ein Unternehmen sammelt, und $b(I)$ der Nutzen für den Kunden hinsichtlich der angebotenen Dienstleistung oder des angebotenen Produktes. Wir nehmen an, dass:
+\begin{align*}
+	b(I)
+	= 
+	\begin{cases}
+		0 &\quad \textrm{für } 0 \leq I  < I_0\\
+		s \left( 1 - \frac{I_0}{I} \right) & \quad \textrm{für } I \geq I_0
+	\end{cases}.
+\end{align*}
+Demnach ist $I_0 > 0 $ die Mindestmenge an Information, die benötigt wird, um einen Nutzen für den Kunden zu generieren, und der Nutzen ist durch $s > 0 $ beschränkt, d.h., der Nutzen wird nie grösser als $s$, egal wie viel Information gesammelt wird. Im Gegensatz dazu soll der erwartete Schaden durch eine Datenschutzverletzung durch
+\begin{align*}
+	d(I) = \frac{1}{2} q s I^2
+\end{align*}
+gegeben sein, wobei $q \in (0,1)$ die Wahrscheinlichkeit einer solchen Verletzung darstellt.
+Zudem nehmen wir an, dass $q I_0^2 < \frac{8}{27}$ gilt. Für einen potentiellen Kunden ist die relevante Grösse der Trade-off $v(I)$ zwischen dem Nutzen $b(I)$ und dem möglichen Schaden $d(I)$, d.h., $v(I) = b(I) - d(I)$.\\
+\\
+Für welche Menge $I^\star \geq 0$ an Informationen erzielt der Kunde den bestmögliche Trade-off, d.h. den grössten Wert für $v$?
+Bestimmen Sie die Antwort in Abhängigkeit der Parameter $s, I_0, q$.
+Weisen Sie nach, dass $I^\star$ tatsächlich ein Maximum von $v$ ist.\\
+\\
+\textit{Hinweis:} Die Bedingung $q I_0^2 < \frac{8}{27}$ stellt sicher, dass $I^\star > I_0 $ gilt.
+
+\newpage
+
+
+\fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
+\begin{Large}
+\textbf{Teil II: Multiple-Choice-Fragen (64 Punkte)}
+\end{Large}
+\\
+\\
+\\
+\textbf{Allgemeine Anweisungen für Multiple-Choice-Fragen:}
+\\
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item
+Die Antworten auf die Multiple-Choice-Fragen müssen im dafür vorgesehenen Antwortbogen ein-
+getragen werden. Es werden ausschliesslich Antworten auf diesem Antwortbogen bewertet. Der
+Platz unter den Fragen ist nur für Notizen vorgesehen und wird nicht korrigiert.
+
+\item
+Jede Frage hat nur eine richtige Antwort. Es muss also auch jeweils nur eine Antwort angekreuzt werden.
+
+\item
+Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet, auch wenn
+die korrekte Antwort unter den angekreuzten ist.
+
+\item
+Bitte lesen Sie die Fragen und die Anweisungen auf dem Multiple-Choice-Antwortbogen sorgfältig.
+
+\end{enumerate}
+\newpage
+\section*{Aufgabe 2 (34 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{3}}
+$ A $ und $ B $ seien zwei Aussagen. Welche der folgenden zwei zusammengesetzten Aussagen sind äquivalent? 
+ \renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $ A \Rightarrow  B $ und $A \vee B$.
+\item $ A \vee B $ und $\neg (A \vee B)$.
+\item $ (A \Rightarrow \neg B) $ und $\neg ( A \vee B )$
+\item Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Welche der folgenden zusammengesetzten Aussagen ist eine Tautologie? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item $(A \Rightarrow B ) \wedge (B \Rightarrow A)$.
+	\item $ ((A \wedge B) \Rightarrow B) \vee A$.
+	\item $ ((A \vee B) \Rightarrow B) \vee B$
+	\item $(A \Rightarrow B ) \vee \neg A \vee B$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{3}}
+Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.01$ und $b_1 = 3$, $b_2 = -2$.\\
+\\
+Welche der folgenden Aussagen ist korrekt? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ konvergieren beide.
+\item 
+Nur $\{a_k\}_{k \in \mathbb{N}}$ konvergiert.
+\item 
+Nur $\{b_k\}_{k \in \mathbb{N}}$ konvergiert.
+\item
+Weder $\{a_k\}_{k \in \mathbb{N}}$ noch $\{b_k\}_{k \in \mathbb{N}}$ konvergieren.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{4}}
+Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.1$ und $b_1 = 3$, $b_2 = 3.1$.
+Seien $\{s_n^a \}_{n \in \mathbb{N}}$ und $\{s_n^b \}_{n \in \mathbb{N}}$ die entsprechenden Reihen.\\
+\\
+Welche der folgenden Aussagen ist korrekt? 
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 3$.
+	\item
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \frac{1}{3}$.
+	\item
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \infty$.
+	\item
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 0$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{5}{3}}
+Ein Projekt erfordert eine Anfangsinvestition von $10'000$ Schweizer Franken und generiert Erträge in Höhe von $500$ Schweizer Franken am Ende jedes Jahres für $10$ Jahre, sowie zusätzliche $12'000$ Schweizer Franken am Ende des zehnten Jahres.\\
+\\
+Der interne Zinssatz des Projekts ist:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Echt grösser als $5 \%$.
+	\item 
+	Gleich $5 \%$.
+	\item
+	Echt kleiner als $5 \%$.
+	\item
+	Die Frage kann nicht beantwortet werden, ohne zu wissen, welcher Zinssatz $i$ gilt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{3}}
+Seien $h$, $f$ und $g$ differenzierbare Funktionen einer reellen Variable. Welche der folgenden Formeln ist korrekt?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f^\prime(x) + g^\prime(x))$.
+	\item 
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f(x) + g(x))^\prime$.
+	\item
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x))  f^\prime(x) + h^\prime(g(x)) g^\prime(x)$.
+	\item
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  (f^\prime(x) +  g^\prime(x) )$.
+	\item
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  f^\prime(x)  g^\prime(x)$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{4}}
+Welche der folgenden Aussagen ist korrekt für eine differenzierbare Funktion $f$ auf einem Intervall $[a,b]$ und $x_0 \in (a,b)$?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$x_0$ ist genau dann ein stationärer Punkt, wenn er ein Extrempunkt ist.
+\item
+Wenn $x_0$ ein Wendepunkt ist, dann ist er auch ein stationärer Punkt.
+\item
+Wenn $x_0$ der einzige lokale Extrempunkt in $(a,b)$ ist, dann ist er auch ein globaler Extrempunkt in $[a,b]$.
+\item
+Wenn $f^\prime(x_0) = 0$, dann ist $x_0$ ein Extrempunkt.
+\item
+Keine der obigen Antworten ist richtig.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{3}}
+Seien $f$ und $g$ konkave, zweimal differenzierbare Funktionen. Welche der folgenden Aussagen ist korrekt?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$f \ g$ ist konkav.
+ 	\item
+	$f \ g$ ist konvex.
+	\item
+	$f \circ g $ ist konkav.
+	\item
+	$f +g $ ist konvex.
+	\item 
+	$f+g$ ist konkav.
+\end{enumerate}
+\ \\
+\subsection*{\frage{9}{3}}
+Sei $f$ eine differenzierbare Funktion. Welcher der folgenden Ausdrücke approximiert 
+$x_0 \frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0) \Delta x}$, wenn $\Delta x$ klein ist?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Die Ableitung $f^\prime(x_0)$.
+	\item
+	Die Änderungsrate $\rho_f(x_0)$.	
+	\item
+    Das Differential $df$.
+	\item
+	Die Elastizität $\varepsilon_f(x_0)$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{10}{4}}
+Sei $f$ eine Funktion und $x_0 \in D_f$ so, dass $f(x_0) = 1$ und $f^{(k)}(x_0) = 1$ für $k = 1,2,3$ gilt. Seien $P_2$ und $P_3$ jeweils das Taylor-Polynom zweiter und dritter Ordnung von $f$ in $x_0$. Es folgt, dass:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$P_3(x) - P_2(x) = 0 $ für alle $x$.
+	\item
+	$P_3(x) - P_2(x) = (x - x_0)^2 $ für alle $x$.
+	\item
+	$P_3(x) - P_2(x) = \frac{1}{6} (x - x_0)^2 $ für alle $x$.
+	\item
+	Es ist nicht möglich die Frage zu beantworten, ohne die Funktionsvorschrift von $f$ zu kennen.
+\end{enumerate}
+
+
+\newpage
+\section*{Aufgabe 3 (28 Punkte)}
+\vspace{0.4cm}
+
+\subsection*{\frage{1}{3}}
+Welche der folgenden Folgen konvergiert gegen $1$?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \{a_n\}_{n \in \mathbb{N}} $ mit $a_n = \frac{\sin(n) - \cos(n)}{n}$.
+	\item
+	$ \{b_n\}_{n \in \mathbb{N}} $ mit $b_n = \frac{n^2}{2n^2 - 3n +1 }$.
+	\item
+	$ \{c_n\}_{n \in \mathbb{N}} $ mit $c_n = \sqrt{n^2 + 1 }  - n$.
+	\item
+	$ \{d_n\}_{n \in \mathbb{N}} $ mit $d_n = \frac{n^2}{e^n}$.
+	\item
+	$ \{e_n\}_{n \in \mathbb{N}} $ mit $e_n = \frac{(n+2)(n^2 + 3n -1 )}{n^3 + 4 }$.
+	\item
+	$ \{f_n\}_{n \in \mathbb{N}} $ mit $f_n = \frac{\ln(n)}{n}$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{2}{4}}
+Welche der folgenden Konditionen ist am besten?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	Jährlicher Zinssatz von $5 \%$ mit jährlicher Verzinsung.
+	\item
+	Jährlicher Zinssatz von $4.95 \%$ mit halbjährlicher Verzinsung.
+	\item
+	Jährlicher Zinssatz von $4.9 \%$ mit vierteljährlicher Verzinsung.
+	\item
+	Jährlicher Zinssatz von $4.85 \%$ mit monatlicher Verzinsung.
+	\item
+	Jährlicher Zinssatz von $4.8 \%$ mit stetiger Verzinsung.	
+\end{enumerate}
+\ \\
+\subsection*{\frage{3}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x) = \sin(\ln(x^2 + x + 1)).
+\end{align*}
+Die Ableitung von $f$ in $x_0 = 0 $ ist:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ 0$.
+	\item
+	$ 1 $.
+	\item
+	$ 2 $.
+	\item
+	$ \pi $.
+	\item
+	$f$ ist nicht differenzierbar in $x_0 = 0$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{4}{4}}
+Sei $P_3$ das Taylor-Polynom dritter Ordnung von $f(x) = \ln(1+ x) $ in $x_0 = 0$.\\
+\\
+Es gilt, dass:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$P_3(1) = 1 $.
+\item 
+$P_3(1) = \frac{1 }{2}$.
+\item
+$P_3(1) =  0$.
+\item
+$P_3(1) = \frac{1 }{6}$.
+\item
+$P_3(1) = \frac{5 }{6}$.
+\end{enumerate}
+\ 
+\subsection*{\frage{5}{3}}
+Sei $f$ die Funktion zweier reeller Variablen definiert durch $f(x,y) = \cos(x^2 +y^2 + 2xy).$\\
+\\
+Die partiellen Ableitungen von $f$ in $(x_0, y_0) = \left(\sqrt{\frac{\pi}{2}}, \sqrt{\frac{\pi}{2}}\right)$ sind:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item 
+$f_x(x_0,y_0) = 0$ und $f_y(x_0,y_0) = 0$.
+\item
+$f_x(x_0,y_0) = 4 \sqrt{\frac{\pi}{2}} $ und $f_y(x_0,y_0) = 0$.
+\item
+$f_x(x_0,y_0) = 0 $ und $f_y(x_0,y_0) = 4 \sqrt{\frac{\pi}{2}}$.
+\item
+$f_x(x_0,y_0) = 4 \sqrt{\frac{\pi}{2}} $ und $f_y(x_0,y_0) = 4 \sqrt{\frac{\pi}{2}}$.
+\end{enumerate}
+\ \\
+\subsection*{\frage{6}{4}}
+Wir betrachten die Gleichung
+\begin{align*}
+	\ln(x) + x y^2 + \frac{2x}{x + 2y} - 2 = 0,
+\end{align*}
+die für $(x_0,y_0) = (1,0)$ erfüllt ist.\\
+\\
+Die marginale Änderung in $y$, wenn $x$ ausgehend von $x_0$ marginal geändert wird und die Gleichung weiterhin erfüllt ist, ist:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ 0 $.
+	\item
+	$ \frac{1}{4}$.
+	\item
+	$ -\frac{1}{4}$.
+	\item
+	$ 1$.
+	\item
+	Keine der obigen Antworten ist korrekt.
+\end{enumerate}
+\ \\
+\subsection*{\frage{7}{2}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x,y) 
+	=
+	2 x^3 e^{\frac{ 2x^2+y^2}{x^2 - 3y^2 }}
+	-
+	xy^2 e^{\frac{x+y}{x-y}}
+	+
+	x y^3 \ln \left( \frac{x+y }{2y} \right)
+	\quad \textrm{für } x>0,y>0.
+\end{align*}
+Welche der folgenden Aussagen ist korrekt?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	$ f  $ ist homogen vom Grad $ 0 $.
+	\item
+	$ f  $ ist homogen vom Grad $ 2 $.
+	\item
+	$ f  $ ist homogen vom Grad $ 2 $..	
+	\item 
+	$ f  $ ist homogen vom Grad $ 4 $.
+	\item
+	$ f $ ist nicht homogen.
+\end{enumerate}
+\ \\
+\subsection*{\frage{8}{4}}
+Gegeben ist die Funktion
+\begin{align*}
+	f(x,y)
+	=
+	\frac{x^{3a} y^b}{x^3 +y^3} e^{\frac{x^a y}{y^{a+1}}}
+	- 
+	\frac{1}{x^3 y^{3b} + x y^{2 + 3b}},
+\end{align*}
+wobei $ x > 0, y > 0 $ und $ a,b \in \R $.\\
+\\
+Für welche Werte von $ a $ und $ b $ gilt
+\begin{align*}
+	\varepsilon_x(x,y) + \varepsilon_y(x,y) = 2 \ \textrm{für alle } x>0, y>0\textrm{?}
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$a = \frac{10}{9}$ und $ b=-\frac{5}{3} $.
+	\item
+	$a = \frac{17}{9}$ und $ b=-\frac{2}{3} $.
+	\item
+	$a = \frac{20}{9}$ und $ b=-\frac{5}{3} $.
+	\item
+	$a = \frac{20}{9}$ und $ b=-\frac{2}{3} $.
+	\item
+	$a = \frac{19}{9}$ und $ b=-\frac{5}{3} $.
+	\item
+	Es gibt keine Kombination $ a $ und $ b $, die die Bedingung erfüllt.
+\end{enumerate}
