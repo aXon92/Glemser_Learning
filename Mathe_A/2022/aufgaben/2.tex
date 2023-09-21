@@ -82,24 +82,19 @@ Welche der folgenden zusammengesetzten Aussagen ist eine Tautologie?
 
 \newpage
 \subsection*{\frage{3}{3}}
-Eine Möbelfirma wirbt:
-\begin{center}
-	\glqq Wir schenken Ihnen die Mehrwertsteuer auf Ihren Möbelkauf\grqq
-\end{center}
-Die Mehrwertsteuer auf Möbel beträgt in der Schweiz $ 7.7 \% $.\\
-Wie viel Prozent Rabatt gewährt also die Möbelfirma?
+Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.01$ und $b_1 = 3$, $b_2 = -2$.\\
+\\
+Welche der folgenden Aussagen ist korrekt? 
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Es sind etwa $ 7.15 \% $.
+	$\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ konvergieren beide.
 	\item 
-	Es sind etwa $ 7.56 \% $.
+	Nur $\{a_k\}_{k \in \mathbb{N}}$ konvergiert.
 	\item 
-	Es sind genau $ 7.7 \% $.
+	Nur $\{b_k\}_{k \in \mathbb{N}}$ konvergiert.
 	\item
-	Es sind etwa $ 7.78 \% $.
-	\item
-	Es sind etwa $ 8.34 \% $.
+	Weder $\{a_k\}_{k \in \mathbb{N}}$ noch $\{b_k\}_{k \in \mathbb{N}}$ konvergieren.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -107,47 +102,32 @@ Wie viel Prozent Rabatt gewährt also die Möbelfirma?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme den gewährten Rabatt.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme den gewährten Rabatt}\\
-Angenommen wir kaufen ein Möbelstück im Wert von $ 100 $ (CHF).
-Dann ist der Preis inklusive Mehrwertsteuer
-\begin{align*}
-	100 \cdot 1.077 = 107.7 \ \textrm{(CHF)}.
-\end{align*} 
-Den Rabatt erhalten wir durch:
-\begin{align*}
-	p \% = \frac{7.7}{107.7} 
-	\approx 
-	0.0715.
-\end{align*}
-Damit gewährt das Möbelhaus etwa einen Rabatt von $ 7.15 \% $.\\
-\\
-Also ist Antwort (a) korrekt.
+\underline{1. }\\
+
 
 
 
 \newpage
 
-\subsection*{\frage{4}{3}}
-Sei $ f $ eine Funktion einer reellen Variablen und $ x_0 \in D_f $.
-$ x_0  $ heißt \textit{Fixpunkt von} $ f $, wenn gilt: $ f(x_0) = x_0 $.\\
+\subsection*{\frage{4}{4}}
+Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.1$ und $b_1 = 3$, $b_2 = 3.1$.
+Seien $\{s_n^a \}_{n \in \mathbb{N}}$ und $\{s_n^b \}_{n \in \mathbb{N}}$ die entsprechenden Reihen.\\
 \\
-Welche der folgenden Aussagen ist wahr? 
+Welche der folgenden Aussagen ist korrekt? 
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Wenn $ f $ invertierbar ist, dann hat $ f $ keinen Fixpunkt.
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 3$.
 	\item
-	Wenn $ f $ invertierbar ist und $ f^{-1} $ mehrere Fixpunkte hat, dann hat $ f $ höchstens einen Fixpunkt.
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \frac{1}{3}$.
 	\item
-	Wenn $ f $ invertierbar ist, dann hat $ f $ mindestens einen Fixpunkt.
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \infty$.
 	\item
-	Wenn $ f  $ einen Fixpunkt hat, dann ist $ f $ invertierbar.
-	\item
-	Wenn $ f $ invertierbar ist und einen Fixpunkt hat, dann hat auch $ f^{-1} $ einen Fixpunkt.
+	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 0$.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -155,45 +135,28 @@ Welche der folgenden Aussagen ist wahr?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Schließe falsche Antworten aus.
+\item .
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Schließe falsche Antworten aus}\\
-Wir setzen für alle Beispiele $ D_f = \R $.
-Wir betrachten die Funktion $ f(x) = x $. Diese Funktion hat unendlich viele Fixpunkte und ist invertierbar mit $ f^{-1}(x) = x =f(x) $. 
-Deswegen sind die Antworten (a) und (b) falsch.\\
-\\
-Nun wählen wir $ f(x) = x + 1 $. Diese Funktion ist invertierbar und besitzt keinen Fixpunkt.
-Deshalb ist Antwort (c) falsch.\\
-\\
-Die Funktion $ f(x) = |x| $ ist nicht invertierbar wegen $ f(-1) = f(1) $ und alle $ x \geq 0  $ sind Fixpunkte.
-Damit ist die Antwort (d) falsch.\\
-\\
-Übrig bleibt Antwort (e). Wenn $ f  $ invertierbar ist und einen Fixpunkt hat, gilt: 
-\begin{align*}
-	f(x_0) = x_0 
-	\ \Leftrightarrow \
-	x_0 = f^{-1}(x_0).
-\end{align*}
-Hiermit können wir die korrekte Antwort (e) auch direkt bestimmen.
+\underline{1. }\\
+
 
 \newpage
 \subsection*{\frage{5}{3}}
-Seien $ a,b >0, \ b \neq 1 , \ n \in \N  $.\\
-Welche der folgenden Identitäten ist allgemein gültig?
+Ein Projekt erfordert eine Anfangsinvestition von $10'000$ Schweizer Franken und generiert Erträge in Höhe von $500$ Schweizer Franken am Ende jedes Jahres für $10$ Jahre, sowie zusätzliche $12'000$ Schweizer Franken am Ende des zehnten Jahres.\\
+\\
+Der interne Zinssatz des Projekts ist:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ \log_{b^n}(a^n) = \frac{\log_{b}(a)}{n} $.
+	Echt grösser als $5 \%$.
 	\item 
-	$ \log_{b^n}(a^n) = \sqrt[n]{\log_{b}(a)} $.
+	Gleich $5 \%$.
 	\item
-	$ \log_{b^n}(a^n) = \log_{b}(a) $.
+	Echt kleiner als $5 \%$.
 	\item
-	$ \log_{b^n}(a^n) = n \ \log_{b}(a) $.
-	\item
-	Keine der vorangehenden Aussagen ist im Allgemeinen gültig.
+	Die Frage kann nicht beantwortet werden, ohne zu wissen, welcher Zinssatz $i$ gilt.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -201,49 +164,30 @@ Welche der folgenden Identitäten ist allgemein gültig?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die Basisumrechnung des Logarithmus.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die Basisumrechnung des Logarithmus}\\
-Mithilfe der Basisumrechnung des Logarithmus gilt allgemein:
-\begin{align*}
-	\log_{b^n}(a^n)
-	=
-	\frac{\log_{b}(a^n)}{\log_{b}(b^n)}
-	=
-	\frac{n \log_{b}(a)}{n \log_b(b)}
-	=
-	\frac{\log_b(a)}{\log_{b}(b)}
-	=
-	\log_{b}(a).
-\end{align*}
-Damit ist Antwort (c) korrekt.\\
-\\
-\textit{Anmerkung:}
-Seien $a,b>0$ beliebig. Der Logarithmus zur Basis $ b $ lässt sich über eine andere Basis $ a $ folgendermaßen berechnen:
-\begin{align*}
-	\log_b(x) = \frac{\log_a(x)}{\log_a(b)}.
-\end{align*}
+\underline{1. }\\
+
 
 
  \newpage
 
 \subsection*{\frage{6}{3}}
-Ein Bergsteiger startet bei seinem Auto bei Sonnenaufgang um $ 5 $ Uhr mit dem Aufstieg und erreicht auf direktem Weg ohne Pause die Hütte um $ 13 $ Uhr.
-Am anderen Tag geht er den genau gleichen Weg zurück; er startet um $ 8 $ Uhr und geht ohne anzuhalten. So erreicht er sein Auto um $12$:$50$ Uhr.\\
-\\
-Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist? 
+Seien $h$, $f$ und $g$ differenzierbare Funktionen einer reellen Variable. Welche der folgenden Formeln ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Ja, es gibt genau einen solchen Zeitpunkt.
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f^\prime(x) + g^\prime(x))$.
 	\item 
-	Nein.
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f(x) + g(x))^\prime$.
 	\item
-	Es kann sein, muss aber nicht sein.
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x))  f^\prime(x) + h^\prime(g(x)) g^\prime(x)$.
 	\item
-	Es kann auch mehrere Zeitpunkte geben.
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  (f^\prime(x) +  g^\prime(x) )$.
+	\item
+	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  f^\prime(x)  g^\prime(x)$.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -251,67 +195,30 @@ Gibt es einen Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg a
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Überlege dir eine Modellierung dieser Fragestellung.
-\item Finde die korrekte Antwort.
+\item Verwende die Kettenregel.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Überlege dir eine Modellierung dieser Fragestellung}\\
-Wir nehmen an, dass sich das Auto auf der Höhe $ 0 $ und die Hütte auf der Höhe $ 1 $ befindet. Da der Bergsteiger für den Hin-und Rückweg den gleichen Weg ohne Pause wählt, können wir den zurückgelegten Weg in Abhängigkeit von der Zeit mit Geraden modellieren.
-Mit $ g_1 $ bezeichnen wir die Gerade für den Hinweg. Diese wird definiert durch:
-\begin{align*}
-	g_1(5\mathrm{:}00) = 0 \ \textrm{und} \ g_1(13\mathrm{:}00) = 1. 
-\end{align*}
-Sei $ g_2 $ die Gerade für den Rückweg. Diese wird definiert durch:
-\begin{align*}
-	g_2(8\mathrm{:}00) = 1 \ \textrm{und} \ g_2(12\mathrm{:}50) = 0.
-\end{align*}
-\ \\
-\underline{2. Finde die korrekte Antwort}\\
-Der Tageszeitpunkt, zu dem er auf dem Weg aufwärts bzw. auf dem Weg abwärts an der gleichen Stelle ist, ist ein Schnittpunkt der Geraden $ g_1 $ und $ g_2 $.
-Nun kann für zwei Geraden nur eine der folgenden Tatsachen gelten:
-\begin{itemize}
-	\item Die Geraden haben einen Schnittpunkt.
-	\item Die Geraden haben keinen Schnittpunkt.
-	\item Die Geraden haben unendlich viele Schnittpunkte.
-\end{itemize}
-Deswegen bestimmen wir nun die Steigung von $ g_1 $ und $ g_2 $:
-\begin{align*}
-	m_1 &= \frac{g_1(13\mathrm{:}00) - g_1(5\mathrm{:}00)}{13\mathrm{:}00 - 5\mathrm{:}00}
-	=
-	\frac{1 - 0}{8\ \mathrm{h}} = \frac{1}{8\ \mathrm{h}}\\
-	m_2 &= \frac{g_2(12\mathrm{:}50) - g_2(08\mathrm{:}00)}{12\mathrm{:}50 - 8\mathrm{:}00}
-	=
-	\frac{0 - 1}{4\mathrm{:}50 \ \mathrm{h}}
-	=
-	\frac{- 1}{4\mathrm{:}50 \ \mathrm{h}}.
-\end{align*}
-Das $ \mathrm{h} $ soll verdeutlichen, dass es sich um einen Zeitraum und keine Uhrzeit handelt. Wegen $ m_1 > 0 $ und $ m_2 < 0 $ sind die Geraden nicht parallel bzw. liegen nicht aufeinander. Deswegen kann nur ein Schnittpunkt vorliegen.\\
-Da der Zeitraum des Rückwegs innerhalb des Zeitraums des Hinweges befindet, gibt es genau einen Zeitpunkt an welchem sich die Wege schneiden.\\
-\\
-Damit ist Antwort (a) korrekt.\\
+\underline{1. Verwende die Kettenregel}\\
+
  
 
 
 \newpage
-\subsection*{\frage{7}{3}}
-Gegeben ist die Funktion $ f $ definiert durch
-\begin{align*}
-	f(x) = \sin(x) + \cos(x)
-\end{align*}
-mit Definitionsgebiet $ D_f \in \R $. Für den Wertebereich $ W_f $ von $ f $ gilt:
+\subsection*{\frage{7}{4}}
+Welche der folgenden Aussagen ist korrekt für eine differenzierbare Funktion $f$ auf einem Intervall $[a,b]$ und $x_0 \in (a,b)$?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ W_f = [-1,1] $.
+	$x_0$ ist genau dann ein stationärer Punkt, wenn er ein Extrempunkt ist.
 	\item
-	$ W_f = [-\sqrt{2},\sqrt{2}] $.
+	Wenn $x_0$ ein Wendepunkt ist, dann ist er auch ein stationärer Punkt.
 	\item
-	$ W_f = [-2,2] $.
+	Wenn $x_0$ der einzige lokale Extrempunkt in $(a,b)$ ist, dann ist er auch ein globaler Extrempunkt in $[a,b]$.
 	\item
-	$ W_f = [0,2] $.
+	Wenn $f^\prime(x_0) = 0$, dann ist $x_0$ ein Extrempunkt.
 	\item
-	$ W_f = [-\nicefrac{\pi }{2}, \nicefrac{\pi }{2}] $.
+	Keine der obigen Antworten ist richtig.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -319,62 +226,31 @@ mit Definitionsgebiet $ D_f \in \R $. Für den Wertebereich $ W_f $ von $ f $ gi
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme lokale Minima und Maxima.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Bestimme lokale Minima und Maxima}\\
-Um den Wertebereich bestimmen werden wir  die lokalen Minima und Maxima von $ f $ betrachten. Die erste Ableitung ist:
-\begin{align*}
-	f^\prime(x) = \cos(x) - \sin(x).
-\end{align*}
-Die kritischen Stellen erhalten wir wegen
-\begin{align*}
-	\cos(x) - \sin(x) = 0 \ \Leftrightarrow \
-	\sin(x) = \cos(x)
-\end{align*}
-an den Schnittpunkten des Sinus und Kosinus.
-\begin{center}
-	\includegraphics[scale=0.3]{pictures/Sinus_Kosinus_Kurve}
-\end{center}
-Da $ f $ periodisch ist, werden uns auf $ D_f = [0,2\pi] $ einschränken.
-Mögliche Kandidaten für Extrempunkte sind:
-\begin{align*}
-	x_0 &= \frac{\pi}{4}\\
-	x_1 &= \frac{\pi }{4} + \pi= \frac{5 \pi}{4}.
-\end{align*}
-Die zweite Ableitung ist:
-\begin{align*}
-	f^{\prime \prime} (x) = -\sin(x) - \cos(x) = -f(x). 
-\end{align*}
-Eingesetzt erhalten wir:
-\begin{align*}
-	f^{\prime \prime} (x_0) &= -\frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} = -\sqrt{2} < 0\\
-	f^{\prime \prime} (x_1) &= -\left(-\frac{\sqrt{2}}{2}\right) - \left(-\frac{\sqrt{2}}{2}\right) = \sqrt{2} >0.\\
-\end{align*}
-\begin{center}
-	\includegraphics[scale=1.3]{pictures/Tabelle}
-\end{center}
-Wegen $ f(x_0) = \sqrt{2} $ und $ f(x_1) = -\sqrt{2} $ ist der Wertebereich $ W_f = [-\sqrt{2}, \sqrt{2}] $.\\
-\\
-Damit ist Antwort (b) korrekt.
+\underline{1. }\\
+
 
 
 
 \newpage
 
 \subsection*{\frage{8}{3}}
-$ f $ und $ g $ seien ungerade, differenzierbare Funktionen. Dann gilt:
+Seien $f$ und $g$ konkave, zweimal differenzierbare Funktionen. Welche der folgenden Aussagen ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ f^\prime + g^\prime $ ist ungerade.
+	$f \ g$ ist konkav.
 	\item
-	$ f^\prime + g^\prime $ ist gerade.
+	$f \ g$ ist konvex.
 	\item
-	$ f^\prime \cdot g^\prime $ ist ungerade.
+	$f \circ g $ ist konkav.
 	\item
-	Keine der obigen Antworten ist im Allgemeinen richtig.
+	$f +g $ ist konvex.
+	\item 
+	$f+g$ ist konkav.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -382,58 +258,28 @@ $ f $ und $ g $ seien ungerade, differenzierbare Funktionen. Dann gilt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Leite die Antwort mithilfe der Kettenregel her.
+\item 
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Leite die Antwort mithilfe der Kettenregel her}\\
-Sei $ h  $ eine ungerade, differenzierbare Funktion.
-Dann gilt
-\begin{align*}
-	h(x) = -h(-x)
-	\ \Rightarrow \
-	h^\prime (x) = (-1) \cdot (-1) \cdot h^\prime(-x) = h^\prime(-x)
-\end{align*}
-für alle $ x \in D_h $. Das bedeutet, dass die Ableitung einer ungeraden Funktion gerade ist.\\
-\\
-\textit{Frage: Was gilt dann für die Ableitung einer geraden Funktion?}\\
-\\
-Wegen 
-\begin{align*}
-	(f+g)(x) = f(x) +g(x) =-f(-x) - g(-x)
-	=-(f(-x) + g(-x))= -(f+g)(-x)
-\end{align*}
-ist auch die Summe zweier ungerader Funktion ungerade. Aufgrund von 
-\begin{align*}
-	(f+g)^\prime = f^\prime + g^\prime
-\end{align*}
-ist $ f^\prime + g^\prime $ gerade (Weil $ f+g $ ungerade ist).\\
-\\
-Damit ist Antwort (b) korrekt.
+\underline{1. }\\
+
 
 
 \newpage
-\subsection*{\frage{9}{2}}
-Wir betrachten die differenzierbaren Funktionen $ f(x) $ und $ g(x) $, wobei $ g(x) > 0 $ für $ x \in \R $ gelte. Die Ableitung der Funktion
-\begin{align*}
-	k(x)
-	=
-	\frac{f(g(x))}{g(f(x))}
-\end{align*}
-ist dann
+\subsection*{\frage{9}{3}}
+Sei $f$ eine differenzierbare Funktion. Welcher der folgenden Ausdrücke approximiert 
+$x_0 \frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0) \Delta x}$, wenn $\Delta x$ klein ist?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) + f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+	Die Ableitung $f^\prime(x_0)$.
 	\item
-	$ k^\prime(x) = \frac{f^\prime(g(x))g^\prime(x) }{g^\prime(f(x))f^\prime(x)} $.
-	
+	Die Änderungsrate $\rho_f(x_0)$.	
 	\item
-	$ k^\prime(x) = 
-	\frac{f^\prime(g(x))g^\prime(x)g(f(x)) - f(g(x)) g^\prime(f(x)) f^\prime(x) }
-	{(g(f(x)))^2} $.
+	Das Differential $df$.
 	\item
-	$ k^\prime(x) = \frac{f^\prime(g(x))g(f(x)) - f(g(x))g^\prime(f(x))}{(g(f(x)))^2} $.
+	Die Elastizität $\varepsilon_f(x_0)$.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -441,42 +287,27 @@ ist dann
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item Verwende die Quotientenregel.
+		\item 
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die Quotientenregel}\\
-Nach der Quotientenregel gilt:
-\begin{align*}
-	k^\prime(x)
-	=
-	\frac{(f(g(x)))^\prime g(f(x)) - f(g(x)) (g(f(x)))^\prime}{(g(f(x)))^2}
-	=
-	\frac{f^\prime(g(x)) \cdot g^\prime(x) \cdot g(f(x))
-		- 
-		f(g(x)) g^\prime(f(x)) \cdot f^\prime(x)
-		}{(g(f(x)))^2}.
-\end{align*}
-Damit ist Antwort (c) korrekt.
+\underline{1. }\\
+
 
 
 \newpage
-\subsection*{\frage{10}{3}}
-Gegeben ist die Funktion
-\begin{align*}
-	f \ : \ \R \rightarrow \R, \ x \mapsto y = x \cdot |x| 
-\end{align*}
-Dann folgt:
+\subsection*{\frage{10}{4}}
+Sei $f$ eine Funktion und $x_0 \in D_f$ so, dass $f(x_0) = 1$ und $f^{(k)}(x_0) = 1$ für $k = 1,2,3$ gilt. Seien $P_2$ und $P_3$ jeweils das Taylor-Polynom zweiter und dritter Ordnung von $f$ in $x_0$. Es folgt, dass:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ f $ ist überall stetig und differenzierbar.
+	$P_3(x) - P_2(x) = 0 $ für alle $x$.
 	\item
-	$ f $ ist stetig in $ x_0 = 0 $, aber nicht differenzierbar in $ x_0 = 0 $.
+	$P_3(x) - P_2(x) = (x - x_0)^2 $ für alle $x$.
 	\item
-	$ f $ ist differenzierbar in $ x_0 = 0 $, aber nicht stetig in $ x_0 = 0 $.
+	$P_3(x) - P_2(x) = \frac{1}{6} (x - x_0)^2 $ für alle $x$.
 	\item
-    $ f $ ist nicht stetig und nicht differenzierbar in $ x_0 = 0 $.
+	Es ist nicht möglich die Frage zu beantworten, ohne die Funktionsvorschrift von $f$ zu kennen.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -484,126 +315,10 @@ Dann folgt:
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item Verwende den Differenzenquotienten.
+		\item 
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende den Differenzenquotienten}\\
-Da $ f $ ein Produkt stetiger Funktionen ist, ist $ f $ selbst überall stetig.
-Damit können wir die Antworten (c) und (d) ausschließen.\\
-\\
-Wir müssen nun klären, ob $ f $ in $ x_0 = 0 $ differenzierbar ist. Hierfür betrachten wir den Differenzenquotient:
-\begin{align*}
-	\frac{f(x) - f(x_0)}{x - x_0 } = \frac{x \cdot |x|}{x} = |x|.
-\end{align*}
-Eine Funktion heißt differenzierbar in $ x_0 $, wenn der Grenzwert
-\begin{align*}
-	\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0 }
-\end{align*}
-existiert. In unserem Fall gilt:
-\begin{align*}
-	\lim \limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0 }
-	=
-	\lim \limits_{x \to 0} |x| = 0.
-\end{align*}
-Damit ist $ f  $ in $ x_0 = 0 $ differenzierbar.\\
-\\
-Also ist Antwort (a) korrekt.
+\underline{1. }\\
 
-\newpage
 
-\subsection*{\frage{11}{3}}
-Das Taylorpolynom $ 4 $. Ordnung in $ x_0 = 0 $ der Funktion
-\begin{align*}
-	f(x) = e^{x^3}
-\end{align*}
-lautet:
-\renewcommand{\labelenumi}{(\alph{enumi})}
-\begin{enumerate}
-	\item 
-	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x $. 
-	\item
-	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} - x $. 
-	\item
-	$ P_4(x) = x^3 + x^2 + x + 2$. 
-	\item
-	$ P_4(x) = \frac{x^4}{4} + \frac{x^3}{3} + \frac{x^2}{2} + x +1 $. 
-	\item
-	$ P_4(x) = x^3 + 1$. 
-	\item
-	$ P_4(x) = \frac{x^4}{4} - \frac{x^3}{3} + \frac{x^2}{2} - x + 2 $. 
-\end{enumerate}
-\ \\
-\textbf{Lösung:}
-\begin{mdframed}
-	\underline{\textbf{Vorgehensweise:}}
-	\renewcommand{\labelenumi}{\theenumi.}
-	\begin{enumerate}
-		\item Verwende die Struktur der Ableitungen.
-	\end{enumerate}
-\end{mdframed}
-
-\underline{1. Verwende die Struktur der Ableitungen.}\\
-Wir betrachten die Ableitungen bis zur vierten Ordnung:
-\begin{align*}
-	f^{(0)}(x) &= e^{x^3}\\
-	f^{(1)}(x) &= 3x^2 e^{x^3}\\
-	f^{(2)}(x) &= 6x e^{x^3} + 3x^2 \cdot 3x^2 e^{x^3} = (9x^4 + 6x) e^{x^3}\\
-	f^{(3)}(x) &= (36x^3+ 6) e^{x^3} + (9x^4 + 6x) \cdot 3 x^2 e^{x^3} 
-	= (27x^6 + 54x^3 + 6) e^{x^3}\\
-	f^{(4)}(x) &= (27 \cdot 6\cdot x^5+54 \cdot 3 \cdot x^2) e^{x^3}
-	+ (27x^6 + 54x^3 + 6)\cdot 3 x^2 e^{x^3}.
-\end{align*}
-Spannend für uns ist, was für diese Ableitungen an $ x_0 = 0 $ passiert.
-Es gilt $ f^{(1)}(0) = f^{(2)}(0) = f^{(4)}(0) = 0  $ und $ f^{(0)}(0) = 1 $ bzw. $ f^{(3)}(0) = 6 $.
-Damit können die Antworten (a)--(d) und (f) nicht das korrekte Taylorpolynom sein und Antwort (e) ist korrekt.
-
-\newpage
-
-\subsection*{\frage{12}{3}}
-Die Funktion zweier Variablen $ f $ ist homogen vom Grad $ 3 $ und die Funktion zweier Variablen $ g $ ist homogen vom Grade $ -3 $.\\
-\\
-Die Funktion $ h $ ist definiert durch
-\begin{align*}
-	h(x,y) = f(g(x,y),g(x,y)).
-\end{align*}
-Dann gilt:
-\renewcommand{\labelenumi}{(\alph{enumi})}
-\begin{enumerate}
-	\item 
-	$ h $ ist homogen vom Grad $ -1 $. 
-	\item
-	$ h $ ist homogen vom Grad $ 0 $. 
-	\item
-	$ h $ ist homogen vom Grad $ 6 $. 
-	\item
-	$ h $ ist homogen vom Grad $ -9 $.  
-	\item
-	$ h $ ist nicht homogen.
-\end{enumerate}
-\ \\
-\textbf{Lösung:}
-\begin{mdframed}
-	\underline{\textbf{Vorgehensweise:}}
-	\renewcommand{\labelenumi}{\theenumi.}
-	\begin{enumerate}
-		\item Verwende die Definition der Homogenität.
-	\end{enumerate}
-\end{mdframed}
-
-\underline{1. Verwende die Definition der Homogenität}\\
-Wir betrachten für $ \lambda \in \R $:
-\begin{align*}
-	h(\lambda \cdot x, \lambda \cdot y)
-	&=
-	f(g(\lambda \cdot x,\lambda \cdot y),g(\lambda \cdot x,\lambda \cdot y))
-	=
-	f(\lambda^{-3}g(x,y),\lambda^{-3} g(x,y))\\
-	&=
-	(\lambda^{-3})^3 f(g(x,y),g(x,y))
-	=
-	\lambda^{-9} h(x,y).
-\end{align*}
-Damit ist $ h $ homogen vom Grad $ -9 $.\\
-\\
-Also ist Antwort (d) korrekt.
