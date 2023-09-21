@@ -18,7 +18,7 @@ Eine Rederei muss für ihre Schiffe Container herstellen, um darin Güter um die
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(a1)}] Stelle die Funktion mithilfe des Quadervolumens auf.
-\item[\textbf{(a2)}] 
+\item[\textbf{(a2)}] Verwende die Nebenbedingung für Oberfläche eines Quaders.
 \end{enumerate}
 \end{mdframed}
 Die Verwendung von \glqq minimal\grqq \ lässt vermuten, dass ein Optimierungsproblem vorliegt.
@@ -37,11 +37,94 @@ Damit erhalten wir die Breite $ z $ als Funktion
 	\ \Leftrightarrow \
 	z(x,y) := z = \frac{27}{xy}
 \end{align*}
-für $ x,y > 0 $.
-
-
-
-
+für $ x,y > 0 $. Damit liegt eine Darstellung der Nebenbedingung in Abhängigkeit von $x$ und $y$ vor.\\
+\\
+\underline{\textbf{(a2)} Verwende die Nebenbedingung für Oberfläche eines Quaders}\\
+Die Oberfläche eines Quaders(Containers) ist gegeben durch
+\begin{align*}
+	O(x,y,z) = 2 (xy + xz + yz).
+\end{align*}
+Diese soll nun unter der Nebenbedingung $V(x,y,z) = xyz = 27$ minimal werden. In der Teilaufgabe (a1) haben wir diese nach der Variablen $z$ umgeformt, wodurch diese in der Zielfunktion substituiert werden kann:
+\begin{align*}
+	F(x,y) = O(x,y,z(x,y))
+	=
+	2 ( xy +xz +yz )= 2 \left( xy + \frac{27}{y} + \frac{27}{x}\right)
+	=
+	2xy + \frac{54}{x} + \frac{54}{y}.
+\end{align*}
+Durch die Substitution liegt ein Extremwertproblem in zwei Variablen ohne Nebenbedingung vor um die Länge $x$, Höhe $y$ und Breite $z(x,y)$ für die minimale Oberfläche zu bestimmen.
+Die partiellen Ableitungen erster Ordnung sind:
+\begin{align*}
+	F_x(x,y) &= 2 y - \frac{54}{x^2}\\
+	F_y(x,y) &= 2 x - \frac{54}{y^2}.
+\end{align*}
+Die notwendige Bedingung für einen Extrempunkt in $(x_0,y_0)$ ist
+\begin{align*}
+	\textbf{(I)} &\ F_x(x_0,y_0) = 2 y_0 - \frac{54}{x_0^2} = 0
+	\ \Leftrightarrow \
+	= 2 y_0 x_0- \frac{54}{x_0} = 0\\
+	\textbf{(II)} &\ F_y(x_0,y_0) = 2 x_0 - \frac{54}{y_0^2} = 0
+	\ \Leftrightarrow \
+	= 2 y_0 x_0- \frac{54}{y_0} = 0.
+\end{align*}
+Das Gleichsetzen von \textbf{(I)} und \textbf{(II)} liefert:
+\begin{align*}
+	2 y_0 x_0- \frac{54}{x_0} = 2 y_0 x_0- \frac{54}{y_0}
+	\ \Leftrightarrow \
+	 -\frac{54}{x_0} = -\frac{54}{y_0}
+	 \ \Leftrightarrow \
+	 \frac{1}{x_0} = \frac{1}{y_0}
+	 \ \Leftrightarrow \
+	 x_0 = y_0.
+\end{align*}
+Durch Einsetzen hiervon in \textbf{(I)} (oder \textbf{(II)}) erhalten wir:
+\begin{align*}
+	2x_0^2 - \frac{54}{x_0} = 0
+	\ \Leftrightarrow \
+	2 x_0^3 - 54 = 0
+	\ \Leftrightarrow \
+	2 x_0^3 = 54 
+	\ \Leftrightarrow \
+	x_0^3 = 27
+	\ \Leftrightarrow \
+	x_0 = \sqrt[3]{27} = 3.
+\end{align*}
+Damit gilt auch $y_0 = 3$ und es folgt 
+\begin{align*}
+	z(x_0,y_0) = \frac{27}{3 \cdot 3 } = 3.
+\end{align*}
+Somit liegt die potientiell minimale Fläche für die Länge, Höhe und Breite von $3$ vor.\\
+\\
+Um zu zeigen, dass an $(x_0,y_0) =(3,3)$ wirklich ein Minimum vorliegt, muss die hinreichende Bedingung
+\begin{align*}
+	\Delta(x_0,y_0)
+	=F_{xx}(x_0,y_0)F_{yy}(x_0,y_0)
+	- (F_{xy}(x_0,y_0))^2 > 0 
+\end{align*}
+mit $F_{xx}(x_0,y_0) > 0 $ und $F_{yy}(x_0,y_0)>0$ erfüllt sein.
+Für die Ableitungen zweiter Ordnung gilt:
+\begin{align*}
+	F_{xx}(x,y)
+	=
+	\frac{2 \cdot 54}{x_3}, 
+	\quad
+	F_{yy}(x,y)
+	=
+	\frac{2 \cdot 54}{y_3},
+	\quad
+	F_{xy}(x,y)
+	=
+	F_{yx}(x,y) = 2.
+\end{align*}
+Durch Einsetzen von $(x_0,y_0)$ erhalten wir
+\begin{align*}
+	F_{xx}(3,3) = F_{yy}(3,3) = \frac{2 \cdot 54}{27} = 2 \cdot 2 = 4 > 0
+\end{align*}
+und es folgt:
+\begin{align*}
+	\Delta(3,3) = 4^2 - 2^2 = 12 > 0.
+\end{align*}
+Damit liegt für $(x_0,y_0) = (3,3)$ wirklich ein Minimum von $F$ vor, d.h. der Container hat die minimale Oberfläche als Würfel mit der Kantenlänge $3$.
 
 \newpage
 
@@ -332,13 +415,185 @@ Ein Konsument deckt seine Nachfrage nach zwei Gütern. Dabei beschreibt $ c_1 $ 
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[\textbf{(c1)}] 
-\item[\textbf{(c2)}] 
+\item[\textbf{(c1)}] Stelle Nutzenfunktion sowie die Budgetrestrikton(Nebenbedingung) auf.
+\item[\textbf{(c2)}]
+\begin{enumerate}
+	\item[1.] Transformiere die Zielfunktion.
+	\item[2.] Löse die Aufgabe mit der Lagrange-Methode.
+	\item[3.] Löse die Aufgabe durch Substitution.
+\end{enumerate}
 \end{enumerate}
 \end{mdframed}
 
-\underline{\textbf{(c1)} }\\
-
+Diese Aufgabe ist ein Optimierungsproblem mit Nebenbedigung.
+Da der Konsument ein Einkommen von $10$ (CHF) zur Verfügung hat kann er mit den Gütern 1 und 2  die Nutzenfunktion nicht beliebig maximieren, d.h. gesucht ist das Maximum der Nutzenfunktion $u(c_1,c_2)$ unter der Einkommensrestriktion von $10$ (CHF).\\
+\\
+\underline{\textbf{(c1)} Stelle Nutzenfunktion sowie die Budgetrestrikton(Nebenbedingung) auf}\\
+Die geometrische Distanz zweier Punkte $(x_1,y_1)$ und $(x_2,y_2)$ ist gegeben durch
+\begin{align*}
+	\left|(x_1,y_1) - (x_2,y_2) \right|
+	=
+	\sqrt{(x_1 -x_2)^2 + (y_1-y_2)^2}. 
+\end{align*}
+Die Nutzenfunktion ist die Zielfunktion der Optimierung.Nach der Aufgabenstellung ist diese der Kehrwert des geometrischen Abstandes der Konsumbündel $(c_1,c_2)$ und $(3,3)$, d.h.:
+\begin{align*}
+	u(c_1,c_2)
+	=
+	\frac{1}{\left|(c_1,c_2) - (3,3) \right|}
+	=
+	\frac{1}{\sqrt{(c_1 -3)^2 + (c_2-3)^2}}.
+\end{align*}
+Die Budgetrestriktion(Nebenbedingung) ist gegeben durch
+\begin{align*}
+	p_1 c_1 + p_2 c_2= e 
+	\ \Rightarrow \
+	2 c_1 + 3 c_2 = 10
+	\ \Leftrightarrow \
+	\varphi(c_1,c_2) = 2 c_1 + 3c_3 - 10= 0.
+\end{align*} 
+\  \\
+\underline{\textbf{(c2)} 1. Transformiere die Zielfunktion}\\
+Das Optimierungsproblem mit Nebenbedingung liegt in der Form 
+\begin{align*}
+	\max \limits_{c_1,c_2} u(c_1,c_2)
+	=
+	\max \limits_{c_1,c_2} \frac{1}{\sqrt{(c_1 -3)^2 + (c_2-3)^2}}
+	, \qquad \varphi(c_1,c_2) = 2 c_1 + 3c_3 - 10= 0
+\end{align*}
+vor. Die Zielfunktion können wir hierbei durch mehrere Transformationen vereinfachen. Die Funktion $\frac{1}{x}$ ist streng monoton fallend, d.h. die Zielfunktion erreicht ihr Maximum, sobald der Nenner minimal wird. Die erste Transformation erreichen wir, indem wir das Minimum des Nenners suchen:
+\begin{align*}
+	\min \limits_{c_1,c_2}
+	\hat{u}(c_1,c_2)
+	=
+	\min \limits_{c_1,c_2} \sqrt{(c_1 -3)^2 + (c_2-3)^2}
+	, \qquad \varphi(c_1,c_2) = 2 c_1 + 3c_2 - 10= 0.
+\end{align*}
+Die Wurzelfunktion ist streng monoton wachsend, d.h. sie erhält das Minimum. Deswegen können wir die Wurzelfunktion ignorieren und erhalten als endgültige Optimierungsproblem:
+\begin{align*}
+	\min \limits_{c_1,c_2}
+	\tilde{u}(c_1,c_2)
+	=
+	\min \limits_{c_1,c_2} (c_1 -3)^2 + (c_2-3)^2
+	, \qquad \varphi(c_1,c_2) = 2 c_1 + 3c_2 - 10= 0.
+\end{align*}
+Dieses können wir mit dem Verfahren der Wahl lösen (Lagrange oder Substitution).\\
+\\
+\underline{\textbf{(c2)} 1. Löse die Aufgabe mit der Lagrange-Methode}\\
+Mit unserern Transformationen erhalten wir die Lagrange-Funktion:
+\begin{align*}
+	L(c_1,c_2,\lambda)
+	=
+	\tilde{u}(c_1,c_2) + \lambda \varphi(c_1,c_2)
+	=
+	(c_1-3)^2 + (c_2-3)^2 + \lambda ( 2c_1 + 3 c_2 -10).
+\end{align*}
+Die partiellen Ableitungen sind gegeben durch:
+\begin{align*}
+	\frac{\partial L}{\partial c_1}(c_1, c_2 , \lambda)
+	&= 2(c_1 -3) + 2 \lambda\\
+	\frac{\partial L}{\partial c_2}(c_1, c_2 , \lambda)
+	&= 2(c_2 -3) + 3 \lambda \\
+	\frac{\partial L}{\partial \lambda}(c_1, c_2 , \lambda)
+	&= 2 c_1 + 3 c_2 - 10 .
+\end{align*}
+Damit ergeben sich die Lagrange-Bedingungen:
+\begin{align*}
+	\text{(I)} &\ 2(c_1 -3) + 2 \lambda = 0 
+	\ \Rightarrow \
+	\lambda = - c_1 + 3	\\
+	\text{(II)} &\ 2(c_2 -3) + 3 \lambda  = 0
+	\ \Rightarrow \
+	\lambda = - \frac{2}{3} c_2 + 2
+	\\
+	\text{(III)} &\ 2 c_1 + 3 c_2 - 10 = 0.
+\end{align*}
+Das Gleichsetzen von (I) und (II) ergibt
+\begin{align*}
+	-c_1 + 3 = - \frac{2}{3} c_2 +2
+	\ \Leftrightarrow \
+	c_1 = \frac{2}{3} c_2 +1 \quad (\ast) .
+\end{align*}
+Einsetzen hiervon in (III) liefert:
+\begin{align*}
+	2 \left(\frac{2}{3}c_2 + 1\right) + 3 c_2 - 10 = 0
+	\ \Leftrightarrow \
+	\frac{4}{3} c_2 + \frac{9 }{3} c_2 = \frac{13}{3} c_2 = 8 
+	\ \Leftrightarrow \
+	&c_2 = \frac{24}{13}\\ 
+	\
+	\overset{(\ast)}{\Rightarrow}
+	&c_1 = \frac{2}{3} \cdot\frac{24}{13} + 1
+	= \frac{16}{13} + \frac{13}{13} = \frac{29}{13}.
+\end{align*}
+Das optimale Konsumbündel ist (vermutlich) durch
+\begin{align*}
+	c_1^\star = \frac{29}{13}, \qquad 
+	c_2^\star = \frac{24}{13}.
+\end{align*}
+gegeben. Mithilfe der Lagrange-Methode haben wir jedoch nur eine notwendige Bedingung für eine Extremstelle unter einer Nebenbedingung.
+Die transformierte Zielfunktion ist ein nach oben geöffnetes Paraboloid und die Nebenbedingung ist eine Gerade.
+Unabhängig davon wie wir eine Gerade (die Nebenbedingung) durch das Paraboloid legen hat, finden wir immer ein Minimum wenn die Gerade auf dem Paraboloid ablaufen.
+\newpage
+In unserem Fall können wir das durch die Grafik
+\begin{center}
+	\includegraphics[width=0.6\textwidth]{pictures/aufgabe1_c}
+\end{center}
+veranschaulichen.
+Hierbei ist die rote Linie die Budgetrestriktion auf der transformierten Zielfunktion.\\
+\\
+\underline{\textbf{(c2)} 3. Löse die Aufgabe durch Substitution}\\
+Um die Aufgabe durch Substitution zu lösen, formen wir die Budgetrrestriktion nach einer der beiden Variablen um:
+\begin{align*}
+	2 c_1 + 3 c_2 = 10
+	\ \Leftrightarrow \ 
+	2c_1 = 10 - 3 c_2 
+	\ \Leftrightarrow \
+	c_1 = 5 - \frac{3}{2} c_2.
+\end{align*}
+Wenn wir dies in die Zielfunktion erhalten wir mit
+\begin{align*}
+	F(c_2)
+	&:= 
+	\tilde{u}\left(5 - \frac{3}{2} c_2, c_2\right)
+	= 
+	\left(5 - \frac{3}{2} c_2 -3 \right)^2 + (c_2 -3 )^2
+	=
+	\left(2 - \frac{3}{2} c_2\right)^2 + (c_2 -3)^2\\
+	&=
+	\frac{9}{4} \left(\frac{4}{3} - c_2\right)^2 + (c_2 -3)^2
+	=
+	\frac{9}{4} \left(c_2 -\frac{4}{3} \right)^2 + (c_2 -3)^2.
+\end{align*}
+Die Ableitung erster Ordnung ist gegeben durch:
+\begin{align*}
+	F^\prime(c_2)
+	=
+	\frac{9}{2} \left(c_2 - \frac{4}{3}\right) + 2 (c_2 -3)
+	=
+	\frac{9}{2} c_2 - 6 + 2 c_2 - 6
+	=
+	\frac{13}{2} c_2 -12.
+\end{align*}
+Die notwendie Bedingung für ein Minimum in $c^\star_2$ ist
+\begin{align*}
+	F^\prime(c_2^\star) = 0 
+	\ \Leftrightarrow \
+	\frac{13}{2} c_2^\star - 12 = 0  
+	\ \Leftrightarrow \
+	\frac{13}{2} c_2^\star = 12 
+	\ \Leftrightarrow \
+	c_2^\star = \frac{24}{13}
+\end{align*}
+und mit der Rücksubstitution erhalten wir:
+\begin{align*}
+	c_1^\star = 5 - \frac{3}{2} \cdot \frac{24}{13}
+	= \frac{29}{13}.
+\end{align*}
+Wegen 
+\begin{align*}
+	F^{\prime \prime}(c_2^\star ) = \frac{13}{2} > 0
+\end{align*}
+liegt an dem Konsumbündel $(c^\star_1,c^\star_2)$ ein Minimum von $\tilde{u}$ bzw. Maximum von $u$ unter der Budgetrestriktion vor.
 
 
 \newpage
