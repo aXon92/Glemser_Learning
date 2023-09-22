@@ -125,7 +125,7 @@ Weisen Sie nach, dass $I^\star$ tatsächlich ein Maximum von $v$ ist.\\
 
 \fancyhead[C]{\normalsize\textbf{$\qquad$ Teil II: Multiple-Choice}}
 \begin{Large}
-\textbf{Teil II: Multiple-Choice-Fragen (64 Punkte)}
+\textbf{Teil II: Multiple-Choice-Fragen (62 Punkte)}
 \end{Large}
 \\
 \\
@@ -147,7 +147,7 @@ Falls mehrere Antworten angekreuzt sind, wird die Antwort mit 0 Punkten bewertet
 die korrekte Antwort unter den angekreuzten ist.
 
 \item
-Bitte lesen Sie die Fragen und die Anweisungen auf dem Multiple-Choice-Antwortbogen sorgfältig.
+Bitte lesen Sie die Fragen und die Anweisungen sorgfältig.
 
 \end{enumerate}
 \newpage
@@ -158,146 +158,146 @@ Bitte lesen Sie die Fragen und die Anweisungen auf dem Multiple-Choice-Antwortbo
 $ A $ und $ B $ seien zwei Aussagen. Welche der folgenden zwei zusammengesetzten Aussagen sind äquivalent? 
  \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-\item $ A \Rightarrow  B $ und $A \vee B$.
-\item $ A \vee B $ und $\neg (A \vee B)$.
-\item $ (A \Rightarrow \neg B) $ und $\neg ( A \vee B )$
+\item $ A \Rightarrow   \neg B $ und $\neg (A \wedge B)$.
+\item $ A \wedge B $ und $\neg (A \wedge B)$.
+\item $ (A \Rightarrow \neg B) $ und $A \wedge B$
 \item Keine der obigen Antworten ist richtig.
 \end{enumerate}
 \ \\
 \subsection*{\frage{2}{4}}
-Welche der folgenden zusammengesetzten Aussagen ist eine Tautologie? 
+Welche der folgenden zusammengesetzten Aussagen ist \textit{keine} Tautologie? 
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-	\item $(A \Rightarrow B ) \wedge (B \Rightarrow A)$.
-	\item $ ((A \wedge B) \Rightarrow B) \vee A$.
-	\item $ ((A \vee B) \Rightarrow B) \vee B$
-	\item $(A \Rightarrow B ) \vee \neg A \vee B$.
+	\item $( \neg A \vee \neg B ) \Leftrightarrow (\neg  (A \wedge B))$.
+	\item $ A \Rightarrow ( B \Rightarrow A)$.
+	\item $ ((A \Rightarrow B) \wedge \neg  B) \Rightarrow \neg A$
+	\item $ \neg ( \neg A \wedge \neg  B ) \vee B$.
 \end{enumerate}
 \ \\
-\subsection*{\frage{3}{3}}
-Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.01$ und $b_1 = 3$, $b_2 = -2$.\\
+\subsection*{\frage{3}{4}}
+Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.05$ und $b_1 = 2$, $b_2 = 1.9$. Seien $\{s_n^a \}_{n \in \mathbb{N}}$ und $\{s_n^b \}_{n \in \mathbb{N}}$ die entsprechenden Reihen.\\
 \\
-Welche der folgenden Aussagen ist korrekt? 
+Welche der folgenden Aussagen ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ konvergieren beide.
+Es gibt genau ein $n^\star \in \N$, sodass $s^b_{n^\star} = s^a_{n^\star} $.
 \item 
-Nur $\{a_k\}_{k \in \mathbb{N}}$ konvergiert.
+Es gibt genau ein $n^\star \in \N$, sodass $s^b_n \geq s_n^a$ für alle $n \geq n^\star$ und $s_n^b < s_n^a$ für alle $n < n^\star$.
 \item 
-Nur $\{b_k\}_{k \in \mathbb{N}}$ konvergiert.
+ $s_n^b < s_n^a$ für alle $n \in \N$.
 \item
-Weder $\{a_k\}_{k \in \mathbb{N}}$ noch $\{b_k\}_{k \in \mathbb{N}}$ konvergieren.
+Es gibt genau ein $n^\star \in \N$, sodass $s_n^b \geq s_n^a$ für alle $n \leq n^\star$ und $s_n^b < s_n^a$ für alle $n > n^\star$.
+\item 
+$s_n^b > s_n^a$ für alle $n \in \N$.
 \end{enumerate}
 \ \\
-\subsection*{\frage{4}{4}}
-Seien $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ zwei geometrische Folgen mit $a_1 = 1$, $a_2= 1.1$ und $b_1 = 3$, $b_2 = 3.1$.
-Seien $\{s_n^a \}_{n \in \mathbb{N}}$ und $\{s_n^b \}_{n \in \mathbb{N}}$ die entsprechenden Reihen.\\
-\\
-Welche der folgenden Aussagen ist korrekt? 
+\subsection*{\frage{4}{3}}
+Bei einer stetigen Verzinsung mit jährlichem Zinssatz $i$ ist der effektive Jahreszins $i_{\mathrm{eff}}$ gegeben durch:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 3$.
+	$i_{\mathrm{eff}} = e^i$.
 	\item
-	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \frac{1}{3}$.
+	$i_{\mathrm{eff}} = \ln(1+ i)$.
 	\item
-	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = \infty$.
+	$i_{\mathrm{eff}} = e^i -1$.
 	\item
-	$\lim_{n \to \infty} \frac{s_n^a}{s_n^b} = 0$.
+	$i_{\mathrm{eff}} = i$.
 \end{enumerate}
 \ \\
 \subsection*{\frage{5}{3}}
-Ein Projekt erfordert eine Anfangsinvestition von $10'000$ Schweizer Franken und generiert Erträge in Höhe von $500$ Schweizer Franken am Ende jedes Jahres für $10$ Jahre, sowie zusätzliche $12'000$ Schweizer Franken am Ende des zehnten Jahres.\\
+Ein Projekt erfordert eine Anfangsinvestition von $2'000$ Schweizer Franken und generiert Erträge in Höhe von $50$ Schweizer Franken am Ende jedes Jahres für $10$ Jahre, sowie zusätzlich die Anfangsinvestition von $2'000$ Schweizer Franken am Ende des zehnten Jahres.\\
 \\
 Der interne Zinssatz des Projekts ist:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Echt grösser als $5 \%$.
+	Echt grösser als $2.5 \%$.
 	\item 
-	Gleich $5 \%$.
+	Gleich $2.5 \%$.
 	\item
-	Echt kleiner als $5 \%$.
+	Echt kleiner als $2.5 \%$.
 	\item
-	Die Frage kann nicht beantwortet werden, ohne zu wissen, welcher Zinssatz $i$ gilt.
+	Es hängt davon ab, welcher Zinssatz $i$ gilt, wenn der Anfangsbetrag von $2'000$ Schweizer Franken auf einem Bankkonto angelegt wird, anstatt in das Projekt investiert werden.
 \end{enumerate}
 \ \\
 \subsection*{\frage{6}{3}}
-Seien $h$, $f$ und $g$ differenzierbare Funktionen einer reellen Variable. Welche der folgenden Formeln ist korrekt?
+Beim Ableiten besagt die Kettenregel:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f^\prime(x) + g^\prime(x))$.
+	$ (f \circ g)^\prime(x) = f^\prime(g(x)) g^\prime(x)$.
 	\item 
-	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(x) ( f(x) + g(x))^\prime$.
+	$ (f \circ g)^\prime(x) = f(x) g^\prime(x)$.
 	\item
-	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x))  f^\prime(x) + h^\prime(g(x)) g^\prime(x)$.
+	$ (f \circ g)^\prime(x) = f^\prime(x) g(x)$.
 	\item
-	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  (f^\prime(x) +  g^\prime(x) )$.
+	$ (f \circ g)^\prime(x) = f^\prime(g(x)) g(x)$.
 	\item
-	$ \frac{d}{dx}h(f(x) + g(x)) = h^\prime(f(x) + g(x))  f^\prime(x)  g^\prime(x)$.
+	$ (f \circ g)^\prime(x) = f^\prime(x) g^\prime(x)$.
 \end{enumerate}
 \ \\
-\subsection*{\frage{7}{4}}
-Welche der folgenden Aussagen ist korrekt für eine differenzierbare Funktion $f$ auf einem Intervall $[a,b]$ und $x_0 \in (a,b)$?
+\subsection*{\frage{7}{3}}
+Eine invertierbare Funktion $f$ hat zwei Fixpunkte in ihrem Definitionsbereich, also $x_1,x_2 \in D_f$, sodass $f(x_1) = x_1$ und $f(x_2) = x_2$ gilt.\\
+Es folgt, dass die Funktion $g$, definiert als $g(x) = f(x) - x$ für $x \in D_f$,
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$x_0$ ist genau dann ein stationärer Punkt, wenn er ein Extrempunkt ist.
+die Umkehrfunktion $g^{-1}(x) = f^{-1}(x) - \frac{1}{x} $ besitzt.
 \item
-Wenn $x_0$ ein Wendepunkt ist, dann ist er auch ein stationärer Punkt.
+die Umkehrfunktion $g^{-1}(x) = f^{-1}\left(\frac{1}{x}\right) $ besitzt.
 \item
-Wenn $x_0$ der einzige lokale Extrempunkt in $(a,b)$ ist, dann ist er auch ein globaler Extrempunkt in $[a,b]$.
+die Umkehrfunktion $g^{-1}(x) = f^{-1}(x) - x $ besitzt.
 \item
-Wenn $f^\prime(x_0) = 0$, dann ist $x_0$ ein Extrempunkt.
+eine Umkehrfunktion besitzt, jedoch kann ein allgemeiner Ausdruck für $g^{-1} $ Kenntnis von $f$ nicht hergeleitet werden.
 \item
-Keine der obigen Antworten ist richtig.
+nicht invertierbar ist.
 \end{enumerate}
 \ \\
-\subsection*{\frage{8}{3}}
-Seien $f$ und $g$ konkave, zweimal differenzierbare Funktionen. Welche der folgenden Aussagen ist korrekt?
+\subsection*{\frage{8}{4}}
+Sei $f$ eine an der Stelle $x_0 \in I $ differenzierbare Funktion einer reellen Variablen und $I$ ein im Definitionsbereich von $f$ enthaltenes Intervall. Die erste Ableitung $f^\prime(x_0)$ approximiert: 
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$f \ g$ ist konkav.
+	die absolute Änderung $f(x_0 + \Delta x) - f(x_0)$, wenn $\Delta x$ nahe $0$ ist.
  	\item
-	$f \ g$ ist konvex.
+	die durchschnittliche Änderung $\frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$, wenn $\Delta x$ nahe $0$ ist.
 	\item
-	$f \circ g $ ist konkav.
+	die relative Änderung $\frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0)}$, wenn $\Delta x$ nahe $0$ ist.
 	\item
-	$f +g $ ist konvex.
-	\item 
-	$f+g$ ist konkav.
+	die relative durchschnittliche Änderung $\frac{1}{x_0} \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$, wenn $\Delta x$ nahe $0$ ist.
 \end{enumerate}
 \ \\
 \subsection*{\frage{9}{3}}
-Sei $f$ eine differenzierbare Funktion. Welcher der folgenden Ausdrücke approximiert 
-$x_0 \frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0) \Delta x}$, wenn $\Delta x$ klein ist?
+Sei $f$ eine an der Stelle $x_0 \in I$ differenzierbare Funktion einer reellen Variablen und $I$ ein im Definitionsbereich von $f$ enthaltenes Intervall.
+Ausserdem gelte, dass $f(x_0)  \neq 0, \ x_0 > 0$, und $\varepsilon_f(x_0) > 1$, wobei $\varepsilon_f(x_0)$ die Elastizität von $f$ an der Stelle $x_0$ bezeichnet.\\
+\\
+Welche der folgenden Aussagen ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	Die Ableitung $f^\prime(x_0)$.
+	In $x_0$ gilt, dass wenn das Argument um einen kleinen Betrag $\Delta x$ erhöht wird, der Anstieg in $f$ relativ betrachtet grösser ist als der Anstieg in $x$.
 	\item
-	Die Änderungsrate $\rho_f(x_0)$.	
+	In $x_0$ gilt, dass wenn das Argument um einen kleinen Betrag $\Delta x$ erhöht wird, der Anstieg in $f$ absolut betrachtet grösser ist als der Anstieg in $x$.
 	\item
-    Das Differential $df$.
+    In $x_0$ gilt, dass wenn das Argument um einen kleinen Betrag $\Delta x$ erhöht wird, der Anstieg in $f$ absolut betrachtet kleiner ist als der Anstieg in $x$
 	\item
-	Die Elastizität $\varepsilon_f(x_0)$.
+	Es lässt sich mit den gegebenen Informationen nicht sagen, wie sich $f$ in $x_0$ ändert, wenn das Argument um einen kleinen Betrag $\Delta x$ erhöht wird.
 \end{enumerate}
 \ \\
 \subsection*{\frage{10}{4}}
-Sei $f$ eine Funktion und $x_0 \in D_f$ so, dass $f(x_0) = 1$ und $f^{(k)}(x_0) = 1$ für $k = 1,2,3$ gilt. Seien $P_2$ und $P_3$ jeweils das Taylor-Polynom zweiter und dritter Ordnung von $f$ in $x_0$. Es folgt, dass:
+Sei $f$ eine auf dem Intervall $I \subset D_f$ streng konkave Funktion und $x_0 \in I$. Sei $P_2 $ das Taylor-Polynom zweiter Ordnung von $f$ in $x_0$, dann gilt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$P_3(x) - P_2(x) = 0 $ für alle $x$.
+	Der Graph von $P_2$ ist eine nach oben geöffnete Parabel.
 	\item
-	$P_3(x) - P_2(x) = (x - x_0)^2 $ für alle $x$.
+	Der Graph von $P_2$ ist eine gerade Linie.
 	\item
-	$P_3(x) - P_2(x) = \frac{1}{6} (x - x_0)^2 $ für alle $x$.
+	Der Graph von $P_2$ ist eine nach unten geöffnete Parabel.
 	\item
-	Es ist nicht möglich die Frage zu beantworten, ohne die Funktionsvorschrift von $f$ zu kennen.
+	Abhängig von $x_0$ sind alle oben genannten Fälle möglich.
 \end{enumerate}
 
 
@@ -306,21 +306,21 @@ Sei $f$ eine Funktion und $x_0 \in D_f$ so, dass $f(x_0) = 1$ und $f^{(k)}(x_0) 
 \vspace{0.4cm}
 
 \subsection*{\frage{1}{3}}
-Welche der folgenden Folgen konvergiert gegen $1$?
+Welche der folgenden Folgen konvergiert \textit{nicht} gegen $0$?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
 	$ \{a_n\}_{n \in \mathbb{N}} $ mit $a_n = \frac{\sin(n) - \cos(n)}{n}$.
 	\item
-	$ \{b_n\}_{n \in \mathbb{N}} $ mit $b_n = \frac{n^2}{2n^2 - 3n +1 }$.
+	$ \{b_n\}_{n \in \mathbb{N}} $ mit $b_n = \sqrt{n^2 + 1 }  - n$.
 	\item
-	$ \{c_n\}_{n \in \mathbb{N}} $ mit $c_n = \sqrt{n^2 + 1 }  - n$.
+	$ \{c_n\}_{n \in \mathbb{N}} $ mit $c_n = \frac{n}{n^2 - 3n +1 }$.
 	\item
 	$ \{d_n\}_{n \in \mathbb{N}} $ mit $d_n = \frac{n^2}{e^n}$.
 	\item
-	$ \{e_n\}_{n \in \mathbb{N}} $ mit $e_n = \frac{(n+2)(n^2 + 3n -1 )}{n^3 + 4 }$.
+	$ \{e_n\}_{n \in \mathbb{N}} $ mit $e_n = \frac{\ln(n)}{n}$.
 	\item
-	$ \{f_n\}_{n \in \mathbb{N}} $ mit $f_n = \frac{\ln(n)}{n}$.
+	$ \{f_n\}_{n \in \mathbb{N}} $ mit $f_n = \frac{(n+2) (n^2 + 3n -1 )}{5n^3 + 4}$.
 \end{enumerate}
 \ \\
 \subsection*{\frage{2}{4}}
