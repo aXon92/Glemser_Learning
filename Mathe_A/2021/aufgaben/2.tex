@@ -29,32 +29,33 @@ Aus diesen Kombinationen ergeben sich dann die Wahrheitswerte der verknüpften A
 		\hline
 		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
 		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ 
-		\multicolumn{1}{c|}{$\neg A$} & \multicolumn{4}{l}{$F$ $F$ $W$ $W$} \\
+		\hline
 		\multicolumn{1}{c|}{$\neg B$} & \multicolumn{4}{l}{$F$ $W$ $F$ $W$} \\
 		\hline
-		\multicolumn{1}{c|}{(a) \ \ $ A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\ 
-		\multicolumn{1}{c|}{(b) \ \ $ A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\ 
-		\multicolumn{1}{c|}{(c) \ \ $ (\neg A) \vee (\neg B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
-		\multicolumn{1}{c|}{(d) \ \ $ (\neg A) \wedge (\neg B)$} & \multicolumn{4}{l}{$F$ $F$ $F$ $W$} \\
+		\multicolumn{1}{c|}{ $ A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$ \neg (A \wedge B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
 		\hline
-		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\ 
-		\multicolumn{1}{c|}{$ A \Rightarrow  \neg B$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\ 
-		\multicolumn{1}{c|}{$ \neg(A \Rightarrow  \neg B)$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\ 
-		\hline
+		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
+		\multicolumn{1}{c|}{$ A \Rightarrow  \neg B$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\  	
+		\hline	
 	\end{tabular}
 \end{center}
-Damit ist Antwort (b) korrekt. \\
+Damit ist Antwort (a) korrekt. \\
 \\
-Alternativ lässt sich die Antwort auch anders herleiten. Durch Umformungen erhalten wir:
+Alternativ lässt sich die Antwort auch anders herleiten.
+Die Implikation ist definiert durch:
 \begin{align*}
-	\neg (A \ \Rightarrow \ \neg B)
-	&\Leftrightarrow
-	\neg ((\neg A) \vee (\neg B))
-	\Leftrightarrow
-	\neg (\neg A) \wedge \neg(\neg B)
-	\Leftrightarrow
-	A \wedge B.
+	A \Rightarrow B \ :\Leftrightarrow \ \neg A \vee B.
 \end{align*}
+Damit erhalten wir mit
+\begin{align*}
+	A \Rightarrow \neg B 
+	&\Leftrightarrow
+	\neg A \vee \neg B
+	\Leftrightarrow
+	\neg (A \wedge B).
+\end{align*}
+die korrekte Antwort.
 
 
 \newpage
