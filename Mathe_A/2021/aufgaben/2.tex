@@ -163,15 +163,54 @@ Welche der folgenden Aussagen ist korrekt?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Stelle die zugehörigen Reihen auf.
+\item Schließe falsche Antworten aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
-
-
+\underline{1. Stelle die zugehörigen Reihen auf}\\
+Für $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ gilt
+\begin{align*}
+	q^a = \frac{a_2}{a_1} &= \frac{1.05}{100} = 1.05.\\
+	q^b = \frac{b_2}{b_1} &= \frac{1.9}{2} = \frac{190}{200} = \frac{95}{100} = 0.95.
+\end{align*}
+Die zugehörigen Reihen sind gegeben durch:
+\begin{align*}
+	s_n^a = a_1 \frac{1 - 1.05^n}{1- 1.05} = \frac{1- 1.05^n}{-\frac{5}{100}}
+	&= 20 (1.05^n - 1)\\
+	&s_n^b = b_1 \frac{1 - 0.95^n}{1- 0.95} = 2 \frac{1-0.95^n}{0.05} = 40 (1- 0.95^n).
+\end{align*}
+Beide Partialsummenfolgen sind streng monoton wachsend. Weiter gilt
+\begin{align*}
+	\lim \limits_{n \to \infty} s_n^a = \infty \ \textrm{und} \
+	\lim \limits_{n \to \infty} s_n^a = 40.
+\end{align*}
+\ \\
+\underline{2. Schließe falsche Antworten aus}\\
+Die Gleichung
+\begin{align*}
+	s_n^a = s_n^b 
+	\ \Leftrightarrow \
+	20 (1.05^n - 1) = 40 (1- 0.95^n)
+	\ \Leftrightarrow \ 
+	1.05^n - 1 = 2 - 2 \cdot 0.95^n
+	\ \Leftrightarrow \
+	1.05^n + 2 cdot  0.95^n = 3
+\end{align*}
+besitzt keine Lösung für $n \in \N$. Damit ist die Antwort (a) falsch.
+Wegen
+\begin{align*}
+	s_1^b  = a_1 =  2 > 1 = b_1 = s_1^b
+\end{align*}
+können die Antworten (b) und (c) nicht korrekt sein. Die Antwort (d) ist korrekt, da
+beide Partialsummenfolgen streng mononton steigend und die Aussagen gelten:
+\begin{align*}
+	&s_n^a \to \infty, \ s_n^b \to 40\\
+	&s_1^b  > s_1^a. 
+\end{align*}
+Damit kann insbesondere Antwort (e) nicht stimmen.\\
+\\
+Die Antwort (d) ist korrekt.
 \newpage
 
 \subsection*{\frage{4}{3}}
