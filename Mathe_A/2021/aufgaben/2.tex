@@ -75,10 +75,67 @@ Welche der folgenden zusammengesetzten Aussagen ist \textit{keine} Tautologie?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item .
+		\item Verwende logische Umformungen.
 	\end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Verwende logische Umformungen}\\
+Die Aussage (a) entspricht der de Morganschen Regel der Aussagenlogik und ist somit eine Tautologie (Aussage welche immer wahr ist). Für die Aussage (b) gilt:
+\begin{align*}
+	A \Rightarrow (B \Rightarrow A)
+	\ \Leftrightarrow \
+	\neg A \vee (B \Rightarrow A)
+	\ \Leftrightarrow \
+	\neg A \vee ( \neg B \vee A)
+	\ \Leftrightarrow \ 
+	\neg A \vee A \vee B.
+\end{align*}
+Wegen $\neg A \vee A $ ist diese Aussage immer wahr. Die Aussage (c) lässt sich durch
+\begin{align*}
+	((A \Rightarrow B ) \wedge \neg B) \Rightarrow \neg A
+	&\ \Leftrightarrow \
+	(\neg A \vee B ) \wedge \neg B ) \Rightarrow \neg A\\
+	&\ \Leftrightarrow \
+	(\neg A \wedge \neg B \vee B \wedge \neg B) \Rightarrow \neg A\\
+	&\ \Leftrightarrow \
+	(\neg A \wedge \neg B ) \Rightarrow \neg A\\
+	&\ \Leftrightarrow \
+	 \neg (\neg A \wedge \neg B ) \vee \neg A\\
+	&\ \Leftrightarrow  \
+	A \vee \neg A \vee B
+\end{align*}
+umformen. Auch diese ist wegen $A \vee \neg A$ immer wahr. Damit bleibt nur die Aussage (d) übrig. Für diese gilt:
+\begin{align*}
+	\neg ( \neg A \wedge \neg  B ) \vee B
+	\ \Leftrightarrow \
+	A \vee B \vee B 
+	\ \Leftrightarrow \ 
+	A \vee B
+\end{align*}
+Diese Aussage(ODER) ist offensichtlich nicht immer wahr($A =F $ und $B = F$).\\
+\\
+Alternativ lässt sich diese Aufgabe natürlich auch über eine Wahrheitstafel lösen:
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ 
+		\hline
+		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
+		\multicolumn{1}{c|}{$ B \Rightarrow A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $W$} \\
+		\multicolumn{1}{c|}{$ \neg A$} & \multicolumn{4}{l}{$F$ $F$ $W$ $W$} \\
+		\multicolumn{1}{c|}{$\neg B$} & \multicolumn{4}{l}{$F$ $W$ $F$ $W$} \\
+		\hline
+		\multicolumn{1}{c|}{ $ \neg A \vee  \neg B$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
+		\multicolumn{1}{c|}{$ \neg (A \wedge B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
+		\multicolumn{1}{c|}{$ \neg (\neg A \vee \neg B)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\
+		\hline
+		\multicolumn{1}{c|}{(a) \ $ ( \neg A \vee \neg B ) \Leftrightarrow (\neg  (A \wedge B))$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\
+		\multicolumn{1}{c|}{(b) \ $ A \Rightarrow ( B \Rightarrow A)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\  
+		\multicolumn{1}{c|}{(c) \ $ ((A \Rightarrow B) \wedge \neg  B) \Rightarrow \neg A$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\ 	
+		\multicolumn{1}{c|}{(d) \ $ \neg ( \neg A \wedge \neg  B ) \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\ 
+		\hline	
+	\end{tabular}
+\end{center}
 
  
 
