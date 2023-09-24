@@ -270,12 +270,32 @@ Der interne Zinssatz des Projekts ist:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Stelle das Projekt mithilfe eines Bankkontos dar.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Stelle das Projekt mithilfe eines Bankkontos dar}\\
+Das Projekt ist äquivalent zu einer Einzahlung von $2'000$ Schweizer Franken auf ein Bankkonto, auf welches man für $10$ Jahre jährliche Zinsen bei einem Zinssatz von $\frac{50}{2000} = 2.5 \%$ ohne Zinseszins erhält und die ursprüngliche Summe von $2'000$ Schweizer Franken am Ende des $10$. Jahres wieder ausgezahlt wird.\\
+Der Nettobarwert des Projekts ist genau für einen Zinssatz von $2.5 \% $ gleich 0, womit dieser dem internen Zinssatz entspricht.\\
+\\
+Formal lässt sich dies durch folgenden Zahlungsstrom zeigen:
+\begin{align*}
+	-&2000 + \sum \limits_{t = 1}^{10} \frac{50}{(1+i)^i} + 2000 \cdot \frac{1}{(1+i)^{10}}
+	=
+	-2000 + \sum \limits_{t = 1}^{10} \frac{2000 \cdot i}{(1+i)^i} + 2000 \cdot \frac{1}{(1+i)^{10}}\\
+	=
+	-&2000 \left(-1 + i \sum \limits_{t = 1}^{10 }\frac{1}{(1+i)^t} + \frac{1}{(1+i)^{10}} \right) 
+	=
+	-2000 \left(-1 + i \left(\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{1 - \frac{1}{1+i}} -1 \right)+ \frac{1}{(1+i)^{10}} \right)\\
+	=
+	-&2000 \left(-1 + i \left(\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{ \frac{i}{1+i}}  -1 \right)+ \frac{1}{(1+i)^{10}} \right)\\
+	=
+	-&2000 \left(-1 + i \left( (1+i)\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{ i} -1 \right)+ \frac{1}{(1+i)^{10}} \right )\\
+	=
+	-&2000 \left(-1 +  1+i  - \left(\frac{1}{1+i}\right)^{10}  -i + \frac{1}{(1+i)^{10}} \right )
+	= 0.
+\end{align*}
+Hierbei haben wir $2000 \cdot i = 50   \ \Leftrightarrow i = 2.25 \%$ verwendet. 
 
 
  \newpage
