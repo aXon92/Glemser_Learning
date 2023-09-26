@@ -469,10 +469,22 @@ Sei $f$ eine auf dem Intervall $I \subset D_f$ streng konkave Funktion und $x_0 
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die zweite Ableitung.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Verwende die zweite Ableitung}\\
+Eine Funktion $f$ ist genau dann streng konkav auf $I$, wenn
+\begin{align*}
+f^{\prime \prime}(x) < 0
+\end{align*}
+für alle $x \in I$ gilt. Das Taylorpolynom zweiter Ordnung ist gegeben durch:
+\begin{align*}
+	P_2(x) =
+	= \sum \limits_{k=0}^2\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k
+	=
+	\frac{f^{\prime \prime }(x_0)}{2} (x-x_0) + f^{\prime} (x_0) (x- x_0) + f(x_0)
+\end{align*}
+Da die zweite Ableitung für $x_0 \in I$ negativ ist, ist der Faktor vor dem quadratischen Term negativ. Damit ist die Parabel nach unten geöffnet.\\
+\\
+Also ist die Antwort (c) korrekt.
