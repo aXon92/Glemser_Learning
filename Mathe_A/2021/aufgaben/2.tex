@@ -428,13 +428,26 @@ Welche der folgenden Aussagen ist korrekt?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende die Approximation der Elastizität für $\Delta x $ nahe $0$.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Verwende die Approximation der Elastizität für $\Delta x $ nahe $0$}\\
+Die Elastizität $\varepsilon_f(x_0)$ kann für $\Delta x$ nahe $0$ durch
+\begin{align*}
+	\frac{\frac{\Delta f}{f(x_0)}}{\frac{\Delta x}{x_0}}
+	= 
+	\frac{\Delta f}{f(x_0)} \cdot \frac{x_0}{\Delta x} \approx \varepsilon_f(x_0)
+ 	\ \Leftrightarrow \
+ 	\frac{\Delta f}{f(x_0)} \approx \varepsilon_f(x_0 )\frac{\Delta x}{x_0}
+\end{align*} 
+approximiert werden. Wegen $\varepsilon_f(x_0) > 1$ gilt:
+\begin{align*}
+	\frac{\Delta f}{f(x_0)} \approx \varepsilon_f(x_0 )\frac{\Delta x}{x_0}
+	> 
+	\frac{\Delta x}{x_0}.
+\end{align*} 
+Also ist der Anstieg in $f$ relativ gesehen größer als der Anstieg in $x$.
 
 \newpage
 \subsection*{\frage{10}{4}}
