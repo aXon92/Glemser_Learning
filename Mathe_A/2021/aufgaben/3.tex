@@ -190,11 +190,36 @@ Die Ableitung von $f$ in $x_0 = e $ ist:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Berechne die Ableitung von $f$.
 \end{enumerate}
 \end{mdframed}
 %\allowdisplaybreaks
-\underline{1. }\\
+\underline{1. Berechne die Ableitung von $f$}\\
+Wir verwenden die Exponentialfunktion um $f$ umzuschreiben:
+\begin{align*}
+	f(x) = x^{\ln(x^2)} = 
+	e^{\ln \left(x^{\ln(x^2)} \right)  }
+	=
+	e^{\ln(x^2) \ln(x)}
+	= 
+	e^{2 \ln(x)^2}.
+\end{align*}
+Mithilfe zweifacher Anwendung der Kettenregel erhalten wir dann:
+\begin{align*}
+	f^\prime(x) =
+	e^{2 \ln(x)^2} \cdot \left(2 \cdot 2 \ln(x) \frac{1}{x}\right)
+	=4 e^{2 \ln(x)^2} \ln(x) \frac{1}{x}.
+\end{align*}
+Damit folgt:
+\begin{align*}
+	f^\prime(x_0)
+	=
+	4 e^{2 \ln(e)^2} \ln(e) \frac{1}{e}
+	=
+	4 e^{2} \frac{1}{e}
+	= 4 e.
+\end{align*}
+Also ist die Antwort (c) korrekt.
 
 \newpage
 \subsection*{\frage{4}{4}}
