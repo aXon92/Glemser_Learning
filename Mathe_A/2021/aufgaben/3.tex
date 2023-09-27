@@ -132,12 +132,36 @@ Unter den gegebenen Informationen wird das Unternehmen Gewinne machen beginnend 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende eine geometrische Folge zur Lösung des Problems.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Verwende eine geometrische Folge zur Lösung des Problems}\\
+Die Kundenanzahl im Verlauf der Monate entspricht der geometrischen Folge $\{ c_n \}_{n \in \N}$ mit 
+\begin{align*}
+	c_{n+1} = 1.1 c_n
+\end{align*} 
+um das monatliche Wachstum von $10 \%$ abzubilden. Zu Beginn hat das Unternehmen $1'000$ Kunden. Demnach ist $c_0 = 1'000$. Damit hat das Unternehmen nach $n$ Monaten
+\begin{align*}
+	c_n =  1'000 \cdot (1.1)^n
+\end{align*}
+Kunden. Mit der Annahme, dass jeder Kunde im Schnitt $20'000 $ Schweizer Franken investiert hat, erhalten wir
+\begin{align*}
+	20'000 c_n \geq 500 \cdot 10^6,
+\end{align*}
+damit das Unternehmen Gewinne macht. Durch Auflösen der Gleichung erhalten wir:
+\begin{align*}
+	20'000 c_n \geq 500 \cdot 10^6
+	\ \Leftrightarrow \
+	c_n = 1'000 \cdot (1.1)^n \geq 25'000
+	\ \Leftrightarrow \
+	(1.1)^n \geq 25
+	\ \Leftrightarrow \
+	n \geq \frac{\ln(25)}{\ln(1.1)}
+	\approx
+	33.77.
+\end{align*}
+Somit macht das Unternehmen ab dem $33$. Monat Gewinne und die Antwort (a) ist korrekt.
 
 
 \newpage
