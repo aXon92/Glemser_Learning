@@ -23,13 +23,86 @@ Welche der folgenden Folgen konvergiert \textit{nicht} gegen $0$?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Löse die Aufgabe durch geschicktes Ausschließen.
+\item Löse die Aufgabe durch Bestimmen der Grenzwerte.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1.} \\
-
-
+\underline{1. Löse die Aufgabe durch geschicktes Ausschließen} \\
+Wir suchen nach der Folge, welche \textbf{nicht} gegen $0$ konvergiert.
+Bei Folgen, welche als Quotienten vorliegen, lässt sich Konvergenz gegen $0$ (meist) leicht bestimmen. Wenn der Nenner schneller als der Zähler wächst, ist dies ein Indiz für eine Nullfolge.
+In (a) ist der Zähler als Summe beschränkter Funktionen beschränkt. Damit gilt
+\begin{align*}
+	|a_n | = \frac{|\sin(n) - \cos(n)| }{n} 
+	\leq C \frac{1}{n} \to 0
+\end{align*}
+für $n \to \infty$. Für (c) - (d) ist schnell ersichtlich, dass der Nenner schneller als der Zähler wächst. Kniffliger ist die (b), jedoch nur auf den ersten Blick:
+\begin{align*}
+	b_n = \sqrt{n^2 +1} - n
+	= \frac{n^2 +1  - n^2}{\sqrt{n^2 +1 } + n}
+	=
+	\frac{1}{\sqrt{n^2 +1 } + n}.
+\end{align*}
+Hierbei haben wir die dritte Binomische Formel angewendet. 
+Übrig bleibt noch die (f). Bei Folgen dieser Art ist es nur notwendig die führenden Potenzen im Zähler und Nenner zu vergleichen:
+\begin{align*}
+	f_n = \frac{(n+2) (n^2 + 3n -1 )}{5n^3 + 4} 
+	= 
+	\frac{n^3 \left(1+ \frac{3}{n} + \cdots  \right)}{5n^3 \left(1 + \frac{4}{5 n^3} \right)}.
+\end{align*}
+Dies führt dazu, dass $f_n $ gegen $\frac{1}{5}$ konvergiert. Damit haben wir die Folge gefunden, welche nicht gegen $0$ konvergiert.\\
+\\
+\underline{2. Löse die Aufgabe durch Bestimmen der Grenzwerte} \\
+Für die Folge in (a) gilt:
+\begin{align*}
+	|a_n| =
+	\left|
+	\frac{\sin(n) - \cos(n)}{n}
+	\right|
+	\leq
+	\left|
+	\frac{\sin(n)}{n}
+	\right|
+	+
+	\left|
+	\frac{\cos(n)}{n}
+	\right|
+	\leq 
+	\frac{1}{n} + \frac{1}{n} \to 0 \ \textrm{für } n \to \infty.
+\end{align*}
+Hierbei haben wir die Dreiecksungleichung angewendet. Mit der dritten Binomischen Formel gilt für die (b)
+\begin{align*}
+	b_n = \sqrt{n^2 +1} - n
+	= \frac{\sqrt{n^2 +1}^2  - n^2}{\sqrt{n^2 +1 } + n}
+	= \frac{n^2 +1  - n^2}{\sqrt{n^2 +1 } + n}
+	=
+	\frac{1}{\sqrt{n^2 +1 } + n} \to 0 \textit{ für } n \to \infty.
+\end{align*}
+Für (c) erhalten wir:
+\begin{align*}
+	  c_n = \frac{n}{n^2 - 3n +1 }
+	  = \frac{n}{n^2 \cdot \left( 1+ \frac{3}{n} + \frac{1}{n^2}\right)}
+	  =
+	  \frac{\frac{1}{n}}{   1 + \frac{3}{n} + \frac{1}{n^2}}
+	  \to \frac{0}{1} \ \textrm{für } n \to \infty.
+\end{align*}
+Bei (d) und (e) gilt:
+\begin{align*}
+	&d_n = \frac{n^2}{ e^n} \to 0  \ \textrm{für } n \to \infty\\
+	&e_n = \frac{\ln(n)}{n} \to 0 \ \textrm{für } n \to \infty.
+\end{align*}
+Damit bleibt (f) übrig, wofür gilt:
+\begin{align*}
+	f_n = \frac{(n+2) (n^2 + 3n -1 )}{5n^3 + 4}
+	&=
+	\frac{n^3 + 5n^2 + 5n - 2}{5n^3 + 4}
+	=
+	\frac{n^3 \left(1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}\right)}{n^3 \left(n^3 ( 5 + \frac{4}{n^3}) \right)}\\
+	&=
+	\frac{1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}}{(n^3 ( 5 + \frac{4}{n^3})}
+	\to 0 \ \textrm{für } n \to \infty.
+\end{align*}
+Somit ist Antwort (f) korrekt.
 \newpage
 
 \subsection*{\frage{2}{4}}
