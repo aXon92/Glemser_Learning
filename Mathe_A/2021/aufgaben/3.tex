@@ -244,12 +244,67 @@ Das Taylor-Polynom dritter Ordnung von $f$ an der Entwicklungsstelle $x_0 = 0$ i
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
-
+\item Gebe das Taylorpolynom dritter Ordnung allgemein an.
+\item Bestimme die entsprechenden Ableitungen und werte diese aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Gebe das Taylorpolynom dritter Ordnung allgemein an}\\
+Das Taylorpolynom dritter Ordnung an der Entwicklungstelle $x_0 = 0$ ist gegeben durch:
+\begin{align*}
+	P_3(x)
+	=
+	f(x_0)
+	+
+	f^{\prime}(x_0)x
+	+
+	\frac{f^{\prime \prime}(x_0)}{2} x^2
+	+
+	\frac{f^{\prime \prime \prime(x_0) }}{6} x^3.	
+\end{align*}
+\ \\
+\underline{2.Bestimme die entsprechenden Ableitungen und werte diese aus}\\
+Die ersten drei Ableitungen sind mithilfe der Produktregel gegeben durch:
+\begin{align*}
+	f^\prime(x) 
+	&= 
+	3e^{x} (x^3 + 2x +1 ) + e^{3x}( 3x^2 + 2 )
+	= 
+	e^3x (3x^3 +3x^2 + 6x  + 5)\\
+	f^{\prime \prime }(x)
+	&= 
+	3 e^{3x} (3x^3 + 3x^2 + 6x +5 )
+	+
+	e^{3x}(9x^2 + 6x + 6)
+	=
+	e^{3x}(9x^3 + 18 x^2 + 24 x +21)\\
+	f^{\prime \prime \prime} (x)
+	&=
+	3 e^{3x} ( 9x^3 +18 x^2 +24 x +21)
+	+
+	e^{3x}(27 x^2 + 36 x +24)
+	=
+	e^{3x} (27 x^3 + 81 x^2 + 108 x+ 87).
+\end{align*}
+Damit folgt:
+\begin{align*}
+	f(0) = 1, \quad
+	f^\prime(0) = 5, \quad
+	f^{\prime \prime}(0) = 21, \quad
+	f^{\prime \prime \prime} ( 0) = 87.
+\end{align*}
+Insgesamt erhalten wir:
+\begin{align*}
+	P_3(x)
+	=
+	1 + 5 x + 
+	\frac{21}{2} x^2
+	+
+	\frac{87}{6} x^3
+	=
+	1 + 5x +10.5 x^2 + 14.5 x^3.
+\end{align*}
+Somit ist die Antwort (b) korrekt.
 
 \newpage
 
