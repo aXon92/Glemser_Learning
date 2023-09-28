@@ -260,7 +260,7 @@ Das Taylorpolynom dritter Ordnung an der Entwicklungstelle $x_0 = 0$ ist gegeben
 	+
 	\frac{f^{\prime \prime}(x_0)}{2} x^2
 	+
-	\frac{f^{\prime \prime \prime(x_0) }}{6} x^3.	
+	\frac{f^{\prime \prime \prime } (x_0) }{6} x^3.	
 \end{align*}
 \ \\
 \underline{2.Bestimme die entsprechenden Ableitungen und werte diese aus}\\
@@ -329,13 +329,38 @@ Die partiellen Ableitungen von $f$ in $(x_0, y_0) = \left(\sqrt{\frac{\pi}{2}}, 
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bestimme die partiellen Ableitungen.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Bestimme die partiellen Ableitungen}\\
+Die partiellen Ableitungen sind gegeben durch:
+\begin{align*}
+	f_x(x,y)
+	&=
+	\frac{1}{2} \cdot 2 \cdot x \cos(x^2 + y^2)
+	=
+	x \cdot \cos(x^2 + y^2)\\
+	f_y(x,y)
+	&=
+	\frac{1}{2} \cdot 2 \cdot y \cos(x^2 + y^2)
+	=
+	y \cdot \cos(x^2 + y^2)
+	.
+\end{align*}
+Damit erhalten wir für $(x_0,y_0) = \left(\sqrt{\frac{\pi}{2}}, 0 \right)$ zunächst
+\begin{align*}
+	\cos(x_0^2 + y_0^2)
+	=
+	\cos\left( \frac{ \pi}{2} + 0\right)
+	=
+	\cos \left( \frac{ \pi}{2} \right) = 0
+\end{align*}
+und es folgt
+\begin{align*}
+	f_x(x_0,y_0) = f_y(x_0,y_0) = 0.
+\end{align*}
+Somit ist die Antwort (d) korrekt.
 
 \newpage
 
