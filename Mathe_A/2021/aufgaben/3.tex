@@ -478,60 +478,60 @@ Welche der folgenden Aussagen ist korrekt?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Überlege, ob $ f $ homogen sein kann.
+\item Rechne die Homogenität von $f$ nach.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Überlege, ob $ f $ homogen sein kann}\\
-Wir betrachten die einzelnen Summanden von $ f $ und untersuchen diese auf Homogenität:
+\underline{1. Rechne die Homogenität von $f$ nach.}\\
+Für $\lambda > 0$ gilt:
 \begin{align*}
-	f_1(x,y)
+	f(\lambda x , \lambda y)
 	&=
-	x^2 e^{\frac{x+y}{x}}\\
-	f_2(x,y)
+	(\lambda x)^2
+	e^{
+	\frac{2 \lambda x+ \lambda y}{\lambda x -3 \lambda y}
+	}
+	+ \lambda x \lambda y 
+	e^{
+	\frac{\lambda x + \lambda y}{\lambda x - \lambda y}
+	}
+	( \lambda x)^2
+	\ln \left(
+	\frac{ \lambda x}{2 \lambda y}
+	\right)\\
 	&=
+	\lambda^2 x^2
+	e^{
+		\frac{\lambda}{\lambda}\frac{2  x+  y}{ x -3 y}
+	}
+	+ \lambda^2 x  y 
+	e^{
+		\frac{\lambda}{\lambda}	\frac{ x +  y}{ x -  y}
+	}
+	\lambda^2 x^2
+	\ln \left(
+	\frac{\lambda}{\lambda}
+	\frac{  x}{2  y}
+	\right)\\
+	&=
+	\lambda^2
+	\left(
+	x^2 e^{\frac{ 2x+y}{x - 3y }}
 	-
-	xy e^{\frac{x+y}{x-y}}\\
-	f_3(x,y)
+	xy e^{\frac{x+y}{x-y}}
+	+
+	x^2 \ln \left( \frac{x }{2y} \right)
+	\right)\\
 	&=
-	x \ln \left( \frac{x}{y} \right).
-\end{align*} 
-Wir untersuchen nun jeweils die Homogenität.
-Sei $ \lambda \in \R $ beliebig. Dann gilt:
-\begin{align*}
-	f_1(\lambda x, \lambda y)
-	&=
-	(\lambda x)^2 e^{\frac{\lambda x+ \lambda y} { \lambda x}}
-	=
-	\lambda^2 x^2 e^{\frac{\lambda( x+  y) } { \lambda x}}
-	=
-	\lambda^2 x^2 e^{\frac{x+y}{x}} 
-	= \lambda^2 f_1(x,y)
-	\\
-	f_2(\lambda x, \lambda y)
-	&=
-	-
-	\lambda x \lambda y e^{\frac{\lambda x+ \lambda y}{ \lambda x- \lambda y}}
-	=
-	-
-	\lambda^2 xy e^{\frac{\lambda (x+  y)}{ \lambda (x-  y)}}
-	=
-	-
-	\lambda^2 xy e^{\frac{x+  y}{  x-  y}}
-	=
-	\lambda^2 f_2(x,y)\\
-	f_3(\lambda x, \lambda y)
-	&=
-	\lambda x \ln \left( \frac{\lambda x}{ \lambda y} \right)
-	=
-	\lambda x \ln \left( \frac{ x}{ y} \right)
-	=
-	\lambda f_3(x,y).
+	\lambda^2 
+	f(x,y).
 \end{align*}
-Damit sind die ersten beiden Summanden homogen vom Grad $ 2 $.
-Der dritte Summand ist homogen vom Grad $ 1 $. Aufgrund des Distributivgesetz müssten alle Summanden von $ f $ dieselbe Homogenität besitzen, damit $ f $ homogen ist. Also ist $ f $ nicht homogen.\\
+Damit ist die Antwort (b) korrekt.\\
 \\
-Damit ist Antwort (e) korrekt.
+Man kann die Aufgabe auch leichter lösen:
+In den Argumenten der Exponential bzw. Logarithmusfunktion muss sich das $\lambda$ herauskürzen. Sonst kann die Funktion nicht homogen sein. Wenn man dies überprüft hat, kann diese Funktionen ignorieren.
+Als nächstes prüft man, ob $\lambda $ in jedem Summanden mit demselben Exponent ausklammern lässt.
+
 
 
 \newpage
@@ -577,59 +577,64 @@ Für welche Werte von $ a $ und $ b $ gilt
 \end{mdframed}
 
 \underline{1. Verwende die Eulersche Relation}\\
-Falls $ f $ homogen vom Grad $ \kappa $ ist, besagt die Eulersche Relation
+Die folgende Eulersche Relation 
 \begin{align*}
 	\varepsilon_{f,x}(x,y) + \varepsilon_{f,y}(x,y) 
 	= x \frac{f_x(x,y)}{f(x,y)} + y \frac{f_y(x,y)}{f(x,y)}
-	= \kappa.
+	= 1.
 \end{align*}
-Dies ist äquivalent zu:
+ist erfüllt, falls $f$ homogen vom Grad $1$ ist. Hierfür betrachten wir:
 \begin{align*}
-	x f_x(x,y) + f_y(x,y) = \kappa \cdot f(x,y).
-\end{align*}
-Wie müssen nun überprüfen, für welche $ a, b\in \R $ eine Homogenität von $ 0 $ vorliegt:
-\begin{align*}
-	f(\lambda x, \lambda x)
+	f(\lambda x , \lambda y)
 	&=
-	\frac{(\lambda x)^{2a} (\lambda y)^b}{(\lambda x)^3 +(\lambda y)^3}
-	- 
-	\frac{1}{(\lambda x)^3 (\lambda y)^{3b} + (\lambda x) (\lambda y)^{2 + 3b}}
-	=
-	\frac{\lambda^{2a +b} ( x^{2a}  y^b)}{\lambda^3 (x^3 + y^3 )}
-	- 
-	\frac{1}{\lambda^{3b + 3} x^3  y^{3b} + \lambda^{3b + 3} x  y^{2 + 3b}}\\
-	&=
-	\frac{\lambda^{2a +b}}{\lambda^3}\frac{ ( x^{2a}  y^b)}{ (x^3 + y^3 )}
-	- 
-	\frac{1}{\lambda^{3b + 3}}\frac{1}{ x^3  y^{3b} +  x  y^{2 + 3b}}
-	=
-		\lambda^{2a +b - 3}\frac{ ( x^{2a}  y^b)}{ (x^3 + y^3 )}
-	- 
-	\lambda^{-(3b + 3)}\frac{1}{ x^3  y^{3b} +  x  y^{2 + 3b}}.
+	\frac{\lambda^{3a + b} x^{3a} y^b}{\lambda^3 (x^3 + y^3)}
+	-
+	\frac{1}{
+	\lambda^{3 + 3b}
+	(
+	x^3 y^{3b} + x y^{2+ 3b}
+	)
+	}\\
+	&= 
+	\frac{\lambda^{3a + b}}{\lambda^3}
+	\frac{x^{3a} y^b}{x^3 + y^3}
+	-
+	\frac{1}{\lambda^{3 + 3b}}
+	\frac{1}{
+		x^3 y^{3b} + x y^{2+ 3b}
+	}\\
+	&= 
+	\lambda^{3a + b -3 }
+	\frac{x^{3a} y^b}{x^3 + y^3}
+	-
+	\lambda^{-3 - 3b}
+	\frac{1}{
+		x^3 y^{3b} + x y^{2+ 3b}
+	}.
 \end{align*}
-Damit $ f $ homogen vom Grad $ 0 $ ist, muss 
+Für die Homogenität von $1$ müssen die Bedingungen
 \begin{align*}
-	2a + b - 3 &= 0\\
-	-3b - 3 &= 0
+	3a + b - 3 &= 1\\
+	-3 - 3b &= 1
 \end{align*}
-gelten. Für die zweite Gleichung gilt:
+erfüllt sein. Für die zweite Gleichung gilt:
 \begin{align*}
-	-3b - 3 = 0 
+	-3 -3 b = 1  
 	\ \Leftrightarrow \
-	-3b = 3
+	-3 b = 4 
 	\ \Leftrightarrow \
-	b = -1.
+	b = - \frac{4}{3}.
 \end{align*}
-Wenn wir dies in die erste Gleichung einsetzen, erhalten wir:
+Eingesetzt in die erste Gleichung liefert dies:
 \begin{align*}
-	2a - 1 - 3 = 0 
+	3a - \frac{4}{3}  -3 = 1
 	\ \Leftrightarrow \
-	2a = 4
+	3a - \frac{13}{3}  = 1 
 	\ \Leftrightarrow \
-	a = 2.
+	3a = \frac{16}{3}
+	\ \Leftrightarrow \
+	 a  = \frac{16}{9}.
 \end{align*}
-Somit ist $ f $ für $ a = 2 $ und $ b= -1 $ homogen vom Grad $ 0 $ und die erwünschte Gleichung ist erfüllt.\\
+Die eulersche Relation ist somit für $a  = \frac{16}{9}$ und $b = - \frac{4}{3}$ erfüllt.\\
 \\
-Also ist Antwort (a) korrekt.
-
-
+Damit ist die Antwort (a) korrekt.
