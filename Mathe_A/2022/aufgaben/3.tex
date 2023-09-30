@@ -329,59 +329,67 @@ Für welche Werte von $ a $ und $ b $ gilt
 \end{mdframed}
 
 \underline{1. Verwende die Eulersche Relation}\\
-Falls $ f $ homogen vom Grad $ \kappa $ ist, besagt die Eulersche Relation
+Die folgende Eulersche Relation 
 \begin{align*}
 	\varepsilon_{f,x}(x,y) + \varepsilon_{f,y}(x,y) 
-	= x \frac{f_x(x,y)}{f(x,y)} + y \frac{f_y(x,y)}{f(x,y)}
-	= \kappa.
+	= 2.
 \end{align*}
-Dies ist äquivalent zu:
+ist erfüllt, falls $f$ homogen vom Grad $2$ ist. Hierfür betrachten wir:
 \begin{align*}
-	x f_x(x,y) + f_y(x,y) = \kappa \cdot f(x,y).
-\end{align*}
-Wie müssen nun überprüfen, für welche $ a, b\in \R $ eine Homogenität von $ 0 $ vorliegt:
-\begin{align*}
-	f(\lambda x, \lambda x)
+	f(\lambda x , \lambda y)
 	&=
-	\frac{(\lambda x)^{2a} (\lambda y)^b}{(\lambda x)^3 +(\lambda y)^3}
-	- 
-	\frac{1}{(\lambda x)^3 (\lambda y)^{3b} + (\lambda x) (\lambda y)^{2 + 3b}}
-	=
-	\frac{\lambda^{2a +b} ( x^{2a}  y^b)}{\lambda^3 (x^3 + y^3 )}
-	- 
-	\frac{1}{\lambda^{3b + 3} x^3  y^{3b} + \lambda^{3b + 3} x  y^{2 + 3b}}\\
-	&=
-	\frac{\lambda^{2a +b}}{\lambda^3}\frac{ ( x^{2a}  y^b)}{ (x^3 + y^3 )}
-	- 
-	\frac{1}{\lambda^{3b + 3}}\frac{1}{ x^3  y^{3b} +  x  y^{2 + 3b}}
-	=
-		\lambda^{2a +b - 3}\frac{ ( x^{2a}  y^b)}{ (x^3 + y^3 )}
-	- 
-	\lambda^{-(3b + 3)}\frac{1}{ x^3  y^{3b} +  x  y^{2 + 3b}}.
+	\frac{\lambda^{3a + b} x^{3a} y^b}{\lambda^3 (x^3 + y^3)}
+	e^{\frac{\lambda^a x^a \lambda y}{\lambda^{a+1} y^{a+1}}}
+	-
+	\frac{1}{
+		\lambda^{3 + 3b}
+		(
+		x^3 y^{3b} + x y^{2+ 3b}
+		)
+	}\\
+	&= 
+	\frac{\lambda^{3a + b}}{\lambda^3}
+	\frac{x^{3a} y^b}{x^3 + y^3} 	e^{\frac{\lambda^{a+1} x^a  y}{\lambda^{a+1} y^{a+1}}}
+	-
+	\frac{1}{\lambda^{3 + 3b}}
+	\frac{1}{
+		x^3 y^{3b} + x y^{2+ 3b}
+	}\\
+	&= 
+	\lambda^{3a + b -3 }
+	\frac{x^{3a} y^b}{x^3 + y^3} 
+	e^{\frac{ x^a  y}{ y^{a+1}}}
+	-
+	\lambda^{-3 - 3b}
+	\frac{1}{
+		x^3 y^{3b} + x y^{2+ 3b}
+	}.
 \end{align*}
-Damit $ f $ homogen vom Grad $ 0 $ ist, muss 
+Für die Homogenität von $1$ müssen die Bedingungen
 \begin{align*}
-	2a + b - 3 &= 0\\
-	-3b - 3 &= 0
+	3a + b - 3 &= 2\\
+	-3 - 3b &= 2
 \end{align*}
-gelten. Für die zweite Gleichung gilt:
+erfüllt sein. Für die zweite Gleichung gilt:
 \begin{align*}
-	-3b - 3 = 0 
+	-3 -3 b = 2  
 	\ \Leftrightarrow \
-	-3b = 3
+	-3 b = 5
 	\ \Leftrightarrow \
-	b = -1.
+	b = - \frac{5}{3}.
 \end{align*}
-Wenn wir dies in die erste Gleichung einsetzen, erhalten wir:
+Eingesetzt in die erste Gleichung liefert dies:
 \begin{align*}
-	2a - 1 - 3 = 0 
+	3a - \frac{5}{3}  -3 = 3
 	\ \Leftrightarrow \
-	2a = 4
+	3a - \frac{14}{3}  = 2 
 	\ \Leftrightarrow \
-	a = 2.
+	3a = \frac{20}{3}
+	\ \Leftrightarrow \
+	a  = \frac{20}{9}.
 \end{align*}
-Somit ist $ f $ für $ a = 2 $ und $ b= -1 $ homogen vom Grad $ 0 $ und die erwünschte Gleichung ist erfüllt.\\
+Die eulersche Relation ist somit für $a  = \frac{20}{9}$ und $b = - \frac{5}{3}$ erfüllt.\\
 \\
-Also ist Antwort (a) korrekt.
+Damit ist die Antwort (c) korrekt.
 
 
