@@ -237,49 +237,51 @@ Wir betrachten die einzelnen Summanden von $ f $ und untersuchen diese auf Homog
 \begin{align*}
 	f_1(x,y)
 	&=
-	x^2 e^{\frac{x+y}{x}}\\
+	2x^3 e^{\frac{2x^2+y^2}{x^2 - 3y^2}}\\
 	f_2(x,y)
 	&=
 	-
-	xy e^{\frac{x+y}{x-y}}\\
+	x y^2  e^{\frac{x+y}{x-y}}\\
 	f_3(x,y)
 	&=
-	x \ln \left( \frac{x}{y} \right).
+	x y^3\ln \left( \frac{x+y}{2y} \right).
 \end{align*} 
 Wir untersuchen nun jeweils die Homogenität.
 Sei $ \lambda \in \R $ beliebig. Dann gilt:
 \begin{align*}
 	f_1(\lambda x, \lambda y)
 	&=
-	(\lambda x)^2 e^{\frac{\lambda x+ \lambda y} { \lambda x}}
+	2(\lambda x)^3 e^{\frac{2(\lambda x)^2 (\lambda y)^2} { (\lambda x)^2 - 3 (\lambda y)^2}}
 	=
-	\lambda^2 x^2 e^{\frac{\lambda( x+  y) } { \lambda x}}
+	2 \lambda^3 x^3 e^{\frac{\lambda^2( 2x^2+  y^2) } { \lambda^2(x^2 - 3y^2) }}
 	=
-	\lambda^2 x^2 e^{\frac{x+y}{x}} 
-	= \lambda^2 f_1(x,y)
+	\lambda^3 2  x^3 e^{\frac{ 2x^2+  y^2}{ x^2 - 3y^2}}
+	= \lambda^3 f_1(x,y)
 	\\
 	f_2(\lambda x, \lambda y)
 	&=
 	-
-	\lambda x \lambda y e^{\frac{\lambda x+ \lambda y}{ \lambda x- \lambda y}}
+	\lambda x (\lambda y)^2 e^{\frac{\lambda x+ \lambda y}{ \lambda x- \lambda y}}
 	=
 	-
-	\lambda^2 xy e^{\frac{\lambda (x+  y)}{ \lambda (x-  y)}}
+	\lambda^3 xy^2 e^{\frac{\lambda (x+  y)}{ \lambda (x-  y)}}
 	=
 	-
-	\lambda^2 xy e^{\frac{x+  y}{  x-  y}}
+	\lambda^3 xy^2 e^{\frac{x+  y}{  x-  y}}
 	=
-	\lambda^2 f_2(x,y)\\
+	\lambda^3 f_2(x,y)\\
 	f_3(\lambda x, \lambda y)
 	&=
-	\lambda x \ln \left( \frac{\lambda x}{ \lambda y} \right)
+	\lambda x (\lambda y)^3 \ln \left( \frac{\lambda x + \lambda y}{2 \lambda y} \right)
 	=
-	\lambda x \ln \left( \frac{ x}{ y} \right)
+	\lambda^4 x y^3 \ln \left(\frac{\lambda}{\lambda} \frac{ x + y}{ 2y} \right)
 	=
-	\lambda f_3(x,y).
+	\lambda^4 x y^3 \ln \left( \frac{ x + y}{ 2y} \right)
+	=
+	\lambda^4 f_3(x,y).
 \end{align*}
-Damit sind die ersten beiden Summanden homogen vom Grad $ 2 $.
-Der dritte Summand ist homogen vom Grad $ 1 $. Aufgrund des Distributivgesetz müssten alle Summanden von $ f $ dieselbe Homogenität besitzen, damit $ f $ homogen ist. Also ist $ f $ nicht homogen.\\
+Damit sind die ersten beiden Summanden homogen vom Grad $ 3 $.
+Der dritte Summand ist homogen vom Grad $ 4 $. Aufgrund des Distributivgesetz müssten alle Summanden von $ f $ dieselbe Homogenität besitzen, damit $ f $ homogen ist. Also ist $ f $ nicht homogen.\\
 \\
 Damit ist Antwort (e) korrekt.
 
