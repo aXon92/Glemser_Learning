@@ -23,13 +23,63 @@ Welche der folgenden Folgen konvergiert gegen $1$?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bestimme die Grenzwerte.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Löse die Summe auf}\\
-
-
+\underline{1. Bestimme die Grenzwerte}\\
+Für die Folge in (a) gilt:
+\begin{align*}
+	|a_n| =
+	\left|
+	\frac{\sin(n) - \cos(n)}{n}
+	\right|
+	\leq
+	\left|
+	\frac{\sin(n)}{n}
+	\right|
+	+
+	\left|
+	\frac{\cos(n)}{n}
+	\right|
+	\leq 
+	\frac{1}{n} + \frac{1}{n} \to 0 \ \textrm{für } n \to \infty.
+\end{align*}
+Hierbei haben wir die Dreiecksungleichung angewendet.
+Für (b) erhalten wir:
+\begin{align*}
+	b_n = \frac{n^2}{2n^2 - 3n +1 }
+	= \frac{n^2}{n^2 \cdot \left( 2+ -\frac{3}{n} + \frac{1}{n^2}\right)}
+	=
+	\frac{1}{   2+ -\frac{3}{n} + \frac{1}{n^2}}
+	\to \frac{1}{2} \ \textrm{für } n \to \infty.
+\end{align*}
+Mit der dritten Binomischen Formel gilt für die (c)
+\begin{align*}
+	c_n = \sqrt{n^2 +1} - n
+	= \frac{\sqrt{n^2 +1}^2  - n^2}{\sqrt{n^2 +1 } + n}
+	= \frac{n^2 +1  - n^2}{\sqrt{n^2 +1 } + n}
+	=
+	\frac{1}{\sqrt{n^2 +1 } + n} \to 0 \textit{ für } n \to \infty.
+\end{align*}
+Für (d) und (f) gilt:
+\begin{align*}
+	&d_n = \frac{n^2}{ e^n} \to 0  \ \textrm{für } n \to \infty\\
+	&f_n = \frac{\ln(n)}{n} \to 0 \ \textrm{für } n \to \infty.
+\end{align*}
+Übrig bleibt (e), wofür gilt:
+\begin{align*}
+	e_n
+	&=
+	\frac{(n+2) (n^2 + 3n -1)}{n^3 +4 }
+	= \frac{n^3 +3 n^2 - n + 2 n^2 +6n -2}{n^3 + 4}
+	= \frac{n^3 +6 n^2 +5 n -2}{n^3 + 4}\\
+	&= \frac{n^3 \left( 1 +\frac{6}{n} +\frac{5 }{n^2} -\frac{2}{n^3} \right)}{n^3 \left( 1 + \frac{4}{n^3} \right)}
+	=
+	\frac{ 1 +\frac{6}{n} +\frac{5 }{n^2} -\frac{2}{n^3}}{  1 + \frac{4}{n^3}}
+	\to 1 \ \textrm{für } n \to \infty.
+\end{align*}
+Damit ist die Antwort (e) korrekt.
 \newpage
 
 \subsection*{\frage{2}{4}}
