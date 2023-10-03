@@ -126,12 +126,68 @@ Es gilt, dass:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
-
+\item Gebe das Taylorpolynom dritter Ordnung allgemein an.
+\item Bestimme die entsprechenden Ableitungen und werte diese aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Gebe das Taylorpolynom dritter Ordnung allgemein an}\\
+Das Taylorpolynom dritter Ordnung an der Entwicklungstelle $x_0 = 0$ ist gegeben durch:
+\begin{align*}
+	P_3(x)
+	=
+	f(x_0)
+	+
+	f^{\prime}(x_0)x
+	+
+	\frac{f^{\prime \prime}(x_0)}{2} x^2
+	+
+	\frac{f^{\prime \prime \prime } (x_0) }{6} x^3.	
+\end{align*}
+\ \\
+\underline{2.Bestimme die entsprechenden Ableitungen und werte diese aus}\\
+Die ersten drei Ableitungen sind mithilfe der Kettenregel gegeben durch:
+\begin{align*}
+	f^\prime(x) 
+	&= 
+	\frac{1}{1+x}\\
+	f^{\prime \prime }(x)
+	&= 
+	-\frac{1}{(1+x)^2}
+	\\
+	f^{\prime \prime \prime} (x)
+	&=
+	-(-2)\frac{1}{(1+x)^3}
+	=
+	\frac{2}{(1+x)^3}
+	.
+\end{align*}
+Damit folgt:
+\begin{align*}
+	f(0) = \ln(1) = 0, \quad
+	f^\prime(0) = 1, \quad
+	f^{\prime \prime}(0) = -1, \quad
+	f^{\prime \prime \prime} ( 0) = 2.
+\end{align*}
+Das Taylorpolynom ist gegeben durch
+\begin{align*}
+	P_3(x)
+	=
+	x - 
+	\frac{1}{2} x^2
+	+
+	\frac{2}{6} x^3
+	=
+	x -\frac{1}{2} x^2 + \frac{1}{3} x^3.
+\end{align*}
+Damit erhalten wir:
+\begin{align*}
+	P_3(1) = 1 - \frac{1}{2} + \frac{1}{3}
+	= 1 - \frac{3 }{6} + \frac{2}{6}
+	= 1 - \frac{1}{6} = \frac{5}{6}
+\end{align*}
+Somit ist die Antwort (e) korrekt.
+
 
 \newpage
 
