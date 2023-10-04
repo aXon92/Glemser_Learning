@@ -60,11 +60,68 @@ Welche der folgenden zusammengesetzten Aussagen ist eine Tautologie?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item .
+		\item Löse die Aufgabe mithilfe geeigneter Gegenbeispiele.
+		\item Löse die Aufgabe mithilfe einer Wahrheitstafel.
 	\end{enumerate}
 \end{mdframed}
-\underline{1. }\\
-
+\underline{1. Löse die Aufgabe mithilfe geeigneter Gegenbeispiele.}\\
+Eine Aussage heißt Tautologie, wenn sie jede Wahrheitswertekombination wahr ist.
+Für (a) haben wir mit der Kombination $A = W, \ B = F$ ein Gegenbeispiel. Für diese Belegung ist $A \Rightarrow B$ falsch und $  B \Rightarrow A$ wahr. Da diese Aussagen mit UND verknüpft sind, ist Aussage insgesamt falsch.
+Für die Antwort (c) und (d) ist $A = W, \ B = F$ ein Gegenbeispiel:
+\begin{align*}
+	((A \vee B) \Rightarrow B) \vee B
+	\ &\Leftrightarrow \
+	\neg(A \vee B ) \vee B \vee B
+	\ \Leftrightarrow \
+	(\neg A \wedge \neg B) \vee B.
+	\ \Leftrightarrow \
+	\neg A \vee B \wedge \neg B \vee B\\
+	\ &\Leftrightarrow \
+	\neg A \vee B 
+	\ \Leftrightarrow \
+	A \Rightarrow B
+	\ \Leftrightarrow \
+	(A \Rightarrow B) \vee \neg A \vee B.
+\end{align*}
+Nebenbei haben wir hier gezeigt, dass die Antwortmöglichkeiten (c) und (d) äquivalent sind. Übrig bleibt die Antwortmöglichkeit (b). Durch die Umformungen
+\begin{align*}
+	((A \wedge B) \Rightarrow B) \vee A
+	\ &\Leftrightarrow \
+	(\neg (A \wedge B) \vee B) \vee A
+	\ \Leftrightarrow \
+	(\neg A \vee \neg B \vee B) \vee A\\
+	\ &\Leftrightarrow \
+	\neg A \vee A \vee \neg B \vee B
+	\ \Leftrightarrow \
+	W \vee W \ \Leftrightarrow W
+\end{align*}
+erkennen wir das bei Möglichkeit (b) eine Tautologie vorliegt.\\
+\\
+\underline{2. Löse die Aufgabe mithilfe einer Wahrheitstafel}\\
+\begin{center}
+	\begin{tabular}{cllll}
+		\hline
+		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ 
+		\multicolumn{1}{c|}{$\neg A$} & \multicolumn{4}{l}{$F$ $F$ $W$ $W$} \\ 
+		\hline
+		\multicolumn{1}{c|}{$A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\
+		\multicolumn{1}{c|}{$A \vee B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\
+		\multicolumn{1}{c|}{$ \neg A \vee B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
+		\hline
+		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\ 
+		\multicolumn{1}{c|}{$ B \Rightarrow A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $W$} \\ 
+		\multicolumn{1}{c|}{$ (A \wedge B) \Rightarrow B$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\ 
+		\multicolumn{1}{c|}{$ (A \vee B) \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\ 
+		\hline		
+		\multicolumn{1}{c|}{(a) $ (A \Rightarrow B) \wedge (B \Rightarrow A)$} & \multicolumn{4}{l}{$W$ $F$ $F$ $W$} \\
+		\multicolumn{1}{c|}{(b) $ ((A \wedge B) \Rightarrow B) \vee A$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\
+		\multicolumn{1}{c|}{(c) $((A \vee B) \Rightarrow B) \vee B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
+		\multicolumn{1}{c|}{(d) $(A \Rightarrow B ) \vee \neg A \vee B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
+		\hline
+	\end{tabular}
+\end{center}
+Die Antwort (b) ist immer wahr und somit korrekt.
  
 
 \newpage
