@@ -146,13 +146,24 @@ Welche der folgenden Aussagen ist korrekt?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Betrachte den Quotienten der benachbarten Folgenglieder.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
-
+\underline{1. Betrachte den Quotienten der benachbarten Folgenglieder}\\
+Bei einer geometrischen Folge $a_k$ ist der Quotient zweier benachbarten Folgenglieder konstant, d.h. es gilt
+\begin{align*}
+	\frac{a_{k+1}}{a_k} = q \neq 0
+\end{align*}
+für alle $k \in \N$. Deswegen genügt die Angabe der ersten beiden Folgenglieder.
+Für die Quotienten der Aufgabenstellung gilt:
+\begin{align*}
+	q^a &= \frac{a_2}{a_1} = \frac{1.01}{1} = 1.01\\
+	q^b &= \frac{b_2}{b_1} = \frac{-2}{3} = - \frac{2}{3}.
+\end{align*}
+Wegen $\left|q^a\right| > 1$ ist die Folge $\{a_k\}_{k \in \N}$ divergent. Weiter ist $\{b_k\}_{k \in \N}$ wegen $\left|q^b\right| < 1$ konvergent.\\
+\\
+Damit ist (c) korrekt.
 
 
 \newpage
