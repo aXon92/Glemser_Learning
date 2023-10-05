@@ -190,12 +190,96 @@ Welche der folgenden Aussagen ist korrekt?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Bestimme die Partialsummenfolgen.
+\item Bestimme den Quotienten und dessen Grenzwert.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Bestimme die Partialsummenfolgen}\\
+Die Quotienten der Folgen sind gegeben durch:
+\begin{align*}
+	q^a &= \frac{a_2}{a_1} = \frac{1.1}{1} = 1.1\\
+	q^b &= \frac{b_2}{b_1} = \frac{3.1}{3} = 1.0\overline{3}.
+\end{align*}
+Die Partialsummenfolgen sind gegeben durch:
+\begin{align*}
+	s_n^a
+	&=
+	\sum \limits_{k=1}^n 1 \cdot 1.1^{k-1}
+	=
+	1 \cdot 
+	\frac{1 -1.1^n}{1 - 1.1}
+	= 
+	\frac{1 - 1.1^n}{-0.1}
+	=
+	10 \cdot( 1.1^n - 1)\\
+	s_n^b
+	&=
+	\sum \limits_{k=1}^n 3 \cdot 1.0\overline{3}^{k-1}
+	=
+	3 \cdot 
+	\frac{1 -1.0\overline{3}^n}{1 - 1.0\overline{3}}
+	= 
+		3 \cdot 
+	\frac{1 - 1.0\overline{3}^n}{1 - \frac{31}{30}}
+	=
+	3 \cdot 
+	\frac{1 - 1.0\overline{3}^n}{- \frac{1}{30}}
+	=
+	90 (1.0\overline{3}^n -1).
+\end{align*}
+\ \\
+\underline{2. Bestimme den Quotienten und dessen Grenzwert}\\
+Für den Quotienten gilt:
+\begin{align*}
+	\frac{s_n^a}{s_n^b}
+	=
+	\frac{10 \cdot( 1.1^n - 1)}{90 (1.0\overline{3}^n -1)}
+	=
+	\frac{1}{9}
+		\frac{
+			1.0\overline{3}^n 
+			\left(
+			\left(
+				\frac{1.1}{1.0\overline{3}}
+				\right)^n 
+				- \frac{1}{1.0\overline{3}^n}
+			\right)
+		}
+		{
+			1.0\overline{3}^n 
+				\left(
+					1 - 	\frac{1}{1.0\overline{3}^n}
+				\right)		
+		}
+	=
+	\frac{1}{9}
+	\frac{	
+		\left(
+		\frac{1.1}{1.0\overline{3}}
+		\right)^n 
+		- \frac{1}{1.0\overline{3}^n}
+	}
+	{
+		1 - 	\frac{1}{1.0\overline{3}^n}	
+	}.
+\end{align*}
+Mit den Grenzwerten
+\begin{align*}
+	&\lim 
+	\limits_{n \to \infty}
+	\left(\frac{1.1}{1.0\overline{3}}\right)^n = \infty\\
+	&\lim 
+	\limits_{n \to \infty}
+	\frac{1}{1.0\overline{3}^n} = 0
+\end{align*}
+erhalten wir:
+\begin{align*}
+	\lim 
+	\limits_{n \to \infty}
+	\frac{s_n^a}{s_n^b} = \infty.
+\end{align*}
+Damit ist die Antwort (c) korrekt.
 
 \newpage
 \subsection*{\frage{5}{3}}
