@@ -303,12 +303,32 @@ Der interne Zinssatz des Projekts ist:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Vergleiche das Projekt mit einem Zahlungsstrom, welches die Ausgangseinzahlung auszahlt.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Vergleiche das Projekt mit einem Zahlungsstrom, welches die Ausgangseinzahlung auszahlt}\\
+Wir vergleichen das Projekt mit einer Einzahlung von $10'000$ Schhweizer Franken auf ein Bankkonto, auf welches wir für $10 $ Jahre jährliche Zinsen mit einem Zinssatz von $\frac{500}{10'000} = 5 \%$ erhalten und die ursprüngliche Einzahlung  von $10'000$ am Ende wieder ausgezahlt wird. Der nachfolgende Zahlungsstrom zeigt, dass dann der interne Zinssatz bei genau $5 \%$ liegen müsste: 
+\begin{align*}
+	-&10000 + \sum \limits_{t = 1}^{10} \frac{500}{(1+i)^i} + 10000 \cdot \frac{1}{(1+i)^{10}}
+	=
+	-10000 + \sum \limits_{t = 1}^{10} \frac{10000 \cdot i}{(1+i)^i} + 10000 \cdot \frac{1}{(1+i)^{10}}\\
+	=
+	-&10000 \left(-1 + i \sum \limits_{t = 1}^{10 }\frac{1}{(1+i)^t} + \frac{1}{(1+i)^{10}} \right) 
+	=
+	-10000 \left(-1 + i \left(\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{1 - \frac{1}{1+i}} -1 \right)+ \frac{1}{(1+i)^{10}} \right)\\
+	=
+	-&10000 \left(-1 + i \left(\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{ \frac{i}{1+i}}  -1 \right)+ \frac{1}{(1+i)^{10}} \right)\\
+	=
+	-&10000 \left(-1 + i \left( (1+i)\frac{1 - \left(\frac{1}{1+i}\right)^{11} }{ i} -1 \right)+ \frac{1}{(1+i)^{10}} \right )\\
+	=
+	-&10000 \left(-1 +  1+i  - \left(\frac{1}{1+i}\right)^{10}  -i + \frac{1}{(1+i)^{10}} \right )
+	= 0.
+\end{align*}
+Hierbei haben wir $10000 \cdot i = 500  \ \Leftrightarrow i = 5\%$ verwendet. 
+Damit muss der interne Zinssatz des Projekt höher als $5 \% $ sein, falls die Endauszahlung $12'000$ Schweizer Franken betragen soll.\\
+\\
+Damit ist die Antwort (a) korrekt.
 
 
  \newpage
@@ -382,11 +402,36 @@ Welche der folgenden Aussagen ist korrekt für eine differenzierbare Funktion $f
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Schließe falsche Antworten aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Schließe falsche Antworten aus}\\
+Wir bezeichnen eine Punkt $x_0$ als stationären Punkt, falls 
+\begin{align*}
+	f^\prime(x_0) = 0
+\end{align*}
+gilt. Die Funktion $f(x) = x^3$ ist für $x_0 = 0$ ein Gegenbeispiel für (a) und (d). Für diese Funktion liegt in $x_0 = 0$ ein stationärer Punkt vor, welcher kein Extrempunkt ist.\\
+Ein Wendepunkt in $x_0 $ ist darüber definiert, dass 
+\begin{align*}
+	f^{\prime \prime}(x_0)
+	=
+	0
+\end{align*}
+gilt. Jedoch muss hierfür kein stationärer Punkt vorliegen. Die Funktion $f(x) = \sin(x)$ in $x_0 = 0$ ist für (b) ein Gegenbeispiel.\\
+\\
+Sei nun $x_0 $ der einzige lokale Extrempunkt auf $(a,b)$. Zur Vereinfachung nehmen wir an, dass dies ein Maximum ist. Dann gilt 
+\begin{align*}
+	f(x) \geq  0
+\end{align*}
+für alle $x \in [a, x_0)$ und 
+\begin{align*}
+	f(x) \leq 0
+\end{align*}
+für alle $ x \in (x_0, b]$ gelten. Zu beachten ist, dass die Gleichheit nur an den Randpunkten $a$ und $b$ auftreten kann. Also ist die $f$ auf $(a, x_0)$ streng monoton wachsend (Auf $[a,x_0) ]$ monoton wachsend) und auf $(x_0,b)$ streng monoton fallend.
+Falls der Extrempunkt ein Minimum ist, tauschen sich wachsend und fallend die Reihenfolge.\\
+\\
+Damit ist die Antwort (c) korrekt.
 
 
 
