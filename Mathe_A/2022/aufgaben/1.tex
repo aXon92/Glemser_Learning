@@ -139,10 +139,65 @@ wobei $s_0 = s(0)$ die Grösse der Bevölkerung zum Zeitpunkt $0$ ist und $\mu, 
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
 \item[(c1)] 
+\begin{enumerate}
+	\item[1.] Bestimme die erste Ableitung von $s$.
+	\item[2.] Bestimme die Wachstumsrate.
+\end{enumerate}
+
 \end{enumerate}
 \end{mdframed}
 
-\underline{(c1) }\\
+\underline{(c1) 1. Bestimme die erste Ableitung von $s$.}\\
+Die erste Ableitung von $s$ ist mit der Kettenregel gegeben durch
+\begin{align*}
+	s^\prime(t) = 
+	\frac{1}{1- \gamma} 
+	\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{\frac{1}{1- \gamma} -1 } 
+	(\mu(1-\gamma)).
+\end{align*}
+\ \\
+\underline{(c1) 2. Bestimme die Wachstumsrate.}\\
+Die Wachstumsrate von $s$ ist gegen durch
+\begin{align*}
+	\rho_s(t) = \frac{s^\prime(t)}{s(t)}. 
+\end{align*}
+Damit folgt:
+\allowdisplaybreaks
+\begin{align*}
+	\rho_s(t) = \frac{s^\prime(t)}{s(t)}
+	&=
+	\frac{
+	\frac{1}{1- \gamma} 
+	\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{\frac{1}{1- \gamma} -1 } 
+	(\mu(1-\gamma))
+	}{
+	\left(s_0^{1- \gamma} + \mu (1 - \gamma)  t \right)^{\frac{1}{1- \gamma}}
+	}\\
+	&=
+	\frac{
+		\frac{1}{1- \gamma} 
+		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{\frac{1}{1- \gamma} -1 } 
+		(\mu(1-\gamma))
+	}{
+		\left(s_0^{1- \gamma} + \mu (1 - \gamma)  t \right)^{\frac{1}{1- \gamma}}
+	}\\
+	&=
+	\frac{
+		\frac{1}{1- \gamma} 
+		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{\frac{1}{1- \gamma}} 
+		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{ -1 }
+		(\mu(1-\gamma))
+	}{
+		\left(s_0^{1- \gamma} + \mu (1 - \gamma)  t \right)^{\frac{1}{1- \gamma}}
+	}\\
+	&=
+		\frac{1}{1- \gamma} 
+		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{ -1 }
+		(\mu(1-\gamma))\\
+	&=
+		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{ -1 }
+		\mu
+\end{align*}
 
 
 
