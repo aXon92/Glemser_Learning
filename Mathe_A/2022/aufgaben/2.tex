@@ -460,12 +460,27 @@ $x_0 \frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0) \Delta x}$, wenn $\Delta x$ klein 
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Verwende den Differenzenquotienten.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Verwende den Differenzenquotienten}\\
+Der Differenzenquotient approximiert für $\Delta x $ nahe $0$ die erste Ableitung in $x_0$:
+\begin{align*}
+	f^\prime(x_0) \approx \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}.
+\end{align*}
+Daher gilt:
+\begin{align*}
+	x_0 \frac{f(x_0 + \Delta x) - f(x_0)}{f(x_0) \Delta x}
+	= 
+	x_0 \frac{\frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}}{f(x_0) }
+	\approx 
+	x_0 \frac{f^\prime(x_0)}{f(x_0)}
+	=: \varepsilon_f(x_0).
+\end{align*}
+Damit wird durch diesen Ausdruck die Elastizität von $f$ in $x_0$ approximiert.\\
+\\
+Die Antwort (d) ist korrekt.
 
 
 \newpage
