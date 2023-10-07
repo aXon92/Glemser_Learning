@@ -414,11 +414,28 @@ Seien $f$ und $g$ konkave, zweimal differenzierbare Funktionen. Welche der folge
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende Konkavitätskriterium der zweiten Ableitung.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende Konkavitätskriterium der zweiten Ableitung}\\
+Eine Funktion $f$ heißt genau dann konkav, falls 
+\begin{align*}
+	f^{\prime \prime} (x) \leq 0 
+\end{align*}
+für alle $x \in D_f$ gilt. \\
+\\
+Für die korrekte Antwort sind die Möglichkeiten mit der Summe die vielversprechendsten Kandidaten. Für die anderen Antwortmöglichkeiten muss man zweimal die Produktregel oder Kettenregel anwenden.\\
+\\
+Unter den Voraussetzungen der Aufgabe gilt mit der Summenregel
+\begin{align*}
+	(f +g)^{\prime \prime}(x)  = 
+	\underbrace{f^{\prime \prime}(x)}_{\leq 0} + \underbrace{g^{\prime \prime}(x)}_{\leq 0}
+	\leq 0
+\end{align*}
+für $x \in D_f \cap D_g$.
+Damit ist die Funktion $f +g$ wieder konkav und die Antwort (e) korrekt.
+ 
 
 
 
