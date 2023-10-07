@@ -334,13 +334,30 @@ Seien $h$, $f$ und $g$ differenzierbare Funktionen einer reellen Variable. Welch
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die Kettenregel.
+\item Verwende die Summen und Kettenregel.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die Kettenregel}\\
-
- 
+\underline{1. Verwende die Summen und Kettenregel}\\
+Wir definieren uns die Hilfsfunktion $k$ durch
+\begin{align*}
+	k(x) = f(x) + g(x).
+\end{align*}
+Für diese gilt mit der Summenregel (Linearität der Ableitung):
+\begin{align*}
+	k^\prime(x) = f^\prime(x) + g^\prime(x).
+\end{align*}
+Damit erhalten wir mit der Kettenregel:
+\begin{align*}
+	\frac{d}{dx}h(f(x) + g(x))
+	=
+	\frac{d}{dx}h(k(x))
+	=
+	h^\prime(k(x)) k^\prime(x)
+	=
+	h^\prime(f(x) + g(x)) (f^\prime(x) + g^\prime(x)).
+\end{align*}
+Also ist die Antwort (d) korrekt.
 
 
 \newpage
