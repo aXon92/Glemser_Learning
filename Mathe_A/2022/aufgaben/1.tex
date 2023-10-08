@@ -143,7 +143,7 @@ wobei $s_0 = s(0)$ die Grösse der Bevölkerung zum Zeitpunkt $0$ ist und $\mu, 
 	\item[1.] Bestimme die erste Ableitung von $s$.
 	\item[2.] Bestimme die Wachstumsrate.
 \end{enumerate}
-
+\item[(c2)] Gebe die relative Änderung an und verwende die erste Teilaufgabe.
 \end{enumerate}
 \end{mdframed}
 
@@ -198,7 +198,85 @@ Damit folgt:
 		\left(s_0^{1-\gamma} + \mu(1-\gamma) t\right)^{ -1 }
 		\mu
 \end{align*}
-
-
-
+\ \\
+\underline{(c2) Gebe die relative Änderung an und verwende die erste Teilaufgabe}\\
+Die relative Änderung der Bevölkerung zwischen den Zeitpunkten $t_0=5 $ und $t_0 + \Delta t = 6$ ist durch 
+\begin{align*}
+	\frac{\Delta s}{s(t_0)}
+	=
+	\frac{s(t_0 + \Delta t) - s(t_0)}{s(t_0)}
+\end{align*}
+gegeben. Hierbei gilt $t_0 + \Delta t = 6 \ \Leftrightarrow \ \Delta t = 1$.
+Die absolute Änderung $\Delta s$ können wir mithilfe der Ableitung von $s$ approximieren:
+\begin{align*}
+	s^\prime(t_0) \approx \frac{s(t_0 + \Delta t) - s(t_0)}{\Delta t}
+	= \frac{\Delta s}{\Delta t}
+	\ 
+	\Leftrightarrow 
+	\
+	\Delta s \approx s^\prime(t_0) \Delta t. 
+\end{align*}
+Damit erhalten wir mit der Wachstumsrate aus (c1):
+\begin{align*}
+	\frac{\Delta s}{s(t_0)}
+	&\approx 
+	\frac{s^\prime(t_0 ) \Delta t}{s(t_0)}
+	=
+	\frac{s^\prime(t_0 ) }{s(t_0)}\underbrace{\Delta t}_{=1}
+	=
+	\rho_s(t_0) = 
+	\frac{\mu}{s_0^{1- \gamma} + \mu (1- \gamma) t_0}\\
+	&=
+	\frac{10}{10000^{1 - 0.5} + 10 ( 1- 0.5)5 }
+	=
+	\frac{10}{\sqrt{10000} + 25 }\\
+	&=
+	\frac{10}{125}
+	= 
+	\frac{2}{25}
+	= 
+	\frac{8}{100} = 8 \%.
+\end{align*}
+\ \\
+Alternativ können wir die Aufgabe auch ausschließlich mit der Ableitung von $s$ (ohne die Wachstumsrate zu verwenden) lösen. Mit obiger Approximation gilt
+\begin{align*}
+	\Delta s &\approx s^\prime(t_0) \underbrace{\Delta t}_{=1}
+	=
+	\mu \left(
+		s_0^{1-\gamma} + \mu (1- \gamma) t_0
+	\right)^{\frac{1}{1- \gamma} - 1}\\
+	&=
+	10 \left(
+	10000^{0.5} + 10 (1- 0.5) 5
+	\right)^{\frac{1}{1- 0.5} - 1}\\
+	&=
+	10 \left(
+	100 + 25
+	\right)^{2 - 1}
+	=
+	10 \cdot 125 
+	=
+	1250.
+\end{align*}
+Für die relative Änderung benötigen wir noch $s(t_0)$:
+\begin{align*}
+	s(t_0)
+	= 
+	s(5)
+	= 
+	(10000^{0.5} + 10 \cdot 0.5 \cdot 5)^{\frac{1}{0.5}} 
+	= 
+	(100 + 25)^2 
+	=
+	15625.
+\end{align*}
+Damit erhalten wir:
+\begin{align*}
+	\frac{\Delta s}{s(t_0)}
+	\approx
+	\frac{1250}{(100 + 25)^2 }
+	=
+	\frac{10 \cdot 125}{125^2}
+	= \frac{10}{125} = \frac{8}{100} = 8 \%.
+\end{align*}
 
