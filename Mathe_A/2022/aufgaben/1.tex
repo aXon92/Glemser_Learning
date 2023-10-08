@@ -336,27 +336,89 @@ Erlös zurückzahlen.
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[(b1)] Füge den Kredit und die Raten zum Zeitstrahl hinzu.
-\item[(b2)] Bestimme die Höhe der Ratenzahlung $ C $.
-\item[(b3)] Ergänze den Lottogewinn und berechne die Restschuld.
-\item[(b4)] Bestimme die restliche Laufzeit mit Hilfe der Restschuld.
-\item[(b5)] Bestimme die letzte Rate.
+\item[(b1)] Füge die Ereignisse und Mittelflüsse zum Zeitstrahl hinzu.
+\item[(b2)] Bestimme die Höhe der Zahlung $C_1$ für das Ende der Jahre 2023 - 2025.
+\item[(b3)] Bestimme die Restschuld zum Ende des Jahres 2028.
+\item[(b4)] Bestimme den Verkaufswert bei jährlichem Wertverlust von $3 \%$.
 \end{enumerate}
 \end{mdframed}
 
 \newpage
-\underline{(b1) Füge den Kredit und die Raten zum Zeitstrahl hinzu}\\
+\underline{(b1) Füge die Ereignisse und Mittelflüsse zum Zeitstrahl hinzu}\\
 \begin{center}
-	\includegraphics[scale=0.55]{pictures/zeitstrahl_1_b_filled_1}
+	\includegraphics[scale=0.65]{pictures/zeitstrahl_1_b_filled_1}
 \end{center}
 
-\underline{(b2) Bestimme die Höhe der Ratenzahlung $ C $}\\
+\underline{(b2) Bestimme die Höhe der Zahlung $C_1$ für das Ende der Jahre 2023 - 2025}\\
+Zunächst bestimmen wir die Restschuld $RS_{\mathrm{31.12.2025}}^{\mathrm{k.Z.}}$ am 31.12.2025, falls keine Zahlungen $C_1$ getätigt werden:
+\begin{align*}
+RS_{\mathrm{31.12.2025}}^{\mathrm{k.Z.}}
+	=
+	RS_{\mathrm{1.1.2023}}
+	(1+ 5\% )^3
+	=
+	60000 \cdot  1.05^3 
+	=
+	69457.50 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Zum 31.12.2025 soll die tatsächliche Restschuld noch $30000$ Schweizer Franken betragen. Damit müssen die konstanten Zahlungen $C_1$ zum Ende der Jahre 2023, 2024 und 2025 den Betrag
+\begin{align*}
+	RS_{\mathrm{31.12.2025}}^{\mathrm{k.Z.}}
+	- 30000
+	= 39457.5\ \textrm{(Schweizer Franken)}
+\end{align*}
+ergeben. Bei den konstanten Zahlungen $C_1$ handelt es sich um eine dreijährige nachschüssige Rente. Mit dem Endwert erhalten wir:
+\begin{align*}
+	39457.5
+	= C_1 \frac{(1 + 5 \%)^3 -1 }{5 \%}
+	\ \Leftrightarrow \
+	C_1 = 39457.5 \cdot \frac{5 \%}{(1 + 5 \%)^3 -1}
+	\approx
+	12516.25 \ \textrm{(Schweizer Franken)}
+\end{align*}
+Damit ist die nachschüssige Zahlung der ersten drei Jahre 
+$12516.25$ Schweizer Franken.\\
+\\
+\underline{(b3) Bestimme die Restschuld zum Ende des Jahres 2028}\\
+Wenn keine Zahlungen von am Ende der Jahre 2026 - 2028 getätigt werden, ist die Restschuld zum 31.12.2028 gegeben durch:
+\begin{align*}
+	RS_{\mathrm{31.12.2028}}^{\mathrm{k.Z.}}
+	=
+	RS_{\mathrm{1.1.2026}} (1 + 5\%)^3
+	=
+	30000 \cdot 1.05^3
+	=
+	34728.75 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Bei den konstanten Zahlungen in Höhe von  $C_2 = 5000$ handelt es sich um eine dreijährige nachschüssige Rente. Mit der Endwertformel erhalten wir damit die tatsächliche Restschuld am 31.12.2028 durch:
+\begin{align*}
+	RS_{\mathrm{31.12.2028}}
+	&= 
+	34728.75 - 
+	5000 
+	\cdot 
+	\frac{(1+ 5 \%)^3 -1}{5 \%}
+	=
+	34728.75 - 
+	5000 
+	\cdot 
+	\frac{(1.05)^3 -1}{0.05}\\
+	&=
+	18966.25 \ \textrm{(Schweizer Franken)}.
+\end{align*}
 
 
-\underline{(b4) Bestimme die restliche Laufzeit mit Hilfe der Restschuld}\\
-
-\underline{(b5) Bestimme die letzte Rate}\\
-
+\underline{(b4) Bestimme den Verkaufswert bei jährlichem Wertverlust von $3 \%$}\\
+Sams NFT Kunstwerk hat bei jährlichem Wertverlust von $3 \%$ am 31.12.2028 einen Verkaufswert von 
+\begin{align*}
+	VW_{\mathrm{31.12.2028}}
+	=
+	100000 (1- 3 \%)^6
+	=
+	100000 \cdot 0.97^6
+	= 83297.20 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Damit gilt $VW_{\mathrm{31.12.2028}} > RS_{\mathrm{31.12.2028}}$. Also ist der Verkaufswert trotz Wertverlust von $3 \%$ größer als die Restschuld zum 31.12.2028 und Sam kann seine Schulden begleichen.
 \newpage
 \subsection*{\aufgabe{c}{10}}
 Die Alterung der Bevölkerung hat bedeutende ökonomische und soziale Auswirkungen. Deshalb ist es für die Politik von hoher Bedeutung, ein umfassendes Verständnis davon zu haben, wie sich das Bevölkerungswachstum über die nächsten 50 Jahre entwickeln wird.
