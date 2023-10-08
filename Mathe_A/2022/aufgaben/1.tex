@@ -152,7 +152,7 @@ Nehmen wir an, dass man die Preisentwicklung durch eine Verbesserung der Energie
 	=
 	\frac{1600}{1 + e^{- \lambda (2023 - 2012)}}.
 \end{align*}
-Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ \lambda_0 = 0.5 $, um eine Näherung für $ \lambda^\star $ zu finden.
+Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ \lambda_0 = 0.05 $, um eine Näherung für $ \lambda^\star $ zu finden.
 \\
  \\
 \textbf{Lösung:}
@@ -160,11 +160,41 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $ \lambda_0 = 0
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme das Taylorpolynom. 
+\item Bestimme das Taylorpolynom.
+\item Bestimme die Näherungslösung. 
 \end{enumerate}
 \end{mdframed}
 
 \underline{1. Bestimme das Taylorpolynom}\\
+In dieser Aufgabe suchen wir eine Näherungslösung $\lambda^\star$ des Effizienzparameters, welcher zu den Kosten in Höhe von $1000$ Schweizer Franken führt. Wir suchen also eine Näherungslösung für die Gleichung
+\begin{align*}
+	c_{2023}(\lambda) = 1000
+	\ \Leftrightarrow \
+	f(\lambda) = c_{2023}(\lambda ) - 1000 = 0.
+\end{align*}
+Wir verwenden nun das Taylorpolynom zweiter Ordnung $P_2$ von $f$ in dem Entwicklungspunkt $\lambda_0 = 0.05$ um die Gleichung
+\begin{align*}
+	P_2(\lambda) = 0
+\end{align*}
+als Approximation der Gleichung $f(\lambda) = 0$ zu lösen. Das Taylorpolynom $P_2$ ist gegeben durch:
+\begin{align*}
+	P_2(\lambda)
+	=
+	f(0.05) 
+	+ f^\prime(0.05) (\lambda - 0.05)
+	+ \frac{f^{\prime \prime}(0.05)}{2} (\lambda - 0.05)^2.
+\end{align*}
+Mit der Teilaufgabe (a1)  erhalten wir:
+\begin{align*}
+	a_0 &:= f(0.05) 
+	= 
+	\frac{1600}{1 + e^{- 0.05\cdot 11}} - 1000
+	\approx  14.6169\\
+	a_1 &:= f^\prime(0.05)
+	=
+	\frac{17600}{\left( e^{\frac{11 \cdot 0.05}{2}} + e^{\frac{-11 \cdot 0.05}{2}} \right)^2}
+	\approx 4083.33
+\end{align*}
 
 \newpage
 \subsection*{\aufgabe{b}{12}}
