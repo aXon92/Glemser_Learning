@@ -195,7 +195,118 @@ Mit der Teilaufgabe (a1)  erhalten wir:
 	\frac{17600}{\left( e^{\frac{11 \cdot 0.05}{2}} + e^{\frac{-11 \cdot 0.05}{2}} \right)^2}
 	\approx 4083.33
 \end{align*}
-
+Für den letzten Koeffizienten $a_2 = f^{\prime \prime}(0.05)$ müssen wir die zweite Ableitung berechnen. Mit der Kettenregel gilt:
+\begin{align*}
+	f^{\prime \prime}(\lambda)
+	&=
+	\frac{\mathrm{d}}{\mathrm{dx}}
+	\left(
+	\frac{17600}{\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^2}
+	\right)
+	=
+	17600 \cdot 
+	\frac{\mathrm{d}}{\mathrm{dx}}
+	\left(
+	\frac{1}{\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^2}
+	\right)\\
+	&=
+	17600\cdot
+	\left( 
+		\frac{11}{2}  e^{\frac{11 \cdot \lambda}{2}} 
+		- \frac{11}{2} e^{\frac{-11 \cdot \lambda}{2}}
+	\right)
+	\cdot 
+	\frac{-2}{\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^3}\\
+	&=
+	17600\cdot \frac{11}{2} \cdot 
+	\left( 
+	  e^{\frac{11 \cdot \lambda}{2}} 
+	-  e^{\frac{-11 \cdot \lambda}{2}}
+	\right)
+	\cdot 
+	\frac{-2}{\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^3}\\
+	&=
+	-17600 \cdot 11 
+		\frac{e^{\frac{11 \cdot \lambda}{2}} 
+			-  e^{\frac{-11 \cdot \lambda}{2}}
+	}{
+		\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^3
+	}.
+\end{align*}
+Damit erhalten wir:
+\begin{align*}
+	a_2
+	:=
+	f^{\prime \prime}(0.05)
+	=
+	-17600 \cdot 11 
+	\frac{e^{\frac{11 \cdot 0.05}{2}} 
+		-  e^{\frac{-11 \cdot 0.05}{2}}
+	}{
+		\left( e^{\frac{11 \cdot 0.05}{2}} + e^{\frac{-11 \cdot 0.05}{2}} \right)^3
+	}
+	\approx 
+	-12049.9.
+\end{align*}
+Das Taylorpolynom $P_2$ ist somit durch 
+\begin{align*}
+	P_2(\lambda)
+	= 
+	a_0 
+	+ 
+	a_1(\lambda - 0.05)
+	\frac{1}{2}
+	a_2 
+	(\lambda - 0.05)^2 	
+	\approx
+	14.6169
+	+
+	4083.33
+	(\lambda - 0.05)
+	+
+	\frac{1}{2}
+	(-12049.9) (\lambda - 0.05)^2
+\end{align*}
+gegeben.
+Wir substituieren $s = \lambda - 0.05$, wodurch uns das Lösen der Gleichung
+\begin{align*}
+	P_2(\lambda) = a_0 
+	+ 
+	a_1(\lambda - 0.05)
+	\frac{1}{2}
+	a_2 
+	(\lambda - 0.05)^2 	
+	=
+	a_0 + a_1 s +\frac{1}{2} a_2 s^2 = =
+\end{align*}
+erleichtert wird. Mit der $abc$- Formel erhalten wir:
+\begin{align*}
+	s_{1,2}
+	&=
+	\frac{-a_1 \pm \sqrt{a_1^2 - 4 \frac{1}{2} a_2 a_0}}{2 \frac{1}{2} a_2}
+	=
+	\frac{-a_1 \pm \sqrt{a_1^2 - 2  a_2 a_0}}{ a_2} \\
+	&\approx
+	\frac{-4083.33 \pm \sqrt{4083.33^2 + 2 \cdot 12049.9 \cdot 14.6169}}{-12049.9}\\
+	&=
+	\frac{4083.33 \pm \sqrt{4083.33^2 + 2 \cdot 12049.9 \cdot 14.6169}}{12049.9}
+	\in 
+	\{ -0.00356, 0.68129\}.
+\end{align*}
+Mit der Rücksubstitution $\lambda = s + 0.05$ erhalten wir die Lösungen 
+\begin{align*}
+	\lambda
+	\in 
+	\{
+	0.04643,0.73129
+	\}.
+\end{align*}
+Die zweite Lösung liegt nicht in dem Intervall $[0,0.1]$. Die relevante Lösung ist $\lambda = 0.04643$. Damit gilt:
+\begin{align*}
+	\lambda^\star
+	\approx
+	0.04643.
+\end{align*}
 \newpage
 \subsection*{\aufgabe{b}{12}}
 Sam begeistert sich für non-fungible tokens (NFTs).
