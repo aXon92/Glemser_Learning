@@ -23,22 +23,120 @@ Nehmen wir an, dass man die Preisentwicklung durch eine Verbesserung der Energie
 \end{align*}
 Zeigen Sie, dass es genau einen Wert $\lambda^\star \in [0,0.1]$ gibt, bei dem die Kosten im Jahr $2023$ $1'000$ Schweizer Franken entsprechen.
 \
-\\
+\\ \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item 
-
+Stelle den mathematischen Rahmen her.
+\item
+Überlege wie man die Existenz und Eindeutigkeit zeigt.
+\item
+Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit. 
 \end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Stelle den mathematischen Rahmen her}\\
+Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
+\\
+Diese Aufgabe sucht nach der Existenz und Eindeutigkeit eines Wertes $\lambda^\star \in [0,0.1]$, für welchen die jährlichen Stromkosten eines Schweizer Haushalts im Jahr 2023 $1000$ Schweizer Franken betragen.
+Nach der Aufgabe sind diese Kosten durch $c_{2023}(\lambda)$ in Abhängigkeit von $\lambda$ gegeben (Effizienzparameter).
+Gesucht ist also der eindeutige Wert $\lambda^\star \in [0,0.1]$, sodass 
+\begin{align*}
+	c_{2023}(\lambda) = 1000
+	\ \Leftrightarrow \ 
+	c_{2023}(\lambda) - 1000 = 0
+\end{align*}
+gilt. Damit erhalten wir mit 
+\begin{align*}
+	f(\lambda) := c_{2023}(\lambda) - 1000 
+	=
+	\frac{1600}{1 + e^{- \lambda (2023 - 2012)}} - 1000
+	=
+	\frac{1600}{1 + e^{- \lambda\cdot 11}} - 1000
+\end{align*}
+das Nullstellenstellenproblem
+\begin{align*}
+	f(\lambda^\star) = 0.
+\end{align*}
+Zu zeigen ist also, dass eine eindeutige Lösung $\lambda^\star$ in dem Intervall $[0, 0.1]$ existiert.\\
+\\
+\underline{2. Überlege wie man die Existenz und Eindeutigkeit zeigt}\\
+Um zu zeigen, dass ein $\lambda^\star  \in [0,0.1]$ mit
+\begin{align*}
+	c_{2023}(\lambda^\star) = 0
+\end{align*}
+existiert. Hierfür können wir den Nullstellensatz von Bolzano anwenden. Dieser besagt:\\
+Sei $f:[a,b] -> \R$ eine stetige Funktion mit $f(a) < 0 \wedge f(b) > 0 $ oder $f(a) > 0 \wedge f(b) < 0$\\
+Dann existiert mindestens ein $\lambda^\star \in [a,b]$, sodass $f(\lambda^\star) = 0$ gilt.\\
+\\
+Damit wissen wir jedoch nur, dass eine Nullstelle existiert. Es könnten auch mehrere Nullstellen in $[0,0.1]$ existieren. 
+Falls $f $ auf $[0,0.1]$ streng monoton ist, kann es jeder Wert auf diesem Intervall nur einmal getroffen werden und wir erreichen die Eindeutigkeit.\\
+\\
+\underline{3. Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit}\\
+Die Funktion $f$ ist als Zusammensetzung stetiger Funktionen stetig. Des weiteren gilt:
+\begin{align*}
+	f(0) = c_{2023}(0) -1000 
+	=
+	\frac{1600}{1 + e^{-0 \cdot 11} } - 1000
+	= 
+	\frac{1600}{2} - 1000
+	= 
+	800 - 1000 = -200 < 0\\
+	f(0.01) = c_{2023}(0.1) -1000 
+	=
+	\frac{1600}{1 + e^{-0.1 \cdot 11} } - 1000
+	\approx
+	= 
+	200.416 > 0.
+\end{align*}
+Damit existiert mindestens ein $\lambda^\star \in [0,0.1]$, sodass $f(\lambda^\star) = 0$ gilt.\\ 
+Für die strenge Monotonie betrachten wir die Ableitung von $f$. Mit der Kettenregel erhalten wir:
+\begin{align*}
+	f^\prime(\lambda)
+	&=
+	1600 \cdot (-11) \cdot e^{-11\cdot \lambda } \frac{-1}{\left(1 + e^{-11 \lambda}\right)^2}
+	=
+	\frac{1600 \cdot 11}{e^{11 \cdot \lambda} \left(1 + e^{-11 \lambda}\right)^2}
+	=
+	\frac{17600}{e^{\frac{11 \cdot \lambda}{2} \cdot 2} \left(1 + e^{-11 \lambda}\right)^2}\\
+	&=
+	\frac{17600}{\left(e^{\frac{11 \cdot \lambda}{2}  }\right)^2 \left(1 + e^{-11 \lambda}\right)^2}
+	=
+	\frac{17600}{\left(\left(e^{\frac{11 \cdot \lambda}{2}  }\right) \left(1 + e^{-11 \lambda}\right) \right)^2}
+	=
+	\frac{17600}{\left( e^{\frac{11 \cdot \lambda}{2}} + e^{\frac{-11 \cdot \lambda}{2}} \right)^2}.
+\end{align*}
+Wegen der Positivität der Exponentialfunktion gilt $f^\prime (\lambda) > 0 $ für alle $\lambda \in \R$. Insbesondere gilt dies für unser Intervall $[0,0.1]$.\\
+\\
+Insgesamt existiert eine eindeutige Lösung $\lambda^\star \in [0,0.1]$, sodass 
+\begin{align*}
+	f(\lambda^\star) = 0
+	\ \Leftrightarrow \
+	c_{2023}(\lambda^\star)  = 1000
+\end{align*}
+gilt. Die Gleichung $c_{2023}(\lambda^\star)$ lässt sich durch
+\begin{align*}
+	c_{2023}(\lambda^\star)  = 1000
+	&\ \Leftrightarrow \
+	\frac{1600}{1 + e^{- \lambda^\star \cdot 11}} = 1000
+	\ \Leftrightarrow \
+	1600 = 1000 + 1000 e^{- \lambda^\star \cdot 11}\\
+	&\	\Leftrightarrow \
+	1000 e^{- \lambda^\star \cdot 11} = 600\\
+	&\	\Leftrightarrow \
+	e^{- \lambda^\star \cdot 11} = \frac{6}{10} = \frac{3}{5}
+	\ \Leftrightarrow \
+	- \lambda^\star \cdot 11 = \ln \left(\frac{3}{5}\right)\\
+	&\ \Leftrightarrow \
+	\lambda^\star = \frac{\ln(3) - \ln(5)}{-11} \approx 0.04644.
+\end{align*}
+auch explizit auflösen.
 
- 
 \newpage
 
-\subsection*{\aufgabe{a2}{6}}
+\subsection*{\aufgabe{a2}{8}}
 Die durchschnittlichen jährlichen Stromkosten eines Schweizer Haushalts sind von ungefähr $800$ Schweizer Franken im Jahr $2012$ auf (voraussichtlich) $1'200$ Schweizer Franken im Jahr $2023$ gestiegen. Um diese Entwicklung darzustellen, nehmen wir an, dass sich die Kosten $C$ über die Zeit gemäss dem folgenden mathematischen Modell entwickeln:
 \begin{align*}
 	C_\lambda(t)
