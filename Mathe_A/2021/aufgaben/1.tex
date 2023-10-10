@@ -24,12 +24,108 @@ Zeigen Sie, dass wenn die Produktion auf maximal $6'000$ Bücher beschränkt ist
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item 
+Stelle den mathematischen Rahmen her.
+\item
+Überlege wie man die Existenz und Eindeutigkeit zeigt.
+\item
+Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit. 
 
 \end{enumerate}
 \end{mdframed}
-\underline{1. }\\
+\underline{1. Stelle den mathematischen Rahmen her}\\
+Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
+\\
+In dieser Aufgabe suchen wir nach der Existenz und Eindeutigkeit einer Anzahl $x^\star $ an kostenlosen Exemplaren, ab welcher alle Kosten gedeckt sind und die Redakteurin beginnt Gewinne zu machen. Den Gewinn abhängig von den kostenlosen Exemplaren $x$ können wir formalisiert durch
+\begin{align*}
+	G(x) = \underbrace{40 \ B(x)}_{\textrm{Verkaufserlöse}} - \underbrace{(10 B(x) - 10 x)}_{\textrm{Produktionskosten}} - \underbrace{100000}_{\textrm{Fixkosten}}, \quad
+	x \in (0, 6000).
+\end{align*}
+beschreiben. Wir suchen nun nach der Anzahl kostenloser Exemplare $x^\star$, sodass 
+\begin{align*}
+G(x^\star ) = 0
+\end{align*}
+mit $G(x) < 0$ für $0 \leq x < x^\star$ und $G(x) > 0$ für $x^\star < x \leq 6000$ gilt.\\
+\\
 
- 
+\underline{2. Überlege wie man die Existenz und Eindeutigkeit zeigt}\\
+Um zu zeigen, dass ein $x^\star  \in (0,6000)$ mit
+\begin{align*}
+	G(x^\star)= 0
+\end{align*}
+existiert, können wir den Nullstellensatz von Bolzano anwenden. Dieser besagt:\\
+Sei $G:[a,b] -> \R$ eine stetige Funktion mit $G(a) < 0 \wedge G(b) > 0 $ oder $G(a) > 0 \wedge G(b) < 0$\\
+Dann existiert mindestens ein $x^\star \in [a,b]$, sodass $G(x^\star) = 0$ gilt.\\
+\\
+In unserem Fall ist $a = 0 $ und $b = 6000$.
+Damit wissen wir jedoch nur, dass eine Nullstelle existiert. Es könnten auch mehrere Nullstellen in $[0,6000]$ existieren. 
+Falls $G $ auf $[0,6000]$ streng monoton ist, kann jeder Wert auf diesem Intervall nur einmal getroffen werden und wir erreichen die Eindeutigkeit.\\
+\\
+\underline{3. Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit}\\
+Für die Gewinnfunktion gilt:
+\begin{align*}
+	G(x)
+	&= 
+	40 B(x) 
+	- ( B(x) + 10 x) - 100000
+	= 
+	40 B(x) 
+	-  B(x) -10 x - 100000\\
+	&=
+	30 B(x) - 10 x - 100000\\
+	&=
+	30 
+	\left(
+	20'000 - 19'000 e^{-0.0002 x }
+	\right)
+	- 10x - 100000\\
+	&=
+	600000 - 570000 e^{-0.0002 x } - 10 x - 100000\\
+	&= 
+	500000 - 570000 e^{-0.0002 x } - 10 x.
+\end{align*}
+Als Zusammensetzung stetiger Funktionen ist $G$ stetig. Damit können wir versuchen den Nullstellensatz anzuwenden. An den Rändern des relevanten Intervalls gilt:
+\begin{align*}
+	G(0) 
+	&= 500000 - 570000 \cdot e^{-0.0002 \cdot 0 } - 10 \cdot  0
+	= 500000 - 570000  = - 70000 < 0 \\
+	G(60000)
+	&=
+	500000 - 570000 \cdot e^{-0.0002 \cdot 6000 } - 10 \cdot 6000
+	=
+	500000 - 570000 \cdot e^{-\frac{2}{10000} \cdot 6000 } - 60000\\
+	&=
+	440000 - 570000 \cdot e^{-\frac{12000}{10000}  } 
+	=
+	440000 - 570000 \cdot e^{-\frac{12}{10}  } 
+	>
+	440000 - 570000 \cdot e^{-\frac{10}{10}  } \\
+	&=
+	440000 - 570000 \cdot \frac{1}{e}
+	>
+	440000 - 570000 \cdot \frac{1}{2}\\
+	&= 440000 - 285000 = 155000 > 0.
+\end{align*}
+Für die rechte Seite des Intervalls ist es empfehlenswert den Taschenrechner zu verwenden. Dies soll $e \approx 2.71....$ zeigen, wie es auch ohne geht. 
+Wegen $G(0) < 0$ und $G(6000) > 0$ existiert nach dem Nullstellensatz von Bolzano in dem Intervall $(0,6000)$ mindestens eine Nullstelle. Für die Eindeutigkeit betrachten wir die Ableitung:
+\begin{align*}
+	G^\prime(x)
+	&=
+	-570000 ( - 0.0002) e^{-0.0002 x} - 10
+	=
+	57 \cdot 2 e^{-0.0002 x} - 10
+	=
+	114 \cdot e^{-0.0002 x}- 10\\
+	&> 
+	114 \cdot e^{-0.0002 \cdot 6000} - 10
+	=
+	114 \cdot e^{-\frac{12}{10}} - 10 \approx 24.34  > 0, 
+	\quad x \in ( 0 , 6000).
+\end{align*}
+Damit ist $G$ auf dem Intervall streng monoton wachsend und es existiert ein eindeutiges $x^\star \in (0,6000) $, sodass 
+\begin{align*}
+	G(x^\star) = 0
+\end{align*} 
+mit $G(x) < 0$ für $0 \leq x < x^\star$ und $G(x) > 0$ für $x^\star < x \leq 6000$ gilt.
 \newpage
 
 \subsection*{\aufgabe{a2}{8}}
@@ -120,12 +216,12 @@ Weisen Sie nach, dass $I^\star$ tatsächlich ein Maximum von $v$ ist.\\
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item Stelle den mathematischen Rahmen her.
+\item Formuliere das Optimierungsproblem.
 \item Finde das Maximum $I^\star$.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Stelle den mathematischen Rahmen her}\\
+\underline{1. Formuliere das Optimierungsproblem}\\
 Das Ziel ist es den Trade-off $v(I) = b(I) - d(I)$ zwischen dem erwartetem Nutzen und dem erwarteten Schaden zu Maximieren. Hierbei ist $I$ die Informationsmenge.\\
 \\
 Mit dem Hinweis erhalten wir, dass mit der Bedingung $q I_0^2  < \frac{8}{27}$ auch $I^\star > I_0$ gilt, d.h. das Maximum von $v$ ist größer als $I_0$. Deswegen müssen wir nur den Fall $I > I_0$ betrachten.\\
