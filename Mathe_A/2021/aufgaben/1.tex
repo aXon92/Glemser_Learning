@@ -17,7 +17,7 @@ Exemplaren des Buchs erzielt wird. \\
 \\
 Zeigen Sie, dass wenn die Produktion auf maximal $6'000$ Bücher beschränkt ist, es genau eine Menge $ x^\star \in (0, 6'000)$ an Gratisexemplaren gibt, bei der die Gesamtkosten genau durch den Umsatz gedeckt werden.
 \
-\\
+\\ \\
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
@@ -105,10 +105,10 @@ Sei $I \geq 0 $ die Menge an Informationen, die ein Unternehmen sammelt, und $b(
 \end{align*}
 Demnach ist $I_0 > 0 $ die Mindestmenge an Information, die benötigt wird, um einen Nutzen für den Kunden zu generieren, und der Nutzen ist durch $s > 0 $ beschränkt, d.h., der Nutzen wird nie grösser als $s$, egal wie viel Information gesammelt wird. Im Gegensatz dazu soll der erwartete Schaden durch eine Datenschutzverletzung durch
 \begin{align*}
-	d(I) = \frac{1}{2} q s I^2
+	d(I) = \frac{1}{2} \ q \ s  \ I^2
 \end{align*}
 gegeben sein, wobei $q \in (0,1)$ die Wahrscheinlichkeit einer solchen Verletzung darstellt.
-Zudem nehmen wir an, dass $q I_0^2 < \frac{8}{27}$ gilt. Für einen potentiellen Kunden ist die relevante Grösse der Trade-off $v(I)$ zwischen dem Nutzen $b(I)$ und dem möglichen Schaden $d(I)$, d.h., $v(I) = b(I) - d(I)$.\\
+Zudem nehmen wir an, dass $q \  I_0^2 < \frac{8}{27}$ gilt. Für einen potentiellen Kunden ist die relevante Grösse der Trade-off $v(I)$ zwischen dem Nutzen $b(I)$ und dem möglichen Schaden $d(I)$, d.h., $v(I) = b(I) - d(I)$.\\
 \\
 Für welche Menge $I^\star \geq 0$ an Informationen erzielt der Kunde den bestmögliche Trade-off, d.h. den grössten Wert für $v$?
 Bestimmen Sie die Antwort in Abhängigkeit der Parameter $s, I_0, q$.
@@ -120,12 +120,119 @@ Weisen Sie nach, dass $I^\star$ tatsächlich ein Maximum von $v$ ist.\\
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[(c1)] 
+\item Stelle den mathematischen Rahmen her.
+\item Finde das Maximum $I^\star$.
 \end{enumerate}
 \end{mdframed}
 
-\underline{(c1) }\\
-
-
-
+\underline{1. Stelle den mathematischen Rahmen her}\\
+Das Ziel ist es den Trade-off $v(I) = b(I) - d(I)$ zwischen dem erwartetem Nutzen und dem erwarteten Schaden zu Maximieren. Hierbei ist $I$ die Informationsmenge.\\
+\\
+Mit dem Hinweis erhalten wir, dass mit der Bedingung $q I_0^2  < \frac{8}{27}$ auch $I^\star > I_0$ gilt, d.h. das Maximum von $v$ ist größer als $I_0$. Deswegen müssen wir nur den Fall $I > I_0$ betrachten.\\
+\\
+\underline{2. Finde das Maximum $I^\star$}\\
+Wir schreiben zunächst $v$ für $I > I_0$ explizit auf
+\begin{align*}
+	v(I)
+	=
+	b(I) - d(I) 
+	=
+	s \left(1 - \frac{I_0}{I}\right)
+	- \frac{1}{2} q s I_0^2
+	=
+	s - s \frac{I_0}{I} - \frac{1}{2} q s I_0^2
+\end{align*}
+und bestimmen die ersten zwei Ableitungen:
+\begin{align*}
+	v^\prime(I) &= s \frac{I_0}{I^2} - q s I\\
+	v^{\prime \prime}(I) &= -2s \frac{I_0}{I^3} - qs
+	= - \frac{2s I_0}{I^3} - qs. 
+\end{align*}
+Wir prüfen nun die notwendige Bedingung für einen lokalen Extrempunkt:
+\begin{align*}
+	v^\prime(I) = 0 
+	&\ \Leftrightarrow \
+	s \frac{I_0}{I^2} - q s I = 0
+	\ \Leftrightarrow \
+	s \frac{I_0}{I^2} = qs I 
+	\ \Leftrightarrow \
+	s I_0 = qs I^3
+	\ \Leftrightarrow \ 
+	 \frac{I_0}{q} =  I^3 \\
+	 &\ \Leftrightarrow \
+	   I^\star = I  = \sqrt[3]{\frac{I_0}{q}} = \left( \frac{I_0}{q}\right)^{\frac{1}{3}}.
+\end{align*}
+Damit haben wir mit $I^\star = \left( \frac{I_0}{q}\right)^{\frac{1}{3}}$ einen Kandidaten für ein lokales Maximum gefunden.\\
+\\
+Wegen  $I_0, s , q > 0$ gilt, erhalten wir für die zweite Ableitung
+\begin{align*}
+	v^{\prime \prime}(I)
+	= -\underbrace{ \frac{2s I_0}{I^3}}_{>0} - \underbrace{qs}_{>0} < 0.
+\end{align*}
+für alle $I \in (I_0, \infty)$. Damit ist $v$ auf $(I_0, \infty)$ streng konkav.
+Insbesondere liegt an $I^\star $ ein lokales Maximum vor, welches wegen der Konkavität auch global ist.\\
+\\
+Zum Abschluss noch ein paar Zusatzinformationen. Für die Bedingung des Hinweises gilt:
+\begin{align*}
+	q I_0^2 < \frac{8}{27}
+	\ \Leftrightarrow \
+	\frac{1}{q} > \frac{27 }{8} I_0^2,
+\end{align*}
+Hiermit ist also wirklich garantiert, dass
+\begin{align*}
+	I^\star 
+	= 
+	\left(\frac{I_0}{q}\right)^\frac{1}{3}
+	>
+	\left(\frac{27}{8} I_0^3\right)^\frac{1}{3}
+	=
+	\left(\frac{3^3}{2^3} I_0^3\right)^\frac{1}{3}
+	= \frac{3}{2} I_0 > I_0
+\end{align*}
+gilt. Des weiteren erhalten wir:
+\begin{align*}
+	v(I^\star )
+	&=
+	s 
+	\left(
+		1 
+		- 
+		I_0 \left(\frac{I_0}{q}\right)^{-\frac{1}{3}}
+		-
+		\frac{1}{2} q \left(\frac{I_0}{q}\right)^{\frac{2}{3}}
+	\right)\\
+	&=
+	s 
+	\left(
+	1 
+	- 
+	I_0^{\frac{2}{3}} q^{\frac{1}{3}}
+	-
+	\frac{1}{2} q^{\frac{1}{3}} I_0^\frac{2}{3}
+	\right)\\
+	&=
+	s 
+	\left(
+	1 
+	- 
+	\frac{3}{2}
+	I_0^{\frac{2}{3}} q^{\frac{1}{3}}
+	\right)\\
+	&> 
+	s 
+	\left(
+	1 
+	- 
+	\frac{3}{2} \left(\frac{8}{27}\right)^\frac{1}{3}
+	\right)
+	=
+	s 
+	\left(
+	1 
+	- 
+	\frac{3}{2} \cdot \frac{2}{3}
+	\right)
+	= 0.
+\end{align*}
+Somit wird durch Sammeln der optimalen Informationsmenge $I^\star$ wirklich ein echt positiver Nutzen für den Kunden erzielt.
 
