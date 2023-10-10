@@ -146,11 +146,117 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $x_0 = 750$, um
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Bestimme das Taylorpolynom. 
+\item Bestimme das Taylorpolynom.
+\item Bestimme die Näherungslösung. 
 \end{enumerate}
 \end{mdframed}
 
 \underline{1. Bestimme das Taylorpolynom}\\
+In dieser Aufgabe ist eine Näherungslösung für die Anzahl der Exemplare $x^\star$ ab welcher die Kosten gedeckt sind gesucht. Wir suchen also eine Näherungslösung für die Gleichung
+\begin{align*}
+	G(x) = 0
+\end{align*}
+Wir verwenden nun das Taylorpolynom zweiter Ordnung $P_2$ von $G$ in dem Entwicklungspunkt $x_0 = 750$ um die Gleichung
+\begin{align*}
+	P_2(x) = 0
+\end{align*}
+als Approximation der Gleichung $G(x) = 0$ zu lösen. Das Taylorpolynom $P_2$ ist gegeben durch:
+\begin{align*}
+	P_2(x)
+	=
+	G(750) 
+	+ G^\prime(750) (x - 750)
+	+ \frac{G^{\prime \prime}(750)}{2} (x - 750)^2.
+\end{align*}
+Mit der Teilaufgabe (a1)  erhalten wir:
+\begin{align*}
+	a_0 &:= G(750) 
+	= 
+	500000 - 570000 e^{-0.0002 \cdot 750 } - 10 \cdot 750
+	\approx  1896.4534\\
+	a_1 &:= G^\prime(750)
+	=
+	114 \cdot e^{-0.0002 \cdot  750}- 10
+	\approx 88.1207
+\end{align*}
+Für den letzten Koeffizienten $a_2 := G^{\prime \prime}(750)$ müssen wir die zweite Ableitung berechnen:
+\begin{align*}
+	G^{\prime \prime}(x)
+	=
+	\frac{\mathrm{d}}{\mathrm{dx}}
+	\left(
+			114 \cdot e^{-0.0002 x}- 10
+	\right)
+	=
+	114 \cdot  ( -0.0002) \cdot e^{-0.0002 x}
+	=
+	-0.0228 \cdot e^{-0.0002 x}.
+\end{align*}
+Damit erhalten wir
+\begin{align*}
+	a_2 : = G^{\prime \prime}(750)
+	= -0.0228 \cdot e^{-0.0002 \cdot 750}
+	\approx
+	-0.0196.	
+\end{align*}
+Das Taylorpolynom $P_2$ ist somit durch 
+\begin{align*}
+	P_2(x)
+	= 
+	a_0 
+	+ 
+	a_1(x - 750)
+	\frac{1}{2}
+	a_2 
+	(x - 750)^2 	
+	\approx
+	1896.4534
+	+
+	88.1207
+	(x - 750)
+	+
+	\frac{1}{2}
+	(-0.0196) (x - 750)^2
+\end{align*}
+gegeben.\\
+\\
+\underline{2. Bestimme die Näherungslösung}\\
+Wir substituieren $s = x - 750$, wodurch uns das Lösen der Gleichung
+\begin{align*}
+	P_2(x) = a_0 
+	+ 
+	a_1(x - 750)
+	+
+	\frac{1}{2}
+	a_2 
+	(x - 750)^2 	
+	=
+	a_0 + a_1 s +\frac{1}{2} a_2 s^2 = 0
+\end{align*}
+erleichtert wird. Mit der $abc$- Formel erhalten wir:
+\begin{align*}
+	s_{1,2}
+	&=
+	\frac{-a_1 \pm \sqrt{a_1^2 - 4 \frac{1}{2} a_2 a_0}}{2 \frac{1}{2} a_2}
+	=
+	\frac{-a_1 \pm \sqrt{a_1^2 - 2  a_2 a_0}}{ a_2} \\
+	&\approx
+	\frac{-88.1207 \pm \sqrt{88.1207^2 + 2 \cdot 0.0196 \cdot 1896.4534}}{-0.0196}\\
+	&=
+	\frac{88.1207 \pm \sqrt{88.1207^2 + 2 \cdot 0.0196 \cdot 1896.4534}}{0.0196}
+	\in 
+	\{ -21.47, 9013.378\}.
+\end{align*}
+Mit der Rücksubstitution $x = s + 750$ erhalten wir die Lösungen 
+\begin{align*}
+	x
+	\in 
+	\{
+	728.530,9763.378
+	\}.
+\end{align*}
+Die zweite Lösung liegt nicht in dem Intervall $(0,6000)$. Die relevante Lösung ist $x = 728.530$. Damit gilt $x^\star \approx 728.530$.
+
 
 \newpage
 \subsection*{\aufgabe{b}{12}}
