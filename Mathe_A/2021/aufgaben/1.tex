@@ -278,17 +278,168 @@ Bereits nach 3 Jahren ist AlgoTrade sehr erfolgreich und generiert beträchtlich
 \begin{center}
 	\includegraphics[scale=0.45]{pictures/zeitstrahl_1_b}
 \end{center}
-\ \\
+\newpage
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[(b1)] Füge den Kredit und die Raten zum Zeitstrahl hinzu.
+\item[(b1)] 
+Füge die Ereignisse und Mittelflüsse zum Zeitstrahl hinzu.
+\item[(b2)]
+\begin{enumerate}
+	\item[1.] Für die Ratenzahlung $C$ gibt es mehrere Interpretationen. Zähle diese auf.
+	\item[2.] 
+	Berechne die verschiedenen Interpretationen.
+\end{enumerate}
+\item[(b3)]
+\begin{enumerate}
+	\item[1.] Ergänze die Information am Zahlenstrahl.
+	\item[2.] 
+	Berechne die Restschuld.
+\end{enumerate}
 \end{enumerate}
 \end{mdframed}
 
-\underline{(b1) }\\
+\underline{(b1) Füge die Ereignisse und Mittelflüsse zum Zeitstrahl hinzu}\\
+\begin{center}
+	\includegraphics[scale=0.6]{pictures/zeitstrahl_1_b_filled_1}
+\end{center}
 
+\underline{(b2) 1. Für die Ratenzahlung $C$ gibt es mehrere Interpretationen. Zähle diese auf}\\
+Wie wir die Lösung der Aufgabe angehen hängt von der Interpretation der Information, dass $40 \%$ des geschuldeten Betrags bis Ende 2026 zurückgezahlt werden muss, ab.
+\begin{enumerate}
+	\item 
+	Die Zahlungen $C$ werden so gewählt, dass die Restschuld Ende 2026 noch $60 \%$ des Kreditbetrags, also $600000$ Schweizer Franken, beträgt.
+	In der Praxis ist dies die gängige Interpretation.
+	\item 
+	Die Zahlungen $C$ werden so gewählt, dass ihr Wert 2026 $40 \%$ des Kreditbetrags, also $400000$ Schweizer Franken, beträgt.
+	\item 
+	DIe Zahlungen $C$ werden so gewählt, dass ihr Wert Anfang 2022 $40 \%$ des Kreditbetrags, also $400000$ Schweizer Franken, beträgt.
+	Dies ist äquivalent dazu, dass dieser Wert Ende 2026 $40 \%$ der über fünf Jahre aufgezinsten Kreditsumme, d.h. $40 \% \cdot 1000000 \cdot ( 1 + 2 \%)^5$, entspricht. 
+\end{enumerate}
+
+\underline{(b2) 2. Berechne die verschiedenen Interpretationen}\\
+\\
+\textbf{Interpretation 1:}
+Zunächst berechnen wir die bestehende Restschuld am 31.12.2026, wenn keine Zahlungen $C$ erfolgen:
+\begin{align*}
+	RS_{\mathrm{31.12.2026}}
+	=
+	RS_{\mathrm{1.1.2022}} ( 1+ 2 \%)^5
+	=
+	1 000 000 \cdot 1.02^5 
+	\approx
+	1 104 080.80 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Diese werden wir benötigen um die Zahlungen $C$ zu bestimmen.
+Die bestehende Restschuld sollte zum 31.12.2026 $60 \%$ der $1 000 000$ Schweizer Franken betragen.
+Damit erhalten wir für Ende 2026 folgenden kumulierten Wert der konstanten Zahlungen $C$, welche jeweils über fünf Jahre zum Jahresende bezahlt werden, durch
+\begin{align*}
+	RS_{\mathrm{31.12.2026}}
+	- 600 000 
+	\approx 
+	504 080.85
+	\ \textrm{(Schweizer Franken)}.
+\end{align*} 
+Somit kennen wir den Endwert der fünfjährigen nachschüssigen Rente $C$. Hiermit können wir mit der Endwertformel die Zahlungen $C$ berechnen:
+\begin{align*}
+	&C \frac{(1+2\%)^5 -1 }{2 \%} = 	RS_{\mathrm{31.12.2026}}
+	- 600 000\\
+	\ \Leftrightarrow \
+	&C_1:=C 
+	= (RS_{\mathrm{31.12.2026}}
+	- 600 000) \cdot \frac{2 \%}{1+2\%)^5 -1 }
+	=
+	\frac{504 080.85 \cdot 2 \%}{1+2\%)^5 -1 }
+	\approx 96 863.35
+	\ \textrm{(Schweizer Franken)}.
+\end{align*}
+\ \\
+\textbf{Interpretation 2:}
+Bei den konstanten Zahlungen $C$ handelt es sich um eine nachschüssige Rente, welche über fünf Jahre gezahlt wird.
+Mit der zweiten Interpretation erhalten wir durch die Endwertformel:
+\begin{align*}
+	400 000
+	=
+	C \frac{(1+2\%)^5 -1 }{2 \%}
+	\ \Leftrightarrow \
+	C_2 := C
+	&= 400 000 \cdot
+	\frac{2 \%}{(1+2\%)^5 -1}
+	=
+	\frac{ 400 000 \cdot 2 \%}{(1+2\%)^5 -1}\\
+	&\approx
+	76 863.35
+	\ \textrm{(Schweizer Franken)}.
+\end{align*}
+\ \\
+\textbf{Interpretation 3:}
+Zunächst berechnen wir die bestehende Restschuld am 31.12.2026, wenn keine Zahlungen $C$ erfolgen:
+\begin{align*}
+	RS_{\mathrm{31.12.2026}}
+	=
+	RS_{\mathrm{1.1.2022}} ( 1+ 2 \%)^5
+	=
+	1 000 000 \cdot 1.02^5 
+	\approx
+	1 104 080.80 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Diese werden wir benötigen um die Zahlungen $C$ zu bestimmen.
+Sollen nun $40 \% $ dieser Summe bis Ende 2026 zurückgezahlt werden, erhält man den kumulierten Wert der fünfjährigen nachschüssigen Zahlung $C$ durch
+\begin{align*}
+	40 \% \cdot RS_{\mathrm{31.12.2026}}
+	\approx
+	40 \% \cdot	1 104 080.80
+	\approx
+	441 632.30 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Somit kennen wir den Endwert der fünfjährigen nachschüssigen Rente $C$. Hiermit können wir mit der Endwertformel die Zahlungen $C$ berechnen:
+\begin{align*}
+	&C \frac{(1+2\%)^5 -1 }{2 \%} = 40 \% \cdot RS_{\mathrm{31.12.2026}}\\
+	\ \Leftrightarrow \
+	&c_3 := C 
+	= (40 \% \cdot RS_{\mathrm{31.12.2026}}) \cdot \frac{2 \%}{1+2\%)^5 -1 }
+	=
+	\frac{441 632.30  \cdot 2 \%}{1+2\%)^5 -1 }
+	\approx 84 863.35
+	\ \textrm{(Schweizer Franken)}.
+\end{align*}
+\ \\
+Bei der weiteren Bearbeitung hängt es davon welche Interpretation man gewählt hat. Im folgenden Verlauf werden wir uns auf ersten Interpretation ($C_1$) beziehen und die anderen Ergebnisse nennen.
+
+\newpage
+\underline{(b3) 1. Ergänze die Information am Zahlenstrahl}\\
+\begin{center}
+	\includegraphics[scale=0.54]{pictures/zeitstrahl_1_b_filled_3}
+\end{center}
+\underline{(b3) 2. Berechne die Restschuld}\\
+Die austehenden Schulden zum 31.12.2024 ohne das Zahlungen  getätigt werden sind:
+\begin{align*}
+	RS_{\mathrm{31.12.2024}}
+	=
+	RS_{\mathrm{1.1.2022}}
+	(1 + 2 \%)^3
+	= 
+	1 061 208 \ \textrm{(Schweizer Franken)}.
+\end{align*} 
+Am 31.12.2024 beträgt der Endwert der konstanten nachschüssigen Zahlung $C_1 = 96 863.35$ Schweizer Franken beginnend am 1.1.2022:
+\begin{align*}
+	96863.35 \cdot
+	\frac{(1+ 2 \%)^3 - 1}{2 \%}
+	\approx 
+	296 440.60 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Für die Interpretationen $C_2 $ bzw. $C_3$ ergeben sich 
+$235 232.6$ bzw. $259 715.8$ Schweizer Franken
+Die Restschuld am 1.1.2025 (genau nach der letzten Zahlung am 31.12.2024) ist gegeben durch:
+\begin{align*}
+	1 061 208
+	-
+	296 449.60
+	=
+	764 767.40 \ \textrm{(Schweizer Franken)}.
+\end{align*}
+Für die Interpretationen $C_2$ bzw. $C_3$ ergibt sich eine Restschuld von $825975.40$ bzw. $801492.20$ Schweizer Franken.
 
 \newpage
 \subsection*{\aufgabe{c}{10}}
