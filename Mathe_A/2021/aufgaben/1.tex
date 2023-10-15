@@ -26,18 +26,18 @@ Zeigen Sie, dass wenn die Produktion auf maximal $6'000$ Bücher beschränkt ist
 \item 
 Stelle den mathematischen Rahmen her.
 \item
-Überlege wie man die Existenz und Eindeutigkeit zeigt.
+Überlege, wie man die Existenz und Eindeutigkeit zeigt.
 \item
 Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit. 
 
 \end{enumerate}
 \end{mdframed}
 \underline{1. Stelle den mathematischen Rahmen her}\\
-Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
+Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir, welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
 \\
 In dieser Aufgabe suchen wir nach der Existenz und Eindeutigkeit einer Anzahl $x^\star $ an kostenlosen Exemplaren, ab welcher alle Kosten gedeckt sind und die Redakteurin beginnt Gewinne zu machen. Den Gewinn abhängig von den kostenlosen Exemplaren $x$ können wir formalisiert durch
 \begin{align*}
-	G(x) = \underbrace{40 \ B(x)}_{\textrm{Verkaufserlöse}} - \underbrace{(10 B(x) - 10 x)}_{\textrm{Produktionskosten}} - \underbrace{100000}_{\textrm{Fixkosten}}, \quad
+	G(x) = \underbrace{40 \ B(x)}_{\textrm{Verkaufserlöse}} - \underbrace{(10 B(x) + 10 x)}_{\textrm{Produktionskosten}} - \underbrace{100000}_{\textrm{Fixkosten}}, \quad
 	x \in (0, 6000).
 \end{align*}
 beschreiben. Wir suchen nun nach der Anzahl kostenloser Exemplare $x^\star$, sodass 
@@ -47,7 +47,7 @@ G(x^\star ) = 0
 mit $G(x) < 0$ für $0 \leq x < x^\star$ und $G(x) > 0$ für $x^\star < x \leq 6000$ gilt.\\
 \\
 
-\underline{2. Überlege wie man die Existenz und Eindeutigkeit zeigt}\\
+\underline{2. Überlege, wie man die Existenz und Eindeutigkeit zeigt}\\
 Um zu zeigen, dass ein $x^\star  \in (0,6000)$ mit
 \begin{align*}
 	G(x^\star)= 0
@@ -66,10 +66,10 @@ Für die Gewinnfunktion gilt:
 	G(x)
 	&= 
 	40 B(x) 
-	- ( B(x) + 10 x) - 100000
+	- ( 10 B(x) + 10 x) - 100000
 	= 
 	40 B(x) 
-	-  B(x) -10 x - 100000\\
+	-  10 B(x) -10 x - 100000\\
 	&=
 	30 B(x) - 10 x - 100000\\
 	&=
@@ -88,7 +88,7 @@ Als Zusammensetzung stetiger Funktionen ist $G$ stetig. Damit können wir versuc
 	G(0) 
 	&= 500000 - 570000 \cdot e^{-0.0002 \cdot 0 } - 10 \cdot  0
 	= 500000 - 570000  = - 70000 < 0 \\
-	G(60000)
+	G(6000)
 	&=
 	500000 - 570000 \cdot e^{-0.0002 \cdot 6000 } - 10 \cdot 6000
 	=
@@ -105,7 +105,8 @@ Als Zusammensetzung stetiger Funktionen ist $G$ stetig. Damit können wir versuc
 	440000 - 570000 \cdot \frac{1}{2}\\
 	&= 440000 - 285000 = 155000 > 0.
 \end{align*}
-Für die rechte Seite des Intervalls ist es empfehlenswert den Taschenrechner zu verwenden. Dies soll $e \approx 2.71....$ zeigen, wie es auch ohne geht. 
+Für die rechte Seite des Intervalls ist es empfehlenswert den Taschenrechner zu verwenden. 
+Diese Ausführung soll mit $e \approx 2.71....$ zeigen, wie es auch ohne Taschenrechner geht. 
 Wegen $G(0) < 0$ und $G(6000) > 0$ existiert nach dem Nullstellensatz von Bolzano in dem Intervall $(0,6000)$ mindestens eine Nullstelle. Für die Eindeutigkeit betrachten wir die Ableitung:
 \begin{align*}
 	G^\prime(x)
@@ -152,7 +153,7 @@ Verwenden Sie eine Taylor-Approximation zweiter Ordnung im Punkt $x_0 = 750$, um
 \end{mdframed}
 
 \underline{1. Bestimme das Taylorpolynom}\\
-In dieser Aufgabe ist eine Näherungslösung für die Anzahl der Exemplare $x^\star$ ab welcher die Kosten gedeckt sind gesucht. Wir suchen also eine Näherungslösung für die Gleichung
+In dieser Aufgabe ist eine Näherungslösung für die Anzahl der Exemplare $x^\star$ gesucht, ab welcher die Kosten gedeckt sind. Wir suchen also eine Näherungslösung für die Gleichung
 \begin{align*}
 	G(x) = 0
 \end{align*}
@@ -206,6 +207,7 @@ Das Taylorpolynom $P_2$ ist somit durch
 	a_0 
 	+ 
 	a_1(x - 750)
+	+
 	\frac{1}{2}
 	a_2 
 	(x - 750)^2 	
@@ -233,7 +235,7 @@ Wir substituieren $s = x - 750$, wodurch uns das Lösen der Gleichung
 	=
 	a_0 + a_1 s +\frac{1}{2} a_2 s^2 = 0
 \end{align*}
-erleichtert wird. Mit der $abc$- Formel erhalten wir:
+erleichtert wird. Mit der $abc$-Formel erhalten wir:
 \begin{align*}
 	s_{1,2}
 	&=
