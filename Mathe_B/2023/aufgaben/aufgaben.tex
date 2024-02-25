@@ -94,14 +94,13 @@ Der Nettogewinn in Schweizer Franken für die vier Werkstücke beträgt pro Einh
 Der angestrebte Nettogewinn aus der Gesamtproduktion beträgt $250$ Schweizer Franken pro Tag.
 \begin{enumerate}
 	\item[\textbf{(b1)}]
-	Beschreiben Sie die Beziehung zwischen Produktionszeiten, Laufzeit je Maschine pro Tag, Nettogewinn und der Anzahl der produzierten Werkstücke pro Tag in einem GLeichungssystem.
+	Beschreiben Sie die Beziehung zwischen Produktionszeiten, Laufzeit je Maschine pro Tag, Nettogewinn und der Anzahl der produzierten Werkstücke pro Tag in einem Gleichungssystem.
 
 	\item[\textbf{(b2)}] 
 	Für welche(s) $m > 0$ existiert ein realisierbarer Produktionsplan?
 	\item[\textbf{(b3)}]
 	Bestimmen Sie den Produktionsplan, d.h. die Anzahl produzierter Einheiten jedes Werkstücks unter Berücksichtigung der verfügbaren Kapazitäten der Maschinen und des angestrebten Nettogewinns, für $m = 5$.
 \end{enumerate}
-
 \ \\
 \subsection*{\aufgabe{c}{14}}
 Nach der letzten Preiserhöhung bei Strom möchten Sie in Solarpanele investieren und den erzeugten Strom verkaufen. 
@@ -205,7 +204,7 @@ Welche der folgenden Aussagen ist korrekt?
 \end{enumerate}
 \newpage
 \subsection*{\frage{3}{3}}
-Sei $f$ eine stetige reellwertige Funktion auf einem abgeschlossenen Interval $[a,b]$.\\
+Sei $f$ eine stetige reellwertige Funktion auf einem abgeschlossenen Intervall $[a,b]$.\\
 \\
 Was ist eine der Aussagen des Hauptsatzes der Differential- und Integralrechnung?
 \renewcommand{\labelenumi}{(\alph{enumi})}
@@ -406,62 +405,54 @@ Für welches $a \in \mathbb{R}$ ist die Länge des Gradienten im Punkt $(x_0,y_0
 	\item 
 	$a = \sqrt{\frac{4 - \ln(2)^2}{4 e^2}} $.
 	\item
-	$\frac{8}{3}$.
+	$a = \sqrt{\frac{16 - \ln(2)^2}{4 e^2}}$.
 	\item
-	$\frac{1}{2}$.
+	$a = \sqrt{16 - \ln(2) + 4 e^2}$.
 	\item
-	Es existiert kein solches $ a \in \mathbb{R}_{++} $.
+	$a = \frac{2 - \ln(2)}{2 e }$.
+	\item 
+	$a = \frac{4 - \ln(2)}{4e}$.
 \end{enumerate}
 \newpage
 \subsection*{\frage{3}{3}}
-Gegeben sein eine Zufallsvariable $ X $ mit der Dichtefunktion
+Gegeben sei die Funktion $f $ definiert als 
 \begin{align*}
 	f(x)
 	=
 	\begin{cases}
-		0 \quad &x \geq 1\\
-		\frac{3}{2} \sqrt{x} \quad &0 \leq x < 1\\
+		0 \quad & x \geq 2 \pi\\
+		a | \sin(x)  | \quad &0 \leq x < 2 \pi\\
 		0 \quad &x<0
 	\end{cases}.
 \end{align*}
-Der Erwartungswert von $ X $ ist gleich:
+Für welchen Wert von $a \in \mathbb{R}$ ist $f$ eine Dichtefunktion?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$\mathbb{E}[X] = \frac{3}{5}$.
+	$a = 0.5$.
 	\item
-	$\mathbb{E}[X] = \sqrt{2}$.
+	$a =0.25$.
 	\item
-	$\mathbb{E}[X] = \frac{6}{7}$.
+	$a = 0.5 \pi $.
 	\item
-	$\mathbb{E}[X] = \sqrt{\frac{6}{7}}$.
+	$a = \pi$.
 \end{enumerate}
 \ \\
 \subsection*{\frage{4}{4}}
-Gegeben sei die Funktion $ f $ definiert als
-\begin{align*}
-	f(x)
-	=
-	\begin{cases}
-		0 \quad &x \geq 1\\
-		\frac{c}{2x} \quad &0.5 \leq x < 1\\
-		6x^2 \quad &0 \leq x < 0.5\\
-		0 \quad &x<0
-	\end{cases}.
-\end{align*}
-Für welche Werte von $ c \in \mathbb{R} $ ist $ f $ eine Dichtefunktion?
+Die Funktion $g$ erfüllt $g(x) > -4$ für alle $x \in \mathbb{R}$ und $\int_{- \infty}^\infty g(x) \ dx = 3$.\\
+Welche der folgenden Funktionen ist eine Dichtefunktionen?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item 
-$ c = 10$.
+$ a(x) = g(x) + 4$.
 \item 
-$ c= -\frac{3}{2 \ln(0.5)} $.
+$ b(x) = \frac{g(x)}{3}$.
 \item
-$ c= -\frac{2}{3 \ln(2)} $.
+$ c(x) = \frac{g(x) + 4}{3} $.
 \item
-$ c = \ln \left(\frac{2}{3}\right) $.
+$ d(x) = \frac{3}{4} g(x) + \frac{1}{4} $.
 \item
-$ c = e^{\frac{2}{3}} $.
+Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 
 \newpage
@@ -470,10 +461,9 @@ Gegeben sei die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		2 & 1 & 1 & 1 & 1 \\
-		3 & 2 & 1 & 1 & 1 \\
-		6 & 0 & 6 & 6 & 6 \\ 
-		8 & 1 & 7 & 8 & 7
+		2 & 1 & 0 & 4 & 0 \\
+		3 & 2 & 1 & 9 & x \\
+		6 & 0 & 6 & 18 & 6 
 	\end{pmatrix}.
 \end{align*}
 Es folgt, dass
@@ -486,9 +476,9 @@ Es folgt, dass
 	\item
 	$ \mathrm{rg}(A) = 3 $.
 	\item
-	$ \mathrm{rg}(A) = 4 $.
+	der Rang von $A$ von $x$ abhängt.
 	\item
-	$ \mathrm{rg}(A) = 5 $.
+	Keine der obigen Antworten ist korrekt.
 \end{enumerate}
 \ \\
 
@@ -497,79 +487,49 @@ Gegeben sei die Matrix
 \begin{align*}
 	A =
 	\begin{pmatrix}
-		-7 & 0 & 0 \\
-		1 & 2 & 0 \\
-		-5m & 5 & 4
+		2 & -1 & 0 \\
+		-1 & 2 & 0 \\
+		-1 & 1 & 1
 	\end{pmatrix}
-	, 
-	\quad 
-	\textrm{mit } m \in \mathbb{R}.
+	.
 \end{align*}
-Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
+Welcher der folgenden Vektoren ist \textit{kein} Eigenvektor von $A$?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
-	$ W
+	$ 
+	\mathbf{v}
 	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s 
 	\begin{pmatrix}
-		0\\ 0 \\ -1
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
-	 $
+		0\\ 0 \\ 1
+	\end{pmatrix}
+	$
 	.
 	\item 
-	$ W
+		$ 
+	\mathbf{v}
 	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s	 
 	\begin{pmatrix}
-		7m \\ -1 \\ m-1
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
+		1\\ 1 \\ 0
+	\end{pmatrix}
 	$
 	.
 	\item
-	$ W
+	$ 
+	\mathbf{v}
 	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s	 
 	\begin{pmatrix}
-		3 \\ -7 \\ 1 - 5m
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
+		-1\\ 1 \\ 1
+	\end{pmatrix}
 	$
 	.
 	\item
-	$ W
+		$ 
+	\mathbf{v}
 	=
-	\left\{
-	\textbf{x} \in \mathbb{R}^3
-	:
-	\textbf{x}
-	=
-	s	 
 	\begin{pmatrix}
-		1 \\ -3 \\ 1 - 3m
-	\end{pmatrix},
-	s \in \mathbb{R}
-	\right\}
+		0\\ -1 \\ 1
+	\end{pmatrix}
 	$
 	.
 	\item
@@ -577,42 +537,46 @@ Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
 \end{enumerate}
 \ \\
 \subsection*{\frage{7}{4}}
-Welche der folgenden Differenzengleichungen wird durch die Folge
-\begin{align*}
-	y_{k} = \left(\frac{1}{4}\right)^{k+1} + 4, \quad k \in \mathbb{N},
-\end{align*}
-gelöst?
+Maximilian zahlt $100'000$ Schweizer Franken auf ein Sparkonto ein, welches jährlich $2 \%$ Zins für die ersten $20'000$ Schweizer Franken und $1 \%$ Zins für den restlichen Betrag zahlt.\\
+\\
+Wie hoch sind seine Ersparnisse nach $10 $ Jahren?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item
-$ 6 y_{k+1}  - 3 y_k = 12$.
+$108,769.80$ Schweizer Franken.
 \item
-$ 4 y_{k+1} - 32 y_k = -26 $.	
+$110,462.20$ Schweizer Franken.	
 \item 
-$ 8 y_{k+1} - 2 y_k = 24 $
+$111,242.25$ Schweizer Franken.
 \item
-Keine der obigen Antworten ist korrekt.
+$112,554.65$ Schweizer Franken.
+\item
+$112,749.70$ Schweizer Franken.
 \end{enumerate}
 \ \\
 \subsection*{\frage{8}{4}}
 Gegeben sei die Differenzengleichung
 \begin{align*}
-6y_{k+1} + 2 y_k +7 = 6
+\frac{1}{3} y_k
+-
+2 y_{k+1}
+-3
+=0
 \quad (k = 0,1,2,...).
 \end{align*}
-Es folgt, dass:
+Es folgt:
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item
-	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und divergent ist.
+	$ (y_k)_{k \in \mathbb{N}} $ ist oszillierend und divergent.
 	\item
-	$ (y_k)_{k \in \mathbb{N}} $ monoton und divergent ist.	
+	$ (y_k)_{k \in \mathbb{N}} $ ist monoton und divergent.	
 	\item 
-	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{7} $.
+	$ (y_k)_{k \in \mathbb{N}} $ ist monoton und konvergent mit $ \lim \limits_{k \to \infty} y_k = -1.8$.
 	\item
-	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{7} $.
+	$ (y_k)_{k \in \mathbb{N}} $ ist oszillierend und konvergent mit $ \lim \limits_{k \to \infty} y_k = 1.8$.
 	\item 
-	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{8} $.
+	$ (y_k)_{k \in \mathbb{N}} $ ist oszillierend und konvergent mit $ \lim \limits_{k \to \infty} y_k = \frac{4}{5}$.
 	\item 
-	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{8} $.
+	$ (y_k)_{k \in \mathbb{N}} $ ist monoton und konvergent mit $ \lim \limits_{k \to \infty} y_k = -\frac{4}{5}$.
 \end{enumerate}
