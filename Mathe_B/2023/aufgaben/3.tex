@@ -1,0 +1,750 @@
+\section*{Aufgabe 3 (28 Punkte)}
+\vspace{0.4cm}
+\subsection*{\frage{1}{3}}
+Das bestimmte Integral
+\begin{align*}
+	\int_0^{2\pi} \cos \left(\frac{x}{t}\right) e^{- \sin(\frac{x}{t})} dx
+\end{align*}
+mit $ t \in \mathbb{N} $ ist gleich:
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \frac{1}{t} -1  $.
+	\item
+	$ (1 - e^{-\sin\left(\frac{2\pi}{t}\right)})t $
+	\item
+	$ t + e^{\sin\left(\frac{2\pi}{t}\right)} $
+	\item 
+	Keine der obigen Antworten ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Substitutionsregel.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Substitutionsregel}\\
+Wir verwenden die Substitution $u = \sin\left(\frac{x}{t}\right)$. Dann gilt
+\begin{align*}
+	\frac{\mathrm{du}}{\mathrm{dx}} =\frac{1}{t} \cos\left(\frac{x}{t}\right)
+	\ \Leftrightarrow \
+	\mathrm{dx} = t \frac{1}{\cos\left(\frac{x}{t}\right)} \mathrm{du}
+\end{align*}
+und wir erhalten 
+\begin{align*}
+	\int_0^{2\pi} \cos \left(\frac{x}{t}\right) e^{- \sin(\frac{x}{t})} \mathrm{dx}
+	&=
+	\int_{\sin\left(\frac{0}{t}\right)}^{\sin\left(\frac{2\pi}{t}\right)} \cos\left(\frac{x}{t}\right) e^{-u}\cdot  t \frac{1}{\cos\left(\frac{x}{t}\right)} \mathrm{du}
+	=
+	t\cdot\int_{0}^{\sin\left(\frac{2\pi}{t}\right)} e^{-u}  \mathrm{du}\\
+	&=
+	t \cdot \left[-e^{-u}\right]_0^{\sin\left(\frac{2\pi}{t}\right)}
+	t \cdot \left(-e^{-\sin\left(\frac{2\pi}{t}\right)} + 1\right)
+	=
+	\left(1 - e^{-\sin\left(\frac{2\pi}{t}\right)}\right)t.
+\end{align*}
+Damit ist die Antwort (b) korrekt.\\
+\\
+Alternativ ist auch die Substitution $u = - \sin\left(\frac{x}{t}\right)$ möglich. Weiter kann man mit einer dieser Subsitutionen zunächst die Stammfunktionen bestimmen und dann das bestimmte Integral berechnet werden.
+
+ 
+\newpage
+
+\subsection*{\frage{2}{4}}
+Sei $ f \ : \ \mathbb{R}^2 \to \mathbb{R} $ eine partiell differenzierbare Funktion zweier reeller Variablen, definiert als 
+\begin{align*}
+	f(x,y) = e^{ax^2 +a^2 xy^2}
+\end{align*}
+mit $ a \in \mathbb{R}_{++} $. Für welchen Wert $ a $ ist die Richtung des steilsten Anstiegs von $ f $ im Punkt $ P = (1,0.5) $ gegeben durch den Vektor
+\begin{align*}
+	\textbf{v} =
+	\begin{pmatrix}
+		e\\
+		e
+	\end{pmatrix}?
+\end{align*}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$0 $.
+	\item
+	$\frac{8}{3}$.
+	\item
+	$\frac{1}{2}$.
+	\item
+	Es existiert kein solches $ a \in \mathbb{R}_{++} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende, dass der Gradient in die Richtung des steilsten Anstiegs zeigt.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende, dass der Gradient in die Richtung des steilsten Anstiegs zeigt}\\
+Der Gradient von $f$ zeigt einen Punkt im Definitionsbereich in die Richtung des steilsten Anstiegs von $f$.
+Der Vektor $\mathbf{v}$ zeigt in die Richtung des steilsten Anstiegs von $f$ im Punkt $P = (1,0.5)$ genau dann, wenn ein $\lambda > 0 $ mit 
+\begin{align*}
+	\lambda\mathbf{v} 
+	= \lambda 
+	\begin{pmatrix}
+		e \\ e
+	\end{pmatrix}
+	= \mathrm{grad} f(1,0.5)
+\end{align*}
+existiert. Man beachte, dass die Komponenten von $\mathbf{v}$ identisch sind. Der Gradient von $f$ in dem Punkt $(x,y)$ ist gegeben durch:
+\begin{align*}
+	\mathrm{grad} f(x,y)
+	=
+	\begin{pmatrix}
+		f_x(x,y)\\
+		f_y(x,y)
+	\end{pmatrix}
+	=
+	e^{ax^2 +a^2 xy^2}
+	\begin{pmatrix}
+		2a x + a^2 y^2 \\
+		2 a^2 xy
+	\end{pmatrix}.
+\end{align*}
+Mit dem Punkt $P$ ergibt sich:
+\begin{align*}
+	\mathrm{grad} f(1,0.5)
+	=
+	e^{a+a^2\cdot 0.25}
+	\begin{pmatrix}
+		2a+a^2 0.25\\
+		a^2
+	\end{pmatrix}.
+\end{align*}
+Damit ein $\lambda > 0$ für obige Gleichung existiert, müssen beide Komponenten des Gradienten gleich sein. Hierfür lösen wir:
+\begin{align*}
+	2a + 0.25 a^2 = a^2 
+	\ \Leftrightarrow \
+	-0.75a^2 + 2a = 0
+	\ \Leftrightarrow \
+	\frac{3}{4} a^2 -2a = 0
+	\ \Leftrightarrow \
+	a^2 - \frac{8}{3} a = 0
+	\ \Leftrightarrow \
+	\left(a - \frac{8}{3}\right) a = 0
+\end{align*}
+Diese Gleichung besitzt die Lösungen $a= 0$ oder $a = \frac{8}{3}$. 
+Da $a$ nach Aufgabenstellung strikt positiv ist, können wir diese Lösung aussschließen.\\
+\\
+Damit ist Antwort (b) korrekt.\\
+\\
+Die Einschränkung auf strikt positive $a$ ist nicht notwendig:
+Für $a = 0$ ist der Gradient von $f$ im Punkt $P$ der Nullvektor, d.h. $\mathbf{v} $ kann gar nicht in dessen Richtung zeigen bzw. es existiert kein $\lambda > 0$ für obige Gleichung.
+
+
+\newpage
+\subsection*{\frage{3}{3}}
+Gegeben sein eine Zufallsvariable $ X $ mit der Dichtefunktion
+\begin{align*}
+	f(x)
+	=
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{3}{2} \sqrt{x} \quad &0 \leq x < 1\\
+		0 \quad &x<0
+	\end{cases}.
+\end{align*}
+Der Erwartungswert von $ X $ ist gleich:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$\mathbb{E}[X] = \frac{3}{5}$.
+	\item
+	$\mathbb{E}[X] = \sqrt{2}$.
+	\item
+	$\mathbb{E}[X] = \frac{6}{7}$.
+	\item
+	$\mathbb{E}[X] = \sqrt{\frac{6}{7}}$.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Definition des Erwartungswerts.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definition des Erwartungswerts}\\
+Der Erwartungswert von $ X $ ist definiert als
+\begin{align*}
+	\mathbb{E}[X] = \int \limits_{- \infty}^\infty x f(x) \ dx.
+\end{align*}
+Durch Einsetzen der Funktion erhalten wir:
+\begin{align*}
+	\mathbb{E}[X] 
+	&= \int \limits_{- \infty}^\infty x f(x) \ dx
+	= \int \limits_{- \infty}^0 x f(x) \ dx 
+	+ \int \limits_{0}^1 x f(x) \ dx 
+	+ \int \limits_{1}^\infty x f(x) \ dx \\
+	&= \frac{3}{2} \int \limits_{0}^1 x \sqrt{x} \ dx
+	= \frac{3}{2} \int \limits_{0}^1 x^{\frac{3}{2}} \ dx
+	= \frac{3}{2} \left[\frac{2}{5} x^{\frac{5}{2}}\right]_0^1
+	= \frac{3}{2} \cdot \frac{2}{5} = \frac{3}{5}.
+\end{align*}
+Damit ist die Antwort (a) korrekt.
+
+\newpage
+
+\newpage
+\subsection*{\frage{4}{4}}
+Gegeben sei die Funktion $ f $ definiert als
+\begin{align*}
+	f(x)
+	=
+	\begin{cases}
+		0 \quad &x \geq 1\\
+		\frac{c}{2x} \quad &0.5 \leq x < 1\\
+		6x^2 \quad &0 \leq x < 0.5\\
+		0 \quad &x<0
+	\end{cases}.
+\end{align*}
+Für welche Werte von $ c \in \mathbb{R} $ ist $ f $ eine Dichtefunktion?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ c = 10$.
+	\item 
+	$ c= -\frac{3}{2 \ln(0.5)} $.
+	\item
+	$ c= -\frac{2}{3 \ln(2)} $.
+	\item
+	$ c = \ln \left(\frac{2}{3}\right) $.
+	\item
+	$ c = e^{\frac{2}{3}} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+	\underline{\textbf{Vorgehensweise:}}
+	\renewcommand{\labelenumi}{\theenumi.}
+	\begin{enumerate}
+		\item Verwende die Definition der Dichtefunktion.
+	\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definition der Dichtefunktion}\\
+Eine Funktion $f : \mathbb{R} \to \mathbb{R}$ heißt \textit{Dichtefunktion}, falls $f(x) \geq 0$ für alle $x \in \mathbb{R}$ und
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx = 1.
+\end{align*}
+Wegen $f(x) \geq 0 $ muss $c \geq 0 $ sein und mit der Definition von $f$ erhalten wir:
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx
+	&=
+	\int \limits_{- \infty}^0 f(x) \ dx
+	+
+	\int \limits_{0}^{0.5} f(x) \ dx
+	+
+	\int \limits_{0.5}^{1} f(x) \ dx
+	+
+	\int \limits_{1}^{\infty} f(x) \ dx\\
+	&=
+	\int \limits_{0}^{0.5} 6x^2 \ dx
+	+
+	\int \limits_{0.5}^{1} \frac{c}{2x} \ dx
+	=
+	\left[\frac{6}{3} x^3 \right]_0^{0.5}
+	+
+	\frac{c}{2} \left[\ln(x)\right]_{0.5}^1\\
+	&=
+	2 (0.5)^3 - \frac{c}{2} \ln(0.5)	
+	=
+	2 \frac{1}{8} - \frac{c}{2} \ln(0.5).
+\end{align*}
+Damit $f$ eine Dichtefunktion ist, muss folgende Gleichung erfüllt sein:
+\begin{align*}
+	2 \frac{1}{8} - \frac{c}{2} \ln(0.5) = 1
+	\ \Leftrightarrow \
+	- \frac{c}{2} \ln(0.5) = \frac{6}{8}
+	\ \Leftrightarrow \
+	- c \ln(0.5) = \frac{6}{4}
+	c = - \frac{6}{4 \ln(0.5)} = -\frac{3}{2 \ln(0.5)}.
+\end{align*}
+Dieses $c$ ist wegen $\ln(0.5 ) < 0 $ positiv und die Anwort (b) ist korrekt.
+
+\newpage
+
+\subsection*{\frage{5}{3}}
+Gegeben sei die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+	\end{pmatrix}.
+\end{align*}
+Es folgt, dass
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ \mathrm{rg}(A) = 1 $.
+	\item 
+	$ \mathrm{rg}(A) = 2 $.
+	\item
+	$ \mathrm{rg}(A) = 3 $.
+	\item
+	$ \mathrm{rg}(A) = 4 $.
+	\item
+	$ \mathrm{rg}(A) = 5 $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bringe die Matrix auf Zeilenstufenform.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bringe die Matrix auf Zeilenstufenform}\\
+Durch elementare Zeilenoperationen erhalten wir:
+\begin{align*}
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+		\rowops
+		\add[ \cdot (-4)]{0}{3}
+		\add[ \cdot (-2)]{1}{2}	
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & -4 & 4 & 4 & 4 \\ 
+		0 & -3 & 3 & 4 & 3
+		\rowops
+		\mult{2}{ \cdot (-\frac{1}{4})}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & 1 & -1 & -1 & -1 \\ 
+		0 & -3 & 3 & 4 & 3
+		\rowops
+		\add[ \cdot (-3)]{2}{3}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		0 & 1 & -1 & -1 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-3)]{2}{3}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		2 & 1 & 1 & 0 & 1 \\
+		3 & 2 & 1 & 0 & 1 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\mult{0}{ \cdot (3)}
+		\mult{1}{ \cdot (2)}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		6 & 4 & 2 & 0 & 2 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-1)]{0}{1}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 1 & -1 & 0 & -1 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\add[ \cdot (-1)]{1}{2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 0 & 0 & 0 & 0 \\ 
+		0 & 0 & 0 & 1 & 0
+		\rowops
+		\swap{1}{2}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		6 & 3 & 3 & 0 & 3 \\
+		0 & 1 & -1 & 0 & -1 \\
+		0 & 0 & 0 & 1 & 0 \\ 
+		0 & 0 & 0 & 0 & 0
+	\end{gmatrix}
+\end{align*}
+Damit sind drei Zeilen der Matrix $ A $ linear unabhängig und der Rang der Matrix ist $ 3 $. Also ist die Antwort (c) korrekt.\\
+\\
+\textit{Alternative Vorgehensweise}:\\
+Das direkte Anwenden von elementaren Zeilenumformungen führt bei diesem Aufgabentyp immer zum Ziel. Der Nachteil ist, dass dies potentiell fehleranfällig ist.\\
+\\
+Da $ A $ eine $ (4 \times 5) $ Matrix ist, kann der Rang maximal $ 4 $ betragen.
+Die dritte Spalte entspricht der fünften Spalte, weswegen eine davon für die Rangbestimmung irrelevant ist. Durch Anwenden von einer elementaren Spaltenoperation (analog zu elementaren Zeilenoperationen) erhalten wir:
+\begin{align*}
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}
+	\leadsto
+		\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 0 \\
+		3 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		8 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}.
+\end{align*}
+Weiter kann man sehen, dass die erste Spalte die Summe der zweiten und dritten Spalte ist, d.h. die ersten drei Spaltenvektoren sind linear abhängig. Darstellen können wir das durch elementare Spaltenoperationen:
+\begin{align*}
+	\begin{gmatrix}[p]
+		2 & 1 & 1 & 1 & 0 \\
+		3 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		8 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{4}
+	\end{gmatrix}
+	&\leadsto
+	\begin{gmatrix}[p]
+	2 & 1 & 1 & 1 & 0 \\
+	3 & 2 & 1 & 1 & 0 \\
+	6 & 0 & 6 & 6 & 0 \\ 
+	8 & 1 & 7 & 8 & 0
+	\colops
+	\add[ \cdot (-1)]{1}{0}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		1 & 1 & 1 & 1 & 0 \\
+		1 & 2 & 1 & 1 & 0 \\
+		6 & 0 & 6 & 6 & 0 \\ 
+		7 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{0}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		0 & 1 & 1 & 1 & 0 \\
+		0 & 2 & 1 & 1 & 0 \\
+		0 & 0 & 6 & 6 & 0 \\ 
+		0 & 1 & 7 & 8 & 0
+		\colops
+		\add[ \cdot (-1)]{2}{0}
+	\end{gmatrix}\\
+	&\leadsto
+	\begin{gmatrix}[p]
+		1 & 1 & 1 & 0 & 0 \\
+		2 & 1 & 1 & 0 & 0 \\
+		0 & 6 & 6 & 0 & 0 \\ 
+		1 & 7 & 8 & 0 & 0
+	\end{gmatrix}.
+\end{align*}
+Damit hat $ A $ drei linear unabhängige Spalten und der Rang der Matrix ist $ 3 $.
+
+
+\newpage
+
+\subsection*{\frage{6}{3}}
+Gegeben sei die Matrix
+\begin{align*}
+	A =
+	\begin{pmatrix}
+		-7 & 0 & 0 \\
+		1 & 2 & 0 \\
+		-5m & 5 & 4
+	\end{pmatrix}
+	, 
+	\quad 
+	\textrm{mit } m \in \mathbb{R}.
+\end{align*}
+Für den Eigenwert $ \lambda = 4 $ ist der Eigenraum $ W $ gleich
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item 
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s 
+	\begin{pmatrix}
+		0\\ 0 \\ -1
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item 
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		7m \\ -1 \\ m-1
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		3 \\ -7 \\ 1 - 5m
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item
+	$ W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\textbf{x}
+	=
+	s	 
+	\begin{pmatrix}
+		1 \\ -3 \\ 1 - 3m
+	\end{pmatrix},
+	s \in \mathbb{R}
+	\right\}
+	$
+	.
+	\item
+	$ \lambda = 4 $ ist kein Eigenwert von $ A $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Verwende die Definition des Eigenwerts.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Verwende die Definition des Eigenwerts}\\
+Der Vektor $ \textbf{x} \neq 0 $ heißt Eigenvektor zum Eigenwert $ 4 $, falls
+\begin{align*}
+	A \textbf{x} = 4 \cdot  \textbf{x}
+\end{align*}
+gilt. Unter einem Eigenraum $ W $ zu einem Eigenwert $ \lambda $ verstehen wir die Lösungsmenge des homogenen LGS $ (A - \lambda I) \textbf{x}  = \textbf{0}$. Für unsere Aufgabenstellung also:
+\begin{align*}
+	 W
+	=
+	\left\{
+	\textbf{x} \in \mathbb{R}^3
+	:
+	\ 
+	(A - 4 I) \textbf{x}  = \textbf{0}
+	\right\}
+\end{align*}
+Mit $ \textbf{x}_a $,..., $ \textbf{x}_d $ bezeichnen wir die Vektoren der Antwortmöglichkeiten mit $ s = 1 $ und mit $ W_a $,...,$ W_d $ die potentiellen Eigenräume. 
+Durch die obere Dreiecksgestalt von $ A $ kann man direkt erkennen:
+\begin{align*}
+	A \cdot \textbf{x}_a = 
+	\begin{pmatrix}
+		0 \\ 0 \\ -4
+	\end{pmatrix}
+	=
+	4
+	\begin{pmatrix}
+		0 \\ 0 \\ -1
+	\end{pmatrix} 
+	.
+\end{align*}
+Damit ist $ \textbf{x}_a $ ein Eigenvektor von $ A $ zum Eigenwert $ 4 $ und $ \textbf{x}_a $ spannt den zugehörigen Eigenraum $ W_a $ auf.\\
+\\
+Also ist die Antwort (a) korrekt.\\
+
+Falls man dies nicht direkt erkennt, prüft man die Definition mit $ \textbf{x}_a $,..., $ \textbf{x}_d $.
+
+
+\newpage
+
+\subsection*{\frage{7}{4}}
+Welche der folgenden Differenzengleichungen wird durch die Folge
+\begin{align*}
+	y_{k} = \left(\frac{1}{4}\right)^{k+1} + 4, \quad k \in \mathbb{N},
+\end{align*}
+gelöst?
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	$ 6 y_{k+1}  - 3 y_k = 12$.
+	\item
+	$ 4 y_{k+1} - 32 y_k = -26 $.	
+	\item 
+	$ 8 y_{k+1} - 2 y_k = 24 $
+	\item
+	Keine der obigen Antworten ist korrekt.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Löse die Aufgabe durch geschicktes Einsetzen
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Löse die Aufgabe durch geschicktes Einsetzen}\\
+Wir könnten die korrekte Antwort durch sukzessives Einsetzen in alle Möglichkeiten finden. Die Koeffizienten $2$ und $8$ der Antwort (c) bilden das Verhältnis $\frac{1}{4}$. Damit ist diese Möglichkeit die erste Wahl. Eingesetzt erhalten wir:
+\begin{align*}
+	8 \left( \left(\frac{1}{4}\right)^{k+2} + 4 \right) 
+	-
+	2 \left(\left(\frac{1}{4}\right)^{k+1} + 4\right)
+	&=
+	8 \left(\frac{1}{4}\right)^{k+2}  + 32
+	- 2 \left(\frac{1}{4}\right)^{k+1} - 8\\
+	&=
+	2 \cdot 4 \left(\frac{1}{4}\right)^{k+2} - 2 \left(\frac{1}{4}\right)^{k+1} + 24\\
+	&=
+	2  \left(\frac{1}{4}\right)^{k+1} - 2 \left(\frac{1}{4}\right)^{k+1}  + 24
+	= 24
+\end{align*}
+Damit ist Antwort (c) korrekt.
+\\
+\textit{Alternative Lösung:} 
+Die Antwortmöglichkeiten besitzen die allgemeine Form
+\begin{align*}
+	a y_{k+1} + b y_k = c
+\end{align*}
+für $a ,b ,c \neq 0$. Wir definieren 
+\begin{align*}
+	x_k := \left(\frac{1}{4}\right)^{k+1} = \frac{1}{4^{k+1}}.
+\end{align*}
+Damit gilt $y_k = x_k + 4$ und wir können die allgemeine Form umstellen:
+\begin{align*}
+	a x_{k+1} + b x_k = c - 4(a+b).
+\end{align*}
+Für die Antwortmöglichkeiten (a)-(c) erhalten wir die Gleichungen:
+\begin{enumerate}
+	\item $6 x_{k+1} - 3 x_k = 12 - 12 = 0$.
+	\item $4 x_{k+1} - 32 x_k = -26 + 4 \cdot 28$.
+	\item $8 x_{k+1} - 2 x_k = 0$.
+\end{enumerate}
+Durch Einsetzen der Anfangsbedingung $y_0 = \frac{1}{4}$ sieht man schnell, dass (a) und (b) nicht gelten kann. 
+$y_0$ erfüllt die Gleichung (c). Im Allgemeinen sieht man dies durch
+\begin{align*}
+	8 x_{k+1} - 2 x_k = 2 \cdot 4 \frac{1}{4^{k+1}} - 2 \frac{1}{4^k} = 0.
+\end{align*}
+\newpage
+
+\subsection*{\frage{8}{4}}
+Gegeben sei die Differenzengleichung
+\begin{align*}
+	6y_{k+1} + 2 y_k +7 = 6
+	\quad (k = 0,1,2,...).
+\end{align*}
+Es folgt, dass:
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+	\item
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und divergent ist.
+	\item
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und divergent ist.	
+	\item 
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{7} $.
+	\item
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{7} $.
+	\item 
+	$ (y_k)_{k \in \mathbb{N}} $ oszillierend und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = -\frac{1}{8} $.
+	\item 
+	$ (y_k)_{k \in \mathbb{N}} $ monoton und konvergent ist mit $ \lim \limits_{k \to \infty} y_k = \frac{1}{8} $.
+\end{enumerate}
+\ \\
+\textbf{Lösung:}
+\begin{mdframed}
+\underline{\textbf{Vorgehensweise:}}
+\renewcommand{\labelenumi}{\theenumi.}
+\begin{enumerate}
+\item Bringe die Differenzengleichung in die Normalform.
+\end{enumerate}
+\end{mdframed}
+
+\underline{1. Bringe die Differenzengleichung in die Normalform}\\
+Die Normalform der Gleichung ist gegeben durch:
+\begin{align*}
+	6y_{k+1} + 2 y_k +7 = 6
+	\ \Leftrightarrow \
+	6y_{k+1} + 2 y_k  = -1
+	\ \Leftrightarrow \
+	6y_{k+1} = - 2 y_k   -1
+	\ \Leftrightarrow \
+	y_{k+1} = - \frac{1}{3} y_k   - \frac{1}{6}
+\end{align*}
+Damit liegt die Normalform mit $A = -\frac{1}{3}$ und $B = - \frac{1}{6}$ vor. Wegen $-1 < A  < 0 $ ist die Lösung konvergent und oszillierend. Mit der Normalform können wir den Grenzwert der Lösung $y_k$ durch 
+\begin{align*}
+	\lim \limits_{k \to \infty} y_k = \frac{B}{1 -A} = \frac{-\frac{1}{6}}{\frac{2}{3}}
+	=
+	- \frac{1}{6} \cdot \frac{3}{2} = -\frac{1}{8}
+\end{align*}
+angeben.\\
+\\
+Damit ist die Antwort (e) korrekt.\\
+\\
+\textit{Bemerkung:} Angenommen es liegt eine Differenzengleichung
+in Normalform 
+\begin{align*}
+	y_{k+1} = A y_k + B
+\end{align*}
+mit $|A|<1$ vor. Dann ist die Lösung $y_k$ konvergent und es existiert der (eindeutige) Grenzwert
+\begin{align*}
+	y^\star = \lim \limits_{k \to \infty} y_k.
+\end{align*}
+Wenn wir dies auf die Differenzengleichung in Normalform anwenden erhalten wir durch $y_k \to y^\star$ und $y_{k+1} \to y^\star$ für $k \to \infty$
+\begin{align*}
+	y^\star = A y^\star + B
+	\ \Leftrightarrow \
+	y^\star - A y^\star = (1 -A) y^\star = B
+	\ \Leftrightarrow \
+	y^\star = \frac{B}{1-A}
+\end{align*}
+die Formel für den Grenzwert. Falls bekannt ist, dass eine Differenzengleichung konvergent ist, kann dieses Verfahren auch ohne Normalform angewendet werden.

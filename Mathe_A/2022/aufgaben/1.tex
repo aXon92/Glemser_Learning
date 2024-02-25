@@ -32,13 +32,13 @@ Zeigen Sie, dass es genau einen Wert $\lambda^\star \in [0,0.1]$ gibt, bei dem d
 \item 
 Stelle den mathematischen Rahmen her.
 \item
-Überlege wie man die Existenz und Eindeutigkeit zeigt.
+Überlege, wie man die Existenz und Eindeutigkeit zeigt.
 \item
 Wende den Nullstellensatz von Bolzano an und zeige die Eindeutigkeit. 
 \end{enumerate}
 \end{mdframed}
 \underline{1. Stelle den mathematischen Rahmen her}\\
-Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
+Zunächst werden wir den mathematischen Rahmen herstellen. Damit wissen wir, welches Problem angegangen wird und wir können die passenden Konzepte anwenden.\\
 \\
 Diese Aufgabe sucht nach der Existenz und Eindeutigkeit eines Wertes $\lambda^\star \in [0,0.1]$, für welchen die jährlichen Stromkosten eines Schweizer Haushalts im Jahr 2023 $1000$ Schweizer Franken betragen.
 Nach der Aufgabe sind diese Kosten durch $c_{2023}(\lambda)$ in Abhängigkeit von $\lambda$ gegeben (Effizienzparameter).
@@ -62,7 +62,7 @@ das Nullstellenstellenproblem
 \end{align*}
 Zu zeigen ist also, dass eine eindeutige Lösung $\lambda^\star$ in dem Intervall $[0, 0.1]$ existiert.\\
 \\
-\underline{2. Überlege wie man die Existenz und Eindeutigkeit zeigt}\\
+\underline{2. Überlege, wie man die Existenz und Eindeutigkeit zeigt}\\
 Um zu zeigen, dass ein $\lambda^\star  \in [0,0.1]$ mit
 \begin{align*}
 	c_{2023}(\lambda^\star) = 0
@@ -84,7 +84,7 @@ Die Funktion $f$ ist als Zusammensetzung stetiger Funktionen stetig. Des weitere
 	\frac{1600}{2} - 1000
 	= 
 	800 - 1000 = -200 < 0\\
-	f(0.01) = c_{2023}(0.1) -1000 
+	f(0.1) = c_{2023}(0.1) -1000 
 	=
 	\frac{1600}{1 + e^{-0.1 \cdot 11} } - 1000
 	\approx
@@ -255,6 +255,7 @@ Das Taylorpolynom $P_2$ ist somit durch
 	a_0 
 	+ 
 	a_1(\lambda - 0.05)
+	+
 	\frac{1}{2}
 	a_2 
 	(\lambda - 0.05)^2 	
@@ -282,7 +283,7 @@ Wir substituieren $s = \lambda - 0.05$, wodurch uns das Lösen der Gleichung
 	=
 	a_0 + a_1 s +\frac{1}{2} a_2 s^2 = 0
 \end{align*}
-erleichtert wird. Mit der $abc$- Formel erhalten wir:
+erleichtert wird. Mit der $abc$-Formel erhalten wir:
 \begin{align*}
 	s_{1,2}
 	&=
@@ -360,54 +361,54 @@ RS_{\mathrm{31.12.2025}}^{\mathrm{k.Z.}}
 	RS_{\mathrm{1.1.2023}}
 	(1+ 5\% )^3
 	=
-	60000 \cdot  1.05^3 
+	60'000 \cdot  1.05^3 
 	=
-	69457.50 \ \textrm{(Schweizer Franken)}.
+	69'457.50 \ \textrm{(Schweizer Franken)}.
 \end{align*}
 Zum 31.12.2025 soll die tatsächliche Restschuld noch $30000$ Schweizer Franken betragen. Damit müssen die konstanten Zahlungen $C_1$ zum Ende der Jahre 2023, 2024 und 2025 den Betrag
 \begin{align*}
 	RS_{\mathrm{31.12.2025}}^{\mathrm{k.Z.}}
-	- 30000
-	= 39457.5\ \textrm{(Schweizer Franken)}
+	- 30'000
+	= 39'457.5\ \textrm{(Schweizer Franken)}
 \end{align*}
 ergeben. Bei den konstanten Zahlungen $C_1$ handelt es sich um eine dreijährige nachschüssige Rente. Mit dem Endwert erhalten wir:
 \begin{align*}
-	39457.5
+	39'457.5
 	= C_1 \frac{(1 + 5 \%)^3 -1 }{5 \%}
 	\ \Leftrightarrow \
-	C_1 = 39457.5 \cdot \frac{5 \%}{(1 + 5 \%)^3 -1}
+	C_1 = 39'457.5 \cdot \frac{5 \%}{(1 + 5 \%)^3 -1}
 	\approx
-	12516.25 \ \textrm{(Schweizer Franken)}
+	12'516.25 \ \textrm{(Schweizer Franken)}
 \end{align*}
 Damit ist die nachschüssige Zahlung der ersten drei Jahre 
-$12516.25$ Schweizer Franken.\\
+$12'516.25$ Schweizer Franken.\\
 \\
 \underline{(b3) Bestimme die Restschuld zum Ende des Jahres 2028}\\
-Wenn keine Zahlungen von am Ende der Jahre 2026 - 2028 getätigt werden, ist die Restschuld zum 31.12.2028 gegeben durch:
+Wenn keine Zahlungen am Ende der Jahre 2026 - 2028 getätigt werden, ist die Restschuld zum 31.12.2028 gegeben durch:
 \begin{align*}
 	RS_{\mathrm{31.12.2028}}^{\mathrm{k.Z.}}
 	=
 	RS_{\mathrm{1.1.2026}} (1 + 5\%)^3
 	=
-	30000 \cdot 1.05^3
+	30'000 \cdot 1.05^3
 	=
-	34728.75 \ \textrm{(Schweizer Franken)}.
+	34'728.75 \ \textrm{(Schweizer Franken)}.
 \end{align*}
-Bei den konstanten Zahlungen in Höhe von  $C_2 = 5000$ handelt es sich um eine dreijährige nachschüssige Rente. Mit der Endwertformel erhalten wir damit die tatsächliche Restschuld am 31.12.2028 durch:
+Bei den konstanten Zahlungen in Höhe von  $C_2 = 5'000$ handelt es sich um eine dreijährige nachschüssige Rente. Mit der Endwertformel erhalten wir damit die tatsächliche Restschuld am 31.12.2028 durch:
 \begin{align*}
 	RS_{\mathrm{31.12.2028}}
 	&= 
-	34728.75 - 
-	5000 
+	34'728.75 - 
+	5'000 
 	\cdot 
 	\frac{(1+ 5 \%)^3 -1}{5 \%}
 	=
-	34728.75 - 
-	5000 
+	34'728.75 - 
+	5'000 
 	\cdot 
 	\frac{(1.05)^3 -1}{0.05}\\
 	&=
-	18966.25 \ \textrm{(Schweizer Franken)}.
+	18'966.25 \ \textrm{(Schweizer Franken)}.
 \end{align*}
 
 
@@ -416,17 +417,17 @@ Sams NFT Kunstwerk hat bei jährlichem Wertverlust von $3 \%$ am 31.12.2028 eine
 \begin{align*}
 	VW_{\mathrm{31.12.2028}}
 	=
-	100000 (1- 3 \%)^6
+	100'000 (1- 3 \%)^6
 	=
-	100000 \cdot 0.97^6
-	= 83297.20 \ \textrm{(Schweizer Franken)}.
+	100'000 \cdot 0.97^6
+	= 83'297.20 \ \textrm{(Schweizer Franken)}.
 \end{align*}
 Damit gilt $VW_{\mathrm{31.12.2028}} > RS_{\mathrm{31.12.2028}}$. Also ist der Verkaufswert trotz Wertverlust von $3 \%$ größer als die Restschuld zum 31.12.2028 und Sam kann seine Schulden begleichen.
 \newpage
 \subsection*{\aufgabe{c}{10}}
 Die Alterung der Bevölkerung hat bedeutende ökonomische und soziale Auswirkungen. Deshalb ist es für die Politik von hoher Bedeutung, ein umfassendes Verständnis davon zu haben, wie sich das Bevölkerungswachstum über die nächsten 50 Jahre entwickeln wird.
 Modelle des Bevölkerungswachstums sind eine mathematische Beschreibung, wie die Bevölkerung voraussichtlich in Zukunft wachsen wird.
-Eines dieser Modelle nimmt an, dass die Grösse $s(t)$ einer Bevölkerung zum Zeitpunkt $t \geq 0$ durch die folgende mathematische Formel beschreiben lässt:
+Eines dieser Modelle nimmt an, dass sich die Grösse $s(t)$ einer Bevölkerung zum Zeitpunkt $t \geq 0$ durch die folgende mathematische Formel beschreiben lässt:
 \begin{align*}
 	s(t)
 	=
