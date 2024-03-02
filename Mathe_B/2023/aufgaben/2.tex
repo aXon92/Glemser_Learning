@@ -297,11 +297,32 @@ Es folgt, dass $\det(2AA^{-1} B B^{-1} B A)$:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Verwende die Rechenregeln für Determinanten.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Rechenregeln für Determinanten}\\
+Die korrekte Antwort erhalten wir, indem wir zunächst den Ausdruck innerhalb der Determinante vereinfachen. 
+Darauf folgend verwenden wir die Rechenregeln
+\begin{align*}
+	\det(c A)&= c^n \det(A)\\
+	\det(AB) &= \det(A) \det(B).
+\end{align*}
+Hiermit erhalten wir:
+\begin{align*}
+	\det(2AA^{-1} B B^{-1} B A)
+	=
+	\det(2I I B A)
+	=
+	\det(2B A)
+	=
+	2^n \det(BA) 
+	=
+	2^n \det(B) \det(A)
+	=
+	2^n n^2.
+\end{align*}
+Damit ist Antwort (d) korrekt.
 
 \newpage
 
