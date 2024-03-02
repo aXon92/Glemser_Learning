@@ -97,11 +97,50 @@ Für welchen Wert von $a \in \mathbb{R}$ ist $f$ eine Dichtefunktion?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item .
+\item Verwende die Definition der Dichtefunktion.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Verwende die Definition der Dichtefunktion}\\
+Eine nicht negative Funktion $f : \ \mathbb{R} \to \ \mathbb{R}$ heißt Dichtefunktion, falls
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx = 1
+\end{align*}
+gilt. Für unsere gegebene Funktion $f$ erhalten wir den Ansatz 
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx
+	=
+	\int \limits_{- \infty}^{0} \underbrace{f(x)}_{= 0} \ dx
+	+
+	\int \limits_{0}^{2 \pi} f(x) \ dx
+	+
+	\int \limits_{2 \pi}^\infty \underbrace{f(x)}_{= 0} \ dx
+	=
+	\int \limits_{0}^{2 \pi} a | \sin(x) | \ dx.
+\end{align*}
+Da für $f$ nicht negativ sein darf, d.h. $f(x) \geq 0$ für alle $x \in D_f$, muss wegen des Betrags auch $a \geq 0 $ gelten.
+Wegen der Punktsymmetrie an $x_0  = \pi$ für $\sin(x)$ gilt
+\begin{align*}
+	\int \limits_{0}^{2 \pi} a | \sin(x) | \ dx
+	&=
+	a \int \limits_{0}^{2 \pi}  | \sin(x) | \ dx
+	=
+	a \cdot 2 \cdot  \int \limits_{0}^\pi \sin(x) \ dx\\
+	&=
+	2a \left[- \cos (x)\right]_{0}^\pi
+	= 
+	2a ( -\cos(\pi) - (- \cos(0)) )
+	=
+	2a ( 1 + 1 ) = 4a. 
+\end{align*} 
+Damit $f$ eine Dichtefunktion ist muss noch gelten: 
+\begin{align*}
+	\int \limits_{- \infty}^\infty f(x) \ dx  = 4a = 1  
+	\ \Leftrightarrow \
+	a = \frac{1}{4} = 0.25.
+\end{align*}
+
+Somit ist Antwort (b) korrekt.
 
 
 \newpage
