@@ -133,11 +133,58 @@ Für $a > 0$ ist $\int_{-a}^a f(x) \ dx$ gleich:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Nutze die Eigenschaft der geraden Funktion.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Nutze die Eigenschaft der geraden Funktion }\\
+Da $f$ eine gerade Funktion ist gilt $f(x) = f(-x)$ für alle $x \in D_f$.
+Mit der Substitution $y = -x $ erhalten wir zunächst.
+\begin{align*}
+	\frac{dy}{dx} = -1 
+	\ \Leftrightarrow \
+	dx = - dy
+\end{align*}
+Damit gilt:
+\begin{align*}
+	\int \limits_{- a}^a f(x) \ dx
+	&=
+	\int \limits_{-a}^0 f(x) \ dx
+	+ 
+	\int \limits_{0}^a f(x) \ dx
+	=
+	\int \limits_{-a}^0 f(-x) \ dx
+	+ 
+	\int \limits_{0}^a f(x) \ dx\\
+	&=
+	\int \limits_{a}^0 -f(y) \ dy
+	+ 
+	\int \limits_{0}^a f(x) \ dx
+	=
+	-\int \limits_{a}^0 f(y) \ dy
+	+ 
+	\int \limits_{0}^a f(x) \ dx\\
+	&=
+	-\int \limits_{a}^0 f(x) \ dy
+	- 
+	\int \limits_{a}^0 f(x) \ dx
+	= 
+	-2 
+	\int \limits_{a}^0 f(x) \ dx.
+\end{align*}
+Dabei haben wir auch verwendet, dass bei Vertauschen der Integrationsgrenzen das Vorzeichen wechselt.
+
+Somit ist die Antwort (c) korrekt.\\
+\\
+Die schnellere Variante ist:
+Da $f$ gerade (also achsensymmetrisch) ist folgt durch Vertauschen der Integrationsgrenzen
+\begin{align*}
+	\int \limits_{- a}^a f(x) \ dx
+	=
+	2 \int \limits_{0}^a f(x) \ dx
+	= 
+	- 2 \int \limits_{a}^0 f(x) \ dx.
+\end{align*}
 
 
 \newpage
