@@ -426,8 +426,27 @@ Welche der folgenden Aussagen trifft auf die Matrix $A$ zu?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item 
+		\item Nutze den Zusammenhang der Determinante zu den Eigenwerten.
 	\end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Nutze den Zusammenhang der Determinante zu den Eigenwerten}\\
+Die quadratische Matrix $A$ ist nicht invertierbar. Deswegen gilt
+\begin{align*}
+	\det(A) = \prod \limits_{i=1}^n \lambda_i = 0.
+\end{align*}
+Hierbei sind $\lambda_i$ für $i = 1, ..., n$ die Eigenwerte von $A$. Diese sind nicht notwendigerweise verschieden.
+Da $\det(A) = 0$ muss mindestens einer dieser Eigenwerte $0$ sein. \\
+\\
+Damit ist die Antwort (d) korrekt.\\
+\\
+Für die Antwort (a) ist
+\begin{align*}
+	A = 
+	\begin{pmatrix}
+		1 & 0\\
+		0 & 0
+	\end{pmatrix}
+\end{align*}
+ein Gegenbeispiel. Antwort (b),(c) und (e) widerspricht $\det(A) = 0$.
+ 
