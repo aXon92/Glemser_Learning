@@ -221,11 +221,41 @@ Es folgt, dass
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Prüfe geeignete Spalten auf lineare Unabhängigkeit.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Prüfe geeignete Spalten auf lineare Unabhängigkeit}\\
+Da die Matrix $A $ $3$ Zeilen und $5$ Spalten besitzt kann diese maximal einen Rang von $3$ besitzen.
+Wegen 
+\begin{align*}
+	\det
+	\begin{pmatrix}
+		2 & 1 & 0\\
+		3 & 2 & 1\\
+		6 & 0 & 6
+	\end{pmatrix}
+		=
+	2 \ 
+	\det
+	\begin{pmatrix}
+		2 & 1 \\
+		0 & 6
+	\end{pmatrix}
+	-
+	\det
+	\begin{pmatrix}
+	3 & 1 \\
+	6 & 6
+	\end{pmatrix}
+	= 
+	2 \cdot 12 - ( 18 - 6 )
+	=
+	12 \neq 0
+\end{align*}
+sind die ersten drei Spalten der Matrix $A$ linear unabhängig und es gilt $\mathrm{rg}(A) = 3$.\\
+\\
+Damit ist Antwort (c) korrekt.
 
 
 
