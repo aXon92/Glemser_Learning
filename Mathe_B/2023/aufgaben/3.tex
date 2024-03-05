@@ -531,11 +531,46 @@ Wie hoch sind seine Ersparnisse nach $10 $ Jahren?
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Bilde die Aufgabe mit einer Differenzengleichung ab.
+\item Bestimme die Lösung der Differenzengleichung.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Bilde die Aufgabe mit einer Differenzengleichung ab}\\
+Mit $A_n$ bezeichnen wir die Ersparnisse nach $n$ Jahren. Hierbei entspricht $A_0 = 100'000$ den Einzahlungsbetrag. Da die Bank $2 \% $ auf die ersten $20'000$ Schweizer Franken und $1 \% $ auf den Rest zahlt, können wir folgende lineare Differenzengleichung erster Ordnung aufstellen:
+\begin{align*}
+	A_{n+1}
+	&=
+	A_n + \underbrace{20'000 \cdot 0.02 + (A_n - 20'000) \cdot 0.01}_{\textrm{Zinsen pro Jahr}}
+	=
+	A_n + 400 + 0.01 A_n - 200\\
+	&= \underbrace{1.01}_{A} A_n + \underbrace{200}_B.
+\end{align*}
+
+\underline{2. Bestimme die Lösung der Differenzengleichung}\\
+Die Lösung der Differenzengleichung ist gegeben durch
+\begin{align*}
+	A_n = A^n (A_0 - A^\star) + A^\star, \quad A^\star = \frac{B}{1-A}.
+\end{align*}
+Konkret erhalten wir durch
+\begin{align*}
+	A^\star = \frac{200}{1-A} = \frac{200}{-0.01} = -20000
+\end{align*}
+für die Ersparnisse im $n$-ten Jahr
+\begin{align*}
+	A_n = 1.01^n (100'000 + 20'000) - 20'000
+	= 1.01^n (120'000 ) - 20'000.
+\end{align*}
+Für das $10$. Jahr gilt dann:
+\begin{align*}
+	A_n
+	=
+	1.01^10 (120'000 ) - 20'000
+	\approx
+	112'554.65.
+\end{align*}
+
+Damit ist die Antwort (d) korrekt.
 
 \newpage
 
