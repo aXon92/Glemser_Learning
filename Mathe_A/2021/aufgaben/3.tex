@@ -36,7 +36,7 @@ In (a) ist der Zähler als Summe beschränkter Funktionen beschränkt. Damit gil
 	|a_n | = \frac{|\sin(n) - \cos(n)| }{n} 
 	\leq C \frac{1}{n} \to 0
 \end{align*}
-für $n \to \infty$. Für (c) - (d) ist schnell ersichtlich, dass der Nenner schneller als der Zähler wächst. Kniffliger ist die (b), jedoch nur auf den ersten Blick:
+für $n \to \infty$. Für (c) - (e) ist schnell ersichtlich, dass der Nenner schneller als der Zähler wächst. Kniffliger ist (b), jedoch nur auf den ersten Blick:
 \begin{align*}
 	b_n = \sqrt{n^2 +1} - n
 	= \frac{n^2 +1  - n^2}{\sqrt{n^2 +1 } + n}
@@ -44,7 +44,7 @@ für $n \to \infty$. Für (c) - (d) ist schnell ersichtlich, dass der Nenner sch
 	\frac{1}{\sqrt{n^2 +1 } + n}.
 \end{align*}
 Hierbei haben wir die dritte Binomische Formel angewendet. 
-Übrig bleibt noch die (f). Bei Folgen dieser Art ist es nur notwendig die führenden Potenzen im Zähler und Nenner zu vergleichen:
+Übrig bleibt noch (f). Bei Folgen dieser Art ist es nur notwendig die führenden Potenzen im Zähler und Nenner zu vergleichen:
 \begin{align*}
 	f_n = \frac{(n+2) (n^2 + 3n -1 )}{5n^3 + 4} 
 	= 
@@ -97,9 +97,10 @@ Damit bleibt (f) übrig, wofür gilt:
 	&=
 	\frac{n^3 + 5n^2 + 5n - 2}{5n^3 + 4}
 	=
-	\frac{n^3 \left(1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}\right)}{n^3 \left(n^3 ( 5 + \frac{4}{n^3}) \right)}\\
+	\frac{n^3 \left(1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}\right)}{n^3 \left( 5 + \frac{4}{n^3} \right)}\\
 	&=
-	\frac{1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}}{(n^3 ( 5 + \frac{4}{n^3})}
+	\frac{1 + \frac{5}{n} + \frac{5}{n^2}  - \frac{2}{n^3}}{
+		 5 + \frac{4}{n^3}}
 	\to 0 \ \textrm{für } n \to \infty.
 \end{align*}
 Somit ist Antwort (f) korrekt.
@@ -201,7 +202,9 @@ Wir verwenden die Exponentialfunktion um $f$ umzuschreiben:
 	e^{\ln \left(x^{\ln(x^2)} \right)  }
 	=
 	e^{\ln(x^2) \ln(x)}
-	= 
+	=
+	e^{2 \ln(x) \ln(x)} 
+	=
 	e^{2 \ln(x)^2}.
 \end{align*}
 Mithilfe zweifacher Anwendung der Kettenregel erhalten wir dann:
@@ -338,14 +341,14 @@ Die partiellen Ableitungen sind gegeben durch:
 \begin{align*}
 	f_x(x,y)
 	&=
-	\frac{1}{2} \cdot 2 \cdot x \cos(x^2 + y^2)
+	\frac{1}{2} \cdot \cos(x^2 + y^2) \cdot 2 \cdot x
 	=
 	x \cdot \cos(x^2 + y^2)\\
 	f_y(x,y)
 	&=
-	\frac{1}{2} \cdot 2 \cdot y \cos(x^2 + y^2)
+	\frac{1}{2} \cdot \cos(x^2 + y^2)
 	=
-	y \cdot \cos(x^2 + y^2)
+	y \cdot \cos(x^2 + y^2) \cdot 2 \cdot y
 	.
 \end{align*}
 Damit erhalten wir für $(x_0,y_0) = \left(\sqrt{\frac{\pi}{2}}, 0 \right)$ zunächst
@@ -491,10 +494,11 @@ Für $\lambda > 0$ gilt:
 	e^{
 	\frac{2 \lambda x+ \lambda y}{\lambda x -3 \lambda y}
 	}
-	+ \lambda x \lambda y 
+	- \lambda x \lambda y 
 	e^{
 	\frac{\lambda x + \lambda y}{\lambda x - \lambda y}
 	}
+	+
 	( \lambda x)^2
 	\ln \left(
 	\frac{ \lambda x}{2 \lambda y}
@@ -504,10 +508,11 @@ Für $\lambda > 0$ gilt:
 	e^{
 		\frac{\lambda}{\lambda}\frac{2  x+  y}{ x -3 y}
 	}
-	+ \lambda^2 x  y 
+	- \lambda^2 x  y 
 	e^{
 		\frac{\lambda}{\lambda}	\frac{ x +  y}{ x -  y}
 	}
+	+
 	\lambda^2 x^2
 	\ln \left(
 	\frac{\lambda}{\lambda}
@@ -529,8 +534,8 @@ Für $\lambda > 0$ gilt:
 Damit ist die Antwort (b) korrekt.\\
 \\
 Man kann die Aufgabe auch leichter lösen:
-In den Argumenten der Exponential bzw. Logarithmusfunktion muss sich das $\lambda$ herauskürzen. Sonst kann die Funktion nicht homogen sein. Wenn man dies überprüft hat, kann diese Funktionen ignorieren.
-Als nächstes prüft man, ob $\lambda $ in jedem Summanden mit demselben Exponent ausklammern lässt.
+In den Argumenten der Exponential bzw. Logarithmusfunktion muss sich das $\lambda$ herauskürzen. Sonst kann die Funktion nicht homogen sein. Wenn man dies überprüft hat, kann man diese Funktionen ignorieren.
+Als nächstes prüft man, ob sich $\lambda $ in jedem Summanden mit demselben Exponent ausklammern lässt.
 
 
 

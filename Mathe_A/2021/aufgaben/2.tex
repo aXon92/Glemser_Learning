@@ -120,14 +120,17 @@ Alternativ lässt sich diese Aufgabe natürlich auch über eine Wahrheitstafel l
 		\multicolumn{1}{c|}{$A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $F$} \\
 		\multicolumn{1}{c|}{$B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $F$} \\ 
 		\hline
+		\multicolumn{1}{c|}{$ A \wedge B$} & \multicolumn{4}{l}{$W$ $F$ $F$ $F$} \\
 		\multicolumn{1}{c|}{$ A \Rightarrow B$} & \multicolumn{4}{l}{$W$ $F$ $W$ $W$} \\
 		\multicolumn{1}{c|}{$ B \Rightarrow A$} & \multicolumn{4}{l}{$W$ $W$ $F$ $W$} \\
 		\multicolumn{1}{c|}{$ \neg A$} & \multicolumn{4}{l}{$F$ $F$ $W$ $W$} \\
 		\multicolumn{1}{c|}{$\neg B$} & \multicolumn{4}{l}{$F$ $W$ $F$ $W$} \\
 		\hline
+		\multicolumn{1}{c|}{ $ \neg A \wedge  \neg B$} & \multicolumn{4}{l}{$F$ $F$ $F$ $W$} \\
 		\multicolumn{1}{c|}{ $ \neg A \vee  \neg B$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
 		\multicolumn{1}{c|}{$ \neg (A \wedge B)$} & \multicolumn{4}{l}{$F$ $W$ $W$ $W$} \\
-		\multicolumn{1}{c|}{$ \neg (\neg A \vee \neg B)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\
+		\multicolumn{1}{c|}{$ \neg (\neg A \wedge \neg B)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $F$} \\
+		\multicolumn{1}{c|}{$(A \Rightarrow B) \wedge \neg B $} & \multicolumn{4}{l}{$F$ $F$ $F$ $W$}\\
 		\hline
 		\multicolumn{1}{c|}{(a) \ $ ( \neg A \vee \neg B ) \Leftrightarrow (\neg  (A \wedge B))$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\
 		\multicolumn{1}{c|}{(b) \ $ A \Rightarrow ( B \Rightarrow A)$} & \multicolumn{4}{l}{$W$ $W$ $W$ $W$} \\  
@@ -176,8 +179,8 @@ Für $\{a_k\}_{k \in \mathbb{N}}$ und $\{b_k\}_{k \in \mathbb{N}}$ gilt
 \end{align*}
 Die zugehörigen Reihen sind gegeben durch:
 \begin{align*}
-	s_n^a = a_1 \frac{1 - 1.05^n}{1- 1.05} = \frac{1- 1.05^n}{-\frac{5}{100}}
-	&= 20 (1.05^n - 1)\\
+	&s_n^a = a_1 \frac{1 - 1.05^n}{1- 1.05} = \frac{1- 1.05^n}{-\frac{5}{100}}
+	= 20 (1.05^n - 1)\\
 	&s_n^b = b_1 \frac{1 - 0.95^n}{1- 0.95} = 2 \frac{1-0.95^n}{0.05} = 40 (1- 0.95^n).
 \end{align*}
 Beide Partialsummenfolgen sind streng monoton wachsend. Weiter gilt
@@ -195,7 +198,7 @@ Die Gleichung
 	\ \Leftrightarrow \ 
 	1.05^n - 1 = 2 - 2 \cdot 0.95^n
 	\ \Leftrightarrow \
-	1.05^n + 2 cdot  0.95^n = 3
+	1.05^n + 2 \cdot  0.95^n = 3
 \end{align*}
 besitzt keine Lösung für $n \in \N$. Damit ist die Antwort (a) falsch.
 Wegen
@@ -270,13 +273,13 @@ Der interne Zinssatz des Projekts ist:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Stelle das Projekt mithilfe eines Bankkontos dar.
+\item Berechne den internen Zinssatz.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Stelle das Projekt mithilfe eines Bankkontos dar}\\
-Das Projekt ist äquivalent zu einer Einzahlung von $2'000$ Schweizer Franken auf ein Bankkonto, auf welches man für $10$ Jahre jährliche Zinsen bei einem Zinssatz von $\frac{50}{2000} = 2.5 \%$ ohne Zinseszins erhält und die ursprüngliche Summe von $2'000$ Schweizer Franken am Ende des $10$. Jahres wieder ausgezahlt wird.\\
-Der Nettobarwert des Projekts ist genau für einen Zinssatz von $2.5 \% $ gleich 0, womit dieser dem internen Zinssatz entspricht.\\
+\underline{1. Berechne den internen Zinssatz}\\
+Der interne Zinssatz ist wie folgt definiert:
+Der Nettebarwert des Projekts ist $0$ bei diesem Zinssatz.\\
 \\
 Formal lässt sich dies durch folgenden Zahlungsstrom zeigen:
 \begin{align*}
@@ -295,7 +298,9 @@ Formal lässt sich dies durch folgenden Zahlungsstrom zeigen:
 	-&2000 \left(-1 +  1+i  - \left(\frac{1}{1+i}\right)^{10}  -i + \frac{1}{(1+i)^{10}} \right )
 	= 0.
 \end{align*}
-Hierbei haben wir $2000 \cdot i = 50   \ \Leftrightarrow i = 2.25 \%$ verwendet. 
+Hierbei ergibt sich $i = 2.5 \%$.\\
+\\
+Damit ist die Antwort (b) korrekt.
 
 
  \newpage
@@ -328,7 +333,7 @@ Beim Ableiten besagt die Kettenregel:
 \underline{1. Gebe die Kettenregel wieder}\\
 Die Kettenregel der Differentialrechnung ist gegeben durch:
 \begin{align*}
-	(f \circ g)^\prime (x) f^\prime(g(x))  \cdot g^\prime(x).
+	(f \circ g)^\prime (x) = f^\prime(g(x))  \cdot g^\prime(x).
 \end{align*}
 Damit ist Antwort (a) korrekt.
  
@@ -447,7 +452,7 @@ approximiert werden. Wegen $\varepsilon_f(x_0) > 1$ gilt:
 	> 
 	\frac{\Delta x}{x_0}.
 \end{align*} 
-Also ist der Anstieg in $f$ relativ gesehen größer als der Anstieg in $x$.
+Also ist der Anstieg in $f$ relativ gesehen größer als der Anstieg in $x$. Somit ist die Antwort (a) korrekt.
 
 \newpage
 \subsection*{\frage{10}{4}}
@@ -480,10 +485,10 @@ f^{\prime \prime}(x) < 0
 \end{align*}
 für alle $x \in I$ gilt. Das Taylorpolynom zweiter Ordnung ist gegeben durch:
 \begin{align*}
-	P_2(x) =
+	P_2(x) 
 	= \sum \limits_{k=0}^2\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k
 	=
-	\frac{f^{\prime \prime }(x_0)}{2} (x-x_0) + f^{\prime} (x_0) (x- x_0) + f(x_0)
+	\frac{f^{\prime \prime }(x_0)}{2} (x-x_0)^2 + f^{\prime} (x_0) (x- x_0) + f(x_0)
 \end{align*}
 Da die zweite Ableitung für $x_0 \in I$ negativ ist, ist der Faktor vor dem quadratischen Term negativ. Damit ist die Parabel nach unten geöffnet.\\
 \\
