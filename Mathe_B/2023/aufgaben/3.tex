@@ -59,11 +59,69 @@ Für welches $a \in \mathbb{R}$ ist die Länge des Gradienten im Punkt $(x_0,y_0
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Berechne den Gradienten und bestimme dessen Länge in $(x_0,y_0)$.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Berechne den Gradienten und bestimme dessen Länge $(x_0,y_0)$}\\
+Zunächst bestimmen wir die partiellen Ableitungen nach $x$ und $y$:
+\begin{align*}
+	f_x(x,y)
+	&=
+	\ln(2) \ 2^x\\
+	f_y(x,y)
+	&=
+	a 2y e^{y^2} 
+	=
+	2ay e^{y^2}.  
+\end{align*}
+Dann ist der Gradient gegeben durch
+\begin{align*}
+	\mathrm{grad} f(x,y)
+	=
+	\begin{pmatrix}
+		f_x(x,y) \\
+		f_y(x,y)
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		\ln(2) \ 2^x \\
+		2ay e^{y^2}
+	\end{pmatrix}.
+\end{align*}
+Ausgewertet am Punkt $(x_0,y_0) = (0,1)$ gilt
+\begin{align*}
+	\mathrm{grad} f(0,1)
+	=
+	\begin{pmatrix}
+		\ln(2) \\
+		2a e
+	\end{pmatrix}.
+\end{align*}
+und für die Länge folgt:
+\begin{align*}
+	\left\Vert
+	\begin{pmatrix}
+		\ln (2) \\
+		2a e
+	\end{pmatrix}
+	\right\Vert
+	= 
+	\sqrt{\ln(2)^2 + (2ae)^2}.
+\end{align*}
+Gesucht ist nun das $a$, sodass die Länge des Gradienten in $(x_0,y_0)$ gleich $4$ ist:
+\begin{align*}
+	\sqrt{\ln(2)^2 + (2ae)^2} = 4
+	\ &\Leftrightarrow \
+	\ln(2)^2 + 4 a^2e^2 = 16
+	\ \Leftrightarrow \
+	4 a^2 e^2 = 16 - \ln(2)^2\\
+	\ &\Leftrightarrow \
+	a^2 = \frac{16 - \ln(2)^2}{4 a^2}
+	\ \Leftrightarrow \
+	a = \sqrt{\frac{16 - \ln(2)^2}{4 a^2}}.
+\end{align*} 
+Damit ist Antwort (b) korrekt.
 
 
 
