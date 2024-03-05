@@ -24,12 +24,78 @@ entspricht:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Berechne das Integral.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
-
+\underline{1. Berechne das Integral}\\
+Für die Substitution $y = \ln(t^2 x^2)$ gilt
+\begin{align*}
+	\frac{dy}{ dx} = \frac{1}{t^2 x^2} \cdot 2 t^2 x
+				= \frac{2}{x}
+	\ \Leftrightarrow \
+	dx = \frac{x}{2} dy.
+\end{align*}
+Mit dieser Substitution erhalten wir:
+\begin{align*}
+	\int \limits_1^e \frac{1}{x} \ln\left((tx)^2\right) \ dx
+	&=
+	\int \limits_{\ln(t^2)}^{\ln(t^2 e^2)} \frac{1}{x} y \ \frac{x}{2} dy
+	=
+	\frac{1}{2}	\int \limits_{\ln(t^2)}^{\ln(t^2 e^2)}  y \ \ dy
+	=
+	\frac{1}{2} \left[ \frac{1}{2} y^2 
+	\right]_{\ln(t^2)}^{\ln(t^2 e^2)}
+	=
+	\frac{1}{4}
+	\left(
+	\ln(t^2 e^2)^2 -  \ln(t^2)^2
+	\right)\\
+	&= 
+	\frac{1}{4}
+	\left(
+	(\ln(t^2) + \ln(e^2))^2 -  \ln(t^2)^2
+	\right)
+	=
+	\frac{1}{4}
+	\left(
+	(\ln(t^2) + 2\underbrace{\ln(e)}_{=1})^2 -  \ln(t^2)^2
+	\right)\\
+	&=
+	\frac{1}{4}
+	\left(
+	\ln(t^2) + 4 \ln(t^2) +4 - \ln(t^2)
+	\right)
+	= 
+	\frac{1}{4}
+	\left(
+	 4 \ln(t^2) +4 
+	\right)
+	= \ln(t^2) +1.
+\end{align*}
+Damit ist die Antwort (a) korrekt.\\
+\\
+Alternativ lässt sich mit obiger Substitution zunächst die Stammfunktion (das unbestimmte Integral) bestimmen:
+\begin{align*}
+	\int  \frac{1}{x} \ln\left((tx)^2\right) \ dx
+	= 
+	\int  \frac{1}{x} y \frac{x}{2}\ dy
+	=
+	\frac{1}{2} \int  y \ dy
+	= 
+	\frac{1}{2}
+	\left(\frac{1}{2} y^2\right) +C
+	=
+	\frac{1}{4} (\ln(t^2 x^2))^2+C
+\end{align*}
+Hiermit gilt für das bestimmte Integral:
+\begin{align*}
+	\int \limits_1^e \frac{1}{x} \ln\left((tx)^2\right) \ dx
+	=
+	\left[\frac{1}{4} (\ln(t^2 x^2))^2\right]_1^e
+	= \ \dots \ = \ln(t^2) +1.
+\end{align*}
+In der ersten Variante wurden die Grenzen direkt mit substituiert.
 
  
 \newpage
