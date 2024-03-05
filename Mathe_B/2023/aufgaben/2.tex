@@ -359,11 +359,43 @@ Es folgt, dass:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item Verwende die Definition des Ranges.
+\item Schließe falsche Antworten aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. Verwende die Definition des Ranges}\\
+\underline{1. Schließe falsche Antworten aus}\\
+Für die Antwort (a), (b), (c) und (e) können wir Gegenbeispiele angeben:
+\begin{align*}
+	D_a = D_c = D_e
+	&=
+	\begin{pmatrix}
+		1 & 1  & 1\\
+		1 & 1 & 1\\
+		0 & 0 & 0
+	\end{pmatrix}
+	\ \Rightarrow \
+	\mathrm{rg}(D_a) = \mathrm{rg}(D_c) = \mathrm{rg}(D_e) = 1\\
+	D_b
+	&=
+	\begin{pmatrix}
+		0 & 1  & 0 \\
+		0 & 0 & 1\\
+		0 & 0 & 0
+	\end{pmatrix}
+	\ \Rightarrow \
+	\mathrm{rg}(D_b) = 2
+\end{align*}
+Die Spalten von links nach rechts sind $A$, $B$ und $C$. Die Indizes dienen nur dazu, dass entsprechende Gegenbeispiel zu kennzeichnen.\\
+\\
+Offen sind noch die Antwortmöglichkeiten (d) und (f). 
+Falls $a_3 = 0 $ und $b_3 = 0 $ gelten, können wir die Determinante von $D$ folgend berechnen:
+\begin{align*}
+	\det(D) = c_3 a_1 b_2 - c_3 a_2 b_1
+	= c_3 ( a_1 b_2 - a_2 b_1).
+\end{align*}
+Gilt zusätzlich $a_1 b_2 = a_2 b_1$, folgt $\det(D) = 0$. Damit ist $D$ nicht invertierbar und es gilt $\mathrm{rg}(D) < 3$.\\
+\\
+Damit ist Antwort (d) korrekt.
 
 
 
