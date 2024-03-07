@@ -211,11 +211,37 @@ Es folgt:
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item 
+\item Schließe falsche Antworten aus.
 \end{enumerate}
 \end{mdframed}
 
-\underline{1. }\\
+\underline{1. Schließe falsche Antworten aus}\\
+Da die Matrix $A$ invertierbar ist, muss $A$ eine quadratische Matrix mit vollem Rang sein, d.h. $\mathrm{rg}(A) = m= n$. Somit kann die Antwort (a) nicht gelten.
+Aufgrund der Invertierbarkeit besitzt die Gleichung
+\begin{align*}
+	A \mathbf{x} = 0
+\end{align*} 
+nur die Lösung $\mathbf{x} = 0$. Damit kann Möglichkeit (d) nicht gelten.
+Wegen 
+\begin{align*}
+	\det(A^{-1}) = \frac{1}{\det(A)}
+\end{align*}
+gilt $\det(A) = \det(A^{-1})$ nur für die Diagonalmatrix $A = I$ (und nicht für die anderen Diagonalmatrizen). Dies ist ein Gegenbeispiel zu (b).\\
+Da $A$ invertierbar ist, ist uns $n = m$ bekannt. Hieraus können wir jedoch keine Rückschlüsse auf die Symmetrie ziehen. Deswegen fällt die Antwort (e) auch weg.\\
+\\
+Übrig bleibt die Möglichkeit (c). In der Tat folgt aus der Idempotenz von $A$:
+\begin{align*}
+	A = A^2 
+	\ \Rightarrow \
+	\det(A) = \det(A^2) = \det(A) \det(A).
+\end{align*}
+Diese Gleichung ist für $\det(A) = 0$ und $\det(A) = 1$ erfüllt.
+Aufgrund der Invertierbarkeit von $A$ ist nur $\det(A) = 1$ möglich. \\
+\\
+Also ist die Antwort (c) korrekt.
+
+
+
 
 \newpage
 
