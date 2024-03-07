@@ -42,20 +42,17 @@ Welcher der folgenden mathematischen Ausdrücke beschreibt das nachfolgende Prob
 
 \newpage
 
-\subsection*{\frage{2}{3}}
-Sei $ f \ : \ D_f \to \mathbb{R} $ eine positive Funktion zweier reeller Variablen, welche ein lokales Maximum beim Punkt $ P = (5,2)  $ hat.
-Sei $ h  \ : \ D_f \to \mathbb{R} $ die Funktion definiert durch
-\begin{align*}
-	h(x,y) = e^{\sqrt{f(x,-y)}}.
-\end{align*} 
+\subsection*{\frage{2}{4}}
+Sei $ f \ : \ D_f \to \mathbb{R} $ eine ungerade Funktion zweier reellen Variablen, d.h., $f(x,y) = - f(-x,-y)$ für alle $(x,y) \in D_f$, mit einem lokalen Maximum, welches nicht am Nullpunkt $(0,0)$ liegt.\\
+\\ 
 Welche der folgenden Aussagen ist korrekt?
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
-	\item Die Funktion $ h $ hat ein lokales Maximum beim Punkt $ Q = (-5,2). $
-	\item Die Funktion $ h $ hat ein lokales Maximum beim Punkt $ Q = (5,-2). $
-	\item Die Funktion $ h $ hat ein lokales Minimum beim Punkt $ Q = (-5,2). $
-	\item Die Funktion $ h $ hat ein lokales Minimum beim Punkt $ Q = (5,-2). $
-	\item Wir können die Extremstellen von $ h $ nicht analysieren, ohne mehr Informationen zur Funktion $ f $ zu haben.
+	\item Die Funktion $f$ hat mindestens ein lokales Minimum.
+	\item Die Funktion $f$ hat mindestens einen Sattelpunkt.
+	\item Die Funktion $f$ hat mindestens zwei lokale Maxima.
+	\item Die Funktion $f$ hat mindestens ein globales Maximum.
+	\item Die Funktion $f$ hat kein globales Maximum.
 \end{enumerate}
 \ \\
 \textbf{Lösung:}
@@ -63,12 +60,46 @@ Welche der folgenden Aussagen ist korrekt?
 	\underline{\textbf{Vorgehensweise:}}
 	\renewcommand{\labelenumi}{\theenumi.}
 	\begin{enumerate}
-		\item .
+		\item Verwende Umgebungen um die korrekte Antwort zu finden.
 	\end{enumerate}
 \end{mdframed}
-\underline{1. }\\
-
-
+\underline{1. Verwende Umgebungen um die korrekte Antwort zu finden}\\
+Uns ist bekannt, dass die ungerade Funktion $f$ ein lokales Maximum $P_0 = (x_0,y_0) \neq (0,0)$ besitzt. 
+Da $f$ ungerade ist, liegt die Vermutung nahe, dass an $Q_0 = (-x_0, -y_0)$ ein lokales Minimum ist.\\
+\\
+Dies werden wir nun zeigen: Da $(x_0,y_0)$ ein Maximum von $f$ ist, existiert eine Umgebung $U_{(x_0,y_0)}$ um den Punkt $P_0$, sodass
+\begin{align*}
+	f(x,y) \leq f(x_0,y_0)
+\end{align*}
+für alle $(x,y) \in  U_{(x_0,y_0)}$ gilt.\\
+Anschauliche Vorstellung einer Umgebung um einen Punkt $P$: 
+Kreisscheibe mit Mittelpunkt $P$ und hinreichend kleinem Radius.\\
+Die Menge
+\begin{align*}
+	U_{(-x_0,-y_0)} 
+	= \{
+		(x,y) \in \mathbb{R}^2 \ | (-x,-y) \in U 
+	\}
+\end{align*}
+ist eine Umgebung um den Punkt $Q_0 = (-x_0,-y_0)$.
+Für ein beliebiges $(x,y) \in U_{(-x_0,-y_0)}  $ erhalten wir
+\begin{align*}
+	f(\underbrace{-x,-y}_{\in U_{(x_0,y_0) }}) \leq f(x_0, y_0). 
+\end{align*}
+Weiter gelten aufgrund der Punktsymmetrie:
+\begin{align*}
+	f(x_0, y_0) &= - f(\underbrace{-x_0,-y_0}_{\in U_{(-x_0,-y_0) }})\\
+	f(-x,-y)  &= -f(x,y).
+\end{align*}
+Eingesetzt in die Ungleichung liefert dies:
+\begin{align*}
+	-f(x,y) \leq - f(-x_0, -y_0)
+	\ \Leftrightarrow \
+	f(x,y) \geq f(-x_0,-y_0).
+\end{align*}
+Da die Ungleichung für ein beliebiges $(x,y) \in U_{(-x_0,-y_0)} $ gilt, liegt in $(-x_0,-y_0)$ eine lokales Minimum vor.\\
+\\
+Damit ist die Antwort (a) korrekt. Alternativ lassen sich für (b) - (e) auch Gegenbeispiele finden.
 
 \newpage
 \subsection*{\frage{3}{3}}
