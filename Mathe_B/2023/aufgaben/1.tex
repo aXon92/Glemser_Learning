@@ -13,7 +13,7 @@ Dieser misst die maximale Menge an Sauerstoff, die ihr Körper während der Bela
 Sie möchte die optimale Verteilung ihrer Trainingszeit zwischen
 Schwimmen, Radfahren und Laufen finden, um ihren $VO_2max$-Wert zu maximieren.\\
 Estis derzeitiger $VO_2max$-Wert beträgt $48$ und ihre Trainingszeit ist auf $15$ Stunden pro Woche begrenzt.
-Sei $x$ die Anzahl an Stunden pro Woche, die sie für Schwimmen und Radfahren zusammen aufwendet und $y$ die Anzhal an Stunden pro Woche, die sie mit Laufen verbringt.
+Sei $x$ die Anzahl an Stunden pro Woche, die sie für Schwimmen und Radfahren zusammen aufwendet und $y$ die Anzahl an Stunden pro Woche, die sie mit Laufen verbringt.
 Esti folgt der Empfehlung ihres Trainers und trainiert pro Woche viermal so viel Radfahren wie Schwimmen. Ausserdem nimmt sie an, dass sich der Trainingseffekt bezüglich ihres, am Tag des Ironman-Events gemessenen, $VO_2max$-Werts wie folgt modellieren lässt:
 \begin{align*}
 	f(x,y) = 1.8 x^{\frac{2}{3}} y^{\frac{1}{3}}.
@@ -26,20 +26,130 @@ Esti folgt der Empfehlung ihres Trainers und trainiert pro Woche viermal so viel
 	\\
 	\textit{Anmerkung: Es ist nicht notwendig, die hinreichende Bedingung für einen Extremwert zu überprüfen.}
 \end{enumerate}
-\ \\
+ 
 \textbf{Lösung:}
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item[\textbf{(a1)}] 
-\item[\textbf{(a2)}] 
+\item[\textbf{(a1)}] Formuliere das Optimierungsproblem.
+\item[\textbf{(a2)}] Wende die Lagrangemethode an.
+\begin{enumerate}
+	\item[1.] Stelle die Lagrangefunktion und die Lagrangebedingungen auf. 
+	\item[2.] Löse die Lagrangebedingungen auf.
+\end{enumerate}
 \end{enumerate}
 \end{mdframed}
+Bevor wir uns in die Aufgabe stürzen, müssen wir den mathematischen Rahmen aufbauen.
+Das Ziel von Esti den $VO_2max$-Wert zu maximieren deutet auf ein Optimierungsproblem hin. Bei diesen Problemen müssen wir prüfen, ob Nebenbedingungen vorliegt. Nebenbedingungen schränkten die möglichen Variablenwerte ein.
+Da Esti $15$ Stunden pro Woche trainieren sind die Stunden für das Radfahren/Schwimmen $x$ und die Stunden für das Laufen $y$ durch
+\begin{align*}
+	x + y = 15
+\end{align*} 
+eingeschränkt.
+\newpage
+
+\underline{\textbf{(a1)} Formuliere das Optimierungsproblem }\\
+Das Ziel von Esti ist, dass der $VO_2max$-Wert zum Ironman-Tag maximal ist.
+Wegen Estis aktuellem $VO_2max$-Wert von $48$ und der Modellierung des Trainingseffekts durch $f(x,y) = 1.8 x^{\frac{2}{3}} y^{\frac{1}{3}}$ erhalten wir das folgende Optimierungsproblem:
+\begin{align*}
+	\max_{x,y} V(x,y)
+	=
+	48 + 1.8 x^{\frac{2}{3}} y^{\frac{1}{3}},
+	\ \text{unter der Bedingung} \ x + y = 5 \ \Leftrightarrow \ \varphi(x,y) := x + y - 15 = 0.
+\end{align*}
+
+\underline{\textbf{(a2)} 1. Stelle die Lagrangefunktion und die Lagrangebedingungen auf}\\
+Die Lagrangefunktion $L(x,y, \lambda)$ ist gegeben durch
+\begin{align*}
+	L(x,y, \lambda) 
+	=
+	V(x,y) + \lambda \varphi(x,y)
+	= 
+	48 + 1.8 x^{\frac{2}{3}} y^{\frac{1}{3}} + \lambda(x+y-15).
+\end{align*}
+Die partiellen Ableitungen sind gegeben durch:
+\begin{align*}
+	&\frac{\partial L }{\partial x}(x,y,\lambda) = 
+	1.8 \frac{2}{3} x^{\frac{2}{3} - 1 } y^{\frac{1}{3}} + \lambda
+	= 
+	\frac{18}{10} \cdot \frac{2}{3} x^{-\frac{1}{3}} y^{\frac{1}{3}} + \lambda
+	= 
+	\frac{6}{5}  x^{-\frac{1}{3}} y^{\frac{1}{3}} + \lambda
+	=
+	= 
+	1.2  x^{-\frac{1}{3}} y^{\frac{1}{3}} + \lambda
+	\\
+	&\frac{\partial L }{\partial y}(x,y,\lambda) 
+	=
+	1.8 \frac{1}{3} x^{\frac{2}{3}  } y^{\frac{1}{3}- 1} + \lambda
+	=
+	\frac{6}{10} x^{\frac{2}{3}  } y^{-\frac{2}{3}} + \lambda
+	=
+	0.6 x^{\frac{2}{3}  } y^{-\frac{2}{3}} + \lambda
+	\\
+	&\frac{\partial L }{\partial \lambda}(x,y,\lambda) = x + y -15
+\end{align*}
+Hieraus ergeben sich die Lagrangebedingungen:
+\begin{align*}
+	\mathrm{(I)}& \
+	\frac{\partial L }{\partial x}(x,y,\lambda) = 0
+	\ \Leftrightarrow \
+	1.2  x^{-\frac{1}{3}} y^{\frac{1}{3}} + \lambda = 0
+	\\
+	\mathrm{(II)}& \
+	\frac{\partial L }{\partial y}(x,y,\lambda) = 0
+	\ \Leftrightarrow \
+	0.6 x^{\frac{2}{3}  } y^{-\frac{2}{3}} + \lambda = 0
+	\\
+	\mathrm{(III)}& \
+	\frac{\partial L }{\partial \lambda}(x,y,\lambda) = 0
+	\ \Leftrightarrow \
+	 x + y -15 = 0.
+\end{align*}
 \ \\
-\underline{\textbf{(a1)} }\\
-
-
+\underline{\textbf{(a2)} 2. Löse die Lagrangebedingungen auf}\\
+Durch Gleichsetzen der Gleichungen (I) und (II) erhält man 
+\begin{align*}
+	1.2  x^{-\frac{1}{3}} y^{\frac{1}{3}} + \lambda
+	=
+	0.6 x^{\frac{2}{3}  } y^{-\frac{2}{3}} + \lambda
+	\ &\Leftrightarrow \
+	\frac{12}{10} x^{-\frac{1}{3}} y^{\frac{1}{3}}
+	=
+	\frac{6}{10} x^{\frac{2}{3}  } y^{-\frac{2}{3}} \\
+	\ &\Leftrightarrow \
+	\frac{12}{10} \cdot \frac{10}{6} x^{-\frac{1}{3}} y^{\frac{1}{3}}
+	= 
+	x^{\frac{2}{3}  } y^{-\frac{2}{3}} 
+	\ \Leftrightarrow \
+	2  y^{\frac{1}{3}}
+	= 
+	x^{\frac{2}{3} + \frac{1}{3} } y^{-\frac{2}{3}} \\
+	\ &\Leftrightarrow \
+	2  y
+	= 
+	x.
+\end{align*}
+Mit der Gleichung (III) folgt somit
+\begin{align*}
+	x + y = = 2y + y = 3y =  15
+	\ \Leftrightarrow \
+	y = 5
+	\ \Rightarrow \ 2y = 10 = x.
+\end{align*}
+Damit gilt $x = 10 $ (Stunden Schwimmen und Radfahren) und $y= 5$ (Stunden Laufen).
+Da Esti laut Aufgabenstellen viermal mehr Rad fährt als schwimmt, 
+Aus $x = 10$ folgt, dass Esti $2 $ Stunden schwimmt und $8$ Stunden Rad fährt.
+Dies gilt, da Esti laut Aufgabenstellen viermal mehr Rad fährt als schwimmt.
+Der $VO_2max$-Wert zum Ironman-Tag ist für $5$ Stunden Laufen, $8$ Stunden Radfahren und $2$ Stunden Schwimmen gegeben durch:
+\begin{align*}
+	V(10,5)
+	= 
+	48 + 1.8 10^{\frac{2}{3} } 5^{\frac{1}{3}}
+	=
+	62.29.
+\end{align*}
 \newpage
 
 \subsection*{\aufgabe{b}{14}}
