@@ -192,7 +192,7 @@ Der angestrebte Nettogewinn aus der Gesamtproduktion beträgt $250$ Schweizer Fr
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(b1)}] Formuliere das lineare Gleichungssystem.
-\item[\textbf{(b2)}] Beurteile die Lösbarkeit des linearen GLeichungsystems.
+\item[\textbf{(b2)}] Beurteile die Lösbarkeit des linearen Gleichungsystems.
 \begin{enumerate}
 	\item[1.] Bringe die Matrix in eine obere Dreiecksform
 	\item[2.] Wende bekannte Kriterien für die Lösbarkeit an.
@@ -447,7 +447,7 @@ Sie zahlen $10'000$ Schweizer Franken für den Kauf und die
 Installation der Solarpanele.
 Unter Berücksichtigung des kontinuierlich schlechter werdenden Wirkungsgrads nehmen Sie konservativ an, dass sich die Leistungsabgabe der Solarpanele, gemessen in Kilowattstunden pro Jahr, mit der Zeit wie folgt entwickelt:
 \begin{align*}
-	f(t) = 10'0000 e^{-0.1 t},
+	f(t) = 10'000 e^{-0.1 t},
 \end{align*}
 wobei $t$ in Jahren gemessen wird.
 Sie gehen davon aus, dass die Lebensdauer der Solarpanele $20$ Jahre beträgt. Nach diesen $20$ Jahren müssen Sie die Solarpanele zu einem Preis von $10'000$ Schweizer Franken entsorgen. Ausserdem nehmen Sie an, dass sich der Marktpreis in
@@ -471,16 +471,87 @@ Verzinsung zu einem Satz von $4 \%$ p.a. und anschliessend zu einem Satz von $2\
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[\textbf{(c1)}] .
-\item[\textbf{(c2)}]
-\begin{enumerate}
-	\item[1.] 
-\end{enumerate}
+\item[\textbf{(c1)}] Bestimme die Leistungsabgabe über $20$ Jahre (Integration).
+\item[\textbf{(c2)}] Bestimme den Nettobarwert.
 \end{enumerate}
 \end{mdframed}
 
-
-
+\underline{\textbf{(c1)} Bestimme die Leistungsabgabe über $20$ Jahre (Integration)}\\
+Die Leistungsabgabe zum Zeitpunkt $t$ ist 
+\begin{align*}
+	f(t) = 10'000 e^{-0.1 t}.
+\end{align*}
+Da wir an der insgesamt erzeugten Energiemenge über $20$ Jahre interessiert sind bestimmen wir durch
+\begin{align*}
+	\int 
+	\limits_{0}^{20}
+	f(t)
+	\ dt 
+	= 
+	\int 
+	\limits_{0}^{20}
+	10'000 e^{-0.1 t}
+	\ dt 
+	= 
+	\left[-\frac{10'000}{0.1} e^{-0.1 t}\right]_0^20
+	= 
+	\left[-100'000 e^{-0.1 t}\right]_0^20
+	= 
+	86'466.47 \ \mathrm{(kWh)}
+\end{align*}
+die Fläche unter $f$ von $0$ bis $20$.
+Damit werden in den nächsten $20$ Jahren $86'466.47 $ kWh erzeugt.\\
+\\
+\newpage
+\underline{\textbf{(c2)} Bestimme den Nettobarwert}\\
+Der Nettobarwert ($\mathrm{NPV}$) der Investition ist die Differenz zwischen den Barwerten des verkauften Stroms und der entstehenden Kosten.
+Die entstehenden Kosten setzen sich dabei aus der Anfangsinvestition und den Kosten für das Recycling zusammen.
+Da sich der Zinssatz nach $5$ Jahren ändert ergibt sich für die beiden Barwerte:
+\begin{align*}
+	\mathrm{NPV}_{\textit{verk. Strom}}
+	&=
+	\int \limits_{0}^5 
+	10'000 e^{-0.1 t} 0.3 e^{0.01t} e^{-0.04t} \ dt
+	+
+	e^{-5 \cdot 0.04}
+	\int \limits_{5}^{20}
+	10'000 e^{-0.1 t} 0.3 e^{0.01t} e^{-0.02t} \ dt\\
+	&=
+	\int \limits_{0}^5 
+	3'000 e^{-0.13 t}  \ dt
+	+
+	e^{-5 \cdot 0.04}
+	\int \limits_{5}^{20}
+	3'000 e^{-0.11 t} \ dt\\
+	\mathrm{NPV}_{\textit{Kosten}}
+	&=
+	10'000 + 10000 e^{-15 \cdot 0.02 - 5 \cdot 0.04}
+	= 
+	10'000 ( 1 + e^{-15 \cdot 0.02 - 5 \cdot 0.04}). 
+\end{align*}
+Insgesamt erhalten wir:
+\begin{align*}
+	\mathrm{NPV} &= 
+	\mathrm{NPV}_{\textit{verk. Strom}} - \mathrm{NPV}_{\textit{Kosten}}\\
+	&=
+	\int \limits_{0}^5 
+	3'000 e^{-0.13 t}  \ dt
+	+
+	e^{-5 \cdot 0.04}
+	\int \limits_{5}^{20}
+	3'000 e^{-0.11 t} \ dt
+	-
+	10'000 ( 1 + e^{-15 \cdot 0.02 - 5 \cdot 0.04})\\
+	&=
+	\left[-\frac{3'000}{0.13} e^{-0.13}\right]_0^5
+	+
+	e^{-5 \cdot 0.04}
+	\left[-\frac{3'000}{0.11} e^{-0.113}\right]_5^{20}
+	-
+	10'000 ( 1 + e^{-0.5})\\
+	&=
+	5'373.
+\end{align*}
 
 \newpage
 
