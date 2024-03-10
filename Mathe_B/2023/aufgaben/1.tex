@@ -191,14 +191,253 @@ Der angestrebte Nettogewinn aus der Gesamtproduktion beträgt $250$ Schweizer Fr
 \underline{\textbf{Vorgehensweise:}}
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
-\item[\textbf{(b1)}] 
-\item[\textbf{(b2)}] 
+\item[\textbf{(b1)}] Formuliere das lineare Gleichungssystem.
+\item[\textbf{(b2)}] Beurteile die Lösbarkeit des linearen GLeichungsystems.
 \begin{enumerate}
-	\item[1.] .
-	\item[2.] 
+	\item[1.] Bringe die Matrix in eine obere Dreiecksform
+	\item[2.] Wende bekannte Kriterien für die Lösbarkeit an.
 \end{enumerate}
+\item[\textbf{(b3)}] Löse das lineare Gleichungssystem für $m = 5$.
 \end{enumerate}
 \end{mdframed}
+
+\underline{\textbf{(b1)} Formuliere das lineare Gleichungssystem}\\
+In der Aufgabe wird ein Produktionsprozess von vier Werkstücken.
+Dieser Prozess ist durch die Laufzeit der Maschinen von $8$ Stunden und dem angestrebten Nettogewinn begrenzt.
+Mit $x_i$ bezeichnen wir die pro Werktag produzierten Werkstücke $P_i$ (von allen vier Maschinen). Hiermit erhalten wir durch
+\begin{align*}
+	10 x_1 + 20 x_2 + 20 x_3 + 15 x_4
+\end{align*}
+die Gesamtzahl der Minuten welche die Maschine $M_1$ benötigt um $x_1,x_2, x_3, x_4$ Teile der Werkstücke $P_1, P_2 , P_3, P_4$ zu produzieren. Da die drei Maschinen für $8$ Stunden laufen ($8 \cdot 60 = 480$ Minuten), ergibt sich die folgende Einschränkung für Maschine $M_1$:
+\begin{align*}
+	10 x_1 + 20 x_2 + 20 x_3 + 15 x_4  =480.
+\end{align*}
+\newpage
+Für die beiden anderen Maschinen erhalten wir analog:
+\begin{align*}
+	&10 x_1 + 30 x_2 + 16 x_3 +  \ 5 x_4  =480,\\
+	&20 x_1 + 20 x_2 + 10 x_3 + 25 x_4  =480.
+\end{align*}
+Durch $x_i q_i$ ist der Nettogewinn der produzierten Einheiten des Werkstücks $P_i$ gegeben. Deswegen erhalten wir für den Nettogewinn die Gleichung
+\begin{align*}
+	q_1 x_1 + q_2 x_2 + q_3 x_3 + q_4 x_4 = 
+	5 x_1 + 10 x_2 + 12 x_3 + m  = 250 \ \text{Schweizer Franken}.
+\end{align*}
+Insgesamt konnten wir aus der Aufgabenstellung das folgenden lineare Gleichungssystem extrahieren:
+\begin{align*}
+	\begin{cases}
+		10 x_1 + 20 x_2 + 20 x_3 + 15 x_4  &=480 \\
+		10 x_1 + 30 x_2 + 16 x_3 +  \ 5 x_4  &=480\\
+		20 x_1 + 20 x_2 + 10 x_3 + 25 x_4  &=480\\
+		\ 5 x_1 + 10 x_2 + 12 x_3 + m  &= 250
+	\end{cases}
+\end{align*}
+Überführt in die erweiterte Koeffizientenmatrix erhalten wir:
+\begin{align*}
+(A | \mathbf{b}) =	\bordermatrix{ & x_1 & x_2 & x_3 & x_4 & &  \cr
+		& 10 & 20 & 20 &  15 & \BAR & 480 \cr
+		& 10 & 30 & 16& 5 &\BAR & 480 \cr
+		& 20 & 20 & 10 & 25 &  \BAR & 480  \cr 
+		& 5 & 10 & 12 & m & \BAR & 250}.
+\end{align*}
+Die erste bis vierte Spalte repräsentiert die erste bis vierte Variable. Diese Kennzeichnung lassen wir im weiteren Verlauf weg.\\
+\\
+\underline{\textbf{(b2)} 1. Bringe die Matrix in eine obere Dreiecksform}\\
+Durch elementare Zeilenumformungen erhalten wir aus der erweiterten Koeffizientenmatrix $(A | \mathbf{b})$:
+\begin{align*}
+	&\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		10 & 30 & 16& 5 &\BAR & 480 \\
+		20 & 20 & 10 & 25 &  \BAR & 480  \\
+		5 & 10 & 12 & m & \BAR & 250
+		\rowops
+		\add[ \cdot (-1)]{0}{1}
+		\add[ \cdot (-2)]{0}{2}
+		\mult{3}{ \cdot 2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 & -20 & -30 & -5 &  \BAR & -480  \\
+		10 &  20 & 24 & 2m & \BAR & 500
+		\rowops
+		\add[ \cdot (-1)]{0}{3}
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 & -20 & -30 & -5 &  \BAR & -480  \\
+		0 &  0 & 4 & 2m - 15 & \BAR & 20
+		\rowops
+		\add[ \cdot 2]{1}{2}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 & 0 & -38 & -25 &  \BAR & -480  \\
+		0 &  0 & 4 & 2m - 15 & \BAR & 20
+		\rowops
+		\swap{2}{3} 
+	\end{gmatrix}
+	\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 &  0 & 4 & 2m - 15 & \BAR & 20\\
+		0 & 0 & -38 & -25 &  \BAR & -480  		
+		\rowops
+		\mult{2}{ \cdot \left( \frac{1}{4}\right)}
+		\mult{3}{ \cdot \left(- \frac{1}{10}\right)}
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{m}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 3.8 & 2.5 &  \BAR & 48		
+		\rowops
+		\add[ \cdot (-3.8)]{2}{3}
+	\end{gmatrix}	\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{m}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 2.5 - 3.8 \left(\frac{m}{2} - \frac{15}{4} \right)  &  \BAR & 48	- 3.8 \cdot 5	
+		\rowops
+		\add[ \cdot (-3.8)]{2}{3}
+	\end{gmatrix} \\
+	\leadsto
+	&\begin{gmatrix}[p]
+		10 & 20 & 20 &  15 & \BAR & 480\\
+		0 & 10 & -4 & -10 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{m}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 16.75 - 1.9m  &  \BAR & 29
+		\rowops
+		\mult{0}{ \cdot  \frac{1}{10}}
+		\mult{1}{ \cdot \frac{1}{10}}	
+	\end{gmatrix}
+	\leadsto
+	\begin{gmatrix}[p]
+		1 & 2 & 2 &  1.5 & \BAR & 48\\
+		0 & 1 & -0.4 & -1 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{m}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 16.75 - 1.9m  &  \BAR & 29	
+	\end{gmatrix}
+\end{align*}
+
+\underline{\textbf{(b2)} 2. Wende bekannte Kriterien für die Lösbarkeit an}\\
+Wir haben mithilfe von elementaren Zeilenumformungen die Zeilenstufenform erhalten:
+\begin{align*}
+	(A | \mathbf{b}) \leadsto
+	\dots
+	\leadsto
+	(\tilde{A} | \mathbf{\tilde{b}})
+	=
+	\begin{gmatrix}[p]
+		1 & 2 & 2 &  1.5 & \BAR & 48\\
+		0 & 1 & -0.4 & -1 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{m}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 16.75 - 1.9m  &  \BAR & 29	
+	\end{gmatrix}.
+\end{align*}
+Es gilt 
+\begin{align*}
+	 \det(\tilde{A})
+	= 
+	1 \cdot 1 \cdot 1 \cdot ( 16.75 - 1.9m)
+	=
+	16.75 - 1.9m
+	,
+\end{align*}
+da $\tilde{A}$ eine obere Dreiecksform besitzt. Wegen $\det(A) = C \cdot \det(\tilde{A}), \ C \neq 0$ ist $A$ genau dann singulär, wenn 
+\begin{align*}
+	\det(\tilde{A}) = 16.75 - 1.9m = 0
+	\ \Leftrightarrow \
+	1.9 m = 16.75
+	\ \Leftrightarrow \
+	m = \frac{16.75}{1.9} = \frac{\frac{1675}{100}}{\frac{19}{10}}
+	=
+	\frac{1675 }{10 \cdot 19}
+	=
+	\frac{335 }{5 \cdot 19}
+	=
+	\frac{335 }{38}
+\end{align*}
+gilt. Damit ist $A$ für $m \neq \frac{335 }{38}$ invertierbar und 
+\begin{align*}
+	A \mathbf{x} = \mathbf{b}
+\end{align*}
+besitzt eine eindeutige Lösung $ \mathbf{x}$.
+Für $m = \frac{335 }{38}$ existiert wegen  
+\begin{align*}
+	\mathrm{rg}(A) = \mathrm{rg}(\tilde{A})  = 3  
+	<  
+	\mathrm{rg}(\tilde{A}|\mathbf{\tilde{b}})= 	\mathrm{rg}(A|\mathbf{b}) = 4
+\end{align*}
+keine Lösung zu $A \mathbf{x} = \mathbf{b}$.\\
+\\
+\textit{Alternative Eindeutigkeit:}\\
+Für $m \neq \frac{335 }{38}$ gilt $\mathrm{rg}(A) = 4$ ($A$ hat vollen Rang). Damit ist $A$ invertierbar und die Lösung zu $A \mathbf{x} = \mathbf{b}$ eindeutig.\\
+\\
+\underline{\textbf{(b3)} Löse das lineare Gleichungssystem für $m = 5$}\\
+Mit der Zeilenstufenform aus der vorherigen Teilaufgabe erhalten wir für $m = 5$:
+\begin{align*}
+	\begin{gmatrix}[p]
+		1 & 2 & 2 &  1.5 & \BAR & 48\\
+		0 & 1 & -0.4 & -1 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{5}{2} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 16.75 - 1.9\cdot 5  &  \BAR & 29	
+	\end{gmatrix}
+	=
+	&\begin{gmatrix}[p]
+		1 & 2 & 2 &  1.5 & \BAR & 48\\
+		0 & 1 & -0.4 & -1 &\BAR & 0 \\
+		0 &  0 & 1 & \frac{10}{4} - \frac{15}{4} & \BAR & 5\\
+		0 & 0 & 0 & 16.75 - 9.5 &  \BAR & 29	
+	\end{gmatrix}\\
+		=
+	&\begin{gmatrix}[p]
+		1 & 2 & 2 &  1.5 & \BAR & 48\\
+		0 & 1 & -0.4 & -1 &\BAR & 0 \\
+		0 &  0 & 1 & -1.25 & \BAR & 5\\
+		0 & 0 & 0 & 7.25 &  \BAR & 29
+		\rowops
+		\mult{0}{ \cdot  2}
+		\mult{1}{ \cdot 5}	
+		\mult{2}{ \cdot 4}	
+		\mult{3}{ \cdot 4}	
+	\end{gmatrix}\\
+	\leadsto
+	&\begin{gmatrix}[p]
+		2 & 4 & 4 &  3 & \BAR & 96\\
+		0 & 5 & -2 & -5 &\BAR & 0 \\
+		0 &  0 & 4 & -5 & \BAR & 20\\
+		0 & 0 & 0 & 29 &  \BAR & 4 \cdot 29	
+	\end{gmatrix}.
+\end{align*}
+\newpage
+Damit folgt durch Rückwärtseinsetzen:
+\begin{align*}
+	29 x_4 &= 4 \cdot 29 \ \Leftrightarrow \ x_4 = \frac{4 \cdot 29}{29} = 4\\
+	4 x_3 -5 x_4 &= 20 
+	\ \Leftrightarrow \ 
+	x_3  = \frac{1}{4} (20 + 5 x_4) = \frac{1}{4} \cdot 40  =  10\\
+	5 x_2 -2 x_3 - 5 x_4 &= 0 
+	\ \Leftrightarrow \ x_2 = 
+	\frac{1}{5}(2 x_3 + 5 x_4) = 8\\
+	2 x_1 + 4x_2 +4 x_3 + 3 x_4 &= 96
+	\ \Leftrightarrow \
+	x_1 = \frac{1}{2} (96 - 4 x_2 - 4 x_3 -3 x_4) = \frac{1}{2} \cdot 12 = 6
+\end{align*}
+Zusammengefasst erhalten wir für $m = 5$ den Produktionsplan 
+\begin{align*}
+	x_1 = 6, \quad x_2 = 8, \quad x_3 = 10, \quad x_4 = 4.
+\end{align*}
 
 
 \newpage
