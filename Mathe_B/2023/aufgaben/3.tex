@@ -64,7 +64,7 @@ Mit dieser Substitution erhalten wir:
 	&=
 	\frac{1}{4}
 	\left(
-	\ln(t^2) + 4 \ln(t^2) +4 - \ln(t^2)
+	\ln(t^2)^2 + 4 \ln(t^2) +4 - \ln(t^2)^2
 	\right)
 	= 
 	\frac{1}{4}
@@ -183,9 +183,9 @@ Gesucht ist nun das $a$, sodass die Länge des Gradienten in $(x_0,y_0)$ gleich 
 	\ \Leftrightarrow \
 	4 a^2 e^2 = 16 - \ln(2)^2\\
 	\ &\Leftrightarrow \
-	a^2 = \frac{16 - \ln(2)^2}{4 a^2}
+	a^2 = \frac{16 - \ln(2)^2}{4 e^2}
 	\ \Leftrightarrow \
-	a = \sqrt{\frac{16 - \ln(2)^2}{4 a^2}}.
+	a = \sqrt{\frac{16 - \ln(2)^2}{4 e^2}}.
 \end{align*} 
 Damit ist Antwort (b) korrekt.
 
@@ -242,7 +242,7 @@ gilt. Für unsere gegebene Funktion $f$ erhalten wir den Ansatz
 	=
 	\int \limits_{0}^{2 \pi} a | \sin(x) | \ dx.
 \end{align*}
-Da für $f$ nicht negativ sein darf, d.h. $f(x) \geq 0$ für alle $x \in D_f$, muss wegen des Betrags auch $a \geq 0 $ gelten.
+Da $f$ nicht negativ sein darf, d.h. $f(x) \geq 0$ für alle $x \in D_f$, muss wegen des Betrags auch $a \geq 0 $ gelten.
 Wegen der Punktsymmetrie an $x_0  = \pi$ für $\sin(x)$ gilt
 \begin{align*}
 	\int \limits_{0}^{2 \pi} a | \sin(x) | \ dx
@@ -309,7 +309,7 @@ Somit ist Antwort (e) korrekt.\\
 \\
 \textit{Anmerkung:} Das Ziel der Aufgabe ist die potentielle Verletzung der Nicht-Negativität zu erkennen. Für eine beliebige Dichtefunktion $f$ wäre die Aussage $f(x) \geq 0 > -4 $ für $x \in \mathbb{R}$ auch korrekt.\\
 \\
-\textit{Zusatzaufgabe:} Welche Antwort ist korrekt, falls $g $ eine Dichtefunktion ist?
+\textit{Zusatzaufgabe:} Welche Antwort ist korrekt, falls $g(x) \geq 0 $ gilt?
 
 
 
@@ -350,7 +350,7 @@ Es folgt, dass
 \end{mdframed}
 
 \underline{1. Prüfe geeignete Spalten auf lineare Unabhängigkeit}\\
-Da die Matrix $A $ $3$ Zeilen und $5$ Spalten besitzt kann diese maximal einen Rang von $3$ besitzen.
+Da die Matrix $A $ $3$ Zeilen und $5$ Spalten besitzt, kann diese maximal einen Rang von $3$ besitzen.
 Wegen 
 \begin{align*}
 	\det
@@ -565,12 +565,12 @@ Für das $10$. Jahr gilt dann:
 \begin{align*}
 	A_n
 	=
-	1.01^10 (120'000 ) - 20'000
+	1.01^{10} (120'000 ) - 20'000
 	\approx
 	112'554.65.
 \end{align*}
 
-Damit ist die Antwort (d) korrekt.
+Damit ist Antwort (d) korrekt.
 
 \newpage
 
@@ -645,6 +645,6 @@ Wegen $0 < A < 1$ ist die Lösung der Differenzengleichung monoton und konvergen
 	= 
 	- \frac{3^2}{5}
 	= 
-	- \frac{9}{5} = - \frac{18}{10} = 1.8.
+	- \frac{9}{5} = - \frac{18}{10} =- 1.8.
 \end{align*}
 Damit ist Antwort (c) korrekt.
