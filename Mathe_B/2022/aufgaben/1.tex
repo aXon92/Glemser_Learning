@@ -18,11 +18,11 @@ Eine Rederei muss für ihre Schiffe Container herstellen, um darin Güter um die
 \renewcommand{\labelenumi}{\theenumi.}
 \begin{enumerate}
 \item[\textbf{(a1)}] Stelle die Funktion mithilfe des Quadervolumens auf.
-\item[\textbf{(a2)}] Verwende die Nebenbedingung für Oberfläche eines Quaders.
+\item[\textbf{(a2)}] Verwende die Nebenbedingung für die Oberfläche eines Quaders.
 \end{enumerate}
 \end{mdframed}
 Die Verwendung von \glqq minimal\grqq \ lässt vermuten, dass ein Optimierungsproblem vorliegt.
-Hierbei müssen wir zunächst prüfen ob und welche Nebenbedingungen vorliegen. Diese beschränken die Variablen. In unseren Fall müssen wir $ x $,  $ y $ und $ z $ so wählen, dass das Volumen des quaderförmigen Containers $ 27 $ Einheiten beträgt.
+Hierbei müssen wir zunächst prüfen, ob und welche Nebenbedingungen vorliegen. Diese beschränken die Variablen. In unseren Fall müssen wir $ x $,  $ y $ und $ z $ so wählen, dass das Volumen des quaderförmigen Containers $ 27 $ Einheiten beträgt.
 Es liegt also ein Minimierungsproblem mit Nebenbedingung vor.\\
 \\
 \underline{\textbf{(a1)} Stelle die Funktion mithilfe des Quadervolumens auf }\\
@@ -39,8 +39,8 @@ Damit erhalten wir die Breite $ z $ als Funktion
 \end{align*}
 für $ x,y > 0 $. Damit liegt eine Darstellung der Nebenbedingung in Abhängigkeit von $x$ und $y$ vor.\\
 \\
-\underline{\textbf{(a2)} Verwende die Nebenbedingung für Oberfläche eines Quaders}\\
-Die Oberfläche eines Quaders(Containers) ist gegeben durch
+\underline{\textbf{(a2)} Verwende die Nebenbedingung für die Oberfläche eines Quaders}\\
+Die Oberfläche eines Quaders (Containers) ist gegeben durch
 \begin{align*}
 	O(x,y,z) = 2 (xy + xz + yz).
 \end{align*}
@@ -52,7 +52,7 @@ Diese soll nun unter der Nebenbedingung $V(x,y,z) = xyz = 27$ minimal werden. In
 	=
 	2xy + \frac{54}{x} + \frac{54}{y}.
 \end{align*}
-Durch die Substitution liegt ein Extremwertproblem in zwei Variablen ohne Nebenbedingung vor um die Länge $x$, Höhe $y$ und Breite $z(x,y)$ für die minimale Oberfläche zu bestimmen.
+Durch die Substitution liegt ein Extremwertproblem in zwei Variablen ohne Nebenbedingung vor, um die Länge $x$, Höhe $y$ und Breite $z(x,y)$ für die minimale Oberfläche zu bestimmen.
 Die partiellen Ableitungen erster Ordnung sind:
 \begin{align*}
 	F_x(x,y) &= 2 y - \frac{54}{x^2}\\
@@ -106,11 +106,11 @@ Für die Ableitungen zweiter Ordnung gilt:
 \begin{align*}
 	F_{xx}(x,y)
 	=
-	\frac{2 \cdot 54}{x_3}, 
+	\frac{2 \cdot 54}{x^3}, 
 	\quad
 	F_{yy}(x,y)
 	=
-	\frac{2 \cdot 54}{y_3},
+	\frac{2 \cdot 54}{y^3},
 	\quad
 	F_{xy}(x,y)
 	=
@@ -180,8 +180,8 @@ Verwenden Sie den Gauß-Algorithmus für die folgenden Aufgaben.
 \item[\textbf{(b1)}] Stelle das lineare Gleichungssystem auf.
 \item[\textbf{(b2)}] 
 \begin{enumerate}
-	\item[1.] Wende das elementare Zeilenumformungen an (Gauß-Verfahren).
-	\item[2.] Überlege ob Lösungen existieren und prüfe deren Eindeutigkeit.
+	\item[1.] Wende elementare Zeilenumformungen an (Gauß-Verfahren).
+	\item[2.] Überlege, ob Lösungen existieren und prüfe deren Eindeutigkeit.
 \end{enumerate}
 
 \item[\textbf{(b3)}] Löse das LGS für $a=-3.5 $.
@@ -233,7 +233,7 @@ für die einzelen Szenarien $s_i$ mit $i = 1,...,4$ vorwegenommen.
 	\end{pmatrix}.
 \end{align*}
 \ \\
-\underline{\textbf{(b2)} 1. Wende das elementare Zeilenumformungen an (Gauß-Verfahren)}\\
+\underline{\textbf{(b2)} 1. Wende elementare Zeilenumformungen an (Gauß-Verfahren)}\\
 Durch elementare Zeilenumformungen erhalten wir:
 \begin{align*}
 	\begin{gmatrix}[p]
@@ -253,7 +253,7 @@ Durch elementare Zeilenumformungen erhalten wir:
 		0 & 6 & 1 & \BAR & a - 6\\
 		-1 & 1 & 0 & \BAR & -2
 		\rowops
-		\add[ \cdot (-1)]{0}{2}
+		\add[ \cdot (-1)]{0}{1}
 	\end{gmatrix}
 	\leadsto
 	\begin{gmatrix}[p]
@@ -279,28 +279,18 @@ Durch elementare Zeilenumformungen erhalten wir:
 		0 & 12 & 2 & \BAR & 2a - 12\\
 		0 & 0 & 0 & \BAR & 0
 		\rowops
-		\mult{1}{ \cdot (3)}
-		\mult{2}{ \cdot (2)}
+		\add[ \cdot (-1)]{1}{2}
 	\end{gmatrix}\\
 	&\leadsto
 	\begin{gmatrix}[p]
 		-1 & 1 & 0 & \BAR & -2\\
 		0 & 12 & 6 & \BAR & -3\\
-		0 & 12 & 2 & \BAR & 2a - 12\\
-		0 & 0 & 0 & \BAR & 0
-		\rowops
-		\add[ \cdot (-1)]{1}{2}
-	\end{gmatrix}
-	\leadsto
-	\begin{gmatrix}[p]
-		-1 & 1 & 0 & \BAR & -2\\
-		0 & 12 & 6 & \BAR & -3\\
-		0 & 0 & 4 & \BAR & 2a - 9\\
+		0 & 0 & -4 & \BAR & 2a - 9\\
 		0 & 0 & 0 & \BAR & 0
 		\rowops
 		\mult{1}{ \cdot (\frac{1}{3})}
-	\end{gmatrix}\\
-	&\leadsto
+	\end{gmatrix}
+	\leadsto
 	\begin{gmatrix}[p]
 		-1 & 1 & 0 & \BAR & -2\\
 		0 & 4 & 2 & \BAR & -1\\
@@ -309,7 +299,7 @@ Durch elementare Zeilenumformungen erhalten wir:
 	\end{gmatrix}
 \end{align*}
 \ \\
-\underline{\textbf{(b2)} 2. Überlege ob Lösungen existieren und prüfe deren Eindeutigkeit}\\
+\underline{\textbf{(b2)} 2. Überlege ob, Lösungen existieren und prüfe deren Eindeutigkeit}\\
 Damit ein Gleichungssystem $ A \mathbf{x} = \mathbf{b} $ mindestens eine Lösung besitzt, muss $ \mathrm{rg}(A) = \mathrm{rg}( A,\mathbf{b} ) $ gelten.
 Mit $n$ bezeichnen wir die Anzahl der Unbekannten.
 Falls mindestens eine Lösung existiert, können zwei Fälle eintreten:
@@ -317,8 +307,8 @@ Falls mindestens eine Lösung existiert, können zwei Fälle eintreten:
 	\item[Fall 1 $\mathbf{\mathrm{rg}(A) = \mathrm{rg}(A,b) = n}$:] Es existiert genau eine (eindeutige) Lösung.
 	\item[Fall 2 $\mathbf{\mathrm{rg}(A) = \mathrm{rg}(A,b) < n }$:] Es existieren unendlich viele Lösungen.
 \end{description}
-In unserem Fall gilt unabhängig von $a$ $\mathrm{rg}(A) = \mathrm{rg}(A,\mathbf{b}) = 3 = n$. Damit existiert für alle $a \in \mathbb{R}$ eine eindeutige Lösung für das Investitionsproblem.\\
-\\
+In unserem Fall gilt unabhängig von $a$ $\mathrm{rg}(A) = \mathrm{rg}(A,\mathbf{b}) = 3 = n$. Damit existiert für alle $a \in \mathbb{R}$ eine eindeutige Lösung für das Investitionsproblem.
+\newpage
 \underline{\textbf{(b3)} Löse das LGS für $a=-3.5 $}\\
 Wir setzen $a = -3.5 = - \frac{7	}{2}$ in die erweiterte Koeffizientenmatrix ein und erhalten durch elementare Zeilenumformungen:
 \begin{align*}
@@ -344,7 +334,7 @@ Wir setzen $a = -3.5 = - \frac{7	}{2}$ in die erweiterte Koeffizientenmatrix ein
 	\begin{gmatrix}[p]
 		-4 & 4 & 0 & \BAR & -8\\
 		0 & 4 & 0 & \BAR & -9\\
-		0 & 0 & 1 & \BAR & 4\\
+		0 & 0 & -1 & \BAR & -4\\
 		0 & 0 & 0 & \BAR & 0
 		\rowops
 		\add[ \cdot (-1)]{1}{0}
@@ -415,7 +405,7 @@ Ein Konsument deckt seine Nachfrage nach zwei Gütern. Dabei beschreibt $ c_1 $ 
 \begin{mdframed}
 \underline{\textbf{Vorgehensweise:}}
 \begin{enumerate}
-\item[\textbf{(c1)}] Stelle Nutzenfunktion sowie die Budgetrestrikton(Nebenbedingung) auf.
+\item[\textbf{(c1)}] Stelle Nutzenfunktion sowie die Budgetrestrikton (Nebenbedingung) auf.
 \item[\textbf{(c2)}]
 \begin{enumerate}
 	\item[1.] Transformiere die Zielfunktion.
@@ -426,16 +416,16 @@ Ein Konsument deckt seine Nachfrage nach zwei Gütern. Dabei beschreibt $ c_1 $ 
 \end{mdframed}
 
 Diese Aufgabe ist ein Optimierungsproblem mit Nebenbedigung.
-Da der Konsument ein Einkommen von $10$ (CHF) zur Verfügung hat kann er mit den Gütern 1 und 2  die Nutzenfunktion nicht beliebig maximieren, d.h. gesucht ist das Maximum der Nutzenfunktion $u(c_1,c_2)$ unter der Einkommensrestriktion von $10$ (CHF).\\
+Da der Konsument ein Einkommen von $10$ (CHF) zur Verfügung hat, kann er mit den Gütern 1 und 2  die Nutzenfunktion nicht beliebig maximieren, d.h. gesucht ist das Maximum der Nutzenfunktion $u(c_1,c_2)$ unter der Einkommensrestriktion von $10$ (CHF).\\
 \\
-\underline{\textbf{(c1)} Stelle Nutzenfunktion sowie die Budgetrestrikton(Nebenbedingung) auf}\\
+\underline{\textbf{(c1)} Stelle Nutzenfunktion sowie die Budgetrestrikton (Nebenbedingung) auf}\\
 Die geometrische Distanz zweier Punkte $(x_1,y_1)$ und $(x_2,y_2)$ ist gegeben durch
 \begin{align*}
 	\left|(x_1,y_1) - (x_2,y_2) \right|
 	=
 	\sqrt{(x_1 -x_2)^2 + (y_1-y_2)^2}. 
 \end{align*}
-Die Nutzenfunktion ist die Zielfunktion der Optimierung.Nach der Aufgabenstellung ist diese der Kehrwert des geometrischen Abstandes der Konsumbündel $(c_1,c_2)$ und $(3,3)$, d.h.:
+Die Nutzenfunktion ist die Zielfunktion der Optimierung. Nach der Aufgabenstellung ist diese der Kehrwert des geometrischen Abstandes der Konsumbündel $(c_1,c_2)$ und $(3,3)$, d.h.:
 \begin{align*}
 	u(c_1,c_2)
 	=
@@ -468,7 +458,7 @@ vor. Die Zielfunktion können wir hierbei durch mehrere Transformationen vereinf
 	\min \limits_{c_1,c_2} \sqrt{(c_1 -3)^2 + (c_2-3)^2}
 	, \qquad \varphi(c_1,c_2) = 2 c_1 + 3c_2 - 10= 0.
 \end{align*}
-Die Wurzelfunktion ist streng monoton wachsend, d.h. sie erhält das Minimum. Deswegen können wir die Wurzelfunktion ignorieren und erhalten als endgültige Optimierungsproblem:
+Die Wurzelfunktion ist streng monoton wachsend, d.h. sie erhält das Minimum. Deswegen können wir die Wurzelfunktion ignorieren und erhalten als endgültiges Optimierungsproblem:
 \begin{align*}
 	\min \limits_{c_1,c_2}
 	\tilde{u}(c_1,c_2)
@@ -476,7 +466,7 @@ Die Wurzelfunktion ist streng monoton wachsend, d.h. sie erhält das Minimum. De
 	\min \limits_{c_1,c_2} (c_1 -3)^2 + (c_2-3)^2
 	, \qquad \varphi(c_1,c_2) = 2 c_1 + 3c_2 - 10= 0.
 \end{align*}
-Dieses können wir mit dem Verfahren der Wahl lösen (Lagrange oder Substitution).\\
+Dieses können wir mit dem Verfahren deiner Wahl lösen (Lagrange oder Substitution).\\
 \\
 \underline{\textbf{(c2)} 1. Löse die Aufgabe mit der Lagrange-Methode}\\
 Mit unserern Transformationen erhalten wir die Lagrange-Funktion:
@@ -530,9 +520,9 @@ Das optimale Konsumbündel ist (vermutlich) durch
 	c_1^\star = \frac{29}{13}, \qquad 
 	c_2^\star = \frac{24}{13}.
 \end{align*}
-gegeben. Mithilfe der Lagrange-Methode haben wir jedoch nur eine notwendige Bedingung für eine Extremstelle unter einer Nebenbedingung.
+gegeben. Mithilfe der Lagrange-Methode haben wir jedoch nur eine notwendige Bedingung für eine Extremstelle unter einer Nebenbedingung gefunden.
 Die transformierte Zielfunktion ist ein nach oben geöffnetes Paraboloid und die Nebenbedingung ist eine Gerade.
-Unabhängig davon wie wir eine Gerade (die Nebenbedingung) durch das Paraboloid legen hat, finden wir immer ein Minimum wenn die Gerade auf dem Paraboloid ablaufen.
+Unabhängig davon, wie wir eine Gerade (die Nebenbedingung) durch das Paraboloid legen, finden wir immer ein Minimum, wenn die Gerade auf dem Paraboloid verläuft.
 \newpage
 In unserem Fall können wir das durch die Grafik
 \begin{center}
@@ -542,7 +532,7 @@ veranschaulichen.
 Hierbei ist die rote Linie die Budgetrestriktion auf der transformierten Zielfunktion.\\
 \\
 \underline{\textbf{(c2)} 3. Löse die Aufgabe durch Substitution}\\
-Um die Aufgabe durch Substitution zu lösen, formen wir die Budgetrrestriktion nach einer der beiden Variablen um:
+Um die Aufgabe durch Substitution zu lösen, formen wir die Budgetrestriktion nach einer der beiden Variablen um:
 \begin{align*}
 	2 c_1 + 3 c_2 = 10
 	\ \Leftrightarrow \ 
@@ -550,7 +540,7 @@ Um die Aufgabe durch Substitution zu lösen, formen wir die Budgetrrestriktion n
 	\ \Leftrightarrow \
 	c_1 = 5 - \frac{3}{2} c_2.
 \end{align*}
-Wenn wir dies in die Zielfunktion erhalten wir mit
+Wenn wir dies in die Zielfunktion einsetzen, erhalten wir mit
 \begin{align*}
 	F(c_2)
 	&:= 
@@ -560,6 +550,8 @@ Wenn wir dies in die Zielfunktion erhalten wir mit
 	=
 	\left(2 - \frac{3}{2} c_2\right)^2 + (c_2 -3)^2\\
 	&=
+	\left(\frac{3}{2} \left(\frac{4}{3} -  c_2 \right) \right)^2 + (c_2 -3)^2
+	=
 	\frac{9}{4} \left(\frac{4}{3} - c_2\right)^2 + (c_2 -3)^2
 	=
 	\frac{9}{4} \left(c_2 -\frac{4}{3} \right)^2 + (c_2 -3)^2.

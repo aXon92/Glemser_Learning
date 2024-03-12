@@ -50,7 +50,7 @@ und wir erhalten
 \end{align*}
 Damit ist die Antwort (b) korrekt.\\
 \\
-Alternativ ist auch die Substitution $u = - \sin\left(\frac{x}{t}\right)$ möglich. Weiter kann man mit einer dieser Subsitutionen zunächst die Stammfunktionen bestimmen und dann das bestimmte Integral berechnet werden.
+Alternativ ist auch die Substitution $u = - \sin\left(\frac{x}{t}\right)$ möglich. Weiter kann man mit einer dieser Subsitutionen zunächst die Stammfunktionen bestimmen und dann das bestimmte Integral berechnen.
 
  
 \newpage
@@ -90,7 +90,7 @@ mit $ a \in \mathbb{R}_{++} $. Für welchen Wert $ a $ ist die Richtung des stei
 \end{mdframed}
 
 \underline{1. Verwende, dass der Gradient in die Richtung des steilsten Anstiegs zeigt}\\
-Der Gradient von $f$ zeigt einen Punkt im Definitionsbereich in die Richtung des steilsten Anstiegs von $f$.
+Der Gradient von $f$ im Punkt $P$ zeigt an diesem Punkt in die Richtung des steilsten Anstiegs von $f$.
 Der Vektor $\mathbf{v}$ zeigt in die Richtung des steilsten Anstiegs von $f$ im Punkt $P = (1,0.5)$ genau dann, wenn ein $\lambda > 0 $ mit 
 \begin{align*}
 	\lambda\mathbf{v} 
@@ -265,11 +265,11 @@ Wegen $f(x) \geq 0 $ muss $c \geq 0 $ sein und mit der Definition von $f$ erhalt
 	&=
 	2 (0.5)^3 - \frac{c}{2} \ln(0.5)	
 	=
-	2 \frac{1}{8} - \frac{c}{2} \ln(0.5).
+	2 \cdot \frac{1}{8} - \frac{c}{2} \ln(0.5).
 \end{align*}
 Damit $f$ eine Dichtefunktion ist, muss folgende Gleichung erfüllt sein:
 \begin{align*}
-	2 \frac{1}{8} - \frac{c}{2} \ln(0.5) = 1
+	2 \cdot \frac{1}{8} - \frac{c}{2} \ln(0.5) = 1
 	\ \Leftrightarrow \
 	- \frac{c}{2} \ln(0.5) = \frac{6}{8}
 	\ \Leftrightarrow \
@@ -343,7 +343,7 @@ Durch elementare Zeilenoperationen erhalten wir:
 		0 & 1 & -1 & -1 & -1 \\ 
 		0 & -3 & 3 & 4 & 3
 		\rowops
-		\add[ \cdot (-3)]{2}{3}
+		\add[ \cdot 3]{2}{3}
 	\end{gmatrix}
 	\leadsto
 	\begin{gmatrix}[p]
@@ -352,7 +352,7 @@ Durch elementare Zeilenoperationen erhalten wir:
 		0 & 1 & -1 & -1 & -1 \\ 
 		0 & 0 & 0 & 1 & 0
 		\rowops
-		\add[ \cdot (-3)]{2}{3}
+		\add[ \cdot 1]{3}{2}
 	\end{gmatrix}\\
 	\leadsto
 	&\begin{gmatrix}[p]
@@ -399,8 +399,8 @@ Durch elementare Zeilenoperationen erhalten wir:
 		0 & 0 & 0 & 0 & 0
 	\end{gmatrix}
 \end{align*}
-Damit sind drei Zeilen der Matrix $ A $ linear unabhängig und der Rang der Matrix ist $ 3 $. Also ist die Antwort (c) korrekt.\\
-\\
+Damit sind drei Zeilen der Matrix $ A $ linear unabhängig und der Rang der Matrix ist $ 3 $. Also ist die Antwort (c) korrekt.
+
 \textit{Alternative Vorgehensweise}:\\
 Das direkte Anwenden von elementaren Zeilenumformungen führt bei diesem Aufgabentyp immer zum Ziel. Der Nachteil ist, dass dies potentiell fehleranfällig ist.\\
 \\
@@ -428,10 +428,10 @@ Die dritte Spalte entspricht der fünften Spalte, weswegen eine davon für die R
 Weiter kann man sehen, dass die erste Spalte die Summe der zweiten und dritten Spalte ist, d.h. die ersten drei Spaltenvektoren sind linear abhängig. Darstellen können wir das durch elementare Spaltenoperationen:
 \begin{align*}
 	\begin{gmatrix}[p]
-		2 & 1 & 1 & 1 & 0 \\
-		3 & 2 & 1 & 1 & 0 \\
-		6 & 0 & 6 & 6 & 0 \\ 
-		8 & 1 & 7 & 8 & 0
+		2 & 1 & 1 & 1 & 1 \\
+		3 & 2 & 1 & 1 & 1 \\
+		6 & 0 & 6 & 6 & 6 \\ 
+		8 & 1 & 7 & 8 & 7
 		\colops
 		\add[ \cdot (-1)]{2}{4}
 	\end{gmatrix}
@@ -459,8 +459,6 @@ Weiter kann man sehen, dass die erste Spalte die Summe der zweiten und dritten S
 		0 & 2 & 1 & 1 & 0 \\
 		0 & 0 & 6 & 6 & 0 \\ 
 		0 & 1 & 7 & 8 & 0
-		\colops
-		\add[ \cdot (-1)]{2}{0}
 	\end{gmatrix}\\
 	&\leadsto
 	\begin{gmatrix}[p]
@@ -722,9 +720,9 @@ Die Normalform der Gleichung ist gegeben durch:
 \end{align*}
 Damit liegt die Normalform mit $A = -\frac{1}{3}$ und $B = - \frac{1}{6}$ vor. Wegen $-1 < A  < 0 $ ist die Lösung konvergent und oszillierend. Mit der Normalform können wir den Grenzwert der Lösung $y_k$ durch 
 \begin{align*}
-	\lim \limits_{k \to \infty} y_k = \frac{B}{1 -A} = \frac{-\frac{1}{6}}{\frac{2}{3}}
+	\lim \limits_{k \to \infty} y_k = \frac{B}{1 -A} = \frac{-\frac{1}{6}}{\frac{4}{3}}
 	=
-	- \frac{1}{6} \cdot \frac{3}{2} = -\frac{1}{8}
+	- \frac{1}{6} \cdot \frac{3}{4} = -\frac{1}{8}
 \end{align*}
 angeben.\\
 \\
@@ -739,7 +737,7 @@ mit $|A|<1$ vor. Dann ist die Lösung $y_k$ konvergent und es existiert der (ein
 \begin{align*}
 	y^\star = \lim \limits_{k \to \infty} y_k.
 \end{align*}
-Wenn wir dies auf die Differenzengleichung in Normalform anwenden erhalten wir durch $y_k \to y^\star$ und $y_{k+1} \to y^\star$ für $k \to \infty$
+Wenn wir dies auf die Differenzengleichung in Normalform anwenden erhalten, wir durch $y_k \to y^\star$ und $y_{k+1} \to y^\star$ für $k \to \infty$
 \begin{align*}
 	y^\star = A y^\star + B
 	\ \Leftrightarrow \

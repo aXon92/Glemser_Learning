@@ -28,12 +28,12 @@ Durch Einsetzen von $ P $ erhalten wir:
 \begin{align*}
 	2 x - y -4 = 0 \ &\Rightarrow 2 \cdot 2 -4  = 0 \ \text{NB (a),(b)}\\
 	-x  - 2y - 4 = 0 \ &\Rightarrow \ -2 -4 \neq 0 \ \text{NB (c)}\\
-	-\frac{1}{2}x - y + 1 = 0 \ &\Rightarrow 2 \cdot 2 -4  = 0 \ \text{NB (d),(e)}
+	-\frac{1}{2}x - y + 1 = 0 \ &\Rightarrow -1 + 1 = 0 \ \text{NB (d),(e)}
 \end{align*}
 Von (c) wird die Nebenbedingung nicht erfüllt, die übrigen Antwortmöglichkeiten müssen wir untersuchen.\\
 \\
 \underline{2. Verwende Substitution für die übrigen Antwortmöglichkeiten}\\
-Da die Nebenbedingung lineare Funktionen sind können wir diese problemlos substituieren.
+Da die Nebenbedingungen lineare Funktionen sind, können wir diese problemlos substituieren.
 Wir beginnen mit $ \varphi_1(x,y) = 2x-y -4 = 0 $. Dies können wir durch
 \begin{align*}
 	2x -y -4 = 0 \ \Leftrightarrow \ y = 2x - 4
@@ -70,8 +70,8 @@ umformen und erhalten die Zielfunktion
 \end{align*}
 Damit ergibt sich (mit der Kettenregel)
 \begin{align*}
-	F_2^\prime(x) &= \frac{3}{4} \cdot 2 (x -2 ) = \frac{3}{4} (x-2) \ \Rightarrow \ F_1^\prime(2) = 0\\
-	F_1^{\prime \prime}(x) &= \frac{3}{4} > 0,
+	F_2^\prime(x) &= \frac{3}{4} \cdot 2 (x -2 ) = \frac{3}{2} (x-2) \ \Rightarrow \ F_2^\prime(2) = 0\\
+	F_2^{\prime \prime}(x) &= \frac{3}{2} > 0,
 \end{align*}
 womit $ f $ an $ P $ unter der Nebenbedingung $ \varphi_2 $ ein lokales Minimum besitzt.\\
 \\
@@ -116,7 +116,7 @@ Welche der folgenden Aussagen ist korrekt?
 \end{mdframed}
 \underline{1. Verwende die Monotonie}\\
 Da $ f(x,y) $ in  $ (5,2) $ ein lokales Maximum hat, besitzt $ f(x,-y) $ in $ (5,-2) $ ein Maximum. 
-Es gilt im Allgemeinen gilt: $ f(x,y) $ hat ein lokales Maximum in $ (x_0,y_0) $ genau dann, wenn $ f(x,-y) $ ein lokales Maximum in $ (x_0,-y_0) $ besitzt.
+Es gilt im Allgemeinen: $ f(x,y) $ hat ein lokales Maximum in $ (x_0,y_0) $ genau dann, wenn $ f(x,-y) $ ein lokales Maximum in $ (x_0,-y_0) $ besitzt.
 Weiter erhalten streng monotone Funktionen die lokalen Extrema.
 Da die Exponentialfunktion und die Wurzelfunktion streng monoton sind, ist deren Zusammensetzung auch streng monoton. Damit besitzen $ h(x,y) $ und $ f(x,-y) $ dieselben Extrema. Somit ist $ (5,-2) $ ein lokales Maximum von $ h$. 
 
@@ -160,14 +160,14 @@ Wir definieren durch
 Funktionen für die partielle Integration. Damit erhalten wir
 \begin{align*}
 	\int f(x) g(x) \ dx.
-	=
+	&=
 	\int u^\prime(x) v(x) \ dx
 	=
-	u(x) v(x) - \int u(x) v^\prime(x) \ dx
-	=
+	u(x) v(x) - \int u(x) v^\prime(x) \ dx\\
+	&=
 	F(x)(ax+b) - a \int F(x) \ dx
 	=
-	axF(x) + b F(x) - a \int F(X) \ dx,
+	axF(x) + b F(x) - a \int F(x) \ dx,
 \end{align*}
 womit die Antwort (a) korrekt ist.
 
@@ -183,7 +183,7 @@ Das bestimmte Integral
 \begin{align*}
 	\int_{-2}^{-1} (2 - f(x) ) \ dx
 \end{align*}  
-gleich
+ist gleich
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 	\item 
@@ -417,7 +417,7 @@ Wegen
 \end{align*}
 ist $ \frac{1}{\lambda^4} $ ein Eigenwert von $ A^{-4} $.\\
 \\
-Damit ist die Antwort (a) korrekt.
+Damit ist Antwort (a) korrekt.
 
 
 \newpage
@@ -455,7 +455,7 @@ Ein Komponente $ x_i $ des Lösungsvektors wird mit der Cramerschen Regel durch
 \begin{align*}
 	x_i = \frac{\det(A_i)}{\det(A)}
 \end{align*}
-bestimmt. Da ist $ \det(A)  $ im Nenner vorkommt, ist $ \det(A) \neq 0 $ notwendig um die Cramersche Regel anzuwenden.
+bestimmt. Da $ \det(A)  $ im Nenner vorkommt, ist $ \det(A) \neq 0 $ notwendig, um die Cramersche Regel anzuwenden.
 Determinanten sind nur für quadratische Matrizen definiert, womit $ A $ quadratisch sein muss.
 Wegen $ \det(A) \neq 0 $ muss $ A $ invertierbar sein. Für quadratische Matrizen ist dies äquivalent zu einem vollem Rang. Der volle Rang wiederum ist äquivalent dazu, dass $ \mathrm{rg}(A) = \mathrm{rg}([A,\textbf{b}]) $ gilt.
 Damit haben wir festgestellt, dass für die Cramersche Regel die Annahmen (a), (b), (c) und (e) notwendig sind.\\
@@ -608,9 +608,9 @@ Welche der folgenden Aussagen ist \textit{nicht} korrekt bezüglich der Matrix $
 \end{mdframed}
 
 \underline{1. Schließe falsche Antworten aus}\\
-Um die richtige Antwort zu finden, stellen wir fest welche Aussagen korrekt sind.\\
+Um die richtige Antwort zu finden, stellen wir fest, welche Aussagen korrekt sind.\\
 \\
-Die Aussage (a) folgt direkt aus dem Laplaceschen Entwicklungssatz. Um die Eigenwerte von $A$ zu bestimmen lösen wir $\det(A - \lambda I) = 0$. Da $A$ eine obere Dreiecksmatrix ist, gilt dies auch für $A - \lambda I$. Dementsprechend gilt
+Die Aussage (a) folgt direkt aus dem Laplaceschen Entwicklungssatz. Um die Eigenwerte von $A$ zu bestimmen, lösen wir $\det(A - \lambda I) = 0$. Da $A$ eine obere Dreiecksmatrix ist, gilt dies auch für $A - \lambda I$. Dementsprechend gilt
 \begin{align*}
 	\det(A - \lambda I)
 	=(a_{11} - \lambda) \cdot (a_{22} - \lambda) \cdots (a_{nn} - \lambda)
